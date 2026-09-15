@@ -60,7 +60,7 @@
     "test": "vitest run",
     "typecheck": "tsc --noEmit",
     "sounds:build": "node scripts/build-library.mjs",
-    "sounds:check": "node scripts/check-library.mjs",
+    "sounds:check": "tsx scripts/check-library.ts",
     "probe": "node --import tsx scripts/prose-probe.ts",
     "tune": "node --import tsx scripts/tune-thresholds.ts"
   },
@@ -1174,7 +1174,7 @@ git commit -m "Add lexical prose query engine adapted from semantic-icons"
 
 **Interfaces:**
 - Consumes: `SoundEntry`, layer/envelope bounds constants from `./types`; `renderPatch` from `./render`; `normalizePhrase` from `./normalize-phrase`.
-- Produces: `checkEntry(entry: SoundEntry): string[]`, `checkLibrary(entries: SoundEntry[]): Map<string, string[]>`, `computeDescriptors(samples: Float32Array, sampleRate: number): Descriptors`. `scripts/check-library.mjs` (Task 18) and the seed-authoring tasks (Tasks 12-17) both call `checkEntry`/`checkLibrary`.
+- Produces: `checkEntry(entry: SoundEntry): string[]`, `checkLibrary(entries: SoundEntry[]): Map<string, string[]>`, `computeDescriptors(samples: Float32Array, sampleRate: number): Descriptors`. `scripts/check-library.ts` (Task 10) and the seed-authoring tasks (Tasks 11-16) both call `checkEntry`/`checkLibrary`.
 
 - [ ] **Step 1: Write the tests**
 
@@ -1817,7 +1817,7 @@ You are authoring one category batch of the Semantic Sounds seed set.
    keyword-writing guidance), and `patch` (1-4 layers, following the
    entry format example).
 4. Write your batch's `outputFile` as a JSON array of entries as soon
-   as every entry in it passes `node scripts/check-library.mjs
+   as every entry in it passes `npx tsx scripts/check-library.ts
    <outputFile>` with zero problems. The checker prints every problem
    for every entry; fix all of them, don't stop at the first.
    Write the file the moment it fully passes, then keep refining only
@@ -1846,28 +1846,25 @@ git commit -m "Add sound batch authoring brief and 40-phrase seed taxonomy"
 
 ---
 
-## Task 10: Library check script (`scripts/check-library.mjs`)
+## Task 10: Library check script (`scripts/check-library.ts`)
 
 **Files:**
-- Create: `scripts/check-library.mjs`
+- Create: `scripts/check-library.ts`
+- Modify: `package.json` (`"sounds:check": "tsx scripts/check-library.ts"`)
 
 **Interfaces:**
-- Consumes: `checkEntry`/`checkLibrary` from the built library (imports from `../dist/index.js` after `npm run build`, so this script must be run after a build, or via `tsx` against the source — this plan uses `tsx` against source directly to avoid a build step during authoring).
+- Consumes: `checkEntry` from `../src/library/validate`, `SoundEntry` from `../src/library/types`. Run via `tsx` (not plain `node`): Node's native TypeScript support strips types but does not resolve extensionless `./types`-style specifiers the way `tsx` does, so plain `node scripts/check-library.ts` fails with `ERR_MODULE_NOT_FOUND` even though the file parses. Always invoke it as `npx tsx scripts/check-library.ts` (or `npm run sounds:check`).
 
 - [ ] **Step 1: Write the script**
 
-```js
-#!/usr/bin/env node
-// scripts/check-library.mjs
-// Usage: node scripts/check-library.mjs [path/to/file.json ...]
+```ts
+#!/usr/bin/env -S npx tsx
+// Usage: npx tsx scripts/check-library.ts [path/to/file.json ...]
 // With no arguments, checks every file under src/library/sounds/*.json.
 import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
-import { register } from 'node:module';
-import { pathToFileURL } from 'node:url';
-
-register('tsx/esm', pathToFileURL('./'));
-const { checkEntry } = await import('../src/library/validate.ts');
+import { checkEntry } from '../src/library/validate';
+import type { SoundEntry } from '../src/library/types';
 
 const soundsDir = join(process.cwd(), 'src', 'library', 'sounds');
 const targetFiles =
@@ -1881,7 +1878,7 @@ let totalProblems = 0;
 let totalEntries = 0;
 
 for (const file of targetFiles) {
-  const entries = JSON.parse(readFileSync(file, 'utf8'));
+  const entries: SoundEntry[] = JSON.parse(readFileSync(file, 'utf8'));
   for (const entry of entries) {
     totalEntries++;
     const problems = checkEntry(entry);
@@ -1899,13 +1896,13 @@ process.exit(totalProblems > 0 ? 1 : 0);
 
 - [ ] **Step 2: Verify it runs against an empty directory without crashing**
 
-Run: `mkdir -p src/library/sounds && node scripts/check-library.mjs`
+Run: `mkdir -p src/library/sounds && npx tsx scripts/check-library.ts`
 Expected: prints "0 entries checked, 0 problems found." and exits 0.
 
 - [ ] **Step 3: Commit**
 
 ```bash
-git add scripts/check-library.mjs
+git add scripts/check-library.ts package.json
 git commit -m "Add library check script for validating sound batch files"
 ```
 
@@ -1931,7 +1928,7 @@ category differ.
 
 - [ ] **Step 2: Validate**
 
-Run: `node scripts/check-library.mjs src/library/sounds/ui-feedback.json`
+Run: `npx tsx scripts/check-library.ts src/library/sounds/ui-feedback.json`
 Expected: `7 entries checked, 0 problems found.`
 
 - [ ] **Step 3: Commit**
@@ -1953,7 +1950,7 @@ git commit -m "Add UI feedback seed sounds"
 - [ ] **Step 1: Follow the brief** for the `messages-notifications` batch, writing `src/library/sounds/messages-notifications.json`.
 - [ ] **Step 2: Validate**
 
-Run: `node scripts/check-library.mjs src/library/sounds/messages-notifications.json`
+Run: `npx tsx scripts/check-library.ts src/library/sounds/messages-notifications.json`
 Expected: `6 entries checked, 0 problems found.`
 
 - [ ] **Step 3: Commit**
@@ -1975,7 +1972,7 @@ git commit -m "Add messages and notifications seed sounds"
 - [ ] **Step 1: Follow the brief** for the `progress` batch, writing `src/library/sounds/progress.json`.
 - [ ] **Step 2: Validate**
 
-Run: `node scripts/check-library.mjs src/library/sounds/progress.json`
+Run: `npx tsx scripts/check-library.ts src/library/sounds/progress.json`
 Expected: `7 entries checked, 0 problems found.`
 
 - [ ] **Step 3: Commit**
@@ -1997,7 +1994,7 @@ git commit -m "Add progress seed sounds"
 - [ ] **Step 1: Follow the brief** for the `transitions` batch, writing `src/library/sounds/transitions.json`.
 - [ ] **Step 2: Validate**
 
-Run: `node scripts/check-library.mjs src/library/sounds/transitions.json`
+Run: `npx tsx scripts/check-library.ts src/library/sounds/transitions.json`
 Expected: `7 entries checked, 0 problems found.`
 
 - [ ] **Step 3: Commit**
@@ -2019,7 +2016,7 @@ git commit -m "Add transition seed sounds"
 - [ ] **Step 1: Follow the brief** for the `timers-alarms` batch, writing `src/library/sounds/timers-alarms.json`.
 - [ ] **Step 2: Validate**
 
-Run: `node scripts/check-library.mjs src/library/sounds/timers-alarms.json`
+Run: `npx tsx scripts/check-library.ts src/library/sounds/timers-alarms.json`
 Expected: `7 entries checked, 0 problems found.`
 
 - [ ] **Step 3: Commit**
@@ -2041,7 +2038,7 @@ git commit -m "Add typing, timer, and alarm seed sounds"
 - [ ] **Step 1: Follow the brief** for the `game` batch, writing `src/library/sounds/game.json`.
 - [ ] **Step 2: Validate**
 
-Run: `node scripts/check-library.mjs src/library/sounds/game.json`
+Run: `npx tsx scripts/check-library.ts src/library/sounds/game.json`
 Expected: `6 entries checked, 0 problems found.`
 
 - [ ] **Step 3: Commit**
@@ -2097,7 +2094,7 @@ Expected: `Wrote 40 entries from 6 files to .../src/library/sounds/generated.ts`
 
 - [ ] **Step 3: Run the full-library check**
 
-Run: `node scripts/check-library.mjs`
+Run: `npx tsx scripts/check-library.ts`
 Expected: `40 entries checked, 0 problems found.`
 If any problems appear (for example, a duplicate name or phrase across
 two different batches), fix the offending batch file, re-run Step 2,
@@ -2617,7 +2614,7 @@ Expected: all tests PASS.
 
 - [ ] **Step 3: Full library check**
 
-Run: `node scripts/check-library.mjs`
+Run: `npx tsx scripts/check-library.ts`
 Expected: `40 entries checked, 0 problems found.`
 
 - [ ] **Step 4: Probe**

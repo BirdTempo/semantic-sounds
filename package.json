@@ -23,9 +23,9 @@
     "test": "vitest run",
     "typecheck": "tsc --noEmit",
     "sounds:build": "node scripts/build-library.mjs",
-    "sounds:check": "node scripts/check-library.mjs",
-    "probe": "node --import tsx scripts/prose-probe.ts",
-    "tune": "node --import tsx scripts/tune-thresholds.ts",
+    "sounds:check": "tsx scripts/check-library.ts",
+    "probe": "tsx scripts/prose-probe.ts",
+    "tune": "tsx scripts/tune-thresholds.ts",
     "dev:web": "vite --config web/vite.config.ts"
   },
   "devDependencies": {

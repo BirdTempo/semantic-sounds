@@ -12,7 +12,7 @@ You are authoring one category batch of the Semantic Sounds seed set.
    keyword-writing guidance), and `patch` (1-4 layers, following the
    entry format example).
 4. Write your batch's `outputFile` as a JSON array of entries as soon
-   as every entry in it passes `node scripts/check-library.mjs
+   as every entry in it passes `npx tsx scripts/check-library.ts
    <outputFile>` with zero problems. The checker prints every problem
    for every entry; fix all of them, don't stop at the first.
    Write the file the moment it fully passes, then keep refining only

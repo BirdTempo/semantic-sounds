@@ -1,7 +1,0 @@
-{
-  "tool_name": "Bash",
-  "tool_input_preview": "{\"command\":\"npm view semantic-sounds 2>&1; echo \\\"---\\\"; npm view semantic-sounds-mcp 2>&1\",\"description\":\"Check npm registry for existing semantic-sounds package names\"}",
-  "error": "Exit code 1\nnpm error code E404\nnpm error 404 Not Found - GET https://registry.npmjs.org/semantic-sounds - Not found\nnpm error 404\nnpm error 404  The requested resource 'semantic-sounds@*' could not be found or you do not have permission to access it.\nnpm error 404\nnpm error 404 Note that you can also install from a\nnpm error 404 tarball, folder, http url, or git url.\nnpm error A complete log of this run can be found in: /Users/admin/.npm/_logs/2026-09-15T04_54_43_567Z-debug-0.log\n---\nnpm error ...",
-  "timestamp": "2026-09-15T04:54:48.405Z",
-  "retry_count": 1
-}
