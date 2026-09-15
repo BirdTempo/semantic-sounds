@@ -30,33 +30,84 @@ export type Descriptors = {
   attack: Attack;
 };
 
-function spectralCentroid(samples: Float32Array, sampleRate: number): number {
-  const BIN_COUNT = 64;
-  const maxFreq = sampleRate / 2;
-  const stride = Math.max(1, Math.floor(samples.length / 4096));
-  const magnitudes = new Float32Array(BIN_COUNT);
+function nextPowerOfTwo(n: number): number {
+  let size = 1;
+  while (size < n) size *= 2;
+  return size;
+}
 
-  for (let k = 0; k < BIN_COUNT; k++) {
-    const freq = ((k + 1) / BIN_COUNT) * maxFreq;
-    const omega = (2 * Math.PI * freq) / sampleRate;
-    let real = 0;
-    let imag = 0;
-    let count = 0;
-    for (let i = 0; i < samples.length; i += stride) {
-      const sample = samples[i] ?? 0;
-      real += sample * Math.cos(omega * i);
-      imag -= sample * Math.sin(omega * i);
-      count++;
+// In-place iterative radix-2 Cooley-Tukey FFT. `real`/`imag` must have a
+// power-of-two length. Used only by the validator (offline, not the render
+// hot path), so correctness matters far more than raw speed here.
+function fft(real: Float64Array, imag: Float64Array): void {
+  const n = real.length;
+  for (let i = 1, j = 0; i < n; i++) {
+    let bit = n >> 1;
+    for (; (j & bit) !== 0; bit >>= 1) j ^= bit;
+    j ^= bit;
+    if (i < j) {
+      const tempRe = real[i] ?? 0;
+      real[i] = real[j] ?? 0;
+      real[j] = tempRe;
+      const tempIm = imag[i] ?? 0;
+      imag[i] = imag[j] ?? 0;
+      imag[j] = tempIm;
     }
-    magnitudes[k] = count > 0 ? Math.sqrt(real * real + imag * imag) / count : 0;
   }
+
+  for (let len = 2; len <= n; len <<= 1) {
+    const halfLen = len >> 1;
+    const angleStep = (-2 * Math.PI) / len;
+    for (let start = 0; start < n; start += len) {
+      for (let k = 0; k < halfLen; k++) {
+        const angle = angleStep * k;
+        const cos = Math.cos(angle);
+        const sin = Math.sin(angle);
+        const evenIndex = start + k;
+        const oddIndex = start + k + halfLen;
+        const evenRe = real[evenIndex] ?? 0;
+        const evenIm = imag[evenIndex] ?? 0;
+        const oddRe = real[oddIndex] ?? 0;
+        const oddIm = imag[oddIndex] ?? 0;
+        const twiddleRe = oddRe * cos - oddIm * sin;
+        const twiddleIm = oddRe * sin + oddIm * cos;
+        real[evenIndex] = evenRe + twiddleRe;
+        imag[evenIndex] = evenIm + twiddleIm;
+        real[oddIndex] = evenRe - twiddleRe;
+        imag[oddIndex] = evenIm - twiddleIm;
+      }
+    }
+  }
+}
+
+// A full FFT over the zero-padded signal, not a subsampled partial DFT.
+// An earlier version summed cos/sin terms over only every Nth sample once
+// samples.length passed 4096 (a stride, for speed); that is a decimation
+// with no anti-alias prefilter, so it folded high-frequency envelope- and
+// filter-edge energy down into low bins -- three independent batch-authoring
+// agents each independently found the same symptom (a low, steady tone
+// reading as several kHz "bright" once its duration crossed ~170ms, exactly
+// where samples.length crosses 8192 and the old stride jumped to 2). A full
+// FFT has no such aliasing: every frequency lands in its own bin.
+function spectralCentroid(samples: Float32Array, sampleRate: number): number {
+  const size = nextPowerOfTwo(samples.length);
+  const real = new Float64Array(size);
+  const imag = new Float64Array(size);
+  for (let i = 0; i < samples.length; i++) real[i] = samples[i] ?? 0;
+
+  fft(real, imag);
 
   let weightedSum = 0;
   let totalMagnitude = 0;
-  for (let k = 0; k < BIN_COUNT; k++) {
-    const freq = ((k + 1) / BIN_COUNT) * maxFreq;
-    weightedSum += freq * (magnitudes[k] ?? 0);
-    totalMagnitude += magnitudes[k] ?? 0;
+  // Skip bin 0 (DC) and only the lower half (a real input's spectrum is
+  // mirrored above the Nyquist bin).
+  for (let k = 1; k < size / 2; k++) {
+    const re = real[k] ?? 0;
+    const im = imag[k] ?? 0;
+    const magnitude = Math.sqrt(re * re + im * im);
+    const freq = (k * sampleRate) / size;
+    weightedSum += freq * magnitude;
+    totalMagnitude += magnitude;
   }
   return totalMagnitude > 0 ? weightedSum / totalMagnitude : 0;
 }

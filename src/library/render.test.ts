@@ -67,6 +67,28 @@ describe('renderPatch', () => {
     expect(() => renderPatch(patch)).not.toThrow();
   });
 
+  it('never leaves a DC bias on a filtered pink noise layer', () => {
+    // Regression test: the leaky-integrator pink noise approximation isn't
+    // exactly zero-mean over a finite window by chance, and a lowpass
+    // filter passes that bias through unchanged. A batch agent hit this as
+    // a contract-failing DC offset on an otherwise valid patch.
+    const patch: Patch = {
+      layers: [
+        {
+          source: { type: 'noise', color: 'pink' },
+          envelope: { attackMs: 5, decayMs: 20, sustainLevel: 0.6, sustainMs: 80, releaseMs: 30 },
+          filter: { type: 'lowpass', cutoffHz: 900 },
+          gain: 0.6,
+        },
+      ],
+    };
+    const samples = renderPatch(patch);
+    let sum = 0;
+    for (const s of samples) sum += s;
+    const dcOffset = sum / samples.length;
+    expect(Math.abs(dcOffset)).toBeLessThan(0.001);
+  });
+
   it('renders a worst-case 1s/4-layer patch in well under 5ms median', () => {
     const patch: Patch = {
       layers: Array.from({ length: 4 }, (_, i) => ({

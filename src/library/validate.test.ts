@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { checkEntry, checkLibrary, computeDescriptors } from './validate';
+import { checkEntry, checkLibrary, computeDescriptors, BRIGHTNESS_THRESHOLD_HZ } from './validate';
 import { renderPatch } from './render';
 import type { SoundEntry } from './types';
 
@@ -110,6 +110,29 @@ describe('computeDescriptors', () => {
     const descriptors = computeDescriptors(samples, 48000);
     expect(descriptors.durationMs).toBeGreaterThan(0);
     expect(descriptors.durationMs).toBeLessThan(100);
+  });
+
+  it('reports a low brightness for a long, low, steady tone (no aliasing past ~170ms)', () => {
+    // Regression test: an earlier spectralCentroid implementation summed a
+    // partial DFT over only every Nth sample once samples.length crossed
+    // 4096, which is a decimation with no anti-alias prefilter. It folded
+    // high-frequency envelope-edge energy down into low bins, so any tone
+    // longer than ~170ms (8192 samples at 48kHz) read as spuriously bright
+    // (several kHz) regardless of its real pitch. Three independent batch
+    // agents hit this exact symptom on unrelated patches.
+    const patch = {
+      layers: [
+        {
+          source: { type: 'oscillator' as const, wave: 'sine' as const, freqHz: 350 },
+          envelope: { attackMs: 10, decayMs: 20, sustainLevel: 0.5, sustainMs: 250, releaseMs: 20 },
+          gain: 0.6,
+        },
+      ],
+    };
+    const samples = renderPatch(patch);
+    expect(samples.length).toBeGreaterThan(8192); // past the old stride threshold
+    const descriptors = computeDescriptors(samples, 48000);
+    expect(descriptors.brightnessHz).toBeLessThan(BRIGHTNESS_THRESHOLD_HZ);
   });
 });
 

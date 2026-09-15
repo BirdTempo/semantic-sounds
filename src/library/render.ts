@@ -147,6 +147,7 @@ function renderLayer(layer: Layer, sampleCount: number, sampleRate: number, seed
       out[i] = (rng() * 2 - 1) * envelopeAt(i, bp);
     }
   } else {
+    // Pink-ish noise via a one-pole lowpass over white noise.
     const rng = createRng(seed);
     let prev = 0;
     for (let i = 0; i < sampleCount; i++) {
@@ -173,6 +174,21 @@ export function renderPatch(patch: Patch, sampleRate: number = RENDER_SAMPLE_RAT
     const layerOut = renderLayer(layer, sampleCount, sampleRate, 0x9e3779b9 + layerIndex * 0x1000193);
     for (let i = 0; i < sampleCount; i++) mix[i] += layerOut[i] ?? 0;
   });
+
+  // Remove any residual DC bias before fading/limiting. Multiplying a
+  // zero-mean signal (an oscillator cycle, generated noise) by a
+  // time-varying envelope does not generally preserve zero-mean -- a
+  // partial cycle caught by a fast attack, or a noise layer's specific
+  // realization, can leave a small but real offset. Two independent batch
+  // agents hit this on unrelated patches (a plain low sine, and a filtered
+  // pink noise layer) and worked around it by hand-tuning frequency/attack
+  // or swapping filter types; removing it here means no patch has to.
+  let dcSum = 0;
+  for (let i = 0; i < sampleCount; i++) dcSum += mix[i] ?? 0;
+  const dcOffset = dcSum / sampleCount;
+  if (dcOffset !== 0) {
+    for (let i = 0; i < sampleCount; i++) mix[i] = (mix[i] ?? 0) - dcOffset;
+  }
 
   const fadeSamples = Math.max(1, Math.round((FADE_MS / 1000) * sampleRate));
   const fadeCount = Math.min(fadeSamples, sampleCount);
