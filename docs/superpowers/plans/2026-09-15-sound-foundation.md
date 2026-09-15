@@ -2620,10 +2620,12 @@ Expected: `40 entries checked, 0 problems found.`
 - [ ] **Step 4: Probe**
 
 Run: `npm run probe`
-Expected: prints the final pass count at the tuned floor. Note the
-result in `TODO.md` if it is below 25 of 27 — that's a signal the
-keyword data needs another pass, the same lesson the icon project
-learned (the scorer usually isn't the bottleneck, the keywords are).
+Expected: `47 of 48 prose cases answered correctly at rank 1 (floor 9)`,
+exiting 0 (`EXPECTED_MIN_PASSING` in `scripts/prose-probe.ts` gates on
+this baseline, not a bare pass/fail, since one case is a documented,
+accepted word-trap — see `TODO.md`). A drop below 47 is a real
+regression; chase it into the keyword data first, per the icon
+project's lesson that the scorer is rarely the bottleneck.
 
 - [ ] **Step 5: Build**
 
@@ -2633,27 +2635,29 @@ errors.
 
 - [ ] **Step 6: Pack and smoke-test the built package**
 
+The package is `"type": "module"`, so the smoke test must use ESM
+`import`, not `require` (confirmed by actually running this step, not
+assumed):
+
 ```bash
 npm pack
 mkdir -p /tmp/semantic-sounds-smoke-test
 tar -xzf semantic-sounds-*.tgz -C /tmp/semantic-sounds-smoke-test
-node -e "
-const { sounds, createSoundIndex, searchIndex, renderPatch } = require('/tmp/semantic-sounds-smoke-test/package/dist/index.js');
+cat > /tmp/semantic-sounds-smoke-test/smoke.mjs << 'EOF'
+import { sounds, createSoundIndex, searchIndex, renderPatch } from './package/dist/index.js';
 console.log(sounds.length, 'sounds loaded');
 const index = createSoundIndex(sounds);
 const [match] = searchIndex(index, 'the upload finished', { limit: 1 });
 console.log('matched:', match.sound.phrase);
 console.log('rendered', renderPatch(match.sound.patch).length, 'samples');
-"
+EOF
+(cd /tmp/semantic-sounds-smoke-test && node smoke.mjs)
 rm -f semantic-sounds-*.tgz
 rm -rf /tmp/semantic-sounds-smoke-test
 ```
 
 Expected: prints `40 sounds loaded`, `matched: upload complete`, and a
-sample count > 0. If `require` fails because the build is ESM-only,
-use `node --input-type=module -e "import(...)"` instead — confirm
-which is needed and fix this step's exact command before relying on it
-again.
+sample count > 0.
 
 - [ ] **Step 7: Commit any fixes found during verification**
 
