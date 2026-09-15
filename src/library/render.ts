@@ -172,7 +172,7 @@ export function renderPatch(patch: Patch, sampleRate: number = RENDER_SAMPLE_RAT
 
   patch.layers.forEach((layer, layerIndex) => {
     const layerOut = renderLayer(layer, sampleCount, sampleRate, 0x9e3779b9 + layerIndex * 0x1000193);
-    for (let i = 0; i < sampleCount; i++) mix[i] += layerOut[i] ?? 0;
+    for (let i = 0; i < sampleCount; i++) mix[i] = (mix[i] ?? 0) + (layerOut[i] ?? 0);
   });
 
   // Remove any residual DC bias before fading/limiting. Multiplying a

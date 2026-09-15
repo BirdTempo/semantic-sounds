@@ -38,8 +38,8 @@ function hasVowel(text: string): boolean {
 
 function undouble(text: string): string {
   if (text.length < 2) return text;
-  const last = text[text.length - 1];
-  const secondLast = text[text.length - 2];
+  const last = text[text.length - 1] ?? '';
+  const secondLast = text[text.length - 2] ?? '';
   if (last === secondLast && !isVowel(last) && last !== 'l' && last !== 's' && last !== 'f') {
     return text.slice(0, -1);
   }

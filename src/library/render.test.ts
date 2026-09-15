@@ -36,8 +36,8 @@ describe('renderPatch', () => {
 
   it('fades in and out so start and end are near zero', () => {
     const samples = renderPatch(simplePatch());
-    expect(Math.abs(samples[0])).toBeLessThan(0.01);
-    expect(Math.abs(samples[samples.length - 1])).toBeLessThan(0.01);
+    expect(Math.abs(samples[0] ?? 0)).toBeLessThan(0.01);
+    expect(Math.abs(samples[samples.length - 1] ?? 0)).toBeLessThan(0.01);
   });
 
   it('never exceeds the peak ceiling even with 4 loud layers', () => {

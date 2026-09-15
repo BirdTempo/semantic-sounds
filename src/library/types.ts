@@ -3,9 +3,6 @@ export const MIN_LAYERS = 1;
 export const MAX_LAYERS = 4;
 export const MIN_FREQ_HZ = 40;
 export const MAX_FREQ_HZ = 8000;
-export const MIN_DURATION_MS = 30;
-export const MAX_DURATION_MS = 1500;
-export const MIN_KEYWORDS = 4;
 
 export type Wave = 'sine' | 'triangle' | 'square' | 'saw';
 export type NoiseColor = 'white' | 'pink';

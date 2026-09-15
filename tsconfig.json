@@ -11,7 +11,7 @@
     "noUncheckedIndexedAccess": true,
     "skipLibCheck": true,
     "outDir": "dist",
-    "types": ["node"],
-    "include": ["src", "scripts"]
-  }
+    "types": ["node"]
+  },
+  "include": ["src", "scripts", "web"]
 }
