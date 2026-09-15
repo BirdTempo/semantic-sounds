@@ -1,0 +1,90 @@
+import { describe, it, expect } from 'vitest';
+import { renderPatch } from './render';
+import type { Patch } from './types';
+import { RENDER_SAMPLE_RATE } from './types';
+
+function simplePatch(overrides: Partial<Patch['layers'][0]> = {}): Patch {
+  return {
+    layers: [
+      {
+        source: { type: 'oscillator', wave: 'sine', freqHz: 440 },
+        envelope: { attackMs: 5, decayMs: 20, sustainLevel: 0.3, sustainMs: 20, releaseMs: 30 },
+        gain: 0.8,
+        ...overrides,
+      },
+    ],
+  };
+}
+
+describe('renderPatch', () => {
+  it('is deterministic for the same patch', () => {
+    const patch = simplePatch();
+    const a = renderPatch(patch);
+    const b = renderPatch(patch);
+    expect(a.length).toBe(b.length);
+    for (let i = 0; i < a.length; i++) {
+      expect(a[i]).toBe(b[i]);
+    }
+  });
+
+  it('derives duration from the longest layer envelope', () => {
+    const patch = simplePatch(); // 5+20+20+30 = 75ms
+    const samples = renderPatch(patch);
+    const expectedSamples = Math.round((75 / 1000) * RENDER_SAMPLE_RATE);
+    expect(samples.length).toBe(expectedSamples);
+  });
+
+  it('fades in and out so start and end are near zero', () => {
+    const samples = renderPatch(simplePatch());
+    expect(Math.abs(samples[0])).toBeLessThan(0.01);
+    expect(Math.abs(samples[samples.length - 1])).toBeLessThan(0.01);
+  });
+
+  it('never exceeds the peak ceiling even with 4 loud layers', () => {
+    const patch: Patch = {
+      layers: Array.from({ length: 4 }, (_, i) => ({
+        source: { type: 'oscillator' as const, wave: 'sine' as const, freqHz: 300 + i * 50 },
+        envelope: { attackMs: 2, decayMs: 10, sustainLevel: 1, sustainMs: 50, releaseMs: 10 },
+        gain: 1,
+      })),
+    };
+    const samples = renderPatch(patch);
+    let peak = 0;
+    for (const s of samples) peak = Math.max(peak, Math.abs(s));
+    expect(peak).toBeLessThanOrEqual(0.891 + 1e-6);
+  });
+
+  it('renders noise layers without throwing', () => {
+    const patch: Patch = {
+      layers: [
+        {
+          source: { type: 'noise', color: 'white' },
+          envelope: { attackMs: 1, decayMs: 10, sustainLevel: 0, sustainMs: 0, releaseMs: 20 },
+          gain: 0.5,
+        },
+      ],
+    };
+    expect(() => renderPatch(patch)).not.toThrow();
+  });
+
+  it('renders a worst-case 1s/4-layer patch in well under 5ms median', () => {
+    const patch: Patch = {
+      layers: Array.from({ length: 4 }, (_, i) => ({
+        source: { type: 'oscillator' as const, wave: 'sine' as const, freqHz: 220 + i * 110 },
+        envelope: { attackMs: 5, decayMs: 100, sustainLevel: 0.4, sustainMs: 700, releaseMs: 195 },
+        filter: { type: 'lowpass' as const, cutoffHz: 4000 },
+        gain: 0.5,
+      })),
+    };
+    for (let i = 0; i < 3; i++) renderPatch(patch);
+    const times: number[] = [];
+    for (let i = 0; i < 20; i++) {
+      const start = performance.now();
+      renderPatch(patch);
+      times.push(performance.now() - start);
+    }
+    times.sort((a, b) => a - b);
+    const median = times[Math.floor(times.length / 2)];
+    expect(median).toBeLessThan(5);
+  });
+});
