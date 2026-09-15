@@ -1,0 +1,110 @@
+[
+  {
+    "name": "message-received",
+    "phrase": "message received",
+    "category": "messages-notifications",
+    "concept": "A short, soft chime with a rising pitch that plays when a new message arrives.",
+    "keywords": ["message", "received", "incoming", "chat", "text", "arrived", "inbox"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 660, "pitchEnvelope": { "toHz": 880, "timeMs": 70 } },
+          "envelope": { "attackMs": 12, "decayMs": 30, "sustainLevel": 0.35, "sustainMs": 30, "releaseMs": 70 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "notification-ping",
+    "phrase": "notification ping",
+    "category": "messages-notifications",
+    "concept": "A quick, sharp ping that alerts the user to a new incoming notification.",
+    "keywords": ["notification", "ping", "alert", "ding", "banner", "badge", "general alert"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 900 },
+          "envelope": { "attackMs": 4, "decayMs": 40, "sustainLevel": 0.15, "sustainMs": 10, "releaseMs": 60 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "mention-alert",
+    "phrase": "mention alert",
+    "category": "messages-notifications",
+    "concept": "A quick, sharp alert built from a rising triangle tone and a crisp noise burst, demanding attention for a mention.",
+    "keywords": ["mention", "tag", "alert", "urgent", "attention", "callout", "name mentioned"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 740, "pitchEnvelope": { "toHz": 1100, "timeMs": 35 } },
+          "envelope": { "attackMs": 3, "decayMs": 25, "sustainLevel": 0.35, "sustainMs": 15, "releaseMs": 35 },
+          "gain": 0.68
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 2, "decayMs": 12, "sustainLevel": 0, "sustainMs": 0, "releaseMs": 8 },
+          "filter": { "type": "bandpass", "cutoffHz": 2200 },
+          "gain": 0.4
+        }
+      ]
+    }
+  },
+  {
+    "name": "direct-message",
+    "phrase": "direct message",
+    "category": "messages-notifications",
+    "concept": "A soft two-tone chime with a rising pitch that signals a new direct message from a contact.",
+    "keywords": ["dm", "private message", "one-on-one", "personal chat", "contact", "inbox"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 520, "pitchEnvelope": { "toHz": 660, "timeMs": 90 } },
+          "envelope": { "attackMs": 14, "decayMs": 40, "sustainLevel": 0.4, "sustainMs": 40, "releaseMs": 80 },
+          "gain": 0.5
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 780, "pitchEnvelope": { "toHz": 990, "timeMs": 90 } },
+          "envelope": { "attackMs": 14, "decayMs": 40, "sustainLevel": 0.25, "sustainMs": 40, "releaseMs": 80 },
+          "gain": 0.22
+        }
+      ]
+    }
+  },
+  {
+    "name": "calendar-reminder",
+    "phrase": "calendar reminder",
+    "category": "messages-notifications",
+    "concept": "A soft, gentle tone that reminds the user of an upcoming calendar event.",
+    "keywords": ["reminder", "calendar", "event", "upcoming", "schedule", "appointment", "meeting"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 580 },
+          "envelope": { "attackMs": 30, "decayMs": 50, "sustainLevel": 0.4, "sustainMs": 120, "releaseMs": 100 },
+          "gain": 0.5
+        }
+      ]
+    }
+  },
+  {
+    "name": "mute-confirmation",
+    "phrase": "mute confirmation",
+    "category": "messages-notifications",
+    "concept": "A soft, short tone with a falling pitch confirms that notification sounds are now muted.",
+    "keywords": ["mute", "muted", "silence", "confirm", "confirmation", "notifications off", "do not disturb"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 480, "pitchEnvelope": { "toHz": 300, "timeMs": 100 } },
+          "envelope": { "attackMs": 12, "decayMs": 30, "sustainLevel": 0.3, "sustainMs": 30, "releaseMs": 60 },
+          "filter": { "type": "lowpass", "cutoffHz": 900 },
+          "gain": 0.55
+        }
+      ]
+    }
+  }
+]
