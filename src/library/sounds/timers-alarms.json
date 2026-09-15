@@ -1,0 +1,140 @@
+[
+  {
+    "name": "key-press",
+    "phrase": "key press",
+    "category": "timers-alarms",
+    "concept": "A very short, sharp click for a single keyboard key press.",
+    "keywords": ["keyboard", "keystroke", "click", "type", "tap", "letter"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 2, "decayMs": 18, "sustainLevel": 0, "sustainMs": 0, "releaseMs": 20 },
+          "filter": { "type": "highpass", "cutoffHz": 2500 },
+          "gain": 0.7
+        }
+      ]
+    }
+  },
+  {
+    "name": "message-typing",
+    "phrase": "message typing",
+    "category": "timers-alarms",
+    "concept": "A short, soft, high tone for a chat message-typing indicator tick.",
+    "keywords": ["chat", "typing", "message", "bubble", "compose", "indicator"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 850 },
+          "envelope": { "attackMs": 8, "decayMs": 20, "sustainLevel": 0.3, "sustainMs": 10, "releaseMs": 20 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "timer-tick",
+    "phrase": "timer tick",
+    "category": "timers-alarms",
+    "concept": "A short, plain, neutral click sound for a countdown timer's tick.",
+    "keywords": ["timer", "tick", "countdown", "clock", "second", "click"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 3, "decayMs": 17, "sustainLevel": 0, "sustainMs": 0, "releaseMs": 20 },
+          "filter": { "type": "bandpass", "cutoffHz": 1200 },
+          "gain": 0.7
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 500 },
+          "envelope": { "attackMs": 3, "decayMs": 17, "sustainLevel": 0, "sustainMs": 0, "releaseMs": 17 },
+          "gain": 0.45
+        }
+      ]
+    }
+  },
+  {
+    "name": "timer-done",
+    "phrase": "timer done",
+    "category": "timers-alarms",
+    "concept": "A rising two-tone chime that signals a kitchen timer has finished counting.",
+    "keywords": ["timer", "done", "finished", "complete", "kitchen", "ding", "chime"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 600, "pitchEnvelope": { "toHz": 900, "timeMs": 150 } },
+          "envelope": { "attackMs": 30, "decayMs": 60, "sustainLevel": 0.4, "sustainMs": 150, "releaseMs": 120 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 900 },
+          "envelope": { "attackMs": 40, "decayMs": 80, "sustainLevel": 0.25, "sustainMs": 150, "releaseMs": 90 },
+          "filter": { "type": "lowpass", "cutoffHz": 1200 },
+          "gain": 0.25
+        }
+      ]
+    }
+  },
+  {
+    "name": "alarm",
+    "phrase": "alarm",
+    "category": "timers-alarms",
+    "concept": "A sharp alarm tone with an urgent, buzzing edge for an active reminder.",
+    "keywords": ["alarm", "alert", "wake", "urgent", "buzzer", "ringing"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 1200 },
+          "envelope": { "attackMs": 5, "decayMs": 20, "sustainLevel": 0.6, "sustainMs": 180, "releaseMs": 45 },
+          "gain": 0.42
+        },
+        {
+          "source": { "type": "oscillator", "wave": "square", "freqHz": 1200 },
+          "envelope": { "attackMs": 5, "decayMs": 20, "sustainLevel": 0.5, "sustainMs": 180, "releaseMs": 45 },
+          "filter": { "type": "lowpass", "cutoffHz": 2500 },
+          "gain": 0.18
+        },
+        {
+          "source": { "type": "oscillator", "wave": "square", "freqHz": 90 },
+          "envelope": { "attackMs": 5, "decayMs": 20, "sustainLevel": 0.6, "sustainMs": 180, "releaseMs": 45 },
+          "filter": { "type": "lowpass", "cutoffHz": 400 },
+          "gain": 0.16
+        }
+      ]
+    }
+  },
+  {
+    "name": "countdown-beep",
+    "phrase": "countdown beep",
+    "category": "timers-alarms",
+    "concept": "A short, sharp beep tone played once per second during a countdown.",
+    "keywords": ["countdown", "beep", "count", "launch", "start", "sequence"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 880 },
+          "envelope": { "attackMs": 4, "decayMs": 30, "sustainLevel": 0.3, "sustainMs": 20, "releaseMs": 40 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "snooze",
+    "phrase": "snooze",
+    "category": "timers-alarms",
+    "concept": "A soft, falling tone that feels calming, like snoozing an alarm to rest.",
+    "keywords": ["snooze", "alarm", "sleep", "postpone", "delay", "wake"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 700, "pitchEnvelope": { "toHz": 400, "timeMs": 300 } },
+          "envelope": { "attackMs": 60, "decayMs": 100, "sustainLevel": 0.4, "sustainMs": 150, "releaseMs": 200 },
+          "filter": { "type": "lowpass", "cutoffHz": 1000 },
+          "gain": 0.55
+        }
+      ]
+    }
+  }
+]
