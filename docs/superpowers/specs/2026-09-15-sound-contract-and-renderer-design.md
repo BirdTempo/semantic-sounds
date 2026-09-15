@@ -104,8 +104,14 @@ type Envelope = {
   attackMs: number;
   decayMs: number;
   sustainLevel: number;    // 0-1
+  sustainMs: number;      // hold time at sustainLevel before release
   releaseMs: number;
 };
+// A patch has no separate duration field: a layer's own envelope is fully
+// self-timed (attack+decay+sustain+release), and the patch's total duration
+// is the longest of its layers' envelope durations. This keeps "a patch is
+// just data" literally true -- nothing outside the patch decides how long
+// it plays.
 
 type Filter = {
   type: 'lowpass' | 'highpass' | 'bandpass';

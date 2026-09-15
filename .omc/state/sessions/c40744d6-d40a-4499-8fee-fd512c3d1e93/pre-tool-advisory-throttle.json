@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "entries": {
+    "79a93d4a2f8f50b95f852280616242fee1855dc99a3c75211917f55e72e95fae": {
+      "last_emitted_at_ms": 1789451399102,
+      "message": "Use parallel execution for independent tasks. Use run_in_background for long operations (npm install, builds, tests)."
+    },
+    "445ed27a3872b681d98190bae61ccb84954e1bc4e140df5370be958dee776b3a": {
+      "last_emitted_at_ms": 1789451394962,
+      "message": "Verify changes work after editing. Test functionality before marking complete."
+    },
+    "466399dafa2d20f60587180bad0a07358eb7f2bce724df0ff682f038ad33f5ad": {
+      "last_emitted_at_ms": 1789451117894,
+      "message": "Read multiple files in parallel when possible for faster analysis."
+    },
+    "1bb6914bc42b891c26d46c8ae2fd4f44071f59862e89dc550f4c82877b700216": {
+      "last_emitted_at_ms": 1789450108950,
+      "message": "The boulder never stops. Continue until all tasks complete."
+    },
+    "8a91d5e578dd4b37fbfb883bee45bc378a0d905b895e63569984162ed1e8ca53": {
+      "last_emitted_at_ms": 1789447811087,
+      "message": "Spawning agent: Explore (inherit) | Task: Summarize semantic-icons reference architecture"
+    }
+  },
+  "updated_at": "2026-09-15T05:49:59.102Z"
+}

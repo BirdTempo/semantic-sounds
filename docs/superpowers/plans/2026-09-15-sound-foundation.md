@@ -182,7 +182,7 @@ describe('types', () => {
       name: 'tap',
       phrase: 'tap',
       category: 'ui-feedback',
-      concept: 'A single soft click for a light UI tap.',
+      concept: 'A single sharp click for a light UI tap.',
       keywords: ['click', 'button', 'press', 'select'],
       patch: {
         layers: [
@@ -641,17 +641,20 @@ describe('renderPatch', () => {
         gain: 0.5,
       })),
     };
-    // warm up
-    for (let i = 0; i < 3; i++) renderPatch(patch);
+    for (let i = 0; i < 10; i++) renderPatch(patch);
     const times: number[] = [];
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; i < 30; i++) {
       const start = performance.now();
       renderPatch(patch);
       times.push(performance.now() - start);
     }
     times.sort((a, b) => a - b);
     const median = times[Math.floor(times.length / 2)];
-    expect(median).toBeLessThan(5);
+    // The brainstorming benchmark measured ~2.5ms in isolation; 8ms leaves
+    // headroom for a shared/loaded test machine while still catching a
+    // real regression back to the naive per-sample Math.sin/exp/random
+    // approach, which measured ~10ms.
+    expect(median).toBeLessThan(8);
   });
 });
 ```
@@ -1187,7 +1190,7 @@ function validEntry(overrides: Partial<SoundEntry> = {}): SoundEntry {
     name: 'tap',
     phrase: 'tap',
     category: 'ui-feedback',
-    concept: 'A single soft click for a light UI tap.',
+    concept: 'A single sharp click for a light UI tap.',
     keywords: ['click', 'button', 'press', 'select'],
     patch: {
       layers: [
@@ -1635,7 +1638,7 @@ only as a secondary texture layer, filtered down.
     "layers": [
       {
         "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 900, "timeMs": 90 } },
-        "envelope": { "attackMs": 4, "decayMs": 40, "sustainLevel": 0.3, "sustainMs": 40, "releaseMs": 60 },
+        "envelope": { "attackMs": 15, "decayMs": 40, "sustainLevel": 0.3, "sustainMs": 40, "releaseMs": 60 },
         "gain": 0.7
       }
     ]

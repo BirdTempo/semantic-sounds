@@ -8,7 +8,7 @@ describe('types', () => {
       name: 'tap',
       phrase: 'tap',
       category: 'ui-feedback',
-      concept: 'A single soft click for a light UI tap.',
+      concept: 'A single sharp click for a light UI tap.',
       keywords: ['click', 'button', 'press', 'select'],
       patch: {
         layers: [
