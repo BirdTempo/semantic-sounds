@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Semantic Sounds — dev player</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Semantic Sounds</h1>
+      <p>Type what you're looking for. Nothing plays until you click a result.</p>
+      <input id="query" type="text" placeholder="e.g. the upload finished" autocomplete="off" />
+      <div class="controls">
+        <label><input id="mute" type="checkbox" /> Mute</label>
+        <label>Volume <input id="volume" type="range" min="0" max="1" step="0.01" value="0.8" /></label>
+      </div>
+      <ul id="results"></ul>
+    </main>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>
