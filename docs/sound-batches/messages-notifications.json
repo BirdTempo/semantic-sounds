@@ -1,0 +1,12 @@
+{
+  "category": "messages-notifications",
+  "outputFile": "src/library/sounds/messages-notifications.json",
+  "phrases": [
+    { "name": "message-received", "phrase": "message received" },
+    { "name": "notification-ping", "phrase": "notification ping" },
+    { "name": "mention-alert", "phrase": "mention alert" },
+    { "name": "direct-message", "phrase": "direct message" },
+    { "name": "calendar-reminder", "phrase": "calendar reminder" },
+    { "name": "mute-confirmation", "phrase": "mute confirmation" }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "category": "game",
+  "outputFile": "src/library/sounds/game.json",
+  "phrases": [
+    { "name": "jump", "phrase": "jump" },
+    { "name": "power-up", "phrase": "power up" },
+    { "name": "coin-combo", "phrase": "coin combo" },
+    { "name": "game-over", "phrase": "game over" },
+    { "name": "victory-fanfare", "phrase": "victory fanfare" },
+    { "name": "extra-life", "phrase": "extra life" }
+  ]
+}

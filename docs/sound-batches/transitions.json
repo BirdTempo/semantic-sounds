@@ -1,0 +1,13 @@
+{
+  "category": "transitions",
+  "outputFile": "src/library/sounds/transitions.json",
+  "phrases": [
+    { "name": "menu-open", "phrase": "menu open" },
+    { "name": "menu-close", "phrase": "menu close" },
+    { "name": "panel-slide-in", "phrase": "panel slide in" },
+    { "name": "panel-slide-out", "phrase": "panel slide out" },
+    { "name": "tab-switch", "phrase": "tab switch" },
+    { "name": "modal-open", "phrase": "modal open" },
+    { "name": "modal-close", "phrase": "modal close" }
+  ]
+}

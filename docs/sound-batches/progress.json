@@ -1,0 +1,13 @@
+{
+  "category": "progress",
+  "outputFile": "src/library/sounds/progress.json",
+  "phrases": [
+    { "name": "upload-complete", "phrase": "upload complete" },
+    { "name": "download-complete", "phrase": "download complete" },
+    { "name": "level-up", "phrase": "level up" },
+    { "name": "coin-pickup", "phrase": "coin pickup" },
+    { "name": "achievement-unlocked", "phrase": "achievement unlocked" },
+    { "name": "task-complete", "phrase": "task complete" },
+    { "name": "sync-complete", "phrase": "sync complete" }
+  ]
+}

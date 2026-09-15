@@ -1,0 +1,13 @@
+{
+  "category": "ui-feedback",
+  "outputFile": "src/library/sounds/ui-feedback.json",
+  "phrases": [
+    { "name": "success-chime", "phrase": "success chime" },
+    { "name": "error-buzz", "phrase": "error buzz" },
+    { "name": "warning-ping", "phrase": "warning ping" },
+    { "name": "tap", "phrase": "tap" },
+    { "name": "toggle-on", "phrase": "toggle on" },
+    { "name": "toggle-off", "phrase": "toggle off" },
+    { "name": "delete", "phrase": "delete" }
+  ]
+}

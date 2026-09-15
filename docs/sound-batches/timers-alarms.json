@@ -1,0 +1,13 @@
+{
+  "category": "timers-alarms",
+  "outputFile": "src/library/sounds/timers-alarms.json",
+  "phrases": [
+    { "name": "key-press", "phrase": "key press" },
+    { "name": "message-typing", "phrase": "message typing" },
+    { "name": "timer-tick", "phrase": "timer tick" },
+    { "name": "timer-done", "phrase": "timer done" },
+    { "name": "alarm", "phrase": "alarm" },
+    { "name": "countdown-beep", "phrase": "countdown beep" },
+    { "name": "snooze", "phrase": "snooze" }
+  ]
+}
