@@ -4,7 +4,7 @@
     "phrase": "success chime",
     "category": "ui-feedback",
     "concept": "A short, soft, rising chime for a completed action.",
-    "keywords": ["success", "done", "complete", "confirm", "checkmark", "saved", "finished"],
+    "keywords": ["success", "done", "complete", "confirm", "checkmark", "saved", "finished", "worked", "nice"],
     "patch": {
       "layers": [
         {

@@ -4,7 +4,7 @@
     "phrase": "message received",
     "category": "messages-notifications",
     "concept": "A short, soft chime with a rising pitch that plays when a new message arrives.",
-    "keywords": ["message", "received", "incoming", "chat", "text", "arrived", "inbox"],
+    "keywords": ["message", "received", "incoming", "chat", "text", "arrived", "inbox", "someone sent me a message"],
     "patch": {
       "layers": [
         {

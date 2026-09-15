@@ -42,7 +42,7 @@
     "phrase": "coin combo",
     "category": "game",
     "concept": "A rapid, ascending flourish of overlapping notes for a coin combo streak, distinct from one coin's chime.",
-    "keywords": ["coin", "combo", "streak", "multiplier", "collect", "chain"],
+    "keywords": ["coin", "combo", "streak", "multiplier", "collect", "chain", "coins in a row"],
     "patch": {
       "layers": [
         {
@@ -95,7 +95,7 @@
     "phrase": "victory fanfare",
     "category": "game",
     "concept": "A rising fanfare of ascending notes for a victory celebration, the opposite of game-over.",
-    "keywords": ["victory", "win", "fanfare", "celebrate", "triumph", "success"],
+    "keywords": ["victory", "win", "won", "fanfare", "celebrate", "triumph", "success", "won the game"],
     "patch": {
       "layers": [
         {

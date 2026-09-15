@@ -127,7 +127,7 @@
     "phrase": "coin pickup",
     "category": "progress",
     "concept": "A bright, short, rising blip, like a coin picked up in a game.",
-    "keywords": ["coin", "pickup", "collect", "game", "reward", "points", "score"],
+    "keywords": ["coin", "pickup", "collect", "game", "reward", "points", "score", "pick up"],
     "patch": {
       "layers": [
         {

@@ -110,7 +110,8 @@ export const sounds: SoundEntry[] = [
       "streak",
       "multiplier",
       "collect",
-      "chain"
+      "chain",
+      "coins in a row"
     ],
     "patch": {
       "layers": [
@@ -241,10 +242,12 @@ export const sounds: SoundEntry[] = [
     "keywords": [
       "victory",
       "win",
+      "won",
       "fanfare",
       "celebrate",
       "triumph",
-      "success"
+      "success",
+      "won the game"
     ],
     "patch": {
       "layers": [
@@ -395,7 +398,8 @@ export const sounds: SoundEntry[] = [
       "chat",
       "text",
       "arrived",
-      "inbox"
+      "inbox",
+      "someone sent me a message"
     ],
     "patch": {
       "layers": [
@@ -960,7 +964,8 @@ export const sounds: SoundEntry[] = [
       "game",
       "reward",
       "points",
-      "score"
+      "score",
+      "pick up"
     ],
     "patch": {
       "layers": [
@@ -1674,7 +1679,9 @@ export const sounds: SoundEntry[] = [
       "confirm",
       "checkmark",
       "saved",
-      "finished"
+      "finished",
+      "worked",
+      "nice"
     ],
     "patch": {
       "layers": [

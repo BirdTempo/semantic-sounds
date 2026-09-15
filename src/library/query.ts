@@ -16,9 +16,15 @@ const RAW_PHRASE_BONUS = 70;
 const CONTAINED_ALIAS_BONUS = 14;
 const CONTAINED_PHRASE_BONUS = 40;
 
-// Chosen provisionally; re-derived by grid search against the probe in
-// scripts/tune-thresholds.ts once the seed set and probe both exist.
-export const LOCAL_MIN_SCORE = 38;
+// Chosen by grid search (scripts/tune-thresholds.ts) against the 48-case
+// probe in scripts/prose-probe.ts over the 40-sound seed set: 47/48 cases
+// pass anywhere in the 5-9 range, dropping to 45/48 at 10 and worse above
+// that, so 9 is the top of that plateau (a little more margin against weak
+// coincidental matches, at no cost to the pass rate). The one remaining
+// failure is a documented, accepted word-trap -- see prose-probe.ts.
+// Re-run the grid search whenever the corpus changes meaningfully; do not
+// assume this value is stable at a larger scale.
+export const LOCAL_MIN_SCORE = 9;
 
 const COURTESY = new Set(['please', 'thank', 'thanks', 'sorry', 'hello', 'hi', 'ok', 'okay']);
 
