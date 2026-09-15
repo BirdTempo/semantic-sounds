@@ -1,0 +1,132 @@
+[
+  {
+    "name": "success-chime",
+    "phrase": "success chime",
+    "category": "ui-feedback",
+    "concept": "A short, soft, rising chime for a completed action.",
+    "keywords": ["success", "done", "complete", "confirm", "checkmark", "saved", "finished"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 900, "timeMs": 90 } },
+          "envelope": { "attackMs": 15, "decayMs": 40, "sustainLevel": 0.3, "sustainMs": 40, "releaseMs": 60 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "error-buzz",
+    "phrase": "error buzz",
+    "category": "ui-feedback",
+    "concept": "A sharp, dark buzz that signals a failed action or error.",
+    "keywords": ["error", "failed", "failure", "invalid", "alert", "denied", "wrong"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 240 },
+          "envelope": { "attackMs": 6, "decayMs": 45, "sustainLevel": 0.45, "sustainMs": 45, "releaseMs": 65 },
+          "gain": 0.44
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 240 },
+          "envelope": { "attackMs": 6, "decayMs": 45, "sustainLevel": 0.45, "sustainMs": 45, "releaseMs": 65 },
+          "filter": { "type": "lowpass", "cutoffHz": 500 },
+          "gain": 0.12
+        }
+      ]
+    }
+  },
+  {
+    "name": "warning-ping",
+    "phrase": "warning ping",
+    "category": "ui-feedback",
+    "concept": "A short, sharp, bright ping that warns of a potential issue.",
+    "keywords": ["warning", "alert", "attention", "caution", "notice", "heads-up", "risk"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1800 },
+          "envelope": { "attackMs": 4, "decayMs": 30, "sustainLevel": 0.3, "sustainMs": 30, "releaseMs": 50 },
+          "gain": 0.6
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 2, "decayMs": 20, "sustainLevel": 0, "sustainMs": 0, "releaseMs": 20 },
+          "filter": { "type": "highpass", "cutoffHz": 3000 },
+          "gain": 0.25
+        }
+      ]
+    }
+  },
+  {
+    "name": "tap",
+    "phrase": "tap",
+    "category": "ui-feedback",
+    "concept": "A very short, soft tap sound for a light UI touch or button press.",
+    "keywords": ["touch", "press", "click", "button", "select"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 400 },
+          "envelope": { "attackMs": 8, "decayMs": 20, "sustainLevel": 0.2, "sustainMs": 10, "releaseMs": 20 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "toggle-on",
+    "phrase": "toggle on",
+    "category": "ui-feedback",
+    "concept": "A quick, rising blip for turning a toggle on.",
+    "keywords": ["switch", "enable", "activate", "turn-on", "checkbox", "on"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 850, "timeMs": 70 } },
+          "envelope": { "attackMs": 6, "decayMs": 25, "sustainLevel": 0.25, "sustainMs": 20, "releaseMs": 30 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "toggle-off",
+    "phrase": "toggle off",
+    "category": "ui-feedback",
+    "concept": "A quick, falling blip for turning a toggle off.",
+    "keywords": ["switch", "disable", "deactivate", "turn-off", "checkbox", "off"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 850, "pitchEnvelope": { "toHz": 500, "timeMs": 70 } },
+          "envelope": { "attackMs": 6, "decayMs": 25, "sustainLevel": 0.3, "sustainMs": 20, "releaseMs": 30 },
+          "gain": 0.62
+        }
+      ]
+    }
+  },
+  {
+    "name": "delete",
+    "phrase": "delete",
+    "category": "ui-feedback",
+    "concept": "A short, falling tone with a muffled thud, marking a deleted item.",
+    "keywords": ["remove", "trash", "discard", "erase", "clear", "bin"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 650, "pitchEnvelope": { "toHz": 280, "timeMs": 120 } },
+          "envelope": { "attackMs": 8, "decayMs": 50, "sustainLevel": 0.3, "sustainMs": 40, "releaseMs": 50 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 2, "decayMs": 15, "sustainLevel": 0, "sustainMs": 0, "releaseMs": 15 },
+          "filter": { "type": "lowpass", "cutoffHz": 800 },
+          "gain": 0.35
+        }
+      ]
+    }
+  }
+]
