@@ -1639,7 +1639,7 @@ only as a secondary texture layer, filtered down.
       {
         "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 900, "timeMs": 90 } },
         "envelope": { "attackMs": 15, "decayMs": 40, "sustainLevel": 0.3, "sustainMs": 40, "releaseMs": 60 },
-        "gain": 0.7
+        "gain": 0.6
       }
     ]
   }
