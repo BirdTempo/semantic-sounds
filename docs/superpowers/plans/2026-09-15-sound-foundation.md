@@ -444,8 +444,8 @@ export function stem(word: string): string {
   }
 
   if (word.endsWith('s') && !word.endsWith('ss') && word.length > 3) {
-    const twoBefore = word.slice(-3, -1);
-    if (twoBefore !== 'us' && twoBefore !== 'is' && twoBefore !== 'ns') {
+    const lastTwo = word.slice(-2);
+    if (lastTwo !== 'us' && lastTwo !== 'is' && lastTwo !== 'ns') {
       return word.slice(0, -1);
     }
   }
