@@ -26,7 +26,14 @@ npm run typecheck
 npm run build
 npm run dev:web   # local player at the printed URL
 npm run probe     # retrieval probe against labelled prose cases
+npm run review    # local review tool at http://127.0.0.1:5179
 ```
+
+The review tool plays each sound, records what you reject, and writes three
+replacements for each rejection with `claude-opus-5`. It needs
+`ANTHROPIC_API_KEY`. Set `REVIEW_FAKE_DRAW=1` to run it with a fake
+generator that costs nothing. See
+`docs/superpowers/specs/2026-09-19-sound-review-tool-design.md`.
 
 ## License
 

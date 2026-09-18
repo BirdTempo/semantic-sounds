@@ -52,6 +52,15 @@ letting deferred work rot into an undocumented gap.
   machine instead of the code. The ratio cancels load out, because load
   scales both implementations together. Measured margin: about 3.7x
   against a threshold of 2x.
+- The review tool reviews by ear, one sound at a time. If reviewing 500
+  sounds proves slow, consider a "play all in category" sweep -- but only
+  with evidence from real use.
+- The review tool generates with `claude-opus-5` at effort `high`. The icon
+  project found Opus and Sonnet mixed on quality; if cost becomes a problem,
+  generate slot A with Opus and B/C with Sonnet, and let the ear decide.
+- `scripts/review/rejected.jsonl` is append-only and committed on purpose: it
+  is the memory that stops a later round from repeating a rejected idea.
+  Never rewrite it to tidy it up.
 
 ## Bugs found and fixed during the seed-set build
 
