@@ -401,7 +401,6 @@ export const sounds: SoundEntry[] = [
     "keywords": [
       "bubble",
       "burst",
-      "cork",
       "small",
       "round"
     ],
@@ -436,7 +435,6 @@ export const sounds: SoundEntry[] = [
     "concept": "A very short, sharp, dry click made from one crisp noise burst.",
     "keywords": [
       "button",
-      "mouse",
       "switch",
       "press",
       "crisp"
@@ -642,7 +640,6 @@ export const sounds: SoundEntry[] = [
     "concept": "A long, sustained wash of soft granular noise texture drifting evenly.",
     "keywords": [
       "texture",
-      "noise",
       "drift",
       "ambient",
       "cloud"
@@ -1913,7 +1910,6 @@ export const sounds: SoundEntry[] = [
     "keywords": [
       "glass",
       "ring",
-      "clink",
       "tone",
       "bright",
       "tap",
@@ -1984,7 +1980,6 @@ export const sounds: SoundEntry[] = [
     "concept": "A sharp metal-tone clang built from two inharmonic tones that ring together.",
     "keywords": [
       "metal",
-      "clang",
       "ring",
       "tone",
       "inharmonic",
@@ -3070,7 +3065,6 @@ export const sounds: SoundEntry[] = [
     "concept": "A long, sustained, rising elephant call like a trumpeting blast.",
     "keywords": [
       "elephant",
-      "trumpet",
       "call",
       "trunk",
       "savanna"
@@ -3304,7 +3298,6 @@ export const sounds: SoundEntry[] = [
       "serpent",
       "warning",
       "breath",
-      "air",
       "reptile",
       "sss"
     ],
@@ -5079,7 +5072,6 @@ export const sounds: SoundEntry[] = [
       "focus",
       "concentration",
       "drone",
-      "calm",
       "steady",
       "attention"
     ],
@@ -5656,7 +5648,6 @@ export const sounds: SoundEntry[] = [
       "cube",
       "glass",
       "drop",
-      "clink",
       "cold",
       "drink",
       "clatter"
@@ -6477,7 +6468,6 @@ export const sounds: SoundEntry[] = [
     "keywords": [
       "kettle",
       "whistle",
-      "boil",
       "steam",
       "tea",
       "stove",
@@ -6815,7 +6805,6 @@ export const sounds: SoundEntry[] = [
       "freezer",
       "fridge",
       "open",
-      "door",
       "seal",
       "release",
       "cold"
@@ -7009,7 +6998,6 @@ export const sounds: SoundEntry[] = [
     "concept": "A quick, bright, rising twinkle for collecting a coin pickup.",
     "keywords": [
       "coin",
-      "pickup",
       "collect",
       "currency",
       "gold",
@@ -8435,7 +8423,6 @@ export const sounds: SoundEntry[] = [
       "unlock",
       "lock",
       "key",
-      "open",
       "gate",
       "click",
       "access"
@@ -8767,7 +8754,6 @@ export const sounds: SoundEntry[] = [
       "activate",
       "click",
       "button",
-      "flip",
       "trigger"
     ],
     "patch": {
@@ -9647,8 +9633,7 @@ export const sounds: SoundEntry[] = [
       "begin",
       "ready",
       "kickoff",
-      "signal",
-      "whistle"
+      "signal"
     ],
     "patch": {
       "layers": [
@@ -9880,7 +9865,6 @@ export const sounds: SoundEntry[] = [
       "countdown",
       "go",
       "start",
-      "launch",
       "begin",
       "signal",
       "ready set go"
@@ -10511,7 +10495,6 @@ export const sounds: SoundEntry[] = [
       "combo",
       "streak",
       "multiplier",
-      "collect",
       "chain",
       "coins in a row"
     ],
@@ -10871,7 +10854,6 @@ export const sounds: SoundEntry[] = [
       "resting",
       "relax",
       "cooldown",
-      "settle",
       "slow"
     ],
     "patch": {
@@ -11805,7 +11787,6 @@ export const sounds: SoundEntry[] = [
       "rest",
       "night",
       "low",
-      "calm",
       "dream"
     ],
     "patch": {
@@ -11835,11 +11816,9 @@ export const sounds: SoundEntry[] = [
     "concept": "A soft, rising chime that gently wakes you up in the morning.",
     "keywords": [
       "wake",
-      "alarm",
       "morning",
       "sleep",
       "rise",
-      "gentle",
       "sunrise"
     ],
     "patch": {
@@ -12086,7 +12065,6 @@ export const sounds: SoundEntry[] = [
       "recovery",
       "complete",
       "rest",
-      "restore",
       "workout",
       "done",
       "ready"
@@ -13718,7 +13696,6 @@ export const sounds: SoundEntry[] = [
       "mesh",
       "mechanism",
       "thunk",
-      "lock",
       "connect"
     ],
     "patch": {
@@ -13948,7 +13925,6 @@ export const sounds: SoundEntry[] = [
       "hydraulic",
       "hiss",
       "pressure",
-      "air",
       "pneumatic",
       "release",
       "steam"
@@ -14543,8 +14519,6 @@ export const sounds: SoundEntry[] = [
     "keywords": [
       "drawer",
       "slide",
-      "open",
-      "close",
       "furniture",
       "glide",
       "runner"
@@ -15346,7 +15320,6 @@ export const sounds: SoundEntry[] = [
       "fan",
       "spin",
       "blade",
-      "speed",
       "start",
       "accelerate",
       "airflow"
@@ -15384,7 +15357,6 @@ export const sounds: SoundEntry[] = [
       "fan",
       "spin",
       "blade",
-      "slow",
       "stop",
       "decelerate",
       "airflow"
@@ -16685,7 +16657,6 @@ export const sounds: SoundEntry[] = [
     "keywords": [
       "live",
       "start",
-      "broadcast",
       "stream",
       "begin",
       "on-air"
@@ -16890,7 +16861,6 @@ export const sounds: SoundEntry[] = [
       "caption",
       "on",
       "enable",
-      "toggle",
       "text"
     ],
     "patch": {
@@ -16927,7 +16897,6 @@ export const sounds: SoundEntry[] = [
       "caption",
       "off",
       "disable",
-      "toggle",
       "hide"
     ],
     "patch": {
@@ -17274,7 +17243,6 @@ export const sounds: SoundEntry[] = [
       "advance",
       "skip",
       "forward",
-      "track",
       "song"
     ],
     "patch": {
@@ -17453,7 +17421,6 @@ export const sounds: SoundEntry[] = [
       "speed",
       "fast",
       "playback",
-      "rate",
       "accelerate",
       "faster",
       "tempo"
@@ -18073,7 +18040,6 @@ export const sounds: SoundEntry[] = [
     "keywords": [
       "reaction",
       "emoji",
-      "like",
       "response",
       "chat",
       "received"
@@ -19472,7 +19438,6 @@ export const sounds: SoundEntry[] = [
       "call refused",
       "phone",
       "hang up",
-      "missed",
       "telephone"
     ],
     "patch": {
@@ -20420,7 +20385,6 @@ export const sounds: SoundEntry[] = [
       "event",
       "upcoming",
       "schedule",
-      "appointment",
       "meeting"
     ],
     "patch": {
@@ -21844,8 +21808,7 @@ export const sounds: SoundEntry[] = [
       "lower",
       "decrease",
       "deal",
-      "savings",
-      "alert"
+      "savings"
     ],
     "patch": {
       "layers": [
@@ -22282,7 +22245,6 @@ export const sounds: SoundEntry[] = [
     "category": "music-instrument",
     "concept": "A long, sustained grand piano chord built from four low notes that ring out together.",
     "keywords": [
-      "piano",
       "grand",
       "chord",
       "bass",
@@ -22366,8 +22328,7 @@ export const sounds: SoundEntry[] = [
       "keyboard",
       "tone",
       "chorus",
-      "synth",
-      "note"
+      "synth"
     ],
     "patch": {
       "layers": [
@@ -22750,7 +22711,6 @@ export const sounds: SoundEntry[] = [
       "air",
       "woodwind",
       "wind",
-      "tone",
       "note"
     ],
     "patch": {
@@ -24210,7 +24170,9 @@ export const sounds: SoundEntry[] = [
       "rumble",
       "storm",
       "low",
-      "boom"
+      "boom",
+      "distance",
+      "far away"
     ],
     "patch": {
       "layers": [
@@ -24420,7 +24382,6 @@ export const sounds: SoundEntry[] = [
     "keywords": [
       "wind",
       "howl",
-      "gust",
       "storm",
       "eerie",
       "gale"
@@ -25112,7 +25073,6 @@ export const sounds: SoundEntry[] = [
       "drip",
       "water",
       "drop",
-      "echo",
       "plink",
       "wet"
     ],
@@ -25677,7 +25637,6 @@ export const sounds: SoundEntry[] = [
     "keywords": [
       "desert",
       "wind",
-      "gust",
       "dry",
       "breeze",
       "sand",
@@ -25913,7 +25872,6 @@ export const sounds: SoundEntry[] = [
       "dew",
       "drop",
       "droplet",
-      "water",
       "morning",
       "plink",
       "delicate"
@@ -27168,7 +27126,6 @@ export const sounds: SoundEntry[] = [
       "warmup",
       "boot",
       "hum",
-      "motor",
       "ramp",
       "machine"
     ],
@@ -27881,7 +27838,6 @@ export const sounds: SoundEntry[] = [
       "calculator",
       "key",
       "beep",
-      "press",
       "button",
       "digit",
       "number"
@@ -28076,8 +28032,7 @@ export const sounds: SoundEntry[] = [
       "exit",
       "call",
       "conference",
-      "disconnect",
-      "end"
+      "disconnect"
     ],
     "patch": {
       "layers": [
@@ -28319,7 +28274,6 @@ export const sounds: SoundEntry[] = [
       "start",
       "present",
       "display",
-      "broadcast",
       "begin"
     ],
     "patch": {
@@ -28933,7 +28887,6 @@ export const sounds: SoundEntry[] = [
       "start",
       "begin",
       "outgoing",
-      "file",
       "data"
     ],
     "patch": {
@@ -29243,8 +29196,7 @@ export const sounds: SoundEntry[] = [
       "begin",
       "setup",
       "software",
-      "package",
-      "deploy"
+      "package"
     ],
     "patch": {
       "layers": [
@@ -29402,7 +29354,6 @@ export const sounds: SoundEntry[] = [
       "update",
       "install",
       "installed",
-      "complete",
       "done",
       "finished",
       "success",
@@ -29565,12 +29516,10 @@ export const sounds: SoundEntry[] = [
     "concept": "A soft, rising triangle-wave chime confirming a restore finished.",
     "keywords": [
       "restore",
-      "recovery",
       "complete",
       "done",
       "finished",
       "success",
-      "backup",
       "recovered"
     ],
     "patch": {
@@ -29791,8 +29740,7 @@ export const sounds: SoundEntry[] = [
       "midpoint",
       "status",
       "update",
-      "indicator",
-      "tick"
+      "indicator"
     ],
     "patch": {
       "layers": [
@@ -29867,7 +29815,6 @@ export const sounds: SoundEntry[] = [
       "complete",
       "done",
       "finished",
-      "task",
       "checkpoint",
       "progress",
       "success"
@@ -29975,7 +29922,6 @@ export const sounds: SoundEntry[] = [
       "reached",
       "achievement",
       "progress",
-      "goal",
       "success",
       "celebrate",
       "unlock"
@@ -30054,7 +30000,6 @@ export const sounds: SoundEntry[] = [
       "success",
       "complete",
       "celebrate",
-      "milestone",
       "accomplish"
     ],
     "patch": {
@@ -30195,7 +30140,6 @@ export const sounds: SoundEntry[] = [
     "concept": "A soft chime with a rising pitch. It marks a rank increase.",
     "keywords": [
       "rank",
-      "level",
       "up",
       "increase",
       "promote",
@@ -30569,7 +30513,6 @@ export const sounds: SoundEntry[] = [
     "keywords": [
       "queue",
       "advance",
-      "next",
       "move",
       "forward",
       "step"
@@ -31446,7 +31389,6 @@ export const sounds: SoundEntry[] = [
       "levelup",
       "upgrade",
       "progress",
-      "rank",
       "celebrate",
       "increase"
     ],
@@ -31568,7 +31510,6 @@ export const sounds: SoundEntry[] = [
     "keywords": [
       "coin",
       "pickup",
-      "collect",
       "game",
       "reward",
       "points",
@@ -32723,7 +32664,6 @@ export const sounds: SoundEntry[] = [
     "keywords": [
       "countdown",
       "launch",
-      "beep",
       "tick",
       "timer",
       "final",
@@ -32798,7 +32738,6 @@ export const sounds: SoundEntry[] = [
       "shimmer",
       "tone",
       "notification",
-      "alert",
       "ring"
     ],
     "patch": {
@@ -32884,7 +32823,6 @@ export const sounds: SoundEntry[] = [
       "alert",
       "entry",
       "notify",
-      "chime",
       "signal"
     ],
     "patch": {
@@ -32919,7 +32857,6 @@ export const sounds: SoundEntry[] = [
     "keywords": [
       "window",
       "open",
-      "alert",
       "breach",
       "notify",
       "tone",
@@ -33142,7 +33079,6 @@ export const sounds: SoundEntry[] = [
     "keywords": [
       "intruder",
       "alert",
-      "security",
       "alarm",
       "warning",
       "breach",
@@ -33317,7 +33253,6 @@ export const sounds: SoundEntry[] = [
       "light",
       "on",
       "turn",
-      "toggle",
       "confirm",
       "blip",
       "switch"
@@ -33355,7 +33290,6 @@ export const sounds: SoundEntry[] = [
       "light",
       "off",
       "turn",
-      "toggle",
       "confirm",
       "blip",
       "switch"
@@ -33395,7 +33329,6 @@ export const sounds: SoundEntry[] = [
       "light",
       "increase",
       "fade",
-      "sweep",
       "adjust"
     ],
     "patch": {
@@ -33433,7 +33366,6 @@ export const sounds: SoundEntry[] = [
       "light",
       "decrease",
       "fade",
-      "sweep",
       "adjust"
     ],
     "patch": {
@@ -33849,8 +33781,6 @@ export const sounds: SoundEntry[] = [
       "blinds",
       "open",
       "shades",
-      "curtain",
-      "window",
       "slide",
       "raise"
     ],
@@ -33905,7 +33835,6 @@ export const sounds: SoundEntry[] = [
       "blinds",
       "close",
       "shades",
-      "curtain",
       "window",
       "slide",
       "lower"
@@ -33960,7 +33889,6 @@ export const sounds: SoundEntry[] = [
     "keywords": [
       "garage",
       "open",
-      "door",
       "motor",
       "rumble",
       "rise",
@@ -34130,7 +34058,6 @@ export const sounds: SoundEntry[] = [
       "vacuum",
       "start",
       "clean",
-      "motor",
       "whir",
       "begin"
     ],
@@ -34243,9 +34170,9 @@ export const sounds: SoundEntry[] = [
       "washing",
       "done",
       "finished",
-      "laundry",
       "complete",
-      "chime"
+      "chime",
+      "washing machine"
     ],
     "patch": {
       "layers": [
@@ -34280,7 +34207,6 @@ export const sounds: SoundEntry[] = [
       "dryer",
       "done",
       "finished",
-      "laundry",
       "complete",
       "chime",
       "high"
@@ -34446,7 +34372,6 @@ export const sounds: SoundEntry[] = [
       "kettle",
       "boiled",
       "boil",
-      "whistle",
       "tea",
       "water",
       "chime"
@@ -34523,7 +34448,6 @@ export const sounds: SoundEntry[] = [
       "paired",
       "pairing",
       "connect",
-      "bluetooth",
       "link",
       "confirm"
     ],
@@ -35093,7 +35017,6 @@ export const sounds: SoundEntry[] = [
     "keywords": [
       "vote",
       "upvote",
-      "rank",
       "boost",
       "approve",
       "confirm",
@@ -35131,7 +35054,6 @@ export const sounds: SoundEntry[] = [
     "keywords": [
       "vote",
       "downvote",
-      "rank",
       "lower",
       "reject",
       "confirm",
@@ -35282,7 +35204,6 @@ export const sounds: SoundEntry[] = [
       "confirm",
       "live",
       "upload",
-      "share",
       "done"
     ],
     "patch": {
@@ -35426,8 +35347,6 @@ export const sounds: SoundEntry[] = [
     "keywords": [
       "story",
       "post",
-      "publish",
-      "share",
       "live",
       "confirm",
       "upload"
@@ -35794,7 +35713,6 @@ export const sounds: SoundEntry[] = [
     "keywords": [
       "review",
       "post",
-      "publish",
       "feedback",
       "confirm",
       "rate",
@@ -36256,7 +36174,6 @@ export const sounds: SoundEntry[] = [
       "start",
       "opener",
       "prompt",
-      "crack",
       "playful",
       "conversation"
     ],
@@ -36314,7 +36231,6 @@ export const sounds: SoundEntry[] = [
       "start",
       "kickoff",
       "begin",
-      "match",
       "signal"
     ],
     "patch": {
@@ -36371,7 +36287,6 @@ export const sounds: SoundEntry[] = [
       "end",
       "final",
       "stop",
-      "match",
       "signal"
     ],
     "patch": {
@@ -37622,7 +37537,8 @@ export const sounds: SoundEntry[] = [
       "power on",
       "initialize",
       "launch",
-      "system start"
+      "system start",
+      "computer"
     ],
     "patch": {
       "layers": [
@@ -38286,7 +38202,6 @@ export const sounds: SoundEntry[] = [
       "bluetooth",
       "pair",
       "link",
-      "device",
       "connect",
       "sync"
     ],
@@ -39099,7 +39014,6 @@ export const sounds: SoundEntry[] = [
       "permission",
       "error",
       "blocked",
-      "denied",
       "restricted",
       "forbidden",
       "access"
@@ -39724,8 +39638,7 @@ export const sounds: SoundEntry[] = [
       "online",
       "start",
       "running",
-      "available",
-      "boot"
+      "available"
     ],
     "patch": {
       "layers": [
@@ -40057,7 +39970,6 @@ export const sounds: SoundEntry[] = [
       "start",
       "begin",
       "click",
-      "run",
       "time"
     ],
     "patch": {
@@ -40175,7 +40087,6 @@ export const sounds: SoundEntry[] = [
       "three",
       "count",
       "number",
-      "beep",
       "sequence"
     ],
     "patch": {
@@ -40208,7 +40119,6 @@ export const sounds: SoundEntry[] = [
       "two",
       "count",
       "number",
-      "beep",
       "sequence"
     ],
     "patch": {
@@ -40241,7 +40151,6 @@ export const sounds: SoundEntry[] = [
       "one",
       "count",
       "number",
-      "beep",
       "final"
     ],
     "patch": {
@@ -40278,7 +40187,6 @@ export const sounds: SoundEntry[] = [
       "zero",
       "finish",
       "complete",
-      "go",
       "chime"
     ],
     "patch": {
@@ -40367,8 +40275,7 @@ export const sounds: SoundEntry[] = [
       "bell",
       "midpoint",
       "session",
-      "chime",
-      "progress"
+      "chime"
     ],
     "patch": {
       "layers": [
@@ -40471,7 +40378,6 @@ export const sounds: SoundEntry[] = [
       "start",
       "begin",
       "chime",
-      "match",
       "signal"
     ],
     "patch": {
@@ -40523,7 +40429,6 @@ export const sounds: SoundEntry[] = [
       "end",
       "finish",
       "chime",
-      "match",
       "signal"
     ],
     "patch": {
@@ -40728,7 +40633,6 @@ export const sounds: SoundEntry[] = [
     "keywords": [
       "alarm",
       "wake",
-      "urgent",
       "buzz",
       "alert",
       "morning"
@@ -40800,7 +40704,6 @@ export const sounds: SoundEntry[] = [
       "wake",
       "gentle",
       "morning",
-      "alarm",
       "ease",
       "soft"
     ],
@@ -40840,7 +40743,6 @@ export const sounds: SoundEntry[] = [
       "buzz",
       "warning",
       "emergency",
-      "wake",
       "loud"
     ],
     "patch": {
@@ -40952,8 +40854,7 @@ export const sounds: SoundEntry[] = [
       "again",
       "postpone",
       "delay",
-      "sleep",
-      "wake"
+      "sleep"
     ],
     "patch": {
       "layers": [
@@ -41298,9 +41199,7 @@ export const sounds: SoundEntry[] = [
     "keywords": [
       "egg",
       "timer",
-      "kitchen",
       "cook",
-      "done",
       "ping",
       "alert",
       "boil"
@@ -41348,10 +41247,8 @@ export const sounds: SoundEntry[] = [
     "keywords": [
       "oven",
       "timer",
-      "kitchen",
       "cook",
       "bake",
-      "done",
       "beep",
       "alert"
     ],
@@ -41446,7 +41343,6 @@ export const sounds: SoundEntry[] = [
       "laundry",
       "done",
       "wash",
-      "dryer",
       "finished",
       "chime",
       "notify",
@@ -41503,8 +41399,7 @@ export const sounds: SoundEntry[] = [
       "calendar",
       "notify",
       "alert",
-      "call",
-      "join"
+      "call"
     ],
     "patch": {
       "layers": [
@@ -41897,7 +41792,6 @@ export const sounds: SoundEntry[] = [
     "keywords": [
       "appointment",
       "reminder",
-      "calendar",
       "schedule",
       "notify",
       "alert",
@@ -42043,8 +41937,7 @@ export const sounds: SoundEntry[] = [
       "typing",
       "message",
       "bubble",
-      "compose",
-      "indicator"
+      "compose"
     ],
     "patch": {
       "layers": [
@@ -42127,7 +42020,6 @@ export const sounds: SoundEntry[] = [
       "done",
       "finished",
       "complete",
-      "kitchen",
       "ding",
       "chime"
     ],
@@ -42182,8 +42074,6 @@ export const sounds: SoundEntry[] = [
     "keywords": [
       "alarm",
       "alert",
-      "wake",
-      "urgent",
       "buzzer",
       "ringing"
     ],
@@ -42254,7 +42144,6 @@ export const sounds: SoundEntry[] = [
       "countdown",
       "beep",
       "count",
-      "launch",
       "start",
       "sequence"
     ],
@@ -42908,7 +42797,6 @@ export const sounds: SoundEntry[] = [
     "keywords": [
       "drawer",
       "open",
-      "slide",
       "mechanical",
       "cabinet",
       "rising",
@@ -42964,7 +42852,6 @@ export const sounds: SoundEntry[] = [
     "keywords": [
       "drawer",
       "close",
-      "slide",
       "mechanical",
       "cabinet",
       "falling",
@@ -44128,7 +44015,6 @@ export const sounds: SoundEntry[] = [
       "up",
       "rise",
       "ascend",
-      "sweep",
       "air",
       "upward"
     ],
@@ -44184,7 +44070,6 @@ export const sounds: SoundEntry[] = [
       "down",
       "fall",
       "descend",
-      "sweep",
       "air",
       "downward"
     ],
@@ -44542,7 +44427,6 @@ export const sounds: SoundEntry[] = [
       "open",
       "dialog",
       "popup",
-      "window",
       "appear",
       "overlay"
     ],
@@ -44656,7 +44540,6 @@ export const sounds: SoundEntry[] = [
       "slide",
       "enter",
       "appear",
-      "drawer",
       "sidebar",
       "open"
     ],
@@ -44712,7 +44595,6 @@ export const sounds: SoundEntry[] = [
       "slide",
       "exit",
       "leave",
-      "drawer",
       "sidebar",
       "close"
     ],
@@ -44930,7 +44812,6 @@ export const sounds: SoundEntry[] = [
       "car",
       "door",
       "close",
-      "slam",
       "shut",
       "latch",
       "vehicle",
@@ -45892,7 +45773,9 @@ export const sounds: SoundEntry[] = [
       "engine",
       "roar",
       "ascend",
-      "aircraft"
+      "aircraft",
+      "take off",
+      "taking off"
     ],
     "patch": {
       "layers": [
@@ -46504,7 +46387,6 @@ export const sounds: SoundEntry[] = [
     "keywords": [
       "bike",
       "gear",
-      "shift",
       "click",
       "bicycle",
       "mechanism"
@@ -48422,7 +48304,6 @@ export const sounds: SoundEntry[] = [
     "category": "ui-feedback",
     "concept": "A sharp, dark, falling buzz that blocks access, denying the requested permission.",
     "keywords": [
-      "access",
       "blocked",
       "refused",
       "restricted",
@@ -48592,7 +48473,6 @@ export const sounds: SoundEntry[] = [
     "keywords": [
       "not-found",
       "zero",
-      "search",
       "blank",
       "nothing"
     ],
@@ -50462,7 +50342,9 @@ export const sounds: SoundEntry[] = [
       "hush",
       "soft",
       "winter",
-      "settle"
+      "settle",
+      "snow falling",
+      "falling snow"
     ],
     "patch": {
       "layers": [

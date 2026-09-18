@@ -4,17 +4,53 @@
     "phrase": "boot up",
     "category": "system-data",
     "concept": "A soft, rising two-tone sweep for a system finishing its boot up.",
-    "keywords": ["boot", "startup", "power on", "initialize", "launch", "system start"],
+    "keywords": [
+      "boot",
+      "startup",
+      "power on",
+      "initialize",
+      "launch",
+      "system start",
+      "computer"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 220, "pitchEnvelope": { "toHz": 520, "timeMs": 400 } },
-          "envelope": { "attackMs": 70, "decayMs": 120, "sustainLevel": 0.5, "sustainMs": 150, "releaseMs": 210 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 220,
+            "pitchEnvelope": {
+              "toHz": 520,
+              "timeMs": 400
+            }
+          },
+          "envelope": {
+            "attackMs": 70,
+            "decayMs": 120,
+            "sustainLevel": 0.5,
+            "sustainMs": 150,
+            "releaseMs": 210
+          },
           "gain": 0.45
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 440, "pitchEnvelope": { "toHz": 880, "timeMs": 400 } },
-          "envelope": { "attackMs": 70, "decayMs": 120, "sustainLevel": 0.3, "sustainMs": 150, "releaseMs": 210 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 440,
+            "pitchEnvelope": {
+              "toHz": 880,
+              "timeMs": 400
+            }
+          },
+          "envelope": {
+            "attackMs": 70,
+            "decayMs": 120,
+            "sustainLevel": 0.3,
+            "sustainMs": 150,
+            "releaseMs": 210
+          },
           "gain": 0.3
         }
       ]
@@ -25,17 +61,52 @@
     "phrase": "shut down",
     "category": "system-data",
     "concept": "A soft, falling two-tone sweep for a system powering down and shutting off.",
-    "keywords": ["shutdown", "power off", "turn off", "quit", "exit", "stop"],
+    "keywords": [
+      "shutdown",
+      "power off",
+      "turn off",
+      "quit",
+      "exit",
+      "stop"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 600, "pitchEnvelope": { "toHz": 260, "timeMs": 400 } },
-          "envelope": { "attackMs": 60, "decayMs": 120, "sustainLevel": 0.4, "sustainMs": 140, "releaseMs": 180 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 600,
+            "pitchEnvelope": {
+              "toHz": 260,
+              "timeMs": 400
+            }
+          },
+          "envelope": {
+            "attackMs": 60,
+            "decayMs": 120,
+            "sustainLevel": 0.4,
+            "sustainMs": 140,
+            "releaseMs": 180
+          },
           "gain": 0.45
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 300, "pitchEnvelope": { "toHz": 130, "timeMs": 400 } },
-          "envelope": { "attackMs": 60, "decayMs": 120, "sustainLevel": 0.3, "sustainMs": 140, "releaseMs": 180 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 300,
+            "pitchEnvelope": {
+              "toHz": 130,
+              "timeMs": 400
+            }
+          },
+          "envelope": {
+            "attackMs": 60,
+            "decayMs": 120,
+            "sustainLevel": 0.3,
+            "sustainMs": 140,
+            "releaseMs": 180
+          },
           "gain": 0.3
         }
       ]
@@ -46,12 +117,33 @@
     "phrase": "sleep mode",
     "category": "system-data",
     "concept": "A long, sustained, gentle tone that eases down and holds low for entering sleep mode.",
-    "keywords": ["sleep", "standby", "idle", "dim", "hibernate", "rest"],
+    "keywords": [
+      "sleep",
+      "standby",
+      "idle",
+      "dim",
+      "hibernate",
+      "rest"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 480, "pitchEnvelope": { "toHz": 330, "timeMs": 350 } },
-          "envelope": { "attackMs": 110, "decayMs": 220, "sustainLevel": 0.45, "sustainMs": 480, "releaseMs": 150 },
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 480,
+            "pitchEnvelope": {
+              "toHz": 330,
+              "timeMs": 350
+            }
+          },
+          "envelope": {
+            "attackMs": 110,
+            "decayMs": 220,
+            "sustainLevel": 0.45,
+            "sustainMs": 480,
+            "releaseMs": 150
+          },
           "gain": 0.55
         }
       ]
@@ -62,12 +154,33 @@
     "phrase": "wake from sleep",
     "category": "system-data",
     "concept": "A soft, rising chime that swells gently as the system wakes from sleep.",
-    "keywords": ["wake", "resume", "awaken", "revive", "standby end", "active"],
+    "keywords": [
+      "wake",
+      "resume",
+      "awaken",
+      "revive",
+      "standby end",
+      "active"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 350, "pitchEnvelope": { "toHz": 650, "timeMs": 350 } },
-          "envelope": { "attackMs": 60, "decayMs": 100, "sustainLevel": 0.4, "sustainMs": 120, "releaseMs": 170 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 350,
+            "pitchEnvelope": {
+              "toHz": 650,
+              "timeMs": 350
+            }
+          },
+          "envelope": {
+            "attackMs": 60,
+            "decayMs": 100,
+            "sustainLevel": 0.4,
+            "sustainMs": 120,
+            "releaseMs": 170
+          },
           "gain": 0.5
         }
       ]
@@ -78,17 +191,52 @@
     "phrase": "restart",
     "category": "system-data",
     "concept": "Two soft tones that dip low then climb back up together, signaling a system restart.",
-    "keywords": ["reboot", "restart", "reset", "cycle", "reload", "relaunch"],
+    "keywords": [
+      "reboot",
+      "restart",
+      "reset",
+      "cycle",
+      "reload",
+      "relaunch"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 280, "timeMs": 150 } },
-          "envelope": { "attackMs": 10, "decayMs": 50, "sustainLevel": 0.2, "sustainMs": 30, "releaseMs": 60 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 500,
+            "pitchEnvelope": {
+              "toHz": 280,
+              "timeMs": 150
+            }
+          },
+          "envelope": {
+            "attackMs": 10,
+            "decayMs": 50,
+            "sustainLevel": 0.2,
+            "sustainMs": 30,
+            "releaseMs": 60
+          },
           "gain": 0.32
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 280, "pitchEnvelope": { "toHz": 520, "timeMs": 150 } },
-          "envelope": { "attackMs": 90, "decayMs": 40, "sustainLevel": 0.2, "sustainMs": 20, "releaseMs": 60 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 280,
+            "pitchEnvelope": {
+              "toHz": 520,
+              "timeMs": 150
+            }
+          },
+          "envelope": {
+            "attackMs": 90,
+            "decayMs": 40,
+            "sustainLevel": 0.2,
+            "sustainMs": 20,
+            "releaseMs": 60
+          },
           "gain": 0.44
         }
       ]
@@ -99,12 +247,33 @@
     "phrase": "login success",
     "category": "system-data",
     "concept": "A short, soft, rising chime confirming a successful login.",
-    "keywords": ["login", "sign in", "authenticate", "success", "confirm", "access granted"],
+    "keywords": [
+      "login",
+      "sign in",
+      "authenticate",
+      "success",
+      "confirm",
+      "access granted"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 850, "timeMs": 100 } },
-          "envelope": { "attackMs": 20, "decayMs": 40, "sustainLevel": 0.3, "sustainMs": 40, "releaseMs": 50 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 500,
+            "pitchEnvelope": {
+              "toHz": 850,
+              "timeMs": 100
+            }
+          },
+          "envelope": {
+            "attackMs": 20,
+            "decayMs": 40,
+            "sustainLevel": 0.3,
+            "sustainMs": 40,
+            "releaseMs": 50
+          },
           "gain": 0.55
         }
       ]
@@ -115,12 +284,32 @@
     "phrase": "logout",
     "category": "system-data",
     "concept": "A short, falling tone marking a logout from the system.",
-    "keywords": ["logout", "sign out", "log off", "leave", "session end"],
+    "keywords": [
+      "logout",
+      "sign out",
+      "log off",
+      "leave",
+      "session end"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 700, "pitchEnvelope": { "toHz": 400, "timeMs": 100 } },
-          "envelope": { "attackMs": 15, "decayMs": 40, "sustainLevel": 0.2, "sustainMs": 40, "releaseMs": 55 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 700,
+            "pitchEnvelope": {
+              "toHz": 400,
+              "timeMs": 100
+            }
+          },
+          "envelope": {
+            "attackMs": 15,
+            "decayMs": 40,
+            "sustainLevel": 0.2,
+            "sustainMs": 40,
+            "releaseMs": 55
+          },
           "gain": 0.55
         }
       ]
@@ -131,12 +320,33 @@
     "phrase": "session expired",
     "category": "system-data",
     "concept": "A soft, falling tone that fades out slowly, marking an expired session.",
-    "keywords": ["session", "expired", "timeout", "logged out", "inactive", "renew"],
+    "keywords": [
+      "session",
+      "expired",
+      "timeout",
+      "logged out",
+      "inactive",
+      "renew"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 300, "timeMs": 350 } },
-          "envelope": { "attackMs": 60, "decayMs": 120, "sustainLevel": 0.3, "sustainMs": 150, "releaseMs": 170 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 500,
+            "pitchEnvelope": {
+              "toHz": 300,
+              "timeMs": 350
+            }
+          },
+          "envelope": {
+            "attackMs": 60,
+            "decayMs": 120,
+            "sustainLevel": 0.3,
+            "sustainMs": 150,
+            "releaseMs": 170
+          },
           "gain": 0.55
         }
       ]
@@ -147,12 +357,33 @@
     "phrase": "connect",
     "category": "system-data",
     "concept": "A short, sharp, rising blip confirming a new connection.",
-    "keywords": ["connect", "link", "join", "pair", "attach", "online"],
+    "keywords": [
+      "connect",
+      "link",
+      "join",
+      "pair",
+      "attach",
+      "online"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 400, "pitchEnvelope": { "toHz": 700, "timeMs": 80 } },
-          "envelope": { "attackMs": 3, "decayMs": 30, "sustainLevel": 0.2, "sustainMs": 30, "releaseMs": 57 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 400,
+            "pitchEnvelope": {
+              "toHz": 700,
+              "timeMs": 80
+            }
+          },
+          "envelope": {
+            "attackMs": 3,
+            "decayMs": 30,
+            "sustainLevel": 0.2,
+            "sustainMs": 30,
+            "releaseMs": 57
+          },
           "gain": 0.6
         }
       ]
@@ -163,12 +394,33 @@
     "phrase": "disconnect",
     "category": "system-data",
     "concept": "A short, sharp, falling blip signaling a lost connection.",
-    "keywords": ["disconnect", "unlink", "unpair", "offline", "drop", "detach"],
+    "keywords": [
+      "disconnect",
+      "unlink",
+      "unpair",
+      "offline",
+      "drop",
+      "detach"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 700, "pitchEnvelope": { "toHz": 400, "timeMs": 80 } },
-          "envelope": { "attackMs": 3, "decayMs": 30, "sustainLevel": 0.2, "sustainMs": 30, "releaseMs": 57 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 700,
+            "pitchEnvelope": {
+              "toHz": 400,
+              "timeMs": 80
+            }
+          },
+          "envelope": {
+            "attackMs": 3,
+            "decayMs": 30,
+            "sustainLevel": 0.2,
+            "sustainMs": 30,
+            "releaseMs": 57
+          },
           "gain": 0.6
         }
       ]
@@ -179,17 +431,52 @@
     "phrase": "reconnect",
     "category": "system-data",
     "concept": "A soft, rising two-tone sweep with a slight quaver, marking a reconnect attempt.",
-    "keywords": ["reconnect", "retry", "restore link", "rejoin", "recover", "back online"],
+    "keywords": [
+      "reconnect",
+      "retry",
+      "restore link",
+      "rejoin",
+      "recover",
+      "back online"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 360, "pitchEnvelope": { "toHz": 620, "timeMs": 130 } },
-          "envelope": { "attackMs": 15, "decayMs": 35, "sustainLevel": 0.3, "sustainMs": 40, "releaseMs": 40 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 360,
+            "pitchEnvelope": {
+              "toHz": 620,
+              "timeMs": 130
+            }
+          },
+          "envelope": {
+            "attackMs": 15,
+            "decayMs": 35,
+            "sustainLevel": 0.3,
+            "sustainMs": 40,
+            "releaseMs": 40
+          },
           "gain": 0.35
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 375, "pitchEnvelope": { "toHz": 635, "timeMs": 130 } },
-          "envelope": { "attackMs": 15, "decayMs": 35, "sustainLevel": 0.3, "sustainMs": 40, "releaseMs": 40 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 375,
+            "pitchEnvelope": {
+              "toHz": 635,
+              "timeMs": 130
+            }
+          },
+          "envelope": {
+            "attackMs": 15,
+            "decayMs": 35,
+            "sustainLevel": 0.3,
+            "sustainMs": 40,
+            "releaseMs": 40
+          },
           "gain": 0.3
         }
       ]
@@ -200,12 +487,33 @@
     "phrase": "network found",
     "category": "system-data",
     "concept": "A short, sharp, rising chime confirming a network was found.",
-    "keywords": ["network", "found", "detect", "available", "signal", "discover"],
+    "keywords": [
+      "network",
+      "found",
+      "detect",
+      "available",
+      "signal",
+      "discover"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 900, "timeMs": 70 } },
-          "envelope": { "attackMs": 3, "decayMs": 25, "sustainLevel": 0.2, "sustainMs": 22, "releaseMs": 50 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 500,
+            "pitchEnvelope": {
+              "toHz": 900,
+              "timeMs": 70
+            }
+          },
+          "envelope": {
+            "attackMs": 3,
+            "decayMs": 25,
+            "sustainLevel": 0.2,
+            "sustainMs": 22,
+            "releaseMs": 50
+          },
           "gain": 0.6
         }
       ]
@@ -216,18 +524,51 @@
     "phrase": "network lost",
     "category": "system-data",
     "concept": "A soft, falling tone with a faint texture, marking a lost network connection.",
-    "keywords": ["network", "lost", "dropped", "unavailable", "no signal", "offline"],
+    "keywords": [
+      "network",
+      "lost",
+      "dropped",
+      "unavailable",
+      "no signal",
+      "offline"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 600, "pitchEnvelope": { "toHz": 300, "timeMs": 400 } },
-          "envelope": { "attackMs": 70, "decayMs": 120, "sustainLevel": 0.3, "sustainMs": 150, "releaseMs": 160 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 600,
+            "pitchEnvelope": {
+              "toHz": 300,
+              "timeMs": 400
+            }
+          },
+          "envelope": {
+            "attackMs": 70,
+            "decayMs": 120,
+            "sustainLevel": 0.3,
+            "sustainMs": 150,
+            "releaseMs": 160
+          },
           "gain": 0.5
         },
         {
-          "source": { "type": "noise", "color": "white" },
-          "envelope": { "attackMs": 5, "decayMs": 40, "sustainLevel": 0.15, "sustainMs": 15, "releaseMs": 30 },
-          "filter": { "type": "lowpass", "cutoffHz": 1400 },
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "envelope": {
+            "attackMs": 5,
+            "decayMs": 40,
+            "sustainLevel": 0.15,
+            "sustainMs": 15,
+            "releaseMs": 30
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 1400
+          },
           "gain": 0.15
         }
       ]
@@ -238,12 +579,33 @@
     "phrase": "wifi connected",
     "category": "system-data",
     "concept": "A soft, rising sweep confirming a wifi connection is active.",
-    "keywords": ["wifi", "connected", "network", "internet", "signal", "online"],
+    "keywords": [
+      "wifi",
+      "connected",
+      "network",
+      "internet",
+      "signal",
+      "online"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 480, "pitchEnvelope": { "toHz": 820, "timeMs": 110 } },
-          "envelope": { "attackMs": 15, "decayMs": 30, "sustainLevel": 0.3, "sustainMs": 30, "releaseMs": 35 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 480,
+            "pitchEnvelope": {
+              "toHz": 820,
+              "timeMs": 110
+            }
+          },
+          "envelope": {
+            "attackMs": 15,
+            "decayMs": 30,
+            "sustainLevel": 0.3,
+            "sustainMs": 30,
+            "releaseMs": 35
+          },
           "gain": 0.55
         }
       ]
@@ -254,18 +616,51 @@
     "phrase": "wifi weak",
     "category": "system-data",
     "concept": "A soft, falling tone with a thin, wavering texture for a weak wifi signal.",
-    "keywords": ["wifi", "weak", "poor signal", "unstable", "low bars", "faint"],
+    "keywords": [
+      "wifi",
+      "weak",
+      "poor signal",
+      "unstable",
+      "low bars",
+      "faint"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 350, "timeMs": 300 } },
-          "envelope": { "attackMs": 60, "decayMs": 100, "sustainLevel": 0.3, "sustainMs": 120, "releaseMs": 120 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 500,
+            "pitchEnvelope": {
+              "toHz": 350,
+              "timeMs": 300
+            }
+          },
+          "envelope": {
+            "attackMs": 60,
+            "decayMs": 100,
+            "sustainLevel": 0.3,
+            "sustainMs": 120,
+            "releaseMs": 120
+          },
           "gain": 0.5
         },
         {
-          "source": { "type": "noise", "color": "pink" },
-          "envelope": { "attackMs": 10, "decayMs": 40, "sustainLevel": 0.15, "sustainMs": 20, "releaseMs": 40 },
-          "filter": { "type": "lowpass", "cutoffHz": 1200 },
+          "source": {
+            "type": "noise",
+            "color": "pink"
+          },
+          "envelope": {
+            "attackMs": 10,
+            "decayMs": 40,
+            "sustainLevel": 0.15,
+            "sustainMs": 20,
+            "releaseMs": 40
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 1200
+          },
           "gain": 0.15
         }
       ]
@@ -276,12 +671,32 @@
     "phrase": "bluetooth pair",
     "category": "system-data",
     "concept": "A soft, rising sweep confirming a bluetooth pair.",
-    "keywords": ["bluetooth", "pair", "link", "device", "connect", "sync"],
+    "keywords": [
+      "bluetooth",
+      "pair",
+      "link",
+      "connect",
+      "sync"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 520, "pitchEnvelope": { "toHz": 760, "timeMs": 130 } },
-          "envelope": { "attackMs": 20, "decayMs": 30, "sustainLevel": 0.3, "sustainMs": 30, "releaseMs": 50 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 520,
+            "pitchEnvelope": {
+              "toHz": 760,
+              "timeMs": 130
+            }
+          },
+          "envelope": {
+            "attackMs": 20,
+            "decayMs": 30,
+            "sustainLevel": 0.3,
+            "sustainMs": 30,
+            "releaseMs": 50
+          },
           "gain": 0.55
         }
       ]
@@ -292,12 +707,33 @@
     "phrase": "bluetooth lost",
     "category": "system-data",
     "concept": "A short, sharp, falling blip for a lost bluetooth connection.",
-    "keywords": ["bluetooth", "lost", "unpair", "dropped", "device gone", "disconnect"],
+    "keywords": [
+      "bluetooth",
+      "lost",
+      "unpair",
+      "dropped",
+      "device gone",
+      "disconnect"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 750, "pitchEnvelope": { "toHz": 450, "timeMs": 80 } },
-          "envelope": { "attackMs": 3, "decayMs": 30, "sustainLevel": 0.2, "sustainMs": 27, "releaseMs": 50 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 750,
+            "pitchEnvelope": {
+              "toHz": 450,
+              "timeMs": 80
+            }
+          },
+          "envelope": {
+            "attackMs": 3,
+            "decayMs": 30,
+            "sustainLevel": 0.2,
+            "sustainMs": 27,
+            "releaseMs": 50
+          },
           "gain": 0.6
         }
       ]
@@ -308,18 +744,51 @@
     "phrase": "usb connect",
     "category": "system-data",
     "concept": "A sharp triangle tone paired with a faint click for a usb device being connected.",
-    "keywords": ["usb", "connect", "plug in", "device", "attach", "port"],
+    "keywords": [
+      "usb",
+      "connect",
+      "plug in",
+      "device",
+      "attach",
+      "port"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "noise", "color": "white" },
-          "envelope": { "attackMs": 2, "decayMs": 15, "sustainLevel": 0.2, "sustainMs": 5, "releaseMs": 15 },
-          "filter": { "type": "highpass", "cutoffHz": 4000 },
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "envelope": {
+            "attackMs": 2,
+            "decayMs": 15,
+            "sustainLevel": 0.2,
+            "sustainMs": 5,
+            "releaseMs": 15
+          },
+          "filter": {
+            "type": "highpass",
+            "cutoffHz": 4000
+          },
           "gain": 0.15
         },
         {
-          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 450, "pitchEnvelope": { "toHz": 750, "timeMs": 70 } },
-          "envelope": { "attackMs": 5, "decayMs": 20, "sustainLevel": 0.25, "sustainMs": 25, "releaseMs": 40 },
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 450,
+            "pitchEnvelope": {
+              "toHz": 750,
+              "timeMs": 70
+            }
+          },
+          "envelope": {
+            "attackMs": 5,
+            "decayMs": 20,
+            "sustainLevel": 0.25,
+            "sustainMs": 25,
+            "releaseMs": 40
+          },
           "gain": 0.55
         }
       ]
@@ -330,18 +799,51 @@
     "phrase": "usb eject",
     "category": "system-data",
     "concept": "A sharp triangle tone paired with a faint click for a usb device being ejected.",
-    "keywords": ["usb", "eject", "unplug", "remove", "device", "safe removal"],
+    "keywords": [
+      "usb",
+      "eject",
+      "unplug",
+      "remove",
+      "device",
+      "safe removal"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "noise", "color": "white" },
-          "envelope": { "attackMs": 2, "decayMs": 15, "sustainLevel": 0.2, "sustainMs": 5, "releaseMs": 15 },
-          "filter": { "type": "highpass", "cutoffHz": 4000 },
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "envelope": {
+            "attackMs": 2,
+            "decayMs": 15,
+            "sustainLevel": 0.2,
+            "sustainMs": 5,
+            "releaseMs": 15
+          },
+          "filter": {
+            "type": "highpass",
+            "cutoffHz": 4000
+          },
           "gain": 0.15
         },
         {
-          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 750, "pitchEnvelope": { "toHz": 450, "timeMs": 70 } },
-          "envelope": { "attackMs": 5, "decayMs": 20, "sustainLevel": 0.25, "sustainMs": 25, "releaseMs": 40 },
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 750,
+            "pitchEnvelope": {
+              "toHz": 450,
+              "timeMs": 70
+            }
+          },
+          "envelope": {
+            "attackMs": 5,
+            "decayMs": 20,
+            "sustainLevel": 0.25,
+            "sustainMs": 25,
+            "releaseMs": 40
+          },
           "gain": 0.55
         }
       ]
@@ -352,17 +854,44 @@
     "phrase": "battery full",
     "category": "system-data",
     "concept": "A soft, rising two-note chime that resolves upward for a battery reaching full.",
-    "keywords": ["battery", "full", "charged", "complete", "power", "100 percent"],
+    "keywords": [
+      "battery",
+      "full",
+      "charged",
+      "complete",
+      "power",
+      "100 percent"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500 },
-          "envelope": { "attackMs": 20, "decayMs": 30, "sustainLevel": 0, "sustainMs": 0, "releaseMs": 40 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 500
+          },
+          "envelope": {
+            "attackMs": 20,
+            "decayMs": 30,
+            "sustainLevel": 0,
+            "sustainMs": 0,
+            "releaseMs": 40
+          },
           "gain": 0.32
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 750 },
-          "envelope": { "attackMs": 80, "decayMs": 30, "sustainLevel": 0.3, "sustainMs": 30, "releaseMs": 50 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 750
+          },
+          "envelope": {
+            "attackMs": 80,
+            "decayMs": 30,
+            "sustainLevel": 0.3,
+            "sustainMs": 30,
+            "releaseMs": 50
+          },
           "gain": 0.45
         }
       ]
@@ -373,12 +902,33 @@
     "phrase": "battery low",
     "category": "system-data",
     "concept": "A soft, falling tone warning that the battery is low.",
-    "keywords": ["battery", "low", "warning", "power", "recharge", "almost empty"],
+    "keywords": [
+      "battery",
+      "low",
+      "warning",
+      "power",
+      "recharge",
+      "almost empty"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 600, "pitchEnvelope": { "toHz": 350, "timeMs": 300 } },
-          "envelope": { "attackMs": 50, "decayMs": 100, "sustainLevel": 0.3, "sustainMs": 120, "releaseMs": 130 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 600,
+            "pitchEnvelope": {
+              "toHz": 350,
+              "timeMs": 300
+            }
+          },
+          "envelope": {
+            "attackMs": 50,
+            "decayMs": 100,
+            "sustainLevel": 0.3,
+            "sustainMs": 120,
+            "releaseMs": 130
+          },
           "gain": 0.55
         }
       ]
@@ -389,17 +939,44 @@
     "phrase": "battery critical",
     "category": "system-data",
     "concept": "A sharp, short, urgent double pulse warning of a critical battery level.",
-    "keywords": ["battery", "critical", "urgent", "emergency", "power", "shutdown warning"],
+    "keywords": [
+      "battery",
+      "critical",
+      "urgent",
+      "emergency",
+      "power",
+      "shutdown warning"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 900 },
-          "envelope": { "attackMs": 2, "decayMs": 20, "sustainLevel": 0, "sustainMs": 0, "releaseMs": 20 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 900
+          },
+          "envelope": {
+            "attackMs": 2,
+            "decayMs": 20,
+            "sustainLevel": 0,
+            "sustainMs": 0,
+            "releaseMs": 20
+          },
           "gain": 0.44
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 950 },
-          "envelope": { "attackMs": 70, "decayMs": 20, "sustainLevel": 0, "sustainMs": 0, "releaseMs": 20 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 950
+          },
+          "envelope": {
+            "attackMs": 70,
+            "decayMs": 20,
+            "sustainLevel": 0,
+            "sustainMs": 0,
+            "releaseMs": 20
+          },
           "gain": 0.32
         }
       ]
@@ -410,12 +987,33 @@
     "phrase": "charging start",
     "category": "system-data",
     "concept": "A soft, rising tone that swells gently as charging starts.",
-    "keywords": ["charging", "start", "plugged in", "power", "begin charge", "connect"],
+    "keywords": [
+      "charging",
+      "start",
+      "plugged in",
+      "power",
+      "begin charge",
+      "connect"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 350, "pitchEnvelope": { "toHz": 550, "timeMs": 250 } },
-          "envelope": { "attackMs": 40, "decayMs": 80, "sustainLevel": 0.4, "sustainMs": 100, "releaseMs": 130 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 350,
+            "pitchEnvelope": {
+              "toHz": 550,
+              "timeMs": 250
+            }
+          },
+          "envelope": {
+            "attackMs": 40,
+            "decayMs": 80,
+            "sustainLevel": 0.4,
+            "sustainMs": 100,
+            "releaseMs": 130
+          },
           "gain": 0.5
         }
       ]
@@ -426,12 +1024,33 @@
     "phrase": "charging stop",
     "category": "system-data",
     "concept": "A soft, falling tone that eases down gently as charging stops.",
-    "keywords": ["charging", "stop", "unplugged", "power", "end charge", "disconnect"],
+    "keywords": [
+      "charging",
+      "stop",
+      "unplugged",
+      "power",
+      "end charge",
+      "disconnect"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 550, "pitchEnvelope": { "toHz": 350, "timeMs": 250 } },
-          "envelope": { "attackMs": 40, "decayMs": 80, "sustainLevel": 0.4, "sustainMs": 100, "releaseMs": 130 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 550,
+            "pitchEnvelope": {
+              "toHz": 350,
+              "timeMs": 250
+            }
+          },
+          "envelope": {
+            "attackMs": 40,
+            "decayMs": 80,
+            "sustainLevel": 0.4,
+            "sustainMs": 100,
+            "releaseMs": 130
+          },
           "gain": 0.5
         }
       ]
@@ -442,12 +1061,33 @@
     "phrase": "power save",
     "category": "system-data",
     "concept": "A long, sustained, gentle tone that eases down into a low hum for power save mode.",
-    "keywords": ["power save", "eco mode", "low power", "energy saving", "efficient", "battery saver"],
+    "keywords": [
+      "power save",
+      "eco mode",
+      "low power",
+      "energy saving",
+      "efficient",
+      "battery saver"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 450, "pitchEnvelope": { "toHz": 300, "timeMs": 400 } },
-          "envelope": { "attackMs": 100, "decayMs": 200, "sustainLevel": 0.5, "sustainMs": 500, "releaseMs": 150 },
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 450,
+            "pitchEnvelope": {
+              "toHz": 300,
+              "timeMs": 400
+            }
+          },
+          "envelope": {
+            "attackMs": 100,
+            "decayMs": 200,
+            "sustainLevel": 0.5,
+            "sustainMs": 500,
+            "releaseMs": 150
+          },
           "gain": 0.6
         }
       ]

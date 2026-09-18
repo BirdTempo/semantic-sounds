@@ -1,6 +1,6 @@
 # Semantic Sounds
 
-A curated set of short UI sounds, found by plain prose. A sound is
+A curated set of 1090 short sounds, found by plain prose. A sound is
 data, not an audio file: each entry is a small JSON "patch" of
 synthesis settings (oscillators, noise, envelopes, filters, pitch
 sweeps), rendered in the page by one deterministic TypeScript renderer.
@@ -12,6 +12,12 @@ const index = createSoundIndex(sounds);
 const [match] = searchIndex(index, 'the upload finished', { limit: 1 });
 const samples = renderPatch(match.sound.patch); // Float32Array, 48kHz
 ```
+
+The set covers 26 categories: interface feedback, transitions,
+messages, progress, timers, games, media controls, nature, weather,
+animals, mechanical, transport, smart home, system events, money,
+social, health, food, office, navigation, emotion, abstract texture,
+human body, sport, science and space, and musical instruments.
 
 See `docs/sound-style-guide.md` for the contract every sound follows,
 and `docs/superpowers/specs/2026-09-15-sound-contract-and-renderer-design.md`
@@ -26,6 +32,7 @@ npm run typecheck
 npm run build
 npm run dev:web   # local player at the printed URL
 npm run probe     # retrieval probe against labelled prose cases
+npm run sounds:check  # contract check over every entry
 npm run review    # local review tool at http://127.0.0.1:5179
 ```
 

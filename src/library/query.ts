@@ -16,14 +16,20 @@ const RAW_PHRASE_BONUS = 70;
 const CONTAINED_ALIAS_BONUS = 14;
 const CONTAINED_PHRASE_BONUS = 40;
 
-// Chosen by grid search (scripts/tune-thresholds.ts) against the 48-case
-// probe in scripts/prose-probe.ts over the 40-sound seed set: 47/48 cases
-// pass anywhere in the 5-9 range, dropping to 45/48 at 10 and worse above
-// that, so 9 is the top of that plateau (a little more margin against weak
-// coincidental matches, at no cost to the pass rate). The one remaining
-// failure is a documented, accepted word-trap -- see prose-probe.ts.
-// Re-run the grid search whenever the corpus changes meaningfully; do not
-// assume this value is stable at a larger scale.
+// Chosen by grid search (scripts/tune-thresholds.ts) against the probe in
+// scripts/prose-probe.ts.
+//
+// At the 40-sound seed set the plateau was 5-9, and 9 was its top. The
+// search was run again over 1090 sounds and 104 probe cases: 98 cases pass
+// anywhere from 5 to 30, and the count falls from 31 upward, where the
+// floor starts to reject true answers. So 9 is still inside the plateau,
+// with room on both sides, and it is kept.
+//
+// The top of the plateau (30) is not taken: a real answer sits at about
+// that score, so it would leave no margin. The six remaining failures are
+// documented misses, not threshold effects -- see prose-probe.ts.
+//
+// Re-run the grid search whenever the corpus changes meaningfully.
 export const LOCAL_MIN_SCORE = 9;
 
 const COURTESY = new Set(['please', 'thank', 'thanks', 'sorry', 'hello', 'hi', 'ok', 'okay']);

@@ -4,12 +4,33 @@
     "phrase": "jump",
     "category": "game",
     "concept": "A quick, rising blip with a snappy pitch upsweep for a platform jump.",
-    "keywords": ["hop", "leap", "bounce", "spring", "platform", "arcade"],
+    "keywords": [
+      "hop",
+      "leap",
+      "bounce",
+      "spring",
+      "platform",
+      "arcade"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 1000, "timeMs": 90 } },
-          "envelope": { "attackMs": 5, "decayMs": 30, "sustainLevel": 0.3, "sustainMs": 30, "releaseMs": 40 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 500,
+            "pitchEnvelope": {
+              "toHz": 1000,
+              "timeMs": 90
+            }
+          },
+          "envelope": {
+            "attackMs": 5,
+            "decayMs": 30,
+            "sustainLevel": 0.3,
+            "sustainMs": 30,
+            "releaseMs": 40
+          },
           "gain": 0.55
         }
       ]
@@ -20,18 +41,56 @@
     "phrase": "power up",
     "category": "game",
     "concept": "An ascending run of rising pitch for a power-up pickup, energizing and triumphant.",
-    "keywords": ["power", "upgrade", "boost", "buff", "enhance", "mushroom"],
+    "keywords": [
+      "power",
+      "upgrade",
+      "boost",
+      "buff",
+      "enhance",
+      "mushroom"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 400, "pitchEnvelope": { "toHz": 1300, "timeMs": 260 } },
-          "envelope": { "attackMs": 15, "decayMs": 40, "sustainLevel": 0.5, "sustainMs": 140, "releaseMs": 90 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 400,
+            "pitchEnvelope": {
+              "toHz": 1300,
+              "timeMs": 260
+            }
+          },
+          "envelope": {
+            "attackMs": 15,
+            "decayMs": 40,
+            "sustainLevel": 0.5,
+            "sustainMs": 140,
+            "releaseMs": 90
+          },
           "gain": 0.38
         },
         {
-          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 600, "pitchEnvelope": { "toHz": 1600, "timeMs": 260 } },
-          "envelope": { "attackMs": 15, "decayMs": 40, "sustainLevel": 0.35, "sustainMs": 140, "releaseMs": 90 },
-          "filter": { "type": "lowpass", "cutoffHz": 3500 },
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 600,
+            "pitchEnvelope": {
+              "toHz": 1600,
+              "timeMs": 260
+            }
+          },
+          "envelope": {
+            "attackMs": 15,
+            "decayMs": 40,
+            "sustainLevel": 0.35,
+            "sustainMs": 140,
+            "releaseMs": 90
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 3500
+          },
           "gain": 0.21
         }
       ]
@@ -42,27 +101,74 @@
     "phrase": "coin combo",
     "category": "game",
     "concept": "A rapid, ascending flourish of overlapping notes for a coin combo streak, distinct from one coin's chime.",
-    "keywords": ["coin", "combo", "streak", "multiplier", "collect", "chain", "coins in a row"],
+    "keywords": [
+      "coin",
+      "combo",
+      "streak",
+      "multiplier",
+      "chain",
+      "coins in a row"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 750 },
-          "envelope": { "attackMs": 4, "decayMs": 35, "sustainLevel": 0.05, "sustainMs": 0, "releaseMs": 8 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 750
+          },
+          "envelope": {
+            "attackMs": 4,
+            "decayMs": 35,
+            "sustainLevel": 0.05,
+            "sustainMs": 0,
+            "releaseMs": 8
+          },
           "gain": 0.28
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 950 },
-          "envelope": { "attackMs": 55, "decayMs": 35, "sustainLevel": 0.05, "sustainMs": 0, "releaseMs": 8 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 950
+          },
+          "envelope": {
+            "attackMs": 55,
+            "decayMs": 35,
+            "sustainLevel": 0.05,
+            "sustainMs": 0,
+            "releaseMs": 8
+          },
           "gain": 0.26
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1150 },
-          "envelope": { "attackMs": 110, "decayMs": 40, "sustainLevel": 0.05, "sustainMs": 0, "releaseMs": 10 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 1150
+          },
+          "envelope": {
+            "attackMs": 110,
+            "decayMs": 40,
+            "sustainLevel": 0.05,
+            "sustainMs": 0,
+            "releaseMs": 10
+          },
           "gain": 0.24
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1400 },
-          "envelope": { "attackMs": 170, "decayMs": 50, "sustainLevel": 0.1, "sustainMs": 20, "releaseMs": 35 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 1400
+          },
+          "envelope": {
+            "attackMs": 170,
+            "decayMs": 50,
+            "sustainLevel": 0.1,
+            "sustainMs": 20,
+            "releaseMs": 35
+          },
           "gain": 0.25
         }
       ]
@@ -73,18 +179,52 @@
     "phrase": "game over",
     "category": "game",
     "concept": "A slow, falling resolution that descends and settles for a game-over ending.",
-    "keywords": ["defeat", "lose", "fail", "end", "death", "restart"],
+    "keywords": [
+      "defeat",
+      "lose",
+      "fail",
+      "end",
+      "death",
+      "restart"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 700, "pitchEnvelope": { "toHz": 220, "timeMs": 500 } },
-          "envelope": { "attackMs": 20, "decayMs": 80, "sustainLevel": 0.5, "sustainMs": 200, "releaseMs": 200 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 700,
+            "pitchEnvelope": {
+              "toHz": 220,
+              "timeMs": 500
+            }
+          },
+          "envelope": {
+            "attackMs": 20,
+            "decayMs": 80,
+            "sustainLevel": 0.5,
+            "sustainMs": 200,
+            "releaseMs": 200
+          },
           "gain": 0.45
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 220 },
-          "envelope": { "attackMs": 30, "decayMs": 100, "sustainLevel": 0.4, "sustainMs": 180, "releaseMs": 190 },
-          "filter": { "type": "lowpass", "cutoffHz": 900 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 220
+          },
+          "envelope": {
+            "attackMs": 30,
+            "decayMs": 100,
+            "sustainLevel": 0.4,
+            "sustainMs": 180,
+            "releaseMs": 190
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 900
+          },
           "gain": 0.25
         }
       ]
@@ -95,27 +235,92 @@
     "phrase": "victory fanfare",
     "category": "game",
     "concept": "A rising fanfare of ascending notes for a victory celebration, the opposite of game-over.",
-    "keywords": ["victory", "win", "won", "fanfare", "celebrate", "triumph", "success", "won the game"],
+    "keywords": [
+      "victory",
+      "win",
+      "won",
+      "fanfare",
+      "celebrate",
+      "triumph",
+      "success",
+      "won the game"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 650, "timeMs": 60 } },
-          "envelope": { "attackMs": 10, "decayMs": 40, "sustainLevel": 0.3, "sustainMs": 20, "releaseMs": 40 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 500,
+            "pitchEnvelope": {
+              "toHz": 650,
+              "timeMs": 60
+            }
+          },
+          "envelope": {
+            "attackMs": 10,
+            "decayMs": 40,
+            "sustainLevel": 0.3,
+            "sustainMs": 20,
+            "releaseMs": 40
+          },
           "gain": 0.22
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 650, "pitchEnvelope": { "toHz": 850, "timeMs": 60 } },
-          "envelope": { "attackMs": 60, "decayMs": 40, "sustainLevel": 0.3, "sustainMs": 20, "releaseMs": 50 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 650,
+            "pitchEnvelope": {
+              "toHz": 850,
+              "timeMs": 60
+            }
+          },
+          "envelope": {
+            "attackMs": 60,
+            "decayMs": 40,
+            "sustainLevel": 0.3,
+            "sustainMs": 20,
+            "releaseMs": 50
+          },
           "gain": 0.22
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 850, "pitchEnvelope": { "toHz": 1100, "timeMs": 70 } },
-          "envelope": { "attackMs": 120, "decayMs": 50, "sustainLevel": 0.3, "sustainMs": 30, "releaseMs": 60 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 850,
+            "pitchEnvelope": {
+              "toHz": 1100,
+              "timeMs": 70
+            }
+          },
+          "envelope": {
+            "attackMs": 120,
+            "decayMs": 50,
+            "sustainLevel": 0.3,
+            "sustainMs": 30,
+            "releaseMs": 60
+          },
           "gain": 0.22
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1100, "pitchEnvelope": { "toHz": 2200, "timeMs": 150 } },
-          "envelope": { "attackMs": 190, "decayMs": 80, "sustainLevel": 0.4, "sustainMs": 80, "releaseMs": 150 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 1100,
+            "pitchEnvelope": {
+              "toHz": 2200,
+              "timeMs": 150
+            }
+          },
+          "envelope": {
+            "attackMs": 190,
+            "decayMs": 80,
+            "sustainLevel": 0.4,
+            "sustainMs": 80,
+            "releaseMs": 150
+          },
           "gain": 0.25
         }
       ]
@@ -126,17 +331,52 @@
     "phrase": "extra life",
     "category": "game",
     "concept": "A rewarding chime with a rising sparkle for an extra-life bonus.",
-    "keywords": ["bonus", "1up", "reward", "heart", "revive", "gift"],
+    "keywords": [
+      "bonus",
+      "1up",
+      "reward",
+      "heart",
+      "revive",
+      "gift"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 600, "pitchEnvelope": { "toHz": 1000, "timeMs": 100 } },
-          "envelope": { "attackMs": 12, "decayMs": 40, "sustainLevel": 0.4, "sustainMs": 60, "releaseMs": 80 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 600,
+            "pitchEnvelope": {
+              "toHz": 1000,
+              "timeMs": 100
+            }
+          },
+          "envelope": {
+            "attackMs": 12,
+            "decayMs": 40,
+            "sustainLevel": 0.4,
+            "sustainMs": 60,
+            "releaseMs": 80
+          },
           "gain": 0.38
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1000, "pitchEnvelope": { "toHz": 1800, "timeMs": 120 } },
-          "envelope": { "attackMs": 12, "decayMs": 50, "sustainLevel": 0.35, "sustainMs": 60, "releaseMs": 90 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 1000,
+            "pitchEnvelope": {
+              "toHz": 1800,
+              "timeMs": 120
+            }
+          },
+          "envelope": {
+            "attackMs": 12,
+            "decayMs": 50,
+            "sustainLevel": 0.35,
+            "sustainMs": 60,
+            "releaseMs": 90
+          },
           "gain": 0.27
         }
       ]

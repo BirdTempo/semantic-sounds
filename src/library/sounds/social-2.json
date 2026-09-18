@@ -4,12 +4,34 @@
     "phrase": "live viewer join",
     "category": "social",
     "concept": "A quick, soft, rising blip that plays the instant a viewer joins a live stream.",
-    "keywords": ["live", "viewer", "join", "stream", "enter", "audience", "arrive"],
+    "keywords": [
+      "live",
+      "viewer",
+      "join",
+      "stream",
+      "enter",
+      "audience",
+      "arrive"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 480, "pitchEnvelope": { "toHz": 700, "timeMs": 132 } },
-          "envelope": { "attackMs": 12, "decayMs": 30, "sustainLevel": 0.35, "sustainMs": 40, "releaseMs": 50 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 480,
+            "pitchEnvelope": {
+              "toHz": 700,
+              "timeMs": 132
+            }
+          },
+          "envelope": {
+            "attackMs": 12,
+            "decayMs": 30,
+            "sustainLevel": 0.35,
+            "sustainMs": 40,
+            "releaseMs": 50
+          },
           "gain": 0.6
         }
       ]
@@ -20,17 +42,53 @@
     "phrase": "gift sent",
     "category": "social",
     "concept": "A soft, rising two-tone chime that marks a virtual gift being sent to someone else.",
-    "keywords": ["gift", "send", "present", "donate", "tip", "give", "stream"],
+    "keywords": [
+      "gift",
+      "send",
+      "present",
+      "donate",
+      "tip",
+      "give",
+      "stream"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 560, "pitchEnvelope": { "toHz": 860, "timeMs": 160 } },
-          "envelope": { "attackMs": 15, "decayMs": 35, "sustainLevel": 0.35, "sustainMs": 50, "releaseMs": 60 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 560,
+            "pitchEnvelope": {
+              "toHz": 860,
+              "timeMs": 160
+            }
+          },
+          "envelope": {
+            "attackMs": 15,
+            "decayMs": 35,
+            "sustainLevel": 0.35,
+            "sustainMs": 50,
+            "releaseMs": 60
+          },
           "gain": 0.46
         },
         {
-          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 560, "pitchEnvelope": { "toHz": 860, "timeMs": 160 } },
-          "envelope": { "attackMs": 15, "decayMs": 35, "sustainLevel": 0.3, "sustainMs": 50, "releaseMs": 60 },
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 560,
+            "pitchEnvelope": {
+              "toHz": 860,
+              "timeMs": 160
+            }
+          },
+          "envelope": {
+            "attackMs": 15,
+            "decayMs": 35,
+            "sustainLevel": 0.3,
+            "sustainMs": 50,
+            "releaseMs": 60
+          },
           "gain": 0.34
         }
       ]
@@ -41,12 +99,34 @@
     "phrase": "follower gained",
     "category": "social",
     "concept": "A soft, rising chime that confirms a new follower being gained.",
-    "keywords": ["follower", "gain", "new", "subscribe", "confirm", "grow", "add"],
+    "keywords": [
+      "follower",
+      "gain",
+      "new",
+      "subscribe",
+      "confirm",
+      "grow",
+      "add"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 460, "pitchEnvelope": { "toHz": 700, "timeMs": 220 } },
-          "envelope": { "attackMs": 20, "decayMs": 50, "sustainLevel": 0.4, "sustainMs": 80, "releaseMs": 70 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 460,
+            "pitchEnvelope": {
+              "toHz": 700,
+              "timeMs": 220
+            }
+          },
+          "envelope": {
+            "attackMs": 20,
+            "decayMs": 50,
+            "sustainLevel": 0.4,
+            "sustainMs": 80,
+            "releaseMs": 70
+          },
           "gain": 0.55
         }
       ]
@@ -57,12 +137,34 @@
     "phrase": "follower lost",
     "category": "social",
     "concept": "A short, falling tone with a quick attack that marks a follower being lost.",
-    "keywords": ["follower", "lose", "unfollow", "drop", "decline", "remove", "subscribe"],
+    "keywords": [
+      "follower",
+      "lose",
+      "unfollow",
+      "drop",
+      "decline",
+      "remove",
+      "subscribe"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 650, "pitchEnvelope": { "toHz": 380, "timeMs": 130 } },
-          "envelope": { "attackMs": 5, "decayMs": 35, "sustainLevel": 0.3, "sustainMs": 40, "releaseMs": 50 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 650,
+            "pitchEnvelope": {
+              "toHz": 380,
+              "timeMs": 130
+            }
+          },
+          "envelope": {
+            "attackMs": 5,
+            "decayMs": 35,
+            "sustainLevel": 0.3,
+            "sustainMs": 40,
+            "releaseMs": 50
+          },
           "gain": 0.6
         }
       ]
@@ -73,17 +175,53 @@
     "phrase": "connection made",
     "category": "social",
     "concept": "A soft blend of two tones sliding together into one pitch, like a connection being made.",
-    "keywords": ["connection", "connect", "link", "meet", "join", "network", "bond"],
+    "keywords": [
+      "connection",
+      "connect",
+      "link",
+      "meet",
+      "join",
+      "network",
+      "bond"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 360, "pitchEnvelope": { "toHz": 550, "timeMs": 260 } },
-          "envelope": { "attackMs": 30, "decayMs": 60, "sustainLevel": 0.35, "sustainMs": 80, "releaseMs": 90 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 360,
+            "pitchEnvelope": {
+              "toHz": 550,
+              "timeMs": 260
+            }
+          },
+          "envelope": {
+            "attackMs": 30,
+            "decayMs": 60,
+            "sustainLevel": 0.35,
+            "sustainMs": 80,
+            "releaseMs": 90
+          },
           "gain": 0.4
         },
         {
-          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 760, "pitchEnvelope": { "toHz": 550, "timeMs": 260 } },
-          "envelope": { "attackMs": 30, "decayMs": 60, "sustainLevel": 0.3, "sustainMs": 80, "releaseMs": 90 },
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 760,
+            "pitchEnvelope": {
+              "toHz": 550,
+              "timeMs": 260
+            }
+          },
+          "envelope": {
+            "attackMs": 30,
+            "decayMs": 60,
+            "sustainLevel": 0.3,
+            "sustainMs": 80,
+            "releaseMs": 90
+          },
           "gain": 0.32
         }
       ]
@@ -94,12 +232,30 @@
     "phrase": "profile viewed",
     "category": "social",
     "concept": "A short, soft blip that confirms a profile has been viewed by someone.",
-    "keywords": ["profile", "view", "visit", "seen", "look", "check", "notify"],
+    "keywords": [
+      "profile",
+      "view",
+      "visit",
+      "seen",
+      "look",
+      "check",
+      "notify"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 600 },
-          "envelope": { "attackMs": 15, "decayMs": 25, "sustainLevel": 0.3, "sustainMs": 30, "releaseMs": 40 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 600
+          },
+          "envelope": {
+            "attackMs": 15,
+            "decayMs": 25,
+            "sustainLevel": 0.3,
+            "sustainMs": 30,
+            "releaseMs": 40
+          },
           "gain": 0.62
         }
       ]
@@ -110,17 +266,45 @@
     "phrase": "endorsement",
     "category": "social",
     "concept": "A soft, steady double tone that settles like a seal of approval being given.",
-    "keywords": ["endorse", "approve", "recommend", "vouch", "confirm", "seal", "support"],
+    "keywords": [
+      "endorse",
+      "approve",
+      "recommend",
+      "vouch",
+      "confirm",
+      "seal",
+      "support"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500 },
-          "envelope": { "attackMs": 40, "decayMs": 60, "sustainLevel": 0.4, "sustainMs": 90, "releaseMs": 80 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 500
+          },
+          "envelope": {
+            "attackMs": 40,
+            "decayMs": 60,
+            "sustainLevel": 0.4,
+            "sustainMs": 90,
+            "releaseMs": 80
+          },
           "gain": 0.48
         },
         {
-          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 500 },
-          "envelope": { "attackMs": 40, "decayMs": 60, "sustainLevel": 0.3, "sustainMs": 90, "releaseMs": 80 },
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 500
+          },
+          "envelope": {
+            "attackMs": 40,
+            "decayMs": 60,
+            "sustainLevel": 0.3,
+            "sustainMs": 90,
+            "releaseMs": 80
+          },
           "gain": 0.34
         }
       ]
@@ -131,17 +315,52 @@
     "phrase": "review posted",
     "category": "social",
     "concept": "A soft, rising two-tone chime that confirms a review has been posted.",
-    "keywords": ["review", "post", "publish", "feedback", "confirm", "rate", "submit"],
+    "keywords": [
+      "review",
+      "post",
+      "feedback",
+      "confirm",
+      "rate",
+      "submit"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 480, "pitchEnvelope": { "toHz": 720, "timeMs": 175 } },
-          "envelope": { "attackMs": 18, "decayMs": 40, "sustainLevel": 0.35, "sustainMs": 55, "releaseMs": 62 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 480,
+            "pitchEnvelope": {
+              "toHz": 720,
+              "timeMs": 175
+            }
+          },
+          "envelope": {
+            "attackMs": 18,
+            "decayMs": 40,
+            "sustainLevel": 0.35,
+            "sustainMs": 55,
+            "releaseMs": 62
+          },
           "gain": 0.44
         },
         {
-          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 480, "pitchEnvelope": { "toHz": 720, "timeMs": 175 } },
-          "envelope": { "attackMs": 18, "decayMs": 40, "sustainLevel": 0.3, "sustainMs": 55, "releaseMs": 62 },
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 480,
+            "pitchEnvelope": {
+              "toHz": 720,
+              "timeMs": 175
+            }
+          },
+          "envelope": {
+            "attackMs": 18,
+            "decayMs": 40,
+            "sustainLevel": 0.3,
+            "sustainMs": 55,
+            "releaseMs": 62
+          },
           "gain": 0.32
         }
       ]
@@ -152,17 +371,53 @@
     "phrase": "five star",
     "category": "social",
     "concept": "A short, sharp, rising chime that rings high and clear to celebrate a five star rating.",
-    "keywords": ["star", "rating", "five", "top", "excellent", "score", "review"],
+    "keywords": [
+      "star",
+      "rating",
+      "five",
+      "top",
+      "excellent",
+      "score",
+      "review"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 650, "pitchEnvelope": { "toHz": 950, "timeMs": 124 } },
-          "envelope": { "attackMs": 4, "decayMs": 30, "sustainLevel": 0.35, "sustainMs": 40, "releaseMs": 50 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 650,
+            "pitchEnvelope": {
+              "toHz": 950,
+              "timeMs": 124
+            }
+          },
+          "envelope": {
+            "attackMs": 4,
+            "decayMs": 30,
+            "sustainLevel": 0.35,
+            "sustainMs": 40,
+            "releaseMs": 50
+          },
           "gain": 0.46
         },
         {
-          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 650, "pitchEnvelope": { "toHz": 950, "timeMs": 124 } },
-          "envelope": { "attackMs": 4, "decayMs": 30, "sustainLevel": 0.3, "sustainMs": 40, "releaseMs": 50 },
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 650,
+            "pitchEnvelope": {
+              "toHz": 950,
+              "timeMs": 124
+            }
+          },
+          "envelope": {
+            "attackMs": 4,
+            "decayMs": 30,
+            "sustainLevel": 0.3,
+            "sustainMs": 40,
+            "releaseMs": 50
+          },
           "gain": 0.34
         }
       ]
@@ -173,12 +428,34 @@
     "phrase": "one star",
     "category": "social",
     "concept": "A short, falling tone that marks a critical one star rating being left.",
-    "keywords": ["star", "rating", "one", "low", "poor", "score", "review"],
+    "keywords": [
+      "star",
+      "rating",
+      "one",
+      "low",
+      "poor",
+      "score",
+      "review"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 600, "pitchEnvelope": { "toHz": 350, "timeMs": 146 } },
-          "envelope": { "attackMs": 6, "decayMs": 40, "sustainLevel": 0.3, "sustainMs": 40, "releaseMs": 60 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 600,
+            "pitchEnvelope": {
+              "toHz": 350,
+              "timeMs": 146
+            }
+          },
+          "envelope": {
+            "attackMs": 6,
+            "decayMs": 40,
+            "sustainLevel": 0.3,
+            "sustainMs": 40,
+            "releaseMs": 60
+          },
           "gain": 0.6
         }
       ]
@@ -189,17 +466,53 @@
     "phrase": "trending",
     "category": "social",
     "concept": "A long, sustained, rising swell built from two blended tones that grows like a trend catching on.",
-    "keywords": ["trend", "buzz", "rise", "popular", "surge", "grow", "momentum"],
+    "keywords": [
+      "trend",
+      "buzz",
+      "rise",
+      "popular",
+      "surge",
+      "grow",
+      "momentum"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 400, "pitchEnvelope": { "toHz": 700, "timeMs": 900 } },
-          "envelope": { "attackMs": 140, "decayMs": 140, "sustainLevel": 0.4, "sustainMs": 520, "releaseMs": 100 },
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 400,
+            "pitchEnvelope": {
+              "toHz": 700,
+              "timeMs": 900
+            }
+          },
+          "envelope": {
+            "attackMs": 140,
+            "decayMs": 140,
+            "sustainLevel": 0.4,
+            "sustainMs": 520,
+            "releaseMs": 100
+          },
           "gain": 0.55
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 400, "pitchEnvelope": { "toHz": 700, "timeMs": 900 } },
-          "envelope": { "attackMs": 140, "decayMs": 140, "sustainLevel": 0.3, "sustainMs": 520, "releaseMs": 100 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 400,
+            "pitchEnvelope": {
+              "toHz": 700,
+              "timeMs": 900
+            }
+          },
+          "envelope": {
+            "attackMs": 140,
+            "decayMs": 140,
+            "sustainLevel": 0.3,
+            "sustainMs": 520,
+            "releaseMs": 100
+          },
           "gain": 0.4
         }
       ]
@@ -210,12 +523,34 @@
     "phrase": "viral spike",
     "category": "social",
     "concept": "A short, sharp spike of rising tone that bursts like content suddenly going viral.",
-    "keywords": ["viral", "spike", "burst", "surge", "sudden", "explode", "share"],
+    "keywords": [
+      "viral",
+      "spike",
+      "burst",
+      "surge",
+      "sudden",
+      "explode",
+      "share"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 1000, "timeMs": 55 } },
-          "envelope": { "attackMs": 3, "decayMs": 20, "sustainLevel": 0.3, "sustainMs": 12, "releaseMs": 20 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 500,
+            "pitchEnvelope": {
+              "toHz": 1000,
+              "timeMs": 55
+            }
+          },
+          "envelope": {
+            "attackMs": 3,
+            "decayMs": 20,
+            "sustainLevel": 0.3,
+            "sustainMs": 12,
+            "releaseMs": 20
+          },
           "gain": 0.5
         }
       ]
@@ -226,17 +561,53 @@
     "phrase": "group joined",
     "category": "social",
     "concept": "A soft, rising two-tone chime that welcomes a new member into a group.",
-    "keywords": ["group", "join", "member", "welcome", "add", "team", "enter"],
+    "keywords": [
+      "group",
+      "join",
+      "member",
+      "welcome",
+      "add",
+      "team",
+      "enter"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 460, "pitchEnvelope": { "toHz": 680, "timeMs": 200 } },
-          "envelope": { "attackMs": 25, "decayMs": 45, "sustainLevel": 0.35, "sustainMs": 60, "releaseMs": 70 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 460,
+            "pitchEnvelope": {
+              "toHz": 680,
+              "timeMs": 200
+            }
+          },
+          "envelope": {
+            "attackMs": 25,
+            "decayMs": 45,
+            "sustainLevel": 0.35,
+            "sustainMs": 60,
+            "releaseMs": 70
+          },
           "gain": 0.46
         },
         {
-          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 460, "pitchEnvelope": { "toHz": 680, "timeMs": 200 } },
-          "envelope": { "attackMs": 25, "decayMs": 45, "sustainLevel": 0.3, "sustainMs": 60, "releaseMs": 70 },
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 460,
+            "pitchEnvelope": {
+              "toHz": 680,
+              "timeMs": 200
+            }
+          },
+          "envelope": {
+            "attackMs": 25,
+            "decayMs": 45,
+            "sustainLevel": 0.3,
+            "sustainMs": 60,
+            "releaseMs": 70
+          },
           "gain": 0.32
         }
       ]
@@ -247,12 +618,34 @@
     "phrase": "group left",
     "category": "social",
     "concept": "A soft, falling tone that marks someone leaving a group quietly.",
-    "keywords": ["group", "leave", "member", "exit", "depart", "remove", "team"],
+    "keywords": [
+      "group",
+      "leave",
+      "member",
+      "exit",
+      "depart",
+      "remove",
+      "team"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 650, "pitchEnvelope": { "toHz": 420, "timeMs": 170 } },
-          "envelope": { "attackMs": 20, "decayMs": 40, "sustainLevel": 0.3, "sustainMs": 50, "releaseMs": 60 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 650,
+            "pitchEnvelope": {
+              "toHz": 420,
+              "timeMs": 170
+            }
+          },
+          "envelope": {
+            "attackMs": 20,
+            "decayMs": 40,
+            "sustainLevel": 0.3,
+            "sustainMs": 50,
+            "releaseMs": 60
+          },
           "gain": 0.55
         }
       ]
@@ -263,18 +656,57 @@
     "phrase": "invite sent",
     "category": "social",
     "concept": "A quick, rising whoosh built from two blended tones that sends an invite outward.",
-    "keywords": ["invite", "send", "outbound", "request", "ask", "forward", "share"],
+    "keywords": [
+      "invite",
+      "send",
+      "outbound",
+      "request",
+      "ask",
+      "forward",
+      "share"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 420, "pitchEnvelope": { "toHz": 850, "timeMs": 130 } },
-          "envelope": { "attackMs": 10, "decayMs": 32, "sustainLevel": 0.3, "sustainMs": 38, "releaseMs": 50 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 420,
+            "pitchEnvelope": {
+              "toHz": 850,
+              "timeMs": 130
+            }
+          },
+          "envelope": {
+            "attackMs": 10,
+            "decayMs": 32,
+            "sustainLevel": 0.3,
+            "sustainMs": 38,
+            "releaseMs": 50
+          },
           "gain": 0.56
         },
         {
-          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 420, "pitchEnvelope": { "toHz": 850, "timeMs": 130 } },
-          "envelope": { "attackMs": 10, "decayMs": 32, "sustainLevel": 0.2, "sustainMs": 38, "releaseMs": 50 },
-          "filter": { "type": "highpass", "cutoffHz": 700 },
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 420,
+            "pitchEnvelope": {
+              "toHz": 850,
+              "timeMs": 130
+            }
+          },
+          "envelope": {
+            "attackMs": 10,
+            "decayMs": 32,
+            "sustainLevel": 0.2,
+            "sustainMs": 38,
+            "releaseMs": 50
+          },
+          "filter": {
+            "type": "highpass",
+            "cutoffHz": 700
+          },
           "gain": 0.3
         }
       ]
@@ -285,17 +717,53 @@
     "phrase": "match found",
     "category": "social",
     "concept": "A short, two-tone chime that locks together into one pitch as a match is found.",
-    "keywords": ["match", "found", "pair", "connect", "meet", "align", "lock"],
+    "keywords": [
+      "match",
+      "found",
+      "pair",
+      "connect",
+      "meet",
+      "align",
+      "lock"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 420, "pitchEnvelope": { "toHz": 600, "timeMs": 150 } },
-          "envelope": { "attackMs": 6, "decayMs": 35, "sustainLevel": 0.35, "sustainMs": 50, "releaseMs": 59 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 420,
+            "pitchEnvelope": {
+              "toHz": 600,
+              "timeMs": 150
+            }
+          },
+          "envelope": {
+            "attackMs": 6,
+            "decayMs": 35,
+            "sustainLevel": 0.35,
+            "sustainMs": 50,
+            "releaseMs": 59
+          },
           "gain": 0.44
         },
         {
-          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 800, "pitchEnvelope": { "toHz": 600, "timeMs": 150 } },
-          "envelope": { "attackMs": 6, "decayMs": 35, "sustainLevel": 0.3, "sustainMs": 50, "releaseMs": 59 },
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 800,
+            "pitchEnvelope": {
+              "toHz": 600,
+              "timeMs": 150
+            }
+          },
+          "envelope": {
+            "attackMs": 6,
+            "decayMs": 35,
+            "sustainLevel": 0.3,
+            "sustainMs": 50,
+            "releaseMs": 59
+          },
           "gain": 0.34
         }
       ]
@@ -306,17 +774,52 @@
     "phrase": "ice breaker",
     "category": "social",
     "concept": "A quick, playful, rising two-tone pop that breaks the silence like an icebreaker question.",
-    "keywords": ["icebreaker", "start", "opener", "prompt", "crack", "playful", "conversation"],
+    "keywords": [
+      "icebreaker",
+      "start",
+      "opener",
+      "prompt",
+      "playful",
+      "conversation"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 450, "pitchEnvelope": { "toHz": 650, "timeMs": 140 } },
-          "envelope": { "attackMs": 15, "decayMs": 30, "sustainLevel": 0.35, "sustainMs": 40, "releaseMs": 55 },
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 450,
+            "pitchEnvelope": {
+              "toHz": 650,
+              "timeMs": 140
+            }
+          },
+          "envelope": {
+            "attackMs": 15,
+            "decayMs": 30,
+            "sustainLevel": 0.35,
+            "sustainMs": 40,
+            "releaseMs": 55
+          },
           "gain": 0.5
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 450, "pitchEnvelope": { "toHz": 650, "timeMs": 140 } },
-          "envelope": { "attackMs": 4, "decayMs": 20, "sustainLevel": 0.25, "sustainMs": 20, "releaseMs": 40 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 450,
+            "pitchEnvelope": {
+              "toHz": 650,
+              "timeMs": 140
+            }
+          },
+          "envelope": {
+            "attackMs": 4,
+            "decayMs": 20,
+            "sustainLevel": 0.25,
+            "sustainMs": 20,
+            "releaseMs": 40
+          },
           "gain": 0.34
         }
       ]

@@ -4,12 +4,34 @@
     "phrase": "upload start",
     "category": "progress",
     "concept": "A quick, soft, rising blip as an upload begins.",
-    "keywords": ["upload", "send", "transfer", "start", "begin", "outgoing", "file", "data"],
+    "keywords": [
+      "upload",
+      "send",
+      "transfer",
+      "start",
+      "begin",
+      "outgoing",
+      "data"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 420, "pitchEnvelope": { "toHz": 680, "timeMs": 90 } },
-          "envelope": { "attackMs": 14, "decayMs": 40, "sustainLevel": 0.35, "sustainMs": 40, "releaseMs": 55 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 420,
+            "pitchEnvelope": {
+              "toHz": 680,
+              "timeMs": 90
+            }
+          },
+          "envelope": {
+            "attackMs": 14,
+            "decayMs": 40,
+            "sustainLevel": 0.35,
+            "sustainMs": 40,
+            "releaseMs": 55
+          },
           "gain": 0.6
         }
       ]
@@ -20,17 +42,54 @@
     "phrase": "download start",
     "category": "progress",
     "concept": "A quick, soft, rising two-tone chime as a download begins.",
-    "keywords": ["download", "receive", "transfer", "start", "begin", "incoming", "file", "fetch"],
+    "keywords": [
+      "download",
+      "receive",
+      "transfer",
+      "start",
+      "begin",
+      "incoming",
+      "file",
+      "fetch"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 320, "pitchEnvelope": { "toHz": 520, "timeMs": 100 } },
-          "envelope": { "attackMs": 18, "decayMs": 45, "sustainLevel": 0.3, "sustainMs": 40, "releaseMs": 60 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 320,
+            "pitchEnvelope": {
+              "toHz": 520,
+              "timeMs": 100
+            }
+          },
+          "envelope": {
+            "attackMs": 18,
+            "decayMs": 45,
+            "sustainLevel": 0.3,
+            "sustainMs": 40,
+            "releaseMs": 60
+          },
           "gain": 0.44
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 480, "pitchEnvelope": { "toHz": 780, "timeMs": 100 } },
-          "envelope": { "attackMs": 18, "decayMs": 45, "sustainLevel": 0.3, "sustainMs": 40, "releaseMs": 60 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 480,
+            "pitchEnvelope": {
+              "toHz": 780,
+              "timeMs": 100
+            }
+          },
+          "envelope": {
+            "attackMs": 18,
+            "decayMs": 45,
+            "sustainLevel": 0.3,
+            "sustainMs": 40,
+            "releaseMs": 60
+          },
           "gain": 0.34
         }
       ]
@@ -41,12 +100,35 @@
     "phrase": "upload failed",
     "category": "progress",
     "concept": "A quick, sharp, falling tone marking a failed upload.",
-    "keywords": ["upload", "fail", "failed", "error", "stop", "retry", "warning", "transfer"],
+    "keywords": [
+      "upload",
+      "fail",
+      "failed",
+      "error",
+      "stop",
+      "retry",
+      "warning",
+      "transfer"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 600, "pitchEnvelope": { "toHz": 300, "timeMs": 80 } },
-          "envelope": { "attackMs": 2, "decayMs": 45, "sustainLevel": 0.15, "sustainMs": 15, "releaseMs": 55 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 600,
+            "pitchEnvelope": {
+              "toHz": 300,
+              "timeMs": 80
+            }
+          },
+          "envelope": {
+            "attackMs": 2,
+            "decayMs": 45,
+            "sustainLevel": 0.15,
+            "sustainMs": 15,
+            "releaseMs": 55
+          },
           "gain": 0.6
         }
       ]
@@ -57,17 +139,54 @@
     "phrase": "download failed",
     "category": "progress",
     "concept": "A quick, sharp, falling dissonant pair marking a failed download.",
-    "keywords": ["download", "fail", "failed", "error", "stop", "retry", "warning", "transfer"],
+    "keywords": [
+      "download",
+      "fail",
+      "failed",
+      "error",
+      "stop",
+      "retry",
+      "warning",
+      "transfer"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 260, "timeMs": 85 } },
-          "envelope": { "attackMs": 2, "decayMs": 45, "sustainLevel": 0.15, "sustainMs": 15, "releaseMs": 50 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 500,
+            "pitchEnvelope": {
+              "toHz": 260,
+              "timeMs": 85
+            }
+          },
+          "envelope": {
+            "attackMs": 2,
+            "decayMs": 45,
+            "sustainLevel": 0.15,
+            "sustainMs": 15,
+            "releaseMs": 50
+          },
           "gain": 0.42
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 470, "pitchEnvelope": { "toHz": 245, "timeMs": 85 } },
-          "envelope": { "attackMs": 2, "decayMs": 40, "sustainLevel": 0.15, "sustainMs": 15, "releaseMs": 50 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 470,
+            "pitchEnvelope": {
+              "toHz": 245,
+              "timeMs": 85
+            }
+          },
+          "envelope": {
+            "attackMs": 2,
+            "decayMs": 40,
+            "sustainLevel": 0.15,
+            "sustainMs": 15,
+            "releaseMs": 50
+          },
           "gain": 0.36
         }
       ]
@@ -78,17 +197,54 @@
     "phrase": "sync start",
     "category": "progress",
     "concept": "A soft, rising two-tone sweep as a sync operation begins.",
-    "keywords": ["sync", "synchronize", "start", "begin", "update", "refresh", "cloud", "connect"],
+    "keywords": [
+      "sync",
+      "synchronize",
+      "start",
+      "begin",
+      "update",
+      "refresh",
+      "cloud",
+      "connect"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 400, "pitchEnvelope": { "toHz": 600, "timeMs": 140 } },
-          "envelope": { "attackMs": 24, "decayMs": 55, "sustainLevel": 0.35, "sustainMs": 60, "releaseMs": 80 },
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 400,
+            "pitchEnvelope": {
+              "toHz": 600,
+              "timeMs": 140
+            }
+          },
+          "envelope": {
+            "attackMs": 24,
+            "decayMs": 55,
+            "sustainLevel": 0.35,
+            "sustainMs": 60,
+            "releaseMs": 80
+          },
           "gain": 0.42
         },
         {
-          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 600, "pitchEnvelope": { "toHz": 900, "timeMs": 140 } },
-          "envelope": { "attackMs": 24, "decayMs": 55, "sustainLevel": 0.35, "sustainMs": 60, "releaseMs": 60 },
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 600,
+            "pitchEnvelope": {
+              "toHz": 900,
+              "timeMs": 140
+            }
+          },
+          "envelope": {
+            "attackMs": 24,
+            "decayMs": 55,
+            "sustainLevel": 0.35,
+            "sustainMs": 60,
+            "releaseMs": 60
+          },
           "gain": 0.28
         }
       ]
@@ -99,17 +255,54 @@
     "phrase": "sync failed",
     "category": "progress",
     "concept": "A sharp, falling triangle-wave pair marking a failed sync.",
-    "keywords": ["sync", "synchronize", "fail", "failed", "error", "stop", "retry", "warning"],
+    "keywords": [
+      "sync",
+      "synchronize",
+      "fail",
+      "failed",
+      "error",
+      "stop",
+      "retry",
+      "warning"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 550, "pitchEnvelope": { "toHz": 300, "timeMs": 100 } },
-          "envelope": { "attackMs": 3, "decayMs": 50, "sustainLevel": 0.25, "sustainMs": 20, "releaseMs": 60 },
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 550,
+            "pitchEnvelope": {
+              "toHz": 300,
+              "timeMs": 100
+            }
+          },
+          "envelope": {
+            "attackMs": 3,
+            "decayMs": 50,
+            "sustainLevel": 0.25,
+            "sustainMs": 20,
+            "releaseMs": 60
+          },
           "gain": 0.42
         },
         {
-          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 520, "pitchEnvelope": { "toHz": 285, "timeMs": 100 } },
-          "envelope": { "attackMs": 3, "decayMs": 45, "sustainLevel": 0.25, "sustainMs": 20, "releaseMs": 55 },
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 520,
+            "pitchEnvelope": {
+              "toHz": 285,
+              "timeMs": 100
+            }
+          },
+          "envelope": {
+            "attackMs": 3,
+            "decayMs": 45,
+            "sustainLevel": 0.25,
+            "sustainMs": 20,
+            "releaseMs": 55
+          },
           "gain": 0.36
         }
       ]
@@ -120,18 +313,53 @@
     "phrase": "install start",
     "category": "progress",
     "concept": "A soft, rising tone with a light texture as an install begins.",
-    "keywords": ["install", "installation", "start", "begin", "setup", "software", "package", "deploy"],
+    "keywords": [
+      "install",
+      "installation",
+      "start",
+      "begin",
+      "setup",
+      "software",
+      "package"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 350, "pitchEnvelope": { "toHz": 550, "timeMs": 150 } },
-          "envelope": { "attackMs": 22, "decayMs": 50, "sustainLevel": 0.4, "sustainMs": 60, "releaseMs": 90 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 350,
+            "pitchEnvelope": {
+              "toHz": 550,
+              "timeMs": 150
+            }
+          },
+          "envelope": {
+            "attackMs": 22,
+            "decayMs": 50,
+            "sustainLevel": 0.4,
+            "sustainMs": 60,
+            "releaseMs": 90
+          },
           "gain": 0.55
         },
         {
-          "source": { "type": "oscillator", "wave": "square", "freqHz": 700 },
-          "envelope": { "attackMs": 20, "decayMs": 30, "sustainLevel": 0.1, "sustainMs": 20, "releaseMs": 60 },
-          "filter": { "type": "lowpass", "cutoffHz": 900 },
+          "source": {
+            "type": "oscillator",
+            "wave": "square",
+            "freqHz": 700
+          },
+          "envelope": {
+            "attackMs": 20,
+            "decayMs": 30,
+            "sustainLevel": 0.1,
+            "sustainMs": 20,
+            "releaseMs": 60
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 900
+          },
           "gain": 0.12
         }
       ]
@@ -142,17 +370,50 @@
     "phrase": "install complete",
     "category": "progress",
     "concept": "A quick, rising chime confirming an install finished.",
-    "keywords": ["install", "installation", "complete", "done", "finished", "success", "setup", "ready"],
+    "keywords": [
+      "install",
+      "installation",
+      "complete",
+      "done",
+      "finished",
+      "success",
+      "setup",
+      "ready"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 750, "timeMs": 110 } },
-          "envelope": { "attackMs": 10, "decayMs": 40, "sustainLevel": 0.4, "sustainMs": 50, "releaseMs": 80 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 500,
+            "pitchEnvelope": {
+              "toHz": 750,
+              "timeMs": 110
+            }
+          },
+          "envelope": {
+            "attackMs": 10,
+            "decayMs": 40,
+            "sustainLevel": 0.4,
+            "sustainMs": 50,
+            "releaseMs": 80
+          },
           "gain": 0.42
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1125 },
-          "envelope": { "attackMs": 10, "decayMs": 40, "sustainLevel": 0.3, "sustainMs": 50, "releaseMs": 70 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 1125
+          },
+          "envelope": {
+            "attackMs": 10,
+            "decayMs": 40,
+            "sustainLevel": 0.3,
+            "sustainMs": 50,
+            "releaseMs": 70
+          },
           "gain": 0.22
         }
       ]
@@ -163,17 +424,46 @@
     "phrase": "update available",
     "category": "progress",
     "concept": "A soft, gentle two-note ping announcing an available update.",
-    "keywords": ["update", "available", "notify", "notification", "new", "version", "alert", "upgrade"],
+    "keywords": [
+      "update",
+      "available",
+      "notify",
+      "notification",
+      "new",
+      "version",
+      "alert",
+      "upgrade"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 600 },
-          "envelope": { "attackMs": 25, "decayMs": 50, "sustainLevel": 0.35, "sustainMs": 60, "releaseMs": 90 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 600
+          },
+          "envelope": {
+            "attackMs": 25,
+            "decayMs": 50,
+            "sustainLevel": 0.35,
+            "sustainMs": 60,
+            "releaseMs": 90
+          },
           "gain": 0.4
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 900 },
-          "envelope": { "attackMs": 25, "decayMs": 45, "sustainLevel": 0.3, "sustainMs": 50, "releaseMs": 80 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 900
+          },
+          "envelope": {
+            "attackMs": 25,
+            "decayMs": 45,
+            "sustainLevel": 0.3,
+            "sustainMs": 50,
+            "releaseMs": 80
+          },
           "gain": 0.3
         }
       ]
@@ -184,17 +474,49 @@
     "phrase": "update installed",
     "category": "progress",
     "concept": "A rising two-tone chime confirming the update installed.",
-    "keywords": ["update", "install", "installed", "complete", "done", "finished", "success", "upgrade"],
+    "keywords": [
+      "update",
+      "install",
+      "installed",
+      "done",
+      "finished",
+      "success",
+      "upgrade"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 420, "pitchEnvelope": { "toHz": 630, "timeMs": 120 } },
-          "envelope": { "attackMs": 15, "decayMs": 45, "sustainLevel": 0.4, "sustainMs": 60, "releaseMs": 90 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 420,
+            "pitchEnvelope": {
+              "toHz": 630,
+              "timeMs": 120
+            }
+          },
+          "envelope": {
+            "attackMs": 15,
+            "decayMs": 45,
+            "sustainLevel": 0.4,
+            "sustainMs": 60,
+            "releaseMs": 90
+          },
           "gain": 0.42
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 945 },
-          "envelope": { "attackMs": 15, "decayMs": 40, "sustainLevel": 0.3, "sustainMs": 55, "releaseMs": 80 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 945
+          },
+          "envelope": {
+            "attackMs": 15,
+            "decayMs": 40,
+            "sustainLevel": 0.3,
+            "sustainMs": 55,
+            "releaseMs": 80
+          },
           "gain": 0.2
         }
       ]
@@ -205,18 +527,53 @@
     "phrase": "backup start",
     "category": "progress",
     "concept": "A soft, rising tone with an airy hum as a backup begins.",
-    "keywords": ["backup", "start", "begin", "save", "archive", "protect", "copy", "storage"],
+    "keywords": [
+      "backup",
+      "start",
+      "begin",
+      "save",
+      "archive",
+      "protect",
+      "copy",
+      "storage"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 380, "pitchEnvelope": { "toHz": 500, "timeMs": 300 } },
-          "envelope": { "attackMs": 60, "decayMs": 100, "sustainLevel": 0.4, "sustainMs": 120, "releaseMs": 150 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 380,
+            "pitchEnvelope": {
+              "toHz": 500,
+              "timeMs": 300
+            }
+          },
+          "envelope": {
+            "attackMs": 60,
+            "decayMs": 100,
+            "sustainLevel": 0.4,
+            "sustainMs": 120,
+            "releaseMs": 150
+          },
           "gain": 0.5
         },
         {
-          "source": { "type": "noise", "color": "white" },
-          "envelope": { "attackMs": 60, "decayMs": 100, "sustainLevel": 0.15, "sustainMs": 120, "releaseMs": 150 },
-          "filter": { "type": "lowpass", "cutoffHz": 600 },
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "envelope": {
+            "attackMs": 60,
+            "decayMs": 100,
+            "sustainLevel": 0.15,
+            "sustainMs": 120,
+            "releaseMs": 150
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 600
+          },
           "gain": 0.5
         }
       ]
@@ -227,17 +584,50 @@
     "phrase": "backup complete",
     "category": "progress",
     "concept": "A quick, rising chime confirming the backup finished.",
-    "keywords": ["backup", "complete", "done", "finished", "success", "save", "archive", "ready"],
+    "keywords": [
+      "backup",
+      "complete",
+      "done",
+      "finished",
+      "success",
+      "save",
+      "archive",
+      "ready"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 480, "pitchEnvelope": { "toHz": 720, "timeMs": 100 } },
-          "envelope": { "attackMs": 12, "decayMs": 40, "sustainLevel": 0.4, "sustainMs": 45, "releaseMs": 70 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 480,
+            "pitchEnvelope": {
+              "toHz": 720,
+              "timeMs": 100
+            }
+          },
+          "envelope": {
+            "attackMs": 12,
+            "decayMs": 40,
+            "sustainLevel": 0.4,
+            "sustainMs": 45,
+            "releaseMs": 70
+          },
           "gain": 0.42
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1080 },
-          "envelope": { "attackMs": 12, "decayMs": 35, "sustainLevel": 0.25, "sustainMs": 40, "releaseMs": 60 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 1080
+          },
+          "envelope": {
+            "attackMs": 12,
+            "decayMs": 35,
+            "sustainLevel": 0.25,
+            "sustainMs": 40,
+            "releaseMs": 60
+          },
           "gain": 0.2
         }
       ]
@@ -248,17 +638,52 @@
     "phrase": "restore complete",
     "category": "progress",
     "concept": "A soft, rising triangle-wave chime confirming a restore finished.",
-    "keywords": ["restore", "recovery", "complete", "done", "finished", "success", "backup", "recovered"],
+    "keywords": [
+      "restore",
+      "complete",
+      "done",
+      "finished",
+      "success",
+      "recovered"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 400, "pitchEnvelope": { "toHz": 600, "timeMs": 140 } },
-          "envelope": { "attackMs": 22, "decayMs": 55, "sustainLevel": 0.4, "sustainMs": 70, "releaseMs": 90 },
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 400,
+            "pitchEnvelope": {
+              "toHz": 600,
+              "timeMs": 140
+            }
+          },
+          "envelope": {
+            "attackMs": 22,
+            "decayMs": 55,
+            "sustainLevel": 0.4,
+            "sustainMs": 70,
+            "releaseMs": 90
+          },
           "gain": 0.4
         },
         {
-          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 600, "pitchEnvelope": { "toHz": 900, "timeMs": 140 } },
-          "envelope": { "attackMs": 22, "decayMs": 50, "sustainLevel": 0.35, "sustainMs": 60, "releaseMs": 80 },
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 600,
+            "pitchEnvelope": {
+              "toHz": 900,
+              "timeMs": 140
+            }
+          },
+          "envelope": {
+            "attackMs": 22,
+            "decayMs": 50,
+            "sustainLevel": 0.35,
+            "sustainMs": 60,
+            "releaseMs": 80
+          },
           "gain": 0.3
         }
       ]
@@ -269,12 +694,35 @@
     "phrase": "loading start",
     "category": "progress",
     "concept": "A quick, rising blip as loading starts.",
-    "keywords": ["loading", "load", "start", "begin", "wait", "spinner", "progress", "fetch"],
+    "keywords": [
+      "loading",
+      "load",
+      "start",
+      "begin",
+      "wait",
+      "spinner",
+      "progress",
+      "fetch"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 750, "timeMs": 70 } },
-          "envelope": { "attackMs": 6, "decayMs": 30, "sustainLevel": 0.3, "sustainMs": 20, "releaseMs": 40 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 500,
+            "pitchEnvelope": {
+              "toHz": 750,
+              "timeMs": 70
+            }
+          },
+          "envelope": {
+            "attackMs": 6,
+            "decayMs": 30,
+            "sustainLevel": 0.3,
+            "sustainMs": 20,
+            "releaseMs": 40
+          },
           "gain": 0.6
         }
       ]
@@ -285,12 +733,35 @@
     "phrase": "loading end",
     "category": "progress",
     "concept": "A quick, falling blip as loading ends.",
-    "keywords": ["loading", "load", "end", "finish", "complete", "done", "wait", "ready"],
+    "keywords": [
+      "loading",
+      "load",
+      "end",
+      "finish",
+      "complete",
+      "done",
+      "wait",
+      "ready"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 750, "pitchEnvelope": { "toHz": 500, "timeMs": 70 } },
-          "envelope": { "attackMs": 10, "decayMs": 35, "sustainLevel": 0.3, "sustainMs": 20, "releaseMs": 45 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 750,
+            "pitchEnvelope": {
+              "toHz": 500,
+              "timeMs": 70
+            }
+          },
+          "envelope": {
+            "attackMs": 10,
+            "decayMs": 35,
+            "sustainLevel": 0.3,
+            "sustainMs": 20,
+            "releaseMs": 45
+          },
           "gain": 0.6
         }
       ]
@@ -301,17 +772,46 @@
     "phrase": "buffering",
     "category": "progress",
     "concept": "A soft, sustained hum with a slow wobble while data buffers.",
-    "keywords": ["buffer", "buffering", "load", "wait", "stream", "hold", "pause", "network"],
+    "keywords": [
+      "buffer",
+      "buffering",
+      "load",
+      "wait",
+      "stream",
+      "hold",
+      "pause",
+      "network"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 440 },
-          "envelope": { "attackMs": 200, "decayMs": 150, "sustainLevel": 0.5, "sustainMs": 500, "releaseMs": 220 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 440
+          },
+          "envelope": {
+            "attackMs": 200,
+            "decayMs": 150,
+            "sustainLevel": 0.5,
+            "sustainMs": 500,
+            "releaseMs": 220
+          },
           "gain": 0.34
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 446 },
-          "envelope": { "attackMs": 200, "decayMs": 150, "sustainLevel": 0.5, "sustainMs": 500, "releaseMs": 220 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 446
+          },
+          "envelope": {
+            "attackMs": 200,
+            "decayMs": 150,
+            "sustainLevel": 0.5,
+            "sustainMs": 500,
+            "releaseMs": 220
+          },
           "gain": 0.28
         }
       ]
@@ -322,12 +822,31 @@
     "phrase": "progress tick",
     "category": "progress",
     "concept": "A very short, sharp tick marking one progress step.",
-    "keywords": ["progress", "tick", "step", "click", "increment", "count", "pulse", "update"],
+    "keywords": [
+      "progress",
+      "tick",
+      "step",
+      "click",
+      "increment",
+      "count",
+      "pulse",
+      "update"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 900 },
-          "envelope": { "attackMs": 2, "decayMs": 20, "sustainLevel": 0.15, "sustainMs": 8, "releaseMs": 20 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 900
+          },
+          "envelope": {
+            "attackMs": 2,
+            "decayMs": 20,
+            "sustainLevel": 0.15,
+            "sustainMs": 8,
+            "releaseMs": 20
+          },
           "gain": 0.65
         }
       ]
@@ -338,12 +857,34 @@
     "phrase": "progress halfway",
     "category": "progress",
     "concept": "A quick, rising blip marking the halfway point of progress.",
-    "keywords": ["progress", "halfway", "middle", "midpoint", "status", "update", "indicator", "tick"],
+    "keywords": [
+      "progress",
+      "halfway",
+      "middle",
+      "midpoint",
+      "status",
+      "update",
+      "indicator"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 700, "pitchEnvelope": { "toHz": 950, "timeMs": 60 } },
-          "envelope": { "attackMs": 8, "decayMs": 30, "sustainLevel": 0.25, "sustainMs": 20, "releaseMs": 35 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 700,
+            "pitchEnvelope": {
+              "toHz": 950,
+              "timeMs": 60
+            }
+          },
+          "envelope": {
+            "attackMs": 8,
+            "decayMs": 30,
+            "sustainLevel": 0.25,
+            "sustainMs": 20,
+            "releaseMs": 35
+          },
           "gain": 0.55
         }
       ]
@@ -354,12 +895,35 @@
     "phrase": "progress nearly done",
     "category": "progress",
     "concept": "A quick, sharp, rising blip signaling that progress is nearly done.",
-    "keywords": ["progress", "nearly", "almost", "done", "complete", "status", "update", "indicator"],
+    "keywords": [
+      "progress",
+      "nearly",
+      "almost",
+      "done",
+      "complete",
+      "status",
+      "update",
+      "indicator"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 900, "pitchEnvelope": { "toHz": 1300, "timeMs": 55 } },
-          "envelope": { "attackMs": 5, "decayMs": 25, "sustainLevel": 0.2, "sustainMs": 15, "releaseMs": 30 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 900,
+            "pitchEnvelope": {
+              "toHz": 1300,
+              "timeMs": 55
+            }
+          },
+          "envelope": {
+            "attackMs": 5,
+            "decayMs": 25,
+            "sustainLevel": 0.2,
+            "sustainMs": 15,
+            "releaseMs": 30
+          },
           "gain": 0.55
         }
       ]
@@ -370,17 +934,49 @@
     "phrase": "step complete",
     "category": "progress",
     "concept": "A quick, rising two-tone chime marking a completed step.",
-    "keywords": ["step", "complete", "done", "finished", "task", "checkpoint", "progress", "success"],
+    "keywords": [
+      "step",
+      "complete",
+      "done",
+      "finished",
+      "checkpoint",
+      "progress",
+      "success"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 550, "pitchEnvelope": { "toHz": 700, "timeMs": 70 } },
-          "envelope": { "attackMs": 10, "decayMs": 30, "sustainLevel": 0.3, "sustainMs": 25, "releaseMs": 45 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 550,
+            "pitchEnvelope": {
+              "toHz": 700,
+              "timeMs": 70
+            }
+          },
+          "envelope": {
+            "attackMs": 10,
+            "decayMs": 30,
+            "sustainLevel": 0.3,
+            "sustainMs": 25,
+            "releaseMs": 45
+          },
           "gain": 0.42
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1050 },
-          "envelope": { "attackMs": 10, "decayMs": 25, "sustainLevel": 0.2, "sustainMs": 20, "releaseMs": 40 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 1050
+          },
+          "envelope": {
+            "attackMs": 10,
+            "decayMs": 25,
+            "sustainLevel": 0.2,
+            "sustainMs": 20,
+            "releaseMs": 40
+          },
           "gain": 0.2
         }
       ]
@@ -391,17 +987,50 @@
     "phrase": "stage cleared",
     "category": "progress",
     "concept": "A quick, rising chime celebrating a cleared stage.",
-    "keywords": ["stage", "cleared", "clear", "level", "complete", "done", "achievement", "success"],
+    "keywords": [
+      "stage",
+      "cleared",
+      "clear",
+      "level",
+      "complete",
+      "done",
+      "achievement",
+      "success"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 650, "timeMs": 120 } },
-          "envelope": { "attackMs": 12, "decayMs": 40, "sustainLevel": 0.4, "sustainMs": 50, "releaseMs": 70 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 500,
+            "pitchEnvelope": {
+              "toHz": 650,
+              "timeMs": 120
+            }
+          },
+          "envelope": {
+            "attackMs": 12,
+            "decayMs": 40,
+            "sustainLevel": 0.4,
+            "sustainMs": 50,
+            "releaseMs": 70
+          },
           "gain": 0.4
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1300 },
-          "envelope": { "attackMs": 12, "decayMs": 35, "sustainLevel": 0.3, "sustainMs": 40, "releaseMs": 60 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 1300
+          },
+          "envelope": {
+            "attackMs": 12,
+            "decayMs": 35,
+            "sustainLevel": 0.3,
+            "sustainMs": 40,
+            "releaseMs": 60
+          },
           "gain": 0.2
         }
       ]
@@ -412,22 +1041,72 @@
     "phrase": "milestone reached",
     "category": "progress",
     "concept": "A rising three-tone chord celebrating a reached milestone.",
-    "keywords": ["milestone", "reached", "achievement", "progress", "goal", "success", "celebrate", "unlock"],
+    "keywords": [
+      "milestone",
+      "reached",
+      "achievement",
+      "progress",
+      "success",
+      "celebrate",
+      "unlock"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 440, "pitchEnvelope": { "toHz": 550, "timeMs": 180 } },
-          "envelope": { "attackMs": 20, "decayMs": 60, "sustainLevel": 0.4, "sustainMs": 90, "releaseMs": 110 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 440,
+            "pitchEnvelope": {
+              "toHz": 550,
+              "timeMs": 180
+            }
+          },
+          "envelope": {
+            "attackMs": 20,
+            "decayMs": 60,
+            "sustainLevel": 0.4,
+            "sustainMs": 90,
+            "releaseMs": 110
+          },
           "gain": 0.3
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 550, "pitchEnvelope": { "toHz": 687, "timeMs": 180 } },
-          "envelope": { "attackMs": 20, "decayMs": 55, "sustainLevel": 0.35, "sustainMs": 80, "releaseMs": 100 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 550,
+            "pitchEnvelope": {
+              "toHz": 687,
+              "timeMs": 180
+            }
+          },
+          "envelope": {
+            "attackMs": 20,
+            "decayMs": 55,
+            "sustainLevel": 0.35,
+            "sustainMs": 80,
+            "releaseMs": 100
+          },
           "gain": 0.24
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 660, "pitchEnvelope": { "toHz": 825, "timeMs": 180 } },
-          "envelope": { "attackMs": 20, "decayMs": 50, "sustainLevel": 0.3, "sustainMs": 70, "releaseMs": 90 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 660,
+            "pitchEnvelope": {
+              "toHz": 825,
+              "timeMs": 180
+            }
+          },
+          "envelope": {
+            "attackMs": 20,
+            "decayMs": 50,
+            "sustainLevel": 0.3,
+            "sustainMs": 70,
+            "releaseMs": 90
+          },
           "gain": 0.2
         }
       ]
@@ -438,17 +1117,49 @@
     "phrase": "goal reached",
     "category": "progress",
     "concept": "A soft, sustained, rising swell celebrating a reached goal.",
-    "keywords": ["goal", "reached", "achievement", "success", "complete", "celebrate", "milestone", "accomplish"],
+    "keywords": [
+      "goal",
+      "reached",
+      "achievement",
+      "success",
+      "complete",
+      "celebrate",
+      "accomplish"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 650, "timeMs": 400 } },
-          "envelope": { "attackMs": 100, "decayMs": 150, "sustainLevel": 0.5, "sustainMs": 400, "releaseMs": 220 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 500,
+            "pitchEnvelope": {
+              "toHz": 650,
+              "timeMs": 400
+            }
+          },
+          "envelope": {
+            "attackMs": 100,
+            "decayMs": 150,
+            "sustainLevel": 0.5,
+            "sustainMs": 400,
+            "releaseMs": 220
+          },
           "gain": 0.34
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 975 },
-          "envelope": { "attackMs": 100, "decayMs": 140, "sustainLevel": 0.4, "sustainMs": 380, "releaseMs": 200 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 975
+          },
+          "envelope": {
+            "attackMs": 100,
+            "decayMs": 140,
+            "sustainLevel": 0.4,
+            "sustainMs": 380,
+            "releaseMs": 200
+          },
           "gain": 0.18
         }
       ]
@@ -459,17 +1170,50 @@
     "phrase": "streak extended",
     "category": "progress",
     "concept": "A quick, rising two-tone sparkle marking an extended streak.",
-    "keywords": ["streak", "extend", "extended", "continue", "chain", "combo", "success", "progress"],
+    "keywords": [
+      "streak",
+      "extend",
+      "extended",
+      "continue",
+      "chain",
+      "combo",
+      "success",
+      "progress"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 800, "pitchEnvelope": { "toHz": 1100, "timeMs": 60 } },
-          "envelope": { "attackMs": 5, "decayMs": 25, "sustainLevel": 0.25, "sustainMs": 15, "releaseMs": 35 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 800,
+            "pitchEnvelope": {
+              "toHz": 1100,
+              "timeMs": 60
+            }
+          },
+          "envelope": {
+            "attackMs": 5,
+            "decayMs": 25,
+            "sustainLevel": 0.25,
+            "sustainMs": 15,
+            "releaseMs": 35
+          },
           "gain": 0.4
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1650 },
-          "envelope": { "attackMs": 5, "decayMs": 20, "sustainLevel": 0.15, "sustainMs": 10, "releaseMs": 30 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 1650
+          },
+          "envelope": {
+            "attackMs": 5,
+            "decayMs": 20,
+            "sustainLevel": 0.15,
+            "sustainMs": 10,
+            "releaseMs": 30
+          },
           "gain": 0.2
         }
       ]

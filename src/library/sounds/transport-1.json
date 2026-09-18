@@ -4,18 +4,53 @@
     "phrase": "car start",
     "category": "transport",
     "concept": "A layered engine crank and catch, moving from a rough turnover into a steady idling rumble.",
-    "keywords": ["car", "engine", "start", "ignition", "crank", "startup", "vehicle", "rumble"],
+    "keywords": [
+      "car",
+      "engine",
+      "start",
+      "ignition",
+      "crank",
+      "startup",
+      "vehicle",
+      "rumble"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "noise", "color": "white" },
-          "envelope": { "attackMs": 20, "decayMs": 150, "sustainLevel": 0.3, "sustainMs": 400, "releaseMs": 200 },
-          "filter": { "type": "lowpass", "cutoffHz": 500 },
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "envelope": {
+            "attackMs": 20,
+            "decayMs": 150,
+            "sustainLevel": 0.3,
+            "sustainMs": 400,
+            "releaseMs": 200
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 500
+          },
           "gain": 0.7
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 90, "pitchEnvelope": { "toHz": 110, "timeMs": 300 } },
-          "envelope": { "attackMs": 30, "decayMs": 150, "sustainLevel": 0.5, "sustainMs": 400, "releaseMs": 200 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 90,
+            "pitchEnvelope": {
+              "toHz": 110,
+              "timeMs": 300
+            }
+          },
+          "envelope": {
+            "attackMs": 30,
+            "decayMs": 150,
+            "sustainLevel": 0.5,
+            "sustainMs": 400,
+            "releaseMs": 200
+          },
           "gain": 0.45
         }
       ]
@@ -26,23 +61,65 @@
     "phrase": "car horn",
     "category": "transport",
     "concept": "A held, dual-tone honk blast, steady and unwavering at a mid-range pitch.",
-    "keywords": ["car", "horn", "honk", "beep", "warning", "alert", "vehicle", "blast"],
+    "keywords": [
+      "car",
+      "horn",
+      "honk",
+      "beep",
+      "warning",
+      "alert",
+      "vehicle",
+      "blast"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 350 },
-          "envelope": { "attackMs": 15, "decayMs": 30, "sustainLevel": 0.6, "sustainMs": 250, "releaseMs": 40 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 350
+          },
+          "envelope": {
+            "attackMs": 15,
+            "decayMs": 30,
+            "sustainLevel": 0.6,
+            "sustainMs": 250,
+            "releaseMs": 40
+          },
           "gain": 0.28
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 440 },
-          "envelope": { "attackMs": 15, "decayMs": 30, "sustainLevel": 0.6, "sustainMs": 250, "releaseMs": 40 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 440
+          },
+          "envelope": {
+            "attackMs": 15,
+            "decayMs": 30,
+            "sustainLevel": 0.6,
+            "sustainMs": 250,
+            "releaseMs": 40
+          },
           "gain": 0.25
         },
         {
-          "source": { "type": "oscillator", "wave": "square", "freqHz": 350 },
-          "envelope": { "attackMs": 15, "decayMs": 30, "sustainLevel": 0.3, "sustainMs": 250, "releaseMs": 40 },
-          "filter": { "type": "lowpass", "cutoffHz": 900 },
+          "source": {
+            "type": "oscillator",
+            "wave": "square",
+            "freqHz": 350
+          },
+          "envelope": {
+            "attackMs": 15,
+            "decayMs": 30,
+            "sustainLevel": 0.3,
+            "sustainMs": 250,
+            "releaseMs": 40
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 900
+          },
           "gain": 0.08
         }
       ]
@@ -53,19 +130,49 @@
     "phrase": "car door",
     "category": "transport",
     "concept": "A short, sharp, heavy thunk as a car door slams shut and latches firmly.",
-    "keywords": ["car", "door", "close", "slam", "shut", "latch", "vehicle", "thunk"],
+    "keywords": [
+      "car",
+      "door",
+      "close",
+      "shut",
+      "latch",
+      "vehicle",
+      "thunk"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 260 },
-          "envelope": { "attackMs": 3, "decayMs": 35, "sustainLevel": 0.2, "sustainMs": 15, "releaseMs": 100 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 260
+          },
+          "envelope": {
+            "attackMs": 3,
+            "decayMs": 35,
+            "sustainLevel": 0.2,
+            "sustainMs": 15,
+            "releaseMs": 100
+          },
           "gain": 0.6
         },
         {
-          "source": { "type": "noise", "color": "white" },
-          "envelope": { "attackMs": 3, "decayMs": 15, "sustainLevel": 0.2, "sustainMs": 8, "releaseMs": 35 },
-          "filter": { "type": "lowpass", "cutoffHz": 500 },
-          "gain": 1.0
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "envelope": {
+            "attackMs": 3,
+            "decayMs": 15,
+            "sustainLevel": 0.2,
+            "sustainMs": 8,
+            "releaseMs": 35
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 500
+          },
+          "gain": 1
         }
       ]
     }
@@ -75,18 +182,50 @@
     "phrase": "indicator tick",
     "category": "transport",
     "concept": "A short, sharp, bright tick as a turn indicator relay clicks once.",
-    "keywords": ["indicator", "turn", "signal", "blinker", "tick", "relay", "click", "vehicle"],
+    "keywords": [
+      "indicator",
+      "turn",
+      "signal",
+      "blinker",
+      "tick",
+      "relay",
+      "click",
+      "vehicle"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 2000 },
-          "envelope": { "attackMs": 3, "decayMs": 25, "sustainLevel": 0.1, "sustainMs": 8, "releaseMs": 20 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 2000
+          },
+          "envelope": {
+            "attackMs": 3,
+            "decayMs": 25,
+            "sustainLevel": 0.1,
+            "sustainMs": 8,
+            "releaseMs": 20
+          },
           "gain": 0.6
         },
         {
-          "source": { "type": "noise", "color": "white" },
-          "envelope": { "attackMs": 2, "decayMs": 15, "sustainLevel": 0.2, "sustainMs": 5, "releaseMs": 20 },
-          "filter": { "type": "bandpass", "cutoffHz": 3000, "q": 2 },
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "envelope": {
+            "attackMs": 2,
+            "decayMs": 15,
+            "sustainLevel": 0.2,
+            "sustainMs": 5,
+            "releaseMs": 20
+          },
+          "filter": {
+            "type": "bandpass",
+            "cutoffHz": 3000,
+            "q": 2
+          },
           "gain": 0.5
         }
       ]
@@ -97,19 +236,53 @@
     "phrase": "seatbelt click",
     "category": "transport",
     "concept": "A short, sharp click as a seatbelt buckle latch snaps firmly into place.",
-    "keywords": ["seatbelt", "buckle", "click", "lock", "snap", "safety", "belt", "vehicle"],
+    "keywords": [
+      "seatbelt",
+      "buckle",
+      "click",
+      "lock",
+      "snap",
+      "safety",
+      "belt",
+      "vehicle"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 350 },
-          "envelope": { "attackMs": 3, "decayMs": 30, "sustainLevel": 0.15, "sustainMs": 10, "releaseMs": 25 },
-          "filter": { "type": "highpass", "cutoffHz": 50 },
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 350
+          },
+          "envelope": {
+            "attackMs": 3,
+            "decayMs": 30,
+            "sustainLevel": 0.15,
+            "sustainMs": 10,
+            "releaseMs": 25
+          },
+          "filter": {
+            "type": "highpass",
+            "cutoffHz": 50
+          },
           "gain": 0.55
         },
         {
-          "source": { "type": "noise", "color": "white" },
-          "envelope": { "attackMs": 2, "decayMs": 15, "sustainLevel": 0.2, "sustainMs": 5, "releaseMs": 20 },
-          "filter": { "type": "lowpass", "cutoffHz": 500 },
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "envelope": {
+            "attackMs": 2,
+            "decayMs": 15,
+            "sustainLevel": 0.2,
+            "sustainMs": 5,
+            "releaseMs": 20
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 500
+          },
           "gain": 0.95
         }
       ]
@@ -120,17 +293,46 @@
     "phrase": "brake squeal",
     "category": "transport",
     "concept": "A held, high, thin squeal from worn brake pads gripping the rotor tightly.",
-    "keywords": ["brake", "squeal", "pad", "screech", "friction", "rotor", "warning", "vehicle"],
+    "keywords": [
+      "brake",
+      "squeal",
+      "pad",
+      "screech",
+      "friction",
+      "rotor",
+      "warning",
+      "vehicle"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 3200 },
-          "envelope": { "attackMs": 30, "decayMs": 100, "sustainLevel": 0.5, "sustainMs": 300, "releaseMs": 150 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 3200
+          },
+          "envelope": {
+            "attackMs": 30,
+            "decayMs": 100,
+            "sustainLevel": 0.5,
+            "sustainMs": 300,
+            "releaseMs": 150
+          },
           "gain": 0.35
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 3215 },
-          "envelope": { "attackMs": 30, "decayMs": 100, "sustainLevel": 0.5, "sustainMs": 300, "releaseMs": 150 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 3215
+          },
+          "envelope": {
+            "attackMs": 30,
+            "decayMs": 100,
+            "sustainLevel": 0.5,
+            "sustainMs": 300,
+            "releaseMs": 150
+          },
           "gain": 0.3
         }
       ]
@@ -141,18 +343,50 @@
     "phrase": "tire screech",
     "category": "transport",
     "concept": "A harsh, sustained, high noise screech as tires grip and scrape the road surface.",
-    "keywords": ["tire", "screech", "skid", "rubber", "road", "friction", "scrape", "vehicle"],
+    "keywords": [
+      "tire",
+      "screech",
+      "skid",
+      "rubber",
+      "road",
+      "friction",
+      "scrape",
+      "vehicle"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "noise", "color": "white" },
-          "envelope": { "attackMs": 50, "decayMs": 150, "sustainLevel": 0.6, "sustainMs": 500, "releaseMs": 150 },
-          "filter": { "type": "bandpass", "cutoffHz": 2500, "q": 3 },
-          "gain": 1.0
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "envelope": {
+            "attackMs": 50,
+            "decayMs": 150,
+            "sustainLevel": 0.6,
+            "sustainMs": 500,
+            "releaseMs": 150
+          },
+          "filter": {
+            "type": "bandpass",
+            "cutoffHz": 2500,
+            "q": 3
+          },
+          "gain": 1
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 2000 },
-          "envelope": { "attackMs": 50, "decayMs": 150, "sustainLevel": 0.2, "sustainMs": 500, "releaseMs": 150 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 2000
+          },
+          "envelope": {
+            "attackMs": 50,
+            "decayMs": 150,
+            "sustainLevel": 0.2,
+            "sustainMs": 500,
+            "releaseMs": 150
+          },
           "gain": 0.15
         }
       ]
@@ -163,18 +397,49 @@
     "phrase": "gear shift",
     "category": "transport",
     "concept": "A quick, sharp mechanical clunk as a gearbox shifts from one gear into another.",
-    "keywords": ["gear", "shift", "transmission", "clunk", "mechanical", "clutch", "vehicle", "change"],
+    "keywords": [
+      "gear",
+      "shift",
+      "transmission",
+      "clunk",
+      "mechanical",
+      "clutch",
+      "vehicle",
+      "change"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 350 },
-          "envelope": { "attackMs": 3, "decayMs": 30, "sustainLevel": 0.2, "sustainMs": 15, "releaseMs": 90 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 350
+          },
+          "envelope": {
+            "attackMs": 3,
+            "decayMs": 30,
+            "sustainLevel": 0.2,
+            "sustainMs": 15,
+            "releaseMs": 90
+          },
           "gain": 0.6
         },
         {
-          "source": { "type": "noise", "color": "white" },
-          "envelope": { "attackMs": 3, "decayMs": 15, "sustainLevel": 0.2, "sustainMs": 6, "releaseMs": 30 },
-          "filter": { "type": "lowpass", "cutoffHz": 1000 },
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "envelope": {
+            "attackMs": 3,
+            "decayMs": 15,
+            "sustainLevel": 0.2,
+            "sustainMs": 6,
+            "releaseMs": 30
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 1000
+          },
           "gain": 0.75
         }
       ]
@@ -185,18 +450,50 @@
     "phrase": "reverse beep",
     "category": "transport",
     "concept": "A short, sharp warning beep at a steady mid pitch for a reversing vehicle.",
-    "keywords": ["reverse", "beep", "warning", "backup", "alert", "vehicle", "signal", "truck"],
+    "keywords": [
+      "reverse",
+      "beep",
+      "warning",
+      "backup",
+      "alert",
+      "vehicle",
+      "signal",
+      "truck"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 1000 },
-          "envelope": { "attackMs": 5, "decayMs": 30, "sustainLevel": 0.5, "sustainMs": 80, "releaseMs": 30 },
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 1000
+          },
+          "envelope": {
+            "attackMs": 5,
+            "decayMs": 30,
+            "sustainLevel": 0.5,
+            "sustainMs": 80,
+            "releaseMs": 30
+          },
           "gain": 0.55
         },
         {
-          "source": { "type": "oscillator", "wave": "square", "freqHz": 1000 },
-          "envelope": { "attackMs": 5, "decayMs": 30, "sustainLevel": 0.3, "sustainMs": 80, "releaseMs": 30 },
-          "filter": { "type": "lowpass", "cutoffHz": 1500 },
+          "source": {
+            "type": "oscillator",
+            "wave": "square",
+            "freqHz": 1000
+          },
+          "envelope": {
+            "attackMs": 5,
+            "decayMs": 30,
+            "sustainLevel": 0.3,
+            "sustainMs": 80,
+            "releaseMs": 30
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 1500
+          },
           "gain": 0.15
         }
       ]
@@ -207,12 +504,35 @@
     "phrase": "parking sensor",
     "category": "transport",
     "concept": "A very short, sharp, bright proximity beep, rising in pitch as the gap closes.",
-    "keywords": ["parking", "sensor", "proximity", "beep", "distance", "alert", "warning", "vehicle"],
+    "keywords": [
+      "parking",
+      "sensor",
+      "proximity",
+      "beep",
+      "distance",
+      "alert",
+      "warning",
+      "vehicle"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1500, "pitchEnvelope": { "toHz": 2600, "timeMs": 90 } },
-          "envelope": { "attackMs": 3, "decayMs": 35, "sustainLevel": 0.3, "sustainMs": 20, "releaseMs": 35 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 1500,
+            "pitchEnvelope": {
+              "toHz": 2600,
+              "timeMs": 90
+            }
+          },
+          "envelope": {
+            "attackMs": 3,
+            "decayMs": 35,
+            "sustainLevel": 0.3,
+            "sustainMs": 20,
+            "releaseMs": 35
+          },
           "gain": 0.5
         }
       ]
@@ -223,17 +543,54 @@
     "phrase": "ev whine",
     "category": "transport",
     "concept": "A smooth, rising electric motor whine as an electric vehicle accelerates from a stop.",
-    "keywords": ["ev", "electric", "motor", "whine", "vehicle", "acceleration", "hum", "drive"],
+    "keywords": [
+      "ev",
+      "electric",
+      "motor",
+      "whine",
+      "vehicle",
+      "acceleration",
+      "hum",
+      "drive"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 300, "pitchEnvelope": { "toHz": 900, "timeMs": 600 } },
-          "envelope": { "attackMs": 80, "decayMs": 150, "sustainLevel": 0.4, "sustainMs": 250, "releaseMs": 150 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 300,
+            "pitchEnvelope": {
+              "toHz": 900,
+              "timeMs": 600
+            }
+          },
+          "envelope": {
+            "attackMs": 80,
+            "decayMs": 150,
+            "sustainLevel": 0.4,
+            "sustainMs": 250,
+            "releaseMs": 150
+          },
           "gain": 0.45
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 450, "pitchEnvelope": { "toHz": 1350, "timeMs": 600 } },
-          "envelope": { "attackMs": 80, "decayMs": 150, "sustainLevel": 0.4, "sustainMs": 250, "releaseMs": 150 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 450,
+            "pitchEnvelope": {
+              "toHz": 1350,
+              "timeMs": 600
+            }
+          },
+          "envelope": {
+            "attackMs": 80,
+            "decayMs": 150,
+            "sustainLevel": 0.4,
+            "sustainMs": 250,
+            "releaseMs": 150
+          },
           "gain": 0.25
         }
       ]
@@ -244,18 +601,49 @@
     "phrase": "fuel pump",
     "category": "transport",
     "concept": "A steady mechanical pump hum with a subtle rhythmic textured pulse underneath.",
-    "keywords": ["fuel", "pump", "gas", "station", "hum", "mechanical", "refuel", "vehicle"],
+    "keywords": [
+      "fuel",
+      "pump",
+      "gas",
+      "station",
+      "hum",
+      "mechanical",
+      "refuel",
+      "vehicle"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 180 },
-          "envelope": { "attackMs": 60, "decayMs": 100, "sustainLevel": 0.5, "sustainMs": 250, "releaseMs": 90 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 180
+          },
+          "envelope": {
+            "attackMs": 60,
+            "decayMs": 100,
+            "sustainLevel": 0.5,
+            "sustainMs": 250,
+            "releaseMs": 90
+          },
           "gain": 0.5
         },
         {
-          "source": { "type": "noise", "color": "white" },
-          "envelope": { "attackMs": 60, "decayMs": 100, "sustainLevel": 0.3, "sustainMs": 250, "releaseMs": 90 },
-          "filter": { "type": "lowpass", "cutoffHz": 400 },
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "envelope": {
+            "attackMs": 60,
+            "decayMs": 100,
+            "sustainLevel": 0.3,
+            "sustainMs": 250,
+            "releaseMs": 90
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 400
+          },
           "gain": 0.65
         }
       ]
@@ -266,18 +654,49 @@
     "phrase": "train approach",
     "category": "transport",
     "concept": "A long, sustained, low rumble that grows as a train approaches from a distance.",
-    "keywords": ["train", "approach", "rumble", "distant", "railway", "arrival", "low", "vehicle"],
+    "keywords": [
+      "train",
+      "approach",
+      "rumble",
+      "distant",
+      "railway",
+      "arrival",
+      "low",
+      "vehicle"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 80 },
-          "envelope": { "attackMs": 300, "decayMs": 200, "sustainLevel": 0.5, "sustainMs": 300, "releaseMs": 200 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 80
+          },
+          "envelope": {
+            "attackMs": 300,
+            "decayMs": 200,
+            "sustainLevel": 0.5,
+            "sustainMs": 300,
+            "releaseMs": 200
+          },
           "gain": 0.5
         },
         {
-          "source": { "type": "noise", "color": "white" },
-          "envelope": { "attackMs": 300, "decayMs": 200, "sustainLevel": 0.3, "sustainMs": 300, "releaseMs": 200 },
-          "filter": { "type": "lowpass", "cutoffHz": 200 },
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "envelope": {
+            "attackMs": 300,
+            "decayMs": 200,
+            "sustainLevel": 0.3,
+            "sustainMs": 300,
+            "releaseMs": 200
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 200
+          },
           "gain": 0.7
         }
       ]
@@ -288,19 +707,54 @@
     "phrase": "train horn",
     "category": "transport",
     "concept": "A held, sustained, deep two-tone train horn blast, powerful and unbroken.",
-    "keywords": ["train", "horn", "blast", "warning", "railway", "deep", "alert", "vehicle"],
+    "keywords": [
+      "train",
+      "horn",
+      "blast",
+      "warning",
+      "railway",
+      "deep",
+      "alert",
+      "vehicle"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 300 },
-          "envelope": { "attackMs": 50, "decayMs": 150, "sustainLevel": 0.6, "sustainMs": 500, "releaseMs": 200 },
-          "filter": { "type": "lowpass", "cutoffHz": 700 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 300
+          },
+          "envelope": {
+            "attackMs": 50,
+            "decayMs": 150,
+            "sustainLevel": 0.6,
+            "sustainMs": 500,
+            "releaseMs": 200
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 700
+          },
           "gain": 0.34
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 380 },
-          "envelope": { "attackMs": 50, "decayMs": 150, "sustainLevel": 0.6, "sustainMs": 500, "releaseMs": 200 },
-          "filter": { "type": "lowpass", "cutoffHz": 700 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 380
+          },
+          "envelope": {
+            "attackMs": 50,
+            "decayMs": 150,
+            "sustainLevel": 0.6,
+            "sustainMs": 500,
+            "releaseMs": 200
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 700
+          },
           "gain": 0.29
         }
       ]
@@ -311,18 +765,50 @@
     "phrase": "rail clack",
     "category": "transport",
     "concept": "A very short, sharp, bright metallic clack as a train wheel crosses a rail joint.",
-    "keywords": ["rail", "clack", "train", "joint", "metallic", "wheel", "track", "click"],
+    "keywords": [
+      "rail",
+      "clack",
+      "train",
+      "joint",
+      "metallic",
+      "wheel",
+      "track",
+      "click"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1800 },
-          "envelope": { "attackMs": 1, "decayMs": 35, "sustainLevel": 0.15, "sustainMs": 10, "releaseMs": 30 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 1800
+          },
+          "envelope": {
+            "attackMs": 1,
+            "decayMs": 35,
+            "sustainLevel": 0.15,
+            "sustainMs": 10,
+            "releaseMs": 30
+          },
           "gain": 0.55
         },
         {
-          "source": { "type": "noise", "color": "white" },
-          "envelope": { "attackMs": 1, "decayMs": 15, "sustainLevel": 0.2, "sustainMs": 6, "releaseMs": 20 },
-          "filter": { "type": "bandpass", "cutoffHz": 3500, "q": 2 },
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "envelope": {
+            "attackMs": 1,
+            "decayMs": 15,
+            "sustainLevel": 0.2,
+            "sustainMs": 6,
+            "releaseMs": 20
+          },
+          "filter": {
+            "type": "bandpass",
+            "cutoffHz": 3500,
+            "q": 2
+          },
           "gain": 0.3
         }
       ]
@@ -333,17 +819,50 @@
     "phrase": "station chime",
     "category": "transport",
     "concept": "A soft, gentle, rising two-note chime announcing a train station arrival.",
-    "keywords": ["station", "chime", "arrival", "announcement", "bell", "notification", "platform", "train"],
+    "keywords": [
+      "station",
+      "chime",
+      "arrival",
+      "announcement",
+      "bell",
+      "notification",
+      "platform",
+      "train"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 600, "pitchEnvelope": { "toHz": 900, "timeMs": 250 } },
-          "envelope": { "attackMs": 35, "decayMs": 80, "sustainLevel": 0.4, "sustainMs": 100, "releaseMs": 90 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 600,
+            "pitchEnvelope": {
+              "toHz": 900,
+              "timeMs": 250
+            }
+          },
+          "envelope": {
+            "attackMs": 35,
+            "decayMs": 80,
+            "sustainLevel": 0.4,
+            "sustainMs": 100,
+            "releaseMs": 90
+          },
           "gain": 0.45
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 900 },
-          "envelope": { "attackMs": 35, "decayMs": 70, "sustainLevel": 0.3, "sustainMs": 90, "releaseMs": 80 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 900
+          },
+          "envelope": {
+            "attackMs": 35,
+            "decayMs": 70,
+            "sustainLevel": 0.3,
+            "sustainMs": 90,
+            "releaseMs": 80
+          },
           "gain": 0.3
         }
       ]
@@ -354,18 +873,49 @@
     "phrase": "doors closing",
     "category": "transport",
     "concept": "A soft, gentle whoosh and thunk as train doors slide together and shut.",
-    "keywords": ["door", "close", "shut", "slide", "train", "elevator", "whoosh", "vehicle"],
+    "keywords": [
+      "door",
+      "close",
+      "shut",
+      "slide",
+      "train",
+      "elevator",
+      "whoosh",
+      "vehicle"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "noise", "color": "white" },
-          "envelope": { "attackMs": 40, "decayMs": 120, "sustainLevel": 0.35, "sustainMs": 150, "releaseMs": 90 },
-          "filter": { "type": "lowpass", "cutoffHz": 900 },
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "envelope": {
+            "attackMs": 40,
+            "decayMs": 120,
+            "sustainLevel": 0.35,
+            "sustainMs": 150,
+            "releaseMs": 90
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 900
+          },
           "gain": 0.85
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 220 },
-          "envelope": { "attackMs": 40, "decayMs": 100, "sustainLevel": 0.3, "sustainMs": 120, "releaseMs": 80 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 220
+          },
+          "envelope": {
+            "attackMs": 40,
+            "decayMs": 100,
+            "sustainLevel": 0.3,
+            "sustainMs": 120,
+            "releaseMs": 80
+          },
           "gain": 0.4
         }
       ]
@@ -376,17 +926,50 @@
     "phrase": "platform announcement",
     "category": "transport",
     "concept": "A soft, gentle, falling two-tone chime cueing a platform announcement message.",
-    "keywords": ["platform", "announcement", "chime", "station", "message", "ding", "train", "notification"],
+    "keywords": [
+      "platform",
+      "announcement",
+      "chime",
+      "station",
+      "message",
+      "ding",
+      "train",
+      "notification"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 900, "pitchEnvelope": { "toHz": 600, "timeMs": 280 } },
-          "envelope": { "attackMs": 40, "decayMs": 90, "sustainLevel": 0.4, "sustainMs": 120, "releaseMs": 100 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 900,
+            "pitchEnvelope": {
+              "toHz": 600,
+              "timeMs": 280
+            }
+          },
+          "envelope": {
+            "attackMs": 40,
+            "decayMs": 90,
+            "sustainLevel": 0.4,
+            "sustainMs": 120,
+            "releaseMs": 100
+          },
           "gain": 0.45
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 650 },
-          "envelope": { "attackMs": 40, "decayMs": 80, "sustainLevel": 0.3, "sustainMs": 100, "releaseMs": 90 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 650
+          },
+          "envelope": {
+            "attackMs": 40,
+            "decayMs": 80,
+            "sustainLevel": 0.3,
+            "sustainMs": 100,
+            "releaseMs": 90
+          },
           "gain": 0.28
         }
       ]
@@ -397,17 +980,46 @@
     "phrase": "tram bell",
     "category": "transport",
     "concept": "A bright, ringing bell tone with a long, sustained decay for a tram signal.",
-    "keywords": ["tram", "bell", "ring", "chime", "signal", "trolley", "vehicle", "warning"],
+    "keywords": [
+      "tram",
+      "bell",
+      "ring",
+      "chime",
+      "signal",
+      "trolley",
+      "vehicle",
+      "warning"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1900 },
-          "envelope": { "attackMs": 5, "decayMs": 300, "sustainLevel": 0.15, "sustainMs": 200, "releaseMs": 400 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 1900
+          },
+          "envelope": {
+            "attackMs": 5,
+            "decayMs": 300,
+            "sustainLevel": 0.15,
+            "sustainMs": 200,
+            "releaseMs": 400
+          },
           "gain": 0.4
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 2450 },
-          "envelope": { "attackMs": 5, "decayMs": 250, "sustainLevel": 0.1, "sustainMs": 150, "releaseMs": 350 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 2450
+          },
+          "envelope": {
+            "attackMs": 5,
+            "decayMs": 250,
+            "sustainLevel": 0.1,
+            "sustainMs": 150,
+            "releaseMs": 350
+          },
           "gain": 0.3
         }
       ]
@@ -418,18 +1030,54 @@
     "phrase": "subway brake",
     "category": "transport",
     "concept": "A long, sustained, falling metallic screech as a subway train grinds to a stop.",
-    "keywords": ["subway", "brake", "screech", "stop", "train", "grind", "metro", "metallic"],
+    "keywords": [
+      "subway",
+      "brake",
+      "screech",
+      "stop",
+      "train",
+      "grind",
+      "metro",
+      "metallic"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1400, "pitchEnvelope": { "toHz": 600, "timeMs": 800 } },
-          "envelope": { "attackMs": 60, "decayMs": 200, "sustainLevel": 0.4, "sustainMs": 400, "releaseMs": 200 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 1400,
+            "pitchEnvelope": {
+              "toHz": 600,
+              "timeMs": 800
+            }
+          },
+          "envelope": {
+            "attackMs": 60,
+            "decayMs": 200,
+            "sustainLevel": 0.4,
+            "sustainMs": 400,
+            "releaseMs": 200
+          },
           "gain": 0.35
         },
         {
-          "source": { "type": "noise", "color": "white" },
-          "envelope": { "attackMs": 60, "decayMs": 200, "sustainLevel": 0.15, "sustainMs": 400, "releaseMs": 200 },
-          "filter": { "type": "bandpass", "cutoffHz": 2000, "q": 2 },
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "envelope": {
+            "attackMs": 60,
+            "decayMs": 200,
+            "sustainLevel": 0.15,
+            "sustainMs": 400,
+            "releaseMs": 200
+          },
+          "filter": {
+            "type": "bandpass",
+            "cutoffHz": 2000,
+            "q": 2
+          },
           "gain": 0.15
         }
       ]

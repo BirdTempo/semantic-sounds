@@ -4,18 +4,54 @@
     "phrase": "plane takeoff",
     "category": "transport",
     "concept": "A long, sustained rising roar of a plane engine powering up for takeoff.",
-    "keywords": ["plane", "takeoff", "airplane", "engine", "roar", "ascend", "aircraft"],
+    "keywords": [
+      "plane",
+      "takeoff",
+      "airplane",
+      "engine",
+      "roar",
+      "ascend",
+      "aircraft",
+      "take off",
+      "taking off"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 140, "pitchEnvelope": { "toHz": 260, "timeMs": 900 } },
-          "envelope": { "attackMs": 250, "decayMs": 200, "sustainLevel": 0.55, "sustainMs": 550, "releaseMs": 250 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 140,
+            "pitchEnvelope": {
+              "toHz": 260,
+              "timeMs": 900
+            }
+          },
+          "envelope": {
+            "attackMs": 250,
+            "decayMs": 200,
+            "sustainLevel": 0.55,
+            "sustainMs": 550,
+            "releaseMs": 250
+          },
           "gain": 0.47
         },
         {
-          "source": { "type": "noise", "color": "pink" },
-          "envelope": { "attackMs": 250, "decayMs": 200, "sustainLevel": 0.4, "sustainMs": 550, "releaseMs": 250 },
-          "filter": { "type": "lowpass", "cutoffHz": 700 },
+          "source": {
+            "type": "noise",
+            "color": "pink"
+          },
+          "envelope": {
+            "attackMs": 250,
+            "decayMs": 200,
+            "sustainLevel": 0.4,
+            "sustainMs": 550,
+            "releaseMs": 250
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 700
+          },
           "gain": 0.15
         }
       ]
@@ -26,18 +62,52 @@
     "phrase": "plane landing",
     "category": "transport",
     "concept": "A long, sustained falling hum of a plane engine descending as it lands.",
-    "keywords": ["plane", "landing", "airplane", "engine", "descend", "aircraft", "touchdown"],
+    "keywords": [
+      "plane",
+      "landing",
+      "airplane",
+      "engine",
+      "descend",
+      "aircraft",
+      "touchdown"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 260, "pitchEnvelope": { "toHz": 140, "timeMs": 900 } },
-          "envelope": { "attackMs": 250, "decayMs": 200, "sustainLevel": 0.55, "sustainMs": 550, "releaseMs": 250 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 260,
+            "pitchEnvelope": {
+              "toHz": 140,
+              "timeMs": 900
+            }
+          },
+          "envelope": {
+            "attackMs": 250,
+            "decayMs": 200,
+            "sustainLevel": 0.55,
+            "sustainMs": 550,
+            "releaseMs": 250
+          },
           "gain": 0.47
         },
         {
-          "source": { "type": "noise", "color": "pink" },
-          "envelope": { "attackMs": 250, "decayMs": 200, "sustainLevel": 0.4, "sustainMs": 550, "releaseMs": 250 },
-          "filter": { "type": "lowpass", "cutoffHz": 700 },
+          "source": {
+            "type": "noise",
+            "color": "pink"
+          },
+          "envelope": {
+            "attackMs": 250,
+            "decayMs": 200,
+            "sustainLevel": 0.4,
+            "sustainMs": 550,
+            "releaseMs": 250
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 700
+          },
           "gain": 0.15
         }
       ]
@@ -48,17 +118,49 @@
     "phrase": "cabin chime",
     "category": "transport",
     "concept": "A soft, gentle chime with a brief rising lift announcing the airplane cabin sign.",
-    "keywords": ["cabin", "chime", "announcement", "cue", "aircraft", "alert", "bell"],
+    "keywords": [
+      "cabin",
+      "chime",
+      "announcement",
+      "cue",
+      "aircraft",
+      "alert",
+      "bell"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 700, "timeMs": 150 } },
-          "envelope": { "attackMs": 30, "decayMs": 60, "sustainLevel": 0.3, "sustainMs": 80, "releaseMs": 80 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 500,
+            "pitchEnvelope": {
+              "toHz": 700,
+              "timeMs": 150
+            }
+          },
+          "envelope": {
+            "attackMs": 30,
+            "decayMs": 60,
+            "sustainLevel": 0.3,
+            "sustainMs": 80,
+            "releaseMs": 80
+          },
           "gain": 0.55
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 750 },
-          "envelope": { "attackMs": 30, "decayMs": 60, "sustainLevel": 0.25, "sustainMs": 80, "releaseMs": 80 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 750
+          },
+          "envelope": {
+            "attackMs": 30,
+            "decayMs": 60,
+            "sustainLevel": 0.25,
+            "sustainMs": 80,
+            "releaseMs": 80
+          },
           "gain": 0.3
         }
       ]
@@ -69,17 +171,45 @@
     "phrase": "seatbelt sign",
     "category": "transport",
     "concept": "A quick, gentle two-tone ding alerting passengers to fasten the seatbelt.",
-    "keywords": ["seatbelt", "sign", "ding", "alert", "fasten", "cabin", "notice"],
+    "keywords": [
+      "seatbelt",
+      "sign",
+      "ding",
+      "alert",
+      "fasten",
+      "cabin",
+      "notice"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 750 },
-          "envelope": { "attackMs": 20, "decayMs": 50, "sustainLevel": 0.3, "sustainMs": 50, "releaseMs": 60 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 750
+          },
+          "envelope": {
+            "attackMs": 20,
+            "decayMs": 50,
+            "sustainLevel": 0.3,
+            "sustainMs": 50,
+            "releaseMs": 60
+          },
           "gain": 0.5
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1000 },
-          "envelope": { "attackMs": 20, "decayMs": 50, "sustainLevel": 0.25, "sustainMs": 50, "releaseMs": 60 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 1000
+          },
+          "envelope": {
+            "attackMs": 20,
+            "decayMs": 50,
+            "sustainLevel": 0.25,
+            "sustainMs": 50,
+            "releaseMs": 60
+          },
           "gain": 0.3
         }
       ]
@@ -90,18 +220,48 @@
     "phrase": "jet engine",
     "category": "transport",
     "concept": "A long, sustained, dark engine drone rumbling steadily beneath the plane.",
-    "keywords": ["jet", "engine", "drone", "roar", "turbine", "aircraft", "hum"],
+    "keywords": [
+      "jet",
+      "engine",
+      "drone",
+      "roar",
+      "turbine",
+      "aircraft",
+      "hum"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 100 },
-          "envelope": { "attackMs": 200, "decayMs": 150, "sustainLevel": 0.5, "sustainMs": 550, "releaseMs": 250 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 100
+          },
+          "envelope": {
+            "attackMs": 200,
+            "decayMs": 150,
+            "sustainLevel": 0.5,
+            "sustainMs": 550,
+            "releaseMs": 250
+          },
           "gain": 0.4
         },
         {
-          "source": { "type": "noise", "color": "pink" },
-          "envelope": { "attackMs": 200, "decayMs": 150, "sustainLevel": 0.6, "sustainMs": 550, "releaseMs": 250 },
-          "filter": { "type": "lowpass", "cutoffHz": 300 },
+          "source": {
+            "type": "noise",
+            "color": "pink"
+          },
+          "envelope": {
+            "attackMs": 200,
+            "decayMs": 150,
+            "sustainLevel": 0.6,
+            "sustainMs": 550,
+            "releaseMs": 250
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 300
+          },
           "gain": 0.85
         }
       ]
@@ -112,17 +272,45 @@
     "phrase": "propeller",
     "category": "transport",
     "concept": "A steady, buzzing propeller whir with two closely tuned tones beating together.",
-    "keywords": ["propeller", "whir", "buzz", "blade", "spin", "aircraft", "engine"],
+    "keywords": [
+      "propeller",
+      "whir",
+      "buzz",
+      "blade",
+      "spin",
+      "aircraft",
+      "engine"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 300 },
-          "envelope": { "attackMs": 40, "decayMs": 100, "sustainLevel": 0.5, "sustainMs": 250, "releaseMs": 90 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 300
+          },
+          "envelope": {
+            "attackMs": 40,
+            "decayMs": 100,
+            "sustainLevel": 0.5,
+            "sustainMs": 250,
+            "releaseMs": 90
+          },
           "gain": 0.36
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 312 },
-          "envelope": { "attackMs": 40, "decayMs": 100, "sustainLevel": 0.5, "sustainMs": 250, "releaseMs": 90 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 312
+          },
+          "envelope": {
+            "attackMs": 40,
+            "decayMs": 100,
+            "sustainLevel": 0.5,
+            "sustainMs": 250,
+            "releaseMs": 90
+          },
           "gain": 0.36
         }
       ]
@@ -133,18 +321,51 @@
     "phrase": "helicopter",
     "category": "transport",
     "concept": "A percussive rotor thump with a sharp attack and a low wobbling tone beneath it.",
-    "keywords": ["helicopter", "rotor", "chop", "thump", "blade", "aircraft"],
+    "keywords": [
+      "helicopter",
+      "rotor",
+      "chop",
+      "thump",
+      "blade",
+      "aircraft"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "noise", "color": "white" },
-          "envelope": { "attackMs": 2, "decayMs": 30, "sustainLevel": 0.3, "sustainMs": 40, "releaseMs": 50 },
-          "filter": { "type": "lowpass", "cutoffHz": 800 },
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "envelope": {
+            "attackMs": 2,
+            "decayMs": 30,
+            "sustainLevel": 0.3,
+            "sustainMs": 40,
+            "releaseMs": 50
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 800
+          },
           "gain": 0.75
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 130, "pitchEnvelope": { "toHz": 110, "timeMs": 300 } },
-          "envelope": { "attackMs": 5, "decayMs": 80, "sustainLevel": 0.4, "sustainMs": 150, "releaseMs": 90 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 130,
+            "pitchEnvelope": {
+              "toHz": 110,
+              "timeMs": 300
+            }
+          },
+          "envelope": {
+            "attackMs": 5,
+            "decayMs": 80,
+            "sustainLevel": 0.4,
+            "sustainMs": 150,
+            "releaseMs": 90
+          },
           "gain": 0.4
         }
       ]
@@ -155,12 +376,30 @@
     "phrase": "boat horn",
     "category": "transport",
     "concept": "A long, sustained, low, warm horn blast typical of a boat approaching harbor.",
-    "keywords": ["boat", "horn", "blast", "harbor", "vessel", "signal", "ship"],
+    "keywords": [
+      "boat",
+      "horn",
+      "blast",
+      "harbor",
+      "vessel",
+      "signal",
+      "ship"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 180 },
-          "envelope": { "attackMs": 150, "decayMs": 150, "sustainLevel": 0.6, "sustainMs": 550, "releaseMs": 250 },
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 180
+          },
+          "envelope": {
+            "attackMs": 150,
+            "decayMs": 150,
+            "sustainLevel": 0.6,
+            "sustainMs": 550,
+            "releaseMs": 250
+          },
           "gain": 0.55
         }
       ]
@@ -171,19 +410,51 @@
     "phrase": "sail flap",
     "category": "transport",
     "concept": "A quick, sharp flap of a sail snapping in a gust of wind.",
-    "keywords": ["sail", "flap", "snap", "fabric", "wind", "gust", "boat"],
+    "keywords": [
+      "sail",
+      "flap",
+      "snap",
+      "fabric",
+      "wind",
+      "gust",
+      "boat"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "noise", "color": "white" },
-          "envelope": { "attackMs": 3, "decayMs": 20, "sustainLevel": 0.2, "sustainMs": 8, "releaseMs": 20 },
-          "filter": { "type": "highpass", "cutoffHz": 3500 },
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "envelope": {
+            "attackMs": 3,
+            "decayMs": 20,
+            "sustainLevel": 0.2,
+            "sustainMs": 8,
+            "releaseMs": 20
+          },
+          "filter": {
+            "type": "highpass",
+            "cutoffHz": 3500
+          },
           "gain": 0.8
         },
         {
-          "source": { "type": "noise", "color": "white" },
-          "envelope": { "attackMs": 5, "decayMs": 30, "sustainLevel": 0.3, "sustainMs": 30, "releaseMs": 40 },
-          "filter": { "type": "lowpass", "cutoffHz": 1200 },
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "envelope": {
+            "attackMs": 5,
+            "decayMs": 30,
+            "sustainLevel": 0.3,
+            "sustainMs": 30,
+            "releaseMs": 40
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 1200
+          },
           "gain": 0.4
         }
       ]
@@ -194,18 +465,48 @@
     "phrase": "oar splash",
     "category": "transport",
     "concept": "A quick, sharp splash burst as an oar dips into the water.",
-    "keywords": ["oar", "splash", "dip", "paddle", "water", "boat", "row"],
+    "keywords": [
+      "oar",
+      "splash",
+      "dip",
+      "paddle",
+      "water",
+      "boat",
+      "row"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "noise", "color": "white" },
-          "envelope": { "attackMs": 3, "decayMs": 18, "sustainLevel": 0.5, "sustainMs": 10, "releaseMs": 20 },
-          "filter": { "type": "lowpass", "cutoffHz": 2600 },
-          "gain": 1.0
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "envelope": {
+            "attackMs": 3,
+            "decayMs": 18,
+            "sustainLevel": 0.5,
+            "sustainMs": 10,
+            "releaseMs": 20
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 2600
+          },
+          "gain": 1
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 300 },
-          "envelope": { "attackMs": 3, "decayMs": 30, "sustainLevel": 0.2, "sustainMs": 20, "releaseMs": 40 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 300
+          },
+          "envelope": {
+            "attackMs": 3,
+            "decayMs": 30,
+            "sustainLevel": 0.2,
+            "sustainMs": 20,
+            "releaseMs": 40
+          },
           "gain": 0.3
         }
       ]
@@ -216,18 +517,52 @@
     "phrase": "anchor drop",
     "category": "transport",
     "concept": "A heavy anchor chain dropping with a sharp clank and a falling metallic tone.",
-    "keywords": ["anchor", "drop", "chain", "clank", "metal", "boat", "release"],
+    "keywords": [
+      "anchor",
+      "drop",
+      "chain",
+      "clank",
+      "metal",
+      "boat",
+      "release"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "noise", "color": "white" },
-          "envelope": { "attackMs": 2, "decayMs": 15, "sustainLevel": 0.2, "sustainMs": 8, "releaseMs": 20 },
-          "filter": { "type": "highpass", "cutoffHz": 3000 },
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "envelope": {
+            "attackMs": 2,
+            "decayMs": 15,
+            "sustainLevel": 0.2,
+            "sustainMs": 8,
+            "releaseMs": 20
+          },
+          "filter": {
+            "type": "highpass",
+            "cutoffHz": 3000
+          },
           "gain": 0.7
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 200, "timeMs": 300 } },
-          "envelope": { "attackMs": 5, "decayMs": 100, "sustainLevel": 0.3, "sustainMs": 150, "releaseMs": 100 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 500,
+            "pitchEnvelope": {
+              "toHz": 200,
+              "timeMs": 300
+            }
+          },
+          "envelope": {
+            "attackMs": 5,
+            "decayMs": 100,
+            "sustainLevel": 0.3,
+            "sustainMs": 150,
+            "releaseMs": 100
+          },
           "gain": 0.5
         }
       ]
@@ -238,17 +573,45 @@
     "phrase": "bike bell",
     "category": "transport",
     "concept": "A bright, sharp bell ring that decays swiftly to a clear ping.",
-    "keywords": ["bike", "bell", "ring", "ping", "bicycle", "chime", "alert"],
+    "keywords": [
+      "bike",
+      "bell",
+      "ring",
+      "ping",
+      "bicycle",
+      "chime",
+      "alert"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1300 },
-          "envelope": { "attackMs": 2, "decayMs": 80, "sustainLevel": 0.2, "sustainMs": 60, "releaseMs": 100 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 1300
+          },
+          "envelope": {
+            "attackMs": 2,
+            "decayMs": 80,
+            "sustainLevel": 0.2,
+            "sustainMs": 60,
+            "releaseMs": 100
+          },
           "gain": 0.5
         },
         {
-          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 2000 },
-          "envelope": { "attackMs": 2, "decayMs": 50, "sustainLevel": 0.15, "sustainMs": 30, "releaseMs": 60 },
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 2000
+          },
+          "envelope": {
+            "attackMs": 2,
+            "decayMs": 50,
+            "sustainLevel": 0.15,
+            "sustainMs": 30,
+            "releaseMs": 60
+          },
           "gain": 0.3
         }
       ]
@@ -259,13 +622,31 @@
     "phrase": "bike gear",
     "category": "transport",
     "concept": "A quick, sharp mechanical click of a bike gear shifting into place.",
-    "keywords": ["bike", "gear", "shift", "click", "bicycle", "mechanism"],
+    "keywords": [
+      "bike",
+      "gear",
+      "click",
+      "bicycle",
+      "mechanism"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "noise", "color": "white" },
-          "envelope": { "attackMs": 2, "decayMs": 15, "sustainLevel": 0.2, "sustainMs": 5, "releaseMs": 15 },
-          "filter": { "type": "highpass", "cutoffHz": 4000 },
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "envelope": {
+            "attackMs": 2,
+            "decayMs": 15,
+            "sustainLevel": 0.2,
+            "sustainMs": 5,
+            "releaseMs": 15
+          },
+          "filter": {
+            "type": "highpass",
+            "cutoffHz": 4000
+          },
           "gain": 0.75
         }
       ]
@@ -276,19 +657,50 @@
     "phrase": "skateboard",
     "category": "transport",
     "concept": "A rolling skateboard rumble over pavement built from filtered rough noise texture.",
-    "keywords": ["skateboard", "roll", "rumble", "wheel", "pavement", "ride"],
+    "keywords": [
+      "skateboard",
+      "roll",
+      "rumble",
+      "wheel",
+      "pavement",
+      "ride"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "noise", "color": "white" },
-          "envelope": { "attackMs": 80, "decayMs": 100, "sustainLevel": 0.9, "sustainMs": 300, "releaseMs": 120 },
-          "filter": { "type": "lowpass", "cutoffHz": 900 },
-          "gain": 1.0
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "envelope": {
+            "attackMs": 80,
+            "decayMs": 100,
+            "sustainLevel": 0.9,
+            "sustainMs": 300,
+            "releaseMs": 120
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 900
+          },
+          "gain": 1
         },
         {
-          "source": { "type": "noise", "color": "pink" },
-          "envelope": { "attackMs": 80, "decayMs": 100, "sustainLevel": 0.6, "sustainMs": 300, "releaseMs": 120 },
-          "filter": { "type": "lowpass", "cutoffHz": 400 },
+          "source": {
+            "type": "noise",
+            "color": "pink"
+          },
+          "envelope": {
+            "attackMs": 80,
+            "decayMs": 100,
+            "sustainLevel": 0.6,
+            "sustainMs": 300,
+            "releaseMs": 120
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 400
+          },
           "gain": 0.75
         }
       ]
@@ -299,18 +711,48 @@
     "phrase": "scooter",
     "category": "transport",
     "concept": "A buzzy scooter motor whir built from a filtered square wave texture.",
-    "keywords": ["scooter", "motor", "buzz", "whir", "engine", "ride"],
+    "keywords": [
+      "scooter",
+      "motor",
+      "buzz",
+      "whir",
+      "engine",
+      "ride"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 350 },
-          "envelope": { "attackMs": 60, "decayMs": 80, "sustainLevel": 0.5, "sustainMs": 300, "releaseMs": 100 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 350
+          },
+          "envelope": {
+            "attackMs": 60,
+            "decayMs": 80,
+            "sustainLevel": 0.5,
+            "sustainMs": 300,
+            "releaseMs": 100
+          },
           "gain": 0.33
         },
         {
-          "source": { "type": "oscillator", "wave": "square", "freqHz": 350 },
-          "envelope": { "attackMs": 60, "decayMs": 80, "sustainLevel": 0.5, "sustainMs": 300, "releaseMs": 100 },
-          "filter": { "type": "lowpass", "cutoffHz": 800 },
+          "source": {
+            "type": "oscillator",
+            "wave": "square",
+            "freqHz": 350
+          },
+          "envelope": {
+            "attackMs": 60,
+            "decayMs": 80,
+            "sustainLevel": 0.5,
+            "sustainMs": 300,
+            "releaseMs": 100
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 800
+          },
           "gain": 0.16
         }
       ]
@@ -321,17 +763,45 @@
     "phrase": "elevator arrive",
     "category": "transport",
     "concept": "A soft, gentle two-tone ding announcing the elevator has arrived.",
-    "keywords": ["elevator", "arrive", "ding", "chime", "floor", "lift", "notify"],
+    "keywords": [
+      "elevator",
+      "arrive",
+      "ding",
+      "chime",
+      "floor",
+      "lift",
+      "notify"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 700 },
-          "envelope": { "attackMs": 25, "decayMs": 50, "sustainLevel": 0.3, "sustainMs": 60, "releaseMs": 65 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 700
+          },
+          "envelope": {
+            "attackMs": 25,
+            "decayMs": 50,
+            "sustainLevel": 0.3,
+            "sustainMs": 60,
+            "releaseMs": 65
+          },
           "gain": 0.48
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 950 },
-          "envelope": { "attackMs": 25, "decayMs": 50, "sustainLevel": 0.25, "sustainMs": 60, "releaseMs": 65 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 950
+          },
+          "envelope": {
+            "attackMs": 25,
+            "decayMs": 50,
+            "sustainLevel": 0.25,
+            "sustainMs": 60,
+            "releaseMs": 65
+          },
           "gain": 0.3
         }
       ]
@@ -342,18 +812,48 @@
     "phrase": "elevator move",
     "category": "transport",
     "concept": "A long, sustained, low mechanical hum of an elevator moving between floors.",
-    "keywords": ["elevator", "move", "hum", "lift", "travel", "mechanism", "floor"],
+    "keywords": [
+      "elevator",
+      "move",
+      "hum",
+      "lift",
+      "travel",
+      "mechanism",
+      "floor"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 140 },
-          "envelope": { "attackMs": 200, "decayMs": 150, "sustainLevel": 0.55, "sustainMs": 560, "releaseMs": 250 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 140
+          },
+          "envelope": {
+            "attackMs": 200,
+            "decayMs": 150,
+            "sustainLevel": 0.55,
+            "sustainMs": 560,
+            "releaseMs": 250
+          },
           "gain": 0.45
         },
         {
-          "source": { "type": "noise", "color": "pink" },
-          "envelope": { "attackMs": 200, "decayMs": 150, "sustainLevel": 0.3, "sustainMs": 560, "releaseMs": 250 },
-          "filter": { "type": "lowpass", "cutoffHz": 300 },
+          "source": {
+            "type": "noise",
+            "color": "pink"
+          },
+          "envelope": {
+            "attackMs": 200,
+            "decayMs": 150,
+            "sustainLevel": 0.3,
+            "sustainMs": 560,
+            "releaseMs": 250
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 300
+          },
           "gain": 0.4
         }
       ]
@@ -364,18 +864,47 @@
     "phrase": "escalator",
     "category": "transport",
     "concept": "A long, sustained mechanical whirring hum of an escalator's moving steps.",
-    "keywords": ["escalator", "whir", "hum", "step", "mechanism", "mall"],
+    "keywords": [
+      "escalator",
+      "whir",
+      "hum",
+      "step",
+      "mechanism",
+      "mall"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 220 },
-          "envelope": { "attackMs": 180, "decayMs": 150, "sustainLevel": 0.5, "sustainMs": 500, "releaseMs": 220 },
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 220
+          },
+          "envelope": {
+            "attackMs": 180,
+            "decayMs": 150,
+            "sustainLevel": 0.5,
+            "sustainMs": 500,
+            "releaseMs": 220
+          },
           "gain": 0.4
         },
         {
-          "source": { "type": "noise", "color": "white" },
-          "envelope": { "attackMs": 180, "decayMs": 150, "sustainLevel": 0.45, "sustainMs": 500, "releaseMs": 220 },
-          "filter": { "type": "lowpass", "cutoffHz": 700 },
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "envelope": {
+            "attackMs": 180,
+            "decayMs": 150,
+            "sustainLevel": 0.45,
+            "sustainMs": 500,
+            "releaseMs": 220
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 700
+          },
           "gain": 0.5
         }
       ]
@@ -386,12 +915,29 @@
     "phrase": "crosswalk beep",
     "category": "transport",
     "concept": "A quick, sharp, bright beep signaling it is safe to cross the street.",
-    "keywords": ["crosswalk", "beep", "signal", "walk", "pedestrian", "cross"],
+    "keywords": [
+      "crosswalk",
+      "beep",
+      "signal",
+      "walk",
+      "pedestrian",
+      "cross"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1800 },
-          "envelope": { "attackMs": 3, "decayMs": 30, "sustainLevel": 0.3, "sustainMs": 40, "releaseMs": 40 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 1800
+          },
+          "envelope": {
+            "attackMs": 3,
+            "decayMs": 30,
+            "sustainLevel": 0.3,
+            "sustainMs": 40,
+            "releaseMs": 40
+          },
           "gain": 0.55
         }
       ]
@@ -402,12 +948,29 @@
     "phrase": "traffic light change",
     "category": "transport",
     "concept": "A short, soft chime marking the traffic light changing to walk.",
-    "keywords": ["traffic", "light", "change", "signal", "chime", "intersection"],
+    "keywords": [
+      "traffic",
+      "light",
+      "change",
+      "signal",
+      "chime",
+      "intersection"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 600 },
-          "envelope": { "attackMs": 20, "decayMs": 50, "sustainLevel": 0.25, "sustainMs": 45, "releaseMs": 65 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 600
+          },
+          "envelope": {
+            "attackMs": 20,
+            "decayMs": 50,
+            "sustainLevel": 0.25,
+            "sustainMs": 45,
+            "releaseMs": 65
+          },
           "gain": 0.6
         }
       ]

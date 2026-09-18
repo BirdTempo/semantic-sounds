@@ -4,12 +4,32 @@
     "phrase": "undo",
     "category": "ui-feedback",
     "concept": "A quick, falling swoop that steps an action back to where it was.",
-    "keywords": ["revert", "reverse", "back", "rewind", "previous"],
+    "keywords": [
+      "revert",
+      "reverse",
+      "back",
+      "rewind",
+      "previous"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 650, "pitchEnvelope": { "toHz": 450, "timeMs": 65 } },
-          "envelope": { "attackMs": 6, "decayMs": 28, "sustainLevel": 0.25, "sustainMs": 14, "releaseMs": 32 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 650,
+            "pitchEnvelope": {
+              "toHz": 450,
+              "timeMs": 65
+            }
+          },
+          "envelope": {
+            "attackMs": 6,
+            "decayMs": 28,
+            "sustainLevel": 0.25,
+            "sustainMs": 14,
+            "releaseMs": 32
+          },
           "gain": 0.6
         }
       ]
@@ -20,12 +40,33 @@
     "phrase": "redo",
     "category": "ui-feedback",
     "concept": "A quick, rising swoop that steps forward again after an undo.",
-    "keywords": ["repeat", "forward", "reapply", "again", "restore", "replay"],
+    "keywords": [
+      "repeat",
+      "forward",
+      "reapply",
+      "again",
+      "restore",
+      "replay"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 450, "pitchEnvelope": { "toHz": 650, "timeMs": 65 } },
-          "envelope": { "attackMs": 6, "decayMs": 28, "sustainLevel": 0.25, "sustainMs": 14, "releaseMs": 32 },
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 450,
+            "pitchEnvelope": {
+              "toHz": 650,
+              "timeMs": 65
+            }
+          },
+          "envelope": {
+            "attackMs": 6,
+            "decayMs": 28,
+            "sustainLevel": 0.25,
+            "sustainMs": 14,
+            "releaseMs": 32
+          },
           "gain": 0.6
         }
       ]
@@ -36,17 +77,43 @@
     "phrase": "copy",
     "category": "ui-feedback",
     "concept": "Two short pulses at the same pitch, echoing a copy action to the clipboard.",
-    "keywords": ["duplicate", "clipboard", "clone", "replicate", "mirror"],
+    "keywords": [
+      "duplicate",
+      "clipboard",
+      "clone",
+      "replicate",
+      "mirror"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 550 },
-          "envelope": { "attackMs": 3, "decayMs": 25, "sustainLevel": 0, "sustainMs": 0, "releaseMs": 12 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 550
+          },
+          "envelope": {
+            "attackMs": 3,
+            "decayMs": 25,
+            "sustainLevel": 0,
+            "sustainMs": 0,
+            "releaseMs": 12
+          },
           "gain": 0.5
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 550 },
-          "envelope": { "attackMs": 45, "decayMs": 20, "sustainLevel": 0.25, "sustainMs": 20, "releaseMs": 25 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 550
+          },
+          "envelope": {
+            "attackMs": 45,
+            "decayMs": 20,
+            "sustainLevel": 0.25,
+            "sustainMs": 20,
+            "releaseMs": 25
+          },
           "gain": 0.4
         }
       ]
@@ -57,12 +124,32 @@
     "phrase": "paste",
     "category": "ui-feedback",
     "concept": "A soft tone that rises briefly then settles, like content landing in place.",
-    "keywords": ["insert", "clipboard", "place", "drop", "embed"],
+    "keywords": [
+      "insert",
+      "clipboard",
+      "place",
+      "drop",
+      "embed"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 620, "timeMs": 80 } },
-          "envelope": { "attackMs": 15, "decayMs": 40, "sustainLevel": 0.3, "sustainMs": 30, "releaseMs": 50 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 500,
+            "pitchEnvelope": {
+              "toHz": 620,
+              "timeMs": 80
+            }
+          },
+          "envelope": {
+            "attackMs": 15,
+            "decayMs": 40,
+            "sustainLevel": 0.3,
+            "sustainMs": 30,
+            "releaseMs": 50
+          },
           "gain": 0.55
         }
       ]
@@ -73,13 +160,31 @@
     "phrase": "cut",
     "category": "ui-feedback",
     "concept": "A sharp, bright noise transient like scissors snipping fabric.",
-    "keywords": ["snip", "trim", "remove", "scissors", "clip"],
+    "keywords": [
+      "snip",
+      "trim",
+      "remove",
+      "scissors",
+      "clip"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "noise", "color": "white" },
-          "envelope": { "attackMs": 2, "decayMs": 15, "sustainLevel": 0.2, "sustainMs": 5, "releaseMs": 15 },
-          "filter": { "type": "highpass", "cutoffHz": 4000 },
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "envelope": {
+            "attackMs": 2,
+            "decayMs": 15,
+            "sustainLevel": 0.2,
+            "sustainMs": 5,
+            "releaseMs": 15
+          },
+          "filter": {
+            "type": "highpass",
+            "cutoffHz": 4000
+          },
           "gain": 0.75
         }
       ]
@@ -90,12 +195,33 @@
     "phrase": "save",
     "category": "ui-feedback",
     "concept": "A warm, soft, rising chime that settles smoothly, confirming your work is saved.",
-    "keywords": ["store", "persist", "keep", "write", "preserve", "commit"],
+    "keywords": [
+      "store",
+      "persist",
+      "keep",
+      "write",
+      "preserve",
+      "commit"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 350, "pitchEnvelope": { "toHz": 500, "timeMs": 150 } },
-          "envelope": { "attackMs": 30, "decayMs": 60, "sustainLevel": 0.35, "sustainMs": 60, "releaseMs": 80 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 350,
+            "pitchEnvelope": {
+              "toHz": 500,
+              "timeMs": 150
+            }
+          },
+          "envelope": {
+            "attackMs": 30,
+            "decayMs": 60,
+            "sustainLevel": 0.35,
+            "sustainMs": 60,
+            "releaseMs": 80
+          },
           "gain": 0.6
         }
       ]
@@ -106,18 +232,50 @@
     "phrase": "discard",
     "category": "ui-feedback",
     "concept": "A quick, falling tone that fades into a muted thud, discarding an unwanted change.",
-    "keywords": ["drop", "reject", "abandon", "trash", "ditch"],
+    "keywords": [
+      "drop",
+      "reject",
+      "abandon",
+      "trash",
+      "ditch"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 550, "pitchEnvelope": { "toHz": 320, "timeMs": 90 } },
-          "envelope": { "attackMs": 8, "decayMs": 50, "sustainLevel": 0.25, "sustainMs": 30, "releaseMs": 50 },
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 550,
+            "pitchEnvelope": {
+              "toHz": 320,
+              "timeMs": 90
+            }
+          },
+          "envelope": {
+            "attackMs": 8,
+            "decayMs": 50,
+            "sustainLevel": 0.25,
+            "sustainMs": 30,
+            "releaseMs": 50
+          },
           "gain": 0.5
         },
         {
-          "source": { "type": "noise", "color": "white" },
-          "envelope": { "attackMs": 3, "decayMs": 20, "sustainLevel": 0, "sustainMs": 0, "releaseMs": 10 },
-          "filter": { "type": "lowpass", "cutoffHz": 500 },
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "envelope": {
+            "attackMs": 3,
+            "decayMs": 20,
+            "sustainLevel": 0,
+            "sustainMs": 0,
+            "releaseMs": 10
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 500
+          },
           "gain": 0.15
         }
       ]
@@ -128,12 +286,32 @@
     "phrase": "confirm",
     "category": "ui-feedback",
     "concept": "A firm, rising chime that settles, confirming an action was accepted.",
-    "keywords": ["accept", "approve", "yes", "proceed", "affirm"],
+    "keywords": [
+      "accept",
+      "approve",
+      "yes",
+      "proceed",
+      "affirm"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 480, "pitchEnvelope": { "toHz": 700, "timeMs": 70 } },
-          "envelope": { "attackMs": 10, "decayMs": 30, "sustainLevel": 0.3, "sustainMs": 30, "releaseMs": 40 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 480,
+            "pitchEnvelope": {
+              "toHz": 700,
+              "timeMs": 70
+            }
+          },
+          "envelope": {
+            "attackMs": 10,
+            "decayMs": 30,
+            "sustainLevel": 0.3,
+            "sustainMs": 30,
+            "releaseMs": 40
+          },
           "gain": 0.6
         }
       ]
@@ -144,12 +322,32 @@
     "phrase": "cancel",
     "category": "ui-feedback",
     "concept": "A short, falling tone that fades away, cancelling the action in progress.",
-    "keywords": ["abort", "stop", "quit", "decline", "no"],
+    "keywords": [
+      "abort",
+      "stop",
+      "quit",
+      "decline",
+      "no"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 620, "pitchEnvelope": { "toHz": 420, "timeMs": 60 } },
-          "envelope": { "attackMs": 8, "decayMs": 30, "sustainLevel": 0.2, "sustainMs": 20, "releaseMs": 40 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 620,
+            "pitchEnvelope": {
+              "toHz": 420,
+              "timeMs": 60
+            }
+          },
+          "envelope": {
+            "attackMs": 8,
+            "decayMs": 30,
+            "sustainLevel": 0.2,
+            "sustainMs": 20,
+            "releaseMs": 40
+          },
           "gain": 0.6
         }
       ]
@@ -160,18 +358,50 @@
     "phrase": "dismiss",
     "category": "ui-feedback",
     "concept": "A quick, falling tone with airy noise that fades away, dismissing a message.",
-    "keywords": ["close", "clear", "hide", "ignore", "away"],
+    "keywords": [
+      "close",
+      "clear",
+      "hide",
+      "ignore",
+      "away"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 550, "pitchEnvelope": { "toHz": 380, "timeMs": 70 } },
-          "envelope": { "attackMs": 8, "decayMs": 35, "sustainLevel": 0.2, "sustainMs": 15, "releaseMs": 35 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 550,
+            "pitchEnvelope": {
+              "toHz": 380,
+              "timeMs": 70
+            }
+          },
+          "envelope": {
+            "attackMs": 8,
+            "decayMs": 35,
+            "sustainLevel": 0.2,
+            "sustainMs": 15,
+            "releaseMs": 35
+          },
           "gain": 0.5
         },
         {
-          "source": { "type": "noise", "color": "white" },
-          "envelope": { "attackMs": 5, "decayMs": 25, "sustainLevel": 0, "sustainMs": 0, "releaseMs": 15 },
-          "filter": { "type": "lowpass", "cutoffHz": 700 },
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "envelope": {
+            "attackMs": 5,
+            "decayMs": 25,
+            "sustainLevel": 0,
+            "sustainMs": 0,
+            "releaseMs": 15
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 700
+          },
           "gain": 0.15
         }
       ]
@@ -182,17 +412,51 @@
     "phrase": "retry",
     "category": "ui-feedback",
     "concept": "Two rising pulses in quick succession, trying the action again after a retry.",
-    "keywords": ["reattempt", "again", "reload", "repeat", "restart"],
+    "keywords": [
+      "reattempt",
+      "again",
+      "reload",
+      "repeat",
+      "restart"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 450, "pitchEnvelope": { "toHz": 600, "timeMs": 40 } },
-          "envelope": { "attackMs": 4, "decayMs": 20, "sustainLevel": 0, "sustainMs": 0, "releaseMs": 12 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 450,
+            "pitchEnvelope": {
+              "toHz": 600,
+              "timeMs": 40
+            }
+          },
+          "envelope": {
+            "attackMs": 4,
+            "decayMs": 20,
+            "sustainLevel": 0,
+            "sustainMs": 0,
+            "releaseMs": 12
+          },
           "gain": 0.5
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 450, "pitchEnvelope": { "toHz": 650, "timeMs": 50 } },
-          "envelope": { "attackMs": 55, "decayMs": 25, "sustainLevel": 0.3, "sustainMs": 20, "releaseMs": 35 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 450,
+            "pitchEnvelope": {
+              "toHz": 650,
+              "timeMs": 50
+            }
+          },
+          "envelope": {
+            "attackMs": 55,
+            "decayMs": 25,
+            "sustainLevel": 0.3,
+            "sustainMs": 20,
+            "releaseMs": 35
+          },
           "gain": 0.45
         }
       ]
@@ -203,18 +467,50 @@
     "phrase": "submit",
     "category": "ui-feedback",
     "concept": "A firm, rising tone that lands solidly, submitting a completed form.",
-    "keywords": ["send", "post", "upload", "finalize", "complete"],
+    "keywords": [
+      "send",
+      "post",
+      "upload",
+      "finalize",
+      "complete"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 400, "pitchEnvelope": { "toHz": 620, "timeMs": 100 } },
-          "envelope": { "attackMs": 15, "decayMs": 45, "sustainLevel": 0.35, "sustainMs": 45, "releaseMs": 60 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 400,
+            "pitchEnvelope": {
+              "toHz": 620,
+              "timeMs": 100
+            }
+          },
+          "envelope": {
+            "attackMs": 15,
+            "decayMs": 45,
+            "sustainLevel": 0.35,
+            "sustainMs": 45,
+            "releaseMs": 60
+          },
           "gain": 0.6
         },
         {
-          "source": { "type": "noise", "color": "white" },
-          "envelope": { "attackMs": 5, "decayMs": 30, "sustainLevel": 0, "sustainMs": 0, "releaseMs": 15 },
-          "filter": { "type": "lowpass", "cutoffHz": 400 },
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "envelope": {
+            "attackMs": 5,
+            "decayMs": 30,
+            "sustainLevel": 0,
+            "sustainMs": 0,
+            "releaseMs": 15
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 400
+          },
           "gain": 0.12
         }
       ]
@@ -225,18 +521,47 @@
     "phrase": "form invalid",
     "category": "ui-feedback",
     "concept": "A sharp, dark buzz across two low tones, flagging invalid fields in a form.",
-    "keywords": ["validation", "error", "incorrect", "reject", "warning"],
+    "keywords": [
+      "validation",
+      "error",
+      "incorrect",
+      "reject",
+      "warning"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 220 },
-          "envelope": { "attackMs": 5, "decayMs": 40, "sustainLevel": 0.4, "sustainMs": 40, "releaseMs": 55 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 220
+          },
+          "envelope": {
+            "attackMs": 5,
+            "decayMs": 40,
+            "sustainLevel": 0.4,
+            "sustainMs": 40,
+            "releaseMs": 55
+          },
           "gain": 0.42
         },
         {
-          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 220 },
-          "envelope": { "attackMs": 5, "decayMs": 40, "sustainLevel": 0.4, "sustainMs": 40, "releaseMs": 55 },
-          "filter": { "type": "lowpass", "cutoffHz": 450 },
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 220
+          },
+          "envelope": {
+            "attackMs": 5,
+            "decayMs": 40,
+            "sustainLevel": 0.4,
+            "sustainMs": 40,
+            "releaseMs": 55
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 450
+          },
           "gain": 0.12
         }
       ]
@@ -247,12 +572,32 @@
     "phrase": "field valid",
     "category": "ui-feedback",
     "concept": "A quick, rising tick that confirms a single field passes validation.",
-    "keywords": ["validation", "correct", "accepted", "success", "check"],
+    "keywords": [
+      "validation",
+      "correct",
+      "accepted",
+      "success",
+      "check"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 700, "timeMs": 45 } },
-          "envelope": { "attackMs": 5, "decayMs": 20, "sustainLevel": 0.2, "sustainMs": 10, "releaseMs": 20 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 500,
+            "pitchEnvelope": {
+              "toHz": 700,
+              "timeMs": 45
+            }
+          },
+          "envelope": {
+            "attackMs": 5,
+            "decayMs": 20,
+            "sustainLevel": 0.2,
+            "sustainMs": 10,
+            "releaseMs": 20
+          },
           "gain": 0.62
         }
       ]
@@ -263,12 +608,33 @@
     "phrase": "password wrong",
     "category": "ui-feedback",
     "concept": "A sharp, dark, falling buzz that signals the password was typed wrong.",
-    "keywords": ["login", "incorrect", "authentication", "denied", "mismatch", "identity"],
+    "keywords": [
+      "login",
+      "incorrect",
+      "authentication",
+      "denied",
+      "mismatch",
+      "identity"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 300, "pitchEnvelope": { "toHz": 200, "timeMs": 80 } },
-          "envelope": { "attackMs": 5, "decayMs": 40, "sustainLevel": 0.4, "sustainMs": 30, "releaseMs": 45 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 300,
+            "pitchEnvelope": {
+              "toHz": 200,
+              "timeMs": 80
+            }
+          },
+          "envelope": {
+            "attackMs": 5,
+            "decayMs": 40,
+            "sustainLevel": 0.4,
+            "sustainMs": 30,
+            "releaseMs": 45
+          },
           "gain": 0.55
         }
       ]
@@ -279,12 +645,32 @@
     "phrase": "permission granted",
     "category": "ui-feedback",
     "concept": "A warm, soft, rising chime that lingers, granting access to a locked area.",
-    "keywords": ["access", "allowed", "unlocked", "approved", "authorized"],
+    "keywords": [
+      "access",
+      "allowed",
+      "unlocked",
+      "approved",
+      "authorized"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 380, "pitchEnvelope": { "toHz": 560, "timeMs": 180 } },
-          "envelope": { "attackMs": 60, "decayMs": 80, "sustainLevel": 0.4, "sustainMs": 100, "releaseMs": 120 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 380,
+            "pitchEnvelope": {
+              "toHz": 560,
+              "timeMs": 180
+            }
+          },
+          "envelope": {
+            "attackMs": 60,
+            "decayMs": 80,
+            "sustainLevel": 0.4,
+            "sustainMs": 100,
+            "releaseMs": 120
+          },
           "gain": 0.5
         }
       ]
@@ -295,18 +681,49 @@
     "phrase": "permission denied",
     "category": "ui-feedback",
     "concept": "A sharp, dark, falling buzz that blocks access, denying the requested permission.",
-    "keywords": ["access", "blocked", "refused", "restricted", "forbidden"],
+    "keywords": [
+      "blocked",
+      "refused",
+      "restricted",
+      "forbidden"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 280, "pitchEnvelope": { "toHz": 180, "timeMs": 70 } },
-          "envelope": { "attackMs": 4, "decayMs": 35, "sustainLevel": 0.4, "sustainMs": 25, "releaseMs": 40 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 280,
+            "pitchEnvelope": {
+              "toHz": 180,
+              "timeMs": 70
+            }
+          },
+          "envelope": {
+            "attackMs": 4,
+            "decayMs": 35,
+            "sustainLevel": 0.4,
+            "sustainMs": 25,
+            "releaseMs": 40
+          },
           "gain": 0.55
         },
         {
-          "source": { "type": "noise", "color": "white" },
-          "envelope": { "attackMs": 3, "decayMs": 30, "sustainLevel": 0, "sustainMs": 0, "releaseMs": 15 },
-          "filter": { "type": "lowpass", "cutoffHz": 350 },
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "envelope": {
+            "attackMs": 3,
+            "decayMs": 30,
+            "sustainLevel": 0,
+            "sustainMs": 0,
+            "releaseMs": 15
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 350
+          },
           "gain": 0.15
         }
       ]
@@ -317,18 +734,46 @@
     "phrase": "locked action",
     "category": "ui-feedback",
     "concept": "A low, dull, steady thud with no pitch movement, refusing a locked action.",
-    "keywords": ["restricted", "blocked", "unavailable", "protected", "secured"],
+    "keywords": [
+      "restricted",
+      "blocked",
+      "unavailable",
+      "protected",
+      "secured"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 220 },
-          "envelope": { "attackMs": 3, "decayMs": 50, "sustainLevel": 0.3, "sustainMs": 40, "releaseMs": 60 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 220
+          },
+          "envelope": {
+            "attackMs": 3,
+            "decayMs": 50,
+            "sustainLevel": 0.3,
+            "sustainMs": 40,
+            "releaseMs": 60
+          },
           "gain": 0.5
         },
         {
-          "source": { "type": "noise", "color": "white" },
-          "envelope": { "attackMs": 3, "decayMs": 35, "sustainLevel": 0, "sustainMs": 0, "releaseMs": 20 },
-          "filter": { "type": "lowpass", "cutoffHz": 300 },
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "envelope": {
+            "attackMs": 3,
+            "decayMs": 35,
+            "sustainLevel": 0,
+            "sustainMs": 0,
+            "releaseMs": 20
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 300
+          },
           "gain": 0.35
         }
       ]
@@ -339,12 +784,28 @@
     "phrase": "disabled action",
     "category": "ui-feedback",
     "concept": "A brief, flat tone with no rise or fall, marking a disabled, unusable action.",
-    "keywords": ["inactive", "unavailable", "grayed-out", "off", "unusable"],
+    "keywords": [
+      "inactive",
+      "unavailable",
+      "grayed-out",
+      "off",
+      "unusable"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 350 },
-          "envelope": { "attackMs": 4, "decayMs": 30, "sustainLevel": 0.2, "sustainMs": 15, "releaseMs": 25 },
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 350
+          },
+          "envelope": {
+            "attackMs": 4,
+            "decayMs": 30,
+            "sustainLevel": 0.2,
+            "sustainMs": 15,
+            "releaseMs": 25
+          },
           "gain": 0.6
         }
       ]
@@ -355,12 +816,28 @@
     "phrase": "empty state",
     "category": "ui-feedback",
     "concept": "A soft, sparse, sustained tone that lingers quietly, marking an empty state.",
-    "keywords": ["blank", "nothing", "void", "placeholder", "zero"],
+    "keywords": [
+      "blank",
+      "nothing",
+      "void",
+      "placeholder",
+      "zero"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 450 },
-          "envelope": { "attackMs": 150, "decayMs": 200, "sustainLevel": 0.25, "sustainMs": 300, "releaseMs": 250 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 450
+          },
+          "envelope": {
+            "attackMs": 150,
+            "decayMs": 200,
+            "sustainLevel": 0.25,
+            "sustainMs": 300,
+            "releaseMs": 250
+          },
           "gain": 0.65
         }
       ]
@@ -371,12 +848,31 @@
     "phrase": "no results",
     "category": "ui-feedback",
     "concept": "A short, falling, questioning tone that trails off, indicating no results found.",
-    "keywords": ["not-found", "zero", "search", "blank", "nothing"],
+    "keywords": [
+      "not-found",
+      "zero",
+      "blank",
+      "nothing"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 380, "timeMs": 70 } },
-          "envelope": { "attackMs": 10, "decayMs": 30, "sustainLevel": 0.2, "sustainMs": 20, "releaseMs": 35 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 500,
+            "pitchEnvelope": {
+              "toHz": 380,
+              "timeMs": 70
+            }
+          },
+          "envelope": {
+            "attackMs": 10,
+            "decayMs": 30,
+            "sustainLevel": 0.2,
+            "sustainMs": 20,
+            "releaseMs": 35
+          },
           "gain": 0.6
         }
       ]

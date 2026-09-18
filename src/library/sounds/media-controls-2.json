@@ -4,17 +4,49 @@
     "phrase": "stream connect",
     "category": "media-controls",
     "concept": "A rising two-tone chime that confirms a stream connection is established.",
-    "keywords": ["stream", "connect", "connection", "live", "online", "link", "join"],
+    "keywords": [
+      "stream",
+      "connect",
+      "connection",
+      "live",
+      "online",
+      "link",
+      "join"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 750, "timeMs": 130 } },
-          "envelope": { "attackMs": 15, "decayMs": 40, "sustainLevel": 0.35, "sustainMs": 40, "releaseMs": 60 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 500,
+            "pitchEnvelope": {
+              "toHz": 750,
+              "timeMs": 130
+            }
+          },
+          "envelope": {
+            "attackMs": 15,
+            "decayMs": 40,
+            "sustainLevel": 0.35,
+            "sustainMs": 40,
+            "releaseMs": 60
+          },
           "gain": 0.5
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 700 },
-          "envelope": { "attackMs": 20, "decayMs": 35, "sustainLevel": 0.3, "sustainMs": 30, "releaseMs": 50 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 700
+          },
+          "envelope": {
+            "attackMs": 20,
+            "decayMs": 35,
+            "sustainLevel": 0.3,
+            "sustainMs": 30,
+            "releaseMs": 50
+          },
           "gain": 0.35
         }
       ]
@@ -25,12 +57,34 @@
     "phrase": "stream drop",
     "category": "media-controls",
     "concept": "A falling, sharp tone that warns a stream connection was dropped.",
-    "keywords": ["stream", "drop", "disconnect", "lost", "interrupt", "buffer", "offline"],
+    "keywords": [
+      "stream",
+      "drop",
+      "disconnect",
+      "lost",
+      "interrupt",
+      "buffer",
+      "offline"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 700, "pitchEnvelope": { "toHz": 350, "timeMs": 100 } },
-          "envelope": { "attackMs": 3, "decayMs": 30, "sustainLevel": 0.3, "sustainMs": 30, "releaseMs": 40 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 700,
+            "pitchEnvelope": {
+              "toHz": 350,
+              "timeMs": 100
+            }
+          },
+          "envelope": {
+            "attackMs": 3,
+            "decayMs": 30,
+            "sustainLevel": 0.3,
+            "sustainMs": 30,
+            "releaseMs": 40
+          },
           "gain": 0.62
         }
       ]
@@ -41,12 +95,32 @@
     "phrase": "subtitle on",
     "category": "media-controls",
     "concept": "A quick, bright, rising blip that confirms subtitles turned on.",
-    "keywords": ["subtitle", "caption", "on", "enable", "toggle", "text"],
+    "keywords": [
+      "subtitle",
+      "caption",
+      "on",
+      "enable",
+      "text"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1400, "pitchEnvelope": { "toHz": 2600, "timeMs": 60 } },
-          "envelope": { "attackMs": 3, "decayMs": 25, "sustainLevel": 0.3, "sustainMs": 20, "releaseMs": 30 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 1400,
+            "pitchEnvelope": {
+              "toHz": 2600,
+              "timeMs": 60
+            }
+          },
+          "envelope": {
+            "attackMs": 3,
+            "decayMs": 25,
+            "sustainLevel": 0.3,
+            "sustainMs": 20,
+            "releaseMs": 30
+          },
           "gain": 0.5
         }
       ]
@@ -57,12 +131,32 @@
     "phrase": "subtitle off",
     "category": "media-controls",
     "concept": "A quick, warm, falling blip that confirms subtitles turned off.",
-    "keywords": ["subtitle", "caption", "off", "disable", "toggle", "hide"],
+    "keywords": [
+      "subtitle",
+      "caption",
+      "off",
+      "disable",
+      "hide"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 700, "pitchEnvelope": { "toHz": 400, "timeMs": 70 } },
-          "envelope": { "attackMs": 5, "decayMs": 30, "sustainLevel": 0.3, "sustainMs": 20, "releaseMs": 35 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 700,
+            "pitchEnvelope": {
+              "toHz": 400,
+              "timeMs": 70
+            }
+          },
+          "envelope": {
+            "attackMs": 5,
+            "decayMs": 30,
+            "sustainLevel": 0.3,
+            "sustainMs": 20,
+            "releaseMs": 35
+          },
           "gain": 0.55
         }
       ]
@@ -73,12 +167,33 @@
     "phrase": "fullscreen enter",
     "category": "media-controls",
     "concept": "A smooth, rising sweep that plays when the view expands to fullscreen.",
-    "keywords": ["fullscreen", "expand", "enter", "maximize", "screen", "open"],
+    "keywords": [
+      "fullscreen",
+      "expand",
+      "enter",
+      "maximize",
+      "screen",
+      "open"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 300, "pitchEnvelope": { "toHz": 600, "timeMs": 220 } },
-          "envelope": { "attackMs": 40, "decayMs": 60, "sustainLevel": 0.4, "sustainMs": 80, "releaseMs": 100 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 300,
+            "pitchEnvelope": {
+              "toHz": 600,
+              "timeMs": 220
+            }
+          },
+          "envelope": {
+            "attackMs": 40,
+            "decayMs": 60,
+            "sustainLevel": 0.4,
+            "sustainMs": 80,
+            "releaseMs": 100
+          },
           "gain": 0.55
         }
       ]
@@ -89,12 +204,34 @@
     "phrase": "fullscreen exit",
     "category": "media-controls",
     "concept": "A smooth, falling sweep that plays when the view leaves fullscreen.",
-    "keywords": ["fullscreen", "exit", "shrink", "minimize", "screen", "close", "restore"],
+    "keywords": [
+      "fullscreen",
+      "exit",
+      "shrink",
+      "minimize",
+      "screen",
+      "close",
+      "restore"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 600, "pitchEnvelope": { "toHz": 300, "timeMs": 220 } },
-          "envelope": { "attackMs": 35, "decayMs": 55, "sustainLevel": 0.4, "sustainMs": 70, "releaseMs": 110 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 600,
+            "pitchEnvelope": {
+              "toHz": 300,
+              "timeMs": 220
+            }
+          },
+          "envelope": {
+            "attackMs": 35,
+            "decayMs": 55,
+            "sustainLevel": 0.4,
+            "sustainMs": 70,
+            "releaseMs": 110
+          },
           "gain": 0.55
         }
       ]
@@ -105,17 +242,45 @@
     "phrase": "picture in picture",
     "category": "media-controls",
     "concept": "A soft pop where a higher secondary tone layers over a low tone, opening a floating window.",
-    "keywords": ["picture", "window", "float", "overlay", "mini", "pip", "corner"],
+    "keywords": [
+      "picture",
+      "window",
+      "float",
+      "overlay",
+      "mini",
+      "pip",
+      "corner"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 450 },
-          "envelope": { "attackMs": 25, "decayMs": 50, "sustainLevel": 0.3, "sustainMs": 40, "releaseMs": 65 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 450
+          },
+          "envelope": {
+            "attackMs": 25,
+            "decayMs": 50,
+            "sustainLevel": 0.3,
+            "sustainMs": 40,
+            "releaseMs": 65
+          },
           "gain": 0.42
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 950 },
-          "envelope": { "attackMs": 20, "decayMs": 35, "sustainLevel": 0.25, "sustainMs": 20, "releaseMs": 45 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 950
+          },
+          "envelope": {
+            "attackMs": 20,
+            "decayMs": 35,
+            "sustainLevel": 0.25,
+            "sustainMs": 20,
+            "releaseMs": 45
+          },
           "gain": 0.32
         }
       ]
@@ -126,23 +291,67 @@
     "phrase": "cast connect",
     "category": "media-controls",
     "concept": "A rising chime with a soft sparkle overtone that confirms a cast connection is made.",
-    "keywords": ["cast", "connect", "chromecast", "tv", "link", "join"],
+    "keywords": [
+      "cast",
+      "connect",
+      "chromecast",
+      "tv",
+      "link",
+      "join"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 450, "pitchEnvelope": { "toHz": 900, "timeMs": 150 } },
-          "envelope": { "attackMs": 20, "decayMs": 50, "sustainLevel": 0.35, "sustainMs": 50, "releaseMs": 70 },
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 450,
+            "pitchEnvelope": {
+              "toHz": 900,
+              "timeMs": 150
+            }
+          },
+          "envelope": {
+            "attackMs": 20,
+            "decayMs": 50,
+            "sustainLevel": 0.35,
+            "sustainMs": 50,
+            "releaseMs": 70
+          },
           "gain": 0.48
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 750 },
-          "envelope": { "attackMs": 25, "decayMs": 40, "sustainLevel": 0.3, "sustainMs": 30, "releaseMs": 55 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 750
+          },
+          "envelope": {
+            "attackMs": 25,
+            "decayMs": 40,
+            "sustainLevel": 0.3,
+            "sustainMs": 30,
+            "releaseMs": 55
+          },
           "gain": 0.16
         },
         {
-          "source": { "type": "noise", "color": "white" },
-          "envelope": { "attackMs": 5, "decayMs": 20, "sustainLevel": 0.15, "sustainMs": 10, "releaseMs": 20 },
-          "filter": { "type": "bandpass", "cutoffHz": 2200, "q": 3 },
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "envelope": {
+            "attackMs": 5,
+            "decayMs": 20,
+            "sustainLevel": 0.15,
+            "sustainMs": 10,
+            "releaseMs": 20
+          },
+          "filter": {
+            "type": "bandpass",
+            "cutoffHz": 2200,
+            "q": 3
+          },
           "gain": 0.12
         }
       ]
@@ -153,12 +362,34 @@
     "phrase": "cast disconnect",
     "category": "media-controls",
     "concept": "A gentle, falling tone that signals a cast connection has closed.",
-    "keywords": ["cast", "disconnect", "tv", "close", "stop", "end", "unlink"],
+    "keywords": [
+      "cast",
+      "disconnect",
+      "tv",
+      "close",
+      "stop",
+      "end",
+      "unlink"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 650, "pitchEnvelope": { "toHz": 400, "timeMs": 160 } },
-          "envelope": { "attackMs": 30, "decayMs": 55, "sustainLevel": 0.35, "sustainMs": 50, "releaseMs": 80 },
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 650,
+            "pitchEnvelope": {
+              "toHz": 400,
+              "timeMs": 160
+            }
+          },
+          "envelope": {
+            "attackMs": 30,
+            "decayMs": 55,
+            "sustainLevel": 0.35,
+            "sustainMs": 50,
+            "releaseMs": 80
+          },
           "gain": 0.55
         }
       ]
@@ -169,12 +400,34 @@
     "phrase": "playlist add",
     "category": "media-controls",
     "concept": "A quick, rising blip that adds a track to the playlist.",
-    "keywords": ["playlist", "add", "queue", "save", "track", "song", "insert"],
+    "keywords": [
+      "playlist",
+      "add",
+      "queue",
+      "save",
+      "track",
+      "song",
+      "insert"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 700, "timeMs": 60 } },
-          "envelope": { "attackMs": 5, "decayMs": 25, "sustainLevel": 0.3, "sustainMs": 15, "releaseMs": 30 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 500,
+            "pitchEnvelope": {
+              "toHz": 700,
+              "timeMs": 60
+            }
+          },
+          "envelope": {
+            "attackMs": 5,
+            "decayMs": 25,
+            "sustainLevel": 0.3,
+            "sustainMs": 15,
+            "releaseMs": 30
+          },
           "gain": 0.6
         }
       ]
@@ -185,12 +438,34 @@
     "phrase": "playlist remove",
     "category": "media-controls",
     "concept": "A quick, falling blip that removes a track from the playlist.",
-    "keywords": ["playlist", "remove", "delete", "queue", "track", "song", "clear"],
+    "keywords": [
+      "playlist",
+      "remove",
+      "delete",
+      "queue",
+      "track",
+      "song",
+      "clear"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 650, "pitchEnvelope": { "toHz": 450, "timeMs": 60 } },
-          "envelope": { "attackMs": 6, "decayMs": 28, "sustainLevel": 0.25, "sustainMs": 12, "releaseMs": 28 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 650,
+            "pitchEnvelope": {
+              "toHz": 450,
+              "timeMs": 60
+            }
+          },
+          "envelope": {
+            "attackMs": 6,
+            "decayMs": 28,
+            "sustainLevel": 0.25,
+            "sustainMs": 12,
+            "releaseMs": 28
+          },
           "gain": 0.5
         }
       ]
@@ -201,12 +476,29 @@
     "phrase": "queue next",
     "category": "media-controls",
     "concept": "A short, steady click that advances to the next item in the queue.",
-    "keywords": ["queue", "next", "advance", "skip", "forward", "track", "song"],
+    "keywords": [
+      "queue",
+      "next",
+      "advance",
+      "skip",
+      "forward",
+      "song"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 600 },
-          "envelope": { "attackMs": 4, "decayMs": 20, "sustainLevel": 0.25, "sustainMs": 20, "releaseMs": 30 },
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 600
+          },
+          "envelope": {
+            "attackMs": 4,
+            "decayMs": 20,
+            "sustainLevel": 0.25,
+            "sustainMs": 20,
+            "releaseMs": 30
+          },
           "gain": 0.65
         }
       ]
@@ -217,12 +509,34 @@
     "phrase": "like track",
     "category": "media-controls",
     "concept": "A warm, rising pop that affirms a track was liked.",
-    "keywords": ["like", "track", "favorite", "heart", "song", "approve", "love"],
+    "keywords": [
+      "like",
+      "track",
+      "favorite",
+      "heart",
+      "song",
+      "approve",
+      "love"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 400, "pitchEnvelope": { "toHz": 550, "timeMs": 120 } },
-          "envelope": { "attackMs": 15, "decayMs": 45, "sustainLevel": 0.4, "sustainMs": 50, "releaseMs": 70 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 400,
+            "pitchEnvelope": {
+              "toHz": 550,
+              "timeMs": 120
+            }
+          },
+          "envelope": {
+            "attackMs": 15,
+            "decayMs": 45,
+            "sustainLevel": 0.4,
+            "sustainMs": 50,
+            "releaseMs": 70
+          },
           "gain": 0.55
         }
       ]
@@ -233,18 +547,49 @@
     "phrase": "skip ad",
     "category": "media-controls",
     "concept": "A sharp, quick click that skips a video advertisement.",
-    "keywords": ["skip", "ad", "advertisement", "commercial", "forward", "bypass", "jump"],
+    "keywords": [
+      "skip",
+      "ad",
+      "advertisement",
+      "commercial",
+      "forward",
+      "bypass",
+      "jump"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 700 },
-          "envelope": { "attackMs": 2, "decayMs": 20, "sustainLevel": 0.2, "sustainMs": 10, "releaseMs": 25 },
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 700
+          },
+          "envelope": {
+            "attackMs": 2,
+            "decayMs": 20,
+            "sustainLevel": 0.2,
+            "sustainMs": 10,
+            "releaseMs": 25
+          },
           "gain": 0.55
         },
         {
-          "source": { "type": "noise", "color": "white" },
-          "envelope": { "attackMs": 2, "decayMs": 10, "sustainLevel": 0.2, "sustainMs": 6, "releaseMs": 15 },
-          "filter": { "type": "bandpass", "cutoffHz": 2000, "q": 3 },
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "envelope": {
+            "attackMs": 2,
+            "decayMs": 10,
+            "sustainLevel": 0.2,
+            "sustainMs": 6,
+            "releaseMs": 15
+          },
+          "filter": {
+            "type": "bandpass",
+            "cutoffHz": 2000,
+            "q": 3
+          },
           "gain": 0.5
         }
       ]
@@ -255,18 +600,52 @@
     "phrase": "chapter skip",
     "category": "media-controls",
     "concept": "A crisp, sharp click that jumps ahead to the next chapter.",
-    "keywords": ["chapter", "skip", "jump", "forward", "next", "section", "scene"],
+    "keywords": [
+      "chapter",
+      "skip",
+      "jump",
+      "forward",
+      "next",
+      "section",
+      "scene"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 800, "pitchEnvelope": { "toHz": 900, "timeMs": 40 } },
-          "envelope": { "attackMs": 3, "decayMs": 20, "sustainLevel": 0.2, "sustainMs": 15, "releaseMs": 25 },
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 800,
+            "pitchEnvelope": {
+              "toHz": 900,
+              "timeMs": 40
+            }
+          },
+          "envelope": {
+            "attackMs": 3,
+            "decayMs": 20,
+            "sustainLevel": 0.2,
+            "sustainMs": 15,
+            "releaseMs": 25
+          },
           "gain": 0.55
         },
         {
-          "source": { "type": "noise", "color": "white" },
-          "envelope": { "attackMs": 2, "decayMs": 8, "sustainLevel": 0.2, "sustainMs": 6, "releaseMs": 12 },
-          "filter": { "type": "highpass", "cutoffHz": 3000 },
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "envelope": {
+            "attackMs": 2,
+            "decayMs": 8,
+            "sustainLevel": 0.2,
+            "sustainMs": 6,
+            "releaseMs": 12
+          },
+          "filter": {
+            "type": "highpass",
+            "cutoffHz": 3000
+          },
           "gain": 0.4
         }
       ]
@@ -277,12 +656,33 @@
     "phrase": "speed up playback",
     "category": "media-controls",
     "concept": "A quick, rising pitch sweep that speeds up the playback rate.",
-    "keywords": ["speed", "fast", "playback", "rate", "accelerate", "faster", "tempo"],
+    "keywords": [
+      "speed",
+      "fast",
+      "playback",
+      "accelerate",
+      "faster",
+      "tempo"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 400, "pitchEnvelope": { "toHz": 900, "timeMs": 100 } },
-          "envelope": { "attackMs": 8, "decayMs": 40, "sustainLevel": 0.3, "sustainMs": 20, "releaseMs": 35 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 400,
+            "pitchEnvelope": {
+              "toHz": 900,
+              "timeMs": 100
+            }
+          },
+          "envelope": {
+            "attackMs": 8,
+            "decayMs": 40,
+            "sustainLevel": 0.3,
+            "sustainMs": 20,
+            "releaseMs": 35
+          },
           "gain": 0.55
         }
       ]
@@ -293,12 +693,34 @@
     "phrase": "slow down playback",
     "category": "media-controls",
     "concept": "A long, falling pitch sweep that slows the playback rate down.",
-    "keywords": ["slow", "playback", "rate", "decelerate", "slower", "tempo", "reduce"],
+    "keywords": [
+      "slow",
+      "playback",
+      "rate",
+      "decelerate",
+      "slower",
+      "tempo",
+      "reduce"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 700, "pitchEnvelope": { "toHz": 300, "timeMs": 700 } },
-          "envelope": { "attackMs": 60, "decayMs": 200, "sustainLevel": 0.28, "sustainMs": 300, "releaseMs": 250 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 700,
+            "pitchEnvelope": {
+              "toHz": 300,
+              "timeMs": 700
+            }
+          },
+          "envelope": {
+            "attackMs": 60,
+            "decayMs": 200,
+            "sustainLevel": 0.28,
+            "sustainMs": 300,
+            "releaseMs": 250
+          },
           "gain": 0.55
         }
       ]
@@ -309,17 +731,53 @@
     "phrase": "loop section",
     "category": "media-controls",
     "concept": "A soft, cycling tone made from two layers moving in opposite pitch directions, marking a looped section.",
-    "keywords": ["loop", "repeat", "section", "cycle", "replay", "segment", "again"],
+    "keywords": [
+      "loop",
+      "repeat",
+      "section",
+      "cycle",
+      "replay",
+      "segment",
+      "again"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 650, "timeMs": 200 } },
-          "envelope": { "attackMs": 30, "decayMs": 60, "sustainLevel": 0.35, "sustainMs": 80, "releaseMs": 100 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 500,
+            "pitchEnvelope": {
+              "toHz": 650,
+              "timeMs": 200
+            }
+          },
+          "envelope": {
+            "attackMs": 30,
+            "decayMs": 60,
+            "sustainLevel": 0.35,
+            "sustainMs": 80,
+            "releaseMs": 100
+          },
           "gain": 0.4
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 650, "pitchEnvelope": { "toHz": 500, "timeMs": 200 } },
-          "envelope": { "attackMs": 30, "decayMs": 60, "sustainLevel": 0.35, "sustainMs": 80, "releaseMs": 100 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 650,
+            "pitchEnvelope": {
+              "toHz": 500,
+              "timeMs": 200
+            }
+          },
+          "envelope": {
+            "attackMs": 30,
+            "decayMs": 60,
+            "sustainLevel": 0.35,
+            "sustainMs": 80,
+            "releaseMs": 100
+          },
           "gain": 0.4
         }
       ]
@@ -330,17 +788,49 @@
     "phrase": "bookmark moment",
     "category": "media-controls",
     "concept": "A soft, warm chime that confirms a moment was bookmarked.",
-    "keywords": ["bookmark", "moment", "save", "mark", "favorite", "timestamp", "remember"],
+    "keywords": [
+      "bookmark",
+      "moment",
+      "save",
+      "mark",
+      "favorite",
+      "timestamp",
+      "remember"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 450, "pitchEnvelope": { "toHz": 500, "timeMs": 150 } },
-          "envelope": { "attackMs": 40, "decayMs": 80, "sustainLevel": 0.4, "sustainMs": 150, "releaseMs": 130 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 450,
+            "pitchEnvelope": {
+              "toHz": 500,
+              "timeMs": 150
+            }
+          },
+          "envelope": {
+            "attackMs": 40,
+            "decayMs": 80,
+            "sustainLevel": 0.4,
+            "sustainMs": 150,
+            "releaseMs": 130
+          },
           "gain": 0.5
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 900 },
-          "envelope": { "attackMs": 45, "decayMs": 70, "sustainLevel": 0.2, "sustainMs": 100, "releaseMs": 120 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 900
+          },
+          "envelope": {
+            "attackMs": 45,
+            "decayMs": 70,
+            "sustainLevel": 0.2,
+            "sustainMs": 100,
+            "releaseMs": 120
+          },
           "gain": 0.18
         }
       ]
@@ -351,18 +841,49 @@
     "phrase": "eject",
     "category": "media-controls",
     "concept": "A sharp, percussive click with a low thud for ejecting media.",
-    "keywords": ["eject", "remove", "disc", "tray", "open", "unload", "release"],
+    "keywords": [
+      "eject",
+      "remove",
+      "disc",
+      "tray",
+      "open",
+      "unload",
+      "release"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 250 },
-          "envelope": { "attackMs": 3, "decayMs": 50, "sustainLevel": 0.2, "sustainMs": 20, "releaseMs": 40 },
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 250
+          },
+          "envelope": {
+            "attackMs": 3,
+            "decayMs": 50,
+            "sustainLevel": 0.2,
+            "sustainMs": 20,
+            "releaseMs": 40
+          },
           "gain": 0.5
         },
         {
-          "source": { "type": "noise", "color": "white" },
-          "envelope": { "attackMs": 2, "decayMs": 15, "sustainLevel": 0.3, "sustainMs": 6, "releaseMs": 20 },
-          "filter": { "type": "bandpass", "cutoffHz": 1500, "q": 2.5 },
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "envelope": {
+            "attackMs": 2,
+            "decayMs": 15,
+            "sustainLevel": 0.3,
+            "sustainMs": 6,
+            "releaseMs": 20
+          },
+          "filter": {
+            "type": "bandpass",
+            "cutoffHz": 1500,
+            "q": 2.5
+          },
           "gain": 0.55
         }
       ]

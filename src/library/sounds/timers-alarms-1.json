@@ -4,12 +4,33 @@
     "phrase": "timer start",
     "category": "timers-alarms",
     "concept": "A short, soft, rising tone that marks a countdown timer starting.",
-    "keywords": ["timer", "start", "begin", "countdown", "launch", "initiate"],
+    "keywords": [
+      "timer",
+      "start",
+      "begin",
+      "countdown",
+      "launch",
+      "initiate"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 450, "pitchEnvelope": { "toHz": 700, "timeMs": 100 } },
-          "envelope": { "attackMs": 15, "decayMs": 40, "sustainLevel": 0.3, "sustainMs": 40, "releaseMs": 45 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 450,
+            "pitchEnvelope": {
+              "toHz": 700,
+              "timeMs": 100
+            }
+          },
+          "envelope": {
+            "attackMs": 15,
+            "decayMs": 40,
+            "sustainLevel": 0.3,
+            "sustainMs": 40,
+            "releaseMs": 45
+          },
           "gain": 0.6
         }
       ]
@@ -20,12 +41,29 @@
     "phrase": "timer pause",
     "category": "timers-alarms",
     "concept": "A brief, flat, muted tone indicating that a running timer has been paused.",
-    "keywords": ["timer", "pause", "hold", "stop", "freeze", "suspend"],
+    "keywords": [
+      "timer",
+      "pause",
+      "hold",
+      "stop",
+      "freeze",
+      "suspend"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500 },
-          "envelope": { "attackMs": 5, "decayMs": 30, "sustainLevel": 0.2, "sustainMs": 40, "releaseMs": 30 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 500
+          },
+          "envelope": {
+            "attackMs": 5,
+            "decayMs": 30,
+            "sustainLevel": 0.2,
+            "sustainMs": 40,
+            "releaseMs": 30
+          },
           "gain": 0.6
         }
       ]
@@ -36,12 +74,33 @@
     "phrase": "timer resume",
     "category": "timers-alarms",
     "concept": "A short, rising tone that picks back up as a paused timer resumes counting.",
-    "keywords": ["timer", "resume", "continue", "unpause", "restart", "countdown"],
+    "keywords": [
+      "timer",
+      "resume",
+      "continue",
+      "unpause",
+      "restart",
+      "countdown"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 680, "timeMs": 80 } },
-          "envelope": { "attackMs": 10, "decayMs": 30, "sustainLevel": 0.3, "sustainMs": 30, "releaseMs": 30 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 500,
+            "pitchEnvelope": {
+              "toHz": 680,
+              "timeMs": 80
+            }
+          },
+          "envelope": {
+            "attackMs": 10,
+            "decayMs": 30,
+            "sustainLevel": 0.3,
+            "sustainMs": 30,
+            "releaseMs": 30
+          },
           "gain": 0.6
         }
       ]
@@ -52,12 +111,33 @@
     "phrase": "timer reset",
     "category": "timers-alarms",
     "concept": "A quick, falling tone that snaps a timer back to its starting point.",
-    "keywords": ["timer", "reset", "restart", "clear", "zero", "revert"],
+    "keywords": [
+      "timer",
+      "reset",
+      "restart",
+      "clear",
+      "zero",
+      "revert"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 700, "pitchEnvelope": { "toHz": 450, "timeMs": 70 } },
-          "envelope": { "attackMs": 5, "decayMs": 25, "sustainLevel": 0.15, "sustainMs": 20, "releaseMs": 25 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 700,
+            "pitchEnvelope": {
+              "toHz": 450,
+              "timeMs": 70
+            }
+          },
+          "envelope": {
+            "attackMs": 5,
+            "decayMs": 25,
+            "sustainLevel": 0.15,
+            "sustainMs": 20,
+            "releaseMs": 25
+          },
           "gain": 0.6
         }
       ]
@@ -68,12 +148,28 @@
     "phrase": "stopwatch start",
     "category": "timers-alarms",
     "concept": "A sharp, percussive click that starts the stopwatch running.",
-    "keywords": ["stopwatch", "start", "begin", "click", "run", "time"],
+    "keywords": [
+      "stopwatch",
+      "start",
+      "begin",
+      "click",
+      "time"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 900 },
-          "envelope": { "attackMs": 2, "decayMs": 20, "sustainLevel": 0, "sustainMs": 0, "releaseMs": 28 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 900
+          },
+          "envelope": {
+            "attackMs": 2,
+            "decayMs": 20,
+            "sustainLevel": 0,
+            "sustainMs": 0,
+            "releaseMs": 28
+          },
           "gain": 0.6
         }
       ]
@@ -84,17 +180,44 @@
     "phrase": "stopwatch lap",
     "category": "timers-alarms",
     "concept": "Two quick pulses in fast succession, a firm tap followed by a rounded echo, marking a lap split.",
-    "keywords": ["stopwatch", "lap", "split", "mark", "interval", "record"],
+    "keywords": [
+      "stopwatch",
+      "lap",
+      "split",
+      "mark",
+      "interval",
+      "record"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 750 },
-          "envelope": { "attackMs": 1, "decayMs": 20, "sustainLevel": 0, "sustainMs": 0, "releaseMs": 10 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 750
+          },
+          "envelope": {
+            "attackMs": 1,
+            "decayMs": 20,
+            "sustainLevel": 0,
+            "sustainMs": 0,
+            "releaseMs": 10
+          },
           "gain": 0.55
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 700 },
-          "envelope": { "attackMs": 45, "decayMs": 20, "sustainLevel": 0.3, "sustainMs": 15, "releaseMs": 25 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 700
+          },
+          "envelope": {
+            "attackMs": 45,
+            "decayMs": 20,
+            "sustainLevel": 0.3,
+            "sustainMs": 15,
+            "releaseMs": 25
+          },
           "gain": 0.45
         }
       ]
@@ -105,12 +228,33 @@
     "phrase": "stopwatch stop",
     "category": "timers-alarms",
     "concept": "A short, falling tone that brings a running stopwatch to a stop.",
-    "keywords": ["stopwatch", "stop", "end", "halt", "finish", "time"],
+    "keywords": [
+      "stopwatch",
+      "stop",
+      "end",
+      "halt",
+      "finish",
+      "time"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 650, "pitchEnvelope": { "toHz": 450, "timeMs": 70 } },
-          "envelope": { "attackMs": 8, "decayMs": 30, "sustainLevel": 0.2, "sustainMs": 20, "releaseMs": 30 },
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 650,
+            "pitchEnvelope": {
+              "toHz": 450,
+              "timeMs": 70
+            }
+          },
+          "envelope": {
+            "attackMs": 8,
+            "decayMs": 30,
+            "sustainLevel": 0.2,
+            "sustainMs": 20,
+            "releaseMs": 30
+          },
           "gain": 0.55
         }
       ]
@@ -121,12 +265,28 @@
     "phrase": "countdown three",
     "category": "timers-alarms",
     "concept": "A short, clear beep tone for the count of three in a countdown sequence.",
-    "keywords": ["countdown", "three", "count", "number", "beep", "sequence"],
+    "keywords": [
+      "countdown",
+      "three",
+      "count",
+      "number",
+      "sequence"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 600 },
-          "envelope": { "attackMs": 4, "decayMs": 24, "sustainLevel": 0.3, "sustainMs": 24, "releaseMs": 28 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 600
+          },
+          "envelope": {
+            "attackMs": 4,
+            "decayMs": 24,
+            "sustainLevel": 0.3,
+            "sustainMs": 24,
+            "releaseMs": 28
+          },
           "gain": 0.6
         }
       ]
@@ -137,12 +297,28 @@
     "phrase": "countdown two",
     "category": "timers-alarms",
     "concept": "A short, clear beep tone for the count of two in a countdown sequence.",
-    "keywords": ["countdown", "two", "count", "number", "beep", "sequence"],
+    "keywords": [
+      "countdown",
+      "two",
+      "count",
+      "number",
+      "sequence"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 680 },
-          "envelope": { "attackMs": 5, "decayMs": 22, "sustainLevel": 0.3, "sustainMs": 22, "releaseMs": 26 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 680
+          },
+          "envelope": {
+            "attackMs": 5,
+            "decayMs": 22,
+            "sustainLevel": 0.3,
+            "sustainMs": 22,
+            "releaseMs": 26
+          },
           "gain": 0.6
         }
       ]
@@ -153,12 +329,32 @@
     "phrase": "countdown one",
     "category": "timers-alarms",
     "concept": "A short, rising beep tone for the final count of one before zero.",
-    "keywords": ["countdown", "one", "count", "number", "beep", "final"],
+    "keywords": [
+      "countdown",
+      "one",
+      "count",
+      "number",
+      "final"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 660, "pitchEnvelope": { "toHz": 900, "timeMs": 65 } },
-          "envelope": { "attackMs": 4, "decayMs": 20, "sustainLevel": 0.3, "sustainMs": 20, "releaseMs": 21 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 660,
+            "pitchEnvelope": {
+              "toHz": 900,
+              "timeMs": 65
+            }
+          },
+          "envelope": {
+            "attackMs": 4,
+            "decayMs": 20,
+            "sustainLevel": 0.3,
+            "sustainMs": 20,
+            "releaseMs": 21
+          },
           "gain": 0.6
         }
       ]
@@ -169,17 +365,51 @@
     "phrase": "countdown zero",
     "category": "timers-alarms",
     "concept": "A short, rising two-tone chime marking zero, the moment the countdown finishes.",
-    "keywords": ["countdown", "zero", "finish", "complete", "go", "chime"],
+    "keywords": [
+      "countdown",
+      "zero",
+      "finish",
+      "complete",
+      "chime"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 850, "timeMs": 110 } },
-          "envelope": { "attackMs": 10, "decayMs": 40, "sustainLevel": 0.3, "sustainMs": 40, "releaseMs": 50 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 500,
+            "pitchEnvelope": {
+              "toHz": 850,
+              "timeMs": 110
+            }
+          },
+          "envelope": {
+            "attackMs": 10,
+            "decayMs": 40,
+            "sustainLevel": 0.3,
+            "sustainMs": 40,
+            "releaseMs": 50
+          },
           "gain": 0.55
         },
         {
-          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 700, "pitchEnvelope": { "toHz": 1000, "timeMs": 100 } },
-          "envelope": { "attackMs": 12, "decayMs": 35, "sustainLevel": 0.2, "sustainMs": 30, "releaseMs": 40 },
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 700,
+            "pitchEnvelope": {
+              "toHz": 1000,
+              "timeMs": 100
+            }
+          },
+          "envelope": {
+            "attackMs": 12,
+            "decayMs": 35,
+            "sustainLevel": 0.2,
+            "sustainMs": 30,
+            "releaseMs": 40
+          },
           "gain": 0.2
         }
       ]
@@ -190,12 +420,29 @@
     "phrase": "final second",
     "category": "timers-alarms",
     "concept": "A short, sharp, urgent pulse marking the final second before time runs out.",
-    "keywords": ["countdown", "final", "second", "urgent", "alert", "pulse"],
+    "keywords": [
+      "countdown",
+      "final",
+      "second",
+      "urgent",
+      "alert",
+      "pulse"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1000 },
-          "envelope": { "attackMs": 3, "decayMs": 20, "sustainLevel": 0.4, "sustainMs": 20, "releaseMs": 25 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 1000
+          },
+          "envelope": {
+            "attackMs": 3,
+            "decayMs": 20,
+            "sustainLevel": 0.4,
+            "sustainMs": 20,
+            "releaseMs": 25
+          },
           "gain": 0.53
         }
       ]
@@ -206,18 +453,47 @@
     "phrase": "halfway bell",
     "category": "timers-alarms",
     "concept": "A soft, resonant bell tone marking the halfway point of a timed session.",
-    "keywords": ["halfway", "bell", "midpoint", "session", "chime", "progress"],
+    "keywords": [
+      "halfway",
+      "bell",
+      "midpoint",
+      "session",
+      "chime"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500 },
-          "envelope": { "attackMs": 30, "decayMs": 80, "sustainLevel": 0.35, "sustainMs": 120, "releaseMs": 90 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 500
+          },
+          "envelope": {
+            "attackMs": 30,
+            "decayMs": 80,
+            "sustainLevel": 0.35,
+            "sustainMs": 120,
+            "releaseMs": 90
+          },
           "gain": 0.5
         },
         {
-          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 1000 },
-          "envelope": { "attackMs": 30, "decayMs": 70, "sustainLevel": 0.2, "sustainMs": 90, "releaseMs": 70 },
-          "filter": { "type": "lowpass", "cutoffHz": 1400 },
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 1000
+          },
+          "envelope": {
+            "attackMs": 30,
+            "decayMs": 70,
+            "sustainLevel": 0.2,
+            "sustainMs": 90,
+            "releaseMs": 70
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 1400
+          },
           "gain": 0.2
         }
       ]
@@ -228,18 +504,48 @@
     "phrase": "interval bell",
     "category": "timers-alarms",
     "concept": "A soft, resonant bell tone signaling the start of a new work interval.",
-    "keywords": ["interval", "bell", "chime", "signal", "work", "cycle"],
+    "keywords": [
+      "interval",
+      "bell",
+      "chime",
+      "signal",
+      "work",
+      "cycle"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 650 },
-          "envelope": { "attackMs": 25, "decayMs": 70, "sustainLevel": 0.3, "sustainMs": 100, "releaseMs": 65 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 650
+          },
+          "envelope": {
+            "attackMs": 25,
+            "decayMs": 70,
+            "sustainLevel": 0.3,
+            "sustainMs": 100,
+            "releaseMs": 65
+          },
           "gain": 0.5
         },
         {
-          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 1300 },
-          "envelope": { "attackMs": 22, "decayMs": 55, "sustainLevel": 0.18, "sustainMs": 70, "releaseMs": 55 },
-          "filter": { "type": "lowpass", "cutoffHz": 1800 },
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 1300
+          },
+          "envelope": {
+            "attackMs": 22,
+            "decayMs": 55,
+            "sustainLevel": 0.18,
+            "sustainMs": 70,
+            "releaseMs": 55
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 1800
+          },
           "gain": 0.18
         }
       ]
@@ -250,17 +556,47 @@
     "phrase": "round start",
     "category": "timers-alarms",
     "concept": "A crisp, rising two-tone chime signaling the start of a new round.",
-    "keywords": ["round", "start", "begin", "chime", "match", "signal"],
+    "keywords": [
+      "round",
+      "start",
+      "begin",
+      "chime",
+      "signal"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 450, "pitchEnvelope": { "toHz": 700, "timeMs": 120 } },
-          "envelope": { "attackMs": 12, "decayMs": 40, "sustainLevel": 0.3, "sustainMs": 40, "releaseMs": 50 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 450,
+            "pitchEnvelope": {
+              "toHz": 700,
+              "timeMs": 120
+            }
+          },
+          "envelope": {
+            "attackMs": 12,
+            "decayMs": 40,
+            "sustainLevel": 0.3,
+            "sustainMs": 40,
+            "releaseMs": 50
+          },
           "gain": 0.55
         },
         {
-          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 700 },
-          "envelope": { "attackMs": 5, "decayMs": 25, "sustainLevel": 0, "sustainMs": 0, "releaseMs": 25 },
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 700
+          },
+          "envelope": {
+            "attackMs": 5,
+            "decayMs": 25,
+            "sustainLevel": 0,
+            "sustainMs": 0,
+            "releaseMs": 25
+          },
           "gain": 0.2
         }
       ]
@@ -271,17 +607,47 @@
     "phrase": "round end",
     "category": "timers-alarms",
     "concept": "A crisp, falling two-tone chime signaling the end of a round.",
-    "keywords": ["round", "end", "finish", "chime", "match", "signal"],
+    "keywords": [
+      "round",
+      "end",
+      "finish",
+      "chime",
+      "signal"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 750, "pitchEnvelope": { "toHz": 480, "timeMs": 110 } },
-          "envelope": { "attackMs": 10, "decayMs": 45, "sustainLevel": 0.25, "sustainMs": 35, "releaseMs": 55 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 750,
+            "pitchEnvelope": {
+              "toHz": 480,
+              "timeMs": 110
+            }
+          },
+          "envelope": {
+            "attackMs": 10,
+            "decayMs": 45,
+            "sustainLevel": 0.25,
+            "sustainMs": 35,
+            "releaseMs": 55
+          },
           "gain": 0.55
         },
         {
-          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 480 },
-          "envelope": { "attackMs": 5, "decayMs": 20, "sustainLevel": 0, "sustainMs": 0, "releaseMs": 20 },
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 480
+          },
+          "envelope": {
+            "attackMs": 5,
+            "decayMs": 20,
+            "sustainLevel": 0,
+            "sustainMs": 0,
+            "releaseMs": 20
+          },
           "gain": 0.2
         }
       ]
@@ -292,12 +658,29 @@
     "phrase": "rest period",
     "category": "timers-alarms",
     "concept": "A soft, gentle, sustained tone inviting a calm rest period between rounds.",
-    "keywords": ["rest", "period", "calm", "break", "relax", "pause"],
+    "keywords": [
+      "rest",
+      "period",
+      "calm",
+      "break",
+      "relax",
+      "pause"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 350 },
-          "envelope": { "attackMs": 150, "decayMs": 150, "sustainLevel": 0.45, "sustainMs": 400, "releaseMs": 200 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 350
+          },
+          "envelope": {
+            "attackMs": 150,
+            "decayMs": 150,
+            "sustainLevel": 0.45,
+            "sustainMs": 400,
+            "releaseMs": 200
+          },
           "gain": 0.5
         }
       ]
@@ -308,17 +691,44 @@
     "phrase": "work period",
     "category": "timers-alarms",
     "concept": "A quick, alert two-tone beep marking the start of a focused work period.",
-    "keywords": ["work", "period", "focus", "start", "alert", "session"],
+    "keywords": [
+      "work",
+      "period",
+      "focus",
+      "start",
+      "alert",
+      "session"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 600 },
-          "envelope": { "attackMs": 4, "decayMs": 20, "sustainLevel": 0.3, "sustainMs": 20, "releaseMs": 26 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 600
+          },
+          "envelope": {
+            "attackMs": 4,
+            "decayMs": 20,
+            "sustainLevel": 0.3,
+            "sustainMs": 20,
+            "releaseMs": 26
+          },
           "gain": 0.55
         },
         {
-          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 900 },
-          "envelope": { "attackMs": 4, "decayMs": 18, "sustainLevel": 0.2, "sustainMs": 15, "releaseMs": 23 },
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 900
+          },
+          "envelope": {
+            "attackMs": 4,
+            "decayMs": 18,
+            "sustainLevel": 0.2,
+            "sustainMs": 15,
+            "releaseMs": 23
+          },
           "gain": 0.25
         }
       ]
@@ -329,12 +739,33 @@
     "phrase": "pomodoro start",
     "category": "timers-alarms",
     "concept": "A soft, rising chime marking the start of a pomodoro focus session.",
-    "keywords": ["pomodoro", "start", "focus", "session", "chime", "begin"],
+    "keywords": [
+      "pomodoro",
+      "start",
+      "focus",
+      "session",
+      "chime",
+      "begin"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 400, "pitchEnvelope": { "toHz": 620, "timeMs": 160 } },
-          "envelope": { "attackMs": 25, "decayMs": 60, "sustainLevel": 0.35, "sustainMs": 70, "releaseMs": 65 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 400,
+            "pitchEnvelope": {
+              "toHz": 620,
+              "timeMs": 160
+            }
+          },
+          "envelope": {
+            "attackMs": 25,
+            "decayMs": 60,
+            "sustainLevel": 0.35,
+            "sustainMs": 70,
+            "releaseMs": 65
+          },
           "gain": 0.55
         }
       ]
@@ -345,12 +776,33 @@
     "phrase": "pomodoro break",
     "category": "timers-alarms",
     "concept": "A soft, falling tone marking the start of a pomodoro break.",
-    "keywords": ["pomodoro", "break", "rest", "pause", "chime", "end"],
+    "keywords": [
+      "pomodoro",
+      "break",
+      "rest",
+      "pause",
+      "chime",
+      "end"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 620, "pitchEnvelope": { "toHz": 420, "timeMs": 150 } },
-          "envelope": { "attackMs": 22, "decayMs": 55, "sustainLevel": 0.3, "sustainMs": 65, "releaseMs": 58 },
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 620,
+            "pitchEnvelope": {
+              "toHz": 420,
+              "timeMs": 150
+            }
+          },
+          "envelope": {
+            "attackMs": 22,
+            "decayMs": 55,
+            "sustainLevel": 0.3,
+            "sustainMs": 65,
+            "releaseMs": 58
+          },
           "gain": 0.55
         }
       ]
@@ -361,24 +813,66 @@
     "phrase": "wake alarm",
     "category": "timers-alarms",
     "concept": "A sharp, urgent, buzzing alarm tone to wake you from sleep.",
-    "keywords": ["alarm", "wake", "urgent", "buzz", "alert", "morning"],
+    "keywords": [
+      "alarm",
+      "wake",
+      "buzz",
+      "alert",
+      "morning"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 1000 },
-          "envelope": { "attackMs": 5, "decayMs": 20, "sustainLevel": 0.5, "sustainMs": 130, "releaseMs": 45 },
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 1000
+          },
+          "envelope": {
+            "attackMs": 5,
+            "decayMs": 20,
+            "sustainLevel": 0.5,
+            "sustainMs": 130,
+            "releaseMs": 45
+          },
           "gain": 0.4
         },
         {
-          "source": { "type": "oscillator", "wave": "square", "freqHz": 1000 },
-          "envelope": { "attackMs": 5, "decayMs": 20, "sustainLevel": 0.4, "sustainMs": 130, "releaseMs": 45 },
-          "filter": { "type": "lowpass", "cutoffHz": 2500 },
+          "source": {
+            "type": "oscillator",
+            "wave": "square",
+            "freqHz": 1000
+          },
+          "envelope": {
+            "attackMs": 5,
+            "decayMs": 20,
+            "sustainLevel": 0.4,
+            "sustainMs": 130,
+            "releaseMs": 45
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 2500
+          },
           "gain": 0.18
         },
         {
-          "source": { "type": "oscillator", "wave": "square", "freqHz": 110 },
-          "envelope": { "attackMs": 5, "decayMs": 20, "sustainLevel": 0.5, "sustainMs": 130, "releaseMs": 45 },
-          "filter": { "type": "lowpass", "cutoffHz": 400 },
+          "source": {
+            "type": "oscillator",
+            "wave": "square",
+            "freqHz": 110
+          },
+          "envelope": {
+            "attackMs": 5,
+            "decayMs": 20,
+            "sustainLevel": 0.5,
+            "sustainMs": 130,
+            "releaseMs": 45
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 400
+          },
           "gain": 0.16
         }
       ]
@@ -389,12 +883,32 @@
     "phrase": "gentle wake",
     "category": "timers-alarms",
     "concept": "A soft, gentle, slow rising tone that gradually eases you awake.",
-    "keywords": ["wake", "gentle", "morning", "alarm", "ease", "soft"],
+    "keywords": [
+      "wake",
+      "gentle",
+      "morning",
+      "ease",
+      "soft"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 350, "pitchEnvelope": { "toHz": 550, "timeMs": 500 } },
-          "envelope": { "attackMs": 80, "decayMs": 120, "sustainLevel": 0.4, "sustainMs": 300, "releaseMs": 150 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 350,
+            "pitchEnvelope": {
+              "toHz": 550,
+              "timeMs": 500
+            }
+          },
+          "envelope": {
+            "attackMs": 80,
+            "decayMs": 120,
+            "sustainLevel": 0.4,
+            "sustainMs": 300,
+            "releaseMs": 150
+          },
           "gain": 0.53
         }
       ]

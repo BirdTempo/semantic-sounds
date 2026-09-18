@@ -5,16 +5,6 @@ letting deferred work rot into an undocumented gap.
 
 ## Deferred to later sub-projects
 
-- The review tool with play buttons (sub-project 2).
-- The full sound set, built by parallel agents from
-  `docs/sound-batches/AGENT_BRIEF.md` at a larger scale (sub-project 3).
-  Target as of 2026-09-19: **at least 1000 sounds**, raised from the
-  300-500 in the original brief. That size needs a wider taxonomy than
-  the six seed buckets, and it changes two things already recorded here:
-  re-run the retrieval threshold search on the larger corpus, and expect
-  the keyword data, not the scorer, to be what limits recall.
-  A "must not regress" band should be added to `scripts/prose-probe.ts`
-  once that set ships.
 - The SDK, MCP server, and the `semantic-sounds-mcp` wrapper package
   (sub-project 4). `npm view semantic-sounds` and `npm view
   semantic-sounds-mcp` were both free on 2026-09-15. Publishing target:
@@ -22,6 +12,31 @@ letting deferred work rot into an undocumented gap.
 - Generation for a miss, using `claude-opus-5` through structured
   outputs, checked by `checkEntry` (sub-project 5).
 - The public static site (sub-project 6).
+
+## Retrieval at 1090 sounds
+
+The probe grew from 48 cases to 104 and now covers every category. 98
+pass. The six that do not are listed in `scripts/prose-probe.ts` with
+their cause, and the count is the regression baseline.
+
+Three findings from the growth to 1090 sounds:
+
+- **The stemmer was the largest single defect.** "purring" did not reach
+  "purr", and "sneezed" did not reach "sneeze". Porter's undoubling ran
+  only after a suffix came off, and the restore-e step was missing. Both
+  are fixed and symmetric now. At 40 sounds the fault was invisible,
+  because no two entries competed closely enough for it to matter.
+- **Keyword data limits recall, not the scorer.** Independent authors
+  gave entries a sibling's subject as a keyword. `scripts/prune-stolen-
+  keywords.ts` finds and removes that class. Entries also lacked the
+  natural phrasing a caller types ("washing machine" for "washer done").
+- **The remaining misses need meaning, not weights.** An entry named
+  "password wrong" owns the word "wrong"; "moment" is rarer than "calm".
+  No global weighting fixes these without demoting phrase matches
+  everywhere. They are recorded, not fought.
+
+The threshold search was re-run at this size. The plateau is 5 to 30,
+so `LOCAL_MIN_SCORE = 9` is unchanged and still has margin.
 
 ## Open technical follow-ups
 
@@ -58,6 +73,11 @@ letting deferred work rot into an undocumented gap.
 - The review tool generates with `claude-opus-5` at effort `high`. The icon
   project found Opus and Sonnet mixed on quality; if cost becomes a problem,
   generate slot A with Opus and B/C with Sonnet, and let the ear decide.
+- A compound word in a phrase is unreachable from its two-word query
+  form: "snowfall" cannot be found by "snow falling" through the index
+  alone. Both entries carry the split form as a keyword instead. A
+  general fix needs a compound dictionary; revisit only if more of the
+  set hits it.
 - `scripts/review/rejected.jsonl` is append-only and committed on purpose: it
   is the memory that stops a later round from repeating a rejected idea.
   Never rewrite it to tidy it up.

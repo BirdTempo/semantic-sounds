@@ -4,14 +4,35 @@
     "phrase": "water pour",
     "category": "food-kitchen",
     "concept": "A soft, sustained trickle of water pouring steadily, like filling a glass.",
-    "keywords": ["water", "pour", "stream", "faucet", "liquid", "fill", "splash", "drip"],
+    "keywords": [
+      "water",
+      "pour",
+      "stream",
+      "faucet",
+      "liquid",
+      "fill",
+      "splash",
+      "drip"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "noise", "color": "pink" },
-          "envelope": { "attackMs": 90, "decayMs": 100, "sustainLevel": 0.75, "sustainMs": 700, "releaseMs": 150 },
-          "filter": { "type": "lowpass", "cutoffHz": 900 },
-          "gain": 1.0
+          "source": {
+            "type": "noise",
+            "color": "pink"
+          },
+          "envelope": {
+            "attackMs": 90,
+            "decayMs": 100,
+            "sustainLevel": 0.75,
+            "sustainMs": 700,
+            "releaseMs": 150
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 900
+          },
+          "gain": 1
         }
       ]
     }
@@ -21,18 +42,49 @@
     "phrase": "wine pour",
     "category": "food-kitchen",
     "concept": "A soft pour of wine with a low glug tone under a smooth trickle.",
-    "keywords": ["wine", "pour", "glug", "splash", "liquid", "glass", "trickle", "stream"],
+    "keywords": [
+      "wine",
+      "pour",
+      "glug",
+      "splash",
+      "liquid",
+      "glass",
+      "trickle",
+      "stream"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "noise", "color": "pink" },
-          "envelope": { "attackMs": 70, "decayMs": 80, "sustainLevel": 0.65, "sustainMs": 300, "releaseMs": 100 },
-          "filter": { "type": "lowpass", "cutoffHz": 800 },
+          "source": {
+            "type": "noise",
+            "color": "pink"
+          },
+          "envelope": {
+            "attackMs": 70,
+            "decayMs": 80,
+            "sustainLevel": 0.65,
+            "sustainMs": 300,
+            "releaseMs": 100
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 800
+          },
           "gain": 0.9
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 260 },
-          "envelope": { "attackMs": 60, "decayMs": 80, "sustainLevel": 0.3, "sustainMs": 250, "releaseMs": 100 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 260
+          },
+          "envelope": {
+            "attackMs": 60,
+            "decayMs": 80,
+            "sustainLevel": 0.3,
+            "sustainMs": 250,
+            "releaseMs": 100
+          },
           "gain": 0.35
         }
       ]
@@ -43,13 +95,34 @@
     "phrase": "fizz open",
     "category": "food-kitchen",
     "concept": "A quick, bright fizzy hiss right after a bottle or can opens.",
-    "keywords": ["fizz", "soda", "carbonation", "hiss", "bubble", "sparkling", "bottle", "can"],
+    "keywords": [
+      "fizz",
+      "soda",
+      "carbonation",
+      "hiss",
+      "bubble",
+      "sparkling",
+      "bottle",
+      "can"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "noise", "color": "white" },
-          "envelope": { "attackMs": 5, "decayMs": 40, "sustainLevel": 0.4, "sustainMs": 60, "releaseMs": 50 },
-          "filter": { "type": "highpass", "cutoffHz": 3000 },
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "envelope": {
+            "attackMs": 5,
+            "decayMs": 40,
+            "sustainLevel": 0.4,
+            "sustainMs": 60,
+            "releaseMs": 50
+          },
+          "filter": {
+            "type": "highpass",
+            "cutoffHz": 3000
+          },
           "gain": 0.95
         }
       ]
@@ -60,18 +133,53 @@
     "phrase": "cork pop",
     "category": "food-kitchen",
     "concept": "A quick, sharp cork pop with a crisp burst over a low resonant thump.",
-    "keywords": ["cork", "bottle", "champagne", "burst", "release", "snap", "uncork", "party"],
+    "keywords": [
+      "cork",
+      "bottle",
+      "champagne",
+      "burst",
+      "release",
+      "snap",
+      "uncork",
+      "party"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "noise", "color": "white" },
-          "envelope": { "attackMs": 2, "decayMs": 15, "sustainLevel": 0.2, "sustainMs": 6, "releaseMs": 20 },
-          "filter": { "type": "bandpass", "cutoffHz": 1200 },
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "envelope": {
+            "attackMs": 2,
+            "decayMs": 15,
+            "sustainLevel": 0.2,
+            "sustainMs": 6,
+            "releaseMs": 20
+          },
+          "filter": {
+            "type": "bandpass",
+            "cutoffHz": 1200
+          },
           "gain": 0.8
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 300, "pitchEnvelope": { "toHz": 250, "timeMs": 60 } },
-          "envelope": { "attackMs": 3, "decayMs": 30, "sustainLevel": 0.25, "sustainMs": 20, "releaseMs": 40 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 300,
+            "pitchEnvelope": {
+              "toHz": 250,
+              "timeMs": 60
+            }
+          },
+          "envelope": {
+            "attackMs": 3,
+            "decayMs": 30,
+            "sustainLevel": 0.25,
+            "sustainMs": 20,
+            "releaseMs": 40
+          },
           "gain": 0.5
         }
       ]
@@ -82,18 +190,49 @@
     "phrase": "glass clink",
     "category": "food-kitchen",
     "concept": "A quick, sharp, bright clink of two glasses tapping together.",
-    "keywords": ["glass", "clink", "toast", "cheers", "tap", "ring", "chime", "celebrate"],
+    "keywords": [
+      "glass",
+      "clink",
+      "toast",
+      "cheers",
+      "tap",
+      "ring",
+      "chime",
+      "celebrate"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1700 },
-          "envelope": { "attackMs": 3, "decayMs": 25, "sustainLevel": 0.3, "sustainMs": 15, "releaseMs": 30 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 1700
+          },
+          "envelope": {
+            "attackMs": 3,
+            "decayMs": 25,
+            "sustainLevel": 0.3,
+            "sustainMs": 15,
+            "releaseMs": 30
+          },
           "gain": 0.55
         },
         {
-          "source": { "type": "noise", "color": "white" },
-          "envelope": { "attackMs": 2, "decayMs": 10, "sustainLevel": 0.15, "sustainMs": 5, "releaseMs": 15 },
-          "filter": { "type": "bandpass", "cutoffHz": 3500 },
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "envelope": {
+            "attackMs": 2,
+            "decayMs": 10,
+            "sustainLevel": 0.15,
+            "sustainMs": 5,
+            "releaseMs": 15
+          },
+          "filter": {
+            "type": "bandpass",
+            "cutoffHz": 3500
+          },
           "gain": 0.35
         }
       ]
@@ -104,18 +243,48 @@
     "phrase": "ice in glass",
     "category": "food-kitchen",
     "concept": "A quick, sharp, bright clatter of ice cubes dropping into a glass.",
-    "keywords": ["ice", "cube", "glass", "drop", "clink", "cold", "drink", "clatter"],
+    "keywords": [
+      "ice",
+      "cube",
+      "glass",
+      "drop",
+      "cold",
+      "drink",
+      "clatter"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1300 },
-          "envelope": { "attackMs": 4, "decayMs": 20, "sustainLevel": 0.25, "sustainMs": 12, "releaseMs": 25 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 1300
+          },
+          "envelope": {
+            "attackMs": 4,
+            "decayMs": 20,
+            "sustainLevel": 0.25,
+            "sustainMs": 12,
+            "releaseMs": 25
+          },
           "gain": 0.5
         },
         {
-          "source": { "type": "noise", "color": "white" },
-          "envelope": { "attackMs": 2, "decayMs": 12, "sustainLevel": 0.2, "sustainMs": 6, "releaseMs": 18 },
-          "filter": { "type": "highpass", "cutoffHz": 5000 },
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "envelope": {
+            "attackMs": 2,
+            "decayMs": 12,
+            "sustainLevel": 0.2,
+            "sustainMs": 6,
+            "releaseMs": 18
+          },
+          "filter": {
+            "type": "highpass",
+            "cutoffHz": 5000
+          },
           "gain": 0.4
         }
       ]
@@ -126,18 +295,49 @@
     "phrase": "stir cup",
     "category": "food-kitchen",
     "concept": "A quick, soft tinkle of a spoon stirring gently inside a cup.",
-    "keywords": ["stir", "spoon", "cup", "tea", "coffee", "tinkle", "swirl", "mix"],
+    "keywords": [
+      "stir",
+      "spoon",
+      "cup",
+      "tea",
+      "coffee",
+      "tinkle",
+      "swirl",
+      "mix"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 900 },
-          "envelope": { "attackMs": 25, "decayMs": 50, "sustainLevel": 0.3, "sustainMs": 40, "releaseMs": 45 },
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 900
+          },
+          "envelope": {
+            "attackMs": 25,
+            "decayMs": 50,
+            "sustainLevel": 0.3,
+            "sustainMs": 40,
+            "releaseMs": 45
+          },
           "gain": 0.55
         },
         {
-          "source": { "type": "noise", "color": "white" },
-          "envelope": { "attackMs": 20, "decayMs": 30, "sustainLevel": 0.15, "sustainMs": 20, "releaseMs": 30 },
-          "filter": { "type": "bandpass", "cutoffHz": 2500 },
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "envelope": {
+            "attackMs": 20,
+            "decayMs": 30,
+            "sustainLevel": 0.15,
+            "sustainMs": 20,
+            "releaseMs": 30
+          },
+          "filter": {
+            "type": "bandpass",
+            "cutoffHz": 2500
+          },
           "gain": 0.25
         }
       ]
@@ -148,14 +348,35 @@
     "phrase": "sizzle start",
     "category": "food-kitchen",
     "concept": "A soft, gentle hiss building at the start of frying in a hot pan.",
-    "keywords": ["sizzle", "fry", "pan", "hiss", "cooking", "oil", "heat", "start"],
+    "keywords": [
+      "sizzle",
+      "fry",
+      "pan",
+      "hiss",
+      "cooking",
+      "oil",
+      "heat",
+      "start"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "noise", "color": "pink" },
-          "envelope": { "attackMs": 60, "decayMs": 80, "sustainLevel": 0.6, "sustainMs": 250, "releaseMs": 80 },
-          "filter": { "type": "lowpass", "cutoffHz": 3000 },
-          "gain": 1.0
+          "source": {
+            "type": "noise",
+            "color": "pink"
+          },
+          "envelope": {
+            "attackMs": 60,
+            "decayMs": 80,
+            "sustainLevel": 0.6,
+            "sustainMs": 250,
+            "releaseMs": 80
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 3000
+          },
+          "gain": 1
         }
       ]
     }
@@ -165,13 +386,34 @@
     "phrase": "pan fry",
     "category": "food-kitchen",
     "concept": "A long, sustained sizzling hiss of food frying steadily in a hot pan.",
-    "keywords": ["fry", "pan", "sizzle", "oil", "heat", "cooking", "food", "steady"],
+    "keywords": [
+      "fry",
+      "pan",
+      "sizzle",
+      "oil",
+      "heat",
+      "cooking",
+      "food",
+      "steady"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "noise", "color": "pink" },
-          "envelope": { "attackMs": 100, "decayMs": 150, "sustainLevel": 0.7, "sustainMs": 600, "releaseMs": 150 },
-          "filter": { "type": "lowpass", "cutoffHz": 2500 },
+          "source": {
+            "type": "noise",
+            "color": "pink"
+          },
+          "envelope": {
+            "attackMs": 100,
+            "decayMs": 150,
+            "sustainLevel": 0.7,
+            "sustainMs": 600,
+            "releaseMs": 150
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 2500
+          },
           "gain": 0.7
         }
       ]
@@ -182,18 +424,49 @@
     "phrase": "deep fry",
     "category": "food-kitchen",
     "concept": "A long, sustained, bubbling sizzle of food frying in hot oil.",
-    "keywords": ["fry", "oil", "bubble", "hot", "crispy", "cooking", "batter", "fryer"],
+    "keywords": [
+      "fry",
+      "oil",
+      "bubble",
+      "hot",
+      "crispy",
+      "cooking",
+      "batter",
+      "fryer"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "noise", "color": "white" },
-          "envelope": { "attackMs": 120, "decayMs": 150, "sustainLevel": 0.7, "sustainMs": 650, "releaseMs": 150 },
-          "filter": { "type": "lowpass", "cutoffHz": 2000 },
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "envelope": {
+            "attackMs": 120,
+            "decayMs": 150,
+            "sustainLevel": 0.7,
+            "sustainMs": 650,
+            "releaseMs": 150
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 2000
+          },
           "gain": 0.95
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 220 },
-          "envelope": { "attackMs": 100, "decayMs": 100, "sustainLevel": 0.25, "sustainMs": 600, "releaseMs": 150 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 220
+          },
+          "envelope": {
+            "attackMs": 100,
+            "decayMs": 100,
+            "sustainLevel": 0.25,
+            "sustainMs": 600,
+            "releaseMs": 150
+          },
           "gain": 0.3
         }
       ]
@@ -204,18 +477,49 @@
     "phrase": "boil rolling",
     "category": "food-kitchen",
     "concept": "A long, sustained rolling boil with steady bubbling water at a full boil.",
-    "keywords": ["boil", "bubble", "water", "pot", "roll", "cook", "steam", "heat"],
+    "keywords": [
+      "boil",
+      "bubble",
+      "water",
+      "pot",
+      "roll",
+      "cook",
+      "steam",
+      "heat"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "noise", "color": "white" },
-          "envelope": { "attackMs": 80, "decayMs": 120, "sustainLevel": 0.65, "sustainMs": 600, "releaseMs": 120 },
-          "filter": { "type": "lowpass", "cutoffHz": 1800 },
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "envelope": {
+            "attackMs": 80,
+            "decayMs": 120,
+            "sustainLevel": 0.65,
+            "sustainMs": 600,
+            "releaseMs": 120
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 1800
+          },
           "gain": 0.95
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 240 },
-          "envelope": { "attackMs": 80, "decayMs": 100, "sustainLevel": 0.3, "sustainMs": 600, "releaseMs": 120 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 240
+          },
+          "envelope": {
+            "attackMs": 80,
+            "decayMs": 100,
+            "sustainLevel": 0.3,
+            "sustainMs": 600,
+            "releaseMs": 120
+          },
           "gain": 0.3
         }
       ]
@@ -226,14 +530,35 @@
     "phrase": "simmer",
     "category": "food-kitchen",
     "concept": "A soft, gentle simmer with a low, quiet bubbling texture.",
-    "keywords": ["simmer", "bubble", "low", "gentle", "pot", "quiet", "warm", "cook"],
+    "keywords": [
+      "simmer",
+      "bubble",
+      "low",
+      "gentle",
+      "pot",
+      "quiet",
+      "warm",
+      "cook"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "noise", "color": "pink" },
-          "envelope": { "attackMs": 90, "decayMs": 120, "sustainLevel": 0.55, "sustainMs": 450, "releaseMs": 120 },
-          "filter": { "type": "lowpass", "cutoffHz": 1200 },
-          "gain": 1.0
+          "source": {
+            "type": "noise",
+            "color": "pink"
+          },
+          "envelope": {
+            "attackMs": 90,
+            "decayMs": 120,
+            "sustainLevel": 0.55,
+            "sustainMs": 450,
+            "releaseMs": 120
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 1200
+          },
+          "gain": 1
         }
       ]
     }
@@ -243,18 +568,49 @@
     "phrase": "chop board",
     "category": "food-kitchen",
     "concept": "A quick, sharp knock of a knife chopping steadily on a wooden board.",
-    "keywords": ["chop", "knife", "board", "wood", "cutting", "dice", "prep", "tap"],
+    "keywords": [
+      "chop",
+      "knife",
+      "board",
+      "wood",
+      "cutting",
+      "dice",
+      "prep",
+      "tap"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 260 },
-          "envelope": { "attackMs": 6, "decayMs": 30, "sustainLevel": 0.25, "sustainMs": 15, "releaseMs": 35 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 260
+          },
+          "envelope": {
+            "attackMs": 6,
+            "decayMs": 30,
+            "sustainLevel": 0.25,
+            "sustainMs": 15,
+            "releaseMs": 35
+          },
           "gain": 0.55
         },
         {
-          "source": { "type": "noise", "color": "white" },
-          "envelope": { "attackMs": 5, "decayMs": 15, "sustainLevel": 0.2, "sustainMs": 8, "releaseMs": 25 },
-          "filter": { "type": "bandpass", "cutoffHz": 900 },
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "envelope": {
+            "attackMs": 5,
+            "decayMs": 15,
+            "sustainLevel": 0.2,
+            "sustainMs": 8,
+            "releaseMs": 25
+          },
+          "filter": {
+            "type": "bandpass",
+            "cutoffHz": 900
+          },
           "gain": 0.5
         }
       ]
@@ -265,13 +621,34 @@
     "phrase": "knife slice",
     "category": "food-kitchen",
     "concept": "A quick, sharp, dry slice of a knife cutting cleanly through food.",
-    "keywords": ["knife", "slice", "cut", "blade", "swipe", "produce", "fresh", "prep"],
+    "keywords": [
+      "knife",
+      "slice",
+      "cut",
+      "blade",
+      "swipe",
+      "produce",
+      "fresh",
+      "prep"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "noise", "color": "white" },
-          "envelope": { "attackMs": 2, "decayMs": 15, "sustainLevel": 0.2, "sustainMs": 5, "releaseMs": 15 },
-          "filter": { "type": "highpass", "cutoffHz": 3000 },
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "envelope": {
+            "attackMs": 2,
+            "decayMs": 15,
+            "sustainLevel": 0.2,
+            "sustainMs": 5,
+            "releaseMs": 15
+          },
+          "filter": {
+            "type": "highpass",
+            "cutoffHz": 3000
+          },
           "gain": 0.85
         }
       ]
@@ -282,18 +659,50 @@
     "phrase": "grinder",
     "category": "food-kitchen",
     "concept": "A long, sustained buzzing whir of a grinder running steadily.",
-    "keywords": ["grinder", "grind", "buzz", "whir", "motor", "coffee", "spice", "machine"],
+    "keywords": [
+      "grinder",
+      "grind",
+      "buzz",
+      "whir",
+      "motor",
+      "coffee",
+      "spice",
+      "machine"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 300 },
-          "envelope": { "attackMs": 80, "decayMs": 100, "sustainLevel": 0.35, "sustainMs": 600, "releaseMs": 120 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 300
+          },
+          "envelope": {
+            "attackMs": 80,
+            "decayMs": 100,
+            "sustainLevel": 0.35,
+            "sustainMs": 600,
+            "releaseMs": 120
+          },
           "gain": 0.4
         },
         {
-          "source": { "type": "oscillator", "wave": "square", "freqHz": 300 },
-          "envelope": { "attackMs": 80, "decayMs": 100, "sustainLevel": 0.25, "sustainMs": 600, "releaseMs": 120 },
-          "filter": { "type": "lowpass", "cutoffHz": 1200 },
+          "source": {
+            "type": "oscillator",
+            "wave": "square",
+            "freqHz": 300
+          },
+          "envelope": {
+            "attackMs": 80,
+            "decayMs": 100,
+            "sustainLevel": 0.25,
+            "sustainMs": 600,
+            "releaseMs": 120
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 1200
+          },
           "gain": 0.25
         }
       ]
@@ -304,18 +713,58 @@
     "phrase": "blender",
     "category": "food-kitchen",
     "concept": "A long, sustained, rising whir as a blender motor spins up to speed.",
-    "keywords": ["blender", "blend", "whir", "motor", "spin", "mix", "puree", "appliance"],
+    "keywords": [
+      "blender",
+      "blend",
+      "whir",
+      "motor",
+      "spin",
+      "mix",
+      "puree",
+      "appliance"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 400, "pitchEnvelope": { "toHz": 650, "timeMs": 900 } },
-          "envelope": { "attackMs": 100, "decayMs": 100, "sustainLevel": 0.4, "sustainMs": 550, "releaseMs": 150 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 400,
+            "pitchEnvelope": {
+              "toHz": 650,
+              "timeMs": 900
+            }
+          },
+          "envelope": {
+            "attackMs": 100,
+            "decayMs": 100,
+            "sustainLevel": 0.4,
+            "sustainMs": 550,
+            "releaseMs": 150
+          },
           "gain": 0.45
         },
         {
-          "source": { "type": "oscillator", "wave": "saw", "freqHz": 400, "pitchEnvelope": { "toHz": 650, "timeMs": 900 } },
-          "envelope": { "attackMs": 100, "decayMs": 100, "sustainLevel": 0.2, "sustainMs": 550, "releaseMs": 150 },
-          "filter": { "type": "lowpass", "cutoffHz": 900 },
+          "source": {
+            "type": "oscillator",
+            "wave": "saw",
+            "freqHz": 400,
+            "pitchEnvelope": {
+              "toHz": 650,
+              "timeMs": 900
+            }
+          },
+          "envelope": {
+            "attackMs": 100,
+            "decayMs": 100,
+            "sustainLevel": 0.2,
+            "sustainMs": 550,
+            "releaseMs": 150
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 900
+          },
           "gain": 0.15
         }
       ]
@@ -326,14 +775,35 @@
     "phrase": "whisk",
     "category": "food-kitchen",
     "concept": "A quick, soft whisking swish with a light airy noise texture.",
-    "keywords": ["whisk", "whip", "egg", "batter", "beat", "fluff", "mix", "bowl"],
+    "keywords": [
+      "whisk",
+      "whip",
+      "egg",
+      "batter",
+      "beat",
+      "fluff",
+      "mix",
+      "bowl"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "noise", "color": "white" },
-          "envelope": { "attackMs": 15, "decayMs": 35, "sustainLevel": 0.6, "sustainMs": 60, "releaseMs": 35 },
-          "filter": { "type": "bandpass", "cutoffHz": 2000 },
-          "gain": 1.0
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "envelope": {
+            "attackMs": 15,
+            "decayMs": 35,
+            "sustainLevel": 0.6,
+            "sustainMs": 60,
+            "releaseMs": 35
+          },
+          "filter": {
+            "type": "bandpass",
+            "cutoffHz": 2000
+          },
+          "gain": 1
         }
       ]
     }
@@ -343,12 +813,31 @@
     "phrase": "microwave beep",
     "category": "food-kitchen",
     "concept": "A quick, sharp, bright beep like a microwave finishing its cycle.",
-    "keywords": ["microwave", "beep", "timer", "done", "finish", "alert", "oven", "ready"],
+    "keywords": [
+      "microwave",
+      "beep",
+      "timer",
+      "done",
+      "finish",
+      "alert",
+      "oven",
+      "ready"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1600 },
-          "envelope": { "attackMs": 4, "decayMs": 30, "sustainLevel": 0.3, "sustainMs": 30, "releaseMs": 40 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 1600
+          },
+          "envelope": {
+            "attackMs": 4,
+            "decayMs": 30,
+            "sustainLevel": 0.3,
+            "sustainMs": 30,
+            "releaseMs": 40
+          },
           "gain": 0.6
         }
       ]

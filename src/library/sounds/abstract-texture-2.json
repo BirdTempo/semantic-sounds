@@ -4,12 +4,34 @@
     "phrase": "sweep up",
     "category": "abstract-texture",
     "concept": "A short, rising sweep with a sharp attack that glides upward in pitch.",
-    "keywords": ["sweep", "ascend", "rise", "upward", "transition", "glide", "tone"],
+    "keywords": [
+      "sweep",
+      "ascend",
+      "rise",
+      "upward",
+      "transition",
+      "glide",
+      "tone"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 400, "pitchEnvelope": { "toHz": 900, "timeMs": 120 } },
-          "envelope": { "attackMs": 8, "decayMs": 30, "sustainLevel": 0.35, "sustainMs": 50, "releaseMs": 62 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 400,
+            "pitchEnvelope": {
+              "toHz": 900,
+              "timeMs": 120
+            }
+          },
+          "envelope": {
+            "attackMs": 8,
+            "decayMs": 30,
+            "sustainLevel": 0.35,
+            "sustainMs": 50,
+            "releaseMs": 62
+          },
           "gain": 0.62
         }
       ]
@@ -20,12 +42,34 @@
     "phrase": "sweep down",
     "category": "abstract-texture",
     "concept": "A smooth, falling sweep with a gentle attack that glides downward in pitch.",
-    "keywords": ["sweep", "descend", "drop", "downward", "transition", "glide", "tone"],
+    "keywords": [
+      "sweep",
+      "descend",
+      "drop",
+      "downward",
+      "transition",
+      "glide",
+      "tone"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 900, "pitchEnvelope": { "toHz": 400, "timeMs": 220 } },
-          "envelope": { "attackMs": 40, "decayMs": 80, "sustainLevel": 0.35, "sustainMs": 100, "releaseMs": 80 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 900,
+            "pitchEnvelope": {
+              "toHz": 400,
+              "timeMs": 220
+            }
+          },
+          "envelope": {
+            "attackMs": 40,
+            "decayMs": 80,
+            "sustainLevel": 0.35,
+            "sustainMs": 100,
+            "releaseMs": 80
+          },
           "gain": 0.58
         }
       ]
@@ -36,12 +80,30 @@
     "phrase": "drone low",
     "category": "abstract-texture",
     "concept": "A long, sustained low drone with a soft attack that hums steadily underneath.",
-    "keywords": ["drone", "low", "hum", "sustain", "background", "ambient", "bass"],
+    "keywords": [
+      "drone",
+      "low",
+      "hum",
+      "sustain",
+      "background",
+      "ambient",
+      "bass"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 180 },
-          "envelope": { "attackMs": 200, "decayMs": 100, "sustainLevel": 0.55, "sustainMs": 550, "releaseMs": 150 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 180
+          },
+          "envelope": {
+            "attackMs": 200,
+            "decayMs": 100,
+            "sustainLevel": 0.55,
+            "sustainMs": 550,
+            "releaseMs": 150
+          },
           "gain": 0.4
         }
       ]
@@ -52,17 +114,45 @@
     "phrase": "drone mid",
     "category": "abstract-texture",
     "concept": "A long, sustained mid drone built from two close tones that shift against each other.",
-    "keywords": ["drone", "mid", "hum", "sustain", "background", "ambient", "shimmer"],
+    "keywords": [
+      "drone",
+      "mid",
+      "hum",
+      "sustain",
+      "background",
+      "ambient",
+      "shimmer"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 350 },
-          "envelope": { "attackMs": 200, "decayMs": 100, "sustainLevel": 0.5, "sustainMs": 450, "releaseMs": 150 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 350
+          },
+          "envelope": {
+            "attackMs": 200,
+            "decayMs": 100,
+            "sustainLevel": 0.5,
+            "sustainMs": 450,
+            "releaseMs": 150
+          },
           "gain": 0.3
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 354 },
-          "envelope": { "attackMs": 200, "decayMs": 100, "sustainLevel": 0.5, "sustainMs": 450, "releaseMs": 150 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 354
+          },
+          "envelope": {
+            "attackMs": 200,
+            "decayMs": 100,
+            "sustainLevel": 0.5,
+            "sustainMs": 450,
+            "releaseMs": 150
+          },
           "gain": 0.3
         }
       ]
@@ -73,12 +163,30 @@
     "phrase": "pad swell",
     "category": "abstract-texture",
     "concept": "A soft pad swell with a gentle attack that builds slowly before fading away.",
-    "keywords": ["pad", "swell", "build", "rise", "ambient", "texture", "volume"],
+    "keywords": [
+      "pad",
+      "swell",
+      "build",
+      "rise",
+      "ambient",
+      "texture",
+      "volume"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 450 },
-          "envelope": { "attackMs": 320, "decayMs": 100, "sustainLevel": 0.4, "sustainMs": 200, "releaseMs": 80 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 450
+          },
+          "envelope": {
+            "attackMs": 320,
+            "decayMs": 100,
+            "sustainLevel": 0.4,
+            "sustainMs": 200,
+            "releaseMs": 80
+          },
           "gain": 0.42
         }
       ]
@@ -89,17 +197,45 @@
     "phrase": "pad fade",
     "category": "abstract-texture",
     "concept": "A pad tone with a moderate attack that fades softly into silence over time.",
-    "keywords": ["pad", "fade", "decay", "ambient", "texture", "dissolve", "settle"],
+    "keywords": [
+      "pad",
+      "fade",
+      "decay",
+      "ambient",
+      "texture",
+      "dissolve",
+      "settle"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500 },
-          "envelope": { "attackMs": 80, "decayMs": 80, "sustainLevel": 0.35, "sustainMs": 100, "releaseMs": 300 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 500
+          },
+          "envelope": {
+            "attackMs": 80,
+            "decayMs": 80,
+            "sustainLevel": 0.35,
+            "sustainMs": 100,
+            "releaseMs": 300
+          },
           "gain": 0.42
         },
         {
-          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 500 },
-          "envelope": { "attackMs": 80, "decayMs": 80, "sustainLevel": 0.3, "sustainMs": 100, "releaseMs": 300 },
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 500
+          },
+          "envelope": {
+            "attackMs": 80,
+            "decayMs": 80,
+            "sustainLevel": 0.3,
+            "sustainMs": 100,
+            "releaseMs": 300
+          },
           "gain": 0.32
         }
       ]
@@ -110,17 +246,45 @@
     "phrase": "pulse slow",
     "category": "abstract-texture",
     "concept": "A slow pulsing texture made from two close tones that beat steadily against each other.",
-    "keywords": ["pulse", "beat", "slow", "rhythm", "texture", "wave", "cycle"],
+    "keywords": [
+      "pulse",
+      "beat",
+      "slow",
+      "rhythm",
+      "texture",
+      "wave",
+      "cycle"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 440 },
-          "envelope": { "attackMs": 15, "decayMs": 50, "sustainLevel": 0.4, "sustainMs": 700, "releaseMs": 135 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 440
+          },
+          "envelope": {
+            "attackMs": 15,
+            "decayMs": 50,
+            "sustainLevel": 0.4,
+            "sustainMs": 700,
+            "releaseMs": 135
+          },
           "gain": 0.44
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 443 },
-          "envelope": { "attackMs": 15, "decayMs": 50, "sustainLevel": 0.4, "sustainMs": 700, "releaseMs": 135 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 443
+          },
+          "envelope": {
+            "attackMs": 15,
+            "decayMs": 50,
+            "sustainLevel": 0.4,
+            "sustainMs": 700,
+            "releaseMs": 135
+          },
           "gain": 0.44
         }
       ]
@@ -131,17 +295,45 @@
     "phrase": "pulse fast",
     "category": "abstract-texture",
     "concept": "A fast pulsing texture made from two close tones that beat rapidly against each other.",
-    "keywords": ["pulse", "beat", "fast", "rhythm", "texture", "wave", "cycle"],
+    "keywords": [
+      "pulse",
+      "beat",
+      "fast",
+      "rhythm",
+      "texture",
+      "wave",
+      "cycle"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 440 },
-          "envelope": { "attackMs": 10, "decayMs": 30, "sustainLevel": 0.4, "sustainMs": 260, "releaseMs": 100 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 440
+          },
+          "envelope": {
+            "attackMs": 10,
+            "decayMs": 30,
+            "sustainLevel": 0.4,
+            "sustainMs": 260,
+            "releaseMs": 100
+          },
           "gain": 0.46
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 460 },
-          "envelope": { "attackMs": 10, "decayMs": 30, "sustainLevel": 0.4, "sustainMs": 260, "releaseMs": 100 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 460
+          },
+          "envelope": {
+            "attackMs": 10,
+            "decayMs": 30,
+            "sustainLevel": 0.4,
+            "sustainMs": 260,
+            "releaseMs": 100
+          },
           "gain": 0.46
         }
       ]
@@ -152,19 +344,53 @@
     "phrase": "throb",
     "category": "abstract-texture",
     "concept": "A low, rhythmic throb built from two close bass tones that pulse against each other.",
-    "keywords": ["throb", "beat", "bass", "rhythm", "pulse", "low", "heartbeat"],
+    "keywords": [
+      "throb",
+      "beat",
+      "bass",
+      "rhythm",
+      "pulse",
+      "low",
+      "heartbeat"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 220 },
-          "envelope": { "attackMs": 20, "decayMs": 60, "sustainLevel": 0.5, "sustainMs": 400, "releaseMs": 170 },
-          "filter": { "type": "lowpass", "cutoffHz": 800 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 220
+          },
+          "envelope": {
+            "attackMs": 20,
+            "decayMs": 60,
+            "sustainLevel": 0.5,
+            "sustainMs": 400,
+            "releaseMs": 170
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 800
+          },
           "gain": 0.33
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 224 },
-          "envelope": { "attackMs": 20, "decayMs": 60, "sustainLevel": 0.5, "sustainMs": 400, "releaseMs": 170 },
-          "filter": { "type": "lowpass", "cutoffHz": 800 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 224
+          },
+          "envelope": {
+            "attackMs": 20,
+            "decayMs": 60,
+            "sustainLevel": 0.5,
+            "sustainMs": 400,
+            "releaseMs": 170
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 800
+          },
           "gain": 0.33
         }
       ]
@@ -175,17 +401,45 @@
     "phrase": "flutter",
     "category": "abstract-texture",
     "concept": "A quick, fluttering texture made from two close high tones that beat rapidly.",
-    "keywords": ["flutter", "beat", "fast", "texture", "wave", "tremor", "shimmer"],
+    "keywords": [
+      "flutter",
+      "beat",
+      "fast",
+      "texture",
+      "wave",
+      "tremor",
+      "shimmer"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 700 },
-          "envelope": { "attackMs": 6, "decayMs": 14, "sustainLevel": 0.35, "sustainMs": 100, "releaseMs": 60 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 700
+          },
+          "envelope": {
+            "attackMs": 6,
+            "decayMs": 14,
+            "sustainLevel": 0.35,
+            "sustainMs": 100,
+            "releaseMs": 60
+          },
           "gain": 0.46
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 716 },
-          "envelope": { "attackMs": 6, "decayMs": 14, "sustainLevel": 0.35, "sustainMs": 100, "releaseMs": 60 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 716
+          },
+          "envelope": {
+            "attackMs": 6,
+            "decayMs": 14,
+            "sustainLevel": 0.35,
+            "sustainMs": 100,
+            "releaseMs": 60
+          },
           "gain": 0.46
         }
       ]
@@ -196,17 +450,45 @@
     "phrase": "tremolo",
     "category": "abstract-texture",
     "concept": "A tremolo texture made from two close mid tones whose beating creates a rhythmic wave.",
-    "keywords": ["tremolo", "beat", "wave", "modulate", "texture", "oscillate", "rhythm"],
+    "keywords": [
+      "tremolo",
+      "beat",
+      "wave",
+      "modulate",
+      "texture",
+      "oscillate",
+      "rhythm"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500 },
-          "envelope": { "attackMs": 70, "decayMs": 80, "sustainLevel": 0.4, "sustainMs": 300, "releaseMs": 150 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 500
+          },
+          "envelope": {
+            "attackMs": 70,
+            "decayMs": 80,
+            "sustainLevel": 0.4,
+            "sustainMs": 300,
+            "releaseMs": 150
+          },
           "gain": 0.45
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 508 },
-          "envelope": { "attackMs": 70, "decayMs": 80, "sustainLevel": 0.4, "sustainMs": 300, "releaseMs": 150 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 508
+          },
+          "envelope": {
+            "attackMs": 70,
+            "decayMs": 80,
+            "sustainLevel": 0.4,
+            "sustainMs": 300,
+            "releaseMs": 150
+          },
           "gain": 0.45
         }
       ]
@@ -217,17 +499,53 @@
     "phrase": "warble",
     "category": "abstract-texture",
     "concept": "A warbling texture from two tones that slide past each other in pitch.",
-    "keywords": ["warble", "waver", "pitch", "shift", "texture", "slide", "modulate"],
+    "keywords": [
+      "warble",
+      "waver",
+      "pitch",
+      "shift",
+      "texture",
+      "slide",
+      "modulate"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 550, "pitchEnvelope": { "toHz": 650, "timeMs": 300 } },
-          "envelope": { "attackMs": 30, "decayMs": 60, "sustainLevel": 0.35, "sustainMs": 120, "releaseMs": 90 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 550,
+            "pitchEnvelope": {
+              "toHz": 650,
+              "timeMs": 300
+            }
+          },
+          "envelope": {
+            "attackMs": 30,
+            "decayMs": 60,
+            "sustainLevel": 0.35,
+            "sustainMs": 120,
+            "releaseMs": 90
+          },
           "gain": 0.45
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 650, "pitchEnvelope": { "toHz": 550, "timeMs": 300 } },
-          "envelope": { "attackMs": 30, "decayMs": 60, "sustainLevel": 0.35, "sustainMs": 120, "releaseMs": 90 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 650,
+            "pitchEnvelope": {
+              "toHz": 550,
+              "timeMs": 300
+            }
+          },
+          "envelope": {
+            "attackMs": 30,
+            "decayMs": 60,
+            "sustainLevel": 0.35,
+            "sustainMs": 120,
+            "releaseMs": 90
+          },
           "gain": 0.45
         }
       ]
@@ -238,19 +556,61 @@
     "phrase": "wobble",
     "category": "abstract-texture",
     "concept": "A wobbling texture from two low tones that slowly cross in pitch.",
-    "keywords": ["wobble", "waver", "pitch", "shift", "texture", "slide", "low"],
+    "keywords": [
+      "wobble",
+      "waver",
+      "pitch",
+      "shift",
+      "texture",
+      "slide",
+      "low"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 350, "pitchEnvelope": { "toHz": 450, "timeMs": 500 } },
-          "envelope": { "attackMs": 60, "decayMs": 100, "sustainLevel": 0.35, "sustainMs": 200, "releaseMs": 140 },
-          "filter": { "type": "lowpass", "cutoffHz": 700 },
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 350,
+            "pitchEnvelope": {
+              "toHz": 450,
+              "timeMs": 500
+            }
+          },
+          "envelope": {
+            "attackMs": 60,
+            "decayMs": 100,
+            "sustainLevel": 0.35,
+            "sustainMs": 200,
+            "releaseMs": 140
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 700
+          },
           "gain": 0.48
         },
         {
-          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 450, "pitchEnvelope": { "toHz": 350, "timeMs": 500 } },
-          "envelope": { "attackMs": 60, "decayMs": 100, "sustainLevel": 0.35, "sustainMs": 200, "releaseMs": 140 },
-          "filter": { "type": "lowpass", "cutoffHz": 700 },
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 450,
+            "pitchEnvelope": {
+              "toHz": 350,
+              "timeMs": 500
+            }
+          },
+          "envelope": {
+            "attackMs": 60,
+            "decayMs": 100,
+            "sustainLevel": 0.35,
+            "sustainMs": 200,
+            "releaseMs": 140
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 700
+          },
           "gain": 0.48
         }
       ]
@@ -261,18 +621,48 @@
     "phrase": "glitch",
     "category": "abstract-texture",
     "concept": "A quick, glitchy burst combining noise and a sharp tone for a digital error.",
-    "keywords": ["glitch", "error", "digital", "broken", "noise", "malfunction", "artifact"],
+    "keywords": [
+      "glitch",
+      "error",
+      "digital",
+      "broken",
+      "noise",
+      "malfunction",
+      "artifact"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "noise", "color": "white" },
-          "envelope": { "attackMs": 3, "decayMs": 15, "sustainLevel": 0.2, "sustainMs": 20, "releaseMs": 25 },
-          "filter": { "type": "highpass", "cutoffHz": 2000 },
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "envelope": {
+            "attackMs": 3,
+            "decayMs": 15,
+            "sustainLevel": 0.2,
+            "sustainMs": 20,
+            "releaseMs": 25
+          },
+          "filter": {
+            "type": "highpass",
+            "cutoffHz": 2000
+          },
           "gain": 0.4
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 900 },
-          "envelope": { "attackMs": 3, "decayMs": 10, "sustainLevel": 0.2, "sustainMs": 10, "releaseMs": 20 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 900
+          },
+          "envelope": {
+            "attackMs": 3,
+            "decayMs": 10,
+            "sustainLevel": 0.2,
+            "sustainMs": 10,
+            "releaseMs": 20
+          },
           "gain": 0.5
         }
       ]
@@ -283,18 +673,48 @@
     "phrase": "stutter",
     "category": "abstract-texture",
     "concept": "A short, stuttering burst that combines filtered noise with a clipped tone.",
-    "keywords": ["stutter", "jerky", "broken", "noise", "texture", "choppy", "interrupt"],
+    "keywords": [
+      "stutter",
+      "jerky",
+      "broken",
+      "noise",
+      "texture",
+      "choppy",
+      "interrupt"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "noise", "color": "white" },
-          "envelope": { "attackMs": 3, "decayMs": 12, "sustainLevel": 0.2, "sustainMs": 15, "releaseMs": 20 },
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "envelope": {
+            "attackMs": 3,
+            "decayMs": 12,
+            "sustainLevel": 0.2,
+            "sustainMs": 15,
+            "releaseMs": 20
+          },
           "gain": 0.42
         },
         {
-          "source": { "type": "oscillator", "wave": "square", "freqHz": 500 },
-          "envelope": { "attackMs": 3, "decayMs": 10, "sustainLevel": 0.15, "sustainMs": 10, "releaseMs": 20 },
-          "filter": { "type": "lowpass", "cutoffHz": 600 },
+          "source": {
+            "type": "oscillator",
+            "wave": "square",
+            "freqHz": 500
+          },
+          "envelope": {
+            "attackMs": 3,
+            "decayMs": 10,
+            "sustainLevel": 0.15,
+            "sustainMs": 10,
+            "releaseMs": 20
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 600
+          },
           "gain": 0.32
         }
       ]
@@ -305,18 +725,49 @@
     "phrase": "bit crush",
     "category": "abstract-texture",
     "concept": "A gritty bit-crushed tone pairing a clean pitch with a filtered square texture.",
-    "keywords": ["crush", "gritty", "digital", "lofi", "distort", "texture", "aliased"],
+    "keywords": [
+      "crush",
+      "gritty",
+      "digital",
+      "lofi",
+      "distort",
+      "texture",
+      "aliased"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500 },
-          "envelope": { "attackMs": 10, "decayMs": 40, "sustainLevel": 0.35, "sustainMs": 50, "releaseMs": 50 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 500
+          },
+          "envelope": {
+            "attackMs": 10,
+            "decayMs": 40,
+            "sustainLevel": 0.35,
+            "sustainMs": 50,
+            "releaseMs": 50
+          },
           "gain": 0.33
         },
         {
-          "source": { "type": "oscillator", "wave": "square", "freqHz": 500 },
-          "envelope": { "attackMs": 10, "decayMs": 40, "sustainLevel": 0.2, "sustainMs": 50, "releaseMs": 50 },
-          "filter": { "type": "lowpass", "cutoffHz": 900 },
+          "source": {
+            "type": "oscillator",
+            "wave": "square",
+            "freqHz": 500
+          },
+          "envelope": {
+            "attackMs": 10,
+            "decayMs": 40,
+            "sustainLevel": 0.2,
+            "sustainMs": 50,
+            "releaseMs": 50
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 900
+          },
           "gain": 0.19
         }
       ]
@@ -327,12 +778,29 @@
     "phrase": "static burst",
     "category": "abstract-texture",
     "concept": "A short, sharp burst of static noise with an abrupt attack.",
-    "keywords": ["static", "burst", "noise", "crackle", "abrupt", "texture", "radio"],
+    "keywords": [
+      "static",
+      "burst",
+      "noise",
+      "crackle",
+      "abrupt",
+      "texture",
+      "radio"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "noise", "color": "white" },
-          "envelope": { "attackMs": 3, "decayMs": 20, "sustainLevel": 0.25, "sustainMs": 17, "releaseMs": 30 },
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "envelope": {
+            "attackMs": 3,
+            "decayMs": 20,
+            "sustainLevel": 0.25,
+            "sustainMs": 17,
+            "releaseMs": 30
+          },
           "gain": 0.75
         }
       ]
@@ -343,13 +811,33 @@
     "phrase": "noise wash",
     "category": "abstract-texture",
     "concept": "A long, sustained wash of filtered pink noise that swells and settles softly.",
-    "keywords": ["noise", "wash", "texture", "ambient", "background", "filtered", "swell"],
+    "keywords": [
+      "noise",
+      "wash",
+      "texture",
+      "ambient",
+      "background",
+      "filtered",
+      "swell"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "noise", "color": "pink" },
-          "envelope": { "attackMs": 200, "decayMs": 150, "sustainLevel": 0.45, "sustainMs": 550, "releaseMs": 200 },
-          "filter": { "type": "lowpass", "cutoffHz": 600 },
+          "source": {
+            "type": "noise",
+            "color": "pink"
+          },
+          "envelope": {
+            "attackMs": 200,
+            "decayMs": 150,
+            "sustainLevel": 0.45,
+            "sustainMs": 550,
+            "releaseMs": 200
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 600
+          },
           "gain": 0.85
         }
       ]
@@ -360,13 +848,33 @@
     "phrase": "air hiss",
     "category": "abstract-texture",
     "concept": "A soft, airy hiss of high-passed white noise with a gentle rise and fall.",
-    "keywords": ["hiss", "air", "breath", "noise", "texture", "airy", "whisper"],
+    "keywords": [
+      "hiss",
+      "air",
+      "breath",
+      "noise",
+      "texture",
+      "airy",
+      "whisper"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "noise", "color": "white" },
-          "envelope": { "attackMs": 100, "decayMs": 80, "sustainLevel": 0.35, "sustainMs": 200, "releaseMs": 120 },
-          "filter": { "type": "highpass", "cutoffHz": 3000 },
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "envelope": {
+            "attackMs": 100,
+            "decayMs": 80,
+            "sustainLevel": 0.35,
+            "sustainMs": 200,
+            "releaseMs": 120
+          },
+          "filter": {
+            "type": "highpass",
+            "cutoffHz": 3000
+          },
           "gain": 0.9
         }
       ]
@@ -377,18 +885,48 @@
     "phrase": "breath tone",
     "category": "abstract-texture",
     "concept": "A soft breath tone blending airy noise with a gentle low tone underneath.",
-    "keywords": ["breath", "air", "whisper", "tone", "texture", "exhale", "airy"],
+    "keywords": [
+      "breath",
+      "air",
+      "whisper",
+      "tone",
+      "texture",
+      "exhale",
+      "airy"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "noise", "color": "pink" },
-          "envelope": { "attackMs": 150, "decayMs": 100, "sustainLevel": 0.3, "sustainMs": 200, "releaseMs": 150 },
-          "filter": { "type": "lowpass", "cutoffHz": 400 },
+          "source": {
+            "type": "noise",
+            "color": "pink"
+          },
+          "envelope": {
+            "attackMs": 150,
+            "decayMs": 100,
+            "sustainLevel": 0.3,
+            "sustainMs": 200,
+            "releaseMs": 150
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 400
+          },
           "gain": 0.55
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 300 },
-          "envelope": { "attackMs": 150, "decayMs": 100, "sustainLevel": 0.3, "sustainMs": 200, "releaseMs": 150 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 300
+          },
+          "envelope": {
+            "attackMs": 150,
+            "decayMs": 100,
+            "sustainLevel": 0.3,
+            "sustainMs": 200,
+            "releaseMs": 150
+          },
           "gain": 0.42
         }
       ]
@@ -399,17 +937,45 @@
     "phrase": "bell tone",
     "category": "abstract-texture",
     "concept": "A bell tone with a sharp attack and a long, ringing decay.",
-    "keywords": ["bell", "ring", "chime", "tone", "resonant", "ding", "overtone"],
+    "keywords": [
+      "bell",
+      "ring",
+      "chime",
+      "tone",
+      "resonant",
+      "ding",
+      "overtone"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 800 },
-          "envelope": { "attackMs": 5, "decayMs": 50, "sustainLevel": 0.4, "sustainMs": 100, "releaseMs": 695 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 800
+          },
+          "envelope": {
+            "attackMs": 5,
+            "decayMs": 50,
+            "sustainLevel": 0.4,
+            "sustainMs": 100,
+            "releaseMs": 695
+          },
           "gain": 0.9
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1600 },
-          "envelope": { "attackMs": 5, "decayMs": 50, "sustainLevel": 0.2, "sustainMs": 100, "releaseMs": 695 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 1600
+          },
+          "envelope": {
+            "attackMs": 5,
+            "decayMs": 50,
+            "sustainLevel": 0.2,
+            "sustainMs": 100,
+            "releaseMs": 695
+          },
           "gain": 0.4
         }
       ]
@@ -420,12 +986,29 @@
     "phrase": "glass tone",
     "category": "abstract-texture",
     "concept": "A bright, sharp glass tone with a clean, tapping ring.",
-    "keywords": ["glass", "ring", "clink", "tone", "bright", "tap", "crystal"],
+    "keywords": [
+      "glass",
+      "ring",
+      "tone",
+      "bright",
+      "tap",
+      "crystal"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1700 },
-          "envelope": { "attackMs": 4, "decayMs": 40, "sustainLevel": 0.25, "sustainMs": 120, "releaseMs": 130 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 1700
+          },
+          "envelope": {
+            "attackMs": 4,
+            "decayMs": 40,
+            "sustainLevel": 0.25,
+            "sustainMs": 120,
+            "releaseMs": 130
+          },
           "gain": 0.5
         }
       ]
@@ -436,13 +1019,34 @@
     "phrase": "wood tone",
     "category": "abstract-texture",
     "concept": "A warm, percussive wood-tone knock with a short, dark decay.",
-    "keywords": ["wood", "knock", "tap", "tone", "percussive", "block", "thud"],
+    "keywords": [
+      "wood",
+      "knock",
+      "tap",
+      "tone",
+      "percussive",
+      "block",
+      "thud"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 350 },
-          "envelope": { "attackMs": 5, "decayMs": 50, "sustainLevel": 0.2, "sustainMs": 40, "releaseMs": 55 },
-          "filter": { "type": "lowpass", "cutoffHz": 600 },
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 350
+          },
+          "envelope": {
+            "attackMs": 5,
+            "decayMs": 50,
+            "sustainLevel": 0.2,
+            "sustainMs": 40,
+            "releaseMs": 55
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 600
+          },
           "gain": 0.6
         }
       ]
@@ -453,17 +1057,44 @@
     "phrase": "metal tone",
     "category": "abstract-texture",
     "concept": "A sharp metal-tone clang built from two inharmonic tones that ring together.",
-    "keywords": ["metal", "clang", "ring", "tone", "inharmonic", "strike", "resonant"],
+    "keywords": [
+      "metal",
+      "ring",
+      "tone",
+      "inharmonic",
+      "strike",
+      "resonant"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500 },
-          "envelope": { "attackMs": 4, "decayMs": 60, "sustainLevel": 0.2, "sustainMs": 100, "releaseMs": 186 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 500
+          },
+          "envelope": {
+            "attackMs": 4,
+            "decayMs": 60,
+            "sustainLevel": 0.2,
+            "sustainMs": 100,
+            "releaseMs": 186
+          },
           "gain": 0.5
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 730 },
-          "envelope": { "attackMs": 4, "decayMs": 60, "sustainLevel": 0.12, "sustainMs": 100, "releaseMs": 186 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 730
+          },
+          "envelope": {
+            "attackMs": 4,
+            "decayMs": 60,
+            "sustainLevel": 0.12,
+            "sustainMs": 100,
+            "releaseMs": 186
+          },
           "gain": 0.35
         }
       ]
@@ -474,12 +1105,34 @@
     "phrase": "sub drop",
     "category": "abstract-texture",
     "concept": "A falling sub-drop that plunges from a mid tone into a deep, low pulse.",
-    "keywords": ["sub", "drop", "bass", "low", "impact", "deep", "descend"],
+    "keywords": [
+      "sub",
+      "drop",
+      "bass",
+      "low",
+      "impact",
+      "deep",
+      "descend"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 300, "pitchEnvelope": { "toHz": 70, "timeMs": 250 } },
-          "envelope": { "attackMs": 10, "decayMs": 100, "sustainLevel": 0.4, "sustainMs": 150, "releaseMs": 140 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 300,
+            "pitchEnvelope": {
+              "toHz": 70,
+              "timeMs": 250
+            }
+          },
+          "envelope": {
+            "attackMs": 10,
+            "decayMs": 100,
+            "sustainLevel": 0.4,
+            "sustainMs": 150,
+            "releaseMs": 140
+          },
           "gain": 0.48
         }
       ]

@@ -4,12 +4,34 @@
     "phrase": "sunrise",
     "category": "weather",
     "concept": "A long, soft, rising tone that opens gently like light spreading over a horizon.",
-    "keywords": ["sunrise", "dawn", "daybreak", "morning", "sun", "light", "horizon"],
+    "keywords": [
+      "sunrise",
+      "dawn",
+      "daybreak",
+      "morning",
+      "sun",
+      "light",
+      "horizon"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 300, "pitchEnvelope": { "toHz": 700, "timeMs": 850 } },
-          "envelope": { "attackMs": 300, "decayMs": 150, "sustainLevel": 0.4, "sustainMs": 300, "releaseMs": 200 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 300,
+            "pitchEnvelope": {
+              "toHz": 700,
+              "timeMs": 850
+            }
+          },
+          "envelope": {
+            "attackMs": 300,
+            "decayMs": 150,
+            "sustainLevel": 0.4,
+            "sustainMs": 300,
+            "releaseMs": 200
+          },
           "gain": 0.46
         }
       ]
@@ -20,12 +42,34 @@
     "phrase": "sunset",
     "category": "weather",
     "concept": "A long, soft, falling tone that settles slowly like light fading at day's end.",
-    "keywords": ["sunset", "dusk", "evening", "twilight", "sun", "fade", "horizon"],
+    "keywords": [
+      "sunset",
+      "dusk",
+      "evening",
+      "twilight",
+      "sun",
+      "fade",
+      "horizon"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 700, "pitchEnvelope": { "toHz": 300, "timeMs": 850 } },
-          "envelope": { "attackMs": 200, "decayMs": 150, "sustainLevel": 0.45, "sustainMs": 350, "releaseMs": 250 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 700,
+            "pitchEnvelope": {
+              "toHz": 300,
+              "timeMs": 850
+            }
+          },
+          "envelope": {
+            "attackMs": 200,
+            "decayMs": 150,
+            "sustainLevel": 0.45,
+            "sustainMs": 350,
+            "releaseMs": 250
+          },
           "gain": 0.55
         }
       ]
@@ -36,12 +80,30 @@
     "phrase": "clear sky",
     "category": "weather",
     "concept": "A soft, gentle, steady tone held plainly open, like a calm cloudless sky.",
-    "keywords": ["clear", "sky", "calm", "open", "fair", "steady", "bright"],
+    "keywords": [
+      "clear",
+      "sky",
+      "calm",
+      "open",
+      "fair",
+      "steady",
+      "bright"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 600 },
-          "envelope": { "attackMs": 60, "decayMs": 60, "sustainLevel": 0.35, "sustainMs": 140, "releaseMs": 80 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 600
+          },
+          "envelope": {
+            "attackMs": 60,
+            "decayMs": 60,
+            "sustainLevel": 0.35,
+            "sustainMs": 140,
+            "releaseMs": 80
+          },
           "gain": 0.4
         }
       ]
@@ -52,19 +114,52 @@
     "phrase": "cloud cover",
     "category": "weather",
     "concept": "A soft, muffled, sustained tone thickened by filtered noise, like a sky closing over.",
-    "keywords": ["cloud", "cover", "overcast", "gray", "sky", "muffled", "dull"],
+    "keywords": [
+      "cloud",
+      "cover",
+      "overcast",
+      "gray",
+      "sky",
+      "muffled",
+      "dull"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 260 },
-          "envelope": { "attackMs": 250, "decayMs": 150, "sustainLevel": 0.4, "sustainMs": 350, "releaseMs": 200 },
-          "filter": { "type": "lowpass", "cutoffHz": 450 },
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 260
+          },
+          "envelope": {
+            "attackMs": 250,
+            "decayMs": 150,
+            "sustainLevel": 0.4,
+            "sustainMs": 350,
+            "releaseMs": 200
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 450
+          },
           "gain": 0.45
         },
         {
-          "source": { "type": "noise", "color": "pink" },
-          "envelope": { "attackMs": 250, "decayMs": 150, "sustainLevel": 0.4, "sustainMs": 350, "releaseMs": 200 },
-          "filter": { "type": "lowpass", "cutoffHz": 400 },
+          "source": {
+            "type": "noise",
+            "color": "pink"
+          },
+          "envelope": {
+            "attackMs": 250,
+            "decayMs": 150,
+            "sustainLevel": 0.4,
+            "sustainMs": 350,
+            "releaseMs": 200
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 400
+          },
           "gain": 0.5
         }
       ]
@@ -75,12 +170,34 @@
     "phrase": "temperature rise",
     "category": "weather",
     "concept": "A short, rising tone that climbs quickly, like a reading of warmth going up.",
-    "keywords": ["temperature", "rise", "warm", "increase", "climb", "heat", "gauge"],
+    "keywords": [
+      "temperature",
+      "rise",
+      "warm",
+      "increase",
+      "climb",
+      "heat",
+      "gauge"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 400, "pitchEnvelope": { "toHz": 750, "timeMs": 160 } },
-          "envelope": { "attackMs": 8, "decayMs": 60, "sustainLevel": 0.3, "sustainMs": 60, "releaseMs": 40 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 400,
+            "pitchEnvelope": {
+              "toHz": 750,
+              "timeMs": 160
+            }
+          },
+          "envelope": {
+            "attackMs": 8,
+            "decayMs": 60,
+            "sustainLevel": 0.3,
+            "sustainMs": 60,
+            "releaseMs": 40
+          },
           "gain": 0.6
         }
       ]
@@ -91,12 +208,34 @@
     "phrase": "temperature drop",
     "category": "weather",
     "concept": "A short, falling tone that dips quickly, like a reading of warmth going down.",
-    "keywords": ["temperature", "drop", "cold", "decrease", "fall", "chill", "gauge"],
+    "keywords": [
+      "temperature",
+      "drop",
+      "cold",
+      "decrease",
+      "fall",
+      "chill",
+      "gauge"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 750, "pitchEnvelope": { "toHz": 400, "timeMs": 160 } },
-          "envelope": { "attackMs": 8, "decayMs": 60, "sustainLevel": 0.3, "sustainMs": 60, "releaseMs": 40 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 750,
+            "pitchEnvelope": {
+              "toHz": 400,
+              "timeMs": 160
+            }
+          },
+          "envelope": {
+            "attackMs": 8,
+            "decayMs": 60,
+            "sustainLevel": 0.3,
+            "sustainMs": 60,
+            "releaseMs": 40
+          },
           "gain": 0.6
         }
       ]
@@ -107,17 +246,53 @@
     "phrase": "heat haze",
     "category": "weather",
     "concept": "A long, sustained shimmer of two close, slowly drifting tones that beat against each other.",
-    "keywords": ["heat", "haze", "shimmer", "wobble", "warm", "hot", "waver"],
+    "keywords": [
+      "heat",
+      "haze",
+      "shimmer",
+      "wobble",
+      "warm",
+      "hot",
+      "waver"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 520, "pitchEnvelope": { "toHz": 560, "timeMs": 900 } },
-          "envelope": { "attackMs": 250, "decayMs": 150, "sustainLevel": 0.4, "sustainMs": 400, "releaseMs": 200 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 520,
+            "pitchEnvelope": {
+              "toHz": 560,
+              "timeMs": 900
+            }
+          },
+          "envelope": {
+            "attackMs": 250,
+            "decayMs": 150,
+            "sustainLevel": 0.4,
+            "sustainMs": 400,
+            "releaseMs": 200
+          },
           "gain": 0.4
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 560, "pitchEnvelope": { "toHz": 520, "timeMs": 900 } },
-          "envelope": { "attackMs": 250, "decayMs": 150, "sustainLevel": 0.4, "sustainMs": 400, "releaseMs": 200 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 560,
+            "pitchEnvelope": {
+              "toHz": 520,
+              "timeMs": 900
+            }
+          },
+          "envelope": {
+            "attackMs": 250,
+            "decayMs": 150,
+            "sustainLevel": 0.4,
+            "sustainMs": 400,
+            "releaseMs": 200
+          },
           "gain": 0.4
         }
       ]
@@ -128,12 +303,34 @@
     "phrase": "cold snap",
     "category": "weather",
     "concept": "A short, sharp, percussive tone with a crisp attack and a quick falling pitch.",
-    "keywords": ["cold", "snap", "freeze", "chill", "sharp", "sudden", "brisk"],
+    "keywords": [
+      "cold",
+      "snap",
+      "freeze",
+      "chill",
+      "sharp",
+      "sudden",
+      "brisk"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 900, "pitchEnvelope": { "toHz": 500, "timeMs": 90 } },
-          "envelope": { "attackMs": 3, "decayMs": 40, "sustainLevel": 0.25, "sustainMs": 20, "releaseMs": 30 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 900,
+            "pitchEnvelope": {
+              "toHz": 500,
+              "timeMs": 90
+            }
+          },
+          "envelope": {
+            "attackMs": 3,
+            "decayMs": 40,
+            "sustainLevel": 0.25,
+            "sustainMs": 20,
+            "releaseMs": 30
+          },
           "gain": 0.6
         }
       ]
@@ -144,18 +341,52 @@
     "phrase": "humidity rise",
     "category": "weather",
     "concept": "A long, sustained, rising tone thickened by soft noise, like damp air building.",
-    "keywords": ["humidity", "rise", "damp", "moisture", "muggy", "thick", "climb"],
+    "keywords": [
+      "humidity",
+      "rise",
+      "damp",
+      "moisture",
+      "muggy",
+      "thick",
+      "climb"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 350, "pitchEnvelope": { "toHz": 500, "timeMs": 850 } },
-          "envelope": { "attackMs": 250, "decayMs": 150, "sustainLevel": 0.4, "sustainMs": 350, "releaseMs": 200 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 350,
+            "pitchEnvelope": {
+              "toHz": 500,
+              "timeMs": 850
+            }
+          },
+          "envelope": {
+            "attackMs": 250,
+            "decayMs": 150,
+            "sustainLevel": 0.4,
+            "sustainMs": 350,
+            "releaseMs": 200
+          },
           "gain": 0.45
         },
         {
-          "source": { "type": "noise", "color": "pink" },
-          "envelope": { "attackMs": 250, "decayMs": 150, "sustainLevel": 0.2, "sustainMs": 350, "releaseMs": 200 },
-          "filter": { "type": "lowpass", "cutoffHz": 500 },
+          "source": {
+            "type": "noise",
+            "color": "pink"
+          },
+          "envelope": {
+            "attackMs": 250,
+            "decayMs": 150,
+            "sustainLevel": 0.2,
+            "sustainMs": 350,
+            "releaseMs": 200
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 500
+          },
           "gain": 0.15
         }
       ]
@@ -166,18 +397,52 @@
     "phrase": "storm approaching",
     "category": "weather",
     "concept": "A long, sustained rumble that builds and rises slowly, like a storm drawing near.",
-    "keywords": ["storm", "approach", "incoming", "rumble", "build", "weather", "warning"],
+    "keywords": [
+      "storm",
+      "approach",
+      "incoming",
+      "rumble",
+      "build",
+      "weather",
+      "warning"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "noise", "color": "pink" },
-          "envelope": { "attackMs": 400, "decayMs": 150, "sustainLevel": 0.6, "sustainMs": 400, "releaseMs": 200 },
-          "filter": { "type": "lowpass", "cutoffHz": 350 },
+          "source": {
+            "type": "noise",
+            "color": "pink"
+          },
+          "envelope": {
+            "attackMs": 400,
+            "decayMs": 150,
+            "sustainLevel": 0.6,
+            "sustainMs": 400,
+            "releaseMs": 200
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 350
+          },
           "gain": 0.85
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 120, "pitchEnvelope": { "toHz": 220, "timeMs": 950 } },
-          "envelope": { "attackMs": 400, "decayMs": 150, "sustainLevel": 0.4, "sustainMs": 400, "releaseMs": 200 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 120,
+            "pitchEnvelope": {
+              "toHz": 220,
+              "timeMs": 950
+            }
+          },
+          "envelope": {
+            "attackMs": 400,
+            "decayMs": 150,
+            "sustainLevel": 0.4,
+            "sustainMs": 400,
+            "releaseMs": 200
+          },
           "gain": 0.15
         }
       ]
@@ -188,18 +453,52 @@
     "phrase": "storm passing",
     "category": "weather",
     "concept": "A long, sustained rumble that fades and falls slowly, like a storm moving away.",
-    "keywords": ["storm", "pass", "fade", "rumble", "leaving", "weather", "clearing"],
+    "keywords": [
+      "storm",
+      "pass",
+      "fade",
+      "rumble",
+      "leaving",
+      "weather",
+      "clearing"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "noise", "color": "pink" },
-          "envelope": { "attackMs": 100, "decayMs": 300, "sustainLevel": 0.6, "sustainMs": 350, "releaseMs": 400 },
-          "filter": { "type": "lowpass", "cutoffHz": 350 },
+          "source": {
+            "type": "noise",
+            "color": "pink"
+          },
+          "envelope": {
+            "attackMs": 100,
+            "decayMs": 300,
+            "sustainLevel": 0.6,
+            "sustainMs": 350,
+            "releaseMs": 400
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 350
+          },
           "gain": 0.95
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 220, "pitchEnvelope": { "toHz": 100, "timeMs": 950 } },
-          "envelope": { "attackMs": 100, "decayMs": 300, "sustainLevel": 0.35, "sustainMs": 350, "releaseMs": 400 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 220,
+            "pitchEnvelope": {
+              "toHz": 100,
+              "timeMs": 950
+            }
+          },
+          "envelope": {
+            "attackMs": 100,
+            "decayMs": 300,
+            "sustainLevel": 0.35,
+            "sustainMs": 350,
+            "releaseMs": 400
+          },
           "gain": 0.16
         }
       ]
@@ -210,19 +509,51 @@
     "phrase": "hail",
     "category": "weather",
     "concept": "A quick, sharp, percussive rattle of noise bursts, like ice striking a hard surface.",
-    "keywords": ["hail", "ice", "rattle", "strike", "impact", "storm", "pellet"],
+    "keywords": [
+      "hail",
+      "ice",
+      "rattle",
+      "strike",
+      "impact",
+      "storm",
+      "pellet"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "noise", "color": "white" },
-          "envelope": { "attackMs": 2, "decayMs": 12, "sustainLevel": 0.2, "sustainMs": 6, "releaseMs": 25 },
-          "filter": { "type": "highpass", "cutoffHz": 3800 },
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "envelope": {
+            "attackMs": 2,
+            "decayMs": 12,
+            "sustainLevel": 0.2,
+            "sustainMs": 6,
+            "releaseMs": 25
+          },
+          "filter": {
+            "type": "highpass",
+            "cutoffHz": 3800
+          },
           "gain": 0.9
         },
         {
-          "source": { "type": "noise", "color": "white" },
-          "envelope": { "attackMs": 2, "decayMs": 20, "sustainLevel": 0.2, "sustainMs": 6, "releaseMs": 45 },
-          "filter": { "type": "bandpass", "cutoffHz": 2500 },
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "envelope": {
+            "attackMs": 2,
+            "decayMs": 20,
+            "sustainLevel": 0.2,
+            "sustainMs": 6,
+            "releaseMs": 45
+          },
+          "filter": {
+            "type": "bandpass",
+            "cutoffHz": 2500
+          },
           "gain": 0.7
         }
       ]
@@ -233,18 +564,52 @@
     "phrase": "sleet",
     "category": "weather",
     "concept": "A short, sharp mix of icy noise and a thin cold tone, like frozen rain hitting glass.",
-    "keywords": ["sleet", "ice", "rain", "cold", "wintry", "mix", "patter"],
+    "keywords": [
+      "sleet",
+      "ice",
+      "rain",
+      "cold",
+      "wintry",
+      "mix",
+      "patter"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "noise", "color": "white" },
-          "envelope": { "attackMs": 3, "decayMs": 30, "sustainLevel": 0.2, "sustainMs": 8, "releaseMs": 40 },
-          "filter": { "type": "highpass", "cutoffHz": 3000 },
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "envelope": {
+            "attackMs": 3,
+            "decayMs": 30,
+            "sustainLevel": 0.2,
+            "sustainMs": 8,
+            "releaseMs": 40
+          },
+          "filter": {
+            "type": "highpass",
+            "cutoffHz": 3000
+          },
           "gain": 0.75
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1000, "pitchEnvelope": { "toHz": 700, "timeMs": 80 } },
-          "envelope": { "attackMs": 3, "decayMs": 30, "sustainLevel": 0.2, "sustainMs": 20, "releaseMs": 30 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 1000,
+            "pitchEnvelope": {
+              "toHz": 700,
+              "timeMs": 80
+            }
+          },
+          "envelope": {
+            "attackMs": 3,
+            "decayMs": 30,
+            "sustainLevel": 0.2,
+            "sustainMs": 20,
+            "releaseMs": 30
+          },
           "gain": 0.3
         }
       ]
@@ -255,13 +620,35 @@
     "phrase": "snowfall",
     "category": "weather",
     "concept": "A long, sustained, soft hush of high filtered noise, gentle like snow settling quietly.",
-    "keywords": ["snow", "snowfall", "quiet", "hush", "soft", "winter", "settle"],
+    "keywords": [
+      "snow",
+      "snowfall",
+      "quiet",
+      "hush",
+      "soft",
+      "winter",
+      "settle",
+      "snow falling",
+      "falling snow"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "noise", "color": "pink" },
-          "envelope": { "attackMs": 300, "decayMs": 200, "sustainLevel": 0.4, "sustainMs": 400, "releaseMs": 300 },
-          "filter": { "type": "lowpass", "cutoffHz": 1400 },
+          "source": {
+            "type": "noise",
+            "color": "pink"
+          },
+          "envelope": {
+            "attackMs": 300,
+            "decayMs": 200,
+            "sustainLevel": 0.4,
+            "sustainMs": 400,
+            "releaseMs": 300
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 1400
+          },
           "gain": 0.95
         }
       ]
@@ -272,18 +659,52 @@
     "phrase": "blizzard",
     "category": "weather",
     "concept": "A long, sustained, harsh roar of dense noise driven by a howling wavering tone.",
-    "keywords": ["blizzard", "snowstorm", "wind", "howl", "gale", "winter", "whiteout"],
+    "keywords": [
+      "blizzard",
+      "snowstorm",
+      "wind",
+      "howl",
+      "gale",
+      "winter",
+      "whiteout"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "noise", "color": "white" },
-          "envelope": { "attackMs": 150, "decayMs": 150, "sustainLevel": 0.7, "sustainMs": 550, "releaseMs": 200 },
-          "filter": { "type": "lowpass", "cutoffHz": 900 },
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "envelope": {
+            "attackMs": 150,
+            "decayMs": 150,
+            "sustainLevel": 0.7,
+            "sustainMs": 550,
+            "releaseMs": 200
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 900
+          },
           "gain": 0.65
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 400, "pitchEnvelope": { "toHz": 550, "timeMs": 950 } },
-          "envelope": { "attackMs": 150, "decayMs": 150, "sustainLevel": 0.4, "sustainMs": 550, "releaseMs": 200 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 400,
+            "pitchEnvelope": {
+              "toHz": 550,
+              "timeMs": 950
+            }
+          },
+          "envelope": {
+            "attackMs": 150,
+            "decayMs": 150,
+            "sustainLevel": 0.4,
+            "sustainMs": 550,
+            "releaseMs": 200
+          },
           "gain": 0.25
         }
       ]
@@ -294,19 +715,52 @@
     "phrase": "fog roll in",
     "category": "weather",
     "concept": "A long, sustained tone that swells in slowly under soft low noise, like fog drifting over land.",
-    "keywords": ["fog", "roll", "mist", "haze", "drift", "swell", "murky"],
+    "keywords": [
+      "fog",
+      "roll",
+      "mist",
+      "haze",
+      "drift",
+      "swell",
+      "murky"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 260 },
-          "envelope": { "attackMs": 500, "decayMs": 150, "sustainLevel": 0.4, "sustainMs": 350, "releaseMs": 200 },
-          "filter": { "type": "lowpass", "cutoffHz": 400 },
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 260
+          },
+          "envelope": {
+            "attackMs": 500,
+            "decayMs": 150,
+            "sustainLevel": 0.4,
+            "sustainMs": 350,
+            "releaseMs": 200
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 400
+          },
           "gain": 0.4
         },
         {
-          "source": { "type": "noise", "color": "pink" },
-          "envelope": { "attackMs": 500, "decayMs": 150, "sustainLevel": 0.4, "sustainMs": 350, "releaseMs": 200 },
-          "filter": { "type": "lowpass", "cutoffHz": 350 },
+          "source": {
+            "type": "noise",
+            "color": "pink"
+          },
+          "envelope": {
+            "attackMs": 500,
+            "decayMs": 150,
+            "sustainLevel": 0.4,
+            "sustainMs": 350,
+            "releaseMs": 200
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 350
+          },
           "gain": 0.6
         }
       ]
@@ -317,18 +771,52 @@
     "phrase": "fog lift",
     "category": "weather",
     "concept": "A long, sustained, rising tone that thins out of soft noise, like fog clearing away.",
-    "keywords": ["fog", "lift", "clear", "mist", "haze", "thin", "reveal"],
+    "keywords": [
+      "fog",
+      "lift",
+      "clear",
+      "mist",
+      "haze",
+      "thin",
+      "reveal"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 300, "pitchEnvelope": { "toHz": 550, "timeMs": 900 } },
-          "envelope": { "attackMs": 200, "decayMs": 150, "sustainLevel": 0.45, "sustainMs": 350, "releaseMs": 250 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 300,
+            "pitchEnvelope": {
+              "toHz": 550,
+              "timeMs": 900
+            }
+          },
+          "envelope": {
+            "attackMs": 200,
+            "decayMs": 150,
+            "sustainLevel": 0.45,
+            "sustainMs": 350,
+            "releaseMs": 250
+          },
           "gain": 0.5
         },
         {
-          "source": { "type": "noise", "color": "pink" },
-          "envelope": { "attackMs": 200, "decayMs": 300, "sustainLevel": 0.1, "sustainMs": 150, "releaseMs": 200 },
-          "filter": { "type": "lowpass", "cutoffHz": 400 },
+          "source": {
+            "type": "noise",
+            "color": "pink"
+          },
+          "envelope": {
+            "attackMs": 200,
+            "decayMs": 300,
+            "sustainLevel": 0.1,
+            "sustainMs": 150,
+            "releaseMs": 200
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 400
+          },
           "gain": 0.15
         }
       ]
@@ -339,17 +827,45 @@
     "phrase": "rainbow",
     "category": "weather",
     "concept": "A soft, gentle, bright chime built from two clean high tones held together in a calm arc.",
-    "keywords": ["rainbow", "arc", "bright", "chime", "colorful", "shine", "prism"],
+    "keywords": [
+      "rainbow",
+      "arc",
+      "bright",
+      "chime",
+      "colorful",
+      "shine",
+      "prism"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1600 },
-          "envelope": { "attackMs": 30, "decayMs": 80, "sustainLevel": 0.35, "sustainMs": 120, "releaseMs": 90 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 1600
+          },
+          "envelope": {
+            "attackMs": 30,
+            "decayMs": 80,
+            "sustainLevel": 0.35,
+            "sustainMs": 120,
+            "releaseMs": 90
+          },
           "gain": 0.45
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 2000 },
-          "envelope": { "attackMs": 60, "decayMs": 80, "sustainLevel": 0.3, "sustainMs": 100, "releaseMs": 90 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 2000
+          },
+          "envelope": {
+            "attackMs": 60,
+            "decayMs": 80,
+            "sustainLevel": 0.3,
+            "sustainMs": 100,
+            "releaseMs": 90
+          },
           "gain": 0.4
         }
       ]
@@ -360,14 +876,34 @@
     "phrase": "drizzle",
     "category": "weather",
     "concept": "A soft, quiet patter of gently filtered noise, light and fine like a thin rain.",
-    "keywords": ["drizzle", "rain", "light", "patter", "mist", "shower", "fine"],
+    "keywords": [
+      "drizzle",
+      "rain",
+      "light",
+      "patter",
+      "mist",
+      "shower",
+      "fine"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "noise", "color": "white" },
-          "envelope": { "attackMs": 100, "decayMs": 80, "sustainLevel": 0.8, "sustainMs": 250, "releaseMs": 100 },
-          "filter": { "type": "lowpass", "cutoffHz": 1300 },
-          "gain": 1.0
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "envelope": {
+            "attackMs": 100,
+            "decayMs": 80,
+            "sustainLevel": 0.8,
+            "sustainMs": 250,
+            "releaseMs": 100
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 1300
+          },
+          "gain": 1
         }
       ]
     }
@@ -377,19 +913,51 @@
     "phrase": "downpour",
     "category": "weather",
     "concept": "A long, sustained, dense roar of heavy filtered noise, like a hard driving rain.",
-    "keywords": ["downpour", "rain", "heavy", "deluge", "storm", "shower", "pour"],
+    "keywords": [
+      "downpour",
+      "rain",
+      "heavy",
+      "deluge",
+      "storm",
+      "shower",
+      "pour"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "noise", "color": "white" },
-          "envelope": { "attackMs": 100, "decayMs": 100, "sustainLevel": 0.75, "sustainMs": 600, "releaseMs": 150 },
-          "filter": { "type": "lowpass", "cutoffHz": 1300 },
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "envelope": {
+            "attackMs": 100,
+            "decayMs": 100,
+            "sustainLevel": 0.75,
+            "sustainMs": 600,
+            "releaseMs": 150
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 1300
+          },
           "gain": 0.65
         },
         {
-          "source": { "type": "noise", "color": "pink" },
-          "envelope": { "attackMs": 100, "decayMs": 100, "sustainLevel": 0.7, "sustainMs": 600, "releaseMs": 150 },
-          "filter": { "type": "lowpass", "cutoffHz": 650 },
+          "source": {
+            "type": "noise",
+            "color": "pink"
+          },
+          "envelope": {
+            "attackMs": 100,
+            "decayMs": 100,
+            "sustainLevel": 0.7,
+            "sustainMs": 600,
+            "releaseMs": 150
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 650
+          },
           "gain": 0.6
         }
       ]
@@ -400,18 +968,52 @@
     "phrase": "hurricane warning",
     "category": "weather",
     "concept": "A short, sharp alert tone with a rising pitch, urgent like a warning about to sound.",
-    "keywords": ["hurricane", "warning", "alert", "urgent", "storm", "emergency", "siren"],
+    "keywords": [
+      "hurricane",
+      "warning",
+      "alert",
+      "urgent",
+      "storm",
+      "emergency",
+      "siren"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 500, "pitchEnvelope": { "toHz": 950, "timeMs": 150 } },
-          "envelope": { "attackMs": 5, "decayMs": 50, "sustainLevel": 0.4, "sustainMs": 60, "releaseMs": 45 },
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 500,
+            "pitchEnvelope": {
+              "toHz": 950,
+              "timeMs": 150
+            }
+          },
+          "envelope": {
+            "attackMs": 5,
+            "decayMs": 50,
+            "sustainLevel": 0.4,
+            "sustainMs": 60,
+            "releaseMs": 45
+          },
           "gain": 0.5
         },
         {
-          "source": { "type": "noise", "color": "pink" },
-          "envelope": { "attackMs": 5, "decayMs": 40, "sustainLevel": 0.2, "sustainMs": 60, "releaseMs": 40 },
-          "filter": { "type": "lowpass", "cutoffHz": 500 },
+          "source": {
+            "type": "noise",
+            "color": "pink"
+          },
+          "envelope": {
+            "attackMs": 5,
+            "decayMs": 40,
+            "sustainLevel": 0.2,
+            "sustainMs": 60,
+            "releaseMs": 40
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 500
+          },
           "gain": 0.15
         }
       ]
@@ -422,12 +1024,34 @@
     "phrase": "tornado siren",
     "category": "weather",
     "concept": "A long, sustained, rising alert tone that climbs steadily like an emergency siren.",
-    "keywords": ["tornado", "siren", "alert", "emergency", "warning", "urgent", "wail"],
+    "keywords": [
+      "tornado",
+      "siren",
+      "alert",
+      "emergency",
+      "warning",
+      "urgent",
+      "wail"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 450, "pitchEnvelope": { "toHz": 900, "timeMs": 900 } },
-          "envelope": { "attackMs": 100, "decayMs": 100, "sustainLevel": 0.45, "sustainMs": 500, "releaseMs": 200 },
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 450,
+            "pitchEnvelope": {
+              "toHz": 900,
+              "timeMs": 900
+            }
+          },
+          "envelope": {
+            "attackMs": 100,
+            "decayMs": 100,
+            "sustainLevel": 0.45,
+            "sustainMs": 500,
+            "releaseMs": 200
+          },
           "gain": 0.55
         }
       ]
@@ -438,17 +1062,49 @@
     "phrase": "flood warning",
     "category": "weather",
     "concept": "A short, sharp alert tone paired with a low, thick rumble, urgent and heavy.",
-    "keywords": ["flood", "warning", "alert", "urgent", "water", "emergency", "rise"],
+    "keywords": [
+      "flood",
+      "warning",
+      "alert",
+      "urgent",
+      "water",
+      "emergency",
+      "rise"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 700, "pitchEnvelope": { "toHz": 950, "timeMs": 130 } },
-          "envelope": { "attackMs": 5, "decayMs": 45, "sustainLevel": 0.35, "sustainMs": 55, "releaseMs": 45 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 700,
+            "pitchEnvelope": {
+              "toHz": 950,
+              "timeMs": 130
+            }
+          },
+          "envelope": {
+            "attackMs": 5,
+            "decayMs": 45,
+            "sustainLevel": 0.35,
+            "sustainMs": 55,
+            "releaseMs": 45
+          },
           "gain": 0.45
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 150 },
-          "envelope": { "attackMs": 5, "decayMs": 45, "sustainLevel": 0.3, "sustainMs": 55, "releaseMs": 45 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 150
+          },
+          "envelope": {
+            "attackMs": 5,
+            "decayMs": 45,
+            "sustainLevel": 0.3,
+            "sustainMs": 55,
+            "releaseMs": 45
+          },
           "gain": 0.35
         }
       ]
@@ -459,17 +1115,45 @@
     "phrase": "air quality alert",
     "category": "weather",
     "concept": "A short, sharp, percussive double tone that draws attention like a caution alert.",
-    "keywords": ["air", "quality", "alert", "caution", "pollution", "warning", "attention"],
+    "keywords": [
+      "air",
+      "quality",
+      "alert",
+      "caution",
+      "pollution",
+      "warning",
+      "attention"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 800 },
-          "envelope": { "attackMs": 4, "decayMs": 35, "sustainLevel": 0.3, "sustainMs": 30, "releaseMs": 35 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 800
+          },
+          "envelope": {
+            "attackMs": 4,
+            "decayMs": 35,
+            "sustainLevel": 0.3,
+            "sustainMs": 30,
+            "releaseMs": 35
+          },
           "gain": 0.55
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 650 },
-          "envelope": { "attackMs": 4, "decayMs": 30, "sustainLevel": 0.25, "sustainMs": 25, "releaseMs": 30 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 650
+          },
+          "envelope": {
+            "attackMs": 4,
+            "decayMs": 30,
+            "sustainLevel": 0.25,
+            "sustainMs": 25,
+            "releaseMs": 30
+          },
           "gain": 0.35
         }
       ]
@@ -480,18 +1164,48 @@
     "phrase": "pollen high",
     "category": "weather",
     "concept": "A short, soft, bright tone with a gentle attack, light like drifting pollen in the air.",
-    "keywords": ["pollen", "high", "allergy", "airborne", "light", "spring", "drift"],
+    "keywords": [
+      "pollen",
+      "high",
+      "allergy",
+      "airborne",
+      "light",
+      "spring",
+      "drift"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 850 },
-          "envelope": { "attackMs": 20, "decayMs": 50, "sustainLevel": 0.35, "sustainMs": 50, "releaseMs": 40 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 850
+          },
+          "envelope": {
+            "attackMs": 20,
+            "decayMs": 50,
+            "sustainLevel": 0.35,
+            "sustainMs": 50,
+            "releaseMs": 40
+          },
           "gain": 0.55
         },
         {
-          "source": { "type": "noise", "color": "white" },
-          "envelope": { "attackMs": 20, "decayMs": 40, "sustainLevel": 0.15, "sustainMs": 30, "releaseMs": 30 },
-          "filter": { "type": "highpass", "cutoffHz": 4500 },
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "envelope": {
+            "attackMs": 20,
+            "decayMs": 40,
+            "sustainLevel": 0.15,
+            "sustainMs": 30,
+            "releaseMs": 30
+          },
+          "filter": {
+            "type": "highpass",
+            "cutoffHz": 4500
+          },
           "gain": 0.2
         }
       ]
@@ -502,12 +1216,30 @@
     "phrase": "uv warning",
     "category": "weather",
     "concept": "A short, sharp, bright alert tone with a crisp attack, urgent like a sun caution.",
-    "keywords": ["uv", "warning", "sun", "alert", "caution", "exposure", "bright"],
+    "keywords": [
+      "uv",
+      "warning",
+      "sun",
+      "alert",
+      "caution",
+      "exposure",
+      "bright"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1800 },
-          "envelope": { "attackMs": 4, "decayMs": 35, "sustainLevel": 0.35, "sustainMs": 40, "releaseMs": 35 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 1800
+          },
+          "envelope": {
+            "attackMs": 4,
+            "decayMs": 35,
+            "sustainLevel": 0.35,
+            "sustainMs": 40,
+            "releaseMs": 35
+          },
           "gain": 0.6
         }
       ]
@@ -518,12 +1250,34 @@
     "phrase": "barometric drop",
     "category": "weather",
     "concept": "A short, falling tone that dips fast, like a pressure gauge sliding suddenly.",
-    "keywords": ["barometric", "pressure", "drop", "gauge", "fall", "sudden", "weather"],
+    "keywords": [
+      "barometric",
+      "pressure",
+      "drop",
+      "gauge",
+      "fall",
+      "sudden",
+      "weather"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 650, "pitchEnvelope": { "toHz": 280, "timeMs": 140 } },
-          "envelope": { "attackMs": 6, "decayMs": 55, "sustainLevel": 0.22, "sustainMs": 45, "releaseMs": 34 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 650,
+            "pitchEnvelope": {
+              "toHz": 280,
+              "timeMs": 140
+            }
+          },
+          "envelope": {
+            "attackMs": 6,
+            "decayMs": 55,
+            "sustainLevel": 0.22,
+            "sustainMs": 45,
+            "releaseMs": 34
+          },
           "gain": 0.46
         }
       ]
@@ -534,18 +1288,48 @@
     "phrase": "first frost",
     "category": "weather",
     "concept": "A short, sharp, crisp tone with a quick bright transient, cold like frost forming.",
-    "keywords": ["frost", "first", "cold", "crisp", "ice", "chill", "morning"],
+    "keywords": [
+      "frost",
+      "first",
+      "cold",
+      "crisp",
+      "ice",
+      "chill",
+      "morning"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1050 },
-          "envelope": { "attackMs": 3, "decayMs": 40, "sustainLevel": 0.25, "sustainMs": 30, "releaseMs": 30 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 1050
+          },
+          "envelope": {
+            "attackMs": 3,
+            "decayMs": 40,
+            "sustainLevel": 0.25,
+            "sustainMs": 30,
+            "releaseMs": 30
+          },
           "gain": 0.55
         },
         {
-          "source": { "type": "noise", "color": "white" },
-          "envelope": { "attackMs": 2, "decayMs": 20, "sustainLevel": 0.2, "sustainMs": 6, "releaseMs": 30 },
-          "filter": { "type": "highpass", "cutoffHz": 4200 },
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "envelope": {
+            "attackMs": 2,
+            "decayMs": 20,
+            "sustainLevel": 0.2,
+            "sustainMs": 6,
+            "releaseMs": 30
+          },
+          "filter": {
+            "type": "highpass",
+            "cutoffHz": 4200
+          },
           "gain": 0.3
         }
       ]
@@ -556,12 +1340,34 @@
     "phrase": "thaw",
     "category": "weather",
     "concept": "A long, sustained, rising tone that warms slowly from a low, soft start.",
-    "keywords": ["thaw", "melt", "warm", "spring", "soften", "loosen", "ease"],
+    "keywords": [
+      "thaw",
+      "melt",
+      "warm",
+      "spring",
+      "soften",
+      "loosen",
+      "ease"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 250, "pitchEnvelope": { "toHz": 480, "timeMs": 900 } },
-          "envelope": { "attackMs": 300, "decayMs": 150, "sustainLevel": 0.4, "sustainMs": 350, "releaseMs": 200 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 250,
+            "pitchEnvelope": {
+              "toHz": 480,
+              "timeMs": 900
+            }
+          },
+          "envelope": {
+            "attackMs": 300,
+            "decayMs": 150,
+            "sustainLevel": 0.4,
+            "sustainMs": 350,
+            "releaseMs": 200
+          },
           "gain": 0.46
         }
       ]
@@ -572,18 +1378,52 @@
     "phrase": "season change",
     "category": "weather",
     "concept": "A long, sustained tone that drifts gradually from one pitch to another, marking a slow shift.",
-    "keywords": ["season", "change", "shift", "transition", "cycle", "gradual", "turn"],
+    "keywords": [
+      "season",
+      "change",
+      "shift",
+      "transition",
+      "cycle",
+      "gradual",
+      "turn"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 350, "pitchEnvelope": { "toHz": 550, "timeMs": 950 } },
-          "envelope": { "attackMs": 300, "decayMs": 150, "sustainLevel": 0.4, "sustainMs": 350, "releaseMs": 250 },
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 350,
+            "pitchEnvelope": {
+              "toHz": 550,
+              "timeMs": 950
+            }
+          },
+          "envelope": {
+            "attackMs": 300,
+            "decayMs": 150,
+            "sustainLevel": 0.4,
+            "sustainMs": 350,
+            "releaseMs": 250
+          },
           "gain": 0.5
         },
         {
-          "source": { "type": "noise", "color": "pink" },
-          "envelope": { "attackMs": 300, "decayMs": 150, "sustainLevel": 0.15, "sustainMs": 350, "releaseMs": 250 },
-          "filter": { "type": "lowpass", "cutoffHz": 500 },
+          "source": {
+            "type": "noise",
+            "color": "pink"
+          },
+          "envelope": {
+            "attackMs": 300,
+            "decayMs": 150,
+            "sustainLevel": 0.15,
+            "sustainMs": 350,
+            "releaseMs": 250
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 500
+          },
           "gain": 0.1
         }
       ]

@@ -4,12 +4,34 @@
     "phrase": "menu open",
     "category": "transitions",
     "concept": "A short, soft, rising tone as a menu opens.",
-    "keywords": ["menu", "open", "expand", "reveal", "dropdown", "navigation", "show"],
+    "keywords": [
+      "menu",
+      "open",
+      "expand",
+      "reveal",
+      "dropdown",
+      "navigation",
+      "show"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 480, "pitchEnvelope": { "toHz": 760, "timeMs": 90 } },
-          "envelope": { "attackMs": 14, "decayMs": 36, "sustainLevel": 0.35, "sustainMs": 30, "releaseMs": 55 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 480,
+            "pitchEnvelope": {
+              "toHz": 760,
+              "timeMs": 90
+            }
+          },
+          "envelope": {
+            "attackMs": 14,
+            "decayMs": 36,
+            "sustainLevel": 0.35,
+            "sustainMs": 30,
+            "releaseMs": 55
+          },
           "gain": 0.42
         }
       ]
@@ -20,12 +42,34 @@
     "phrase": "menu close",
     "category": "transitions",
     "concept": "A short, soft, falling tone as a menu closes.",
-    "keywords": ["menu", "close", "collapse", "hide", "dismiss", "dropdown", "navigation"],
+    "keywords": [
+      "menu",
+      "close",
+      "collapse",
+      "hide",
+      "dismiss",
+      "dropdown",
+      "navigation"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 760, "pitchEnvelope": { "toHz": 480, "timeMs": 90 } },
-          "envelope": { "attackMs": 14, "decayMs": 36, "sustainLevel": 0.35, "sustainMs": 30, "releaseMs": 55 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 760,
+            "pitchEnvelope": {
+              "toHz": 480,
+              "timeMs": 90
+            }
+          },
+          "envelope": {
+            "attackMs": 14,
+            "decayMs": 36,
+            "sustainLevel": 0.35,
+            "sustainMs": 30,
+            "releaseMs": 55
+          },
           "gain": 0.42
         }
       ]
@@ -36,17 +80,52 @@
     "phrase": "modal open",
     "category": "transitions",
     "concept": "A soft, rising two-tone chime as a modal window opens.",
-    "keywords": ["modal", "open", "dialog", "popup", "window", "appear", "overlay"],
+    "keywords": [
+      "modal",
+      "open",
+      "dialog",
+      "popup",
+      "appear",
+      "overlay"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 300, "pitchEnvelope": { "toHz": 450, "timeMs": 120 } },
-          "envelope": { "attackMs": 20, "decayMs": 50, "sustainLevel": 0.4, "sustainMs": 50, "releaseMs": 80 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 300,
+            "pitchEnvelope": {
+              "toHz": 450,
+              "timeMs": 120
+            }
+          },
+          "envelope": {
+            "attackMs": 20,
+            "decayMs": 50,
+            "sustainLevel": 0.4,
+            "sustainMs": 50,
+            "releaseMs": 80
+          },
           "gain": 0.36
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 450, "pitchEnvelope": { "toHz": 675, "timeMs": 120 } },
-          "envelope": { "attackMs": 20, "decayMs": 50, "sustainLevel": 0.3, "sustainMs": 50, "releaseMs": 80 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 450,
+            "pitchEnvelope": {
+              "toHz": 675,
+              "timeMs": 120
+            }
+          },
+          "envelope": {
+            "attackMs": 20,
+            "decayMs": 50,
+            "sustainLevel": 0.3,
+            "sustainMs": 50,
+            "releaseMs": 80
+          },
           "gain": 0.23
         }
       ]
@@ -57,17 +136,53 @@
     "phrase": "modal close",
     "category": "transitions",
     "concept": "A soft, falling two-tone chime as a modal window closes.",
-    "keywords": ["modal", "close", "dialog", "dismiss", "window", "exit", "overlay"],
+    "keywords": [
+      "modal",
+      "close",
+      "dialog",
+      "dismiss",
+      "window",
+      "exit",
+      "overlay"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 450, "pitchEnvelope": { "toHz": 300, "timeMs": 120 } },
-          "envelope": { "attackMs": 20, "decayMs": 50, "sustainLevel": 0.4, "sustainMs": 50, "releaseMs": 80 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 450,
+            "pitchEnvelope": {
+              "toHz": 300,
+              "timeMs": 120
+            }
+          },
+          "envelope": {
+            "attackMs": 20,
+            "decayMs": 50,
+            "sustainLevel": 0.4,
+            "sustainMs": 50,
+            "releaseMs": 80
+          },
           "gain": 0.36
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 675, "pitchEnvelope": { "toHz": 450, "timeMs": 120 } },
-          "envelope": { "attackMs": 20, "decayMs": 50, "sustainLevel": 0.3, "sustainMs": 50, "releaseMs": 80 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 675,
+            "pitchEnvelope": {
+              "toHz": 450,
+              "timeMs": 120
+            }
+          },
+          "envelope": {
+            "attackMs": 20,
+            "decayMs": 50,
+            "sustainLevel": 0.3,
+            "sustainMs": 50,
+            "releaseMs": 80
+          },
           "gain": 0.23
         }
       ]
@@ -78,18 +193,51 @@
     "phrase": "panel slide in",
     "category": "transitions",
     "concept": "A soft whoosh with a subtle tone as a panel slides into view.",
-    "keywords": ["panel", "slide", "enter", "appear", "drawer", "sidebar", "open"],
+    "keywords": [
+      "panel",
+      "slide",
+      "enter",
+      "appear",
+      "sidebar",
+      "open"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "noise", "color": "pink" },
-          "envelope": { "attackMs": 40, "decayMs": 60, "sustainLevel": 0.25, "sustainMs": 40, "releaseMs": 70 },
-          "filter": { "type": "bandpass", "cutoffHz": 900 },
+          "source": {
+            "type": "noise",
+            "color": "pink"
+          },
+          "envelope": {
+            "attackMs": 40,
+            "decayMs": 60,
+            "sustainLevel": 0.25,
+            "sustainMs": 40,
+            "releaseMs": 70
+          },
+          "filter": {
+            "type": "bandpass",
+            "cutoffHz": 900
+          },
           "gain": 0.5
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 400, "pitchEnvelope": { "toHz": 600, "timeMs": 150 } },
-          "envelope": { "attackMs": 40, "decayMs": 60, "sustainLevel": 0.25, "sustainMs": 40, "releaseMs": 70 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 400,
+            "pitchEnvelope": {
+              "toHz": 600,
+              "timeMs": 150
+            }
+          },
+          "envelope": {
+            "attackMs": 40,
+            "decayMs": 60,
+            "sustainLevel": 0.25,
+            "sustainMs": 40,
+            "releaseMs": 70
+          },
           "gain": 0.35
         }
       ]
@@ -100,18 +248,51 @@
     "phrase": "panel slide out",
     "category": "transitions",
     "concept": "A soft whoosh with a subtle tone as a panel slides out of view.",
-    "keywords": ["panel", "slide", "exit", "leave", "drawer", "sidebar", "close"],
+    "keywords": [
+      "panel",
+      "slide",
+      "exit",
+      "leave",
+      "sidebar",
+      "close"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "noise", "color": "pink" },
-          "envelope": { "attackMs": 40, "decayMs": 60, "sustainLevel": 0.25, "sustainMs": 40, "releaseMs": 70 },
-          "filter": { "type": "bandpass", "cutoffHz": 900 },
+          "source": {
+            "type": "noise",
+            "color": "pink"
+          },
+          "envelope": {
+            "attackMs": 40,
+            "decayMs": 60,
+            "sustainLevel": 0.25,
+            "sustainMs": 40,
+            "releaseMs": 70
+          },
+          "filter": {
+            "type": "bandpass",
+            "cutoffHz": 900
+          },
           "gain": 0.5
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 600, "pitchEnvelope": { "toHz": 400, "timeMs": 150 } },
-          "envelope": { "attackMs": 40, "decayMs": 60, "sustainLevel": 0.25, "sustainMs": 40, "releaseMs": 70 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 600,
+            "pitchEnvelope": {
+              "toHz": 400,
+              "timeMs": 150
+            }
+          },
+          "envelope": {
+            "attackMs": 40,
+            "decayMs": 60,
+            "sustainLevel": 0.25,
+            "sustainMs": 40,
+            "releaseMs": 70
+          },
           "gain": 0.35
         }
       ]
@@ -122,12 +303,33 @@
     "phrase": "tab switch",
     "category": "transitions",
     "concept": "A short, quick, soft tick as the active tab switches.",
-    "keywords": ["tab", "switch", "change", "select", "toggle", "active"],
+    "keywords": [
+      "tab",
+      "switch",
+      "change",
+      "select",
+      "toggle",
+      "active"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 550, "pitchEnvelope": { "toHz": 650, "timeMs": 40 } },
-          "envelope": { "attackMs": 10, "decayMs": 20, "sustainLevel": 0.3, "sustainMs": 15, "releaseMs": 30 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 550,
+            "pitchEnvelope": {
+              "toHz": 650,
+              "timeMs": 40
+            }
+          },
+          "envelope": {
+            "attackMs": 10,
+            "decayMs": 20,
+            "sustainLevel": 0.3,
+            "sustainMs": 15,
+            "releaseMs": 30
+          },
           "gain": 0.44
         }
       ]

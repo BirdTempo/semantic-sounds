@@ -4,18 +4,48 @@
     "phrase": "page turn",
     "category": "transitions",
     "concept": "A quick papery flick with a light rustle and a quiet tap.",
-    "keywords": ["page", "turn", "flip", "paper", "rustle", "tap", "leaf"],
+    "keywords": [
+      "page",
+      "turn",
+      "flip",
+      "paper",
+      "rustle",
+      "tap",
+      "leaf"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 550 },
-          "envelope": { "attackMs": 5, "decayMs": 25, "sustainLevel": 0.25, "sustainMs": 15, "releaseMs": 35 },
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 550
+          },
+          "envelope": {
+            "attackMs": 5,
+            "decayMs": 25,
+            "sustainLevel": 0.25,
+            "sustainMs": 15,
+            "releaseMs": 35
+          },
           "gain": 0.55
         },
         {
-          "source": { "type": "noise", "color": "white" },
-          "filter": { "type": "highpass", "cutoffHz": 3000 },
-          "envelope": { "attackMs": 3, "decayMs": 15, "sustainLevel": 0.2, "sustainMs": 5, "releaseMs": 20 },
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "filter": {
+            "type": "highpass",
+            "cutoffHz": 3000
+          },
+          "envelope": {
+            "attackMs": 3,
+            "decayMs": 15,
+            "sustainLevel": 0.2,
+            "sustainMs": 5,
+            "releaseMs": 20
+          },
           "gain": 0.5
         }
       ]
@@ -26,12 +56,34 @@
     "phrase": "page forward",
     "category": "transitions",
     "concept": "A quick forward blip with a rising pitch, like flipping ahead.",
-    "keywords": ["page", "forward", "next", "advance", "flip", "ahead", "rising"],
+    "keywords": [
+      "page",
+      "forward",
+      "next",
+      "advance",
+      "flip",
+      "ahead",
+      "rising"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 750, "timeMs": 70 } },
-          "envelope": { "attackMs": 5, "decayMs": 20, "sustainLevel": 0.3, "sustainMs": 20, "releaseMs": 35 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 500,
+            "pitchEnvelope": {
+              "toHz": 750,
+              "timeMs": 70
+            }
+          },
+          "envelope": {
+            "attackMs": 5,
+            "decayMs": 20,
+            "sustainLevel": 0.3,
+            "sustainMs": 20,
+            "releaseMs": 35
+          },
           "gain": 0.62
         }
       ]
@@ -42,12 +94,34 @@
     "phrase": "page back",
     "category": "transitions",
     "concept": "A quick backward blip with a falling pitch, like flipping to the previous page.",
-    "keywords": ["page", "back", "previous", "return", "flip", "backward", "falling"],
+    "keywords": [
+      "page",
+      "back",
+      "previous",
+      "return",
+      "flip",
+      "backward",
+      "falling"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 750, "pitchEnvelope": { "toHz": 500, "timeMs": 70 } },
-          "envelope": { "attackMs": 5, "decayMs": 20, "sustainLevel": 0.3, "sustainMs": 20, "releaseMs": 35 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 750,
+            "pitchEnvelope": {
+              "toHz": 500,
+              "timeMs": 70
+            }
+          },
+          "envelope": {
+            "attackMs": 5,
+            "decayMs": 20,
+            "sustainLevel": 0.3,
+            "sustainMs": 20,
+            "releaseMs": 35
+          },
           "gain": 0.62
         }
       ]
@@ -58,12 +132,34 @@
     "phrase": "slide left",
     "category": "transitions",
     "concept": "A smooth leftward slide with a falling pitch and a gentle attack.",
-    "keywords": ["slide", "left", "move", "pan", "direction", "falling", "transition"],
+    "keywords": [
+      "slide",
+      "left",
+      "move",
+      "pan",
+      "direction",
+      "falling",
+      "transition"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 700, "pitchEnvelope": { "toHz": 450, "timeMs": 150 } },
-          "envelope": { "attackMs": 30, "decayMs": 50, "sustainLevel": 0.35, "sustainMs": 60, "releaseMs": 80 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 700,
+            "pitchEnvelope": {
+              "toHz": 450,
+              "timeMs": 150
+            }
+          },
+          "envelope": {
+            "attackMs": 30,
+            "decayMs": 50,
+            "sustainLevel": 0.35,
+            "sustainMs": 60,
+            "releaseMs": 80
+          },
           "gain": 0.55
         }
       ]
@@ -74,12 +170,34 @@
     "phrase": "slide right",
     "category": "transitions",
     "concept": "A smooth rightward slide with a rising pitch and a gentle attack.",
-    "keywords": ["slide", "right", "move", "pan", "direction", "rising", "transition"],
+    "keywords": [
+      "slide",
+      "right",
+      "move",
+      "pan",
+      "direction",
+      "rising",
+      "transition"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 450, "pitchEnvelope": { "toHz": 700, "timeMs": 150 } },
-          "envelope": { "attackMs": 30, "decayMs": 50, "sustainLevel": 0.35, "sustainMs": 60, "releaseMs": 80 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 450,
+            "pitchEnvelope": {
+              "toHz": 700,
+              "timeMs": 150
+            }
+          },
+          "envelope": {
+            "attackMs": 30,
+            "decayMs": 50,
+            "sustainLevel": 0.35,
+            "sustainMs": 60,
+            "releaseMs": 80
+          },
           "gain": 0.55
         }
       ]
@@ -90,17 +208,53 @@
     "phrase": "slide up",
     "category": "transitions",
     "concept": "A rising upward slide built from two close tones that glide together.",
-    "keywords": ["slide", "up", "upward", "rise", "move", "pan", "ascend"],
+    "keywords": [
+      "slide",
+      "up",
+      "upward",
+      "rise",
+      "move",
+      "pan",
+      "ascend"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 850, "timeMs": 200 } },
-          "envelope": { "attackMs": 20, "decayMs": 60, "sustainLevel": 0.3, "sustainMs": 80, "releaseMs": 100 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 500,
+            "pitchEnvelope": {
+              "toHz": 850,
+              "timeMs": 200
+            }
+          },
+          "envelope": {
+            "attackMs": 20,
+            "decayMs": 60,
+            "sustainLevel": 0.3,
+            "sustainMs": 80,
+            "releaseMs": 100
+          },
           "gain": 0.4
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 510, "pitchEnvelope": { "toHz": 860, "timeMs": 200 } },
-          "envelope": { "attackMs": 20, "decayMs": 60, "sustainLevel": 0.3, "sustainMs": 80, "releaseMs": 100 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 510,
+            "pitchEnvelope": {
+              "toHz": 860,
+              "timeMs": 200
+            }
+          },
+          "envelope": {
+            "attackMs": 20,
+            "decayMs": 60,
+            "sustainLevel": 0.3,
+            "sustainMs": 80,
+            "releaseMs": 100
+          },
           "gain": 0.4
         }
       ]
@@ -111,17 +265,53 @@
     "phrase": "slide down",
     "category": "transitions",
     "concept": "A falling downward slide built from two close tones that glide together.",
-    "keywords": ["slide", "down", "downward", "drop", "move", "pan", "descend"],
+    "keywords": [
+      "slide",
+      "down",
+      "downward",
+      "drop",
+      "move",
+      "pan",
+      "descend"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 850, "pitchEnvelope": { "toHz": 500, "timeMs": 200 } },
-          "envelope": { "attackMs": 20, "decayMs": 60, "sustainLevel": 0.3, "sustainMs": 80, "releaseMs": 100 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 850,
+            "pitchEnvelope": {
+              "toHz": 500,
+              "timeMs": 200
+            }
+          },
+          "envelope": {
+            "attackMs": 20,
+            "decayMs": 60,
+            "sustainLevel": 0.3,
+            "sustainMs": 80,
+            "releaseMs": 100
+          },
           "gain": 0.4
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 860, "pitchEnvelope": { "toHz": 510, "timeMs": 200 } },
-          "envelope": { "attackMs": 20, "decayMs": 60, "sustainLevel": 0.3, "sustainMs": 80, "releaseMs": 100 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 860,
+            "pitchEnvelope": {
+              "toHz": 510,
+              "timeMs": 200
+            }
+          },
+          "envelope": {
+            "attackMs": 20,
+            "decayMs": 60,
+            "sustainLevel": 0.3,
+            "sustainMs": 80,
+            "releaseMs": 100
+          },
           "gain": 0.4
         }
       ]
@@ -132,12 +322,30 @@
     "phrase": "fade in",
     "category": "transitions",
     "concept": "A long sustained tone with a gentle attack that swells smoothly into being.",
-    "keywords": ["fade", "in", "appear", "begin", "swell", "volume", "entrance"],
+    "keywords": [
+      "fade",
+      "in",
+      "appear",
+      "begin",
+      "swell",
+      "volume",
+      "entrance"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500 },
-          "envelope": { "attackMs": 400, "decayMs": 100, "sustainLevel": 0.4, "sustainMs": 250, "releaseMs": 150 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 500
+          },
+          "envelope": {
+            "attackMs": 400,
+            "decayMs": 100,
+            "sustainLevel": 0.4,
+            "sustainMs": 250,
+            "releaseMs": 150
+          },
           "gain": 0.5
         }
       ]
@@ -148,12 +356,30 @@
     "phrase": "fade out",
     "category": "transitions",
     "concept": "A long sustained tone with a soft attack that fades smoothly away into silence.",
-    "keywords": ["fade", "out", "disappear", "end", "decay", "volume", "exit"],
+    "keywords": [
+      "fade",
+      "out",
+      "disappear",
+      "end",
+      "decay",
+      "volume",
+      "exit"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500 },
-          "envelope": { "attackMs": 80, "decayMs": 100, "sustainLevel": 0.45, "sustainMs": 200, "releaseMs": 450 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 500
+          },
+          "envelope": {
+            "attackMs": 80,
+            "decayMs": 100,
+            "sustainLevel": 0.45,
+            "sustainMs": 200,
+            "releaseMs": 450
+          },
           "gain": 0.5
         }
       ]
@@ -164,17 +390,45 @@
     "phrase": "cross fade",
     "category": "transitions",
     "concept": "A smooth handoff between two tones, one fading down as the other rises up.",
-    "keywords": ["crossfade", "transition", "blend", "mix", "handoff", "tone", "swap"],
+    "keywords": [
+      "crossfade",
+      "transition",
+      "blend",
+      "mix",
+      "handoff",
+      "tone",
+      "swap"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 700 },
-          "envelope": { "attackMs": 10, "decayMs": 60, "sustainLevel": 0.25, "sustainMs": 60, "releaseMs": 60 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 700
+          },
+          "envelope": {
+            "attackMs": 10,
+            "decayMs": 60,
+            "sustainLevel": 0.25,
+            "sustainMs": 60,
+            "releaseMs": 60
+          },
           "gain": 0.4
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 450 },
-          "envelope": { "attackMs": 80, "decayMs": 60, "sustainLevel": 0.3, "sustainMs": 100, "releaseMs": 100 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 450
+          },
+          "envelope": {
+            "attackMs": 80,
+            "decayMs": 60,
+            "sustainLevel": 0.3,
+            "sustainMs": 100,
+            "releaseMs": 100
+          },
           "gain": 0.4
         }
       ]
@@ -185,18 +439,52 @@
     "phrase": "zoom transition",
     "category": "transitions",
     "concept": "A quick energetic sweep with a sharp attack and a rising pitch.",
-    "keywords": ["zoom", "transition", "sweep", "rising", "energetic", "whoosh", "motion"],
+    "keywords": [
+      "zoom",
+      "transition",
+      "sweep",
+      "rising",
+      "energetic",
+      "whoosh",
+      "motion"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 450, "pitchEnvelope": { "toHz": 950, "timeMs": 110 } },
-          "envelope": { "attackMs": 4, "decayMs": 30, "sustainLevel": 0.25, "sustainMs": 30, "releaseMs": 50 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 450,
+            "pitchEnvelope": {
+              "toHz": 950,
+              "timeMs": 110
+            }
+          },
+          "envelope": {
+            "attackMs": 4,
+            "decayMs": 30,
+            "sustainLevel": 0.25,
+            "sustainMs": 30,
+            "releaseMs": 50
+          },
           "gain": 0.6
         },
         {
-          "source": { "type": "noise", "color": "white" },
-          "filter": { "type": "lowpass", "cutoffHz": 2000 },
-          "envelope": { "attackMs": 4, "decayMs": 40, "sustainLevel": 0.15, "sustainMs": 20, "releaseMs": 40 },
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 2000
+          },
+          "envelope": {
+            "attackMs": 4,
+            "decayMs": 40,
+            "sustainLevel": 0.15,
+            "sustainMs": 20,
+            "releaseMs": 40
+          },
           "gain": 0.15
         }
       ]
@@ -207,12 +495,34 @@
     "phrase": "flip card",
     "category": "transitions",
     "concept": "A quick card flip with a sharp attack and a falling pitch dip.",
-    "keywords": ["flip", "card", "turn", "rotate", "swap", "tumble", "quick"],
+    "keywords": [
+      "flip",
+      "card",
+      "turn",
+      "rotate",
+      "swap",
+      "tumble",
+      "quick"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 800, "pitchEnvelope": { "toHz": 500, "timeMs": 80 } },
-          "envelope": { "attackMs": 4, "decayMs": 25, "sustainLevel": 0.2, "sustainMs": 20, "releaseMs": 35 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 800,
+            "pitchEnvelope": {
+              "toHz": 500,
+              "timeMs": 80
+            }
+          },
+          "envelope": {
+            "attackMs": 4,
+            "decayMs": 25,
+            "sustainLevel": 0.2,
+            "sustainMs": 20,
+            "releaseMs": 35
+          },
           "gain": 0.6
         }
       ]
@@ -223,18 +533,48 @@
     "phrase": "card deal",
     "category": "transitions",
     "concept": "A quick sharp snap, like a card being dealt onto a table.",
-    "keywords": ["card", "deal", "snap", "table", "flick", "deck", "quick"],
+    "keywords": [
+      "card",
+      "deal",
+      "snap",
+      "table",
+      "flick",
+      "deck",
+      "quick"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "noise", "color": "white" },
-          "filter": { "type": "highpass", "cutoffHz": 4200 },
-          "envelope": { "attackMs": 2, "decayMs": 15, "sustainLevel": 0.2, "sustainMs": 5, "releaseMs": 24 },
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "filter": {
+            "type": "highpass",
+            "cutoffHz": 4200
+          },
+          "envelope": {
+            "attackMs": 2,
+            "decayMs": 15,
+            "sustainLevel": 0.2,
+            "sustainMs": 5,
+            "releaseMs": 24
+          },
           "gain": 0.75
         },
         {
-          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 500 },
-          "envelope": { "attackMs": 2, "decayMs": 10, "sustainLevel": 0.15, "sustainMs": 5, "releaseMs": 20 },
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 500
+          },
+          "envelope": {
+            "attackMs": 2,
+            "decayMs": 10,
+            "sustainLevel": 0.15,
+            "sustainMs": 5,
+            "releaseMs": 20
+          },
           "gain": 0.35
         }
       ]
@@ -245,18 +585,51 @@
     "phrase": "drawer open",
     "category": "transitions",
     "concept": "A smooth mechanical slide with a rising pitch and a gentle attack as a drawer opens.",
-    "keywords": ["drawer", "open", "slide", "mechanical", "cabinet", "rising", "smooth"],
+    "keywords": [
+      "drawer",
+      "open",
+      "mechanical",
+      "cabinet",
+      "rising",
+      "smooth"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 400, "pitchEnvelope": { "toHz": 650, "timeMs": 180 } },
-          "envelope": { "attackMs": 40, "decayMs": 60, "sustainLevel": 0.3, "sustainMs": 60, "releaseMs": 80 },
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 400,
+            "pitchEnvelope": {
+              "toHz": 650,
+              "timeMs": 180
+            }
+          },
+          "envelope": {
+            "attackMs": 40,
+            "decayMs": 60,
+            "sustainLevel": 0.3,
+            "sustainMs": 60,
+            "releaseMs": 80
+          },
           "gain": 0.5
         },
         {
-          "source": { "type": "noise", "color": "white" },
-          "filter": { "type": "lowpass", "cutoffHz": 1500 },
-          "envelope": { "attackMs": 30, "decayMs": 60, "sustainLevel": 0.15, "sustainMs": 60, "releaseMs": 70 },
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 1500
+          },
+          "envelope": {
+            "attackMs": 30,
+            "decayMs": 60,
+            "sustainLevel": 0.15,
+            "sustainMs": 60,
+            "releaseMs": 70
+          },
           "gain": 0.12
         }
       ]
@@ -267,18 +640,51 @@
     "phrase": "drawer close",
     "category": "transitions",
     "concept": "A smooth mechanical slide with a falling pitch and a gentle attack as a drawer closes.",
-    "keywords": ["drawer", "close", "slide", "mechanical", "cabinet", "falling", "smooth"],
+    "keywords": [
+      "drawer",
+      "close",
+      "mechanical",
+      "cabinet",
+      "falling",
+      "smooth"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 650, "pitchEnvelope": { "toHz": 400, "timeMs": 180 } },
-          "envelope": { "attackMs": 40, "decayMs": 60, "sustainLevel": 0.3, "sustainMs": 60, "releaseMs": 80 },
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 650,
+            "pitchEnvelope": {
+              "toHz": 400,
+              "timeMs": 180
+            }
+          },
+          "envelope": {
+            "attackMs": 40,
+            "decayMs": 60,
+            "sustainLevel": 0.3,
+            "sustainMs": 60,
+            "releaseMs": 80
+          },
           "gain": 0.5
         },
         {
-          "source": { "type": "noise", "color": "white" },
-          "filter": { "type": "lowpass", "cutoffHz": 1500 },
-          "envelope": { "attackMs": 30, "decayMs": 60, "sustainLevel": 0.15, "sustainMs": 60, "releaseMs": 70 },
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 1500
+          },
+          "envelope": {
+            "attackMs": 30,
+            "decayMs": 60,
+            "sustainLevel": 0.15,
+            "sustainMs": 60,
+            "releaseMs": 70
+          },
           "gain": 0.12
         }
       ]
@@ -289,12 +695,34 @@
     "phrase": "sheet up",
     "category": "transitions",
     "concept": "A short rising lift with a gentle attack, like a sheet sliding upward.",
-    "keywords": ["sheet", "up", "lift", "rise", "upward", "panel", "glide"],
+    "keywords": [
+      "sheet",
+      "up",
+      "lift",
+      "rise",
+      "upward",
+      "panel",
+      "glide"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 800, "timeMs": 130 } },
-          "envelope": { "attackMs": 25, "decayMs": 45, "sustainLevel": 0.3, "sustainMs": 40, "releaseMs": 70 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 500,
+            "pitchEnvelope": {
+              "toHz": 800,
+              "timeMs": 130
+            }
+          },
+          "envelope": {
+            "attackMs": 25,
+            "decayMs": 45,
+            "sustainLevel": 0.3,
+            "sustainMs": 40,
+            "releaseMs": 70
+          },
           "gain": 0.55
         }
       ]
@@ -305,12 +733,34 @@
     "phrase": "sheet down",
     "category": "transitions",
     "concept": "A short falling drop with a gentle attack, like a sheet sliding downward.",
-    "keywords": ["sheet", "down", "drop", "descend", "downward", "panel", "glide"],
+    "keywords": [
+      "sheet",
+      "down",
+      "drop",
+      "descend",
+      "downward",
+      "panel",
+      "glide"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 800, "pitchEnvelope": { "toHz": 500, "timeMs": 130 } },
-          "envelope": { "attackMs": 25, "decayMs": 45, "sustainLevel": 0.3, "sustainMs": 40, "releaseMs": 70 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 800,
+            "pitchEnvelope": {
+              "toHz": 500,
+              "timeMs": 130
+            }
+          },
+          "envelope": {
+            "attackMs": 25,
+            "decayMs": 45,
+            "sustainLevel": 0.3,
+            "sustainMs": 40,
+            "releaseMs": 70
+          },
           "gain": 0.55
         }
       ]
@@ -321,12 +771,30 @@
     "phrase": "overlay appear",
     "category": "transitions",
     "concept": "A short gentle swell with a soft attack, like an overlay easing into view.",
-    "keywords": ["overlay", "appear", "show", "open", "reveal", "entrance", "layer"],
+    "keywords": [
+      "overlay",
+      "appear",
+      "show",
+      "open",
+      "reveal",
+      "entrance",
+      "layer"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 550 },
-          "envelope": { "attackMs": 30, "decayMs": 50, "sustainLevel": 0.35, "sustainMs": 50, "releaseMs": 60 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 550
+          },
+          "envelope": {
+            "attackMs": 30,
+            "decayMs": 50,
+            "sustainLevel": 0.35,
+            "sustainMs": 50,
+            "releaseMs": 60
+          },
           "gain": 0.55
         }
       ]
@@ -337,12 +805,30 @@
     "phrase": "overlay dismiss",
     "category": "transitions",
     "concept": "A short gentle fade with a soft attack, like an overlay easing out of view.",
-    "keywords": ["overlay", "dismiss", "close", "hide", "fade", "exit", "layer"],
+    "keywords": [
+      "overlay",
+      "dismiss",
+      "close",
+      "hide",
+      "fade",
+      "exit",
+      "layer"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 550 },
-          "envelope": { "attackMs": 20, "decayMs": 40, "sustainLevel": 0.3, "sustainMs": 40, "releaseMs": 90 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 550
+          },
+          "envelope": {
+            "attackMs": 20,
+            "decayMs": 40,
+            "sustainLevel": 0.3,
+            "sustainMs": 40,
+            "releaseMs": 90
+          },
           "gain": 0.5
         }
       ]
@@ -353,12 +839,34 @@
     "phrase": "popover open",
     "category": "transitions",
     "concept": "A quick sharp pop with a rising pitch as a popover opens.",
-    "keywords": ["popover", "open", "pop", "show", "appear", "rising", "small"],
+    "keywords": [
+      "popover",
+      "open",
+      "pop",
+      "show",
+      "appear",
+      "rising",
+      "small"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 820, "timeMs": 90 } },
-          "envelope": { "attackMs": 5, "decayMs": 25, "sustainLevel": 0.25, "sustainMs": 25, "releaseMs": 40 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 500,
+            "pitchEnvelope": {
+              "toHz": 820,
+              "timeMs": 90
+            }
+          },
+          "envelope": {
+            "attackMs": 5,
+            "decayMs": 25,
+            "sustainLevel": 0.25,
+            "sustainMs": 25,
+            "releaseMs": 40
+          },
           "gain": 0.6
         }
       ]
@@ -369,12 +877,34 @@
     "phrase": "popover close",
     "category": "transitions",
     "concept": "A quick sharp pop with a falling pitch as a popover closes.",
-    "keywords": ["popover", "close", "pop", "hide", "falling", "small", "shrink"],
+    "keywords": [
+      "popover",
+      "close",
+      "pop",
+      "hide",
+      "falling",
+      "small",
+      "shrink"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 820, "pitchEnvelope": { "toHz": 500, "timeMs": 90 } },
-          "envelope": { "attackMs": 5, "decayMs": 25, "sustainLevel": 0.25, "sustainMs": 25, "releaseMs": 40 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 820,
+            "pitchEnvelope": {
+              "toHz": 500,
+              "timeMs": 90
+            }
+          },
+          "envelope": {
+            "attackMs": 5,
+            "decayMs": 25,
+            "sustainLevel": 0.25,
+            "sustainMs": 25,
+            "releaseMs": 40
+          },
           "gain": 0.6
         }
       ]
@@ -385,12 +915,34 @@
     "phrase": "tooltip show",
     "category": "transitions",
     "concept": "A very short subtle tick with a rising pitch as a tooltip appears.",
-    "keywords": ["tooltip", "show", "appear", "hint", "tiny", "rising", "tick"],
+    "keywords": [
+      "tooltip",
+      "show",
+      "appear",
+      "hint",
+      "tiny",
+      "rising",
+      "tick"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 600, "pitchEnvelope": { "toHz": 850, "timeMs": 50 } },
-          "envelope": { "attackMs": 5, "decayMs": 20, "sustainLevel": 0.2, "sustainMs": 15, "releaseMs": 30 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 600,
+            "pitchEnvelope": {
+              "toHz": 850,
+              "timeMs": 50
+            }
+          },
+          "envelope": {
+            "attackMs": 5,
+            "decayMs": 20,
+            "sustainLevel": 0.2,
+            "sustainMs": 15,
+            "releaseMs": 30
+          },
           "gain": 0.55
         }
       ]
@@ -401,17 +953,53 @@
     "phrase": "accordion open",
     "category": "transitions",
     "concept": "A gentle rising stretch built from two tones that unfold together as it opens.",
-    "keywords": ["accordion", "open", "expand", "unfold", "stretch", "rising", "panel"],
+    "keywords": [
+      "accordion",
+      "open",
+      "expand",
+      "unfold",
+      "stretch",
+      "rising",
+      "panel"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 450, "pitchEnvelope": { "toHz": 680, "timeMs": 220 } },
-          "envelope": { "attackMs": 50, "decayMs": 70, "sustainLevel": 0.3, "sustainMs": 80, "releaseMs": 140 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 450,
+            "pitchEnvelope": {
+              "toHz": 680,
+              "timeMs": 220
+            }
+          },
+          "envelope": {
+            "attackMs": 50,
+            "decayMs": 70,
+            "sustainLevel": 0.3,
+            "sustainMs": 80,
+            "releaseMs": 140
+          },
           "gain": 0.38
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 460, "pitchEnvelope": { "toHz": 690, "timeMs": 220 } },
-          "envelope": { "attackMs": 50, "decayMs": 70, "sustainLevel": 0.3, "sustainMs": 80, "releaseMs": 140 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 460,
+            "pitchEnvelope": {
+              "toHz": 690,
+              "timeMs": 220
+            }
+          },
+          "envelope": {
+            "attackMs": 50,
+            "decayMs": 70,
+            "sustainLevel": 0.3,
+            "sustainMs": 80,
+            "releaseMs": 140
+          },
           "gain": 0.38
         }
       ]
@@ -422,17 +1010,53 @@
     "phrase": "accordion close",
     "category": "transitions",
     "concept": "A gentle falling stretch built from two tones that fold together as it closes.",
-    "keywords": ["accordion", "close", "collapse", "fold", "shrink", "falling", "panel"],
+    "keywords": [
+      "accordion",
+      "close",
+      "collapse",
+      "fold",
+      "shrink",
+      "falling",
+      "panel"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 680, "pitchEnvelope": { "toHz": 450, "timeMs": 220 } },
-          "envelope": { "attackMs": 50, "decayMs": 70, "sustainLevel": 0.3, "sustainMs": 80, "releaseMs": 140 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 680,
+            "pitchEnvelope": {
+              "toHz": 450,
+              "timeMs": 220
+            }
+          },
+          "envelope": {
+            "attackMs": 50,
+            "decayMs": 70,
+            "sustainLevel": 0.3,
+            "sustainMs": 80,
+            "releaseMs": 140
+          },
           "gain": 0.38
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 690, "pitchEnvelope": { "toHz": 460, "timeMs": 220 } },
-          "envelope": { "attackMs": 50, "decayMs": 70, "sustainLevel": 0.3, "sustainMs": 80, "releaseMs": 140 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 690,
+            "pitchEnvelope": {
+              "toHz": 460,
+              "timeMs": 220
+            }
+          },
+          "envelope": {
+            "attackMs": 50,
+            "decayMs": 70,
+            "sustainLevel": 0.3,
+            "sustainMs": 80,
+            "releaseMs": 140
+          },
           "gain": 0.38
         }
       ]

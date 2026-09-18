@@ -4,12 +4,33 @@
     "phrase": "message sent",
     "category": "messages-notifications",
     "concept": "A quick, soft, rising blip that confirms a message went out.",
-    "keywords": ["message", "send", "sent", "chat", "confirm", "delivered"],
+    "keywords": [
+      "message",
+      "send",
+      "sent",
+      "chat",
+      "confirm",
+      "delivered"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 520, "pitchEnvelope": { "toHz": 700, "timeMs": 100 } },
-          "envelope": { "attackMs": 14, "decayMs": 40, "sustainLevel": 0.4, "sustainMs": 40, "releaseMs": 40 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 520,
+            "pitchEnvelope": {
+              "toHz": 700,
+              "timeMs": 100
+            }
+          },
+          "envelope": {
+            "attackMs": 14,
+            "decayMs": 40,
+            "sustainLevel": 0.4,
+            "sustainMs": 40,
+            "releaseMs": 40
+          },
           "gain": 0.44
         }
       ]
@@ -20,17 +41,52 @@
     "phrase": "message failed",
     "category": "messages-notifications",
     "concept": "A quick, soft, falling two-tone dip that signals a failed send.",
-    "keywords": ["message", "fail", "error", "send", "retry", "problem"],
+    "keywords": [
+      "message",
+      "fail",
+      "error",
+      "send",
+      "retry",
+      "problem"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 560, "pitchEnvelope": { "toHz": 380, "timeMs": 130 } },
-          "envelope": { "attackMs": 14, "decayMs": 50, "sustainLevel": 0.4, "sustainMs": 40, "releaseMs": 50 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 560,
+            "pitchEnvelope": {
+              "toHz": 380,
+              "timeMs": 130
+            }
+          },
+          "envelope": {
+            "attackMs": 14,
+            "decayMs": 50,
+            "sustainLevel": 0.4,
+            "sustainMs": 40,
+            "releaseMs": 50
+          },
           "gain": 0.31
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 420, "pitchEnvelope": { "toHz": 300, "timeMs": 130 } },
-          "envelope": { "attackMs": 14, "decayMs": 50, "sustainLevel": 0.4, "sustainMs": 40, "releaseMs": 50 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 420,
+            "pitchEnvelope": {
+              "toHz": 300,
+              "timeMs": 130
+            }
+          },
+          "envelope": {
+            "attackMs": 14,
+            "decayMs": 50,
+            "sustainLevel": 0.4,
+            "sustainMs": 40,
+            "releaseMs": 50
+          },
           "gain": 0.31
         }
       ]
@@ -41,17 +97,52 @@
     "phrase": "typing indicator",
     "category": "messages-notifications",
     "concept": "A soft, gentle, wavering murmur that suggests someone typing a reply.",
-    "keywords": ["typing", "indicator", "chat", "compose", "cursor", "active"],
+    "keywords": [
+      "typing",
+      "indicator",
+      "chat",
+      "compose",
+      "cursor",
+      "active"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 340, "pitchEnvelope": { "toHz": 362, "timeMs": 390 } },
-          "envelope": { "attackMs": 60, "decayMs": 80, "sustainLevel": 0.35, "sustainMs": 150, "releaseMs": 100 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 340,
+            "pitchEnvelope": {
+              "toHz": 362,
+              "timeMs": 390
+            }
+          },
+          "envelope": {
+            "attackMs": 60,
+            "decayMs": 80,
+            "sustainLevel": 0.35,
+            "sustainMs": 150,
+            "releaseMs": 100
+          },
           "gain": 0.4
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 358, "pitchEnvelope": { "toHz": 336, "timeMs": 390 } },
-          "envelope": { "attackMs": 60, "decayMs": 80, "sustainLevel": 0.35, "sustainMs": 150, "releaseMs": 100 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 358,
+            "pitchEnvelope": {
+              "toHz": 336,
+              "timeMs": 390
+            }
+          },
+          "envelope": {
+            "attackMs": 60,
+            "decayMs": 80,
+            "sustainLevel": 0.35,
+            "sustainMs": 150,
+            "releaseMs": 100
+          },
           "gain": 0.4
         }
       ]
@@ -62,12 +153,33 @@
     "phrase": "read receipt",
     "category": "messages-notifications",
     "concept": "A short, soft, gentle rising tick that confirms the message was read.",
-    "keywords": ["read", "receipt", "seen", "confirm", "message", "delivered"],
+    "keywords": [
+      "read",
+      "receipt",
+      "seen",
+      "confirm",
+      "message",
+      "delivered"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 600, "pitchEnvelope": { "toHz": 760, "timeMs": 80 } },
-          "envelope": { "attackMs": 16, "decayMs": 35, "sustainLevel": 0.4, "sustainMs": 30, "releaseMs": 35 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 600,
+            "pitchEnvelope": {
+              "toHz": 760,
+              "timeMs": 80
+            }
+          },
+          "envelope": {
+            "attackMs": 16,
+            "decayMs": 35,
+            "sustainLevel": 0.4,
+            "sustainMs": 30,
+            "releaseMs": 35
+          },
           "gain": 0.44
         }
       ]
@@ -78,17 +190,52 @@
     "phrase": "new chat",
     "category": "messages-notifications",
     "concept": "A bright, quick, rising two-tone chime that opens a brand new conversation.",
-    "keywords": ["chat", "conversation", "new", "start", "open", "message"],
+    "keywords": [
+      "chat",
+      "conversation",
+      "new",
+      "start",
+      "open",
+      "message"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1100, "pitchEnvelope": { "toHz": 1800, "timeMs": 80 } },
-          "envelope": { "attackMs": 3, "decayMs": 35, "sustainLevel": 0.3, "sustainMs": 25, "releaseMs": 35 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 1100,
+            "pitchEnvelope": {
+              "toHz": 1800,
+              "timeMs": 80
+            }
+          },
+          "envelope": {
+            "attackMs": 3,
+            "decayMs": 35,
+            "sustainLevel": 0.3,
+            "sustainMs": 25,
+            "releaseMs": 35
+          },
           "gain": 0.4
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1650, "pitchEnvelope": { "toHz": 2500, "timeMs": 80 } },
-          "envelope": { "attackMs": 3, "decayMs": 35, "sustainLevel": 0.3, "sustainMs": 25, "releaseMs": 35 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 1650,
+            "pitchEnvelope": {
+              "toHz": 2500,
+              "timeMs": 80
+            }
+          },
+          "envelope": {
+            "attackMs": 3,
+            "decayMs": 35,
+            "sustainLevel": 0.3,
+            "sustainMs": 25,
+            "releaseMs": 35
+          },
           "gain": 0.3
         }
       ]
@@ -99,17 +246,44 @@
     "phrase": "group message",
     "category": "messages-notifications",
     "concept": "A warm, short, steady chord made of two soft tones for a group chat message.",
-    "keywords": ["group", "message", "chat", "multiple", "team", "conversation"],
+    "keywords": [
+      "group",
+      "message",
+      "chat",
+      "multiple",
+      "team",
+      "conversation"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 450 },
-          "envelope": { "attackMs": 20, "decayMs": 50, "sustainLevel": 0.4, "sustainMs": 40, "releaseMs": 50 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 450
+          },
+          "envelope": {
+            "attackMs": 20,
+            "decayMs": 50,
+            "sustainLevel": 0.4,
+            "sustainMs": 40,
+            "releaseMs": 50
+          },
           "gain": 0.42
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 600 },
-          "envelope": { "attackMs": 20, "decayMs": 50, "sustainLevel": 0.4, "sustainMs": 40, "releaseMs": 50 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 600
+          },
+          "envelope": {
+            "attackMs": 20,
+            "decayMs": 50,
+            "sustainLevel": 0.4,
+            "sustainMs": 40,
+            "releaseMs": 50
+          },
           "gain": 0.35
         }
       ]
@@ -120,12 +294,32 @@
     "phrase": "reply",
     "category": "messages-notifications",
     "concept": "A quick, soft, gently falling tone used when replying to a message.",
-    "keywords": ["reply", "respond", "message", "answer", "chat"],
+    "keywords": [
+      "reply",
+      "respond",
+      "message",
+      "answer",
+      "chat"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 660, "pitchEnvelope": { "toHz": 480, "timeMs": 90 } },
-          "envelope": { "attackMs": 15, "decayMs": 40, "sustainLevel": 0.4, "sustainMs": 30, "releaseMs": 40 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 660,
+            "pitchEnvelope": {
+              "toHz": 480,
+              "timeMs": 90
+            }
+          },
+          "envelope": {
+            "attackMs": 15,
+            "decayMs": 40,
+            "sustainLevel": 0.4,
+            "sustainMs": 30,
+            "releaseMs": 40
+          },
           "gain": 0.44
         }
       ]
@@ -136,17 +330,52 @@
     "phrase": "thread update",
     "category": "messages-notifications",
     "concept": "A soft, quick, rising twin-tone chime that marks new activity in a thread.",
-    "keywords": ["thread", "update", "conversation", "activity", "chat", "new"],
+    "keywords": [
+      "thread",
+      "update",
+      "conversation",
+      "activity",
+      "chat",
+      "new"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 520, "pitchEnvelope": { "toHz": 680, "timeMs": 110 } },
-          "envelope": { "attackMs": 16, "decayMs": 45, "sustainLevel": 0.35, "sustainMs": 35, "releaseMs": 45 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 520,
+            "pitchEnvelope": {
+              "toHz": 680,
+              "timeMs": 110
+            }
+          },
+          "envelope": {
+            "attackMs": 16,
+            "decayMs": 45,
+            "sustainLevel": 0.35,
+            "sustainMs": 35,
+            "releaseMs": 45
+          },
           "gain": 0.42
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 650, "pitchEnvelope": { "toHz": 850, "timeMs": 110 } },
-          "envelope": { "attackMs": 16, "decayMs": 45, "sustainLevel": 0.35, "sustainMs": 35, "releaseMs": 45 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 650,
+            "pitchEnvelope": {
+              "toHz": 850,
+              "timeMs": 110
+            }
+          },
+          "envelope": {
+            "attackMs": 16,
+            "decayMs": 45,
+            "sustainLevel": 0.35,
+            "sustainMs": 35,
+            "releaseMs": 45
+          },
           "gain": 0.32
         }
       ]
@@ -157,17 +386,51 @@
     "phrase": "reaction received",
     "category": "messages-notifications",
     "concept": "A bright, quick, rising, playful chirp for a reaction added to a message.",
-    "keywords": ["reaction", "emoji", "like", "response", "chat", "received"],
+    "keywords": [
+      "reaction",
+      "emoji",
+      "response",
+      "chat",
+      "received"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1100, "pitchEnvelope": { "toHz": 1800, "timeMs": 80 } },
-          "envelope": { "attackMs": 3, "decayMs": 35, "sustainLevel": 0.3, "sustainMs": 25, "releaseMs": 35 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 1100,
+            "pitchEnvelope": {
+              "toHz": 1800,
+              "timeMs": 80
+            }
+          },
+          "envelope": {
+            "attackMs": 3,
+            "decayMs": 35,
+            "sustainLevel": 0.3,
+            "sustainMs": 25,
+            "releaseMs": 35
+          },
           "gain": 0.42
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1650, "pitchEnvelope": { "toHz": 2500, "timeMs": 80 } },
-          "envelope": { "attackMs": 3, "decayMs": 35, "sustainLevel": 0.3, "sustainMs": 25, "releaseMs": 35 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 1650,
+            "pitchEnvelope": {
+              "toHz": 2500,
+              "timeMs": 80
+            }
+          },
+          "envelope": {
+            "attackMs": 3,
+            "decayMs": 35,
+            "sustainLevel": 0.3,
+            "sustainMs": 25,
+            "releaseMs": 35
+          },
           "gain": 0.3
         }
       ]
@@ -178,12 +441,33 @@
     "phrase": "emoji sent",
     "category": "messages-notifications",
     "concept": "A quick, bright, rising, tiny pop that plays when an emoji is sent.",
-    "keywords": ["emoji", "send", "sent", "sticker", "chat", "react"],
+    "keywords": [
+      "emoji",
+      "send",
+      "sent",
+      "sticker",
+      "chat",
+      "react"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1400, "pitchEnvelope": { "toHz": 2200, "timeMs": 50 } },
-          "envelope": { "attackMs": 3, "decayMs": 25, "sustainLevel": 0.25, "sustainMs": 15, "releaseMs": 25 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 1400,
+            "pitchEnvelope": {
+              "toHz": 2200,
+              "timeMs": 50
+            }
+          },
+          "envelope": {
+            "attackMs": 3,
+            "decayMs": 25,
+            "sustainLevel": 0.25,
+            "sustainMs": 15,
+            "releaseMs": 25
+          },
           "gain": 0.51
         }
       ]
@@ -194,17 +478,52 @@
     "phrase": "voice message",
     "category": "messages-notifications",
     "concept": "A warm, soft swell of two tones that plays for an incoming voice message.",
-    "keywords": ["voice", "message", "audio", "recording", "chat", "speak"],
+    "keywords": [
+      "voice",
+      "message",
+      "audio",
+      "recording",
+      "chat",
+      "speak"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 380, "pitchEnvelope": { "toHz": 460, "timeMs": 350 } },
-          "envelope": { "attackMs": 70, "decayMs": 110, "sustainLevel": 0.5, "sustainMs": 150, "releaseMs": 150 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 380,
+            "pitchEnvelope": {
+              "toHz": 460,
+              "timeMs": 350
+            }
+          },
+          "envelope": {
+            "attackMs": 70,
+            "decayMs": 110,
+            "sustainLevel": 0.5,
+            "sustainMs": 150,
+            "releaseMs": 150
+          },
           "gain": 0.38
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 600, "timeMs": 350 } },
-          "envelope": { "attackMs": 70, "decayMs": 110, "sustainLevel": 0.5, "sustainMs": 150, "releaseMs": 150 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 500,
+            "pitchEnvelope": {
+              "toHz": 600,
+              "timeMs": 350
+            }
+          },
+          "envelope": {
+            "attackMs": 70,
+            "decayMs": 110,
+            "sustainLevel": 0.5,
+            "sustainMs": 150,
+            "releaseMs": 150
+          },
           "gain": 0.3
         }
       ]
@@ -215,23 +534,70 @@
     "phrase": "video message",
     "category": "messages-notifications",
     "concept": "A warm, soft swell of two tones with a light textured layer for an incoming video message.",
-    "keywords": ["video", "message", "clip", "chat", "camera", "recording"],
+    "keywords": [
+      "video",
+      "message",
+      "clip",
+      "chat",
+      "camera",
+      "recording"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 340, "pitchEnvelope": { "toHz": 420, "timeMs": 380 } },
-          "envelope": { "attackMs": 70, "decayMs": 120, "sustainLevel": 0.4, "sustainMs": 160, "releaseMs": 170 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 340,
+            "pitchEnvelope": {
+              "toHz": 420,
+              "timeMs": 380
+            }
+          },
+          "envelope": {
+            "attackMs": 70,
+            "decayMs": 120,
+            "sustainLevel": 0.4,
+            "sustainMs": 160,
+            "releaseMs": 170
+          },
           "gain": 0.34
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 460, "pitchEnvelope": { "toHz": 560, "timeMs": 380 } },
-          "envelope": { "attackMs": 70, "decayMs": 120, "sustainLevel": 0.4, "sustainMs": 160, "releaseMs": 170 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 460,
+            "pitchEnvelope": {
+              "toHz": 560,
+              "timeMs": 380
+            }
+          },
+          "envelope": {
+            "attackMs": 70,
+            "decayMs": 120,
+            "sustainLevel": 0.4,
+            "sustainMs": 160,
+            "releaseMs": 170
+          },
           "gain": 0.26
         },
         {
-          "source": { "type": "noise", "color": "pink" },
-          "envelope": { "attackMs": 70, "decayMs": 120, "sustainLevel": 0.35, "sustainMs": 160, "releaseMs": 170 },
-          "filter": { "type": "lowpass", "cutoffHz": 800 },
+          "source": {
+            "type": "noise",
+            "color": "pink"
+          },
+          "envelope": {
+            "attackMs": 70,
+            "decayMs": 120,
+            "sustainLevel": 0.35,
+            "sustainMs": 160,
+            "releaseMs": 170
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 800
+          },
           "gain": 0.5
         }
       ]
@@ -242,18 +608,48 @@
     "phrase": "attachment received",
     "category": "messages-notifications",
     "concept": "A quick, sharp click paired with a tone announcing an attachment has arrived.",
-    "keywords": ["attachment", "file", "receive", "document", "download", "paperclip"],
+    "keywords": [
+      "attachment",
+      "file",
+      "receive",
+      "document",
+      "download",
+      "paperclip"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "noise", "color": "white" },
-          "envelope": { "attackMs": 2, "decayMs": 20, "sustainLevel": 0.25, "sustainMs": 8, "releaseMs": 30 },
-          "filter": { "type": "bandpass", "cutoffHz": 2000, "q": 2 },
-          "gain": 1.0
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "envelope": {
+            "attackMs": 2,
+            "decayMs": 20,
+            "sustainLevel": 0.25,
+            "sustainMs": 8,
+            "releaseMs": 30
+          },
+          "filter": {
+            "type": "bandpass",
+            "cutoffHz": 2000,
+            "q": 2
+          },
+          "gain": 1
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 800 },
-          "envelope": { "attackMs": 2, "decayMs": 20, "sustainLevel": 0.3, "sustainMs": 8, "releaseMs": 30 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 800
+          },
+          "envelope": {
+            "attackMs": 2,
+            "decayMs": 20,
+            "sustainLevel": 0.3,
+            "sustainMs": 8,
+            "releaseMs": 30
+          },
           "gain": 0.6
         }
       ]
@@ -264,17 +660,52 @@
     "phrase": "email arrived",
     "category": "messages-notifications",
     "concept": "A soft, rising two-tone chime that plays when a new email arrives.",
-    "keywords": ["email", "mail", "arrive", "inbox", "notification", "new"],
+    "keywords": [
+      "email",
+      "mail",
+      "arrive",
+      "inbox",
+      "notification",
+      "new"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 480, "pitchEnvelope": { "toHz": 620, "timeMs": 180 } },
-          "envelope": { "attackMs": 30, "decayMs": 80, "sustainLevel": 0.4, "sustainMs": 70, "releaseMs": 80 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 480,
+            "pitchEnvelope": {
+              "toHz": 620,
+              "timeMs": 180
+            }
+          },
+          "envelope": {
+            "attackMs": 30,
+            "decayMs": 80,
+            "sustainLevel": 0.4,
+            "sustainMs": 70,
+            "releaseMs": 80
+          },
           "gain": 0.36
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 620, "pitchEnvelope": { "toHz": 800, "timeMs": 180 } },
-          "envelope": { "attackMs": 30, "decayMs": 80, "sustainLevel": 0.4, "sustainMs": 70, "releaseMs": 80 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 620,
+            "pitchEnvelope": {
+              "toHz": 800,
+              "timeMs": 180
+            }
+          },
+          "envelope": {
+            "attackMs": 30,
+            "decayMs": 80,
+            "sustainLevel": 0.4,
+            "sustainMs": 70,
+            "releaseMs": 80
+          },
           "gain": 0.28
         }
       ]
@@ -285,18 +716,52 @@
     "phrase": "email sent",
     "category": "messages-notifications",
     "concept": "A quick, rising tone with an airy whoosh that plays when an email is sent.",
-    "keywords": ["email", "mail", "send", "sent", "outbox", "deliver"],
+    "keywords": [
+      "email",
+      "mail",
+      "send",
+      "sent",
+      "outbox",
+      "deliver"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 650, "pitchEnvelope": { "toHz": 1100, "timeMs": 120 } },
-          "envelope": { "attackMs": 15, "decayMs": 50, "sustainLevel": 0.4, "sustainMs": 30, "releaseMs": 55 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 650,
+            "pitchEnvelope": {
+              "toHz": 1100,
+              "timeMs": 120
+            }
+          },
+          "envelope": {
+            "attackMs": 15,
+            "decayMs": 50,
+            "sustainLevel": 0.4,
+            "sustainMs": 30,
+            "releaseMs": 55
+          },
           "gain": 0.43
         },
         {
-          "source": { "type": "noise", "color": "white" },
-          "envelope": { "attackMs": 15, "decayMs": 50, "sustainLevel": 0.2, "sustainMs": 30, "releaseMs": 55 },
-          "filter": { "type": "bandpass", "cutoffHz": 1800, "q": 1.2 },
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "envelope": {
+            "attackMs": 15,
+            "decayMs": 50,
+            "sustainLevel": 0.2,
+            "sustainMs": 30,
+            "releaseMs": 55
+          },
+          "filter": {
+            "type": "bandpass",
+            "cutoffHz": 1800,
+            "q": 1.2
+          },
           "gain": 0.39
         }
       ]
@@ -307,12 +772,33 @@
     "phrase": "inbox empty",
     "category": "messages-notifications",
     "concept": "A long, sustained, soft, falling warm tone that plays when the inbox is empty.",
-    "keywords": ["inbox", "empty", "clear", "done", "zero", "clean"],
+    "keywords": [
+      "inbox",
+      "empty",
+      "clear",
+      "done",
+      "zero",
+      "clean"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 320, "timeMs": 700 } },
-          "envelope": { "attackMs": 100, "decayMs": 200, "sustainLevel": 0.5, "sustainMs": 300, "releaseMs": 300 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 500,
+            "pitchEnvelope": {
+              "toHz": 320,
+              "timeMs": 700
+            }
+          },
+          "envelope": {
+            "attackMs": 100,
+            "decayMs": 200,
+            "sustainLevel": 0.5,
+            "sustainMs": 300,
+            "releaseMs": 300
+          },
           "gain": 0.43
         }
       ]
@@ -323,19 +809,55 @@
     "phrase": "spam filtered",
     "category": "messages-notifications",
     "concept": "A quick, sharp, falling, muted thud that plays when spam gets filtered out.",
-    "keywords": ["spam", "filter", "block", "junk", "reject", "email"],
+    "keywords": [
+      "spam",
+      "filter",
+      "block",
+      "junk",
+      "reject",
+      "email"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 300, "pitchEnvelope": { "toHz": 150, "timeMs": 90 } },
-          "envelope": { "attackMs": 3, "decayMs": 30, "sustainLevel": 0.3, "sustainMs": 20, "releaseMs": 40 },
-          "filter": { "type": "highpass", "cutoffHz": 40 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 300,
+            "pitchEnvelope": {
+              "toHz": 150,
+              "timeMs": 90
+            }
+          },
+          "envelope": {
+            "attackMs": 3,
+            "decayMs": 30,
+            "sustainLevel": 0.3,
+            "sustainMs": 20,
+            "releaseMs": 40
+          },
+          "filter": {
+            "type": "highpass",
+            "cutoffHz": 40
+          },
           "gain": 0.65
         },
         {
-          "source": { "type": "noise", "color": "white" },
-          "envelope": { "attackMs": 2, "decayMs": 20, "sustainLevel": 0.2, "sustainMs": 10, "releaseMs": 30 },
-          "filter": { "type": "lowpass", "cutoffHz": 300 },
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "envelope": {
+            "attackMs": 2,
+            "decayMs": 20,
+            "sustainLevel": 0.2,
+            "sustainMs": 10,
+            "releaseMs": 30
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 300
+          },
           "gain": 0.6
         }
       ]
@@ -346,12 +868,29 @@
     "phrase": "newsletter",
     "category": "messages-notifications",
     "concept": "A gentle, soft, mellow tone that plays when a newsletter comes in.",
-    "keywords": ["newsletter", "email", "subscribe", "digest", "update", "mail"],
+    "keywords": [
+      "newsletter",
+      "email",
+      "subscribe",
+      "digest",
+      "update",
+      "mail"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 430 },
-          "envelope": { "attackMs": 50, "decayMs": 90, "sustainLevel": 0.45, "sustainMs": 80, "releaseMs": 90 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 430
+          },
+          "envelope": {
+            "attackMs": 50,
+            "decayMs": 90,
+            "sustainLevel": 0.45,
+            "sustainMs": 80,
+            "releaseMs": 90
+          },
           "gain": 0.42
         }
       ]
@@ -362,17 +901,52 @@
     "phrase": "invitation received",
     "category": "messages-notifications",
     "concept": "A warm, soft, rising chime that welcomes a new invitation.",
-    "keywords": ["invitation", "invite", "receive", "event", "join", "request"],
+    "keywords": [
+      "invitation",
+      "invite",
+      "receive",
+      "event",
+      "join",
+      "request"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 420, "pitchEnvelope": { "toHz": 560, "timeMs": 220 } },
-          "envelope": { "attackMs": 45, "decayMs": 90, "sustainLevel": 0.45, "sustainMs": 80, "releaseMs": 90 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 420,
+            "pitchEnvelope": {
+              "toHz": 560,
+              "timeMs": 220
+            }
+          },
+          "envelope": {
+            "attackMs": 45,
+            "decayMs": 90,
+            "sustainLevel": 0.45,
+            "sustainMs": 80,
+            "releaseMs": 90
+          },
           "gain": 0.34
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 560, "pitchEnvelope": { "toHz": 740, "timeMs": 220 } },
-          "envelope": { "attackMs": 45, "decayMs": 90, "sustainLevel": 0.45, "sustainMs": 80, "releaseMs": 90 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 560,
+            "pitchEnvelope": {
+              "toHz": 740,
+              "timeMs": 220
+            }
+          },
+          "envelope": {
+            "attackMs": 45,
+            "decayMs": 90,
+            "sustainLevel": 0.45,
+            "sustainMs": 80,
+            "releaseMs": 90
+          },
           "gain": 0.26
         }
       ]
@@ -383,17 +957,52 @@
     "phrase": "invitation accepted",
     "category": "messages-notifications",
     "concept": "A bright, quick, rising two-tone confirmation that an invitation was accepted.",
-    "keywords": ["invitation", "invite", "accept", "confirm", "join", "yes"],
+    "keywords": [
+      "invitation",
+      "invite",
+      "accept",
+      "confirm",
+      "join",
+      "yes"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1100, "pitchEnvelope": { "toHz": 1800, "timeMs": 120 } },
-          "envelope": { "attackMs": 10, "decayMs": 55, "sustainLevel": 0.35, "sustainMs": 45, "releaseMs": 55 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 1100,
+            "pitchEnvelope": {
+              "toHz": 1800,
+              "timeMs": 120
+            }
+          },
+          "envelope": {
+            "attackMs": 10,
+            "decayMs": 55,
+            "sustainLevel": 0.35,
+            "sustainMs": 45,
+            "releaseMs": 55
+          },
           "gain": 0.4
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1650, "pitchEnvelope": { "toHz": 2500, "timeMs": 120 } },
-          "envelope": { "attackMs": 10, "decayMs": 55, "sustainLevel": 0.35, "sustainMs": 45, "releaseMs": 55 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 1650,
+            "pitchEnvelope": {
+              "toHz": 2500,
+              "timeMs": 120
+            }
+          },
+          "envelope": {
+            "attackMs": 10,
+            "decayMs": 55,
+            "sustainLevel": 0.35,
+            "sustainMs": 45,
+            "releaseMs": 55
+          },
           "gain": 0.3
         }
       ]
@@ -404,12 +1013,33 @@
     "phrase": "invitation declined",
     "category": "messages-notifications",
     "concept": "A soft, quick, falling, muted tone that plays when an invitation is declined.",
-    "keywords": ["invitation", "invite", "decline", "reject", "no", "cancel"],
+    "keywords": [
+      "invitation",
+      "invite",
+      "decline",
+      "reject",
+      "no",
+      "cancel"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 480, "pitchEnvelope": { "toHz": 320, "timeMs": 130 } },
-          "envelope": { "attackMs": 18, "decayMs": 45, "sustainLevel": 0.35, "sustainMs": 35, "releaseMs": 45 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 480,
+            "pitchEnvelope": {
+              "toHz": 320,
+              "timeMs": 130
+            }
+          },
+          "envelope": {
+            "attackMs": 18,
+            "decayMs": 45,
+            "sustainLevel": 0.35,
+            "sustainMs": 35,
+            "releaseMs": 45
+          },
           "gain": 0.46
         }
       ]
@@ -420,17 +1050,52 @@
     "phrase": "friend request",
     "category": "messages-notifications",
     "concept": "A warm, soft, rising two-tone chime that plays for a new friend request.",
-    "keywords": ["friend", "request", "social", "add", "connect", "network"],
+    "keywords": [
+      "friend",
+      "request",
+      "social",
+      "add",
+      "connect",
+      "network"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 400, "pitchEnvelope": { "toHz": 520, "timeMs": 180 } },
-          "envelope": { "attackMs": 35, "decayMs": 75, "sustainLevel": 0.42, "sustainMs": 65, "releaseMs": 75 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 400,
+            "pitchEnvelope": {
+              "toHz": 520,
+              "timeMs": 180
+            }
+          },
+          "envelope": {
+            "attackMs": 35,
+            "decayMs": 75,
+            "sustainLevel": 0.42,
+            "sustainMs": 65,
+            "releaseMs": 75
+          },
           "gain": 0.36
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 540, "pitchEnvelope": { "toHz": 700, "timeMs": 180 } },
-          "envelope": { "attackMs": 35, "decayMs": 75, "sustainLevel": 0.42, "sustainMs": 65, "releaseMs": 75 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 540,
+            "pitchEnvelope": {
+              "toHz": 700,
+              "timeMs": 180
+            }
+          },
+          "envelope": {
+            "attackMs": 35,
+            "decayMs": 75,
+            "sustainLevel": 0.42,
+            "sustainMs": 65,
+            "releaseMs": 75
+          },
           "gain": 0.28
         }
       ]
@@ -441,17 +1106,52 @@
     "phrase": "follow notification",
     "category": "messages-notifications",
     "concept": "A quick, bright, rising ping that plays when someone new follows you.",
-    "keywords": ["follow", "follower", "social", "notification", "new", "gain"],
+    "keywords": [
+      "follow",
+      "follower",
+      "social",
+      "notification",
+      "new",
+      "gain"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1100, "pitchEnvelope": { "toHz": 1800, "timeMs": 60 } },
-          "envelope": { "attackMs": 4, "decayMs": 30, "sustainLevel": 0.3, "sustainMs": 20, "releaseMs": 30 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 1100,
+            "pitchEnvelope": {
+              "toHz": 1800,
+              "timeMs": 60
+            }
+          },
+          "envelope": {
+            "attackMs": 4,
+            "decayMs": 30,
+            "sustainLevel": 0.3,
+            "sustainMs": 20,
+            "releaseMs": 30
+          },
           "gain": 0.44
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1650, "pitchEnvelope": { "toHz": 2500, "timeMs": 60 } },
-          "envelope": { "attackMs": 4, "decayMs": 30, "sustainLevel": 0.3, "sustainMs": 20, "releaseMs": 30 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 1650,
+            "pitchEnvelope": {
+              "toHz": 2500,
+              "timeMs": 60
+            }
+          },
+          "envelope": {
+            "attackMs": 4,
+            "decayMs": 30,
+            "sustainLevel": 0.3,
+            "sustainMs": 20,
+            "releaseMs": 30
+          },
           "gain": 0.32
         }
       ]
@@ -462,12 +1162,29 @@
     "phrase": "comment received",
     "category": "messages-notifications",
     "concept": "A soft, gentle tone that plays quietly when a new comment arrives.",
-    "keywords": ["comment", "receive", "post", "reply", "social", "feedback"],
+    "keywords": [
+      "comment",
+      "receive",
+      "post",
+      "reply",
+      "social",
+      "feedback"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 460 },
-          "envelope": { "attackMs": 25, "decayMs": 50, "sustainLevel": 0.4, "sustainMs": 45, "releaseMs": 50 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 460
+          },
+          "envelope": {
+            "attackMs": 25,
+            "decayMs": 50,
+            "sustainLevel": 0.4,
+            "sustainMs": 45,
+            "releaseMs": 50
+          },
           "gain": 0.44
         }
       ]
@@ -478,17 +1195,52 @@
     "phrase": "mention in comment",
     "category": "messages-notifications",
     "concept": "A quick, bright, rising, accented ping that plays when you are mentioned in a comment.",
-    "keywords": ["mention", "comment", "tag", "notify", "social", "reply"],
+    "keywords": [
+      "mention",
+      "comment",
+      "tag",
+      "notify",
+      "social",
+      "reply"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1100, "pitchEnvelope": { "toHz": 1900, "timeMs": 90 } },
-          "envelope": { "attackMs": 5, "decayMs": 40, "sustainLevel": 0.3, "sustainMs": 30, "releaseMs": 40 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 1100,
+            "pitchEnvelope": {
+              "toHz": 1900,
+              "timeMs": 90
+            }
+          },
+          "envelope": {
+            "attackMs": 5,
+            "decayMs": 40,
+            "sustainLevel": 0.3,
+            "sustainMs": 30,
+            "releaseMs": 40
+          },
           "gain": 0.42
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1650, "pitchEnvelope": { "toHz": 2600, "timeMs": 90 } },
-          "envelope": { "attackMs": 5, "decayMs": 40, "sustainLevel": 0.3, "sustainMs": 30, "releaseMs": 40 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 1650,
+            "pitchEnvelope": {
+              "toHz": 2600,
+              "timeMs": 90
+            }
+          },
+          "envelope": {
+            "attackMs": 5,
+            "decayMs": 40,
+            "sustainLevel": 0.3,
+            "sustainMs": 30,
+            "releaseMs": 40
+          },
           "gain": 0.3
         }
       ]
@@ -499,12 +1251,33 @@
     "phrase": "badge increment",
     "category": "messages-notifications",
     "concept": "A very quick, sharp, rising tick that plays when a badge count goes up.",
-    "keywords": ["badge", "count", "increment", "unread", "number", "increase"],
+    "keywords": [
+      "badge",
+      "count",
+      "increment",
+      "unread",
+      "number",
+      "increase"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 700, "pitchEnvelope": { "toHz": 1100, "timeMs": 45 } },
-          "envelope": { "attackMs": 2, "decayMs": 25, "sustainLevel": 0.25, "sustainMs": 15, "releaseMs": 25 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 700,
+            "pitchEnvelope": {
+              "toHz": 1100,
+              "timeMs": 45
+            }
+          },
+          "envelope": {
+            "attackMs": 2,
+            "decayMs": 25,
+            "sustainLevel": 0.25,
+            "sustainMs": 15,
+            "releaseMs": 25
+          },
           "gain": 0.65
         }
       ]
@@ -515,12 +1288,33 @@
     "phrase": "badge cleared",
     "category": "messages-notifications",
     "concept": "A soft, quick, falling tone that plays when a badge count is cleared.",
-    "keywords": ["badge", "clear", "count", "reset", "read", "zero"],
+    "keywords": [
+      "badge",
+      "clear",
+      "count",
+      "reset",
+      "read",
+      "zero"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 620, "pitchEnvelope": { "toHz": 420, "timeMs": 110 } },
-          "envelope": { "attackMs": 16, "decayMs": 40, "sustainLevel": 0.35, "sustainMs": 35, "releaseMs": 40 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 620,
+            "pitchEnvelope": {
+              "toHz": 420,
+              "timeMs": 110
+            }
+          },
+          "envelope": {
+            "attackMs": 16,
+            "decayMs": 40,
+            "sustainLevel": 0.35,
+            "sustainMs": 35,
+            "releaseMs": 40
+          },
           "gain": 0.46
         }
       ]

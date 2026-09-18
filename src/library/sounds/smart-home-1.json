@@ -4,12 +4,34 @@
     "phrase": "doorbell",
     "category": "smart-home",
     "concept": "A gentle two-tone doorbell chime that glides downward from a high note to a lower one.",
-    "keywords": ["doorbell", "chime", "entrance", "visitor", "greeting", "bell", "announce"],
+    "keywords": [
+      "doorbell",
+      "chime",
+      "entrance",
+      "visitor",
+      "greeting",
+      "bell",
+      "announce"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 800, "pitchEnvelope": { "toHz": 550, "timeMs": 350 } },
-          "envelope": { "attackMs": 55, "decayMs": 70, "sustainLevel": 0.45, "sustainMs": 260, "releaseMs": 120 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 800,
+            "pitchEnvelope": {
+              "toHz": 550,
+              "timeMs": 350
+            }
+          },
+          "envelope": {
+            "attackMs": 55,
+            "decayMs": 70,
+            "sustainLevel": 0.45,
+            "sustainMs": 260,
+            "releaseMs": 120
+          },
           "gain": 0.55
         }
       ]
@@ -20,17 +42,44 @@
     "phrase": "door chime",
     "category": "smart-home",
     "concept": "A soft chime built from two closely tuned tones that shimmer as they fade.",
-    "keywords": ["chime", "bell", "shimmer", "tone", "notification", "alert", "ring"],
+    "keywords": [
+      "chime",
+      "bell",
+      "shimmer",
+      "tone",
+      "notification",
+      "ring"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500 },
-          "envelope": { "attackMs": 150, "decayMs": 100, "sustainLevel": 0.4, "sustainMs": 200, "releaseMs": 340 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 500
+          },
+          "envelope": {
+            "attackMs": 150,
+            "decayMs": 100,
+            "sustainLevel": 0.4,
+            "sustainMs": 200,
+            "releaseMs": 340
+          },
           "gain": 0.42
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 506 },
-          "envelope": { "attackMs": 150, "decayMs": 100, "sustainLevel": 0.4, "sustainMs": 200, "releaseMs": 340 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 506
+          },
+          "envelope": {
+            "attackMs": 150,
+            "decayMs": 100,
+            "sustainLevel": 0.4,
+            "sustainMs": 200,
+            "releaseMs": 340
+          },
           "gain": 0.38
         }
       ]
@@ -41,13 +90,33 @@
     "phrase": "smart lock",
     "category": "smart-home",
     "concept": "A short, sharp mechanical click as the smart lock latches into place.",
-    "keywords": ["lock", "latch", "click", "secure", "mechanism", "bolt", "fasten"],
+    "keywords": [
+      "lock",
+      "latch",
+      "click",
+      "secure",
+      "mechanism",
+      "bolt",
+      "fasten"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "noise", "color": "white" },
-          "envelope": { "attackMs": 2, "decayMs": 15, "sustainLevel": 0.2, "sustainMs": 5, "releaseMs": 15 },
-          "filter": { "type": "highpass", "cutoffHz": 4000 },
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "envelope": {
+            "attackMs": 2,
+            "decayMs": 15,
+            "sustainLevel": 0.2,
+            "sustainMs": 5,
+            "releaseMs": 15
+          },
+          "filter": {
+            "type": "highpass",
+            "cutoffHz": 4000
+          },
           "gain": 0.75
         }
       ]
@@ -58,12 +127,33 @@
     "phrase": "door open alert",
     "category": "smart-home",
     "concept": "A quick, rising alert tone signaling that a door has been opened.",
-    "keywords": ["door", "open", "alert", "entry", "notify", "chime", "signal"],
+    "keywords": [
+      "door",
+      "open",
+      "alert",
+      "entry",
+      "notify",
+      "signal"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 750, "timeMs": 140 } },
-          "envelope": { "attackMs": 15, "decayMs": 45, "sustainLevel": 0.4, "sustainMs": 65, "releaseMs": 55 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 500,
+            "pitchEnvelope": {
+              "toHz": 750,
+              "timeMs": 140
+            }
+          },
+          "envelope": {
+            "attackMs": 15,
+            "decayMs": 45,
+            "sustainLevel": 0.4,
+            "sustainMs": 65,
+            "releaseMs": 55
+          },
           "gain": 0.47
         }
       ]
@@ -74,17 +164,52 @@
     "phrase": "window open",
     "category": "smart-home",
     "concept": "A soft, rising alert with two blended tones marking that a window is open.",
-    "keywords": ["window", "open", "alert", "breach", "notify", "tone", "draft"],
+    "keywords": [
+      "window",
+      "open",
+      "breach",
+      "notify",
+      "tone",
+      "draft"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 400, "pitchEnvelope": { "toHz": 600, "timeMs": 150 } },
-          "envelope": { "attackMs": 30, "decayMs": 60, "sustainLevel": 0.35, "sustainMs": 90, "releaseMs": 50 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 400,
+            "pitchEnvelope": {
+              "toHz": 600,
+              "timeMs": 150
+            }
+          },
+          "envelope": {
+            "attackMs": 30,
+            "decayMs": 60,
+            "sustainLevel": 0.35,
+            "sustainMs": 90,
+            "releaseMs": 50
+          },
           "gain": 0.35
         },
         {
-          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 400, "pitchEnvelope": { "toHz": 600, "timeMs": 150 } },
-          "envelope": { "attackMs": 30, "decayMs": 60, "sustainLevel": 0.35, "sustainMs": 90, "releaseMs": 50 },
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 400,
+            "pitchEnvelope": {
+              "toHz": 600,
+              "timeMs": 150
+            }
+          },
+          "envelope": {
+            "attackMs": 30,
+            "decayMs": 60,
+            "sustainLevel": 0.35,
+            "sustainMs": 90,
+            "releaseMs": 50
+          },
           "gain": 0.28
         }
       ]
@@ -95,12 +220,34 @@
     "phrase": "motion detected",
     "category": "smart-home",
     "concept": "A quick, soft rising ping that indicates motion was just detected.",
-    "keywords": ["motion", "detect", "sensor", "ping", "movement", "alert", "presence"],
+    "keywords": [
+      "motion",
+      "detect",
+      "sensor",
+      "ping",
+      "movement",
+      "alert",
+      "presence"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 600, "pitchEnvelope": { "toHz": 850, "timeMs": 90 } },
-          "envelope": { "attackMs": 18, "decayMs": 32, "sustainLevel": 0.4, "sustainMs": 50, "releaseMs": 40 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 600,
+            "pitchEnvelope": {
+              "toHz": 850,
+              "timeMs": 90
+            }
+          },
+          "envelope": {
+            "attackMs": 18,
+            "decayMs": 32,
+            "sustainLevel": 0.4,
+            "sustainMs": 50,
+            "releaseMs": 40
+          },
           "gain": 0.47
         }
       ]
@@ -111,18 +258,48 @@
     "phrase": "camera record",
     "category": "smart-home",
     "concept": "A sharp, quick camera shutter click paired with a short confirming tone.",
-    "keywords": ["camera", "record", "shutter", "click", "capture", "snapshot", "video"],
+    "keywords": [
+      "camera",
+      "record",
+      "shutter",
+      "click",
+      "capture",
+      "snapshot",
+      "video"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "noise", "color": "white" },
-          "envelope": { "attackMs": 2, "decayMs": 15, "sustainLevel": 0.2, "sustainMs": 5, "releaseMs": 15 },
-          "filter": { "type": "highpass", "cutoffHz": 4000 },
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "envelope": {
+            "attackMs": 2,
+            "decayMs": 15,
+            "sustainLevel": 0.2,
+            "sustainMs": 5,
+            "releaseMs": 15
+          },
+          "filter": {
+            "type": "highpass",
+            "cutoffHz": 4000
+          },
           "gain": 0.75
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 700 },
-          "envelope": { "attackMs": 3, "decayMs": 8, "sustainLevel": 0.3, "sustainMs": 8, "releaseMs": 8 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 700
+          },
+          "envelope": {
+            "attackMs": 3,
+            "decayMs": 8,
+            "sustainLevel": 0.3,
+            "sustainMs": 8,
+            "releaseMs": 8
+          },
           "gain": 0.3
         }
       ]
@@ -133,12 +310,34 @@
     "phrase": "alarm armed",
     "category": "smart-home",
     "concept": "A sharp, rising tone confirming that the alarm system is now armed.",
-    "keywords": ["alarm", "armed", "security", "activate", "confirm", "tone", "system"],
+    "keywords": [
+      "alarm",
+      "armed",
+      "security",
+      "activate",
+      "confirm",
+      "tone",
+      "system"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 720, "timeMs": 150 } },
-          "envelope": { "attackMs": 10, "decayMs": 50, "sustainLevel": 0.45, "sustainMs": 100, "releaseMs": 60 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 500,
+            "pitchEnvelope": {
+              "toHz": 720,
+              "timeMs": 150
+            }
+          },
+          "envelope": {
+            "attackMs": 10,
+            "decayMs": 50,
+            "sustainLevel": 0.45,
+            "sustainMs": 100,
+            "releaseMs": 60
+          },
           "gain": 0.45
         }
       ]
@@ -149,12 +348,34 @@
     "phrase": "alarm disarmed",
     "category": "smart-home",
     "concept": "A sharp, falling tone confirming that the alarm system is now disarmed.",
-    "keywords": ["alarm", "disarmed", "security", "deactivate", "confirm", "tone", "system"],
+    "keywords": [
+      "alarm",
+      "disarmed",
+      "security",
+      "deactivate",
+      "confirm",
+      "tone",
+      "system"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 720, "pitchEnvelope": { "toHz": 480, "timeMs": 150 } },
-          "envelope": { "attackMs": 14, "decayMs": 46, "sustainLevel": 0.45, "sustainMs": 100, "releaseMs": 60 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 720,
+            "pitchEnvelope": {
+              "toHz": 480,
+              "timeMs": 150
+            }
+          },
+          "envelope": {
+            "attackMs": 14,
+            "decayMs": 46,
+            "sustainLevel": 0.45,
+            "sustainMs": 100,
+            "releaseMs": 60
+          },
           "gain": 0.45
         }
       ]
@@ -165,23 +386,63 @@
     "phrase": "intruder alert",
     "category": "smart-home",
     "concept": "A long, sustained pulsing tone that warns of a possible intruder in the home.",
-    "keywords": ["intruder", "alert", "security", "alarm", "warning", "breach", "urgent"],
+    "keywords": [
+      "intruder",
+      "alert",
+      "alarm",
+      "warning",
+      "breach",
+      "urgent"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 600 },
-          "envelope": { "attackMs": 80, "decayMs": 100, "sustainLevel": 0.6, "sustainMs": 650, "releaseMs": 120 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 600
+          },
+          "envelope": {
+            "attackMs": 80,
+            "decayMs": 100,
+            "sustainLevel": 0.6,
+            "sustainMs": 650,
+            "releaseMs": 120
+          },
           "gain": 0.21
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 618 },
-          "envelope": { "attackMs": 80, "decayMs": 100, "sustainLevel": 0.6, "sustainMs": 650, "releaseMs": 120 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 618
+          },
+          "envelope": {
+            "attackMs": 80,
+            "decayMs": 100,
+            "sustainLevel": 0.6,
+            "sustainMs": 650,
+            "releaseMs": 120
+          },
           "gain": 0.21
         },
         {
-          "source": { "type": "oscillator", "wave": "square", "freqHz": 600 },
-          "envelope": { "attackMs": 80, "decayMs": 100, "sustainLevel": 0.6, "sustainMs": 650, "releaseMs": 120 },
-          "filter": { "type": "lowpass", "cutoffHz": 900 },
+          "source": {
+            "type": "oscillator",
+            "wave": "square",
+            "freqHz": 600
+          },
+          "envelope": {
+            "attackMs": 80,
+            "decayMs": 100,
+            "sustainLevel": 0.6,
+            "sustainMs": 650,
+            "releaseMs": 120
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 900
+          },
           "gain": 0.11
         }
       ]
@@ -192,12 +453,30 @@
     "phrase": "smoke detector",
     "category": "smart-home",
     "concept": "A short, sharp beep resembling a smoke detector's warning chirp.",
-    "keywords": ["smoke", "detector", "beep", "fire", "warning", "chirp", "alarm"],
+    "keywords": [
+      "smoke",
+      "detector",
+      "beep",
+      "fire",
+      "warning",
+      "chirp",
+      "alarm"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 950 },
-          "envelope": { "attackMs": 5, "decayMs": 25, "sustainLevel": 0.5, "sustainMs": 50, "releaseMs": 35 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 950
+          },
+          "envelope": {
+            "attackMs": 5,
+            "decayMs": 25,
+            "sustainLevel": 0.5,
+            "sustainMs": 50,
+            "releaseMs": 35
+          },
           "gain": 0.43
         }
       ]
@@ -208,12 +487,30 @@
     "phrase": "carbon alarm",
     "category": "smart-home",
     "concept": "A short, sharp triangle-wave chirp warning of dangerous carbon monoxide levels.",
-    "keywords": ["carbon", "monoxide", "alarm", "detector", "warning", "beep", "gas"],
+    "keywords": [
+      "carbon",
+      "monoxide",
+      "alarm",
+      "detector",
+      "warning",
+      "beep",
+      "gas"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 850 },
-          "envelope": { "attackMs": 8, "decayMs": 30, "sustainLevel": 0.45, "sustainMs": 80, "releaseMs": 42 },
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 850
+          },
+          "envelope": {
+            "attackMs": 8,
+            "decayMs": 30,
+            "sustainLevel": 0.45,
+            "sustainMs": 80,
+            "releaseMs": 42
+          },
           "gain": 0.5
         }
       ]
@@ -224,12 +521,34 @@
     "phrase": "leak detected",
     "category": "smart-home",
     "concept": "A short, falling drip-like tone that alerts to a detected water leak.",
-    "keywords": ["leak", "water", "detect", "drip", "alert", "moisture", "sensor"],
+    "keywords": [
+      "leak",
+      "water",
+      "detect",
+      "drip",
+      "alert",
+      "moisture",
+      "sensor"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 720, "pitchEnvelope": { "toHz": 300, "timeMs": 60 } },
-          "envelope": { "attackMs": 6, "decayMs": 35, "sustainLevel": 0.35, "sustainMs": 24, "releaseMs": 25 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 720,
+            "pitchEnvelope": {
+              "toHz": 300,
+              "timeMs": 60
+            }
+          },
+          "envelope": {
+            "attackMs": 6,
+            "decayMs": 35,
+            "sustainLevel": 0.35,
+            "sustainMs": 24,
+            "releaseMs": 25
+          },
           "gain": 0.45
         }
       ]
@@ -240,12 +559,33 @@
     "phrase": "light on",
     "category": "smart-home",
     "concept": "A quick, rising blip that confirms a light has turned on.",
-    "keywords": ["light", "on", "turn", "toggle", "confirm", "blip", "switch"],
+    "keywords": [
+      "light",
+      "on",
+      "turn",
+      "confirm",
+      "blip",
+      "switch"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 750, "timeMs": 70 } },
-          "envelope": { "attackMs": 10, "decayMs": 25, "sustainLevel": 0.4, "sustainMs": 40, "releaseMs": 35 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 500,
+            "pitchEnvelope": {
+              "toHz": 750,
+              "timeMs": 70
+            }
+          },
+          "envelope": {
+            "attackMs": 10,
+            "decayMs": 25,
+            "sustainLevel": 0.4,
+            "sustainMs": 40,
+            "releaseMs": 35
+          },
           "gain": 0.48
         }
       ]
@@ -256,12 +596,33 @@
     "phrase": "light off",
     "category": "smart-home",
     "concept": "A quick, falling blip that confirms a light has turned off.",
-    "keywords": ["light", "off", "turn", "toggle", "confirm", "blip", "switch"],
+    "keywords": [
+      "light",
+      "off",
+      "turn",
+      "confirm",
+      "blip",
+      "switch"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 750, "pitchEnvelope": { "toHz": 500, "timeMs": 90 } },
-          "envelope": { "attackMs": 15, "decayMs": 35, "sustainLevel": 0.4, "sustainMs": 50, "releaseMs": 30 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 750,
+            "pitchEnvelope": {
+              "toHz": 500,
+              "timeMs": 90
+            }
+          },
+          "envelope": {
+            "attackMs": 15,
+            "decayMs": 35,
+            "sustainLevel": 0.4,
+            "sustainMs": 50,
+            "releaseMs": 30
+          },
           "gain": 0.45
         }
       ]
@@ -272,12 +633,33 @@
     "phrase": "dim up",
     "category": "smart-home",
     "concept": "A gentle, rising sweep as the light dims upward toward its highest level.",
-    "keywords": ["dim", "brighten", "light", "increase", "fade", "sweep", "adjust"],
+    "keywords": [
+      "dim",
+      "brighten",
+      "light",
+      "increase",
+      "fade",
+      "adjust"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 400, "pitchEnvelope": { "toHz": 700, "timeMs": 320 } },
-          "envelope": { "attackMs": 60, "decayMs": 80, "sustainLevel": 0.4, "sustainMs": 180, "releaseMs": 80 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 400,
+            "pitchEnvelope": {
+              "toHz": 700,
+              "timeMs": 320
+            }
+          },
+          "envelope": {
+            "attackMs": 60,
+            "decayMs": 80,
+            "sustainLevel": 0.4,
+            "sustainMs": 180,
+            "releaseMs": 80
+          },
           "gain": 0.5
         }
       ]
@@ -288,17 +670,52 @@
     "phrase": "dim down",
     "category": "smart-home",
     "concept": "A gentle, falling sweep with two close tones as the light dims down toward off.",
-    "keywords": ["dim", "darken", "light", "decrease", "fade", "sweep", "adjust"],
+    "keywords": [
+      "dim",
+      "darken",
+      "light",
+      "decrease",
+      "fade",
+      "adjust"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 700, "pitchEnvelope": { "toHz": 400, "timeMs": 290 } },
-          "envelope": { "attackMs": 70, "decayMs": 90, "sustainLevel": 0.4, "sustainMs": 150, "releaseMs": 70 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 700,
+            "pitchEnvelope": {
+              "toHz": 400,
+              "timeMs": 290
+            }
+          },
+          "envelope": {
+            "attackMs": 70,
+            "decayMs": 90,
+            "sustainLevel": 0.4,
+            "sustainMs": 150,
+            "releaseMs": 70
+          },
           "gain": 0.36
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 690, "pitchEnvelope": { "toHz": 394, "timeMs": 290 } },
-          "envelope": { "attackMs": 70, "decayMs": 90, "sustainLevel": 0.4, "sustainMs": 150, "releaseMs": 70 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 690,
+            "pitchEnvelope": {
+              "toHz": 394,
+              "timeMs": 290
+            }
+          },
+          "envelope": {
+            "attackMs": 70,
+            "decayMs": 90,
+            "sustainLevel": 0.4,
+            "sustainMs": 150,
+            "releaseMs": 70
+          },
           "gain": 0.28
         }
       ]
@@ -309,17 +726,45 @@
     "phrase": "scene activated",
     "category": "smart-home",
     "concept": "A soft two-note chord confirming that a scene has been activated.",
-    "keywords": ["scene", "activate", "confirm", "chord", "preset", "mode", "chime"],
+    "keywords": [
+      "scene",
+      "activate",
+      "confirm",
+      "chord",
+      "preset",
+      "mode",
+      "chime"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500 },
-          "envelope": { "attackMs": 50, "decayMs": 70, "sustainLevel": 0.4, "sustainMs": 150, "releaseMs": 80 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 500
+          },
+          "envelope": {
+            "attackMs": 50,
+            "decayMs": 70,
+            "sustainLevel": 0.4,
+            "sustainMs": 150,
+            "releaseMs": 80
+          },
           "gain": 0.4
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 750 },
-          "envelope": { "attackMs": 50, "decayMs": 70, "sustainLevel": 0.4, "sustainMs": 150, "releaseMs": 80 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 750
+          },
+          "envelope": {
+            "attackMs": 50,
+            "decayMs": 70,
+            "sustainLevel": 0.4,
+            "sustainMs": 150,
+            "releaseMs": 80
+          },
           "gain": 0.34
         }
       ]
@@ -330,12 +775,34 @@
     "phrase": "thermostat up",
     "category": "smart-home",
     "concept": "A quick, rising triangle tone indicating the thermostat setting went up.",
-    "keywords": ["thermostat", "temperature", "increase", "heat", "rise", "adjust", "climate"],
+    "keywords": [
+      "thermostat",
+      "temperature",
+      "increase",
+      "heat",
+      "rise",
+      "adjust",
+      "climate"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 450, "pitchEnvelope": { "toHz": 650, "timeMs": 140 } },
-          "envelope": { "attackMs": 25, "decayMs": 45, "sustainLevel": 0.4, "sustainMs": 70, "releaseMs": 40 },
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 450,
+            "pitchEnvelope": {
+              "toHz": 650,
+              "timeMs": 140
+            }
+          },
+          "envelope": {
+            "attackMs": 25,
+            "decayMs": 45,
+            "sustainLevel": 0.4,
+            "sustainMs": 70,
+            "releaseMs": 40
+          },
           "gain": 0.42
         }
       ]
@@ -346,12 +813,34 @@
     "phrase": "thermostat down",
     "category": "smart-home",
     "concept": "A quick, falling sine tone indicating the thermostat setting went down.",
-    "keywords": ["thermostat", "temperature", "decrease", "cool", "fall", "adjust", "climate"],
+    "keywords": [
+      "thermostat",
+      "temperature",
+      "decrease",
+      "cool",
+      "fall",
+      "adjust",
+      "climate"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 650, "pitchEnvelope": { "toHz": 450, "timeMs": 140 } },
-          "envelope": { "attackMs": 28, "decayMs": 47, "sustainLevel": 0.4, "sustainMs": 75, "releaseMs": 38 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 650,
+            "pitchEnvelope": {
+              "toHz": 450,
+              "timeMs": 140
+            }
+          },
+          "envelope": {
+            "attackMs": 28,
+            "decayMs": 47,
+            "sustainLevel": 0.4,
+            "sustainMs": 75,
+            "releaseMs": 38
+          },
           "gain": 0.55
         }
       ]

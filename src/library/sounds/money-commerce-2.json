@@ -4,12 +4,35 @@
     "phrase": "invoice sent",
     "category": "money-commerce",
     "concept": "A short, soft, rising two-note chime confirming an invoice was sent.",
-    "keywords": ["invoice", "bill", "send", "sent", "notify", "confirm", "chime", "billing"],
+    "keywords": [
+      "invoice",
+      "bill",
+      "send",
+      "sent",
+      "notify",
+      "confirm",
+      "chime",
+      "billing"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 750, "timeMs": 130 } },
-          "envelope": { "attackMs": 20, "decayMs": 40, "sustainLevel": 0.3, "sustainMs": 40, "releaseMs": 50 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 500,
+            "pitchEnvelope": {
+              "toHz": 750,
+              "timeMs": 130
+            }
+          },
+          "envelope": {
+            "attackMs": 20,
+            "decayMs": 40,
+            "sustainLevel": 0.3,
+            "sustainMs": 40,
+            "releaseMs": 50
+          },
           "gain": 0.6
         }
       ]
@@ -20,12 +43,31 @@
     "phrase": "bill due",
     "category": "money-commerce",
     "concept": "A short, sharp alert tone that signals a bill payment is due.",
-    "keywords": ["bill", "due", "payment", "alert", "reminder", "owe", "notice", "urgent"],
+    "keywords": [
+      "bill",
+      "due",
+      "payment",
+      "alert",
+      "reminder",
+      "owe",
+      "notice",
+      "urgent"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 650 },
-          "envelope": { "attackMs": 4, "decayMs": 30, "sustainLevel": 0.35, "sustainMs": 60, "releaseMs": 56 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 650
+          },
+          "envelope": {
+            "attackMs": 4,
+            "decayMs": 30,
+            "sustainLevel": 0.35,
+            "sustainMs": 60,
+            "releaseMs": 56
+          },
           "gain": 0.6
         }
       ]
@@ -36,12 +78,35 @@
     "phrase": "balance low",
     "category": "money-commerce",
     "concept": "A soft, falling tone that warns your account balance is low.",
-    "keywords": ["balance", "low", "warning", "funds", "account", "alert", "insufficient", "caution"],
+    "keywords": [
+      "balance",
+      "low",
+      "warning",
+      "funds",
+      "account",
+      "alert",
+      "insufficient",
+      "caution"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 600, "pitchEnvelope": { "toHz": 350, "timeMs": 180 } },
-          "envelope": { "attackMs": 25, "decayMs": 50, "sustainLevel": 0.3, "sustainMs": 60, "releaseMs": 65 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 600,
+            "pitchEnvelope": {
+              "toHz": 350,
+              "timeMs": 180
+            }
+          },
+          "envelope": {
+            "attackMs": 25,
+            "decayMs": 50,
+            "sustainLevel": 0.3,
+            "sustainMs": 60,
+            "releaseMs": 65
+          },
           "gain": 0.55
         }
       ]
@@ -52,12 +117,35 @@
     "phrase": "deposit",
     "category": "money-commerce",
     "concept": "A bright, rising chime marking money deposited into your account.",
-    "keywords": ["deposit", "money", "incoming", "credit", "funds", "add", "income", "received"],
+    "keywords": [
+      "deposit",
+      "money",
+      "incoming",
+      "credit",
+      "funds",
+      "add",
+      "income",
+      "received"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 550, "pitchEnvelope": { "toHz": 800, "timeMs": 140 } },
-          "envelope": { "attackMs": 10, "decayMs": 30, "sustainLevel": 0.35, "sustainMs": 40, "releaseMs": 50 },
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 550,
+            "pitchEnvelope": {
+              "toHz": 800,
+              "timeMs": 140
+            }
+          },
+          "envelope": {
+            "attackMs": 10,
+            "decayMs": 30,
+            "sustainLevel": 0.35,
+            "sustainMs": 40,
+            "releaseMs": 50
+          },
           "gain": 0.5
         }
       ]
@@ -68,12 +156,35 @@
     "phrase": "withdrawal",
     "category": "money-commerce",
     "concept": "A soft, falling tone marking money withdrawn from your account.",
-    "keywords": ["withdrawal", "withdraw", "money", "outgoing", "debit", "funds", "cash", "remove"],
+    "keywords": [
+      "withdrawal",
+      "withdraw",
+      "money",
+      "outgoing",
+      "debit",
+      "funds",
+      "cash",
+      "remove"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 550, "pitchEnvelope": { "toHz": 320, "timeMs": 160 } },
-          "envelope": { "attackMs": 20, "decayMs": 50, "sustainLevel": 0.3, "sustainMs": 50, "releaseMs": 60 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 550,
+            "pitchEnvelope": {
+              "toHz": 320,
+              "timeMs": 160
+            }
+          },
+          "envelope": {
+            "attackMs": 20,
+            "decayMs": 50,
+            "sustainLevel": 0.3,
+            "sustainMs": 50,
+            "releaseMs": 60
+          },
           "gain": 0.55
         }
       ]
@@ -84,17 +195,46 @@
     "phrase": "transfer complete",
     "category": "money-commerce",
     "concept": "A long, warm two-tone chime confirming a completed money transfer.",
-    "keywords": ["transfer", "complete", "done", "sent", "confirm", "money", "success", "funds"],
+    "keywords": [
+      "transfer",
+      "complete",
+      "done",
+      "sent",
+      "confirm",
+      "money",
+      "success",
+      "funds"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 450 },
-          "envelope": { "attackMs": 100, "decayMs": 150, "sustainLevel": 0.4, "sustainMs": 450, "releaseMs": 150 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 450
+          },
+          "envelope": {
+            "attackMs": 100,
+            "decayMs": 150,
+            "sustainLevel": 0.4,
+            "sustainMs": 450,
+            "releaseMs": 150
+          },
           "gain": 0.42
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 454 },
-          "envelope": { "attackMs": 100, "decayMs": 150, "sustainLevel": 0.4, "sustainMs": 450, "releaseMs": 150 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 454
+          },
+          "envelope": {
+            "attackMs": 100,
+            "decayMs": 150,
+            "sustainLevel": 0.4,
+            "sustainMs": 450,
+            "releaseMs": 150
+          },
           "gain": 0.42
         }
       ]
@@ -105,17 +245,54 @@
     "phrase": "subscription renewed",
     "category": "money-commerce",
     "concept": "A gentle, rising two-tone chime confirming your subscription renewed.",
-    "keywords": ["subscription", "renew", "renewed", "recurring", "membership", "plan", "continue", "billing"],
+    "keywords": [
+      "subscription",
+      "renew",
+      "renewed",
+      "recurring",
+      "membership",
+      "plan",
+      "continue",
+      "billing"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 680, "timeMs": 120 } },
-          "envelope": { "attackMs": 20, "decayMs": 35, "sustainLevel": 0.3, "sustainMs": 45, "releaseMs": 50 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 500,
+            "pitchEnvelope": {
+              "toHz": 680,
+              "timeMs": 120
+            }
+          },
+          "envelope": {
+            "attackMs": 20,
+            "decayMs": 35,
+            "sustainLevel": 0.3,
+            "sustainMs": 45,
+            "releaseMs": 50
+          },
           "gain": 0.34
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 504, "pitchEnvelope": { "toHz": 684, "timeMs": 120 } },
-          "envelope": { "attackMs": 20, "decayMs": 35, "sustainLevel": 0.3, "sustainMs": 45, "releaseMs": 50 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 504,
+            "pitchEnvelope": {
+              "toHz": 684,
+              "timeMs": 120
+            }
+          },
+          "envelope": {
+            "attackMs": 20,
+            "decayMs": 35,
+            "sustainLevel": 0.3,
+            "sustainMs": 45,
+            "releaseMs": 50
+          },
           "gain": 0.34
         }
       ]
@@ -126,12 +303,35 @@
     "phrase": "subscription cancelled",
     "category": "money-commerce",
     "concept": "A short, falling tone signaling your subscription was cancelled.",
-    "keywords": ["subscription", "cancel", "cancelled", "end", "stop", "unsubscribe", "terminate", "plan"],
+    "keywords": [
+      "subscription",
+      "cancel",
+      "cancelled",
+      "end",
+      "stop",
+      "unsubscribe",
+      "terminate",
+      "plan"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 600, "pitchEnvelope": { "toHz": 380, "timeMs": 140 } },
-          "envelope": { "attackMs": 15, "decayMs": 40, "sustainLevel": 0.3, "sustainMs": 40, "releaseMs": 45 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 600,
+            "pitchEnvelope": {
+              "toHz": 380,
+              "timeMs": 140
+            }
+          },
+          "envelope": {
+            "attackMs": 15,
+            "decayMs": 40,
+            "sustainLevel": 0.3,
+            "sustainMs": 40,
+            "releaseMs": 45
+          },
           "gain": 0.58
         }
       ]
@@ -142,12 +342,31 @@
     "phrase": "discount applied",
     "category": "money-commerce",
     "concept": "A short, bright sparkle marking a discount applied to your order.",
-    "keywords": ["discount", "applied", "savings", "sale", "promo", "reduced", "price", "coupon"],
+    "keywords": [
+      "discount",
+      "applied",
+      "savings",
+      "sale",
+      "promo",
+      "reduced",
+      "price",
+      "coupon"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1600 },
-          "envelope": { "attackMs": 5, "decayMs": 30, "sustainLevel": 0.3, "sustainMs": 50, "releaseMs": 45 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 1600
+          },
+          "envelope": {
+            "attackMs": 5,
+            "decayMs": 30,
+            "sustainLevel": 0.3,
+            "sustainMs": 50,
+            "releaseMs": 45
+          },
           "gain": 0.5
         }
       ]
@@ -158,18 +377,50 @@
     "phrase": "coupon invalid",
     "category": "money-commerce",
     "concept": "A short, sharp dissonant buzz signaling the coupon code is invalid.",
-    "keywords": ["coupon", "invalid", "error", "code", "reject", "fail", "discount", "denied"],
+    "keywords": [
+      "coupon",
+      "invalid",
+      "error",
+      "code",
+      "reject",
+      "fail",
+      "discount",
+      "denied"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "square", "freqHz": 300 },
-          "envelope": { "attackMs": 3, "decayMs": 20, "sustainLevel": 0.25, "sustainMs": 40, "releaseMs": 40 },
-          "filter": { "type": "lowpass", "cutoffHz": 900 },
+          "source": {
+            "type": "oscillator",
+            "wave": "square",
+            "freqHz": 300
+          },
+          "envelope": {
+            "attackMs": 3,
+            "decayMs": 20,
+            "sustainLevel": 0.25,
+            "sustainMs": 40,
+            "releaseMs": 40
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 900
+          },
           "gain": 0.45
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 420 },
-          "envelope": { "attackMs": 3, "decayMs": 20, "sustainLevel": 0.25, "sustainMs": 40, "releaseMs": 40 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 420
+          },
+          "envelope": {
+            "attackMs": 3,
+            "decayMs": 20,
+            "sustainLevel": 0.25,
+            "sustainMs": 40,
+            "releaseMs": 40
+          },
           "gain": 0.3
         }
       ]
@@ -180,12 +431,34 @@
     "phrase": "price drop",
     "category": "money-commerce",
     "concept": "A soft, falling swoop marking a price drop on a watched item.",
-    "keywords": ["price", "drop", "discount", "lower", "decrease", "deal", "savings", "alert"],
+    "keywords": [
+      "price",
+      "drop",
+      "discount",
+      "lower",
+      "decrease",
+      "deal",
+      "savings"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 800, "pitchEnvelope": { "toHz": 400, "timeMs": 200 } },
-          "envelope": { "attackMs": 30, "decayMs": 60, "sustainLevel": 0.3, "sustainMs": 60, "releaseMs": 50 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 800,
+            "pitchEnvelope": {
+              "toHz": 400,
+              "timeMs": 200
+            }
+          },
+          "envelope": {
+            "attackMs": 30,
+            "decayMs": 60,
+            "sustainLevel": 0.3,
+            "sustainMs": 60,
+            "releaseMs": 50
+          },
           "gain": 0.55
         }
       ]
@@ -196,12 +469,31 @@
     "phrase": "bid placed",
     "category": "money-commerce",
     "concept": "A short, sharp tap confirming a bid was placed in an auction.",
-    "keywords": ["bid", "place", "auction", "offer", "tap", "confirm", "click", "submit"],
+    "keywords": [
+      "bid",
+      "place",
+      "auction",
+      "offer",
+      "tap",
+      "confirm",
+      "click",
+      "submit"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 700 },
-          "envelope": { "attackMs": 3, "decayMs": 25, "sustainLevel": 0.2, "sustainMs": 30, "releaseMs": 35 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 700
+          },
+          "envelope": {
+            "attackMs": 3,
+            "decayMs": 25,
+            "sustainLevel": 0.2,
+            "sustainMs": 30,
+            "releaseMs": 35
+          },
           "gain": 0.6
         }
       ]
@@ -212,17 +504,54 @@
     "phrase": "auction won",
     "category": "money-commerce",
     "concept": "A bright, rising fanfare-like chime celebrating an auction win.",
-    "keywords": ["auction", "win", "won", "victory", "success", "bid", "celebrate", "chime"],
+    "keywords": [
+      "auction",
+      "win",
+      "won",
+      "victory",
+      "success",
+      "bid",
+      "celebrate",
+      "chime"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 700, "pitchEnvelope": { "toHz": 1000, "timeMs": 130 } },
-          "envelope": { "attackMs": 10, "decayMs": 30, "sustainLevel": 0.35, "sustainMs": 50, "releaseMs": 50 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 700,
+            "pitchEnvelope": {
+              "toHz": 1000,
+              "timeMs": 130
+            }
+          },
+          "envelope": {
+            "attackMs": 10,
+            "decayMs": 30,
+            "sustainLevel": 0.35,
+            "sustainMs": 50,
+            "releaseMs": 50
+          },
           "gain": 0.22
         },
         {
-          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 700, "pitchEnvelope": { "toHz": 1000, "timeMs": 130 } },
-          "envelope": { "attackMs": 10, "decayMs": 30, "sustainLevel": 0.35, "sustainMs": 50, "releaseMs": 50 },
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 700,
+            "pitchEnvelope": {
+              "toHz": 1000,
+              "timeMs": 130
+            }
+          },
+          "envelope": {
+            "attackMs": 10,
+            "decayMs": 30,
+            "sustainLevel": 0.35,
+            "sustainMs": 50,
+            "releaseMs": 50
+          },
           "gain": 0.5
         }
       ]
@@ -233,12 +562,35 @@
     "phrase": "auction lost",
     "category": "money-commerce",
     "concept": "A soft, falling tone marking a lost auction bid.",
-    "keywords": ["auction", "lost", "lose", "bid", "unsuccessful", "outbid", "fail", "notice"],
+    "keywords": [
+      "auction",
+      "lost",
+      "lose",
+      "bid",
+      "unsuccessful",
+      "outbid",
+      "fail",
+      "notice"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 550, "pitchEnvelope": { "toHz": 350, "timeMs": 170 } },
-          "envelope": { "attackMs": 25, "decayMs": 50, "sustainLevel": 0.3, "sustainMs": 55, "releaseMs": 60 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 550,
+            "pitchEnvelope": {
+              "toHz": 350,
+              "timeMs": 170
+            }
+          },
+          "envelope": {
+            "attackMs": 25,
+            "decayMs": 50,
+            "sustainLevel": 0.3,
+            "sustainMs": 55,
+            "releaseMs": 60
+          },
           "gain": 0.55
         }
       ]
@@ -249,18 +601,49 @@
     "phrase": "tip jar",
     "category": "money-commerce",
     "concept": "A short, bright coin-clink texture marking a tip added to the jar.",
-    "keywords": ["tip", "jar", "coin", "clink", "gratuity", "donate", "cash", "chime"],
+    "keywords": [
+      "tip",
+      "jar",
+      "coin",
+      "clink",
+      "gratuity",
+      "donate",
+      "cash",
+      "chime"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1800 },
-          "envelope": { "attackMs": 4, "decayMs": 35, "sustainLevel": 0.25, "sustainMs": 60, "releaseMs": 50 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 1800
+          },
+          "envelope": {
+            "attackMs": 4,
+            "decayMs": 35,
+            "sustainLevel": 0.25,
+            "sustainMs": 60,
+            "releaseMs": 50
+          },
           "gain": 0.55
         },
         {
-          "source": { "type": "noise", "color": "white" },
-          "envelope": { "attackMs": 2, "decayMs": 15, "sustainLevel": 0.2, "sustainMs": 5, "releaseMs": 15 },
-          "filter": { "type": "highpass", "cutoffHz": 4000 },
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "envelope": {
+            "attackMs": 2,
+            "decayMs": 15,
+            "sustainLevel": 0.2,
+            "sustainMs": 5,
+            "releaseMs": 15
+          },
+          "filter": {
+            "type": "highpass",
+            "cutoffHz": 4000
+          },
           "gain": 0.6
         }
       ]
@@ -271,17 +654,46 @@
     "phrase": "donation received",
     "category": "money-commerce",
     "concept": "A long, warm swell confirming a donation was received.",
-    "keywords": ["donation", "donate", "received", "gift", "contribution", "charity", "thank", "generous"],
+    "keywords": [
+      "donation",
+      "donate",
+      "received",
+      "gift",
+      "contribution",
+      "charity",
+      "thank",
+      "generous"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 400 },
-          "envelope": { "attackMs": 250, "decayMs": 150, "sustainLevel": 0.45, "sustainMs": 500, "releaseMs": 150 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 400
+          },
+          "envelope": {
+            "attackMs": 250,
+            "decayMs": 150,
+            "sustainLevel": 0.45,
+            "sustainMs": 500,
+            "releaseMs": 150
+          },
           "gain": 0.4
         },
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 402 },
-          "envelope": { "attackMs": 250, "decayMs": 150, "sustainLevel": 0.45, "sustainMs": 500, "releaseMs": 150 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 402
+          },
+          "envelope": {
+            "attackMs": 250,
+            "decayMs": 150,
+            "sustainLevel": 0.45,
+            "sustainMs": 500,
+            "releaseMs": 150
+          },
           "gain": 0.35
         }
       ]
@@ -292,18 +704,53 @@
     "phrase": "wallet opened",
     "category": "money-commerce",
     "concept": "A soft, short whoosh-click sound that plays when a wallet opens.",
-    "keywords": ["wallet", "open", "digital", "pay", "payment", "access", "unlock", "app"],
+    "keywords": [
+      "wallet",
+      "open",
+      "digital",
+      "pay",
+      "payment",
+      "access",
+      "unlock",
+      "app"
+    ],
     "patch": {
       "layers": [
         {
-          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 650, "timeMs": 100 } },
-          "envelope": { "attackMs": 20, "decayMs": 30, "sustainLevel": 0.3, "sustainMs": 40, "releaseMs": 40 },
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 500,
+            "pitchEnvelope": {
+              "toHz": 650,
+              "timeMs": 100
+            }
+          },
+          "envelope": {
+            "attackMs": 20,
+            "decayMs": 30,
+            "sustainLevel": 0.3,
+            "sustainMs": 40,
+            "releaseMs": 40
+          },
           "gain": 0.55
         },
         {
-          "source": { "type": "noise", "color": "pink" },
-          "envelope": { "attackMs": 20, "decayMs": 30, "sustainLevel": 0.2, "sustainMs": 40, "releaseMs": 40 },
-          "filter": { "type": "lowpass", "cutoffHz": 800 },
+          "source": {
+            "type": "noise",
+            "color": "pink"
+          },
+          "envelope": {
+            "attackMs": 20,
+            "decayMs": 30,
+            "sustainLevel": 0.2,
+            "sustainMs": 40,
+            "releaseMs": 40
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 800
+          },
           "gain": 0.5
         }
       ]
