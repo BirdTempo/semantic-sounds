@@ -40,16 +40,8 @@ so `LOCAL_MIN_SCORE = 9` is unchanged and still has margin.
 
 ## Open technical follow-ups
 
-- `LOCAL_MIN_SCORE` (currently 9) was grid-searched against a 48-case
-  probe covering only the 40-sound seed set. Re-run
-  `scripts/tune-thresholds.ts` whenever the corpus grows meaningfully;
-  do not assume the value is stable at a larger scale.
-- One probe case is a documented, accepted word-trap, not a bug: "on"
-  is kept as a content word (needed for "toggle on"/"toggle off"), so
-  an unrelated sentence using "on" as a preposition ("the smell of
-  rain on hot pavement") can still score above the floor. No single
-  floor separates every true positive from this trap given the current
-  40-sound corpus; revisit if a larger corpus changes the balance.
+- `LOCAL_MIN_SCORE` was re-searched at 1090 sounds (see above). Re-run
+  `scripts/tune-thresholds.ts` whenever the corpus grows meaningfully.
 - The shared tonal centre is a soft guideline in the style guide, not a
   validator rule. If sounds don't sit well back-to-back in practice,
   consider promoting it to a machine check, but only with evidence from
