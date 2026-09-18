@@ -1,0 +1,376 @@
+[
+  {
+    "name": "click",
+    "phrase": "click",
+    "category": "ui-feedback",
+    "concept": "A very short, sharp, percussive click for a basic button press.",
+    "keywords": ["click", "tap", "press", "button", "select", "pointer", "cursor"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1400 },
+          "envelope": { "attackMs": 2, "decayMs": 30, "sustainLevel": 0, "sustainMs": 0, "releaseMs": 13 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "double-click",
+    "phrase": "double click",
+    "category": "ui-feedback",
+    "concept": "Two quick pulses in fast succession, a firm tap followed by a rounded echo, marking a double click.",
+    "keywords": ["double", "tap", "repeat", "fast", "select", "open", "activate"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 700 },
+          "envelope": { "attackMs": 1, "decayMs": 20, "sustainLevel": 0, "sustainMs": 0, "releaseMs": 10 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 650 },
+          "envelope": { "attackMs": 45, "decayMs": 20, "sustainLevel": 0.3, "sustainMs": 15, "releaseMs": 25 },
+          "gain": 0.45
+        }
+      ]
+    }
+  },
+  {
+    "name": "long-press",
+    "phrase": "long press",
+    "category": "ui-feedback",
+    "concept": "A soft, gentle, rising, sustained tone that builds while you hold down a long press.",
+    "keywords": ["hold", "press", "touch", "gesture", "wait", "activate"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 320, "pitchEnvelope": { "toHz": 480, "timeMs": 900 } },
+          "envelope": { "attackMs": 250, "decayMs": 100, "sustainLevel": 0.35, "sustainMs": 450, "releaseMs": 200 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "swipe",
+    "phrase": "swipe",
+    "category": "ui-feedback",
+    "concept": "A quick, falling whoosh with airy texture noise, like a finger swiping across the screen.",
+    "keywords": ["swipe", "slide", "flick", "gesture", "drag", "motion"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 750, "pitchEnvelope": { "toHz": 350, "timeMs": 130 } },
+          "envelope": { "attackMs": 10, "decayMs": 60, "sustainLevel": 0, "sustainMs": 0, "releaseMs": 60 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 5, "decayMs": 60, "sustainLevel": 0, "sustainMs": 0, "releaseMs": 60 },
+          "filter": { "type": "bandpass", "cutoffHz": 800, "q": 1.2 },
+          "gain": 0.25
+        }
+      ]
+    }
+  },
+  {
+    "name": "drag-start",
+    "phrase": "drag start",
+    "category": "ui-feedback",
+    "concept": "A gentle, rising lift tone marking the start of a drag gesture.",
+    "keywords": ["drag", "pickup", "grab", "lift", "gesture", "move"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 400, "pitchEnvelope": { "toHz": 650, "timeMs": 90 } },
+          "envelope": { "attackMs": 20, "decayMs": 40, "sustainLevel": 0.25, "sustainMs": 20, "releaseMs": 40 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "drag-drop",
+    "phrase": "drag drop",
+    "category": "ui-feedback",
+    "concept": "A falling tone that ends in a quiet thud, marking a completed drag-and-drop action.",
+    "keywords": ["drop", "release", "place", "land", "drag"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 600, "pitchEnvelope": { "toHz": 300, "timeMs": 100 } },
+          "envelope": { "attackMs": 8, "decayMs": 60, "sustainLevel": 0.2, "sustainMs": 20, "releaseMs": 50 },
+          "gain": 0.5
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 3, "decayMs": 40, "sustainLevel": 0, "sustainMs": 0, "releaseMs": 30 },
+          "filter": { "type": "lowpass", "cutoffHz": 500 },
+          "gain": 0.25
+        }
+      ]
+    }
+  },
+  {
+    "name": "select-item",
+    "phrase": "select item",
+    "category": "ui-feedback",
+    "concept": "A quick, rising confirm tone for selecting an item in a list.",
+    "keywords": ["select", "choose", "pick", "highlight", "item", "confirm"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 750, "timeMs": 60 } },
+          "envelope": { "attackMs": 8, "decayMs": 25, "sustainLevel": 0.3, "sustainMs": 20, "releaseMs": 35 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "deselect",
+    "phrase": "deselect",
+    "category": "ui-feedback",
+    "concept": "A quick, falling tone indicating an item has been deselected.",
+    "keywords": ["deselect", "unselect", "remove", "clear", "cancel", "item"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 620, "pitchEnvelope": { "toHz": 420, "timeMs": 50 } },
+          "envelope": { "attackMs": 6, "decayMs": 20, "sustainLevel": 0.25, "sustainMs": 15, "releaseMs": 30 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "hover",
+    "phrase": "hover",
+    "category": "ui-feedback",
+    "concept": "A very soft, quiet tick indicating a hover state on a UI element.",
+    "keywords": ["hover", "mouseover", "rollover", "point", "highlight"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500 },
+          "envelope": { "attackMs": 10, "decayMs": 25, "sustainLevel": 0.15, "sustainMs": 15, "releaseMs": 20 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "focus",
+    "phrase": "focus",
+    "category": "ui-feedback",
+    "concept": "A gentle, rising tone that settles as an element gains keyboard focus.",
+    "keywords": ["focus", "active", "highlight", "input", "field", "keyboard"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 450, "pitchEnvelope": { "toHz": 550, "timeMs": 80 } },
+          "envelope": { "attackMs": 18, "decayMs": 40, "sustainLevel": 0.3, "sustainMs": 30, "releaseMs": 40 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "blur",
+    "phrase": "blur",
+    "category": "ui-feedback",
+    "concept": "A gentle, falling tone that fades as an element loses keyboard focus.",
+    "keywords": ["blur", "unfocus", "leave", "deactivate", "input", "field"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 550, "pitchEnvelope": { "toHz": 420, "timeMs": 90 } },
+          "envelope": { "attackMs": 15, "decayMs": 45, "sustainLevel": 0.25, "sustainMs": 25, "releaseMs": 45 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "checkbox-check",
+    "phrase": "checkbox check",
+    "category": "ui-feedback",
+    "concept": "A quick, rising, layered tone confirming a checkbox has been checked.",
+    "keywords": ["checkbox", "check", "tick", "confirm", "enable", "mark"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 550, "pitchEnvelope": { "toHz": 800, "timeMs": 45 } },
+          "envelope": { "attackMs": 5, "decayMs": 20, "sustainLevel": 0.2, "sustainMs": 10, "releaseMs": 20 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 800, "pitchEnvelope": { "toHz": 1000, "timeMs": 30 } },
+          "envelope": { "attackMs": 3, "decayMs": 15, "sustainLevel": 0, "sustainMs": 0, "releaseMs": 15 },
+          "gain": 0.2
+        }
+      ]
+    }
+  },
+  {
+    "name": "checkbox-uncheck",
+    "phrase": "checkbox uncheck",
+    "category": "ui-feedback",
+    "concept": "A quick, falling tone confirming a checkbox has been unchecked.",
+    "keywords": ["checkbox", "uncheck", "untick", "clear", "disable", "mark"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 700, "pitchEnvelope": { "toHz": 500, "timeMs": 40 } },
+          "envelope": { "attackMs": 5, "decayMs": 20, "sustainLevel": 0.2, "sustainMs": 10, "releaseMs": 20 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "radio-select",
+    "phrase": "radio select",
+    "category": "ui-feedback",
+    "concept": "A soft, rising chime with a crisp accent tone, confirming a radio button selection.",
+    "keywords": ["radio", "option", "choose", "pick", "toggle"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 600, "pitchEnvelope": { "toHz": 850, "timeMs": 50 } },
+          "envelope": { "attackMs": 10, "decayMs": 25, "sustainLevel": 0.25, "sustainMs": 15, "releaseMs": 30 },
+          "gain": 0.5
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 900 },
+          "envelope": { "attackMs": 5, "decayMs": 20, "sustainLevel": 0, "sustainMs": 0, "releaseMs": 20 },
+          "gain": 0.2
+        }
+      ]
+    }
+  },
+  {
+    "name": "slider-step",
+    "phrase": "slider step",
+    "category": "ui-feedback",
+    "concept": "A short, soft tick marking one step of a slider's movement.",
+    "keywords": ["slider", "step", "tick", "increment", "adjust", "range"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 500 },
+          "envelope": { "attackMs": 6, "decayMs": 15, "sustainLevel": 0.1, "sustainMs": 10, "releaseMs": 15 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "slider-end",
+    "phrase": "slider end",
+    "category": "ui-feedback",
+    "concept": "A short, sharp stop tone marking the end of a slider's range.",
+    "keywords": ["slider", "limit", "end", "stop", "boundary", "range"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 650, "timeMs": 20 } },
+          "envelope": { "attackMs": 3, "decayMs": 20, "sustainLevel": 0.2, "sustainMs": 10, "releaseMs": 25 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 2, "decayMs": 15, "sustainLevel": 0, "sustainMs": 0, "releaseMs": 15 },
+          "filter": { "type": "lowpass", "cutoffHz": 600 },
+          "gain": 0.25
+        }
+      ]
+    }
+  },
+  {
+    "name": "stepper-increment",
+    "phrase": "stepper increment",
+    "category": "ui-feedback",
+    "concept": "A quick, rising blip for incrementing a stepper value.",
+    "keywords": ["stepper", "increment", "increase", "plus", "count", "add"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 450, "pitchEnvelope": { "toHz": 600, "timeMs": 35 } },
+          "envelope": { "attackMs": 4, "decayMs": 18, "sustainLevel": 0.15, "sustainMs": 8, "releaseMs": 20 },
+          "gain": 0.62
+        }
+      ]
+    }
+  },
+  {
+    "name": "stepper-decrement",
+    "phrase": "stepper decrement",
+    "category": "ui-feedback",
+    "concept": "A quick, falling blip for decrementing a stepper value.",
+    "keywords": ["stepper", "decrement", "decrease", "minus", "count", "subtract"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 700, "pitchEnvelope": { "toHz": 400, "timeMs": 50 } },
+          "envelope": { "attackMs": 4, "decayMs": 20, "sustainLevel": 0.15, "sustainMs": 8, "releaseMs": 23 },
+          "gain": 0.62
+        }
+      ]
+    }
+  },
+  {
+    "name": "expand-section",
+    "phrase": "expand section",
+    "category": "ui-feedback",
+    "concept": "A soft, rising tone that opens up as a section expands.",
+    "keywords": ["expand", "open", "reveal", "section", "accordion", "unfold"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 350, "pitchEnvelope": { "toHz": 550, "timeMs": 220 } },
+          "envelope": { "attackMs": 40, "decayMs": 80, "sustainLevel": 0.35, "sustainMs": 80, "releaseMs": 80 },
+          "gain": 0.5
+        }
+      ]
+    }
+  },
+  {
+    "name": "collapse-section",
+    "phrase": "collapse section",
+    "category": "ui-feedback",
+    "concept": "A soft, falling tone that closes as a section collapses.",
+    "keywords": ["collapse", "close", "hide", "section", "accordion", "fold"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 550, "pitchEnvelope": { "toHz": 350, "timeMs": 200 } },
+          "envelope": { "attackMs": 35, "decayMs": 70, "sustainLevel": 0.3, "sustainMs": 70, "releaseMs": 75 },
+          "gain": 0.5
+        }
+      ]
+    }
+  },
+  {
+    "name": "refresh",
+    "phrase": "refresh",
+    "category": "ui-feedback",
+    "concept": "A soft, rising swirl of two tones, refreshing the view with new content.",
+    "keywords": ["refresh", "reload", "update", "sync", "spin", "renew"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 400, "pitchEnvelope": { "toHz": 700, "timeMs": 140 } },
+          "envelope": { "attackMs": 18, "decayMs": 60, "sustainLevel": 0.3, "sustainMs": 50, "releaseMs": 60 },
+          "gain": 0.45
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 300, "pitchEnvelope": { "toHz": 550, "timeMs": 150 } },
+          "envelope": { "attackMs": 20, "decayMs": 60, "sustainLevel": 0.2, "sustainMs": 40, "releaseMs": 60 },
+          "gain": 0.3
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,432 @@
+[
+  {
+    "name": "blip",
+    "phrase": "blip",
+    "category": "abstract-texture",
+    "concept": "A short, quick, percussive blip with one steady mid tone.",
+    "keywords": ["tiny", "confirm", "notify", "small", "tap", "cue", "chirp"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 700 },
+          "envelope": { "attackMs": 3, "decayMs": 15, "sustainLevel": 0.3, "sustainMs": 20, "releaseMs": 30 },
+          "gain": 0.65
+        }
+      ]
+    }
+  },
+  {
+    "name": "bleep",
+    "phrase": "bleep",
+    "category": "abstract-texture",
+    "concept": "A quick, rising bleep that sweeps up through a short electronic tone.",
+    "keywords": ["electronic", "chirp", "alert", "cue", "tiny", "digital", "signal"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 850, "timeMs": 60 } },
+          "envelope": { "attackMs": 4, "decayMs": 20, "sustainLevel": 0.3, "sustainMs": 20, "releaseMs": 30 },
+          "gain": 0.62
+        }
+      ]
+    }
+  },
+  {
+    "name": "bloop",
+    "phrase": "bloop",
+    "category": "abstract-texture",
+    "concept": "A short, soft, falling bloop that drops in pitch like a gentle bubble pop.",
+    "keywords": ["bubble", "playful", "drop", "low", "cute", "descend"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 280, "timeMs": 100 } },
+          "envelope": { "attackMs": 15, "decayMs": 40, "sustainLevel": 0.3, "sustainMs": 30, "releaseMs": 40 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "ping-short",
+    "phrase": "ping short",
+    "category": "abstract-texture",
+    "concept": "A short, sharp, bright ping with one high steady tone.",
+    "keywords": ["chime", "bright", "tiny", "notify", "cue", "signal"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1800 },
+          "envelope": { "attackMs": 3, "decayMs": 25, "sustainLevel": 0.3, "sustainMs": 20, "releaseMs": 30 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "pong",
+    "phrase": "pong",
+    "category": "abstract-texture",
+    "concept": "A short, soft, dark pong with a low steady tone that answers a ping.",
+    "keywords": ["response", "answer", "low", "echo", "reply", "tone"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 350 },
+          "envelope": { "attackMs": 12, "decayMs": 30, "sustainLevel": 0.3, "sustainMs": 25, "releaseMs": 35 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "tick-soft",
+    "phrase": "tick soft",
+    "category": "abstract-texture",
+    "concept": "A very short, soft tick with a gentle attack and a light high tone.",
+    "keywords": ["clock", "gentle", "light", "cue", "subtle"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 800 },
+          "envelope": { "attackMs": 10, "decayMs": 20, "sustainLevel": 0.3, "sustainMs": 20, "releaseMs": 25 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "tock",
+    "phrase": "tock",
+    "category": "abstract-texture",
+    "concept": "A quick, percussive tock with a low dry tone, lower and drier than a tick.",
+    "keywords": ["clock", "low", "pendulum", "beat", "second"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 300 },
+          "envelope": { "attackMs": 3, "decayMs": 25, "sustainLevel": 0.3, "sustainMs": 15, "releaseMs": 25 },
+          "gain": 0.56
+        }
+      ]
+    }
+  },
+  {
+    "name": "thud",
+    "phrase": "thud",
+    "category": "abstract-texture",
+    "concept": "A soft, dark thud with a low tone and a muffled noise layer, like a heavy impact.",
+    "keywords": ["impact", "heavy", "low", "drop", "bump", "muffled"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 180 },
+          "envelope": { "attackMs": 20, "decayMs": 60, "sustainLevel": 0.35, "sustainMs": 50, "releaseMs": 50 },
+          "gain": 0.5
+        },
+        {
+          "source": { "type": "noise", "color": "pink" },
+          "envelope": { "attackMs": 5, "decayMs": 50, "sustainLevel": 0, "sustainMs": 0, "releaseMs": 40 },
+          "filter": { "type": "lowpass", "cutoffHz": 150 },
+          "gain": 0.18
+        }
+      ]
+    }
+  },
+  {
+    "name": "thunk",
+    "phrase": "thunk",
+    "category": "abstract-texture",
+    "concept": "A quick, percussive thunk with a low tone and a dry noise thump.",
+    "keywords": ["impact", "drop", "low", "bump", "solid", "landing"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 285 },
+          "envelope": { "attackMs": 3, "decayMs": 20, "sustainLevel": 0.3, "sustainMs": 15, "releaseMs": 25 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 5, "decayMs": 10, "sustainLevel": 0, "sustainMs": 0, "releaseMs": 12 },
+          "filter": { "type": "lowpass", "cutoffHz": 400 },
+          "gain": 0.26
+        }
+      ]
+    }
+  },
+  {
+    "name": "knock",
+    "phrase": "knock",
+    "category": "abstract-texture",
+    "concept": "A quick, percussive knock with a dry noise rap over a short low tone.",
+    "keywords": ["door", "rap", "knuckle", "wood", "alert"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 400 },
+          "envelope": { "attackMs": 3, "decayMs": 30, "sustainLevel": 0.3, "sustainMs": 15, "releaseMs": 25 },
+          "gain": 0.5
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 5, "decayMs": 13, "sustainLevel": 0, "sustainMs": 0, "releaseMs": 16 },
+          "filter": { "type": "bandpass", "cutoffHz": 800 },
+          "gain": 0.3
+        }
+      ]
+    }
+  },
+  {
+    "name": "pop-soft",
+    "phrase": "pop soft",
+    "category": "abstract-texture",
+    "concept": "A quick, soft pop with a gentle attack and a short round tone.",
+    "keywords": ["bubble", "burst", "cork", "small", "round"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 420, "timeMs": 40 } },
+          "envelope": { "attackMs": 15, "decayMs": 30, "sustainLevel": 0.3, "sustainMs": 20, "releaseMs": 30 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "click-dry",
+    "phrase": "click dry",
+    "category": "abstract-texture",
+    "concept": "A very short, sharp, dry click made from one crisp noise burst.",
+    "keywords": ["button", "mouse", "switch", "press", "crisp"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 2, "decayMs": 15, "sustainLevel": 0.2, "sustainMs": 5, "releaseMs": 15 },
+          "filter": { "type": "highpass", "cutoffHz": 4000 },
+          "gain": 0.75
+        }
+      ]
+    }
+  },
+  {
+    "name": "snap-dry",
+    "phrase": "snap dry",
+    "category": "abstract-texture",
+    "concept": "A very short, sharp, dry snap made from one brittle noise burst.",
+    "keywords": ["finger", "crisp", "flick", "brittle"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 3, "decayMs": 12, "sustainLevel": 0.2, "sustainMs": 8, "releaseMs": 15 },
+          "filter": { "type": "highpass", "cutoffHz": 3000 },
+          "gain": 0.85
+        }
+      ]
+    }
+  },
+  {
+    "name": "tap-light",
+    "phrase": "tap light",
+    "category": "abstract-texture",
+    "concept": "A quick, soft tap with a gentle attack and a light short tone.",
+    "keywords": ["touch", "finger", "press", "brief"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 450 },
+          "envelope": { "attackMs": 8, "decayMs": 15, "sustainLevel": 0.25, "sustainMs": 10, "releaseMs": 20 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "brush",
+    "phrase": "brush",
+    "category": "abstract-texture",
+    "concept": "A soft brushing texture made from filtered noise with a gentle rounded swell.",
+    "keywords": ["sweep", "texture", "fabric", "whisper", "drag"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "pink" },
+          "envelope": { "attackMs": 80, "decayMs": 100, "sustainLevel": 0.6, "sustainMs": 80, "releaseMs": 80 },
+          "filter": { "type": "lowpass", "cutoffHz": 1500 },
+          "gain": 0.95
+        }
+      ]
+    }
+  },
+  {
+    "name": "scrape-light",
+    "phrase": "scrape light",
+    "category": "abstract-texture",
+    "concept": "A light, gritty scraping texture from filtered noise, like a rough dry surface.",
+    "keywords": ["texture", "drag", "gritty", "surface", "friction", "rough"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 30, "decayMs": 60, "sustainLevel": 0.5, "sustainMs": 60, "releaseMs": 50 },
+          "filter": { "type": "lowpass", "cutoffHz": 2000 },
+          "gain": 0.95
+        }
+      ]
+    }
+  },
+  {
+    "name": "grain",
+    "phrase": "grain",
+    "category": "abstract-texture",
+    "concept": "A quick, short burst of grainy noise texture, like fine sand or static.",
+    "keywords": ["texture", "granular", "dust", "speckle", "static"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 5, "decayMs": 30, "sustainLevel": 0.35, "sustainMs": 10, "releaseMs": 25 },
+          "filter": { "type": "lowpass", "cutoffHz": 2500 },
+          "gain": 0.95
+        }
+      ]
+    }
+  },
+  {
+    "name": "granular-wash",
+    "phrase": "granular wash",
+    "category": "abstract-texture",
+    "concept": "A long, sustained wash of soft granular noise texture drifting evenly.",
+    "keywords": ["texture", "noise", "drift", "ambient", "cloud"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "pink" },
+          "envelope": { "attackMs": 100, "decayMs": 200, "sustainLevel": 0.65, "sustainMs": 600, "releaseMs": 150 },
+          "filter": { "type": "lowpass", "cutoffHz": 1800 },
+          "gain": 0.95
+        }
+      ]
+    }
+  },
+  {
+    "name": "shimmer",
+    "phrase": "shimmer",
+    "category": "abstract-texture",
+    "concept": "A long, sustained, bright shimmer with a high steady tone and airy noise.",
+    "keywords": ["sparkle", "glisten", "airy", "high"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 1900 },
+          "envelope": { "attackMs": 60, "decayMs": 150, "sustainLevel": 0.45, "sustainMs": 400, "releaseMs": 200 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 60, "decayMs": 150, "sustainLevel": 0.3, "sustainMs": 300, "releaseMs": 150 },
+          "filter": { "type": "highpass", "cutoffHz": 3500 },
+          "gain": 0.3
+        }
+      ]
+    }
+  },
+  {
+    "name": "sparkle",
+    "phrase": "sparkle",
+    "category": "abstract-texture",
+    "concept": "A short, sharp, bright sparkle with one quick high tone.",
+    "keywords": ["glitter", "tiny", "flash", "glint", "high"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 2200 },
+          "envelope": { "attackMs": 3, "decayMs": 25, "sustainLevel": 0.3, "sustainMs": 15, "releaseMs": 25 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "glimmer",
+    "phrase": "glimmer",
+    "category": "abstract-texture",
+    "concept": "A short, soft, bright glimmer with a gentle attack on a high tone.",
+    "keywords": ["glow", "light", "subtle", "flicker"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1600 },
+          "envelope": { "attackMs": 20, "decayMs": 30, "sustainLevel": 0.3, "sustainMs": 20, "releaseMs": 30 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "twinkle",
+    "phrase": "twinkle",
+    "category": "abstract-texture",
+    "concept": "A quick, rising, bright twinkle that sweeps upward into a sparkling high tone.",
+    "keywords": ["star", "glint", "flash", "shine"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1500, "pitchEnvelope": { "toHz": 2400, "timeMs": 80 } },
+          "envelope": { "attackMs": 5, "decayMs": 30, "sustainLevel": 0.3, "sustainMs": 20, "releaseMs": 30 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "riser-short",
+    "phrase": "riser short",
+    "category": "abstract-texture",
+    "concept": "A quick, rising riser tone that sweeps upward smoothly over a short span.",
+    "keywords": ["sweep", "build", "ascend", "transition"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 400, "pitchEnvelope": { "toHz": 900, "timeMs": 150 } },
+          "envelope": { "attackMs": 10, "decayMs": 50, "sustainLevel": 0.3, "sustainMs": 40, "releaseMs": 50 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "riser-long",
+    "phrase": "riser long",
+    "category": "abstract-texture",
+    "concept": "A long, sustained, rising riser that glides upward gradually over more than a second.",
+    "keywords": ["sweep", "build", "ascend", "transition"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 300, "pitchEnvelope": { "toHz": 1000, "timeMs": 900 } },
+          "envelope": { "attackMs": 150, "decayMs": 300, "sustainLevel": 0.35, "sustainMs": 400, "releaseMs": 200 },
+          "gain": 0.42
+        }
+      ]
+    }
+  },
+  {
+    "name": "faller",
+    "phrase": "faller",
+    "category": "abstract-texture",
+    "concept": "A gentle, falling tone that glides downward smoothly over about a quarter second.",
+    "keywords": ["descend", "drop", "glide", "downward", "decline"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 900, "pitchEnvelope": { "toHz": 350, "timeMs": 220 } },
+          "envelope": { "attackMs": 30, "decayMs": 80, "sustainLevel": 0.3, "sustainMs": 80, "releaseMs": 90 },
+          "gain": 0.55
+        }
+      ]
+    }
+  }
+]

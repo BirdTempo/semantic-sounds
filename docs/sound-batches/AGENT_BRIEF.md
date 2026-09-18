@@ -48,6 +48,26 @@ Most first drafts fail on loudness. Start from these and adjust:
 - If `measure` says "too quiet", raise `gain` and `sustainLevel`. If it
   says "too loud", lower them. Never change the contract constants.
 
+## Known traps
+
+These cost the first authors the most time. Read them before you draft.
+
+- **Very short sounds fight the fade.** The renderer fades the first and
+  last 3ms. Below about 45ms total, that fade moves the measured peak
+  and can break a "sharp" claim. Keep a transient at 45-80ms. Never go
+  below the 30ms hard minimum.
+- **A low tone in a short sound reads as DC offset.** A 200 Hz tone
+  needs 5ms for one cycle. In a 40ms sound it completes too few cycles
+  to average to zero, and the check fails. Raise the frequency, or make
+  the sound longer, or add a highpass filter.
+- **A long tail pulls loudness down.** RMS covers the whole sound. A
+  1000ms sound with a quiet tail needs more `gain` than a 100ms one.
+- **Two sounds can both pass and still be wrong.** Vary the pitch
+  movement, attack, layer count and duration across your batch.
+
+Work in passes: draft every entry, run `measure` once, then fix in bulk.
+That is faster than one entry at a time.
+
 ## Concept agreement
 
 The validator renders your patch and compares it with your words. If
