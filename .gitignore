@@ -4,3 +4,5 @@ web/dist/
 *.log
 .DS_Store
 .omc/
+scripts/review/page/library-bundle.js
+scripts/review/session.json

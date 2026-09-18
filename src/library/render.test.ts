@@ -89,7 +89,17 @@ describe('renderPatch', () => {
     expect(Math.abs(dcOffset)).toBeLessThan(0.001);
   });
 
-  it('renders a worst-case 1s/4-layer patch in well under 5ms median', () => {
+  it('stays far faster than a naive per-sample implementation', () => {
+    // This test guards one thing: that the renderer still uses a wavetable
+    // oscillator, a recurrence envelope and a fast PRNG, rather than calling
+    // Math.sin/Math.exp/Math.random for every sample.
+    //
+    // It measures a ratio, not a wall-clock budget. An absolute threshold
+    // cannot do this job: on a loaded shared machine the real renderer's
+    // median ranges from about 5ms to 12ms for this patch, which overlaps
+    // what the naive version measures on an idle one. Timing both
+    // implementations back to back cancels the machine out, because load
+    // scales them together.
     const patch: Patch = {
       layers: Array.from({ length: 4 }, (_, i) => ({
         source: { type: 'oscillator' as const, wave: 'sine' as const, freqHz: 220 + i * 110 },
@@ -98,19 +108,46 @@ describe('renderPatch', () => {
         gain: 0.5,
       })),
     };
-    for (let i = 0; i < 10; i++) renderPatch(patch);
-    const times: number[] = [];
-    for (let i = 0; i < 30; i++) {
-      const start = performance.now();
-      renderPatch(patch);
-      times.push(performance.now() - start);
-    }
-    times.sort((a, b) => a - b);
-    const median = times[Math.floor(times.length / 2)];
-    // The brainstorming benchmark measured ~2.5ms in isolation; 8ms leaves
-    // headroom for a shared/loaded test machine while still catching a
-    // real regression back to the naive per-sample Math.sin/exp/random
-    // approach, which measured ~10ms.
-    expect(median).toBeLessThan(8);
+
+    // The implementation this renderer deliberately moved away from.
+    const naive = (): Float32Array => {
+      const sampleCount = Math.round((1.0 * RENDER_SAMPLE_RATE * 1000) / 1000);
+      const out = new Float32Array(sampleCount);
+      for (let layer = 0; layer < 4; layer++) {
+        const freq = 220 + layer * 110;
+        let phase = 0;
+        let filterState = 0;
+        for (let i = 0; i < sampleCount; i++) {
+          const env = Math.exp((-i / RENDER_SAMPLE_RATE) * 6);
+          const noise = Math.random() * 2 - 1;
+          const raw = Math.sin(phase) * 0.5 + noise * 0.1;
+          phase += (2 * Math.PI * freq) / RENDER_SAMPLE_RATE;
+          filterState += 0.2 * (raw - filterState);
+          out[i] = (out[i] ?? 0) + filterState * env * 0.25;
+        }
+      }
+      return out;
+    };
+
+    const medianOf = (run: () => unknown): number => {
+      for (let i = 0; i < 5; i++) run();
+      const times: number[] = [];
+      for (let i = 0; i < 21; i++) {
+        const start = performance.now();
+        run();
+        times.push(performance.now() - start);
+      }
+      times.sort((a, b) => a - b);
+      return times[Math.floor(times.length / 2)]!;
+    };
+
+    // Interleave the two measurements, so a load spike during the run hits
+    // both rather than only the one measured second.
+    const realFirst = medianOf(() => renderPatch(patch));
+    const naiveMedian = medianOf(naive);
+    const realSecond = medianOf(() => renderPatch(patch));
+    const real = Math.min(realFirst, realSecond);
+
+    expect(naiveMedian / real).toBeGreaterThan(2);
   });
 });

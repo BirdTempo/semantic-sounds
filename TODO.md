@@ -38,12 +38,15 @@ letting deferred work rot into an undocumented gap.
   steeper slope than a one-pole filter can give.
 - `MAX_LAYERS = 4` came from a performance check on a 1s/4-layer patch.
   Raise it only after re-running that check.
-- The renderer's performance-budget test (render.test.ts) measures
-  wall-clock time and can be sensitive to a heavily loaded shared
-  machine. Vitest file parallelism is disabled to remove *self*-induced
-  contention between test files; if it's still occasionally flaky in a
-  particular CI environment, re-run once before treating it as a real
-  regression, per the test's own inline comment.
+- The renderer's performance test compares against a naive per-sample
+  implementation run back to back, and asserts a ratio, rather than a
+  wall-clock budget. An absolute budget was tried first and was not
+  workable: on a loaded shared machine the real renderer's median for
+  the test patch ranges from about 5ms to 12ms, which overlaps what the
+  naive version measures on an idle one, so the test was measuring the
+  machine instead of the code. The ratio cancels load out, because load
+  scales both implementations together. Measured margin: about 3.7x
+  against a threshold of 2x.
 
 ## Bugs found and fixed during the seed-set build
 
