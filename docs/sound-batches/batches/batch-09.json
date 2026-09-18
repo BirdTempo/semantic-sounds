@@ -1,0 +1,95 @@
+{
+  "batch": "batch-09",
+  "category": "game",
+  "outputFile": "src/library/sounds/game-2.json",
+  "phrases": [
+    {
+      "name": "climb",
+      "phrase": "climb"
+    },
+    {
+      "name": "swim",
+      "phrase": "swim"
+    },
+    {
+      "name": "teleport",
+      "phrase": "teleport"
+    },
+    {
+      "name": "respawn",
+      "phrase": "respawn"
+    },
+    {
+      "name": "checkpoint",
+      "phrase": "checkpoint"
+    },
+    {
+      "name": "save-point",
+      "phrase": "save point"
+    },
+    {
+      "name": "door-unlock",
+      "phrase": "door unlock"
+    },
+    {
+      "name": "chest-open",
+      "phrase": "chest open"
+    },
+    {
+      "name": "treasure-found",
+      "phrase": "treasure found"
+    },
+    {
+      "name": "secret-found",
+      "phrase": "secret found"
+    },
+    {
+      "name": "puzzle-solved",
+      "phrase": "puzzle solved"
+    },
+    {
+      "name": "lever-pull",
+      "phrase": "lever pull"
+    },
+    {
+      "name": "switch-activate",
+      "phrase": "switch activate"
+    },
+    {
+      "name": "trap-trigger",
+      "phrase": "trap trigger"
+    },
+    {
+      "name": "spike-hit",
+      "phrase": "spike hit"
+    },
+    {
+      "name": "fall-damage",
+      "phrase": "fall damage"
+    },
+    {
+      "name": "enemy-spotted",
+      "phrase": "enemy spotted"
+    },
+    {
+      "name": "enemy-defeated",
+      "phrase": "enemy defeated"
+    },
+    {
+      "name": "boss-appear",
+      "phrase": "boss appear"
+    },
+    {
+      "name": "boss-defeated",
+      "phrase": "boss defeated"
+    },
+    {
+      "name": "critical-hit",
+      "phrase": "critical hit"
+    },
+    {
+      "name": "miss",
+      "phrase": "miss"
+    }
+  ]
+}

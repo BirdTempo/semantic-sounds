@@ -1,0 +1,91 @@
+{
+  "batch": "batch-44",
+  "category": "ui-feedback",
+  "outputFile": "src/library/sounds/ui-feedback-2.json",
+  "phrases": [
+    {
+      "name": "undo",
+      "phrase": "undo"
+    },
+    {
+      "name": "redo",
+      "phrase": "redo"
+    },
+    {
+      "name": "copy",
+      "phrase": "copy"
+    },
+    {
+      "name": "paste",
+      "phrase": "paste"
+    },
+    {
+      "name": "cut",
+      "phrase": "cut"
+    },
+    {
+      "name": "save",
+      "phrase": "save"
+    },
+    {
+      "name": "discard",
+      "phrase": "discard"
+    },
+    {
+      "name": "confirm",
+      "phrase": "confirm"
+    },
+    {
+      "name": "cancel",
+      "phrase": "cancel"
+    },
+    {
+      "name": "dismiss",
+      "phrase": "dismiss"
+    },
+    {
+      "name": "retry",
+      "phrase": "retry"
+    },
+    {
+      "name": "submit",
+      "phrase": "submit"
+    },
+    {
+      "name": "form-invalid",
+      "phrase": "form invalid"
+    },
+    {
+      "name": "field-valid",
+      "phrase": "field valid"
+    },
+    {
+      "name": "password-wrong",
+      "phrase": "password wrong"
+    },
+    {
+      "name": "permission-granted",
+      "phrase": "permission granted"
+    },
+    {
+      "name": "permission-denied",
+      "phrase": "permission denied"
+    },
+    {
+      "name": "locked-action",
+      "phrase": "locked action"
+    },
+    {
+      "name": "disabled-action",
+      "phrase": "disabled action"
+    },
+    {
+      "name": "empty-state",
+      "phrase": "empty state"
+    },
+    {
+      "name": "no-results",
+      "phrase": "no results"
+    }
+  ]
+}

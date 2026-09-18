@@ -1,0 +1,87 @@
+{
+  "batch": "batch-15",
+  "category": "media-controls",
+  "outputFile": "src/library/sounds/media-controls-1.json",
+  "phrases": [
+    {
+      "name": "play",
+      "phrase": "play"
+    },
+    {
+      "name": "pause",
+      "phrase": "pause"
+    },
+    {
+      "name": "stop-playback",
+      "phrase": "stop playback"
+    },
+    {
+      "name": "next-track",
+      "phrase": "next track"
+    },
+    {
+      "name": "previous-track",
+      "phrase": "previous track"
+    },
+    {
+      "name": "fast-forward",
+      "phrase": "fast forward"
+    },
+    {
+      "name": "rewind",
+      "phrase": "rewind"
+    },
+    {
+      "name": "seek",
+      "phrase": "seek"
+    },
+    {
+      "name": "shuffle-on",
+      "phrase": "shuffle on"
+    },
+    {
+      "name": "shuffle-off",
+      "phrase": "shuffle off"
+    },
+    {
+      "name": "repeat-on",
+      "phrase": "repeat on"
+    },
+    {
+      "name": "repeat-off",
+      "phrase": "repeat off"
+    },
+    {
+      "name": "volume-up",
+      "phrase": "volume up"
+    },
+    {
+      "name": "volume-down",
+      "phrase": "volume down"
+    },
+    {
+      "name": "mute-audio",
+      "phrase": "mute audio"
+    },
+    {
+      "name": "unmute-audio",
+      "phrase": "unmute audio"
+    },
+    {
+      "name": "record-start",
+      "phrase": "record start"
+    },
+    {
+      "name": "record-stop",
+      "phrase": "record stop"
+    },
+    {
+      "name": "live-start",
+      "phrase": "live start"
+    },
+    {
+      "name": "live-end",
+      "phrase": "live end"
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "batch": "batch-31",
+  "category": "smart-home",
+  "outputFile": "src/library/sounds/smart-home-2.json",
+  "phrases": [
+    {
+      "name": "heating-on",
+      "phrase": "heating on"
+    },
+    {
+      "name": "cooling-on",
+      "phrase": "cooling on"
+    },
+    {
+      "name": "fan-speed",
+      "phrase": "fan speed"
+    },
+    {
+      "name": "air-purifier",
+      "phrase": "air purifier"
+    },
+    {
+      "name": "humidifier",
+      "phrase": "humidifier"
+    },
+    {
+      "name": "blinds-open",
+      "phrase": "blinds open"
+    },
+    {
+      "name": "blinds-close",
+      "phrase": "blinds close"
+    },
+    {
+      "name": "garage-open",
+      "phrase": "garage open"
+    },
+    {
+      "name": "garage-close",
+      "phrase": "garage close"
+    },
+    {
+      "name": "sprinkler-start",
+      "phrase": "sprinkler start"
+    },
+    {
+      "name": "robot-vacuum-start",
+      "phrase": "robot vacuum start"
+    },
+    {
+      "name": "robot-vacuum-done",
+      "phrase": "robot vacuum done"
+    },
+    {
+      "name": "washer-done",
+      "phrase": "washer done"
+    },
+    {
+      "name": "dryer-done",
+      "phrase": "dryer done"
+    },
+    {
+      "name": "dishwasher-done",
+      "phrase": "dishwasher done"
+    },
+    {
+      "name": "fridge-door",
+      "phrase": "fridge door"
+    },
+    {
+      "name": "kettle-boiled",
+      "phrase": "kettle boiled"
+    },
+    {
+      "name": "coffee-ready",
+      "phrase": "coffee ready"
+    },
+    {
+      "name": "device-paired",
+      "phrase": "device paired"
+    },
+    {
+      "name": "device-offline",
+      "phrase": "device offline"
+    }
+  ]
+}

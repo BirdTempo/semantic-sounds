@@ -1,0 +1,103 @@
+{
+  "batch": "batch-39",
+  "category": "transitions",
+  "outputFile": "src/library/sounds/transitions-1.json",
+  "phrases": [
+    {
+      "name": "page-turn",
+      "phrase": "page turn"
+    },
+    {
+      "name": "page-forward",
+      "phrase": "page forward"
+    },
+    {
+      "name": "page-back",
+      "phrase": "page back"
+    },
+    {
+      "name": "slide-left",
+      "phrase": "slide left"
+    },
+    {
+      "name": "slide-right",
+      "phrase": "slide right"
+    },
+    {
+      "name": "slide-up",
+      "phrase": "slide up"
+    },
+    {
+      "name": "slide-down",
+      "phrase": "slide down"
+    },
+    {
+      "name": "fade-in",
+      "phrase": "fade in"
+    },
+    {
+      "name": "fade-out",
+      "phrase": "fade out"
+    },
+    {
+      "name": "cross-fade",
+      "phrase": "cross fade"
+    },
+    {
+      "name": "zoom-transition",
+      "phrase": "zoom transition"
+    },
+    {
+      "name": "flip-card",
+      "phrase": "flip card"
+    },
+    {
+      "name": "card-deal",
+      "phrase": "card deal"
+    },
+    {
+      "name": "drawer-open",
+      "phrase": "drawer open"
+    },
+    {
+      "name": "drawer-close",
+      "phrase": "drawer close"
+    },
+    {
+      "name": "sheet-up",
+      "phrase": "sheet up"
+    },
+    {
+      "name": "sheet-down",
+      "phrase": "sheet down"
+    },
+    {
+      "name": "overlay-appear",
+      "phrase": "overlay appear"
+    },
+    {
+      "name": "overlay-dismiss",
+      "phrase": "overlay dismiss"
+    },
+    {
+      "name": "popover-open",
+      "phrase": "popover open"
+    },
+    {
+      "name": "popover-close",
+      "phrase": "popover close"
+    },
+    {
+      "name": "tooltip-show",
+      "phrase": "tooltip show"
+    },
+    {
+      "name": "accordion-open",
+      "phrase": "accordion open"
+    },
+    {
+      "name": "accordion-close",
+      "phrase": "accordion close"
+    }
+  ]
+}

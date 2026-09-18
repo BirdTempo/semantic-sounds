@@ -1,0 +1,127 @@
+{
+  "batch": "batch-11",
+  "category": "health-fitness",
+  "outputFile": "src/library/sounds/health-fitness.json",
+  "phrases": [
+    {
+      "name": "heartbeat",
+      "phrase": "heartbeat"
+    },
+    {
+      "name": "heart-rate-up",
+      "phrase": "heart rate up"
+    },
+    {
+      "name": "heart-rate-calm",
+      "phrase": "heart rate calm"
+    },
+    {
+      "name": "breath-in",
+      "phrase": "breath in"
+    },
+    {
+      "name": "breath-out",
+      "phrase": "breath out"
+    },
+    {
+      "name": "deep-breath-cycle",
+      "phrase": "deep breath cycle"
+    },
+    {
+      "name": "meditation-bell",
+      "phrase": "meditation bell"
+    },
+    {
+      "name": "mindfulness-chime",
+      "phrase": "mindfulness chime"
+    },
+    {
+      "name": "step-counted",
+      "phrase": "step counted"
+    },
+    {
+      "name": "ten-thousand-steps",
+      "phrase": "ten thousand steps"
+    },
+    {
+      "name": "run-start",
+      "phrase": "run start"
+    },
+    {
+      "name": "run-finish",
+      "phrase": "run finish"
+    },
+    {
+      "name": "sprint-interval",
+      "phrase": "sprint interval"
+    },
+    {
+      "name": "rep-complete",
+      "phrase": "rep complete"
+    },
+    {
+      "name": "set-complete",
+      "phrase": "set complete"
+    },
+    {
+      "name": "workout-done",
+      "phrase": "workout done"
+    },
+    {
+      "name": "cooldown",
+      "phrase": "cooldown"
+    },
+    {
+      "name": "stretch-hold",
+      "phrase": "stretch hold"
+    },
+    {
+      "name": "water-reminder",
+      "phrase": "water reminder"
+    },
+    {
+      "name": "stand-reminder",
+      "phrase": "stand reminder"
+    },
+    {
+      "name": "posture-alert",
+      "phrase": "posture alert"
+    },
+    {
+      "name": "sleep-start",
+      "phrase": "sleep start"
+    },
+    {
+      "name": "sleep-deep",
+      "phrase": "sleep deep"
+    },
+    {
+      "name": "sleep-wake",
+      "phrase": "sleep wake"
+    },
+    {
+      "name": "nap-end",
+      "phrase": "nap end"
+    },
+    {
+      "name": "calorie-goal",
+      "phrase": "calorie goal"
+    },
+    {
+      "name": "weight-logged",
+      "phrase": "weight logged"
+    },
+    {
+      "name": "blood-pressure",
+      "phrase": "blood pressure"
+    },
+    {
+      "name": "glucose-alert",
+      "phrase": "glucose alert"
+    },
+    {
+      "name": "recovery-complete",
+      "phrase": "recovery complete"
+    }
+  ]
+}

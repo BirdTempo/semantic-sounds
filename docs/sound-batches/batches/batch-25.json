@@ -1,0 +1,79 @@
+{
+  "batch": "batch-25",
+  "category": "office-productivity",
+  "outputFile": "src/library/sounds/office-productivity-1.json",
+  "phrases": [
+    {
+      "name": "printer-start",
+      "phrase": "printer start"
+    },
+    {
+      "name": "printer-done",
+      "phrase": "printer done"
+    },
+    {
+      "name": "paper-feed",
+      "phrase": "paper feed"
+    },
+    {
+      "name": "scanner-pass",
+      "phrase": "scanner pass"
+    },
+    {
+      "name": "stapler",
+      "phrase": "stapler"
+    },
+    {
+      "name": "hole-punch",
+      "phrase": "hole punch"
+    },
+    {
+      "name": "paper-tear",
+      "phrase": "paper tear"
+    },
+    {
+      "name": "paper-crumple",
+      "phrase": "paper crumple"
+    },
+    {
+      "name": "pen-click",
+      "phrase": "pen click"
+    },
+    {
+      "name": "pencil-write",
+      "phrase": "pencil write"
+    },
+    {
+      "name": "marker-squeak",
+      "phrase": "marker squeak"
+    },
+    {
+      "name": "whiteboard-wipe",
+      "phrase": "whiteboard wipe"
+    },
+    {
+      "name": "keyboard-type",
+      "phrase": "keyboard type"
+    },
+    {
+      "name": "keyboard-enter",
+      "phrase": "keyboard enter"
+    },
+    {
+      "name": "mouse-click",
+      "phrase": "mouse click"
+    },
+    {
+      "name": "calculator-key",
+      "phrase": "calculator key"
+    },
+    {
+      "name": "phone-desk-ring",
+      "phrase": "phone desk ring"
+    },
+    {
+      "name": "intercom",
+      "phrase": "intercom"
+    }
+  ]
+}

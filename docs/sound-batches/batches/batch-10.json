@@ -1,0 +1,87 @@
+{
+  "batch": "batch-10",
+  "category": "game",
+  "outputFile": "src/library/sounds/game-3.json",
+  "phrases": [
+    {
+      "name": "combo-break",
+      "phrase": "combo break"
+    },
+    {
+      "name": "perfect-combo",
+      "phrase": "perfect combo"
+    },
+    {
+      "name": "score-tally",
+      "phrase": "score tally"
+    },
+    {
+      "name": "high-score",
+      "phrase": "high score"
+    },
+    {
+      "name": "new-record",
+      "phrase": "new record"
+    },
+    {
+      "name": "match-start",
+      "phrase": "match start"
+    },
+    {
+      "name": "match-end",
+      "phrase": "match end"
+    },
+    {
+      "name": "round-win",
+      "phrase": "round win"
+    },
+    {
+      "name": "round-lose",
+      "phrase": "round lose"
+    },
+    {
+      "name": "draw-match",
+      "phrase": "draw match"
+    },
+    {
+      "name": "countdown-go",
+      "phrase": "countdown go"
+    },
+    {
+      "name": "power-down",
+      "phrase": "power down"
+    },
+    {
+      "name": "freeze",
+      "phrase": "freeze"
+    },
+    {
+      "name": "burn",
+      "phrase": "burn"
+    },
+    {
+      "name": "poison",
+      "phrase": "poison"
+    },
+    {
+      "name": "heal",
+      "phrase": "heal"
+    },
+    {
+      "name": "revive",
+      "phrase": "revive"
+    },
+    {
+      "name": "level-start",
+      "phrase": "level start"
+    },
+    {
+      "name": "level-fail",
+      "phrase": "level fail"
+    },
+    {
+      "name": "credits-roll",
+      "phrase": "credits roll"
+    }
+  ]
+}

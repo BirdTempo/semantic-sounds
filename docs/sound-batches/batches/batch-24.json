@@ -1,0 +1,107 @@
+{
+  "batch": "batch-24",
+  "category": "navigation-maps",
+  "outputFile": "src/library/sounds/navigation-maps.json",
+  "phrases": [
+    {
+      "name": "route-start",
+      "phrase": "route start"
+    },
+    {
+      "name": "route-end",
+      "phrase": "route end"
+    },
+    {
+      "name": "turn-left",
+      "phrase": "turn left"
+    },
+    {
+      "name": "turn-right",
+      "phrase": "turn right"
+    },
+    {
+      "name": "continue-straight",
+      "phrase": "continue straight"
+    },
+    {
+      "name": "exit-ahead",
+      "phrase": "exit ahead"
+    },
+    {
+      "name": "roundabout",
+      "phrase": "roundabout"
+    },
+    {
+      "name": "u-turn",
+      "phrase": "u turn"
+    },
+    {
+      "name": "rerouting",
+      "phrase": "rerouting"
+    },
+    {
+      "name": "destination-reached",
+      "phrase": "destination reached"
+    },
+    {
+      "name": "waypoint-added",
+      "phrase": "waypoint added"
+    },
+    {
+      "name": "gps-lock",
+      "phrase": "gps lock"
+    },
+    {
+      "name": "gps-lost",
+      "phrase": "gps lost"
+    },
+    {
+      "name": "speed-limit",
+      "phrase": "speed limit"
+    },
+    {
+      "name": "speed-warning",
+      "phrase": "speed warning"
+    },
+    {
+      "name": "traffic-ahead",
+      "phrase": "traffic ahead"
+    },
+    {
+      "name": "detour",
+      "phrase": "detour"
+    },
+    {
+      "name": "arrival-soon",
+      "phrase": "arrival soon"
+    },
+    {
+      "name": "geofence-enter",
+      "phrase": "geofence enter"
+    },
+    {
+      "name": "geofence-exit",
+      "phrase": "geofence exit"
+    },
+    {
+      "name": "compass-calibrate",
+      "phrase": "compass calibrate"
+    },
+    {
+      "name": "map-zoom",
+      "phrase": "map zoom"
+    },
+    {
+      "name": "pin-dropped",
+      "phrase": "pin dropped"
+    },
+    {
+      "name": "location-shared",
+      "phrase": "location shared"
+    },
+    {
+      "name": "off-route",
+      "phrase": "off route"
+    }
+  ]
+}

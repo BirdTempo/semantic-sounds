@@ -1,0 +1,91 @@
+{
+  "batch": "batch-43",
+  "category": "ui-feedback",
+  "outputFile": "src/library/sounds/ui-feedback-1.json",
+  "phrases": [
+    {
+      "name": "click",
+      "phrase": "click"
+    },
+    {
+      "name": "double-click",
+      "phrase": "double click"
+    },
+    {
+      "name": "long-press",
+      "phrase": "long press"
+    },
+    {
+      "name": "swipe",
+      "phrase": "swipe"
+    },
+    {
+      "name": "drag-start",
+      "phrase": "drag start"
+    },
+    {
+      "name": "drag-drop",
+      "phrase": "drag drop"
+    },
+    {
+      "name": "select-item",
+      "phrase": "select item"
+    },
+    {
+      "name": "deselect",
+      "phrase": "deselect"
+    },
+    {
+      "name": "hover",
+      "phrase": "hover"
+    },
+    {
+      "name": "focus",
+      "phrase": "focus"
+    },
+    {
+      "name": "blur",
+      "phrase": "blur"
+    },
+    {
+      "name": "checkbox-check",
+      "phrase": "checkbox check"
+    },
+    {
+      "name": "checkbox-uncheck",
+      "phrase": "checkbox uncheck"
+    },
+    {
+      "name": "radio-select",
+      "phrase": "radio select"
+    },
+    {
+      "name": "slider-step",
+      "phrase": "slider step"
+    },
+    {
+      "name": "slider-end",
+      "phrase": "slider end"
+    },
+    {
+      "name": "stepper-increment",
+      "phrase": "stepper increment"
+    },
+    {
+      "name": "stepper-decrement",
+      "phrase": "stepper decrement"
+    },
+    {
+      "name": "expand-section",
+      "phrase": "expand section"
+    },
+    {
+      "name": "collapse-section",
+      "phrase": "collapse section"
+    },
+    {
+      "name": "refresh",
+      "phrase": "refresh"
+    }
+  ]
+}

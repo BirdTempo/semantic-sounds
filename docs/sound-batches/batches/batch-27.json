@@ -1,0 +1,103 @@
+{
+  "batch": "batch-27",
+  "category": "progress",
+  "outputFile": "src/library/sounds/progress-1.json",
+  "phrases": [
+    {
+      "name": "upload-start",
+      "phrase": "upload start"
+    },
+    {
+      "name": "download-start",
+      "phrase": "download start"
+    },
+    {
+      "name": "upload-failed",
+      "phrase": "upload failed"
+    },
+    {
+      "name": "download-failed",
+      "phrase": "download failed"
+    },
+    {
+      "name": "sync-start",
+      "phrase": "sync start"
+    },
+    {
+      "name": "sync-failed",
+      "phrase": "sync failed"
+    },
+    {
+      "name": "install-start",
+      "phrase": "install start"
+    },
+    {
+      "name": "install-complete",
+      "phrase": "install complete"
+    },
+    {
+      "name": "update-available",
+      "phrase": "update available"
+    },
+    {
+      "name": "update-installed",
+      "phrase": "update installed"
+    },
+    {
+      "name": "backup-start",
+      "phrase": "backup start"
+    },
+    {
+      "name": "backup-complete",
+      "phrase": "backup complete"
+    },
+    {
+      "name": "restore-complete",
+      "phrase": "restore complete"
+    },
+    {
+      "name": "loading-start",
+      "phrase": "loading start"
+    },
+    {
+      "name": "loading-end",
+      "phrase": "loading end"
+    },
+    {
+      "name": "buffering",
+      "phrase": "buffering"
+    },
+    {
+      "name": "progress-tick",
+      "phrase": "progress tick"
+    },
+    {
+      "name": "progress-halfway",
+      "phrase": "progress halfway"
+    },
+    {
+      "name": "progress-nearly-done",
+      "phrase": "progress nearly done"
+    },
+    {
+      "name": "step-complete",
+      "phrase": "step complete"
+    },
+    {
+      "name": "stage-cleared",
+      "phrase": "stage cleared"
+    },
+    {
+      "name": "milestone-reached",
+      "phrase": "milestone reached"
+    },
+    {
+      "name": "goal-reached",
+      "phrase": "goal reached"
+    },
+    {
+      "name": "streak-extended",
+      "phrase": "streak extended"
+    }
+  ]
+}

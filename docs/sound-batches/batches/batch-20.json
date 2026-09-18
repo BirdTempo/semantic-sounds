@@ -1,0 +1,75 @@
+{
+  "batch": "batch-20",
+  "category": "money-commerce",
+  "outputFile": "src/library/sounds/money-commerce-2.json",
+  "phrases": [
+    {
+      "name": "invoice-sent",
+      "phrase": "invoice sent"
+    },
+    {
+      "name": "bill-due",
+      "phrase": "bill due"
+    },
+    {
+      "name": "balance-low",
+      "phrase": "balance low"
+    },
+    {
+      "name": "deposit",
+      "phrase": "deposit"
+    },
+    {
+      "name": "withdrawal",
+      "phrase": "withdrawal"
+    },
+    {
+      "name": "transfer-complete",
+      "phrase": "transfer complete"
+    },
+    {
+      "name": "subscription-renewed",
+      "phrase": "subscription renewed"
+    },
+    {
+      "name": "subscription-cancelled",
+      "phrase": "subscription cancelled"
+    },
+    {
+      "name": "discount-applied",
+      "phrase": "discount applied"
+    },
+    {
+      "name": "coupon-invalid",
+      "phrase": "coupon invalid"
+    },
+    {
+      "name": "price-drop",
+      "phrase": "price drop"
+    },
+    {
+      "name": "bid-placed",
+      "phrase": "bid placed"
+    },
+    {
+      "name": "auction-won",
+      "phrase": "auction won"
+    },
+    {
+      "name": "auction-lost",
+      "phrase": "auction lost"
+    },
+    {
+      "name": "tip-jar",
+      "phrase": "tip jar"
+    },
+    {
+      "name": "donation-received",
+      "phrase": "donation received"
+    },
+    {
+      "name": "wallet-opened",
+      "phrase": "wallet opened"
+    }
+  ]
+}

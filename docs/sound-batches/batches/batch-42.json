@@ -1,0 +1,87 @@
+{
+  "batch": "batch-42",
+  "category": "transport",
+  "outputFile": "src/library/sounds/transport-2.json",
+  "phrases": [
+    {
+      "name": "plane-takeoff",
+      "phrase": "plane takeoff"
+    },
+    {
+      "name": "plane-landing",
+      "phrase": "plane landing"
+    },
+    {
+      "name": "cabin-chime",
+      "phrase": "cabin chime"
+    },
+    {
+      "name": "seatbelt-sign",
+      "phrase": "seatbelt sign"
+    },
+    {
+      "name": "jet-engine",
+      "phrase": "jet engine"
+    },
+    {
+      "name": "propeller",
+      "phrase": "propeller"
+    },
+    {
+      "name": "helicopter",
+      "phrase": "helicopter"
+    },
+    {
+      "name": "boat-horn",
+      "phrase": "boat horn"
+    },
+    {
+      "name": "sail-flap",
+      "phrase": "sail flap"
+    },
+    {
+      "name": "oar-splash",
+      "phrase": "oar splash"
+    },
+    {
+      "name": "anchor-drop",
+      "phrase": "anchor drop"
+    },
+    {
+      "name": "bike-bell",
+      "phrase": "bike bell"
+    },
+    {
+      "name": "bike-gear",
+      "phrase": "bike gear"
+    },
+    {
+      "name": "skateboard",
+      "phrase": "skateboard"
+    },
+    {
+      "name": "scooter",
+      "phrase": "scooter"
+    },
+    {
+      "name": "elevator-arrive",
+      "phrase": "elevator arrive"
+    },
+    {
+      "name": "elevator-move",
+      "phrase": "elevator move"
+    },
+    {
+      "name": "escalator",
+      "phrase": "escalator"
+    },
+    {
+      "name": "crosswalk-beep",
+      "phrase": "crosswalk beep"
+    },
+    {
+      "name": "traffic-light-change",
+      "phrase": "traffic light change"
+    }
+  ]
+}

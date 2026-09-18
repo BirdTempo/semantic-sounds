@@ -1,0 +1,95 @@
+{
+  "batch": "batch-08",
+  "category": "game",
+  "outputFile": "src/library/sounds/game-1.json",
+  "phrases": [
+    {
+      "name": "coin-collect",
+      "phrase": "coin collect"
+    },
+    {
+      "name": "gem-collect",
+      "phrase": "gem collect"
+    },
+    {
+      "name": "key-collect",
+      "phrase": "key collect"
+    },
+    {
+      "name": "heart-collect",
+      "phrase": "heart collect"
+    },
+    {
+      "name": "health-pickup",
+      "phrase": "health pickup"
+    },
+    {
+      "name": "ammo-pickup",
+      "phrase": "ammo pickup"
+    },
+    {
+      "name": "shield-up",
+      "phrase": "shield up"
+    },
+    {
+      "name": "shield-break",
+      "phrase": "shield break"
+    },
+    {
+      "name": "armor-equip",
+      "phrase": "armor equip"
+    },
+    {
+      "name": "weapon-swap",
+      "phrase": "weapon swap"
+    },
+    {
+      "name": "sword-swing",
+      "phrase": "sword swing"
+    },
+    {
+      "name": "punch",
+      "phrase": "punch"
+    },
+    {
+      "name": "kick",
+      "phrase": "kick"
+    },
+    {
+      "name": "block",
+      "phrase": "block"
+    },
+    {
+      "name": "parry",
+      "phrase": "parry"
+    },
+    {
+      "name": "dodge",
+      "phrase": "dodge"
+    },
+    {
+      "name": "dash",
+      "phrase": "dash"
+    },
+    {
+      "name": "double-jump",
+      "phrase": "double jump"
+    },
+    {
+      "name": "wall-jump",
+      "phrase": "wall jump"
+    },
+    {
+      "name": "land",
+      "phrase": "land"
+    },
+    {
+      "name": "footstep",
+      "phrase": "footstep"
+    },
+    {
+      "name": "slide",
+      "phrase": "slide"
+    }
+  ]
+}

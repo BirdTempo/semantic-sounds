@@ -1,0 +1,79 @@
+{
+  "batch": "batch-06",
+  "category": "food-kitchen",
+  "outputFile": "src/library/sounds/food-kitchen-1.json",
+  "phrases": [
+    {
+      "name": "water-pour",
+      "phrase": "water pour"
+    },
+    {
+      "name": "wine-pour",
+      "phrase": "wine pour"
+    },
+    {
+      "name": "fizz-open",
+      "phrase": "fizz open"
+    },
+    {
+      "name": "cork-pop",
+      "phrase": "cork pop"
+    },
+    {
+      "name": "glass-clink",
+      "phrase": "glass clink"
+    },
+    {
+      "name": "ice-in-glass",
+      "phrase": "ice in glass"
+    },
+    {
+      "name": "stir-cup",
+      "phrase": "stir cup"
+    },
+    {
+      "name": "sizzle-start",
+      "phrase": "sizzle start"
+    },
+    {
+      "name": "pan-fry",
+      "phrase": "pan fry"
+    },
+    {
+      "name": "deep-fry",
+      "phrase": "deep fry"
+    },
+    {
+      "name": "boil-rolling",
+      "phrase": "boil rolling"
+    },
+    {
+      "name": "simmer",
+      "phrase": "simmer"
+    },
+    {
+      "name": "chop-board",
+      "phrase": "chop board"
+    },
+    {
+      "name": "knife-slice",
+      "phrase": "knife slice"
+    },
+    {
+      "name": "grinder",
+      "phrase": "grinder"
+    },
+    {
+      "name": "blender",
+      "phrase": "blender"
+    },
+    {
+      "name": "whisk",
+      "phrase": "whisk"
+    },
+    {
+      "name": "microwave-beep",
+      "phrase": "microwave beep"
+    }
+  ]
+}

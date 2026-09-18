@@ -1,0 +1,79 @@
+{
+  "batch": "batch-32",
+  "category": "social",
+  "outputFile": "src/library/sounds/social-1.json",
+  "phrases": [
+    {
+      "name": "like-given",
+      "phrase": "like given"
+    },
+    {
+      "name": "like-received",
+      "phrase": "like received"
+    },
+    {
+      "name": "unlike",
+      "phrase": "unlike"
+    },
+    {
+      "name": "heart-burst",
+      "phrase": "heart burst"
+    },
+    {
+      "name": "applause",
+      "phrase": "applause"
+    },
+    {
+      "name": "cheer",
+      "phrase": "cheer"
+    },
+    {
+      "name": "standing-ovation",
+      "phrase": "standing ovation"
+    },
+    {
+      "name": "laugh-track",
+      "phrase": "laugh track"
+    },
+    {
+      "name": "boo",
+      "phrase": "boo"
+    },
+    {
+      "name": "gasp",
+      "phrase": "gasp"
+    },
+    {
+      "name": "vote-up",
+      "phrase": "vote up"
+    },
+    {
+      "name": "vote-down",
+      "phrase": "vote down"
+    },
+    {
+      "name": "poll-closed",
+      "phrase": "poll closed"
+    },
+    {
+      "name": "share-post",
+      "phrase": "share post"
+    },
+    {
+      "name": "post-published",
+      "phrase": "post published"
+    },
+    {
+      "name": "post-deleted",
+      "phrase": "post deleted"
+    },
+    {
+      "name": "story-viewed",
+      "phrase": "story viewed"
+    },
+    {
+      "name": "story-posted",
+      "phrase": "story posted"
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "batch": "batch-21",
+  "category": "music-instrument",
+  "outputFile": "src/library/sounds/music-instrument.json",
+  "phrases": [
+    {
+      "name": "piano-note",
+      "phrase": "piano note"
+    },
+    {
+      "name": "piano-chord",
+      "phrase": "piano chord"
+    },
+    {
+      "name": "grand-chord",
+      "phrase": "grand chord"
+    },
+    {
+      "name": "electric-piano",
+      "phrase": "electric piano"
+    },
+    {
+      "name": "organ-swell",
+      "phrase": "organ swell"
+    },
+    {
+      "name": "harp-gliss",
+      "phrase": "harp gliss"
+    },
+    {
+      "name": "guitar-pluck",
+      "phrase": "guitar pluck"
+    },
+    {
+      "name": "guitar-strum",
+      "phrase": "guitar strum"
+    },
+    {
+      "name": "bass-note",
+      "phrase": "bass note"
+    },
+    {
+      "name": "violin-bow",
+      "phrase": "violin bow"
+    },
+    {
+      "name": "cello-low",
+      "phrase": "cello low"
+    },
+    {
+      "name": "flute-breath",
+      "phrase": "flute breath"
+    },
+    {
+      "name": "clarinet-tone",
+      "phrase": "clarinet tone"
+    },
+    {
+      "name": "trumpet-call",
+      "phrase": "trumpet call"
+    },
+    {
+      "name": "horn-swell",
+      "phrase": "horn swell"
+    },
+    {
+      "name": "sax-note",
+      "phrase": "sax note"
+    },
+    {
+      "name": "marimba-hit",
+      "phrase": "marimba hit"
+    },
+    {
+      "name": "xylophone-run",
+      "phrase": "xylophone run"
+    },
+    {
+      "name": "vibraphone",
+      "phrase": "vibraphone"
+    },
+    {
+      "name": "glockenspiel",
+      "phrase": "glockenspiel"
+    },
+    {
+      "name": "kalimba",
+      "phrase": "kalimba"
+    },
+    {
+      "name": "music-box",
+      "phrase": "music box"
+    },
+    {
+      "name": "celesta",
+      "phrase": "celesta"
+    },
+    {
+      "name": "hand-drum",
+      "phrase": "hand drum"
+    },
+    {
+      "name": "snare-hit",
+      "phrase": "snare hit"
+    },
+    {
+      "name": "kick-drum",
+      "phrase": "kick drum"
+    },
+    {
+      "name": "hi-hat",
+      "phrase": "hi hat"
+    },
+    {
+      "name": "cymbal-swell",
+      "phrase": "cymbal swell"
+    },
+    {
+      "name": "gong",
+      "phrase": "gong"
+    },
+    {
+      "name": "triangle-ding",
+      "phrase": "triangle ding"
+    }
+  ]
+}

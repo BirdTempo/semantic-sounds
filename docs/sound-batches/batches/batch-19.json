@@ -1,0 +1,79 @@
+{
+  "batch": "batch-19",
+  "category": "money-commerce",
+  "outputFile": "src/library/sounds/money-commerce-1.json",
+  "phrases": [
+    {
+      "name": "coin-drop",
+      "phrase": "coin drop"
+    },
+    {
+      "name": "cash-register",
+      "phrase": "cash register"
+    },
+    {
+      "name": "payment-sent",
+      "phrase": "payment sent"
+    },
+    {
+      "name": "payment-received",
+      "phrase": "payment received"
+    },
+    {
+      "name": "payment-declined",
+      "phrase": "payment declined"
+    },
+    {
+      "name": "card-tap",
+      "phrase": "card tap"
+    },
+    {
+      "name": "card-swipe",
+      "phrase": "card swipe"
+    },
+    {
+      "name": "card-inserted",
+      "phrase": "card inserted"
+    },
+    {
+      "name": "pin-entered",
+      "phrase": "pin entered"
+    },
+    {
+      "name": "receipt-printed",
+      "phrase": "receipt printed"
+    },
+    {
+      "name": "purchase-complete",
+      "phrase": "purchase complete"
+    },
+    {
+      "name": "add-to-cart",
+      "phrase": "add to cart"
+    },
+    {
+      "name": "remove-from-cart",
+      "phrase": "remove from cart"
+    },
+    {
+      "name": "checkout-start",
+      "phrase": "checkout start"
+    },
+    {
+      "name": "order-placed",
+      "phrase": "order placed"
+    },
+    {
+      "name": "order-shipped",
+      "phrase": "order shipped"
+    },
+    {
+      "name": "order-delivered",
+      "phrase": "order delivered"
+    },
+    {
+      "name": "refund-issued",
+      "phrase": "refund issued"
+    }
+  ]
+}

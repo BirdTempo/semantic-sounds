@@ -1,0 +1,87 @@
+{
+  "batch": "batch-16",
+  "category": "media-controls",
+  "outputFile": "src/library/sounds/media-controls-2.json",
+  "phrases": [
+    {
+      "name": "stream-connect",
+      "phrase": "stream connect"
+    },
+    {
+      "name": "stream-drop",
+      "phrase": "stream drop"
+    },
+    {
+      "name": "subtitle-on",
+      "phrase": "subtitle on"
+    },
+    {
+      "name": "subtitle-off",
+      "phrase": "subtitle off"
+    },
+    {
+      "name": "fullscreen-enter",
+      "phrase": "fullscreen enter"
+    },
+    {
+      "name": "fullscreen-exit",
+      "phrase": "fullscreen exit"
+    },
+    {
+      "name": "picture-in-picture",
+      "phrase": "picture in picture"
+    },
+    {
+      "name": "cast-connect",
+      "phrase": "cast connect"
+    },
+    {
+      "name": "cast-disconnect",
+      "phrase": "cast disconnect"
+    },
+    {
+      "name": "playlist-add",
+      "phrase": "playlist add"
+    },
+    {
+      "name": "playlist-remove",
+      "phrase": "playlist remove"
+    },
+    {
+      "name": "queue-next",
+      "phrase": "queue next"
+    },
+    {
+      "name": "like-track",
+      "phrase": "like track"
+    },
+    {
+      "name": "skip-ad",
+      "phrase": "skip ad"
+    },
+    {
+      "name": "chapter-skip",
+      "phrase": "chapter skip"
+    },
+    {
+      "name": "speed-up-playback",
+      "phrase": "speed up playback"
+    },
+    {
+      "name": "slow-down-playback",
+      "phrase": "slow down playback"
+    },
+    {
+      "name": "loop-section",
+      "phrase": "loop section"
+    },
+    {
+      "name": "bookmark-moment",
+      "phrase": "bookmark moment"
+    },
+    {
+      "name": "eject",
+      "phrase": "eject"
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "batch": "batch-14",
+  "category": "mechanical",
+  "outputFile": "src/library/sounds/mechanical-2.json",
+  "phrases": [
+    {
+      "name": "velcro",
+      "phrase": "velcro"
+    },
+    {
+      "name": "clasp-snap",
+      "phrase": "clasp snap"
+    },
+    {
+      "name": "clamp-tighten",
+      "phrase": "clamp tighten"
+    },
+    {
+      "name": "screw-turn",
+      "phrase": "screw turn"
+    },
+    {
+      "name": "drill",
+      "phrase": "drill"
+    },
+    {
+      "name": "hammer-strike",
+      "phrase": "hammer strike"
+    },
+    {
+      "name": "saw-cut",
+      "phrase": "saw cut"
+    },
+    {
+      "name": "sand-paper",
+      "phrase": "sand paper"
+    },
+    {
+      "name": "chain-rattle",
+      "phrase": "chain rattle"
+    },
+    {
+      "name": "pulley-lift",
+      "phrase": "pulley lift"
+    },
+    {
+      "name": "conveyor-move",
+      "phrase": "conveyor move"
+    },
+    {
+      "name": "robot-arm",
+      "phrase": "robot arm"
+    },
+    {
+      "name": "servo-move",
+      "phrase": "servo move"
+    },
+    {
+      "name": "fan-spin-up",
+      "phrase": "fan spin up"
+    },
+    {
+      "name": "fan-spin-down",
+      "phrase": "fan spin down"
+    },
+    {
+      "name": "pump-cycle",
+      "phrase": "pump cycle"
+    },
+    {
+      "name": "compressor-kick",
+      "phrase": "compressor kick"
+    },
+    {
+      "name": "steam-release",
+      "phrase": "steam release"
+    },
+    {
+      "name": "pressure-build",
+      "phrase": "pressure build"
+    },
+    {
+      "name": "metal-clang",
+      "phrase": "metal clang"
+    },
+    {
+      "name": "metal-scrape",
+      "phrase": "metal scrape"
+    },
+    {
+      "name": "rivet",
+      "phrase": "rivet"
+    },
+    {
+      "name": "weld-spark",
+      "phrase": "weld spark"
+    },
+    {
+      "name": "machine-hum",
+      "phrase": "machine hum"
+    },
+    {
+      "name": "belt-slip",
+      "phrase": "belt slip"
+    }
+  ]
+}

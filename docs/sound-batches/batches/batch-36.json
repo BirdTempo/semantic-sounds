@@ -1,0 +1,107 @@
+{
+  "batch": "batch-36",
+  "category": "system-data",
+  "outputFile": "src/library/sounds/system-data-2.json",
+  "phrases": [
+    {
+      "name": "storage-full",
+      "phrase": "storage full"
+    },
+    {
+      "name": "memory-warning",
+      "phrase": "memory warning"
+    },
+    {
+      "name": "cache-cleared",
+      "phrase": "cache cleared"
+    },
+    {
+      "name": "file-saved",
+      "phrase": "file saved"
+    },
+    {
+      "name": "file-deleted",
+      "phrase": "file deleted"
+    },
+    {
+      "name": "folder-created",
+      "phrase": "folder created"
+    },
+    {
+      "name": "file-moved",
+      "phrase": "file moved"
+    },
+    {
+      "name": "file-corrupt",
+      "phrase": "file corrupt"
+    },
+    {
+      "name": "permission-error",
+      "phrase": "permission error"
+    },
+    {
+      "name": "access-denied",
+      "phrase": "access denied"
+    },
+    {
+      "name": "firewall-block",
+      "phrase": "firewall block"
+    },
+    {
+      "name": "virus-found",
+      "phrase": "virus found"
+    },
+    {
+      "name": "quarantine",
+      "phrase": "quarantine"
+    },
+    {
+      "name": "encryption-on",
+      "phrase": "encryption on"
+    },
+    {
+      "name": "decryption-done",
+      "phrase": "decryption done"
+    },
+    {
+      "name": "key-generated",
+      "phrase": "key generated"
+    },
+    {
+      "name": "certificate-valid",
+      "phrase": "certificate valid"
+    },
+    {
+      "name": "certificate-expired",
+      "phrase": "certificate expired"
+    },
+    {
+      "name": "database-write",
+      "phrase": "database write"
+    },
+    {
+      "name": "query-complete",
+      "phrase": "query complete"
+    },
+    {
+      "name": "index-rebuilt",
+      "phrase": "index rebuilt"
+    },
+    {
+      "name": "server-up",
+      "phrase": "server up"
+    },
+    {
+      "name": "server-down",
+      "phrase": "server down"
+    },
+    {
+      "name": "latency-spike",
+      "phrase": "latency spike"
+    },
+    {
+      "name": "data-breach",
+      "phrase": "data breach"
+    }
+  ]
+}

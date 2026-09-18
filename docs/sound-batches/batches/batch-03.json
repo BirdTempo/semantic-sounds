@@ -1,0 +1,127 @@
+{
+  "batch": "batch-03",
+  "category": "animals",
+  "outputFile": "src/library/sounds/animals.json",
+  "phrases": [
+    {
+      "name": "dog-bark",
+      "phrase": "dog bark"
+    },
+    {
+      "name": "dog-whine",
+      "phrase": "dog whine"
+    },
+    {
+      "name": "puppy-yip",
+      "phrase": "puppy yip"
+    },
+    {
+      "name": "cat-meow",
+      "phrase": "cat meow"
+    },
+    {
+      "name": "cat-purr",
+      "phrase": "cat purr"
+    },
+    {
+      "name": "kitten-mew",
+      "phrase": "kitten mew"
+    },
+    {
+      "name": "bird-chirp",
+      "phrase": "bird chirp"
+    },
+    {
+      "name": "bird-song",
+      "phrase": "bird song"
+    },
+    {
+      "name": "owl-hoot",
+      "phrase": "owl hoot"
+    },
+    {
+      "name": "rooster-crow",
+      "phrase": "rooster crow"
+    },
+    {
+      "name": "duck-quack",
+      "phrase": "duck quack"
+    },
+    {
+      "name": "goose-honk",
+      "phrase": "goose honk"
+    },
+    {
+      "name": "seagull",
+      "phrase": "seagull"
+    },
+    {
+      "name": "horse-neigh",
+      "phrase": "horse neigh"
+    },
+    {
+      "name": "horse-gallop",
+      "phrase": "horse gallop"
+    },
+    {
+      "name": "cow-moo",
+      "phrase": "cow moo"
+    },
+    {
+      "name": "sheep-bleat",
+      "phrase": "sheep bleat"
+    },
+    {
+      "name": "pig-oink",
+      "phrase": "pig oink"
+    },
+    {
+      "name": "goat-bleat",
+      "phrase": "goat bleat"
+    },
+    {
+      "name": "frog-croak",
+      "phrase": "frog croak"
+    },
+    {
+      "name": "cricket-chirp",
+      "phrase": "cricket chirp"
+    },
+    {
+      "name": "wolf-howl",
+      "phrase": "wolf howl"
+    },
+    {
+      "name": "lion-roar",
+      "phrase": "lion roar"
+    },
+    {
+      "name": "elephant-call",
+      "phrase": "elephant call"
+    },
+    {
+      "name": "monkey-chatter",
+      "phrase": "monkey chatter"
+    },
+    {
+      "name": "whale-song",
+      "phrase": "whale song"
+    },
+    {
+      "name": "dolphin-click",
+      "phrase": "dolphin click"
+    },
+    {
+      "name": "snake-hiss",
+      "phrase": "snake hiss"
+    },
+    {
+      "name": "bat-squeak",
+      "phrase": "bat squeak"
+    },
+    {
+      "name": "mosquito-whine",
+      "phrase": "mosquito whine"
+    }
+  ]
+}

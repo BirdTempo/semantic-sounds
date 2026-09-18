@@ -1,0 +1,127 @@
+{
+  "batch": "batch-46",
+  "category": "weather",
+  "outputFile": "src/library/sounds/weather.json",
+  "phrases": [
+    {
+      "name": "sunrise",
+      "phrase": "sunrise"
+    },
+    {
+      "name": "sunset",
+      "phrase": "sunset"
+    },
+    {
+      "name": "clear-sky",
+      "phrase": "clear sky"
+    },
+    {
+      "name": "cloud-cover",
+      "phrase": "cloud cover"
+    },
+    {
+      "name": "temperature-rise",
+      "phrase": "temperature rise"
+    },
+    {
+      "name": "temperature-drop",
+      "phrase": "temperature drop"
+    },
+    {
+      "name": "heat-haze",
+      "phrase": "heat haze"
+    },
+    {
+      "name": "cold-snap",
+      "phrase": "cold snap"
+    },
+    {
+      "name": "humidity-rise",
+      "phrase": "humidity rise"
+    },
+    {
+      "name": "storm-approaching",
+      "phrase": "storm approaching"
+    },
+    {
+      "name": "storm-passing",
+      "phrase": "storm passing"
+    },
+    {
+      "name": "hail",
+      "phrase": "hail"
+    },
+    {
+      "name": "sleet",
+      "phrase": "sleet"
+    },
+    {
+      "name": "snowfall",
+      "phrase": "snowfall"
+    },
+    {
+      "name": "blizzard",
+      "phrase": "blizzard"
+    },
+    {
+      "name": "fog-roll-in",
+      "phrase": "fog roll in"
+    },
+    {
+      "name": "fog-lift",
+      "phrase": "fog lift"
+    },
+    {
+      "name": "rainbow",
+      "phrase": "rainbow"
+    },
+    {
+      "name": "drizzle",
+      "phrase": "drizzle"
+    },
+    {
+      "name": "downpour",
+      "phrase": "downpour"
+    },
+    {
+      "name": "hurricane-warning",
+      "phrase": "hurricane warning"
+    },
+    {
+      "name": "tornado-siren",
+      "phrase": "tornado siren"
+    },
+    {
+      "name": "flood-warning",
+      "phrase": "flood warning"
+    },
+    {
+      "name": "air-quality-alert",
+      "phrase": "air quality alert"
+    },
+    {
+      "name": "pollen-high",
+      "phrase": "pollen high"
+    },
+    {
+      "name": "uv-warning",
+      "phrase": "uv warning"
+    },
+    {
+      "name": "barometric-drop",
+      "phrase": "barometric drop"
+    },
+    {
+      "name": "first-frost",
+      "phrase": "first frost"
+    },
+    {
+      "name": "thaw",
+      "phrase": "thaw"
+    },
+    {
+      "name": "season-change",
+      "phrase": "season change"
+    }
+  ]
+}

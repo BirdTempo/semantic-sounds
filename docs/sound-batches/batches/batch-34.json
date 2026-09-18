@@ -1,0 +1,107 @@
+{
+  "batch": "batch-34",
+  "category": "sports",
+  "outputFile": "src/library/sounds/sports.json",
+  "phrases": [
+    {
+      "name": "whistle-start",
+      "phrase": "whistle start"
+    },
+    {
+      "name": "whistle-end",
+      "phrase": "whistle end"
+    },
+    {
+      "name": "ball-kick",
+      "phrase": "ball kick"
+    },
+    {
+      "name": "ball-bounce",
+      "phrase": "ball bounce"
+    },
+    {
+      "name": "ball-catch",
+      "phrase": "ball catch"
+    },
+    {
+      "name": "bat-crack",
+      "phrase": "bat crack"
+    },
+    {
+      "name": "racket-hit",
+      "phrase": "racket hit"
+    },
+    {
+      "name": "net-swish",
+      "phrase": "net swish"
+    },
+    {
+      "name": "goal-scored",
+      "phrase": "goal scored"
+    },
+    {
+      "name": "buzzer-beater",
+      "phrase": "buzzer beater"
+    },
+    {
+      "name": "starting-gun",
+      "phrase": "starting gun"
+    },
+    {
+      "name": "lane-splash",
+      "phrase": "lane splash"
+    },
+    {
+      "name": "puck-slap",
+      "phrase": "puck slap"
+    },
+    {
+      "name": "hoop-rattle",
+      "phrase": "hoop rattle"
+    },
+    {
+      "name": "tackle",
+      "phrase": "tackle"
+    },
+    {
+      "name": "crowd-roar",
+      "phrase": "crowd roar"
+    },
+    {
+      "name": "referee-call",
+      "phrase": "referee call"
+    },
+    {
+      "name": "foul",
+      "phrase": "foul"
+    },
+    {
+      "name": "penalty",
+      "phrase": "penalty"
+    },
+    {
+      "name": "timeout",
+      "phrase": "timeout"
+    },
+    {
+      "name": "substitution",
+      "phrase": "substitution"
+    },
+    {
+      "name": "scoreboard-update",
+      "phrase": "scoreboard update"
+    },
+    {
+      "name": "lap-complete",
+      "phrase": "lap complete"
+    },
+    {
+      "name": "finish-line",
+      "phrase": "finish line"
+    },
+    {
+      "name": "medal-ceremony",
+      "phrase": "medal ceremony"
+    }
+  ]
+}

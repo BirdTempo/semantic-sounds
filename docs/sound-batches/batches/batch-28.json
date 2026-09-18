@@ -1,0 +1,103 @@
+{
+  "batch": "batch-28",
+  "category": "progress",
+  "outputFile": "src/library/sounds/progress-2.json",
+  "phrases": [
+    {
+      "name": "streak-broken",
+      "phrase": "streak broken"
+    },
+    {
+      "name": "rank-up",
+      "phrase": "rank up"
+    },
+    {
+      "name": "rank-down",
+      "phrase": "rank down"
+    },
+    {
+      "name": "badge-earned",
+      "phrase": "badge earned"
+    },
+    {
+      "name": "quest-complete",
+      "phrase": "quest complete"
+    },
+    {
+      "name": "task-started",
+      "phrase": "task started"
+    },
+    {
+      "name": "task-failed",
+      "phrase": "task failed"
+    },
+    {
+      "name": "checklist-item",
+      "phrase": "checklist item"
+    },
+    {
+      "name": "all-done",
+      "phrase": "all done"
+    },
+    {
+      "name": "queue-advanced",
+      "phrase": "queue advanced"
+    },
+    {
+      "name": "queue-empty",
+      "phrase": "queue empty"
+    },
+    {
+      "name": "batch-complete",
+      "phrase": "batch complete"
+    },
+    {
+      "name": "render-complete",
+      "phrase": "render complete"
+    },
+    {
+      "name": "export-complete",
+      "phrase": "export complete"
+    },
+    {
+      "name": "import-complete",
+      "phrase": "import complete"
+    },
+    {
+      "name": "scan-complete",
+      "phrase": "scan complete"
+    },
+    {
+      "name": "build-passed",
+      "phrase": "build passed"
+    },
+    {
+      "name": "build-failed",
+      "phrase": "build failed"
+    },
+    {
+      "name": "test-passed",
+      "phrase": "test passed"
+    },
+    {
+      "name": "test-failed",
+      "phrase": "test failed"
+    },
+    {
+      "name": "deploy-start",
+      "phrase": "deploy start"
+    },
+    {
+      "name": "deploy-success",
+      "phrase": "deploy success"
+    },
+    {
+      "name": "deploy-failed",
+      "phrase": "deploy failed"
+    },
+    {
+      "name": "rollback",
+      "phrase": "rollback"
+    }
+  ]
+}

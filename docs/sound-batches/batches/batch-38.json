@@ -1,0 +1,91 @@
+{
+  "batch": "batch-38",
+  "category": "timers-alarms",
+  "outputFile": "src/library/sounds/timers-alarms-2.json",
+  "phrases": [
+    {
+      "name": "urgent-alarm",
+      "phrase": "urgent alarm"
+    },
+    {
+      "name": "alarm-dismissed",
+      "phrase": "alarm dismissed"
+    },
+    {
+      "name": "alarm-snoozed-again",
+      "phrase": "alarm snoozed again"
+    },
+    {
+      "name": "hourly-chime",
+      "phrase": "hourly chime"
+    },
+    {
+      "name": "quarter-hour",
+      "phrase": "quarter hour"
+    },
+    {
+      "name": "half-hour",
+      "phrase": "half hour"
+    },
+    {
+      "name": "grandfather-clock",
+      "phrase": "grandfather clock"
+    },
+    {
+      "name": "cuckoo",
+      "phrase": "cuckoo"
+    },
+    {
+      "name": "egg-timer",
+      "phrase": "egg timer"
+    },
+    {
+      "name": "oven-timer",
+      "phrase": "oven timer"
+    },
+    {
+      "name": "tea-ready",
+      "phrase": "tea ready"
+    },
+    {
+      "name": "laundry-done",
+      "phrase": "laundry done"
+    },
+    {
+      "name": "meeting-starting",
+      "phrase": "meeting starting"
+    },
+    {
+      "name": "meeting-ending",
+      "phrase": "meeting ending"
+    },
+    {
+      "name": "deadline-near",
+      "phrase": "deadline near"
+    },
+    {
+      "name": "time-up",
+      "phrase": "time up"
+    },
+    {
+      "name": "overtime",
+      "phrase": "overtime"
+    },
+    {
+      "name": "late-warning",
+      "phrase": "late warning"
+    },
+    {
+      "name": "schedule-conflict",
+      "phrase": "schedule conflict"
+    },
+    {
+      "name": "appointment-reminder",
+      "phrase": "appointment reminder"
+    },
+    {
+      "name": "medication-reminder",
+      "phrase": "medication reminder"
+    }
+  ]
+}

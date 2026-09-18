@@ -1,0 +1,71 @@
+{
+  "media-controls": [
+    "play", "pause", "stop playback", "next track", "previous track",
+    "fast forward", "rewind", "seek", "shuffle on", "shuffle off", "repeat on",
+    "repeat off", "volume up", "volume down", "mute audio", "unmute audio",
+    "record start", "record stop", "live start", "live end", "stream connect",
+    "stream drop", "subtitle on", "subtitle off", "fullscreen enter",
+    "fullscreen exit", "picture in picture", "cast connect", "cast disconnect",
+    "playlist add", "playlist remove", "queue next", "like track", "skip ad",
+    "chapter skip", "speed up playback", "slow down playback", "loop section",
+    "bookmark moment", "eject"
+  ],
+  "nature": [
+    "water drop", "dripping tap", "stream flow", "river rush", "waterfall",
+    "ocean wave", "gentle surf", "tide pull", "bubbling", "splash",
+    "deep splash", "rain start", "light rain", "heavy rain", "rain on window",
+    "distant thunder", "close thunder", "lightning crack", "wind gust",
+    "soft breeze", "howling wind", "rustling leaves", "falling leaf",
+    "snapping twig", "tree creak", "forest ambience", "crackling fire",
+    "campfire pop", "ember glow", "gentle flame", "earth rumble", "rock slide",
+    "pebble drop", "sand shift", "cave drip", "echo in cave", "snow crunch",
+    "ice crack", "icicle drop", "frost forming", "dawn chorus", "night ambience",
+    "reed whisper", "bee hum", "butterfly flutter", "grass sway", "desert wind",
+    "avalanche", "geyser burst", "volcano rumble", "mist settle", "dew drop",
+    "moss step", "root growth", "seed sprout"
+  ],
+  "weather": [
+    "sunrise", "sunset", "clear sky", "cloud cover", "temperature rise",
+    "temperature drop", "heat haze", "cold snap", "humidity rise",
+    "storm approaching", "storm passing", "hail", "sleet", "snowfall",
+    "blizzard", "fog roll in", "fog lift", "rainbow", "drizzle", "downpour",
+    "hurricane warning", "tornado siren", "flood warning", "air quality alert",
+    "pollen high", "uv warning", "barometric drop", "first frost", "thaw",
+    "season change"
+  ],
+  "mechanical": [
+    "switch flip", "toggle lever", "button press", "dial turn", "knob click",
+    "ratchet", "gear engage", "gear grind", "motor start", "motor stop",
+    "engine idle", "hydraulic hiss", "valve open", "valve close",
+    "piston stroke", "spring release", "latch close", "latch open",
+    "bolt slide", "lock engage", "lock release", "hinge creak", "door slam",
+    "drawer slide", "zipper", "velcro", "clasp snap", "clamp tighten",
+    "screw turn", "drill", "hammer strike", "saw cut", "sand paper",
+    "chain rattle", "pulley lift", "conveyor move", "robot arm", "servo move",
+    "fan spin up", "fan spin down", "pump cycle", "compressor kick",
+    "steam release", "pressure build", "metal clang", "metal scrape", "rivet",
+    "weld spark", "machine hum", "belt slip"
+  ],
+  "transport": [
+    "car start", "car horn", "car door", "indicator tick", "seatbelt click",
+    "brake squeal", "tire screech", "gear shift", "reverse beep",
+    "parking sensor", "ev whine", "fuel pump", "train approach", "train horn",
+    "rail clack", "station chime", "doors closing", "platform announcement",
+    "tram bell", "subway brake", "plane takeoff", "plane landing",
+    "cabin chime", "seatbelt sign", "jet engine", "propeller", "helicopter",
+    "boat horn", "sail flap", "oar splash", "anchor drop", "bike bell",
+    "bike gear", "skateboard", "scooter", "elevator arrive", "elevator move",
+    "escalator", "crosswalk beep", "traffic light change"
+  ],
+  "smart-home": [
+    "doorbell", "door chime", "smart lock", "door open alert", "window open",
+    "motion detected", "camera record", "alarm armed", "alarm disarmed",
+    "intruder alert", "smoke detector", "carbon alarm", "leak detected",
+    "light on", "light off", "dim up", "dim down", "scene activated",
+    "thermostat up", "thermostat down", "heating on", "cooling on", "fan speed",
+    "air purifier", "humidifier", "blinds open", "blinds close", "garage open",
+    "garage close", "sprinkler start", "robot vacuum start", "robot vacuum done",
+    "washer done", "dryer done", "dishwasher done", "fridge door",
+    "kettle boiled", "coffee ready", "device paired", "device offline"
+  ]
+}

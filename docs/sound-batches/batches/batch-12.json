@@ -1,0 +1,107 @@
+{
+  "batch": "batch-12",
+  "category": "human-body",
+  "outputFile": "src/library/sounds/human-body.json",
+  "phrases": [
+    {
+      "name": "footstep-soft",
+      "phrase": "footstep soft"
+    },
+    {
+      "name": "footstep-hard",
+      "phrase": "footstep hard"
+    },
+    {
+      "name": "clap-single",
+      "phrase": "clap single"
+    },
+    {
+      "name": "clap-double",
+      "phrase": "clap double"
+    },
+    {
+      "name": "finger-snap",
+      "phrase": "finger snap"
+    },
+    {
+      "name": "knuckle-crack",
+      "phrase": "knuckle crack"
+    },
+    {
+      "name": "cough",
+      "phrase": "cough"
+    },
+    {
+      "name": "sneeze",
+      "phrase": "sneeze"
+    },
+    {
+      "name": "yawn",
+      "phrase": "yawn"
+    },
+    {
+      "name": "sigh",
+      "phrase": "sigh"
+    },
+    {
+      "name": "sharp-inhale",
+      "phrase": "sharp inhale"
+    },
+    {
+      "name": "hum",
+      "phrase": "hum"
+    },
+    {
+      "name": "whistle-short",
+      "phrase": "whistle short"
+    },
+    {
+      "name": "whistle-tune",
+      "phrase": "whistle tune"
+    },
+    {
+      "name": "throat-clear",
+      "phrase": "throat clear"
+    },
+    {
+      "name": "sip",
+      "phrase": "sip"
+    },
+    {
+      "name": "swallow",
+      "phrase": "swallow"
+    },
+    {
+      "name": "chew",
+      "phrase": "chew"
+    },
+    {
+      "name": "belly-laugh",
+      "phrase": "belly laugh"
+    },
+    {
+      "name": "giggle",
+      "phrase": "giggle"
+    },
+    {
+      "name": "shush",
+      "phrase": "shush"
+    },
+    {
+      "name": "kiss",
+      "phrase": "kiss"
+    },
+    {
+      "name": "heart-thump",
+      "phrase": "heart thump"
+    },
+    {
+      "name": "stomach-rumble",
+      "phrase": "stomach rumble"
+    },
+    {
+      "name": "teeth-chatter",
+      "phrase": "teeth chatter"
+    }
+  ]
+}

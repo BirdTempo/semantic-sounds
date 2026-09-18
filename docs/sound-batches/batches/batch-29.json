@@ -1,0 +1,107 @@
+{
+  "batch": "batch-29",
+  "category": "science-space",
+  "outputFile": "src/library/sounds/science-space.json",
+  "phrases": [
+    {
+      "name": "rocket-launch",
+      "phrase": "rocket launch"
+    },
+    {
+      "name": "engine-burn",
+      "phrase": "engine burn"
+    },
+    {
+      "name": "orbit-insertion",
+      "phrase": "orbit insertion"
+    },
+    {
+      "name": "docking",
+      "phrase": "docking"
+    },
+    {
+      "name": "airlock",
+      "phrase": "airlock"
+    },
+    {
+      "name": "space-beacon",
+      "phrase": "space beacon"
+    },
+    {
+      "name": "radar-sweep",
+      "phrase": "radar sweep"
+    },
+    {
+      "name": "sonar-ping",
+      "phrase": "sonar ping"
+    },
+    {
+      "name": "satellite-signal",
+      "phrase": "satellite signal"
+    },
+    {
+      "name": "telemetry",
+      "phrase": "telemetry"
+    },
+    {
+      "name": "geiger-click",
+      "phrase": "geiger click"
+    },
+    {
+      "name": "particle-hit",
+      "phrase": "particle hit"
+    },
+    {
+      "name": "laser-pulse",
+      "phrase": "laser pulse"
+    },
+    {
+      "name": "energy-charge",
+      "phrase": "energy charge"
+    },
+    {
+      "name": "energy-discharge",
+      "phrase": "energy discharge"
+    },
+    {
+      "name": "force-field",
+      "phrase": "force field"
+    },
+    {
+      "name": "teleporter-hum",
+      "phrase": "teleporter hum"
+    },
+    {
+      "name": "warp-jump",
+      "phrase": "warp jump"
+    },
+    {
+      "name": "alien-signal",
+      "phrase": "alien signal"
+    },
+    {
+      "name": "probe-deploy",
+      "phrase": "probe deploy"
+    },
+    {
+      "name": "sample-collected",
+      "phrase": "sample collected"
+    },
+    {
+      "name": "microscope-focus",
+      "phrase": "microscope focus"
+    },
+    {
+      "name": "centrifuge",
+      "phrase": "centrifuge"
+    },
+    {
+      "name": "reactor-hum",
+      "phrase": "reactor hum"
+    },
+    {
+      "name": "countdown-launch",
+      "phrase": "countdown launch"
+    }
+  ]
+}

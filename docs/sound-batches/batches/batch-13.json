@@ -1,0 +1,107 @@
+{
+  "batch": "batch-13",
+  "category": "mechanical",
+  "outputFile": "src/library/sounds/mechanical-1.json",
+  "phrases": [
+    {
+      "name": "switch-flip",
+      "phrase": "switch flip"
+    },
+    {
+      "name": "toggle-lever",
+      "phrase": "toggle lever"
+    },
+    {
+      "name": "button-press",
+      "phrase": "button press"
+    },
+    {
+      "name": "dial-turn",
+      "phrase": "dial turn"
+    },
+    {
+      "name": "knob-click",
+      "phrase": "knob click"
+    },
+    {
+      "name": "ratchet",
+      "phrase": "ratchet"
+    },
+    {
+      "name": "gear-engage",
+      "phrase": "gear engage"
+    },
+    {
+      "name": "gear-grind",
+      "phrase": "gear grind"
+    },
+    {
+      "name": "motor-start",
+      "phrase": "motor start"
+    },
+    {
+      "name": "motor-stop",
+      "phrase": "motor stop"
+    },
+    {
+      "name": "engine-idle",
+      "phrase": "engine idle"
+    },
+    {
+      "name": "hydraulic-hiss",
+      "phrase": "hydraulic hiss"
+    },
+    {
+      "name": "valve-open",
+      "phrase": "valve open"
+    },
+    {
+      "name": "valve-close",
+      "phrase": "valve close"
+    },
+    {
+      "name": "piston-stroke",
+      "phrase": "piston stroke"
+    },
+    {
+      "name": "spring-release",
+      "phrase": "spring release"
+    },
+    {
+      "name": "latch-close",
+      "phrase": "latch close"
+    },
+    {
+      "name": "latch-open",
+      "phrase": "latch open"
+    },
+    {
+      "name": "bolt-slide",
+      "phrase": "bolt slide"
+    },
+    {
+      "name": "lock-engage",
+      "phrase": "lock engage"
+    },
+    {
+      "name": "lock-release",
+      "phrase": "lock release"
+    },
+    {
+      "name": "hinge-creak",
+      "phrase": "hinge creak"
+    },
+    {
+      "name": "door-slam",
+      "phrase": "door slam"
+    },
+    {
+      "name": "drawer-slide",
+      "phrase": "drawer slide"
+    },
+    {
+      "name": "zipper",
+      "phrase": "zipper"
+    }
+  ]
+}

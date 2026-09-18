@@ -1,0 +1,115 @@
+{
+  "batch": "batch-23",
+  "category": "nature",
+  "outputFile": "src/library/sounds/nature-2.json",
+  "phrases": [
+    {
+      "name": "ember-glow",
+      "phrase": "ember glow"
+    },
+    {
+      "name": "gentle-flame",
+      "phrase": "gentle flame"
+    },
+    {
+      "name": "earth-rumble",
+      "phrase": "earth rumble"
+    },
+    {
+      "name": "rock-slide",
+      "phrase": "rock slide"
+    },
+    {
+      "name": "pebble-drop",
+      "phrase": "pebble drop"
+    },
+    {
+      "name": "sand-shift",
+      "phrase": "sand shift"
+    },
+    {
+      "name": "cave-drip",
+      "phrase": "cave drip"
+    },
+    {
+      "name": "echo-in-cave",
+      "phrase": "echo in cave"
+    },
+    {
+      "name": "snow-crunch",
+      "phrase": "snow crunch"
+    },
+    {
+      "name": "ice-crack",
+      "phrase": "ice crack"
+    },
+    {
+      "name": "icicle-drop",
+      "phrase": "icicle drop"
+    },
+    {
+      "name": "frost-forming",
+      "phrase": "frost forming"
+    },
+    {
+      "name": "dawn-chorus",
+      "phrase": "dawn chorus"
+    },
+    {
+      "name": "night-ambience",
+      "phrase": "night ambience"
+    },
+    {
+      "name": "reed-whisper",
+      "phrase": "reed whisper"
+    },
+    {
+      "name": "bee-hum",
+      "phrase": "bee hum"
+    },
+    {
+      "name": "butterfly-flutter",
+      "phrase": "butterfly flutter"
+    },
+    {
+      "name": "grass-sway",
+      "phrase": "grass sway"
+    },
+    {
+      "name": "desert-wind",
+      "phrase": "desert wind"
+    },
+    {
+      "name": "avalanche",
+      "phrase": "avalanche"
+    },
+    {
+      "name": "geyser-burst",
+      "phrase": "geyser burst"
+    },
+    {
+      "name": "volcano-rumble",
+      "phrase": "volcano rumble"
+    },
+    {
+      "name": "mist-settle",
+      "phrase": "mist settle"
+    },
+    {
+      "name": "dew-drop",
+      "phrase": "dew drop"
+    },
+    {
+      "name": "moss-step",
+      "phrase": "moss step"
+    },
+    {
+      "name": "root-growth",
+      "phrase": "root growth"
+    },
+    {
+      "name": "seed-sprout",
+      "phrase": "seed sprout"
+    }
+  ]
+}

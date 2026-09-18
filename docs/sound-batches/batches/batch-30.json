@@ -1,0 +1,87 @@
+{
+  "batch": "batch-30",
+  "category": "smart-home",
+  "outputFile": "src/library/sounds/smart-home-1.json",
+  "phrases": [
+    {
+      "name": "doorbell",
+      "phrase": "doorbell"
+    },
+    {
+      "name": "door-chime",
+      "phrase": "door chime"
+    },
+    {
+      "name": "smart-lock",
+      "phrase": "smart lock"
+    },
+    {
+      "name": "door-open-alert",
+      "phrase": "door open alert"
+    },
+    {
+      "name": "window-open",
+      "phrase": "window open"
+    },
+    {
+      "name": "motion-detected",
+      "phrase": "motion detected"
+    },
+    {
+      "name": "camera-record",
+      "phrase": "camera record"
+    },
+    {
+      "name": "alarm-armed",
+      "phrase": "alarm armed"
+    },
+    {
+      "name": "alarm-disarmed",
+      "phrase": "alarm disarmed"
+    },
+    {
+      "name": "intruder-alert",
+      "phrase": "intruder alert"
+    },
+    {
+      "name": "smoke-detector",
+      "phrase": "smoke detector"
+    },
+    {
+      "name": "carbon-alarm",
+      "phrase": "carbon alarm"
+    },
+    {
+      "name": "leak-detected",
+      "phrase": "leak detected"
+    },
+    {
+      "name": "light-on",
+      "phrase": "light on"
+    },
+    {
+      "name": "light-off",
+      "phrase": "light off"
+    },
+    {
+      "name": "dim-up",
+      "phrase": "dim up"
+    },
+    {
+      "name": "dim-down",
+      "phrase": "dim down"
+    },
+    {
+      "name": "scene-activated",
+      "phrase": "scene activated"
+    },
+    {
+      "name": "thermostat-up",
+      "phrase": "thermostat up"
+    },
+    {
+      "name": "thermostat-down",
+      "phrase": "thermostat down"
+    }
+  ]
+}

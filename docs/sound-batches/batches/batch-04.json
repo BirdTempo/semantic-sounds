@@ -1,0 +1,99 @@
+{
+  "batch": "batch-04",
+  "category": "emotion-mood",
+  "outputFile": "src/library/sounds/emotion-mood-1.json",
+  "phrases": [
+    {
+      "name": "calm-settle",
+      "phrase": "calm settle"
+    },
+    {
+      "name": "deep-calm",
+      "phrase": "deep calm"
+    },
+    {
+      "name": "gentle-joy",
+      "phrase": "gentle joy"
+    },
+    {
+      "name": "bright-joy",
+      "phrase": "bright joy"
+    },
+    {
+      "name": "elation",
+      "phrase": "elation"
+    },
+    {
+      "name": "triumph",
+      "phrase": "triumph"
+    },
+    {
+      "name": "relief",
+      "phrase": "relief"
+    },
+    {
+      "name": "contentment",
+      "phrase": "contentment"
+    },
+    {
+      "name": "warmth",
+      "phrase": "warmth"
+    },
+    {
+      "name": "affection",
+      "phrase": "affection"
+    },
+    {
+      "name": "tenderness",
+      "phrase": "tenderness"
+    },
+    {
+      "name": "nostalgia",
+      "phrase": "nostalgia"
+    },
+    {
+      "name": "longing",
+      "phrase": "longing"
+    },
+    {
+      "name": "melancholy",
+      "phrase": "melancholy"
+    },
+    {
+      "name": "sadness",
+      "phrase": "sadness"
+    },
+    {
+      "name": "grief",
+      "phrase": "grief"
+    },
+    {
+      "name": "loneliness",
+      "phrase": "loneliness"
+    },
+    {
+      "name": "disappointment",
+      "phrase": "disappointment"
+    },
+    {
+      "name": "worry",
+      "phrase": "worry"
+    },
+    {
+      "name": "unease",
+      "phrase": "unease"
+    },
+    {
+      "name": "tension-rise",
+      "phrase": "tension rise"
+    },
+    {
+      "name": "suspense",
+      "phrase": "suspense"
+    },
+    {
+      "name": "dread",
+      "phrase": "dread"
+    }
+  ]
+}

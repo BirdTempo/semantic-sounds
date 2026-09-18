@@ -1,0 +1,75 @@
+{
+  "batch": "batch-26",
+  "category": "office-productivity",
+  "outputFile": "src/library/sounds/office-productivity-2.json",
+  "phrases": [
+    {
+      "name": "meeting-join",
+      "phrase": "meeting join"
+    },
+    {
+      "name": "meeting-leave",
+      "phrase": "meeting leave"
+    },
+    {
+      "name": "mic-on",
+      "phrase": "mic on"
+    },
+    {
+      "name": "mic-off",
+      "phrase": "mic off"
+    },
+    {
+      "name": "camera-on",
+      "phrase": "camera on"
+    },
+    {
+      "name": "camera-off",
+      "phrase": "camera off"
+    },
+    {
+      "name": "screen-share-start",
+      "phrase": "screen share start"
+    },
+    {
+      "name": "screen-share-end",
+      "phrase": "screen share end"
+    },
+    {
+      "name": "hand-raised",
+      "phrase": "hand raised"
+    },
+    {
+      "name": "whisper-note",
+      "phrase": "whisper note"
+    },
+    {
+      "name": "calendar-block",
+      "phrase": "calendar block"
+    },
+    {
+      "name": "task-assigned",
+      "phrase": "task assigned"
+    },
+    {
+      "name": "deadline-set",
+      "phrase": "deadline set"
+    },
+    {
+      "name": "document-signed",
+      "phrase": "document signed"
+    },
+    {
+      "name": "contract-sealed",
+      "phrase": "contract sealed"
+    },
+    {
+      "name": "badge-scan",
+      "phrase": "badge scan"
+    },
+    {
+      "name": "clock-in",
+      "phrase": "clock in"
+    }
+  ]
+}

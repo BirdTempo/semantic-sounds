@@ -1,0 +1,91 @@
+{
+  "batch": "batch-45",
+  "category": "ui-feedback",
+  "outputFile": "src/library/sounds/ui-feedback-3.json",
+  "phrases": [
+    {
+      "name": "search-start",
+      "phrase": "search start"
+    },
+    {
+      "name": "search-results",
+      "phrase": "search results"
+    },
+    {
+      "name": "filter-applied",
+      "phrase": "filter applied"
+    },
+    {
+      "name": "filter-cleared",
+      "phrase": "filter cleared"
+    },
+    {
+      "name": "sort-ascending",
+      "phrase": "sort ascending"
+    },
+    {
+      "name": "sort-descending",
+      "phrase": "sort descending"
+    },
+    {
+      "name": "pin-item",
+      "phrase": "pin item"
+    },
+    {
+      "name": "unpin-item",
+      "phrase": "unpin item"
+    },
+    {
+      "name": "star-item",
+      "phrase": "star item"
+    },
+    {
+      "name": "unstar-item",
+      "phrase": "unstar item"
+    },
+    {
+      "name": "archive",
+      "phrase": "archive"
+    },
+    {
+      "name": "restore",
+      "phrase": "restore"
+    },
+    {
+      "name": "duplicate-item",
+      "phrase": "duplicate item"
+    },
+    {
+      "name": "rename",
+      "phrase": "rename"
+    },
+    {
+      "name": "edit-start",
+      "phrase": "edit start"
+    },
+    {
+      "name": "edit-end",
+      "phrase": "edit end"
+    },
+    {
+      "name": "zoom-in",
+      "phrase": "zoom in"
+    },
+    {
+      "name": "zoom-out",
+      "phrase": "zoom out"
+    },
+    {
+      "name": "reset-view",
+      "phrase": "reset view"
+    },
+    {
+      "name": "select-all",
+      "phrase": "select all"
+    },
+    {
+      "name": "clear-all",
+      "phrase": "clear all"
+    }
+  ]
+}

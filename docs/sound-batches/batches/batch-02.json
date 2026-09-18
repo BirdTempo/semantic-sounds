@@ -1,0 +1,107 @@
+{
+  "batch": "batch-02",
+  "category": "abstract-texture",
+  "outputFile": "src/library/sounds/abstract-texture-2.json",
+  "phrases": [
+    {
+      "name": "sweep-up",
+      "phrase": "sweep up"
+    },
+    {
+      "name": "sweep-down",
+      "phrase": "sweep down"
+    },
+    {
+      "name": "drone-low",
+      "phrase": "drone low"
+    },
+    {
+      "name": "drone-mid",
+      "phrase": "drone mid"
+    },
+    {
+      "name": "pad-swell",
+      "phrase": "pad swell"
+    },
+    {
+      "name": "pad-fade",
+      "phrase": "pad fade"
+    },
+    {
+      "name": "pulse-slow",
+      "phrase": "pulse slow"
+    },
+    {
+      "name": "pulse-fast",
+      "phrase": "pulse fast"
+    },
+    {
+      "name": "throb",
+      "phrase": "throb"
+    },
+    {
+      "name": "flutter",
+      "phrase": "flutter"
+    },
+    {
+      "name": "tremolo",
+      "phrase": "tremolo"
+    },
+    {
+      "name": "warble",
+      "phrase": "warble"
+    },
+    {
+      "name": "wobble",
+      "phrase": "wobble"
+    },
+    {
+      "name": "glitch",
+      "phrase": "glitch"
+    },
+    {
+      "name": "stutter",
+      "phrase": "stutter"
+    },
+    {
+      "name": "bit-crush",
+      "phrase": "bit crush"
+    },
+    {
+      "name": "static-burst",
+      "phrase": "static burst"
+    },
+    {
+      "name": "noise-wash",
+      "phrase": "noise wash"
+    },
+    {
+      "name": "air-hiss",
+      "phrase": "air hiss"
+    },
+    {
+      "name": "breath-tone",
+      "phrase": "breath tone"
+    },
+    {
+      "name": "bell-tone",
+      "phrase": "bell tone"
+    },
+    {
+      "name": "glass-tone",
+      "phrase": "glass tone"
+    },
+    {
+      "name": "wood-tone",
+      "phrase": "wood tone"
+    },
+    {
+      "name": "metal-tone",
+      "phrase": "metal tone"
+    },
+    {
+      "name": "sub-drop",
+      "phrase": "sub drop"
+    }
+  ]
+}

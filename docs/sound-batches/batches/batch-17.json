@@ -1,0 +1,115 @@
+{
+  "batch": "batch-17",
+  "category": "messages-notifications",
+  "outputFile": "src/library/sounds/messages-notifications-1.json",
+  "phrases": [
+    {
+      "name": "message-sent",
+      "phrase": "message sent"
+    },
+    {
+      "name": "message-failed",
+      "phrase": "message failed"
+    },
+    {
+      "name": "typing-indicator",
+      "phrase": "typing indicator"
+    },
+    {
+      "name": "read-receipt",
+      "phrase": "read receipt"
+    },
+    {
+      "name": "new-chat",
+      "phrase": "new chat"
+    },
+    {
+      "name": "group-message",
+      "phrase": "group message"
+    },
+    {
+      "name": "reply",
+      "phrase": "reply"
+    },
+    {
+      "name": "thread-update",
+      "phrase": "thread update"
+    },
+    {
+      "name": "reaction-received",
+      "phrase": "reaction received"
+    },
+    {
+      "name": "emoji-sent",
+      "phrase": "emoji sent"
+    },
+    {
+      "name": "voice-message",
+      "phrase": "voice message"
+    },
+    {
+      "name": "video-message",
+      "phrase": "video message"
+    },
+    {
+      "name": "attachment-received",
+      "phrase": "attachment received"
+    },
+    {
+      "name": "email-arrived",
+      "phrase": "email arrived"
+    },
+    {
+      "name": "email-sent",
+      "phrase": "email sent"
+    },
+    {
+      "name": "inbox-empty",
+      "phrase": "inbox empty"
+    },
+    {
+      "name": "spam-filtered",
+      "phrase": "spam filtered"
+    },
+    {
+      "name": "newsletter",
+      "phrase": "newsletter"
+    },
+    {
+      "name": "invitation-received",
+      "phrase": "invitation received"
+    },
+    {
+      "name": "invitation-accepted",
+      "phrase": "invitation accepted"
+    },
+    {
+      "name": "invitation-declined",
+      "phrase": "invitation declined"
+    },
+    {
+      "name": "friend-request",
+      "phrase": "friend request"
+    },
+    {
+      "name": "follow-notification",
+      "phrase": "follow notification"
+    },
+    {
+      "name": "comment-received",
+      "phrase": "comment received"
+    },
+    {
+      "name": "mention-in-comment",
+      "phrase": "mention in comment"
+    },
+    {
+      "name": "badge-increment",
+      "phrase": "badge increment"
+    },
+    {
+      "name": "badge-cleared",
+      "phrase": "badge cleared"
+    }
+  ]
+}

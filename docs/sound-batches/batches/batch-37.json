@@ -1,0 +1,95 @@
+{
+  "batch": "batch-37",
+  "category": "timers-alarms",
+  "outputFile": "src/library/sounds/timers-alarms-1.json",
+  "phrases": [
+    {
+      "name": "timer-start",
+      "phrase": "timer start"
+    },
+    {
+      "name": "timer-pause",
+      "phrase": "timer pause"
+    },
+    {
+      "name": "timer-resume",
+      "phrase": "timer resume"
+    },
+    {
+      "name": "timer-reset",
+      "phrase": "timer reset"
+    },
+    {
+      "name": "stopwatch-start",
+      "phrase": "stopwatch start"
+    },
+    {
+      "name": "stopwatch-lap",
+      "phrase": "stopwatch lap"
+    },
+    {
+      "name": "stopwatch-stop",
+      "phrase": "stopwatch stop"
+    },
+    {
+      "name": "countdown-three",
+      "phrase": "countdown three"
+    },
+    {
+      "name": "countdown-two",
+      "phrase": "countdown two"
+    },
+    {
+      "name": "countdown-one",
+      "phrase": "countdown one"
+    },
+    {
+      "name": "countdown-zero",
+      "phrase": "countdown zero"
+    },
+    {
+      "name": "final-second",
+      "phrase": "final second"
+    },
+    {
+      "name": "halfway-bell",
+      "phrase": "halfway bell"
+    },
+    {
+      "name": "interval-bell",
+      "phrase": "interval bell"
+    },
+    {
+      "name": "round-start",
+      "phrase": "round start"
+    },
+    {
+      "name": "round-end",
+      "phrase": "round end"
+    },
+    {
+      "name": "rest-period",
+      "phrase": "rest period"
+    },
+    {
+      "name": "work-period",
+      "phrase": "work period"
+    },
+    {
+      "name": "pomodoro-start",
+      "phrase": "pomodoro start"
+    },
+    {
+      "name": "pomodoro-break",
+      "phrase": "pomodoro break"
+    },
+    {
+      "name": "wake-alarm",
+      "phrase": "wake alarm"
+    },
+    {
+      "name": "gentle-wake",
+      "phrase": "gentle wake"
+    }
+  ]
+}

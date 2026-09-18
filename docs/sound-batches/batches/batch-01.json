@@ -1,0 +1,107 @@
+{
+  "batch": "batch-01",
+  "category": "abstract-texture",
+  "outputFile": "src/library/sounds/abstract-texture-1.json",
+  "phrases": [
+    {
+      "name": "blip",
+      "phrase": "blip"
+    },
+    {
+      "name": "bleep",
+      "phrase": "bleep"
+    },
+    {
+      "name": "bloop",
+      "phrase": "bloop"
+    },
+    {
+      "name": "ping-short",
+      "phrase": "ping short"
+    },
+    {
+      "name": "pong",
+      "phrase": "pong"
+    },
+    {
+      "name": "tick-soft",
+      "phrase": "tick soft"
+    },
+    {
+      "name": "tock",
+      "phrase": "tock"
+    },
+    {
+      "name": "thud",
+      "phrase": "thud"
+    },
+    {
+      "name": "thunk",
+      "phrase": "thunk"
+    },
+    {
+      "name": "knock",
+      "phrase": "knock"
+    },
+    {
+      "name": "pop-soft",
+      "phrase": "pop soft"
+    },
+    {
+      "name": "click-dry",
+      "phrase": "click dry"
+    },
+    {
+      "name": "snap-dry",
+      "phrase": "snap dry"
+    },
+    {
+      "name": "tap-light",
+      "phrase": "tap light"
+    },
+    {
+      "name": "brush",
+      "phrase": "brush"
+    },
+    {
+      "name": "scrape-light",
+      "phrase": "scrape light"
+    },
+    {
+      "name": "grain",
+      "phrase": "grain"
+    },
+    {
+      "name": "granular-wash",
+      "phrase": "granular wash"
+    },
+    {
+      "name": "shimmer",
+      "phrase": "shimmer"
+    },
+    {
+      "name": "sparkle",
+      "phrase": "sparkle"
+    },
+    {
+      "name": "glimmer",
+      "phrase": "glimmer"
+    },
+    {
+      "name": "twinkle",
+      "phrase": "twinkle"
+    },
+    {
+      "name": "riser-short",
+      "phrase": "riser short"
+    },
+    {
+      "name": "riser-long",
+      "phrase": "riser long"
+    },
+    {
+      "name": "faller",
+      "phrase": "faller"
+    }
+  ]
+}

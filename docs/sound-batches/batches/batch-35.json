@@ -1,0 +1,107 @@
+{
+  "batch": "batch-35",
+  "category": "system-data",
+  "outputFile": "src/library/sounds/system-data-1.json",
+  "phrases": [
+    {
+      "name": "boot-up",
+      "phrase": "boot up"
+    },
+    {
+      "name": "shut-down",
+      "phrase": "shut down"
+    },
+    {
+      "name": "sleep-mode",
+      "phrase": "sleep mode"
+    },
+    {
+      "name": "wake-from-sleep",
+      "phrase": "wake from sleep"
+    },
+    {
+      "name": "restart",
+      "phrase": "restart"
+    },
+    {
+      "name": "login-success",
+      "phrase": "login success"
+    },
+    {
+      "name": "logout",
+      "phrase": "logout"
+    },
+    {
+      "name": "session-expired",
+      "phrase": "session expired"
+    },
+    {
+      "name": "connect",
+      "phrase": "connect"
+    },
+    {
+      "name": "disconnect",
+      "phrase": "disconnect"
+    },
+    {
+      "name": "reconnect",
+      "phrase": "reconnect"
+    },
+    {
+      "name": "network-found",
+      "phrase": "network found"
+    },
+    {
+      "name": "network-lost",
+      "phrase": "network lost"
+    },
+    {
+      "name": "wifi-connected",
+      "phrase": "wifi connected"
+    },
+    {
+      "name": "wifi-weak",
+      "phrase": "wifi weak"
+    },
+    {
+      "name": "bluetooth-pair",
+      "phrase": "bluetooth pair"
+    },
+    {
+      "name": "bluetooth-lost",
+      "phrase": "bluetooth lost"
+    },
+    {
+      "name": "usb-connect",
+      "phrase": "usb connect"
+    },
+    {
+      "name": "usb-eject",
+      "phrase": "usb eject"
+    },
+    {
+      "name": "battery-full",
+      "phrase": "battery full"
+    },
+    {
+      "name": "battery-low",
+      "phrase": "battery low"
+    },
+    {
+      "name": "battery-critical",
+      "phrase": "battery critical"
+    },
+    {
+      "name": "charging-start",
+      "phrase": "charging start"
+    },
+    {
+      "name": "charging-stop",
+      "phrase": "charging stop"
+    },
+    {
+      "name": "power-save",
+      "phrase": "power save"
+    }
+  ]
+}

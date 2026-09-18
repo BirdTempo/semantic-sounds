@@ -1,0 +1,87 @@
+{
+  "batch": "batch-41",
+  "category": "transport",
+  "outputFile": "src/library/sounds/transport-1.json",
+  "phrases": [
+    {
+      "name": "car-start",
+      "phrase": "car start"
+    },
+    {
+      "name": "car-horn",
+      "phrase": "car horn"
+    },
+    {
+      "name": "car-door",
+      "phrase": "car door"
+    },
+    {
+      "name": "indicator-tick",
+      "phrase": "indicator tick"
+    },
+    {
+      "name": "seatbelt-click",
+      "phrase": "seatbelt click"
+    },
+    {
+      "name": "brake-squeal",
+      "phrase": "brake squeal"
+    },
+    {
+      "name": "tire-screech",
+      "phrase": "tire screech"
+    },
+    {
+      "name": "gear-shift",
+      "phrase": "gear shift"
+    },
+    {
+      "name": "reverse-beep",
+      "phrase": "reverse beep"
+    },
+    {
+      "name": "parking-sensor",
+      "phrase": "parking sensor"
+    },
+    {
+      "name": "ev-whine",
+      "phrase": "ev whine"
+    },
+    {
+      "name": "fuel-pump",
+      "phrase": "fuel pump"
+    },
+    {
+      "name": "train-approach",
+      "phrase": "train approach"
+    },
+    {
+      "name": "train-horn",
+      "phrase": "train horn"
+    },
+    {
+      "name": "rail-clack",
+      "phrase": "rail clack"
+    },
+    {
+      "name": "station-chime",
+      "phrase": "station chime"
+    },
+    {
+      "name": "doors-closing",
+      "phrase": "doors closing"
+    },
+    {
+      "name": "platform-announcement",
+      "phrase": "platform announcement"
+    },
+    {
+      "name": "tram-bell",
+      "phrase": "tram bell"
+    },
+    {
+      "name": "subway-brake",
+      "phrase": "subway brake"
+    }
+  ]
+}

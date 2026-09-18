@@ -1,0 +1,278 @@
+[
+  {
+    "batch": "batch-01",
+    "category": "abstract-texture",
+    "outputFile": "src/library/sounds/abstract-texture-1.json",
+    "count": 25
+  },
+  {
+    "batch": "batch-02",
+    "category": "abstract-texture",
+    "outputFile": "src/library/sounds/abstract-texture-2.json",
+    "count": 25
+  },
+  {
+    "batch": "batch-03",
+    "category": "animals",
+    "outputFile": "src/library/sounds/animals.json",
+    "count": 30
+  },
+  {
+    "batch": "batch-04",
+    "category": "emotion-mood",
+    "outputFile": "src/library/sounds/emotion-mood-1.json",
+    "count": 23
+  },
+  {
+    "batch": "batch-05",
+    "category": "emotion-mood",
+    "outputFile": "src/library/sounds/emotion-mood-2.json",
+    "count": 22
+  },
+  {
+    "batch": "batch-06",
+    "category": "food-kitchen",
+    "outputFile": "src/library/sounds/food-kitchen-1.json",
+    "count": 18
+  },
+  {
+    "batch": "batch-07",
+    "category": "food-kitchen",
+    "outputFile": "src/library/sounds/food-kitchen-2.json",
+    "count": 17
+  },
+  {
+    "batch": "batch-08",
+    "category": "game",
+    "outputFile": "src/library/sounds/game-1.json",
+    "count": 22
+  },
+  {
+    "batch": "batch-09",
+    "category": "game",
+    "outputFile": "src/library/sounds/game-2.json",
+    "count": 22
+  },
+  {
+    "batch": "batch-10",
+    "category": "game",
+    "outputFile": "src/library/sounds/game-3.json",
+    "count": 20
+  },
+  {
+    "batch": "batch-11",
+    "category": "health-fitness",
+    "outputFile": "src/library/sounds/health-fitness.json",
+    "count": 30
+  },
+  {
+    "batch": "batch-12",
+    "category": "human-body",
+    "outputFile": "src/library/sounds/human-body.json",
+    "count": 25
+  },
+  {
+    "batch": "batch-13",
+    "category": "mechanical",
+    "outputFile": "src/library/sounds/mechanical-1.json",
+    "count": 25
+  },
+  {
+    "batch": "batch-14",
+    "category": "mechanical",
+    "outputFile": "src/library/sounds/mechanical-2.json",
+    "count": 25
+  },
+  {
+    "batch": "batch-15",
+    "category": "media-controls",
+    "outputFile": "src/library/sounds/media-controls-1.json",
+    "count": 20
+  },
+  {
+    "batch": "batch-16",
+    "category": "media-controls",
+    "outputFile": "src/library/sounds/media-controls-2.json",
+    "count": 20
+  },
+  {
+    "batch": "batch-17",
+    "category": "messages-notifications",
+    "outputFile": "src/library/sounds/messages-notifications-1.json",
+    "count": 27
+  },
+  {
+    "batch": "batch-18",
+    "category": "messages-notifications",
+    "outputFile": "src/library/sounds/messages-notifications-2.json",
+    "count": 27
+  },
+  {
+    "batch": "batch-19",
+    "category": "money-commerce",
+    "outputFile": "src/library/sounds/money-commerce-1.json",
+    "count": 18
+  },
+  {
+    "batch": "batch-20",
+    "category": "money-commerce",
+    "outputFile": "src/library/sounds/money-commerce-2.json",
+    "count": 17
+  },
+  {
+    "batch": "batch-21",
+    "category": "music-instrument",
+    "outputFile": "src/library/sounds/music-instrument.json",
+    "count": 30
+  },
+  {
+    "batch": "batch-22",
+    "category": "nature",
+    "outputFile": "src/library/sounds/nature-1.json",
+    "count": 28
+  },
+  {
+    "batch": "batch-23",
+    "category": "nature",
+    "outputFile": "src/library/sounds/nature-2.json",
+    "count": 27
+  },
+  {
+    "batch": "batch-24",
+    "category": "navigation-maps",
+    "outputFile": "src/library/sounds/navigation-maps.json",
+    "count": 25
+  },
+  {
+    "batch": "batch-25",
+    "category": "office-productivity",
+    "outputFile": "src/library/sounds/office-productivity-1.json",
+    "count": 18
+  },
+  {
+    "batch": "batch-26",
+    "category": "office-productivity",
+    "outputFile": "src/library/sounds/office-productivity-2.json",
+    "count": 17
+  },
+  {
+    "batch": "batch-27",
+    "category": "progress",
+    "outputFile": "src/library/sounds/progress-1.json",
+    "count": 24
+  },
+  {
+    "batch": "batch-28",
+    "category": "progress",
+    "outputFile": "src/library/sounds/progress-2.json",
+    "count": 24
+  },
+  {
+    "batch": "batch-29",
+    "category": "science-space",
+    "outputFile": "src/library/sounds/science-space.json",
+    "count": 25
+  },
+  {
+    "batch": "batch-30",
+    "category": "smart-home",
+    "outputFile": "src/library/sounds/smart-home-1.json",
+    "count": 20
+  },
+  {
+    "batch": "batch-31",
+    "category": "smart-home",
+    "outputFile": "src/library/sounds/smart-home-2.json",
+    "count": 20
+  },
+  {
+    "batch": "batch-32",
+    "category": "social",
+    "outputFile": "src/library/sounds/social-1.json",
+    "count": 18
+  },
+  {
+    "batch": "batch-33",
+    "category": "social",
+    "outputFile": "src/library/sounds/social-2.json",
+    "count": 17
+  },
+  {
+    "batch": "batch-34",
+    "category": "sports",
+    "outputFile": "src/library/sounds/sports.json",
+    "count": 25
+  },
+  {
+    "batch": "batch-35",
+    "category": "system-data",
+    "outputFile": "src/library/sounds/system-data-1.json",
+    "count": 25
+  },
+  {
+    "batch": "batch-36",
+    "category": "system-data",
+    "outputFile": "src/library/sounds/system-data-2.json",
+    "count": 25
+  },
+  {
+    "batch": "batch-37",
+    "category": "timers-alarms",
+    "outputFile": "src/library/sounds/timers-alarms-1.json",
+    "count": 22
+  },
+  {
+    "batch": "batch-38",
+    "category": "timers-alarms",
+    "outputFile": "src/library/sounds/timers-alarms-2.json",
+    "count": 21
+  },
+  {
+    "batch": "batch-39",
+    "category": "transitions",
+    "outputFile": "src/library/sounds/transitions-1.json",
+    "count": 24
+  },
+  {
+    "batch": "batch-40",
+    "category": "transitions",
+    "outputFile": "src/library/sounds/transitions-2.json",
+    "count": 24
+  },
+  {
+    "batch": "batch-41",
+    "category": "transport",
+    "outputFile": "src/library/sounds/transport-1.json",
+    "count": 20
+  },
+  {
+    "batch": "batch-42",
+    "category": "transport",
+    "outputFile": "src/library/sounds/transport-2.json",
+    "count": 20
+  },
+  {
+    "batch": "batch-43",
+    "category": "ui-feedback",
+    "outputFile": "src/library/sounds/ui-feedback-1.json",
+    "count": 21
+  },
+  {
+    "batch": "batch-44",
+    "category": "ui-feedback",
+    "outputFile": "src/library/sounds/ui-feedback-2.json",
+    "count": 21
+  },
+  {
+    "batch": "batch-45",
+    "category": "ui-feedback",
+    "outputFile": "src/library/sounds/ui-feedback-3.json",
+    "count": 21
+  },
+  {
+    "batch": "batch-46",
+    "category": "weather",
+    "outputFile": "src/library/sounds/weather.json",
+    "count": 30
+  }
+]

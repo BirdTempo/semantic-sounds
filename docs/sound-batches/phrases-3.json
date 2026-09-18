@@ -1,0 +1,65 @@
+{
+  "system-data": [
+    "boot up", "shut down", "sleep mode", "wake from sleep", "restart",
+    "login success", "logout", "session expired", "connect", "disconnect",
+    "reconnect", "network found", "network lost", "wifi connected", "wifi weak",
+    "bluetooth pair", "bluetooth lost", "usb connect", "usb eject",
+    "battery full", "battery low", "battery critical", "charging start",
+    "charging stop", "power save", "storage full", "memory warning",
+    "cache cleared", "file saved", "file deleted", "folder created",
+    "file moved", "file corrupt", "permission error", "access denied",
+    "firewall block", "virus found", "quarantine", "encryption on",
+    "decryption done", "key generated", "certificate valid",
+    "certificate expired", "database write", "query complete", "index rebuilt",
+    "server up", "server down", "latency spike", "data breach"
+  ],
+  "money-commerce": [
+    "coin drop", "cash register", "payment sent", "payment received",
+    "payment declined", "card tap", "card swipe", "card inserted", "pin entered",
+    "receipt printed", "purchase complete", "add to cart", "remove from cart",
+    "checkout start", "order placed", "order shipped", "order delivered",
+    "refund issued", "invoice sent", "bill due", "balance low", "deposit",
+    "withdrawal", "transfer complete", "subscription renewed",
+    "subscription cancelled", "discount applied", "coupon invalid", "price drop",
+    "bid placed", "auction won", "auction lost", "tip jar", "donation received",
+    "wallet opened"
+  ],
+  "social": [
+    "like given", "like received", "unlike", "heart burst", "applause", "cheer",
+    "standing ovation", "laugh track", "boo", "gasp", "vote up", "vote down",
+    "poll closed", "share post", "post published", "post deleted",
+    "story viewed", "story posted", "live viewer join", "gift sent",
+    "follower gained", "follower lost", "connection made", "profile viewed",
+    "endorsement", "review posted", "five star", "one star", "trending",
+    "viral spike", "group joined", "group left", "invite sent", "match found",
+    "ice breaker"
+  ],
+  "health-fitness": [
+    "heartbeat", "heart rate up", "heart rate calm", "breath in", "breath out",
+    "deep breath cycle", "meditation bell", "mindfulness chime", "step counted",
+    "ten thousand steps", "run start", "run finish", "sprint interval",
+    "rep complete", "set complete", "workout done", "cooldown", "stretch hold",
+    "water reminder", "stand reminder", "posture alert", "sleep start",
+    "sleep deep", "sleep wake", "nap end", "calorie goal", "weight logged",
+    "blood pressure", "glucose alert", "recovery complete"
+  ],
+  "food-kitchen": [
+    "water pour", "wine pour", "fizz open", "cork pop", "glass clink",
+    "ice in glass", "stir cup", "sizzle start", "pan fry", "deep fry",
+    "boil rolling", "simmer", "chop board", "knife slice", "grinder", "blender",
+    "whisk", "microwave beep", "oven preheat", "toast pop", "bread crust",
+    "egg crack", "butter spread", "kettle whistle", "espresso shot",
+    "milk froth", "cereal pour", "chip crunch", "apple bite", "soda pour",
+    "freezer open", "timer kitchen", "plate set", "cutlery clink", "meal ready"
+  ],
+  "office-productivity": [
+    "printer start", "printer done", "paper feed", "scanner pass", "stapler",
+    "hole punch", "paper tear", "paper crumple", "pen click", "pencil write",
+    "marker squeak", "whiteboard wipe", "keyboard type", "keyboard enter",
+    "mouse click", "calculator key", "phone desk ring", "intercom",
+    "meeting join", "meeting leave", "mic on", "mic off", "camera on",
+    "camera off", "screen share start", "screen share end", "hand raised",
+    "whisper note", "calendar block", "task assigned", "deadline set",
+    "document signed", "contract sealed", "badge scan", "clock in"
+  ]
+}

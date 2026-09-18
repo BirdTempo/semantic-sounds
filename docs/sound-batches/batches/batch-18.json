@@ -1,0 +1,115 @@
+{
+  "batch": "batch-18",
+  "category": "messages-notifications",
+  "outputFile": "src/library/sounds/messages-notifications-2.json",
+  "phrases": [
+    {
+      "name": "notification-stack",
+      "phrase": "notification stack"
+    },
+    {
+      "name": "urgent-notification",
+      "phrase": "urgent notification"
+    },
+    {
+      "name": "gentle-notification",
+      "phrase": "gentle notification"
+    },
+    {
+      "name": "silent-notification",
+      "phrase": "silent notification"
+    },
+    {
+      "name": "do-not-disturb-on",
+      "phrase": "do not disturb on"
+    },
+    {
+      "name": "do-not-disturb-off",
+      "phrase": "do not disturb off"
+    },
+    {
+      "name": "incoming-call",
+      "phrase": "incoming call"
+    },
+    {
+      "name": "outgoing-call",
+      "phrase": "outgoing call"
+    },
+    {
+      "name": "call-connected",
+      "phrase": "call connected"
+    },
+    {
+      "name": "call-ended",
+      "phrase": "call ended"
+    },
+    {
+      "name": "call-declined",
+      "phrase": "call declined"
+    },
+    {
+      "name": "call-waiting",
+      "phrase": "call waiting"
+    },
+    {
+      "name": "voicemail",
+      "phrase": "voicemail"
+    },
+    {
+      "name": "missed-call",
+      "phrase": "missed call"
+    },
+    {
+      "name": "ringtone-soft",
+      "phrase": "ringtone soft"
+    },
+    {
+      "name": "ringtone-bright",
+      "phrase": "ringtone bright"
+    },
+    {
+      "name": "doorbell-notification",
+      "phrase": "doorbell notification"
+    },
+    {
+      "name": "delivery-notification",
+      "phrase": "delivery notification"
+    },
+    {
+      "name": "package-arrived",
+      "phrase": "package arrived"
+    },
+    {
+      "name": "subscription-alert",
+      "phrase": "subscription alert"
+    },
+    {
+      "name": "price-alert",
+      "phrase": "price alert"
+    },
+    {
+      "name": "breaking-news",
+      "phrase": "breaking news"
+    },
+    {
+      "name": "weather-alert",
+      "phrase": "weather alert"
+    },
+    {
+      "name": "security-alert",
+      "phrase": "security alert"
+    },
+    {
+      "name": "login-alert",
+      "phrase": "login alert"
+    },
+    {
+      "name": "otp-code",
+      "phrase": "otp code"
+    },
+    {
+      "name": "broadcast-start",
+      "phrase": "broadcast start"
+    }
+  ]
+}

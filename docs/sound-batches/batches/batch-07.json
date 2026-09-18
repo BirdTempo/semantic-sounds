@@ -1,0 +1,75 @@
+{
+  "batch": "batch-07",
+  "category": "food-kitchen",
+  "outputFile": "src/library/sounds/food-kitchen-2.json",
+  "phrases": [
+    {
+      "name": "oven-preheat",
+      "phrase": "oven preheat"
+    },
+    {
+      "name": "toast-pop",
+      "phrase": "toast pop"
+    },
+    {
+      "name": "bread-crust",
+      "phrase": "bread crust"
+    },
+    {
+      "name": "egg-crack",
+      "phrase": "egg crack"
+    },
+    {
+      "name": "butter-spread",
+      "phrase": "butter spread"
+    },
+    {
+      "name": "kettle-whistle",
+      "phrase": "kettle whistle"
+    },
+    {
+      "name": "espresso-shot",
+      "phrase": "espresso shot"
+    },
+    {
+      "name": "milk-froth",
+      "phrase": "milk froth"
+    },
+    {
+      "name": "cereal-pour",
+      "phrase": "cereal pour"
+    },
+    {
+      "name": "chip-crunch",
+      "phrase": "chip crunch"
+    },
+    {
+      "name": "apple-bite",
+      "phrase": "apple bite"
+    },
+    {
+      "name": "soda-pour",
+      "phrase": "soda pour"
+    },
+    {
+      "name": "freezer-open",
+      "phrase": "freezer open"
+    },
+    {
+      "name": "timer-kitchen",
+      "phrase": "timer kitchen"
+    },
+    {
+      "name": "plate-set",
+      "phrase": "plate set"
+    },
+    {
+      "name": "cutlery-clink",
+      "phrase": "cutlery clink"
+    },
+    {
+      "name": "meal-ready",
+      "phrase": "meal ready"
+    }
+  ]
+}

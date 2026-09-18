@@ -1,0 +1,69 @@
+{
+  "navigation-maps": [
+    "route start", "route end", "turn left", "turn right", "continue straight",
+    "exit ahead", "roundabout", "u turn", "rerouting", "destination reached",
+    "waypoint added", "gps lock", "gps lost", "speed limit", "speed warning",
+    "traffic ahead", "detour", "arrival soon", "geofence enter", "geofence exit",
+    "compass calibrate", "map zoom", "pin dropped", "location shared",
+    "off route"
+  ],
+  "emotion-mood": [
+    "calm settle", "deep calm", "gentle joy", "bright joy", "elation", "triumph",
+    "relief", "contentment", "warmth", "affection", "tenderness", "nostalgia",
+    "longing", "melancholy", "sadness", "grief", "loneliness", "disappointment",
+    "worry", "unease", "tension rise", "suspense", "dread", "fear spike",
+    "panic", "anger flare", "frustration", "irritation", "surprise light",
+    "surprise strong", "shock", "confusion", "curiosity", "wonder", "awe",
+    "anticipation", "hope", "determination", "deep focus", "courage", "pride",
+    "embarrassment", "playfulness", "mischief", "serenity"
+  ],
+  "abstract-texture": [
+    "blip", "bleep", "bloop", "ping short", "pong", "tick soft", "tock", "thud",
+    "thunk", "knock", "pop soft", "click dry", "snap dry", "tap light", "brush",
+    "scrape light", "grain", "granular wash", "shimmer", "sparkle", "glimmer",
+    "twinkle", "riser short", "riser long", "faller", "sweep up", "sweep down",
+    "drone low", "drone mid", "pad swell", "pad fade", "pulse slow",
+    "pulse fast", "throb", "flutter", "tremolo", "warble", "wobble", "glitch",
+    "stutter", "bit crush", "static burst", "noise wash", "air hiss",
+    "breath tone", "bell tone", "glass tone", "wood tone", "metal tone",
+    "sub drop"
+  ],
+  "animals": [
+    "dog bark", "dog whine", "puppy yip", "cat meow", "cat purr", "kitten mew",
+    "bird chirp", "bird song", "owl hoot", "rooster crow", "duck quack",
+    "goose honk", "seagull", "horse neigh", "horse gallop", "cow moo",
+    "sheep bleat", "pig oink", "goat bleat", "frog croak", "cricket chirp",
+    "wolf howl", "lion roar", "elephant call", "monkey chatter", "whale song",
+    "dolphin click", "snake hiss", "bat squeak", "mosquito whine"
+  ],
+  "human-body": [
+    "footstep soft", "footstep hard", "clap single", "clap double",
+    "finger snap", "knuckle crack", "cough", "sneeze", "yawn", "sigh",
+    "sharp inhale", "hum", "whistle short", "whistle tune", "throat clear",
+    "sip", "swallow", "chew", "belly laugh", "giggle", "shush", "kiss",
+    "heart thump", "stomach rumble", "teeth chatter"
+  ],
+  "sports": [
+    "whistle start", "whistle end", "ball kick", "ball bounce", "ball catch",
+    "bat crack", "racket hit", "net swish", "goal scored", "buzzer beater",
+    "starting gun", "lane splash", "puck slap", "hoop rattle", "tackle",
+    "crowd roar", "referee call", "foul", "penalty", "timeout", "substitution",
+    "scoreboard update", "lap complete", "finish line", "medal ceremony"
+  ],
+  "science-space": [
+    "rocket launch", "engine burn", "orbit insertion", "docking", "airlock",
+    "space beacon", "radar sweep", "sonar ping", "satellite signal", "telemetry",
+    "geiger click", "particle hit", "laser pulse", "energy charge",
+    "energy discharge", "force field", "teleporter hum", "warp jump",
+    "alien signal", "probe deploy", "sample collected", "microscope focus",
+    "centrifuge", "reactor hum", "countdown launch"
+  ],
+  "music-instrument": [
+    "piano note", "piano chord", "grand chord", "electric piano", "organ swell",
+    "harp gliss", "guitar pluck", "guitar strum", "bass note", "violin bow",
+    "cello low", "flute breath", "clarinet tone", "trumpet call", "horn swell",
+    "sax note", "marimba hit", "xylophone run", "vibraphone", "glockenspiel",
+    "kalimba", "music box", "celesta", "hand drum", "snare hit", "kick drum",
+    "hi hat", "cymbal swell", "gong", "triangle ding"
+  ]
+}

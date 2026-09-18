@@ -1,0 +1,75 @@
+{
+  "batch": "batch-33",
+  "category": "social",
+  "outputFile": "src/library/sounds/social-2.json",
+  "phrases": [
+    {
+      "name": "live-viewer-join",
+      "phrase": "live viewer join"
+    },
+    {
+      "name": "gift-sent",
+      "phrase": "gift sent"
+    },
+    {
+      "name": "follower-gained",
+      "phrase": "follower gained"
+    },
+    {
+      "name": "follower-lost",
+      "phrase": "follower lost"
+    },
+    {
+      "name": "connection-made",
+      "phrase": "connection made"
+    },
+    {
+      "name": "profile-viewed",
+      "phrase": "profile viewed"
+    },
+    {
+      "name": "endorsement",
+      "phrase": "endorsement"
+    },
+    {
+      "name": "review-posted",
+      "phrase": "review posted"
+    },
+    {
+      "name": "five-star",
+      "phrase": "five star"
+    },
+    {
+      "name": "one-star",
+      "phrase": "one star"
+    },
+    {
+      "name": "trending",
+      "phrase": "trending"
+    },
+    {
+      "name": "viral-spike",
+      "phrase": "viral spike"
+    },
+    {
+      "name": "group-joined",
+      "phrase": "group joined"
+    },
+    {
+      "name": "group-left",
+      "phrase": "group left"
+    },
+    {
+      "name": "invite-sent",
+      "phrase": "invite sent"
+    },
+    {
+      "name": "match-found",
+      "phrase": "match found"
+    },
+    {
+      "name": "ice-breaker",
+      "phrase": "ice breaker"
+    }
+  ]
+}

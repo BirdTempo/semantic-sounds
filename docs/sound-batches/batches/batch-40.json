@@ -1,0 +1,103 @@
+{
+  "batch": "batch-40",
+  "category": "transitions",
+  "outputFile": "src/library/sounds/transitions-2.json",
+  "phrases": [
+    {
+      "name": "carousel-advance",
+      "phrase": "carousel advance"
+    },
+    {
+      "name": "carousel-rewind",
+      "phrase": "carousel rewind"
+    },
+    {
+      "name": "screen-wipe",
+      "phrase": "screen wipe"
+    },
+    {
+      "name": "curtain-open",
+      "phrase": "curtain open"
+    },
+    {
+      "name": "curtain-close",
+      "phrase": "curtain close"
+    },
+    {
+      "name": "door-transition",
+      "phrase": "door transition"
+    },
+    {
+      "name": "portal-enter",
+      "phrase": "portal enter"
+    },
+    {
+      "name": "portal-exit",
+      "phrase": "portal exit"
+    },
+    {
+      "name": "scene-change",
+      "phrase": "scene change"
+    },
+    {
+      "name": "chapter-start",
+      "phrase": "chapter start"
+    },
+    {
+      "name": "chapter-end",
+      "phrase": "chapter end"
+    },
+    {
+      "name": "step-forward",
+      "phrase": "step forward"
+    },
+    {
+      "name": "step-back",
+      "phrase": "step back"
+    },
+    {
+      "name": "stack-push",
+      "phrase": "stack push"
+    },
+    {
+      "name": "stack-pop",
+      "phrase": "stack pop"
+    },
+    {
+      "name": "whoosh-short",
+      "phrase": "whoosh short"
+    },
+    {
+      "name": "whoosh-long",
+      "phrase": "whoosh long"
+    },
+    {
+      "name": "swoosh-up",
+      "phrase": "swoosh up"
+    },
+    {
+      "name": "swoosh-down",
+      "phrase": "swoosh down"
+    },
+    {
+      "name": "reveal",
+      "phrase": "reveal"
+    },
+    {
+      "name": "conceal",
+      "phrase": "conceal"
+    },
+    {
+      "name": "morph",
+      "phrase": "morph"
+    },
+    {
+      "name": "dissolve",
+      "phrase": "dissolve"
+    },
+    {
+      "name": "snap-into-place",
+      "phrase": "snap into place"
+    }
+  ]
+}

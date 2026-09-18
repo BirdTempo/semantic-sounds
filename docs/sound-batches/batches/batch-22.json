@@ -1,0 +1,119 @@
+{
+  "batch": "batch-22",
+  "category": "nature",
+  "outputFile": "src/library/sounds/nature-1.json",
+  "phrases": [
+    {
+      "name": "water-drop",
+      "phrase": "water drop"
+    },
+    {
+      "name": "dripping-tap",
+      "phrase": "dripping tap"
+    },
+    {
+      "name": "stream-flow",
+      "phrase": "stream flow"
+    },
+    {
+      "name": "river-rush",
+      "phrase": "river rush"
+    },
+    {
+      "name": "waterfall",
+      "phrase": "waterfall"
+    },
+    {
+      "name": "ocean-wave",
+      "phrase": "ocean wave"
+    },
+    {
+      "name": "gentle-surf",
+      "phrase": "gentle surf"
+    },
+    {
+      "name": "tide-pull",
+      "phrase": "tide pull"
+    },
+    {
+      "name": "bubbling",
+      "phrase": "bubbling"
+    },
+    {
+      "name": "splash",
+      "phrase": "splash"
+    },
+    {
+      "name": "deep-splash",
+      "phrase": "deep splash"
+    },
+    {
+      "name": "rain-start",
+      "phrase": "rain start"
+    },
+    {
+      "name": "light-rain",
+      "phrase": "light rain"
+    },
+    {
+      "name": "heavy-rain",
+      "phrase": "heavy rain"
+    },
+    {
+      "name": "rain-on-window",
+      "phrase": "rain on window"
+    },
+    {
+      "name": "distant-thunder",
+      "phrase": "distant thunder"
+    },
+    {
+      "name": "close-thunder",
+      "phrase": "close thunder"
+    },
+    {
+      "name": "lightning-crack",
+      "phrase": "lightning crack"
+    },
+    {
+      "name": "wind-gust",
+      "phrase": "wind gust"
+    },
+    {
+      "name": "soft-breeze",
+      "phrase": "soft breeze"
+    },
+    {
+      "name": "howling-wind",
+      "phrase": "howling wind"
+    },
+    {
+      "name": "rustling-leaves",
+      "phrase": "rustling leaves"
+    },
+    {
+      "name": "falling-leaf",
+      "phrase": "falling leaf"
+    },
+    {
+      "name": "snapping-twig",
+      "phrase": "snapping twig"
+    },
+    {
+      "name": "tree-creak",
+      "phrase": "tree creak"
+    },
+    {
+      "name": "forest-ambience",
+      "phrase": "forest ambience"
+    },
+    {
+      "name": "crackling-fire",
+      "phrase": "crackling fire"
+    },
+    {
+      "name": "campfire-pop",
+      "phrase": "campfire pop"
+    }
+  ]
+}
