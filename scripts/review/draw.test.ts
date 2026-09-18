@@ -76,7 +76,7 @@ describe('drawSound', () => {
   });
 
   it('reports a refusal without retrying', async () => {
-    const ask: AskModel = vi.fn(async () => ({ kind: 'refusal', model: 'claude-opus-5' }));
+    const ask: AskModel = vi.fn(async () => ({ kind: 'refusal' as const, model: 'claude-opus-5' }));
     const result = await drawSound(ask, target, request);
     expect(result.ok).toBe(false);
     if (!result.ok) expect(result.error).toContain('declined');
