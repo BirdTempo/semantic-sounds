@@ -1,0 +1,364 @@
+[
+  {
+    "name": "coin-drop",
+    "phrase": "coin drop",
+    "category": "money-commerce",
+    "concept": "A short, bright metallic clink with a sharp attack, like a coin dropping on a hard surface.",
+    "keywords": ["coin", "drop", "clink", "metal", "money", "cash", "ding", "currency"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1400 },
+          "envelope": { "attackMs": 3, "decayMs": 40, "sustainLevel": 0.2, "sustainMs": 20, "releaseMs": 40 },
+          "gain": 0.5
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 2000 },
+          "envelope": { "attackMs": 3, "decayMs": 30, "sustainLevel": 0.15, "sustainMs": 15, "releaseMs": 35 },
+          "gain": 0.32
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 2, "decayMs": 8, "sustainLevel": 0.15, "sustainMs": 5, "releaseMs": 10 },
+          "filter": { "type": "highpass", "cutoffHz": 3500 },
+          "gain": 0.3
+        }
+      ]
+    }
+  },
+  {
+    "name": "cash-register",
+    "phrase": "cash register",
+    "category": "money-commerce",
+    "concept": "A cheerful two-tone ring with a rising pitch, like a cash register completing a sale.",
+    "keywords": ["register", "cash", "sale", "ring", "bell", "transaction", "store", "checkout"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 600, "pitchEnvelope": { "toHz": 950, "timeMs": 200 } },
+          "envelope": { "attackMs": 10, "decayMs": 50, "sustainLevel": 0.4, "sustainMs": 80, "releaseMs": 90 },
+          "gain": 0.5
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 900, "pitchEnvelope": { "toHz": 1300, "timeMs": 200 } },
+          "envelope": { "attackMs": 10, "decayMs": 50, "sustainLevel": 0.3, "sustainMs": 80, "releaseMs": 90 },
+          "gain": 0.32
+        }
+      ]
+    }
+  },
+  {
+    "name": "payment-sent",
+    "phrase": "payment sent",
+    "category": "money-commerce",
+    "concept": "A short rising tone that glides upward, signaling a payment sent outward.",
+    "keywords": ["payment", "send", "sent", "outgoing", "transfer", "pay", "transaction"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 850, "timeMs": 130 } },
+          "envelope": { "attackMs": 8, "decayMs": 30, "sustainLevel": 0.3, "sustainMs": 40, "releaseMs": 50 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "payment-received",
+    "phrase": "payment received",
+    "category": "money-commerce",
+    "concept": "A short, soft chime that rises gently, confirming a payment received.",
+    "keywords": ["payment", "receive", "received", "incoming", "confirm", "pay", "transaction"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 750, "timeMs": 150 } },
+          "envelope": { "attackMs": 20, "decayMs": 40, "sustainLevel": 0.35, "sustainMs": 60, "releaseMs": 60 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 750, "pitchEnvelope": { "toHz": 1125, "timeMs": 150 } },
+          "envelope": { "attackMs": 20, "decayMs": 40, "sustainLevel": 0.3, "sustainMs": 60, "releaseMs": 60 },
+          "gain": 0.28
+        }
+      ]
+    }
+  },
+  {
+    "name": "payment-declined",
+    "phrase": "payment declined",
+    "category": "money-commerce",
+    "concept": "A short falling tone with a slight dissonant beat, signaling a payment declined.",
+    "keywords": ["payment", "decline", "declined", "fail", "error", "reject", "transaction"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 350, "timeMs": 120 } },
+          "envelope": { "attackMs": 5, "decayMs": 30, "sustainLevel": 0.3, "sustainMs": 40, "releaseMs": 45 },
+          "gain": 0.5
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 520, "pitchEnvelope": { "toHz": 364, "timeMs": 120 } },
+          "envelope": { "attackMs": 5, "decayMs": 30, "sustainLevel": 0.3, "sustainMs": 40, "releaseMs": 45 },
+          "gain": 0.4
+        }
+      ]
+    }
+  },
+  {
+    "name": "card-tap",
+    "phrase": "card tap",
+    "category": "money-commerce",
+    "concept": "A very short, sharp click for a contactless card tap.",
+    "keywords": ["card", "tap", "click", "contactless", "reader", "pay", "scan"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 2, "decayMs": 6, "sustainLevel": 0.28, "sustainMs": 6, "releaseMs": 34 },
+          "filter": { "type": "highpass", "cutoffHz": 4000 },
+          "gain": 1.0
+        }
+      ]
+    }
+  },
+  {
+    "name": "card-swipe",
+    "phrase": "card swipe",
+    "category": "money-commerce",
+    "concept": "A whooshing swipe of filtered noise as a card slides through a reader.",
+    "keywords": ["card", "swipe", "whoosh", "slide", "reader", "pay", "scan"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "pink" },
+          "envelope": { "attackMs": 60, "decayMs": 80, "sustainLevel": 0.4, "sustainMs": 120, "releaseMs": 60 },
+          "filter": { "type": "lowpass", "cutoffHz": 2500 },
+          "gain": 0.95
+        }
+      ]
+    }
+  },
+  {
+    "name": "card-inserted",
+    "phrase": "card inserted",
+    "category": "money-commerce",
+    "concept": "A short, sharp click paired with a low thunk as a card is inserted into a reader.",
+    "keywords": ["card", "insert", "inserted", "click", "thunk", "reader", "slot"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 2, "decayMs": 15, "sustainLevel": 0.2, "sustainMs": 5, "releaseMs": 15 },
+          "filter": { "type": "highpass", "cutoffHz": 4000 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 220 },
+          "envelope": { "attackMs": 3, "decayMs": 30, "sustainLevel": 0.25, "sustainMs": 20, "releaseMs": 40 },
+          "filter": { "type": "lowpass", "cutoffHz": 500 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "pin-entered",
+    "phrase": "pin entered",
+    "category": "money-commerce",
+    "concept": "A short, soft blip confirming a pin digit was entered.",
+    "keywords": ["pin", "enter", "entered", "digit", "keypad", "confirm", "number"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 650 },
+          "envelope": { "attackMs": 15, "decayMs": 25, "sustainLevel": 0.3, "sustainMs": 40, "releaseMs": 40 },
+          "gain": 0.6
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 975 },
+          "envelope": { "attackMs": 15, "decayMs": 25, "sustainLevel": 0.25, "sustainMs": 40, "releaseMs": 40 },
+          "gain": 0.25
+        }
+      ]
+    }
+  },
+  {
+    "name": "receipt-printed",
+    "phrase": "receipt printed",
+    "category": "money-commerce",
+    "concept": "A short, textured buzz of filtered noise mimicking a receipt printing out.",
+    "keywords": ["receipt", "print", "printed", "buzz", "texture", "paper", "transaction"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 10, "decayMs": 30, "sustainLevel": 0.6, "sustainMs": 80, "releaseMs": 50 },
+          "filter": { "type": "lowpass", "cutoffHz": 1200 },
+          "gain": 1.0
+        },
+        {
+          "source": { "type": "oscillator", "wave": "square", "freqHz": 300 },
+          "envelope": { "attackMs": 10, "decayMs": 30, "sustainLevel": 0.4, "sustainMs": 80, "releaseMs": 50 },
+          "filter": { "type": "lowpass", "cutoffHz": 500 },
+          "gain": 0.4
+        }
+      ]
+    }
+  },
+  {
+    "name": "purchase-complete",
+    "phrase": "purchase complete",
+    "category": "money-commerce",
+    "concept": "A long, sustained rising chime that confirms a purchase is complete.",
+    "keywords": ["purchase", "complete", "buy", "success", "confirm", "checkout", "done"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 750, "timeMs": 400 } },
+          "envelope": { "attackMs": 60, "decayMs": 100, "sustainLevel": 0.4, "sustainMs": 500, "releaseMs": 300 },
+          "gain": 0.45
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 750, "pitchEnvelope": { "toHz": 1125, "timeMs": 400 } },
+          "envelope": { "attackMs": 60, "decayMs": 100, "sustainLevel": 0.3, "sustainMs": 500, "releaseMs": 300 },
+          "gain": 0.3
+        }
+      ]
+    }
+  },
+  {
+    "name": "add-to-cart",
+    "phrase": "add to cart",
+    "category": "money-commerce",
+    "concept": "A short pop that rises slightly when an item is added to the cart.",
+    "keywords": ["cart", "add", "item", "pop", "include", "basket", "shopping"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 450, "pitchEnvelope": { "toHz": 650, "timeMs": 70 } },
+          "envelope": { "attackMs": 5, "decayMs": 20, "sustainLevel": 0.25, "sustainMs": 30, "releaseMs": 35 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "remove-from-cart",
+    "phrase": "remove from cart",
+    "category": "money-commerce",
+    "concept": "A short pop that falls slightly when an item is removed from the cart.",
+    "keywords": ["cart", "remove", "item", "pop", "delete", "basket", "shopping"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 650, "pitchEnvelope": { "toHz": 450, "timeMs": 70 } },
+          "envelope": { "attackMs": 5, "decayMs": 25, "sustainLevel": 0.25, "sustainMs": 25, "releaseMs": 30 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "checkout-start",
+    "phrase": "checkout start",
+    "category": "money-commerce",
+    "concept": "A rising sweep that signals the start of the checkout process.",
+    "keywords": ["checkout", "start", "begin", "sweep", "shopping", "cart", "purchase"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 400, "pitchEnvelope": { "toHz": 700, "timeMs": 180 } },
+          "envelope": { "attackMs": 25, "decayMs": 50, "sustainLevel": 0.3, "sustainMs": 80, "releaseMs": 65 },
+          "gain": 0.42
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 400, "pitchEnvelope": { "toHz": 700, "timeMs": 180 } },
+          "envelope": { "attackMs": 25, "decayMs": 50, "sustainLevel": 0.25, "sustainMs": 80, "releaseMs": 65 },
+          "filter": { "type": "lowpass", "cutoffHz": 1000 },
+          "gain": 0.2
+        }
+      ]
+    }
+  },
+  {
+    "name": "order-placed",
+    "phrase": "order placed",
+    "category": "money-commerce",
+    "concept": "A soft confirmation tone with a gentle rising pitch, played once an order is placed.",
+    "keywords": ["order", "place", "placed", "confirm", "checkout", "purchase", "done"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 700, "timeMs": 150 } },
+          "envelope": { "attackMs": 30, "decayMs": 50, "sustainLevel": 0.35, "sustainMs": 80, "releaseMs": 90 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 500, "pitchEnvelope": { "toHz": 700, "timeMs": 150 } },
+          "envelope": { "attackMs": 30, "decayMs": 50, "sustainLevel": 0.3, "sustainMs": 80, "releaseMs": 90 },
+          "gain": 0.25
+        }
+      ]
+    }
+  },
+  {
+    "name": "order-shipped",
+    "phrase": "order shipped",
+    "category": "money-commerce",
+    "concept": "A short whoosh with a rising tone, suggesting an order moving out for shipping.",
+    "keywords": ["order", "ship", "shipped", "whoosh", "dispatch", "send", "delivery"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 450, "pitchEnvelope": { "toHz": 750, "timeMs": 150 } },
+          "envelope": { "attackMs": 10, "decayMs": 30, "sustainLevel": 0.3, "sustainMs": 60, "releaseMs": 70 },
+          "gain": 0.5
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 450, "pitchEnvelope": { "toHz": 750, "timeMs": 150 } },
+          "envelope": { "attackMs": 10, "decayMs": 30, "sustainLevel": 0.25, "sustainMs": 60, "releaseMs": 70 },
+          "filter": { "type": "lowpass", "cutoffHz": 1200 },
+          "gain": 0.3
+        }
+      ]
+    }
+  },
+  {
+    "name": "order-delivered",
+    "phrase": "order delivered",
+    "category": "money-commerce",
+    "concept": "A short, gentle falling tone that settles softly, marking an order delivered.",
+    "keywords": ["order", "deliver", "delivered", "arrive", "settle", "package", "complete"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 750, "pitchEnvelope": { "toHz": 500, "timeMs": 150 } },
+          "envelope": { "attackMs": 18, "decayMs": 40, "sustainLevel": 0.3, "sustainMs": 50, "releaseMs": 62 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "refund-issued",
+    "phrase": "refund issued",
+    "category": "money-commerce",
+    "concept": "A falling two-tone chime that signals money moving back in a refund.",
+    "keywords": ["refund", "issue", "issued", "money", "back", "return", "reimburse"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 700, "pitchEnvelope": { "toHz": 500, "timeMs": 180 } },
+          "envelope": { "attackMs": 15, "decayMs": 40, "sustainLevel": 0.35, "sustainMs": 70, "releaseMs": 85 },
+          "gain": 0.5
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1050, "pitchEnvelope": { "toHz": 750, "timeMs": 180 } },
+          "envelope": { "attackMs": 15, "decayMs": 40, "sustainLevel": 0.3, "sustainMs": 70, "releaseMs": 85 },
+          "gain": 0.3
+        }
+      ]
+    }
+  }
+]

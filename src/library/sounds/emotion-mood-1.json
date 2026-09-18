@@ -1,0 +1,393 @@
+[
+  {
+    "name": "calm-settle",
+    "phrase": "calm settle",
+    "category": "emotion-mood",
+    "concept": "A soft, falling tone that settles downward into a calm, quiet close.",
+    "keywords": ["calm", "settle", "ease", "relax", "quiet", "soothe", "peace"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 550, "pitchEnvelope": { "toHz": 350, "timeMs": 300 } },
+          "envelope": { "attackMs": 80, "decayMs": 150, "sustainLevel": 0.35, "sustainMs": 150, "releaseMs": 150 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "deep-calm",
+    "phrase": "deep calm",
+    "category": "emotion-mood",
+    "concept": "A long, sustained, warm tone that holds low and still without any movement.",
+    "keywords": ["calm", "deep", "still", "quiet", "grounded", "steady", "hush"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 220 },
+          "envelope": { "attackMs": 200, "decayMs": 250, "sustainLevel": 0.45, "sustainMs": 350, "releaseMs": 250 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "gentle-joy",
+    "phrase": "gentle joy",
+    "category": "emotion-mood",
+    "concept": "A gentle, rising tone that lifts softly upward, like a small burst of joy.",
+    "keywords": ["joy", "happy", "lift", "glad", "cheerful", "pleasant", "uplift"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 480, "pitchEnvelope": { "toHz": 650, "timeMs": 180 } },
+          "envelope": { "attackMs": 45, "decayMs": 80, "sustainLevel": 0.35, "sustainMs": 80, "releaseMs": 90 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "bright-joy",
+    "phrase": "bright joy",
+    "category": "emotion-mood",
+    "concept": "A quick, rising, bright tone that leaps sharply upward like a burst of delight.",
+    "keywords": ["joy", "bright", "happy", "spark", "delight", "radiant", "burst"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1500, "pitchEnvelope": { "toHz": 2100, "timeMs": 70 } },
+          "envelope": { "attackMs": 6, "decayMs": 50, "sustainLevel": 0.3, "sustainMs": 40, "releaseMs": 50 },
+          "gain": 0.62
+        }
+      ]
+    }
+  },
+  {
+    "name": "elation",
+    "phrase": "elation",
+    "category": "emotion-mood",
+    "concept": "A rising tone that leaps energetically upward with excited, joyful energy.",
+    "keywords": ["joy", "excited", "uplift", "thrill", "energetic", "spark", "glee"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 480, "pitchEnvelope": { "toHz": 1050, "timeMs": 200 } },
+          "envelope": { "attackMs": 20, "decayMs": 90, "sustainLevel": 0.35, "sustainMs": 100, "releaseMs": 110 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "triumph",
+    "phrase": "triumph",
+    "category": "emotion-mood",
+    "concept": "A rising, sustained tone that swells upward into a full, victorious surge.",
+    "keywords": ["victory", "success", "win", "achievement", "proud", "glory", "accomplish"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 350, "pitchEnvelope": { "toHz": 800, "timeMs": 400 } },
+          "envelope": { "attackMs": 100, "decayMs": 200, "sustainLevel": 0.4, "sustainMs": 300, "releaseMs": 250 },
+          "gain": 0.5
+        }
+      ]
+    }
+  },
+  {
+    "name": "relief",
+    "phrase": "relief",
+    "category": "emotion-mood",
+    "concept": "A soft, falling tone that eases downward as tension lets go.",
+    "keywords": ["ease", "release", "exhale", "calm", "unwind", "comfort", "settle"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 700, "pitchEnvelope": { "toHz": 480, "timeMs": 200 } },
+          "envelope": { "attackMs": 70, "decayMs": 90, "sustainLevel": 0.3, "sustainMs": 90, "releaseMs": 110 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "contentment",
+    "phrase": "contentment",
+    "category": "emotion-mood",
+    "concept": "A long, sustained, warm tone that stays low and steady without hurry.",
+    "keywords": ["satisfied", "peaceful", "fulfilled", "calm", "steady", "comfortable", "ease"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 300 },
+          "envelope": { "attackMs": 180, "decayMs": 220, "sustainLevel": 0.45, "sustainMs": 260, "releaseMs": 200 },
+          "gain": 0.5
+        }
+      ]
+    }
+  },
+  {
+    "name": "warmth",
+    "phrase": "warmth",
+    "category": "emotion-mood",
+    "concept": "A steady tone with a soft, glowing noise texture underneath, gentle and cozy.",
+    "keywords": ["cozy", "glow", "comfort", "embrace", "tender", "radiant", "snug"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 320 },
+          "envelope": { "attackMs": 80, "decayMs": 100, "sustainLevel": 0.35, "sustainMs": 100, "releaseMs": 110 },
+          "gain": 0.5
+        },
+        {
+          "source": { "type": "noise", "color": "pink" },
+          "envelope": { "attackMs": 80, "decayMs": 90, "sustainLevel": 0.5, "sustainMs": 90, "releaseMs": 100 },
+          "filter": { "type": "lowpass", "cutoffHz": 600 },
+          "gain": 0.9
+        }
+      ]
+    }
+  },
+  {
+    "name": "affection",
+    "phrase": "affection",
+    "category": "emotion-mood",
+    "concept": "A gentle, rising tone that lifts softly like a warm, caring gesture.",
+    "keywords": ["caring", "fond", "love", "tender", "devoted", "sweet", "kind"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 340, "pitchEnvelope": { "toHz": 440, "timeMs": 180 } },
+          "envelope": { "attackMs": 55, "decayMs": 85, "sustainLevel": 0.3, "sustainMs": 80, "releaseMs": 100 },
+          "gain": 0.58
+        }
+      ]
+    }
+  },
+  {
+    "name": "tenderness",
+    "phrase": "tenderness",
+    "category": "emotion-mood",
+    "concept": "A soft, falling tone that eases downward with a warm, caring gentleness.",
+    "keywords": ["gentle", "care", "delicate", "soothing", "kind", "warmth", "close"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 480, "pitchEnvelope": { "toHz": 360, "timeMs": 260 } },
+          "envelope": { "attackMs": 95, "decayMs": 110, "sustainLevel": 0.3, "sustainMs": 110, "releaseMs": 130 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "nostalgia",
+    "phrase": "nostalgia",
+    "category": "emotion-mood",
+    "concept": "A falling, warm tone that drifts slowly downward with a wistful, distant memory.",
+    "keywords": ["memory", "wistful", "longing", "past", "reminisce", "distant", "sentimental"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 480, "pitchEnvelope": { "toHz": 320, "timeMs": 350 } },
+          "envelope": { "attackMs": 140, "decayMs": 160, "sustainLevel": 0.3, "sustainMs": 150, "releaseMs": 150 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "longing",
+    "phrase": "longing",
+    "category": "emotion-mood",
+    "concept": "A long, sustained, falling tone that reaches downward with a soft, aching pull.",
+    "keywords": ["yearning", "ache", "reach", "distant", "wistful", "desire", "pine"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 450, "pitchEnvelope": { "toHz": 300, "timeMs": 500 } },
+          "envelope": { "attackMs": 150, "decayMs": 200, "sustainLevel": 0.3, "sustainMs": 250, "releaseMs": 230 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "melancholy",
+    "phrase": "melancholy",
+    "category": "emotion-mood",
+    "concept": "A falling, warm, soft tone that droops downward with a quiet sorrow.",
+    "keywords": ["sorrow", "sad", "wistful", "somber", "blue", "downcast", "gloom"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 400, "pitchEnvelope": { "toHz": 280, "timeMs": 280 } },
+          "envelope": { "attackMs": 95, "decayMs": 120, "sustainLevel": 0.3, "sustainMs": 120, "releaseMs": 130 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "sadness",
+    "phrase": "sadness",
+    "category": "emotion-mood",
+    "concept": "A falling, warm tone that sinks downward slowly into a heavy quiet.",
+    "keywords": ["sorrow", "down", "low", "unhappy", "blue", "heavy", "tears"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 380, "pitchEnvelope": { "toHz": 260, "timeMs": 250 } },
+          "envelope": { "attackMs": 60, "decayMs": 110, "sustainLevel": 0.3, "sustainMs": 120, "releaseMs": 130 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "grief",
+    "phrase": "grief",
+    "category": "emotion-mood",
+    "concept": "A long, sustained, falling, warm tone that sinks slowly into a heavy silence.",
+    "keywords": ["loss", "mourning", "sorrow", "heavy", "ache", "bereft", "tears"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 350, "pitchEnvelope": { "toHz": 230, "timeMs": 600 } },
+          "envelope": { "attackMs": 200, "decayMs": 250, "sustainLevel": 0.35, "sustainMs": 350, "releaseMs": 300 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "loneliness",
+    "phrase": "loneliness",
+    "category": "emotion-mood",
+    "concept": "A falling, warm tone that drifts downward alone into a distant, hollow quiet.",
+    "keywords": ["alone", "isolated", "empty", "distant", "solitude", "hollow", "quiet"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 420, "pitchEnvelope": { "toHz": 300, "timeMs": 340 } },
+          "envelope": { "attackMs": 110, "decayMs": 140, "sustainLevel": 0.3, "sustainMs": 150, "releaseMs": 150 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "disappointment",
+    "phrase": "disappointment",
+    "category": "emotion-mood",
+    "concept": "A quick, falling tone that dips sharply downward like a small letdown.",
+    "keywords": ["letdown", "dip", "deflate", "discourage", "sink", "dashed", "dismay"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 370, "timeMs": 70 } },
+          "envelope": { "attackMs": 6, "decayMs": 40, "sustainLevel": 0.25, "sustainMs": 30, "releaseMs": 50 },
+          "gain": 0.62
+        }
+      ]
+    }
+  },
+  {
+    "name": "worry",
+    "phrase": "worry",
+    "category": "emotion-mood",
+    "concept": "A rising tone that climbs unevenly upward with a quietly anxious edge.",
+    "keywords": ["anxious", "nervous", "tense", "uneasy", "concern", "fret", "apprehensive"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 380, "pitchEnvelope": { "toHz": 560, "timeMs": 200 } },
+          "envelope": { "attackMs": 50, "decayMs": 90, "sustainLevel": 0.3, "sustainMs": 90, "releaseMs": 110 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "unease",
+    "phrase": "unease",
+    "category": "emotion-mood",
+    "concept": "A steady tone paired with a thin noise edge that feels faintly unsettled.",
+    "keywords": ["unsettled", "discomfort", "tense", "wary", "edgy", "apprehensive", "jittery"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 340 },
+          "envelope": { "attackMs": 100, "decayMs": 120, "sustainLevel": 0.3, "sustainMs": 140, "releaseMs": 140 },
+          "gain": 0.5
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 100, "decayMs": 90, "sustainLevel": 0.35, "sustainMs": 80, "releaseMs": 90 },
+          "filter": { "type": "bandpass", "cutoffHz": 700 },
+          "gain": 0.7
+        }
+      ]
+    }
+  },
+  {
+    "name": "tension-rise",
+    "phrase": "tension rise",
+    "category": "emotion-mood",
+    "concept": "A rising, sustained tone that climbs steadily upward, building tension.",
+    "keywords": ["tension", "building", "climb", "escalate", "pressure", "strain", "mounting"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 300, "pitchEnvelope": { "toHz": 700, "timeMs": 550 } },
+          "envelope": { "attackMs": 150, "decayMs": 200, "sustainLevel": 0.4, "sustainMs": 300, "releaseMs": 250 },
+          "gain": 0.5
+        }
+      ]
+    }
+  },
+  {
+    "name": "suspense",
+    "phrase": "suspense",
+    "category": "emotion-mood",
+    "concept": "A long, sustained tone that holds low and still while anticipation builds.",
+    "keywords": ["anticipation", "waiting", "tense", "cliffhanger", "hold", "uncertain", "edge"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 260 },
+          "envelope": { "attackMs": 220, "decayMs": 250, "sustainLevel": 0.4, "sustainMs": 280, "releaseMs": 200 },
+          "gain": 0.45
+        },
+        {
+          "source": { "type": "noise", "color": "pink" },
+          "envelope": { "attackMs": 220, "decayMs": 200, "sustainLevel": 0.4, "sustainMs": 200, "releaseMs": 180 },
+          "filter": { "type": "lowpass", "cutoffHz": 500 },
+          "gain": 0.8
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 340 },
+          "envelope": { "attackMs": 220, "decayMs": 250, "sustainLevel": 0.3, "sustainMs": 280, "releaseMs": 200 },
+          "gain": 0.15
+        }
+      ]
+    }
+  },
+  {
+    "name": "dread",
+    "phrase": "dread",
+    "category": "emotion-mood",
+    "concept": "A long, sustained, falling, warm tone that sinks slowly into an ominous low weight.",
+    "keywords": ["ominous", "foreboding", "fear", "doom", "heavy", "gloom", "dark"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 300, "pitchEnvelope": { "toHz": 200, "timeMs": 700 } },
+          "envelope": { "attackMs": 250, "decayMs": 300, "sustainLevel": 0.45, "sustainMs": 400, "releaseMs": 250 },
+          "gain": 0.55
+        }
+      ]
+    }
+  }
+]

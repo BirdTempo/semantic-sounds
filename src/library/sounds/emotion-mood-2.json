@@ -1,0 +1,463 @@
+[
+  {
+    "name": "fear-spike",
+    "phrase": "fear spike",
+    "category": "emotion-mood",
+    "concept": "A quick, sharp, rising jolt of tense energy with a thin noisy edge, like a sudden spike of fear.",
+    "keywords": ["fear", "scare", "fright", "alarm", "tension", "spike", "startle"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 480, "pitchEnvelope": { "toHz": 850, "timeMs": 90 } },
+          "envelope": { "attackMs": 4, "decayMs": 50, "sustainLevel": 0.18, "sustainMs": 20, "releaseMs": 50 },
+          "gain": 0.6
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 3, "decayMs": 15, "sustainLevel": 0.2, "sustainMs": 6, "releaseMs": 20 },
+          "filter": { "type": "bandpass", "cutoffHz": 900, "q": 1.3 },
+          "gain": 0.28
+        }
+      ]
+    }
+  },
+  {
+    "name": "panic",
+    "phrase": "panic",
+    "category": "emotion-mood",
+    "concept": "A quick, sharp, rising surge of energy with a jittery high edge, like a burst of panic.",
+    "keywords": ["panic", "fear", "alarm", "urgent", "frantic", "distress", "emergency"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 440, "pitchEnvelope": { "toHz": 800, "timeMs": 100 } },
+          "envelope": { "attackMs": 3, "decayMs": 30, "sustainLevel": 0.25, "sustainMs": 30, "releaseMs": 40 },
+          "gain": 0.58
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 850, "pitchEnvelope": { "toHz": 1000, "timeMs": 60 } },
+          "envelope": { "attackMs": 3, "decayMs": 18, "sustainLevel": 0.1, "sustainMs": 10, "releaseMs": 20 },
+          "gain": 0.18
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 2, "decayMs": 10, "sustainLevel": 0.2, "sustainMs": 6, "releaseMs": 15 },
+          "filter": { "type": "bandpass", "cutoffHz": 1000, "q": 1.2 },
+          "gain": 0.22
+        }
+      ]
+    }
+  },
+  {
+    "name": "anger-flare",
+    "phrase": "anger flare",
+    "category": "emotion-mood",
+    "concept": "A quick, rising flare of a low, tense tone with a gritty filtered edge, like anger flashing up.",
+    "keywords": ["anger", "rage", "flare", "temper", "flash", "tension", "outburst"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 300, "pitchEnvelope": { "toHz": 520, "timeMs": 80 } },
+          "envelope": { "attackMs": 5, "decayMs": 50, "sustainLevel": 0.3, "sustainMs": 30, "releaseMs": 55 },
+          "gain": 0.6
+        },
+        {
+          "source": { "type": "oscillator", "wave": "square", "freqHz": 300 },
+          "envelope": { "attackMs": 5, "decayMs": 40, "sustainLevel": 0.15, "sustainMs": 20, "releaseMs": 40 },
+          "filter": { "type": "lowpass", "cutoffHz": 500 },
+          "gain": 0.22
+        }
+      ]
+    }
+  },
+  {
+    "name": "frustration",
+    "phrase": "frustration",
+    "category": "emotion-mood",
+    "concept": "A soft, falling tone with a low, tense drone underneath, like frustration settling in.",
+    "keywords": ["frustration", "tension", "annoyed", "stuck", "strain", "discontent"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 500, "pitchEnvelope": { "toHz": 380, "timeMs": 250 } },
+          "envelope": { "attackMs": 30, "decayMs": 80, "sustainLevel": 0.35, "sustainMs": 100, "releaseMs": 90 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 260 },
+          "envelope": { "attackMs": 40, "decayMs": 60, "sustainLevel": 0.3, "sustainMs": 120, "releaseMs": 80 },
+          "gain": 0.32
+        }
+      ]
+    }
+  },
+  {
+    "name": "irritation",
+    "phrase": "irritation",
+    "category": "emotion-mood",
+    "concept": "A sharp, steady buzz with a second grating pulse, like nagging irritation repeating.",
+    "keywords": ["irritation", "annoyance", "grate", "nag", "buzz", "friction", "agitate"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 600 },
+          "envelope": { "attackMs": 5, "decayMs": 50, "sustainLevel": 0.25, "sustainMs": 60, "releaseMs": 90 },
+          "gain": 0.65
+        },
+        {
+          "source": { "type": "oscillator", "wave": "square", "freqHz": 600 },
+          "envelope": { "attackMs": 70, "decayMs": 40, "sustainLevel": 0.2, "sustainMs": 30, "releaseMs": 80 },
+          "filter": { "type": "lowpass", "cutoffHz": 600 },
+          "gain": 0.32
+        }
+      ]
+    }
+  },
+  {
+    "name": "surprise-light",
+    "phrase": "surprise light",
+    "category": "emotion-mood",
+    "concept": "A quick, sharp, rising blip, like a light surprise catching your attention.",
+    "keywords": ["surprise", "light", "blip", "startle", "notice", "unexpected"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 750, "timeMs": 70 } },
+          "envelope": { "attackMs": 3, "decayMs": 25, "sustainLevel": 0.2, "sustainMs": 20, "releaseMs": 40 },
+          "gain": 0.62
+        }
+      ]
+    }
+  },
+  {
+    "name": "surprise-strong",
+    "phrase": "surprise strong",
+    "category": "emotion-mood",
+    "concept": "A quick, sharp, rising surge with a burst of airy noise, like a strong wave of surprise.",
+    "keywords": ["surprise", "strong", "shock", "startle", "sudden", "jolt"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 450, "pitchEnvelope": { "toHz": 900, "timeMs": 110 } },
+          "envelope": { "attackMs": 4, "decayMs": 50, "sustainLevel": 0.3, "sustainMs": 30, "releaseMs": 60 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 3, "decayMs": 20, "sustainLevel": 0.2, "sustainMs": 8, "releaseMs": 25 },
+          "filter": { "type": "lowpass", "cutoffHz": 1200 },
+          "gain": 0.3
+        }
+      ]
+    }
+  },
+  {
+    "name": "shock",
+    "phrase": "shock",
+    "category": "emotion-mood",
+    "concept": "A quick, sharp, falling snap with a crackling noise burst, like the jolt of shock.",
+    "keywords": ["shock", "jolt", "snap", "sudden", "crack", "startle"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 900, "pitchEnvelope": { "toHz": 300, "timeMs": 50 } },
+          "envelope": { "attackMs": 2, "decayMs": 25, "sustainLevel": 0.15, "sustainMs": 10, "releaseMs": 20 },
+          "gain": 0.6
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 2, "decayMs": 10, "sustainLevel": 0.2, "sustainMs": 5, "releaseMs": 10 },
+          "filter": { "type": "bandpass", "cutoffHz": 1500, "q": 1.5 },
+          "gain": 0.3
+        }
+      ]
+    }
+  },
+  {
+    "name": "confusion",
+    "phrase": "confusion",
+    "category": "emotion-mood",
+    "concept": "A soft, wavering tone made of two close, beating pitches, like the muddle of confusion.",
+    "keywords": ["confusion", "puzzled", "muddle", "unsure", "wavering", "uncertain"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500 },
+          "envelope": { "attackMs": 30, "decayMs": 60, "sustainLevel": 0.3, "sustainMs": 150, "releaseMs": 80 },
+          "gain": 0.4
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 540 },
+          "envelope": { "attackMs": 30, "decayMs": 60, "sustainLevel": 0.3, "sustainMs": 150, "releaseMs": 80 },
+          "gain": 0.4
+        }
+      ]
+    }
+  },
+  {
+    "name": "curiosity",
+    "phrase": "curiosity",
+    "category": "emotion-mood",
+    "concept": "A soft, rising, inquisitive tone that lifts gently upward, like a spark of curiosity.",
+    "keywords": ["curiosity", "interest", "inquisitive", "explore", "intrigued"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 420, "pitchEnvelope": { "toHz": 620, "timeMs": 140 } },
+          "envelope": { "attackMs": 20, "decayMs": 50, "sustainLevel": 0.3, "sustainMs": 50, "releaseMs": 60 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "wonder",
+    "phrase": "wonder",
+    "category": "emotion-mood",
+    "concept": "A soft, long, rising swell with a gentle overtone shimmer, like a feeling of wonder growing.",
+    "keywords": ["wonder", "marvel", "amazement", "swell", "uplift", "awe"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 350, "pitchEnvelope": { "toHz": 550, "timeMs": 700 } },
+          "envelope": { "attackMs": 150, "decayMs": 200, "sustainLevel": 0.4, "sustainMs": 300, "releaseMs": 250 },
+          "gain": 0.45
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 700 },
+          "envelope": { "attackMs": 200, "decayMs": 200, "sustainLevel": 0.3, "sustainMs": 200, "releaseMs": 150 },
+          "gain": 0.18
+        }
+      ]
+    }
+  },
+  {
+    "name": "awe",
+    "phrase": "awe",
+    "category": "emotion-mood",
+    "concept": "A soft, long swell of layered low tones and airy texture, like the feeling of awe expanding.",
+    "keywords": ["awe", "wonder", "majestic", "vast", "swell", "reverence"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 220 },
+          "envelope": { "attackMs": 200, "decayMs": 250, "sustainLevel": 0.45, "sustainMs": 400, "releaseMs": 300 },
+          "gain": 0.34
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 440, "pitchEnvelope": { "toHz": 500, "timeMs": 900 } },
+          "envelope": { "attackMs": 250, "decayMs": 250, "sustainLevel": 0.35, "sustainMs": 350, "releaseMs": 300 },
+          "gain": 0.23
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 660 },
+          "envelope": { "attackMs": 300, "decayMs": 200, "sustainLevel": 0.25, "sustainMs": 300, "releaseMs": 250 },
+          "gain": 0.13
+        },
+        {
+          "source": { "type": "noise", "color": "pink" },
+          "envelope": { "attackMs": 200, "decayMs": 200, "sustainLevel": 0.2, "sustainMs": 400, "releaseMs": 250 },
+          "filter": { "type": "lowpass", "cutoffHz": 400 },
+          "gain": 0.27
+        }
+      ]
+    }
+  },
+  {
+    "name": "anticipation",
+    "phrase": "anticipation",
+    "category": "emotion-mood",
+    "concept": "A soft, long, slowly rising build, like the growing feeling of anticipation.",
+    "keywords": ["anticipation", "expect", "build", "suspense", "waiting", "forthcoming"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 380, "pitchEnvelope": { "toHz": 560, "timeMs": 750 } },
+          "envelope": { "attackMs": 180, "decayMs": 200, "sustainLevel": 0.35, "sustainMs": 300, "releaseMs": 200 },
+          "gain": 0.42
+        }
+      ]
+    }
+  },
+  {
+    "name": "hope",
+    "phrase": "hope",
+    "category": "emotion-mood",
+    "concept": "A soft, rising tone with a warm undertone, like a gentle feeling of hope lifting.",
+    "keywords": ["hope", "hopeful", "lift", "positive", "optimism", "uplift"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 420, "pitchEnvelope": { "toHz": 640, "timeMs": 300 } },
+          "envelope": { "attackMs": 60, "decayMs": 100, "sustainLevel": 0.35, "sustainMs": 120, "releaseMs": 100 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 500 },
+          "envelope": { "attackMs": 80, "decayMs": 100, "sustainLevel": 0.25, "sustainMs": 100, "releaseMs": 90 },
+          "gain": 0.28
+        }
+      ]
+    }
+  },
+  {
+    "name": "determination",
+    "phrase": "determination",
+    "category": "emotion-mood",
+    "concept": "A steady, firm tone built from two layered voices, like quiet determination holding its ground.",
+    "keywords": ["determination", "resolve", "firm", "steady", "willpower", "grit"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 300 },
+          "envelope": { "attackMs": 15, "decayMs": 60, "sustainLevel": 0.4, "sustainMs": 180, "releaseMs": 80 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 300 },
+          "envelope": { "attackMs": 15, "decayMs": 60, "sustainLevel": 0.35, "sustainMs": 180, "releaseMs": 90 },
+          "gain": 0.35
+        }
+      ]
+    }
+  },
+  {
+    "name": "deep-focus",
+    "phrase": "deep focus",
+    "category": "emotion-mood",
+    "concept": "A soft, long, steady drone with a subtle airy texture, like the quiet of deep focus.",
+    "keywords": ["focus", "concentration", "drone", "calm", "steady", "attention"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 250 },
+          "envelope": { "attackMs": 200, "decayMs": 150, "sustainLevel": 0.45, "sustainMs": 500, "releaseMs": 200 },
+          "gain": 0.39
+        },
+        {
+          "source": { "type": "noise", "color": "pink" },
+          "envelope": { "attackMs": 200, "decayMs": 150, "sustainLevel": 0.15, "sustainMs": 500, "releaseMs": 200 },
+          "filter": { "type": "lowpass", "cutoffHz": 300 },
+          "gain": 0.3
+        }
+      ]
+    }
+  },
+  {
+    "name": "courage",
+    "phrase": "courage",
+    "category": "emotion-mood",
+    "concept": "A soft, rising tone reinforced by a bold overtone, like courage steadying and lifting.",
+    "keywords": ["courage", "brave", "bold", "confidence", "steady", "resolve"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 350, "pitchEnvelope": { "toHz": 550, "timeMs": 220 } },
+          "envelope": { "attackMs": 25, "decayMs": 60, "sustainLevel": 0.35, "sustainMs": 100, "releaseMs": 80 },
+          "gain": 0.42
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 550 },
+          "envelope": { "attackMs": 20, "decayMs": 50, "sustainLevel": 0.3, "sustainMs": 80, "releaseMs": 70 },
+          "gain": 0.22
+        }
+      ]
+    }
+  },
+  {
+    "name": "pride",
+    "phrase": "pride",
+    "category": "emotion-mood",
+    "concept": "A soft, rising tone settling into a warm, steady glow, like a quiet feeling of pride.",
+    "keywords": ["pride", "proud", "accomplish", "glow", "satisfaction", "confidence"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 400, "pitchEnvelope": { "toHz": 620, "timeMs": 260 } },
+          "envelope": { "attackMs": 35, "decayMs": 80, "sustainLevel": 0.4, "sustainMs": 120, "releaseMs": 90 },
+          "gain": 0.38
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 500 },
+          "envelope": { "attackMs": 50, "decayMs": 80, "sustainLevel": 0.3, "sustainMs": 100, "releaseMs": 80 },
+          "gain": 0.18
+        }
+      ]
+    }
+  },
+  {
+    "name": "embarrassment",
+    "phrase": "embarrassment",
+    "category": "emotion-mood",
+    "concept": "A soft, quick, falling tone that sinks away, like a flush of embarrassment.",
+    "keywords": ["embarrassment", "awkward", "blush", "sheepish", "sink", "uneasy"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 550, "pitchEnvelope": { "toHz": 380, "timeMs": 150 } },
+          "envelope": { "attackMs": 20, "decayMs": 60, "sustainLevel": 0.3, "sustainMs": 50, "releaseMs": 50 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "playfulness",
+    "phrase": "playfulness",
+    "category": "emotion-mood",
+    "concept": "A quick, sharp, rising bounce with a light accent, like a burst of playfulness.",
+    "keywords": ["playfulness", "playful", "bounce", "fun", "lighthearted", "cheerful"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 500, "pitchEnvelope": { "toHz": 700, "timeMs": 70 } },
+          "envelope": { "attackMs": 6, "decayMs": 30, "sustainLevel": 0.25, "sustainMs": 20, "releaseMs": 35 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 850 },
+          "envelope": { "attackMs": 4, "decayMs": 15, "sustainLevel": 0.15, "sustainMs": 8, "releaseMs": 15 },
+          "gain": 0.22
+        }
+      ]
+    }
+  },
+  {
+    "name": "mischief",
+    "phrase": "mischief",
+    "category": "emotion-mood",
+    "concept": "A quick, sharp, falling dip with a sly noisy texture, like a touch of mischief.",
+    "keywords": ["mischief", "sneaky", "sly", "prank", "impish", "tease"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 650, "pitchEnvelope": { "toHz": 420, "timeMs": 90 } },
+          "envelope": { "attackMs": 6, "decayMs": 35, "sustainLevel": 0.25, "sustainMs": 25, "releaseMs": 40 },
+          "gain": 0.58
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 3, "decayMs": 15, "sustainLevel": 0.2, "sustainMs": 6, "releaseMs": 18 },
+          "filter": { "type": "bandpass", "cutoffHz": 1200, "q": 1.4 },
+          "gain": 0.2
+        }
+      ]
+    }
+  },
+  {
+    "name": "serenity",
+    "phrase": "serenity",
+    "category": "emotion-mood",
+    "concept": "A soft, long, slowly falling tone that settles and fades, like a deep sense of serenity.",
+    "keywords": ["serenity", "calm", "peaceful", "still", "settle", "tranquil"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 340, "pitchEnvelope": { "toHz": 220, "timeMs": 800 } },
+          "envelope": { "attackMs": 250, "decayMs": 250, "sustainLevel": 0.45, "sustainMs": 500, "releaseMs": 350 },
+          "gain": 0.4
+        }
+      ]
+    }
+  }
+]

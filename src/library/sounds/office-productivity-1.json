@@ -1,0 +1,361 @@
+[
+  {
+    "name": "printer-start",
+    "phrase": "printer start",
+    "category": "office-productivity",
+    "concept": "A rising, sustained hum that ramps up as the printer motor starts warming up.",
+    "keywords": ["printer", "startup", "warmup", "boot", "hum", "motor", "ramp", "machine"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 220, "pitchEnvelope": { "toHz": 380, "timeMs": 700 } },
+          "envelope": { "attackMs": 150, "decayMs": 100, "sustainLevel": 0.5, "sustainMs": 500, "releaseMs": 120 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "printer-done",
+    "phrase": "printer done",
+    "category": "office-productivity",
+    "concept": "A short, rising chime that glides upward to confirm a completed print job.",
+    "keywords": ["printer", "chime", "confirm", "complete", "done", "finish", "notification"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 850, "timeMs": 80 } },
+          "envelope": { "attackMs": 6, "decayMs": 25, "sustainLevel": 0.3, "sustainMs": 35, "releaseMs": 50 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 500, "pitchEnvelope": { "toHz": 850, "timeMs": 80 } },
+          "envelope": { "attackMs": 6, "decayMs": 25, "sustainLevel": 0.3, "sustainMs": 35, "releaseMs": 50 },
+          "gain": 0.3
+        }
+      ]
+    }
+  },
+  {
+    "name": "paper-feed",
+    "phrase": "paper feed",
+    "category": "office-productivity",
+    "concept": "A steady, textured rustle of paper as it feeds evenly through the rollers.",
+    "keywords": ["paper", "feed", "rustle", "roller", "texture", "sheet", "print"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "pink" },
+          "envelope": { "attackMs": 30, "decayMs": 60, "sustainLevel": 0.5, "sustainMs": 200, "releaseMs": 60 },
+          "filter": { "type": "lowpass", "cutoffHz": 1000 },
+          "gain": 1.0
+        }
+      ]
+    }
+  },
+  {
+    "name": "scanner-pass",
+    "phrase": "scanner pass",
+    "category": "office-productivity",
+    "concept": "A long, falling scan tone that glides steadily downward as the head passes.",
+    "keywords": ["scanner", "glide", "slide", "sweep", "pass", "flatbed", "beam"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 500, "pitchEnvelope": { "toHz": 300, "timeMs": 700 } },
+          "envelope": { "attackMs": 150, "decayMs": 100, "sustainLevel": 0.45, "sustainMs": 500, "releaseMs": 150 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "stapler",
+    "phrase": "stapler",
+    "category": "office-productivity",
+    "concept": "A short, sharp mechanical thunk as the stapler snaps closed.",
+    "keywords": ["stapler", "staple", "thunk", "snap", "press", "metal", "clamp"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 2, "decayMs": 20, "sustainLevel": 0.2, "sustainMs": 6, "releaseMs": 20 },
+          "filter": { "type": "highpass", "cutoffHz": 4500 },
+          "gain": 0.68
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 350 },
+          "envelope": { "attackMs": 2, "decayMs": 25, "sustainLevel": 0.15, "sustainMs": 10, "releaseMs": 34 },
+          "gain": 0.38
+        }
+      ]
+    }
+  },
+  {
+    "name": "hole-punch",
+    "phrase": "hole punch",
+    "category": "office-productivity",
+    "concept": "A short, sharp thunk as the hole punch presses through paper.",
+    "keywords": ["punch", "hole", "thunk", "press", "paper", "tool", "perforate"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 3, "decayMs": 25, "sustainLevel": 0.25, "sustainMs": 12, "releaseMs": 25 },
+          "filter": { "type": "lowpass", "cutoffHz": 500 },
+          "gain": 0.95
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 260 },
+          "envelope": { "attackMs": 3, "decayMs": 30, "sustainLevel": 0.2, "sustainMs": 15, "releaseMs": 30 },
+          "gain": 0.45
+        }
+      ]
+    }
+  },
+  {
+    "name": "paper-tear",
+    "phrase": "paper tear",
+    "category": "office-productivity",
+    "concept": "A textured, ripping burst of noise that tears unevenly across its length.",
+    "keywords": ["paper", "tear", "rip", "shred", "texture", "noise", "sheet"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 5, "decayMs": 30, "sustainLevel": 0.6, "sustainMs": 180, "releaseMs": 70 },
+          "filter": { "type": "bandpass", "cutoffHz": 1500 },
+          "gain": 1.0
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 5, "decayMs": 15, "sustainLevel": 0.4, "sustainMs": 60, "releaseMs": 35 },
+          "filter": { "type": "highpass", "cutoffHz": 3500 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "paper-crumple",
+    "phrase": "paper crumple",
+    "category": "office-productivity",
+    "concept": "A crackly burst of textured noise like a sheet of paper being crumpled by hand.",
+    "keywords": ["paper", "crumple", "crush", "crinkle", "crackle", "texture", "wad"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 15, "decayMs": 60, "sustainLevel": 0.55, "sustainMs": 180, "releaseMs": 90 },
+          "filter": { "type": "bandpass", "cutoffHz": 2500 },
+          "gain": 1.0
+        },
+        {
+          "source": { "type": "noise", "color": "pink" },
+          "envelope": { "attackMs": 15, "decayMs": 60, "sustainLevel": 0.5, "sustainMs": 180, "releaseMs": 90 },
+          "filter": { "type": "lowpass", "cutoffHz": 800 },
+          "gain": 0.7
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 5, "decayMs": 20, "sustainLevel": 0.15, "sustainMs": 10, "releaseMs": 15 },
+          "filter": { "type": "highpass", "cutoffHz": 2000 },
+          "gain": 0.25
+        }
+      ]
+    }
+  },
+  {
+    "name": "pen-click",
+    "phrase": "pen click",
+    "category": "office-productivity",
+    "concept": "A short, sharp click as the pen button snaps down firmly.",
+    "keywords": ["pen", "click", "button", "snap", "press", "retractable", "spring"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 2, "decayMs": 15, "sustainLevel": 0.2, "sustainMs": 5, "releaseMs": 15 },
+          "filter": { "type": "highpass", "cutoffHz": 4000 },
+          "gain": 0.75
+        }
+      ]
+    }
+  },
+  {
+    "name": "pencil-write",
+    "phrase": "pencil write",
+    "category": "office-productivity",
+    "concept": "A soft, textured scratch of a pencil moving steadily across paper.",
+    "keywords": ["pencil", "write", "scratch", "scribble", "paper", "graphite", "sketch"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "pink" },
+          "envelope": { "attackMs": 60, "decayMs": 60, "sustainLevel": 0.55, "sustainMs": 250, "releaseMs": 100 },
+          "filter": { "type": "bandpass", "cutoffHz": 2500 },
+          "gain": 1.0
+        }
+      ]
+    }
+  },
+  {
+    "name": "marker-squeak",
+    "phrase": "marker squeak",
+    "category": "office-productivity",
+    "concept": "A short, squeaky rising tone as a marker drags across the whiteboard.",
+    "keywords": ["marker", "squeak", "screech", "drag", "whiteboard", "friction", "tip"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 900, "pitchEnvelope": { "toHz": 1200, "timeMs": 120 } },
+          "envelope": { "attackMs": 10, "decayMs": 30, "sustainLevel": 0.3, "sustainMs": 60, "releaseMs": 70 },
+          "gain": 0.5
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 910, "pitchEnvelope": { "toHz": 1210, "timeMs": 120 } },
+          "envelope": { "attackMs": 10, "decayMs": 30, "sustainLevel": 0.3, "sustainMs": 60, "releaseMs": 70 },
+          "gain": 0.3
+        }
+      ]
+    }
+  },
+  {
+    "name": "whiteboard-wipe",
+    "phrase": "whiteboard wipe",
+    "category": "office-productivity",
+    "concept": "A soft, sweeping wash of filtered noise like a whiteboard eraser wipe.",
+    "keywords": ["whiteboard", "wipe", "erase", "sweep", "wash", "eraser", "swish"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "pink" },
+          "envelope": { "attackMs": 80, "decayMs": 100, "sustainLevel": 0.4, "sustainMs": 300, "releaseMs": 120 },
+          "filter": { "type": "lowpass", "cutoffHz": 600 },
+          "gain": 0.85
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 80, "decayMs": 100, "sustainLevel": 0.25, "sustainMs": 300, "releaseMs": 120 },
+          "filter": { "type": "highpass", "cutoffHz": 3000 },
+          "gain": 0.15
+        }
+      ]
+    }
+  },
+  {
+    "name": "keyboard-type",
+    "phrase": "keyboard type",
+    "category": "office-productivity",
+    "concept": "A short, sharp click of a single keyboard key press.",
+    "keywords": ["keyboard", "type", "key", "click", "press", "tap", "keystroke"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 2, "decayMs": 15, "sustainLevel": 0.2, "sustainMs": 5, "releaseMs": 15 },
+          "filter": { "type": "highpass", "cutoffHz": 4150 },
+          "gain": 0.73
+        }
+      ]
+    }
+  },
+  {
+    "name": "keyboard-enter",
+    "phrase": "keyboard enter",
+    "category": "office-productivity",
+    "concept": "A short, sharp click and thock confirming a keyboard enter press.",
+    "keywords": ["keyboard", "enter", "return", "confirm", "key", "click", "submit"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 2, "decayMs": 20, "sustainLevel": 0.2, "sustainMs": 6, "releaseMs": 20 },
+          "filter": { "type": "highpass", "cutoffHz": 4500 },
+          "gain": 0.65
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 450 },
+          "envelope": { "attackMs": 2, "decayMs": 25, "sustainLevel": 0.15, "sustainMs": 10, "releaseMs": 25 },
+          "gain": 0.4
+        }
+      ]
+    }
+  },
+  {
+    "name": "mouse-click",
+    "phrase": "mouse click",
+    "category": "office-productivity",
+    "concept": "A very short, sharp click of a mouse button pressing down.",
+    "keywords": ["mouse", "click", "button", "press", "cursor", "tap", "select"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 2, "decayMs": 15, "sustainLevel": 0.2, "sustainMs": 5, "releaseMs": 15 },
+          "filter": { "type": "highpass", "cutoffHz": 3700 },
+          "gain": 0.78
+        }
+      ]
+    }
+  },
+  {
+    "name": "calculator-key",
+    "phrase": "calculator key",
+    "category": "office-productivity",
+    "concept": "A short, bright beep as a calculator key is pressed.",
+    "keywords": ["calculator", "key", "beep", "press", "button", "digit", "number"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1600 },
+          "envelope": { "attackMs": 5, "decayMs": 20, "sustainLevel": 0.3, "sustainMs": 40, "releaseMs": 45 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "phone-desk-ring",
+    "phrase": "phone desk ring",
+    "category": "office-productivity",
+    "concept": "A trilling, rhythmic ring built from two close tones beating together.",
+    "keywords": ["phone", "ring", "telephone", "desk", "call", "trill", "bell"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 480 },
+          "envelope": { "attackMs": 20, "decayMs": 50, "sustainLevel": 0.4, "sustainMs": 350, "releaseMs": 120 },
+          "gain": 0.3
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 485 },
+          "envelope": { "attackMs": 20, "decayMs": 50, "sustainLevel": 0.4, "sustainMs": 350, "releaseMs": 120 },
+          "gain": 0.3
+        }
+      ]
+    }
+  },
+  {
+    "name": "intercom",
+    "phrase": "intercom",
+    "category": "office-productivity",
+    "concept": "A short, buzzy tone with a muted electronic edge for an intercom call.",
+    "keywords": ["intercom", "buzz", "call", "electronic", "tone", "speaker", "page"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 350 },
+          "envelope": { "attackMs": 8, "decayMs": 30, "sustainLevel": 0.35, "sustainMs": 70, "releaseMs": 50 },
+          "gain": 0.32
+        },
+        {
+          "source": { "type": "oscillator", "wave": "square", "freqHz": 350 },
+          "envelope": { "attackMs": 8, "decayMs": 30, "sustainLevel": 0.3, "sustainMs": 70, "releaseMs": 50 },
+          "filter": { "type": "lowpass", "cutoffHz": 900 },
+          "gain": 0.18
+        }
+      ]
+    }
+  }
+]

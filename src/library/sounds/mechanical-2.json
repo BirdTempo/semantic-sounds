@@ -1,0 +1,522 @@
+[
+  {
+    "name": "velcro",
+    "phrase": "velcro",
+    "category": "mechanical",
+    "concept": "A long, sustained velcro tear with a gritty, rough bandpass noise texture, like hooks and loops peeling apart.",
+    "keywords": ["velcro", "hook", "loop", "tear", "fastener", "rip", "strap"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 60, "decayMs": 150, "sustainLevel": 0.9, "sustainMs": 550, "releaseMs": 140 },
+          "filter": { "type": "bandpass", "cutoffHz": 1500 },
+          "gain": 1.0
+        }
+      ]
+    }
+  },
+  {
+    "name": "clasp-snap",
+    "phrase": "clasp snap",
+    "category": "mechanical",
+    "concept": "A very short, sharp clasp snap made from a crisp noise click and a quick tone pop.",
+    "keywords": ["clasp", "snap", "fasten", "buckle", "clip", "close", "catch"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 600 },
+          "envelope": { "attackMs": 3, "decayMs": 30, "sustainLevel": 0.3, "sustainMs": 25, "releaseMs": 35 },
+          "gain": 0.5
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 2, "decayMs": 20, "sustainLevel": 0.2, "sustainMs": 8, "releaseMs": 18 },
+          "filter": { "type": "highpass", "cutoffHz": 4200 },
+          "gain": 0.5
+        }
+      ]
+    }
+  },
+  {
+    "name": "clamp-tighten",
+    "phrase": "clamp tighten",
+    "category": "mechanical",
+    "concept": "A rising clamp tighten where a mid tone climbs steadily as pressure builds, with light friction noise underneath.",
+    "keywords": ["clamp", "tighten", "squeeze", "vice", "grip", "press", "secure"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 350, "pitchEnvelope": { "toHz": 550, "timeMs": 250 } },
+          "envelope": { "attackMs": 30, "decayMs": 80, "sustainLevel": 0.35, "sustainMs": 120, "releaseMs": 100 },
+          "gain": 0.5
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 30, "decayMs": 80, "sustainLevel": 0.45, "sustainMs": 120, "releaseMs": 100 },
+          "filter": { "type": "lowpass", "cutoffHz": 800 },
+          "gain": 0.32
+        }
+      ]
+    }
+  },
+  {
+    "name": "screw-turn",
+    "phrase": "screw turn",
+    "category": "mechanical",
+    "concept": "A rising screw turn with a climbing tone thread and light scraping noise as it drives into place.",
+    "keywords": ["screw", "turn", "thread", "drive", "rotate", "fastener", "bit"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 320, "pitchEnvelope": { "toHz": 480, "timeMs": 220 } },
+          "envelope": { "attackMs": 20, "decayMs": 60, "sustainLevel": 0.3, "sustainMs": 100, "releaseMs": 90 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 20, "decayMs": 60, "sustainLevel": 0.3, "sustainMs": 100, "releaseMs": 90 },
+          "filter": { "type": "bandpass", "cutoffHz": 1600 },
+          "gain": 0.35
+        }
+      ]
+    }
+  },
+  {
+    "name": "drill",
+    "phrase": "drill",
+    "category": "mechanical",
+    "concept": "A long, sustained drill buzz built from two closely detuned tones that beat against each other.",
+    "keywords": ["drill", "bore", "buzz", "spin", "tool", "power", "bit"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500 },
+          "envelope": { "attackMs": 80, "decayMs": 150, "sustainLevel": 0.4, "sustainMs": 550, "releaseMs": 140 },
+          "gain": 0.4
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 515 },
+          "envelope": { "attackMs": 80, "decayMs": 150, "sustainLevel": 0.4, "sustainMs": 550, "releaseMs": 140 },
+          "gain": 0.35
+        }
+      ]
+    }
+  },
+  {
+    "name": "hammer-strike",
+    "phrase": "hammer strike",
+    "category": "mechanical",
+    "concept": "A quick, sharp, dark hammer strike with a low tone thump and a burst of noise impact.",
+    "keywords": ["hammer", "strike", "hit", "pound", "nail", "impact", "tool"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 180 },
+          "envelope": { "attackMs": 5, "decayMs": 70, "sustainLevel": 0.3, "sustainMs": 50, "releaseMs": 60 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "noise", "color": "pink" },
+          "envelope": { "attackMs": 3, "decayMs": 45, "sustainLevel": 0.2, "sustainMs": 20, "releaseMs": 40 },
+          "filter": { "type": "lowpass", "cutoffHz": 350 },
+          "gain": 0.75
+        }
+      ]
+    }
+  },
+  {
+    "name": "saw-cut",
+    "phrase": "saw cut",
+    "category": "mechanical",
+    "concept": "A long, sustained saw cut with a rough bandpass noise texture and a steady low tone underneath.",
+    "keywords": ["saw", "cut", "blade", "slice", "tool", "wood", "cutting"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 90, "decayMs": 150, "sustainLevel": 0.5, "sustainMs": 510, "releaseMs": 150 },
+          "filter": { "type": "bandpass", "cutoffHz": 900 },
+          "gain": 0.9
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 220 },
+          "envelope": { "attackMs": 90, "decayMs": 150, "sustainLevel": 0.3, "sustainMs": 510, "releaseMs": 150 },
+          "gain": 0.4
+        }
+      ]
+    }
+  },
+  {
+    "name": "sand-paper",
+    "phrase": "sand paper",
+    "category": "mechanical",
+    "concept": "A long, sustained sandpaper rub with a fine, breathy noise texture and a soft high scratch.",
+    "keywords": ["sandpaper", "sand", "abrasive", "rub", "smooth", "grit", "polish"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 80, "decayMs": 150, "sustainLevel": 0.45, "sustainMs": 470, "releaseMs": 150 },
+          "filter": { "type": "bandpass", "cutoffHz": 2200 },
+          "gain": 1.0
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 260 },
+          "envelope": { "attackMs": 80, "decayMs": 150, "sustainLevel": 0.3, "sustainMs": 470, "releaseMs": 150 },
+          "gain": 0.28
+        }
+      ]
+    }
+  },
+  {
+    "name": "chain-rattle",
+    "phrase": "chain rattle",
+    "category": "mechanical",
+    "concept": "A quick, metallic chain rattle made from two closely detuned tones and a burst of clattering noise.",
+    "keywords": ["chain", "rattle", "link", "shake", "metal", "clatter", "loose"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 700 },
+          "envelope": { "attackMs": 8, "decayMs": 40, "sustainLevel": 0.4, "sustainMs": 85, "releaseMs": 55 },
+          "gain": 0.42
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 730 },
+          "envelope": { "attackMs": 8, "decayMs": 40, "sustainLevel": 0.4, "sustainMs": 85, "releaseMs": 55 },
+          "gain": 0.42
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 5, "decayMs": 30, "sustainLevel": 0.35, "sustainMs": 45, "releaseMs": 40 },
+          "filter": { "type": "bandpass", "cutoffHz": 3000 },
+          "gain": 0.7
+        }
+      ]
+    }
+  },
+  {
+    "name": "pulley-lift",
+    "phrase": "pulley lift",
+    "category": "mechanical",
+    "concept": "A rising pulley lift where a rounded tone climbs smoothly as the rope draws taut, with gentle strain noise.",
+    "keywords": ["pulley", "lift", "hoist", "rope", "raise", "haul", "wheel"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 260, "pitchEnvelope": { "toHz": 420, "timeMs": 350 } },
+          "envelope": { "attackMs": 50, "decayMs": 90, "sustainLevel": 0.35, "sustainMs": 180, "releaseMs": 110 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 50, "decayMs": 90, "sustainLevel": 0.3, "sustainMs": 180, "releaseMs": 110 },
+          "filter": { "type": "lowpass", "cutoffHz": 500 },
+          "gain": 0.5
+        }
+      ]
+    }
+  },
+  {
+    "name": "conveyor-move",
+    "phrase": "conveyor move",
+    "category": "mechanical",
+    "concept": "A long, sustained conveyor hum with a steady low tone and soft rolling noise underneath.",
+    "keywords": ["conveyor", "belt", "move", "roll", "transport", "hum", "line"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 220 },
+          "envelope": { "attackMs": 80, "decayMs": 150, "sustainLevel": 0.4, "sustainMs": 520, "releaseMs": 150 },
+          "gain": 0.5
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 80, "decayMs": 150, "sustainLevel": 0.35, "sustainMs": 520, "releaseMs": 150 },
+          "filter": { "type": "lowpass", "cutoffHz": 280 },
+          "gain": 0.85
+        }
+      ]
+    }
+  },
+  {
+    "name": "robot-arm",
+    "phrase": "robot arm",
+    "category": "mechanical",
+    "concept": "A quick, precise robot arm move with two tones sliding in opposite directions, like a joint pivoting into place.",
+    "keywords": ["robot", "arm", "joint", "servo", "pivot", "mechanism", "automation"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 500, "pitchEnvelope": { "toHz": 650, "timeMs": 150 } },
+          "envelope": { "attackMs": 12, "decayMs": 45, "sustainLevel": 0.3, "sustainMs": 70, "releaseMs": 60 },
+          "gain": 0.35
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 500, "pitchEnvelope": { "toHz": 370, "timeMs": 150 } },
+          "envelope": { "attackMs": 12, "decayMs": 45, "sustainLevel": 0.3, "sustainMs": 70, "releaseMs": 60 },
+          "gain": 0.35
+        }
+      ]
+    }
+  },
+  {
+    "name": "servo-move",
+    "phrase": "servo move",
+    "category": "mechanical",
+    "concept": "A short, quick, rising servo move with a bright tone that snaps upward in pitch.",
+    "keywords": ["servo", "move", "motor", "actuator", "step", "precise", "joint"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 700, "pitchEnvelope": { "toHz": 1400, "timeMs": 65 } },
+          "envelope": { "attackMs": 5, "decayMs": 30, "sustainLevel": 0.3, "sustainMs": 25, "releaseMs": 30 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 5, "decayMs": 20, "sustainLevel": 0.15, "sustainMs": 35, "releaseMs": 30 },
+          "filter": { "type": "highpass", "cutoffHz": 5000 },
+          "gain": 0.1
+        }
+      ]
+    }
+  },
+  {
+    "name": "fan-spin-up",
+    "phrase": "fan spin up",
+    "category": "mechanical",
+    "concept": "A long, sustained, rising fan spin up where a tone climbs smoothly as the blades pick up speed.",
+    "keywords": ["fan", "spin", "blade", "speed", "start", "accelerate", "airflow"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 200, "pitchEnvelope": { "toHz": 460, "timeMs": 650 } },
+          "envelope": { "attackMs": 70, "decayMs": 190, "sustainLevel": 0.42, "sustainMs": 480, "releaseMs": 160 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "fan-spin-down",
+    "phrase": "fan spin down",
+    "category": "mechanical",
+    "concept": "A long, sustained, falling fan spin down where a tone eases downward as the blades slow to a stop.",
+    "keywords": ["fan", "spin", "blade", "slow", "stop", "decelerate", "airflow"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 460, "pitchEnvelope": { "toHz": 200, "timeMs": 650 } },
+          "envelope": { "attackMs": 70, "decayMs": 190, "sustainLevel": 0.42, "sustainMs": 480, "releaseMs": 160 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "pump-cycle",
+    "phrase": "pump cycle",
+    "category": "mechanical",
+    "concept": "A soft pump cycle with a rounded tone swell and a light mechanical noise pulse underneath.",
+    "keywords": ["pump", "cycle", "stroke", "piston", "fluid", "pulse", "mechanism"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 300 },
+          "envelope": { "attackMs": 40, "decayMs": 90, "sustainLevel": 0.35, "sustainMs": 160, "releaseMs": 100 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 40, "decayMs": 90, "sustainLevel": 0.3, "sustainMs": 160, "releaseMs": 100 },
+          "filter": { "type": "lowpass", "cutoffHz": 600 },
+          "gain": 0.5
+        }
+      ]
+    }
+  },
+  {
+    "name": "compressor-kick",
+    "phrase": "compressor kick",
+    "category": "mechanical",
+    "concept": "A sharp compressor kick that punches in with a percussive low thump, then settles into a quiet steady hum.",
+    "keywords": ["compressor", "kick", "air", "punch", "hum", "pneumatic", "start"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 200 },
+          "envelope": { "attackMs": 4, "decayMs": 80, "sustainLevel": 0.35, "sustainMs": 300, "releaseMs": 120 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "noise", "color": "pink" },
+          "envelope": { "attackMs": 4, "decayMs": 80, "sustainLevel": 0.3, "sustainMs": 300, "releaseMs": 120 },
+          "filter": { "type": "lowpass", "cutoffHz": 300 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "steam-release",
+    "phrase": "steam release",
+    "category": "mechanical",
+    "concept": "A long, sustained steam release with an airy, hissing noise texture escaping steadily.",
+    "keywords": ["steam", "release", "hiss", "vent", "pressure", "escape", "air"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 90, "decayMs": 160, "sustainLevel": 0.32, "sustainMs": 480, "releaseMs": 170 },
+          "filter": { "type": "highpass", "cutoffHz": 3200 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "pressure-build",
+    "phrase": "pressure build",
+    "category": "mechanical",
+    "concept": "A long, sustained, rising pressure build where a low tone climbs gradually as tension increases.",
+    "keywords": ["pressure", "build", "tension", "rise", "gauge", "tank", "climb"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 220, "pitchEnvelope": { "toHz": 340, "timeMs": 700 } },
+          "envelope": { "attackMs": 90, "decayMs": 180, "sustainLevel": 0.4, "sustainMs": 480, "releaseMs": 150 },
+          "gain": 0.5
+        }
+      ]
+    }
+  },
+  {
+    "name": "metal-clang",
+    "phrase": "metal clang",
+    "category": "mechanical",
+    "concept": "A quick, sharp, bright metal clang with a ringing high tone and a crisp noise strike.",
+    "keywords": ["metal", "clang", "ring", "strike", "impact", "bell", "hit"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 900 },
+          "envelope": { "attackMs": 2, "decayMs": 70, "sustainLevel": 0.25, "sustainMs": 40, "releaseMs": 70 },
+          "gain": 0.4
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 2, "decayMs": 50, "sustainLevel": 0.2, "sustainMs": 20, "releaseMs": 50 },
+          "filter": { "type": "highpass", "cutoffHz": 6000 },
+          "gain": 0.75
+        }
+      ]
+    }
+  },
+  {
+    "name": "metal-scrape",
+    "phrase": "metal scrape",
+    "category": "mechanical",
+    "concept": "A long, sustained metal scrape with a harsh, gritty bandpass noise texture over a low ringing tone.",
+    "keywords": ["metal", "scrape", "drag", "grind", "harsh", "friction", "rough"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 85, "decayMs": 150, "sustainLevel": 0.5, "sustainMs": 480, "releaseMs": 135 },
+          "filter": { "type": "bandpass", "cutoffHz": 1000 },
+          "gain": 0.9
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 260 },
+          "envelope": { "attackMs": 85, "decayMs": 150, "sustainLevel": 0.3, "sustainMs": 480, "releaseMs": 135 },
+          "gain": 0.35
+        }
+      ]
+    }
+  },
+  {
+    "name": "rivet",
+    "phrase": "rivet",
+    "category": "mechanical",
+    "concept": "A very short, sharp rivet punch made from a tight noise burst and a quick tone thump.",
+    "keywords": ["rivet", "punch", "fastener", "metal", "press", "pop", "tool"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 400 },
+          "envelope": { "attackMs": 2, "decayMs": 30, "sustainLevel": 0.25, "sustainMs": 20, "releaseMs": 30 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 2, "decayMs": 20, "sustainLevel": 0.2, "sustainMs": 6, "releaseMs": 18 },
+          "filter": { "type": "highpass", "cutoffHz": 4000 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "weld-spark",
+    "phrase": "weld spark",
+    "category": "mechanical",
+    "concept": "A quick, sharp, bright weld spark crackle made from a burst of high, sputtering noise.",
+    "keywords": ["weld", "spark", "crackle", "fuse", "arc", "torch", "metal"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 2, "decayMs": 15, "sustainLevel": 0.2, "sustainMs": 5, "releaseMs": 15 },
+          "filter": { "type": "highpass", "cutoffHz": 4200 },
+          "gain": 0.78
+        }
+      ]
+    }
+  },
+  {
+    "name": "machine-hum",
+    "phrase": "machine hum",
+    "category": "mechanical",
+    "concept": "A long, sustained machine hum with a steady, warm low tone and soft rounded texture underneath.",
+    "keywords": ["machine", "hum", "running", "steady", "idle", "factory", "drone"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 200 },
+          "envelope": { "attackMs": 90, "decayMs": 160, "sustainLevel": 0.42, "sustainMs": 490, "releaseMs": 160 },
+          "gain": 0.5
+        },
+        {
+          "source": { "type": "noise", "color": "pink" },
+          "envelope": { "attackMs": 90, "decayMs": 160, "sustainLevel": 0.35, "sustainMs": 490, "releaseMs": 160 },
+          "filter": { "type": "lowpass", "cutoffHz": 260 },
+          "gain": 0.8
+        }
+      ]
+    }
+  },
+  {
+    "name": "belt-slip",
+    "phrase": "belt slip",
+    "category": "mechanical",
+    "concept": "A quick, falling belt slip where a friction tone slides down in pitch as it catches and releases.",
+    "keywords": ["belt", "slip", "friction", "slide", "loose", "catch", "gear"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 500, "pitchEnvelope": { "toHz": 340, "timeMs": 140 } },
+          "envelope": { "attackMs": 8, "decayMs": 50, "sustainLevel": 0.3, "sustainMs": 60, "releaseMs": 62 },
+          "gain": 0.5
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 8, "decayMs": 50, "sustainLevel": 0.25, "sustainMs": 60, "releaseMs": 62 },
+          "filter": { "type": "bandpass", "cutoffHz": 1500 },
+          "gain": 0.45
+        }
+      ]
+    }
+  }
+]

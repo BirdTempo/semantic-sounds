@@ -1,0 +1,459 @@
+[
+  {
+    "name": "streak-broken",
+    "phrase": "streak broken",
+    "category": "progress",
+    "concept": "A soft chime with a falling pitch. It marks a broken streak.",
+    "keywords": ["streak", "broken", "lost", "reset", "miss", "chain", "gap"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 700, "pitchEnvelope": { "toHz": 420, "timeMs": 140 } },
+          "envelope": { "attackMs": 18, "decayMs": 50, "sustainLevel": 0.3, "sustainMs": 40, "releaseMs": 70 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "rank-up",
+    "phrase": "rank up",
+    "category": "progress",
+    "concept": "A soft chime with a rising pitch. It marks a rank increase.",
+    "keywords": ["rank", "level", "up", "increase", "promote", "tier", "upgrade"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 520, "pitchEnvelope": { "toHz": 780, "timeMs": 110 } },
+          "envelope": { "attackMs": 14, "decayMs": 40, "sustainLevel": 0.3, "sustainMs": 30, "releaseMs": 50 },
+          "gain": 0.62
+        }
+      ]
+    }
+  },
+  {
+    "name": "rank-down",
+    "phrase": "rank down",
+    "category": "progress",
+    "concept": "A falling chime with a gentle edge. It marks a rank decrease.",
+    "keywords": ["rank", "level", "down", "decrease", "demote", "tier", "downgrade"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 650, "pitchEnvelope": { "toHz": 430, "timeMs": 100 } },
+          "envelope": { "attackMs": 10, "decayMs": 35, "sustainLevel": 0.25, "sustainMs": 25, "releaseMs": 45 },
+          "gain": 0.63
+        }
+      ]
+    }
+  },
+  {
+    "name": "badge-earned",
+    "phrase": "badge earned",
+    "category": "progress",
+    "concept": "A soft two-tone chime. It marks an earned badge.",
+    "keywords": ["badge", "earned", "award", "unlock", "achievement", "reward", "milestone"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 600 },
+          "envelope": { "attackMs": 25, "decayMs": 50, "sustainLevel": 0.35, "sustainMs": 50, "releaseMs": 70 },
+          "gain": 0.45
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 900 },
+          "envelope": { "attackMs": 25, "decayMs": 50, "sustainLevel": 0.3, "sustainMs": 50, "releaseMs": 70 },
+          "gain": 0.4
+        }
+      ]
+    }
+  },
+  {
+    "name": "quest-complete",
+    "phrase": "quest complete",
+    "category": "progress",
+    "concept": "A soft, rising two-tone chime. It marks a finished quest.",
+    "keywords": ["quest", "complete", "finished", "done", "success", "achievement", "mission"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 450, "pitchEnvelope": { "toHz": 700, "timeMs": 180 } },
+          "envelope": { "attackMs": 20, "decayMs": 60, "sustainLevel": 0.3, "sustainMs": 60, "releaseMs": 90 },
+          "gain": 0.42
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 700, "pitchEnvelope": { "toHz": 950, "timeMs": 180 } },
+          "envelope": { "attackMs": 20, "decayMs": 60, "sustainLevel": 0.25, "sustainMs": 60, "releaseMs": 90 },
+          "gain": 0.35
+        }
+      ]
+    }
+  },
+  {
+    "name": "task-started",
+    "phrase": "task started",
+    "category": "progress",
+    "concept": "A quick, rising blip. It marks the start of a task.",
+    "keywords": ["task", "start", "begin", "started", "initiate", "launch"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 450, "pitchEnvelope": { "toHz": 600, "timeMs": 70 } },
+          "envelope": { "attackMs": 15, "decayMs": 35, "sustainLevel": 0.3, "sustainMs": 30, "releaseMs": 40 },
+          "gain": 0.48
+        }
+      ]
+    }
+  },
+  {
+    "name": "task-failed",
+    "phrase": "task failed",
+    "category": "progress",
+    "concept": "A falling two-tone chime with a slight wobble. It marks a failed task.",
+    "keywords": ["task", "failed", "fail", "error", "broken", "unsuccessful", "retry"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 480, "pitchEnvelope": { "toHz": 260, "timeMs": 130 } },
+          "envelope": { "attackMs": 15, "decayMs": 45, "sustainLevel": 0.3, "sustainMs": 40, "releaseMs": 60 },
+          "gain": 0.42
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 280, "timeMs": 130 } },
+          "envelope": { "attackMs": 15, "decayMs": 45, "sustainLevel": 0.3, "sustainMs": 40, "releaseMs": 60 },
+          "gain": 0.4
+        }
+      ]
+    }
+  },
+  {
+    "name": "checklist-item",
+    "phrase": "checklist item",
+    "category": "progress",
+    "concept": "A quick, sharp tick for one checklist item.",
+    "keywords": ["checklist", "item", "tick", "check", "step", "mark"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 750 },
+          "envelope": { "attackMs": 3, "decayMs": 25, "sustainLevel": 0.2, "sustainMs": 8, "releaseMs": 20 },
+          "gain": 0.5
+        }
+      ]
+    }
+  },
+  {
+    "name": "all-done",
+    "phrase": "all done",
+    "category": "progress",
+    "concept": "A soft, sustained chord marks that everything is done.",
+    "keywords": ["done", "complete", "finished", "all", "everything", "wrap", "close"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500 },
+          "envelope": { "attackMs": 80, "decayMs": 150, "sustainLevel": 0.3, "sustainMs": 300, "releaseMs": 370 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 750 },
+          "envelope": { "attackMs": 80, "decayMs": 150, "sustainLevel": 0.25, "sustainMs": 300, "releaseMs": 370 },
+          "gain": 0.45
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 620 },
+          "envelope": { "attackMs": 80, "decayMs": 150, "sustainLevel": 0.2, "sustainMs": 300, "releaseMs": 370 },
+          "gain": 0.32
+        }
+      ]
+    }
+  },
+  {
+    "name": "queue-advanced",
+    "phrase": "queue advanced",
+    "category": "progress",
+    "concept": "A quick two-tone chime. It marks the queue moving forward.",
+    "keywords": ["queue", "advance", "next", "move", "forward", "step"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500 },
+          "envelope": { "attackMs": 10, "decayMs": 30, "sustainLevel": 0.3, "sustainMs": 25, "releaseMs": 35 },
+          "gain": 0.38
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 750 },
+          "envelope": { "attackMs": 10, "decayMs": 30, "sustainLevel": 0.25, "sustainMs": 20, "releaseMs": 30 },
+          "gain": 0.34
+        }
+      ]
+    }
+  },
+  {
+    "name": "queue-empty",
+    "phrase": "queue empty",
+    "category": "progress",
+    "concept": "A soft, falling tone. It marks an empty queue.",
+    "keywords": ["queue", "empty", "cleared", "nothing", "finished", "drained"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 420, "pitchEnvelope": { "toHz": 280, "timeMs": 220 } },
+          "envelope": { "attackMs": 40, "decayMs": 80, "sustainLevel": 0.25, "sustainMs": 80, "releaseMs": 120 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "batch-complete",
+    "phrase": "batch complete",
+    "category": "progress",
+    "concept": "A soft, rising chime with a note that swells in after it. It marks a finished batch.",
+    "keywords": ["batch", "complete", "finished", "done", "success", "group", "processed"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 480, "pitchEnvelope": { "toHz": 680, "timeMs": 120 } },
+          "envelope": { "attackMs": 15, "decayMs": 40, "sustainLevel": 0.3, "sustainMs": 35, "releaseMs": 50 },
+          "gain": 0.45
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 820 },
+          "envelope": { "attackMs": 70, "decayMs": 40, "sustainLevel": 0.25, "sustainMs": 30, "releaseMs": 40 },
+          "gain": 0.4
+        }
+      ]
+    }
+  },
+  {
+    "name": "render-complete",
+    "phrase": "render complete",
+    "category": "progress",
+    "concept": "A soft, rising triangle-wave chime. It marks a finished render.",
+    "keywords": ["render", "complete", "finished", "done", "success", "processed", "output"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 400, "pitchEnvelope": { "toHz": 650, "timeMs": 150 } },
+          "envelope": { "attackMs": 20, "decayMs": 50, "sustainLevel": 0.3, "sustainMs": 40, "releaseMs": 60 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "export-complete",
+    "phrase": "export complete",
+    "category": "progress",
+    "concept": "A sharp, rising chime. It marks a finished export.",
+    "keywords": ["export", "complete", "finished", "done", "success", "saved", "output"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 550, "pitchEnvelope": { "toHz": 900, "timeMs": 110 } },
+          "envelope": { "attackMs": 8, "decayMs": 35, "sustainLevel": 0.3, "sustainMs": 30, "releaseMs": 45 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "import-complete",
+    "phrase": "import complete",
+    "category": "progress",
+    "concept": "A soft two-tone chime. It marks a finished import.",
+    "keywords": ["import", "complete", "finished", "done", "success", "loaded", "added"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 480 },
+          "envelope": { "attackMs": 45, "decayMs": 60, "sustainLevel": 0.3, "sustainMs": 50, "releaseMs": 65 },
+          "gain": 0.42
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 720 },
+          "envelope": { "attackMs": 45, "decayMs": 60, "sustainLevel": 0.25, "sustainMs": 50, "releaseMs": 65 },
+          "gain": 0.38
+        }
+      ]
+    }
+  },
+  {
+    "name": "scan-complete",
+    "phrase": "scan complete",
+    "category": "progress",
+    "concept": "A soft chime after a brief noise sweep. It marks a finished scan.",
+    "keywords": ["scan", "complete", "finished", "done", "success", "sweep", "check"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 650 },
+          "envelope": { "attackMs": 30, "decayMs": 50, "sustainLevel": 0.3, "sustainMs": 50, "releaseMs": 60 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 5, "decayMs": 40, "sustainLevel": 0.15, "sustainMs": 20, "releaseMs": 30 },
+          "filter": { "type": "lowpass", "cutoffHz": 700 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "build-passed",
+    "phrase": "build passed",
+    "category": "progress",
+    "concept": "A quick, soft two-tone chime. It marks a passed build.",
+    "keywords": ["build", "passed", "success", "done", "complete", "pipeline", "ci"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 523 },
+          "envelope": { "attackMs": 12, "decayMs": 35, "sustainLevel": 0.3, "sustainMs": 30, "releaseMs": 40 },
+          "gain": 0.4
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 784 },
+          "envelope": { "attackMs": 12, "decayMs": 35, "sustainLevel": 0.25, "sustainMs": 25, "releaseMs": 35 },
+          "gain": 0.35
+        }
+      ]
+    }
+  },
+  {
+    "name": "build-failed",
+    "phrase": "build failed",
+    "category": "progress",
+    "concept": "A falling tone with a brief impact. It marks a failed build.",
+    "keywords": ["build", "failed", "fail", "error", "broken", "pipeline", "ci"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 400, "pitchEnvelope": { "toHz": 260, "timeMs": 150 } },
+          "envelope": { "attackMs": 15, "decayMs": 60, "sustainLevel": 0.3, "sustainMs": 50, "releaseMs": 80 },
+          "gain": 0.5
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 3, "decayMs": 30, "sustainLevel": 0.2, "sustainMs": 8, "releaseMs": 25 },
+          "filter": { "type": "lowpass", "cutoffHz": 350 },
+          "gain": 1.0
+        }
+      ]
+    }
+  },
+  {
+    "name": "test-passed",
+    "phrase": "test passed",
+    "category": "progress",
+    "concept": "A quick, sharp, rising chime. It marks a passed test.",
+    "keywords": ["test", "passed", "success", "done", "complete", "unit", "suite"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 600, "pitchEnvelope": { "toHz": 950, "timeMs": 90 } },
+          "envelope": { "attackMs": 6, "decayMs": 30, "sustainLevel": 0.3, "sustainMs": 25, "releaseMs": 35 },
+          "gain": 0.5
+        }
+      ]
+    }
+  },
+  {
+    "name": "test-failed",
+    "phrase": "test failed",
+    "category": "progress",
+    "concept": "A quick, sharp, falling chime with a slight wobble. It marks a failed test.",
+    "keywords": ["test", "failed", "fail", "error", "broken", "unit", "suite"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 450, "pitchEnvelope": { "toHz": 320, "timeMs": 90 } },
+          "envelope": { "attackMs": 6, "decayMs": 35, "sustainLevel": 0.25, "sustainMs": 20, "releaseMs": 30 },
+          "gain": 0.4
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 430, "pitchEnvelope": { "toHz": 305, "timeMs": 90 } },
+          "envelope": { "attackMs": 6, "decayMs": 35, "sustainLevel": 0.25, "sustainMs": 20, "releaseMs": 30 },
+          "gain": 0.37
+        }
+      ]
+    }
+  },
+  {
+    "name": "deploy-start",
+    "phrase": "deploy start",
+    "category": "progress",
+    "concept": "A quick, sharp blip. It marks the start of a deployment.",
+    "keywords": ["deploy", "start", "begin", "deployment", "release", "launch"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 500 },
+          "envelope": { "attackMs": 4, "decayMs": 30, "sustainLevel": 0.25, "sustainMs": 20, "releaseMs": 30 },
+          "gain": 0.65
+        }
+      ]
+    }
+  },
+  {
+    "name": "deploy-success",
+    "phrase": "deploy success",
+    "category": "progress",
+    "concept": "A soft, rising chime with a swelling second tone. It marks a successful deployment.",
+    "keywords": ["deploy", "success", "deployed", "live", "done", "complete", "shipped"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 800, "timeMs": 220 } },
+          "envelope": { "attackMs": 30, "decayMs": 70, "sustainLevel": 0.3, "sustainMs": 80, "releaseMs": 120 },
+          "gain": 0.45
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 750 },
+          "envelope": { "attackMs": 100, "decayMs": 60, "sustainLevel": 0.25, "sustainMs": 60, "releaseMs": 80 },
+          "gain": 0.4
+        }
+      ]
+    }
+  },
+  {
+    "name": "deploy-failed",
+    "phrase": "deploy failed",
+    "category": "progress",
+    "concept": "A falling tone with a low thump. It marks a failed deployment.",
+    "keywords": ["deploy", "failed", "fail", "error", "broken", "release", "down"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 350, "pitchEnvelope": { "toHz": 220, "timeMs": 200 } },
+          "envelope": { "attackMs": 20, "decayMs": 80, "sustainLevel": 0.3, "sustainMs": 80, "releaseMs": 120 },
+          "gain": 0.5
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 3, "decayMs": 35, "sustainLevel": 0.2, "sustainMs": 10, "releaseMs": 30 },
+          "filter": { "type": "lowpass", "cutoffHz": 300 },
+          "gain": 1.0
+        }
+      ]
+    }
+  },
+  {
+    "name": "rollback",
+    "phrase": "rollback",
+    "category": "progress",
+    "concept": "A soft, falling sweep to a low tone. It marks a rollback.",
+    "keywords": ["rollback", "revert", "undo", "restore", "previous", "reverse"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 240, "timeMs": 280 } },
+          "envelope": { "attackMs": 30, "decayMs": 85, "sustainLevel": 0.3, "sustainMs": 80, "releaseMs": 135 },
+          "gain": 0.55
+        }
+      ]
+    }
+  }
+]

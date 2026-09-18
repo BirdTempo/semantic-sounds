@@ -1,0 +1,477 @@
+[
+  {
+    "name": "rocket-launch",
+    "phrase": "rocket launch",
+    "category": "science-space",
+    "concept": "A long, rising rocket launch rumble that builds from a low ignition roar.",
+    "keywords": ["rocket", "launch", "liftoff", "ignition", "blastoff", "roar", "rumble"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 100, "pitchEnvelope": { "toHz": 550, "timeMs": 900 } },
+          "envelope": { "attackMs": 150, "decayMs": 200, "sustainLevel": 0.42, "sustainMs": 400, "releaseMs": 250 },
+          "gain": 0.4
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 5, "decayMs": 100, "sustainLevel": 0.3, "sustainMs": 100, "releaseMs": 50 },
+          "filter": { "type": "lowpass", "cutoffHz": 800 },
+          "gain": 0.07
+        }
+      ]
+    }
+  },
+  {
+    "name": "engine-burn",
+    "phrase": "engine burn",
+    "category": "science-space",
+    "concept": "A long, sustained engine burn hum built from two close tones beating together.",
+    "keywords": ["engine", "burn", "thrust", "hum", "drone", "sustain", "propulsion"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 220 },
+          "envelope": { "attackMs": 100, "decayMs": 100, "sustainLevel": 0.6, "sustainMs": 500, "releaseMs": 150 },
+          "gain": 0.32
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 224 },
+          "envelope": { "attackMs": 100, "decayMs": 100, "sustainLevel": 0.6, "sustainMs": 500, "releaseMs": 150 },
+          "gain": 0.32
+        }
+      ]
+    }
+  },
+  {
+    "name": "orbit-insertion",
+    "phrase": "orbit insertion",
+    "category": "science-space",
+    "concept": "A smooth, rising orbit insertion tone that glides upward and settles into a steady hold.",
+    "keywords": ["orbit", "insertion", "transition", "spacecraft", "maneuver", "glide", "settle"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 320, "pitchEnvelope": { "toHz": 560, "timeMs": 350 } },
+          "envelope": { "attackMs": 80, "decayMs": 80, "sustainLevel": 0.45, "sustainMs": 300, "releaseMs": 140 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "docking",
+    "phrase": "docking",
+    "category": "science-space",
+    "concept": "A short, sharp docking clamp click as two spacecraft lock together.",
+    "keywords": ["dock", "docking", "clamp", "lock", "connect", "spacecraft", "click"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500 },
+          "envelope": { "attackMs": 2, "decayMs": 6, "sustainLevel": 0.25, "sustainMs": 8, "releaseMs": 44 },
+          "gain": 0.62
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 2, "decayMs": 5, "sustainLevel": 0.25, "sustainMs": 6, "releaseMs": 27 },
+          "filter": { "type": "highpass", "cutoffHz": 4000 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "airlock",
+    "phrase": "airlock",
+    "category": "science-space",
+    "concept": "A soft airlock hiss as pressurized air escapes steadily through the seal.",
+    "keywords": ["airlock", "hiss", "pressurize", "seal", "air", "depressurize", "hatch"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 40, "decayMs": 60, "sustainLevel": 0.5, "sustainMs": 200, "releaseMs": 100 },
+          "filter": { "type": "lowpass", "cutoffHz": 3000 },
+          "gain": 0.95
+        }
+      ]
+    }
+  },
+  {
+    "name": "space-beacon",
+    "phrase": "space beacon",
+    "category": "science-space",
+    "concept": "A short, sharp beacon pulse that rises quickly to signal a location.",
+    "keywords": ["beacon", "signal", "pulse", "locate", "blip", "alert", "ping"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 400, "pitchEnvelope": { "toHz": 700, "timeMs": 110 } },
+          "envelope": { "attackMs": 6, "decayMs": 30, "sustainLevel": 0.3, "sustainMs": 40, "releaseMs": 34 },
+          "gain": 0.62
+        }
+      ]
+    }
+  },
+  {
+    "name": "radar-sweep",
+    "phrase": "radar sweep",
+    "category": "science-space",
+    "concept": "A sweeping, rising radar tone that glides upward as it scans the area.",
+    "keywords": ["radar", "sweep", "scan", "detect", "tracking", "signal", "wave"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 320, "pitchEnvelope": { "toHz": 680, "timeMs": 350 } },
+          "envelope": { "attackMs": 60, "decayMs": 80, "sustainLevel": 0.4, "sustainMs": 250, "releaseMs": 110 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "sonar-ping",
+    "phrase": "sonar ping",
+    "category": "science-space",
+    "concept": "A sharp sonar ping tone with a slow echo that fades underwater.",
+    "keywords": ["sonar", "ping", "echo", "underwater", "submarine", "detect", "sound"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 600 },
+          "envelope": { "attackMs": 4, "decayMs": 100, "sustainLevel": 0.3, "sustainMs": 200, "releaseMs": 300 },
+          "gain": 0.5
+        }
+      ]
+    }
+  },
+  {
+    "name": "satellite-signal",
+    "phrase": "satellite signal",
+    "category": "science-space",
+    "concept": "A short satellite signal chirp made from two tones crossing in pitch.",
+    "keywords": ["satellite", "signal", "transmit", "chirp", "communication", "orbit", "broadcast"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 900, "timeMs": 150 } },
+          "envelope": { "attackMs": 15, "decayMs": 40, "sustainLevel": 0.3, "sustainMs": 50, "releaseMs": 45 },
+          "gain": 0.4
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 900, "pitchEnvelope": { "toHz": 500, "timeMs": 150 } },
+          "envelope": { "attackMs": 15, "decayMs": 40, "sustainLevel": 0.3, "sustainMs": 50, "releaseMs": 45 },
+          "gain": 0.4
+        }
+      ]
+    }
+  },
+  {
+    "name": "telemetry",
+    "phrase": "telemetry",
+    "category": "science-space",
+    "concept": "A soft telemetry tone that holds steady while data streams quietly.",
+    "keywords": ["telemetry", "data", "stream", "transmit", "spacecraft", "monitor", "readout"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 550 },
+          "envelope": { "attackMs": 40, "decayMs": 60, "sustainLevel": 0.4, "sustainMs": 150, "releaseMs": 50 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "geiger-click",
+    "phrase": "geiger click",
+    "category": "science-space",
+    "concept": "A short, sharp geiger counter click bursting with static crackle.",
+    "keywords": ["geiger", "click", "radiation", "counter", "static", "crackle", "detect"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 2, "decayMs": 6, "sustainLevel": 0.35, "sustainMs": 6, "releaseMs": 46 },
+          "filter": { "type": "highpass", "cutoffHz": 4000 },
+          "gain": 0.95
+        }
+      ]
+    }
+  },
+  {
+    "name": "particle-hit",
+    "phrase": "particle hit",
+    "category": "science-space",
+    "concept": "A short, sharp particle hit with a quick tonal click.",
+    "keywords": ["particle", "hit", "impact", "collision", "physics", "detector", "click"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 700 },
+          "envelope": { "attackMs": 3, "decayMs": 25, "sustainLevel": 0.15, "sustainMs": 10, "releaseMs": 20 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 2, "decayMs": 20, "sustainLevel": 0.2, "sustainMs": 8, "releaseMs": 15 },
+          "filter": { "type": "highpass", "cutoffHz": 3500 },
+          "gain": 0.4
+        }
+      ]
+    }
+  },
+  {
+    "name": "laser-pulse",
+    "phrase": "laser pulse",
+    "category": "science-space",
+    "concept": "A short, sharp laser pulse that snaps downward in pitch like a zap.",
+    "keywords": ["laser", "pulse", "zap", "weapon", "beam", "shot", "sci-fi"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1000, "pitchEnvelope": { "toHz": 400, "timeMs": 83 } },
+          "envelope": { "attackMs": 3, "decayMs": 30, "sustainLevel": 0.2, "sustainMs": 20, "releaseMs": 30 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "energy-charge",
+    "phrase": "energy charge",
+    "category": "science-space",
+    "concept": "A rising energy charge that builds steadily before releasing all at once.",
+    "keywords": ["energy", "charge", "power", "build", "ready", "accumulate", "surge"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 300, "pitchEnvelope": { "toHz": 800, "timeMs": 500 } },
+          "envelope": { "attackMs": 100, "decayMs": 100, "sustainLevel": 0.5, "sustainMs": 300, "releaseMs": 200 },
+          "gain": 0.5
+        }
+      ]
+    }
+  },
+  {
+    "name": "energy-discharge",
+    "phrase": "energy discharge",
+    "category": "science-space",
+    "concept": "A sharp, falling energy discharge that snaps and drops in pitch quickly.",
+    "keywords": ["energy", "discharge", "release", "burst", "power", "zap", "surge"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 900, "pitchEnvelope": { "toHz": 300, "timeMs": 125 } },
+          "envelope": { "attackMs": 5, "decayMs": 40, "sustainLevel": 0.25, "sustainMs": 30, "releaseMs": 50 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 3, "decayMs": 20, "sustainLevel": 0.2, "sustainMs": 10, "releaseMs": 20 },
+          "filter": { "type": "lowpass", "cutoffHz": 2000 },
+          "gain": 0.15
+        }
+      ]
+    }
+  },
+  {
+    "name": "force-field",
+    "phrase": "force field",
+    "category": "science-space",
+    "concept": "A long, sustained force field shimmer made from two close humming tones.",
+    "keywords": ["force", "field", "shield", "barrier", "shimmer", "hum", "protect"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500 },
+          "envelope": { "attackMs": 150, "decayMs": 100, "sustainLevel": 0.55, "sustainMs": 450, "releaseMs": 150 },
+          "gain": 0.32
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 508 },
+          "envelope": { "attackMs": 150, "decayMs": 100, "sustainLevel": 0.55, "sustainMs": 450, "releaseMs": 150 },
+          "gain": 0.32
+        }
+      ]
+    }
+  },
+  {
+    "name": "teleporter-hum",
+    "phrase": "teleporter hum",
+    "category": "science-space",
+    "concept": "A rising teleporter hum that shimmers softly as matter dissolves away.",
+    "keywords": ["teleporter", "teleport", "warp", "dissolve", "shimmer", "matter", "hum"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 350, "pitchEnvelope": { "toHz": 650, "timeMs": 500 } },
+          "envelope": { "attackMs": 120, "decayMs": 100, "sustainLevel": 0.5, "sustainMs": 300, "releaseMs": 180 },
+          "gain": 0.5
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 50, "decayMs": 100, "sustainLevel": 0.3, "sustainMs": 150, "releaseMs": 100 },
+          "filter": { "type": "lowpass", "cutoffHz": 1200 },
+          "gain": 0.12
+        }
+      ]
+    }
+  },
+  {
+    "name": "warp-jump",
+    "phrase": "warp jump",
+    "category": "science-space",
+    "concept": "A quick, rising warp jump whoosh that snaps into faster-than-light travel.",
+    "keywords": ["warp", "jump", "hyperspace", "whoosh", "travel", "engage", "lightspeed"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 300, "pitchEnvelope": { "toHz": 1200, "timeMs": 150 } },
+          "envelope": { "attackMs": 10, "decayMs": 40, "sustainLevel": 0.2, "sustainMs": 20, "releaseMs": 80 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 5, "decayMs": 40, "sustainLevel": 0.2, "sustainMs": 20, "releaseMs": 30 },
+          "filter": { "type": "lowpass", "cutoffHz": 2000 },
+          "gain": 0.15
+        }
+      ]
+    }
+  },
+  {
+    "name": "alien-signal",
+    "phrase": "alien signal",
+    "category": "science-space",
+    "concept": "A strange alien signal wobble made from two tones drifting apart slowly.",
+    "keywords": ["alien", "signal", "transmission", "strange", "unknown", "wobble", "communication"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 650, "timeMs": 400 } },
+          "envelope": { "attackMs": 60, "decayMs": 80, "sustainLevel": 0.4, "sustainMs": 260, "releaseMs": 100 },
+          "gain": 0.35
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 380, "timeMs": 400 } },
+          "envelope": { "attackMs": 60, "decayMs": 80, "sustainLevel": 0.4, "sustainMs": 260, "releaseMs": 100 },
+          "gain": 0.35
+        }
+      ]
+    }
+  },
+  {
+    "name": "probe-deploy",
+    "phrase": "probe deploy",
+    "category": "science-space",
+    "concept": "A short, sharp probe deploy click followed by a settling hum.",
+    "keywords": ["probe", "deploy", "release", "mechanism", "click", "extend", "launch"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 2, "decayMs": 15, "sustainLevel": 0.2, "sustainMs": 5, "releaseMs": 15 },
+          "filter": { "type": "highpass", "cutoffHz": 4000 },
+          "gain": 0.6
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 450 },
+          "envelope": { "attackMs": 20, "decayMs": 40, "sustainLevel": 0.4, "sustainMs": 80, "releaseMs": 40 },
+          "gain": 0.45
+        }
+      ]
+    }
+  },
+  {
+    "name": "sample-collected",
+    "phrase": "sample collected",
+    "category": "science-space",
+    "concept": "A short, rising sample collected chime that confirms a successful pickup.",
+    "keywords": ["sample", "collect", "pickup", "confirm", "success", "gather", "complete"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 850, "timeMs": 137 } },
+          "envelope": { "attackMs": 12, "decayMs": 35, "sustainLevel": 0.3, "sustainMs": 40, "releaseMs": 50 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "microscope-focus",
+    "phrase": "microscope focus",
+    "category": "science-space",
+    "concept": "A soft microscope focus click as the lens gently settles into place.",
+    "keywords": ["microscope", "focus", "lens", "adjust", "precise", "click", "lab"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 400 },
+          "envelope": { "attackMs": 30, "decayMs": 40, "sustainLevel": 0.3, "sustainMs": 50, "releaseMs": 40 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "centrifuge",
+    "phrase": "centrifuge",
+    "category": "science-space",
+    "concept": "A long, rising centrifuge hum that spins up steadily to full speed.",
+    "keywords": ["centrifuge", "spin", "rotate", "lab", "whirl", "speed", "sample"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 250, "pitchEnvelope": { "toHz": 500, "timeMs": 700 } },
+          "envelope": { "attackMs": 150, "decayMs": 150, "sustainLevel": 0.5, "sustainMs": 400, "releaseMs": 300 },
+          "gain": 0.45
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 50, "decayMs": 150, "sustainLevel": 0.3, "sustainMs": 300, "releaseMs": 100 },
+          "filter": { "type": "lowpass", "cutoffHz": 1000 },
+          "gain": 0.12
+        }
+      ]
+    }
+  },
+  {
+    "name": "reactor-hum",
+    "phrase": "reactor hum",
+    "category": "science-space",
+    "concept": "A long, sustained reactor hum that rumbles steadily underneath everything.",
+    "keywords": ["reactor", "hum", "power", "rumble", "core", "energy", "drone"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 140 },
+          "envelope": { "attackMs": 200, "decayMs": 100, "sustainLevel": 0.55, "sustainMs": 400, "releaseMs": 150 },
+          "gain": 0.3
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 143 },
+          "envelope": { "attackMs": 200, "decayMs": 100, "sustainLevel": 0.55, "sustainMs": 400, "releaseMs": 150 },
+          "gain": 0.3
+        }
+      ]
+    }
+  },
+  {
+    "name": "countdown-launch",
+    "phrase": "countdown launch",
+    "category": "science-space",
+    "concept": "A short, sharp countdown launch beep marking the final second.",
+    "keywords": ["countdown", "launch", "beep", "tick", "timer", "final", "ready"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 800 },
+          "envelope": { "attackMs": 5, "decayMs": 30, "sustainLevel": 0.2, "sustainMs": 20, "releaseMs": 30 },
+          "gain": 0.6
+        }
+      ]
+    }
+  }
+]

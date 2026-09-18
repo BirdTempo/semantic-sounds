@@ -1,0 +1,527 @@
+[
+  {
+    "name": "ember-glow",
+    "phrase": "ember glow",
+    "category": "nature",
+    "concept": "A long, sustained warm glow built from two close low tones that beat slowly together.",
+    "keywords": ["ember", "glow", "warm", "fire", "coal", "smolder", "heat"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 240 },
+          "envelope": { "attackMs": 300, "decayMs": 100, "sustainLevel": 0.5, "sustainMs": 350, "releaseMs": 150 },
+          "gain": 0.3
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 244 },
+          "envelope": { "attackMs": 300, "decayMs": 100, "sustainLevel": 0.5, "sustainMs": 350, "releaseMs": 150 },
+          "gain": 0.3
+        }
+      ]
+    }
+  },
+  {
+    "name": "gentle-flame",
+    "phrase": "gentle flame",
+    "category": "nature",
+    "concept": "A soft, flickering flame texture blending gentle low noise with a wavering tone.",
+    "keywords": ["flame", "fire", "flicker", "warm", "crackle", "burn", "candle"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "pink" },
+          "envelope": { "attackMs": 80, "decayMs": 80, "sustainLevel": 0.4, "sustainMs": 200, "releaseMs": 140 },
+          "filter": { "type": "lowpass", "cutoffHz": 500 },
+          "gain": 0.9
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 260 },
+          "envelope": { "attackMs": 80, "decayMs": 80, "sustainLevel": 0.4, "sustainMs": 200, "releaseMs": 140 },
+          "gain": 0.35
+        }
+      ]
+    }
+  },
+  {
+    "name": "earth-rumble",
+    "phrase": "earth rumble",
+    "category": "nature",
+    "concept": "A long, low rumbling tone that swells slowly like tremors underground.",
+    "keywords": ["earth", "rumble", "tremor", "quake", "ground", "vibration", "deep"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 90 },
+          "envelope": { "attackMs": 250, "decayMs": 100, "sustainLevel": 0.5, "sustainMs": 400, "releaseMs": 150 },
+          "filter": { "type": "lowpass", "cutoffHz": 400 },
+          "gain": 0.29
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 94 },
+          "envelope": { "attackMs": 250, "decayMs": 100, "sustainLevel": 0.5, "sustainMs": 400, "releaseMs": 150 },
+          "filter": { "type": "lowpass", "cutoffHz": 400 },
+          "gain": 0.29
+        }
+      ]
+    }
+  },
+  {
+    "name": "rock-slide",
+    "phrase": "rock slide",
+    "category": "nature",
+    "concept": "A tumbling rock-slide texture of noise cascading downward with a falling pitch.",
+    "keywords": ["rock", "slide", "tumble", "cascade", "gravel", "fall", "landslide"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 150, "timeMs": 450 } },
+          "envelope": { "attackMs": 30, "decayMs": 150, "sustainLevel": 0.35, "sustainMs": 250, "releaseMs": 100 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "noise", "color": "pink" },
+          "envelope": { "attackMs": 20, "decayMs": 80, "sustainLevel": 0.25, "sustainMs": 100, "releaseMs": 60 },
+          "filter": { "type": "lowpass", "cutoffHz": 400 },
+          "gain": 0.12
+        }
+      ]
+    }
+  },
+  {
+    "name": "pebble-drop",
+    "phrase": "pebble drop",
+    "category": "nature",
+    "concept": "A short, sharp pebble-drop click with a quick falling pip.",
+    "keywords": ["pebble", "drop", "click", "pip", "tap", "stone", "small"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 900, "pitchEnvelope": { "toHz": 500, "timeMs": 50 } },
+          "envelope": { "attackMs": 3, "decayMs": 30, "sustainLevel": 0.2, "sustainMs": 20, "releaseMs": 30 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "sand-shift",
+    "phrase": "sand shift",
+    "category": "nature",
+    "concept": "A soft, shifting sand texture from filtered noise sliding gently side to side.",
+    "keywords": ["sand", "shift", "grain", "texture", "slide", "dune", "loose"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "pink" },
+          "envelope": { "attackMs": 120, "decayMs": 100, "sustainLevel": 0.35, "sustainMs": 180, "releaseMs": 100 },
+          "filter": { "type": "lowpass", "cutoffHz": 800 },
+          "gain": 0.9
+        }
+      ]
+    }
+  },
+  {
+    "name": "cave-drip",
+    "phrase": "cave drip",
+    "category": "nature",
+    "concept": "A short, sharp water-drip pip that falls in pitch inside a cave.",
+    "keywords": ["cave", "drip", "water", "drop", "echo", "plink", "wet"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 1400, "pitchEnvelope": { "toHz": 700, "timeMs": 40 } },
+          "envelope": { "attackMs": 2, "decayMs": 30, "sustainLevel": 0.2, "sustainMs": 15, "releaseMs": 25 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "echo-in-cave",
+    "phrase": "echo in cave",
+    "category": "nature",
+    "concept": "A long, sustained tone that repeats its pitch outward like an echo in a cave.",
+    "keywords": ["echo", "cave", "reverb", "cavern", "resonance", "reflect", "hollow"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500 },
+          "envelope": { "attackMs": 20, "decayMs": 80, "sustainLevel": 0.3, "sustainMs": 200, "releaseMs": 600 },
+          "gain": 0.7
+        }
+      ]
+    }
+  },
+  {
+    "name": "snow-crunch",
+    "phrase": "snow crunch",
+    "category": "nature",
+    "concept": "A short, crisp crunch of snow underfoot made from sharp filtered noise.",
+    "keywords": ["snow", "crunch", "crisp", "footstep", "cold", "winter", "crackle"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 2, "decayMs": 20, "sustainLevel": 0.2, "sustainMs": 8, "releaseMs": 20 },
+          "filter": { "type": "highpass", "cutoffHz": 4000 },
+          "gain": 0.6
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 3000 },
+          "envelope": { "attackMs": 2, "decayMs": 15, "sustainLevel": 0.15, "sustainMs": 8, "releaseMs": 25 },
+          "gain": 0.5
+        }
+      ]
+    }
+  },
+  {
+    "name": "ice-crack",
+    "phrase": "ice crack",
+    "category": "nature",
+    "concept": "A sharp, splintering ice-crack snap with a bright, brittle timbre.",
+    "keywords": ["ice", "crack", "snap", "brittle", "splinter", "cold", "break"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 2, "decayMs": 20, "sustainLevel": 0.2, "sustainMs": 8, "releaseMs": 20 },
+          "filter": { "type": "highpass", "cutoffHz": 4000 },
+          "gain": 0.75
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 2200 },
+          "envelope": { "attackMs": 2, "decayMs": 20, "sustainLevel": 0.2, "sustainMs": 8, "releaseMs": 20 },
+          "gain": 0.4
+        }
+      ]
+    }
+  },
+  {
+    "name": "icicle-drop",
+    "phrase": "icicle drop",
+    "category": "nature",
+    "concept": "A short, bright icicle-drop chime with a fast, falling pitch.",
+    "keywords": ["icicle", "drop", "chime", "ice", "cold", "ping", "thaw"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 2000, "pitchEnvelope": { "toHz": 1200, "timeMs": 70 } },
+          "envelope": { "attackMs": 5, "decayMs": 50, "sustainLevel": 0.2, "sustainMs": 30, "releaseMs": 35 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "frost-forming",
+    "phrase": "frost forming",
+    "category": "nature",
+    "concept": "A long, soft frost shimmer that grows slowly from silence.",
+    "keywords": ["frost", "ice", "shimmer", "crystal", "delicate", "chill", "grow"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 900 },
+          "envelope": { "attackMs": 400, "decayMs": 100, "sustainLevel": 0.4, "sustainMs": 300, "releaseMs": 150 },
+          "gain": 0.4
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 906 },
+          "envelope": { "attackMs": 400, "decayMs": 100, "sustainLevel": 0.4, "sustainMs": 300, "releaseMs": 150 },
+          "gain": 0.4
+        }
+      ]
+    }
+  },
+  {
+    "name": "dawn-chorus",
+    "phrase": "dawn chorus",
+    "category": "nature",
+    "concept": "A quick, bright cluster of chirping tones rising together at sunrise.",
+    "keywords": ["dawn", "chorus", "birdsong", "chirp", "morning", "bird", "sunrise"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1200, "pitchEnvelope": { "toHz": 1800, "timeMs": 100 } },
+          "envelope": { "attackMs": 5, "decayMs": 40, "sustainLevel": 0.3, "sustainMs": 50, "releaseMs": 25 },
+          "gain": 0.35
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1600, "pitchEnvelope": { "toHz": 2200, "timeMs": 100 } },
+          "envelope": { "attackMs": 5, "decayMs": 40, "sustainLevel": 0.3, "sustainMs": 50, "releaseMs": 25 },
+          "gain": 0.35
+        }
+      ]
+    }
+  },
+  {
+    "name": "night-ambience",
+    "phrase": "night ambience",
+    "category": "nature",
+    "concept": "A long, sustained ambience of soft filtered noise with a low steady undertone.",
+    "keywords": ["night", "ambience", "background", "calm", "nocturnal", "hush", "quiet"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "pink" },
+          "envelope": { "attackMs": 250, "decayMs": 100, "sustainLevel": 0.4, "sustainMs": 350, "releaseMs": 200 },
+          "filter": { "type": "lowpass", "cutoffHz": 500 },
+          "gain": 0.9
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 200 },
+          "envelope": { "attackMs": 250, "decayMs": 100, "sustainLevel": 0.4, "sustainMs": 350, "releaseMs": 200 },
+          "gain": 0.35
+        }
+      ]
+    }
+  },
+  {
+    "name": "reed-whisper",
+    "phrase": "reed whisper",
+    "category": "nature",
+    "concept": "A soft, breathy reed-whisper texture made from airy noise and a thin tone.",
+    "keywords": ["reed", "whisper", "breath", "air", "marsh", "rustle", "thin"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "pink" },
+          "envelope": { "attackMs": 150, "decayMs": 100, "sustainLevel": 0.3, "sustainMs": 200, "releaseMs": 150 },
+          "filter": { "type": "lowpass", "cutoffHz": 700 },
+          "gain": 0.6
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500 },
+          "envelope": { "attackMs": 150, "decayMs": 100, "sustainLevel": 0.3, "sustainMs": 200, "releaseMs": 150 },
+          "gain": 0.35
+        }
+      ]
+    }
+  },
+  {
+    "name": "bee-hum",
+    "phrase": "bee hum",
+    "category": "nature",
+    "concept": "A long, sustained buzzing hum from two close tones beating like a bee's wing.",
+    "keywords": ["bee", "hum", "buzz", "insect", "wing", "drone", "hive"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "square", "freqHz": 250 },
+          "envelope": { "attackMs": 60, "decayMs": 80, "sustainLevel": 0.5, "sustainMs": 550, "releaseMs": 150 },
+          "filter": { "type": "lowpass", "cutoffHz": 600 },
+          "gain": 0.25
+        },
+        {
+          "source": { "type": "oscillator", "wave": "square", "freqHz": 258 },
+          "envelope": { "attackMs": 60, "decayMs": 80, "sustainLevel": 0.5, "sustainMs": 550, "releaseMs": 150 },
+          "filter": { "type": "lowpass", "cutoffHz": 600 },
+          "gain": 0.25
+        }
+      ]
+    }
+  },
+  {
+    "name": "butterfly-flutter",
+    "phrase": "butterfly flutter",
+    "category": "nature",
+    "concept": "A quick, delicate flutter of two high tones beating rapidly like wing.",
+    "keywords": ["butterfly", "flutter", "wing", "delicate", "flit", "light", "insect"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 750 },
+          "envelope": { "attackMs": 6, "decayMs": 14, "sustainLevel": 0.35, "sustainMs": 100, "releaseMs": 60 },
+          "gain": 0.46
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 765 },
+          "envelope": { "attackMs": 6, "decayMs": 14, "sustainLevel": 0.35, "sustainMs": 100, "releaseMs": 60 },
+          "gain": 0.46
+        }
+      ]
+    }
+  },
+  {
+    "name": "grass-sway",
+    "phrase": "grass sway",
+    "category": "nature",
+    "concept": "A soft, swaying grass texture from gentle filtered noise moving side to side.",
+    "keywords": ["grass", "sway", "breeze", "rustle", "meadow", "soft", "blade"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "pink" },
+          "envelope": { "attackMs": 150, "decayMs": 100, "sustainLevel": 0.5, "sustainMs": 250, "releaseMs": 150 },
+          "filter": { "type": "lowpass", "cutoffHz": 1000 },
+          "gain": 1.0
+        }
+      ]
+    }
+  },
+  {
+    "name": "desert-wind",
+    "phrase": "desert wind",
+    "category": "nature",
+    "concept": "A long, sustained gust of wind built from filtered noise that swells and fades slowly.",
+    "keywords": ["desert", "wind", "gust", "dry", "breeze", "sand", "gale"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "pink" },
+          "envelope": { "attackMs": 300, "decayMs": 150, "sustainLevel": 0.45, "sustainMs": 300, "releaseMs": 150 },
+          "filter": { "type": "lowpass", "cutoffHz": 500 },
+          "gain": 0.95
+        }
+      ]
+    }
+  },
+  {
+    "name": "avalanche",
+    "phrase": "avalanche",
+    "category": "nature",
+    "concept": "A long, tumbling avalanche roar built from cascading noise with a falling low tone.",
+    "keywords": ["avalanche", "snow", "cascade", "roar", "tumble", "slide", "mountain"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 150, "timeMs": 600 } },
+          "envelope": { "attackMs": 100, "decayMs": 150, "sustainLevel": 0.4, "sustainMs": 400, "releaseMs": 150 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "noise", "color": "pink" },
+          "envelope": { "attackMs": 50, "decayMs": 100, "sustainLevel": 0.2, "sustainMs": 150, "releaseMs": 50 },
+          "filter": { "type": "lowpass", "cutoffHz": 400 },
+          "gain": 0.15
+        }
+      ]
+    }
+  },
+  {
+    "name": "geyser-burst",
+    "phrase": "geyser burst",
+    "category": "nature",
+    "concept": "A short, sharp burst of geyser noise that erupts upward in pitch.",
+    "keywords": ["geyser", "burst", "eruption", "steam", "water", "spout", "sudden"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 400, "pitchEnvelope": { "toHz": 1200, "timeMs": 100 } },
+          "envelope": { "attackMs": 3, "decayMs": 30, "sustainLevel": 0.25, "sustainMs": 40, "releaseMs": 30 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 2, "decayMs": 15, "sustainLevel": 0.2, "sustainMs": 5, "releaseMs": 15 },
+          "filter": { "type": "highpass", "cutoffHz": 2000 },
+          "gain": 0.15
+        }
+      ]
+    }
+  },
+  {
+    "name": "volcano-rumble",
+    "phrase": "volcano rumble",
+    "category": "nature",
+    "concept": "A long, deep volcanic rumble that swells slowly from a low, steady tone.",
+    "keywords": ["volcano", "rumble", "lava", "deep", "tremor", "eruption", "magma"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 75 },
+          "envelope": { "attackMs": 300, "decayMs": 150, "sustainLevel": 0.5, "sustainMs": 300, "releaseMs": 150 },
+          "gain": 0.33
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 79 },
+          "envelope": { "attackMs": 300, "decayMs": 150, "sustainLevel": 0.5, "sustainMs": 300, "releaseMs": 150 },
+          "gain": 0.33
+        }
+      ]
+    }
+  },
+  {
+    "name": "mist-settle",
+    "phrase": "mist settle",
+    "category": "nature",
+    "concept": "A soft, gentle mist that settles slowly with a fading airy texture.",
+    "keywords": ["mist", "settle", "fog", "haze", "gentle", "fade", "damp"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "pink" },
+          "envelope": { "attackMs": 250, "decayMs": 150, "sustainLevel": 0.45, "sustainMs": 200, "releaseMs": 180 },
+          "filter": { "type": "lowpass", "cutoffHz": 700 },
+          "gain": 1.0
+        }
+      ]
+    }
+  },
+  {
+    "name": "dew-drop",
+    "phrase": "dew drop",
+    "category": "nature",
+    "concept": "A short, delicate droplet-like pip with a quick falling pitch.",
+    "keywords": ["dew", "drop", "droplet", "water", "morning", "plink", "delicate"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 1000, "pitchEnvelope": { "toHz": 600, "timeMs": 50 } },
+          "envelope": { "attackMs": 3, "decayMs": 35, "sustainLevel": 0.2, "sustainMs": 15, "releaseMs": 25 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "moss-step",
+    "phrase": "moss step",
+    "category": "nature",
+    "concept": "A short, soft footstep sound cushioned by damp, filtered moss noise.",
+    "keywords": ["moss", "step", "footstep", "damp", "muffled", "soft", "ground"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "pink" },
+          "envelope": { "attackMs": 20, "decayMs": 50, "sustainLevel": 0.5, "sustainMs": 50, "releaseMs": 30 },
+          "filter": { "type": "lowpass", "cutoffHz": 900 },
+          "gain": 1.0
+        }
+      ]
+    }
+  },
+  {
+    "name": "root-growth",
+    "phrase": "root growth",
+    "category": "nature",
+    "concept": "A long, slow-growing tone that swells steadily like a root pushing through soil.",
+    "keywords": ["root", "growth", "grow", "soil", "plant", "swell", "organic"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 180 },
+          "envelope": { "attackMs": 400, "decayMs": 100, "sustainLevel": 0.5, "sustainMs": 300, "releaseMs": 150 },
+          "filter": { "type": "lowpass", "cutoffHz": 500 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "seed-sprout",
+    "phrase": "seed sprout",
+    "category": "nature",
+    "concept": "A quick, rising pip that pops upward like a seed sprouting to life.",
+    "keywords": ["seed", "sprout", "grow", "pop", "plant", "new", "life"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 350, "pitchEnvelope": { "toHz": 850, "timeMs": 80 } },
+          "envelope": { "attackMs": 12, "decayMs": 35, "sustainLevel": 0.3, "sustainMs": 35, "releaseMs": 55 },
+          "gain": 0.62
+        }
+      ]
+    }
+  }
+]

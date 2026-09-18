@@ -1,0 +1,466 @@
+[
+  {
+    "name": "route-start",
+    "phrase": "route start",
+    "category": "navigation-maps",
+    "concept": "A short, soft, rising chime that opens a new route with gentle confidence.",
+    "keywords": ["route", "start", "begin", "trip", "journey", "depart", "directions"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 750, "timeMs": 140 } },
+          "envelope": { "attackMs": 20, "decayMs": 40, "sustainLevel": 0.3, "sustainMs": 40, "releaseMs": 40 },
+          "gain": 0.5
+        }
+      ]
+    }
+  },
+  {
+    "name": "route-end",
+    "phrase": "route end",
+    "category": "navigation-maps",
+    "concept": "A short, soft, falling tone that closes out a route once travel is done.",
+    "keywords": ["route", "end", "finish", "complete", "trip", "arrive", "directions"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 680, "pitchEnvelope": { "toHz": 420, "timeMs": 160 } },
+          "envelope": { "attackMs": 20, "decayMs": 45, "sustainLevel": 0.35, "sustainMs": 45, "releaseMs": 50 },
+          "gain": 0.58
+        }
+      ]
+    }
+  },
+  {
+    "name": "turn-left",
+    "phrase": "turn left",
+    "category": "navigation-maps",
+    "concept": "A quick, sharp click that dips down in pitch to cue an upcoming left turn.",
+    "keywords": ["turn", "left", "direction", "navigate", "steer", "corner"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 600, "pitchEnvelope": { "toHz": 420, "timeMs": 90 } },
+          "envelope": { "attackMs": 4, "decayMs": 30, "sustainLevel": 0.3, "sustainMs": 20, "releaseMs": 36 },
+          "gain": 0.62
+        }
+      ]
+    }
+  },
+  {
+    "name": "turn-right",
+    "phrase": "turn right",
+    "category": "navigation-maps",
+    "concept": "A quick, sharp click that lifts up in pitch to cue an upcoming right turn.",
+    "keywords": ["turn", "right", "direction", "navigate", "steer", "corner"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 480, "pitchEnvelope": { "toHz": 660, "timeMs": 90 } },
+          "envelope": { "attackMs": 4, "decayMs": 30, "sustainLevel": 0.3, "sustainMs": 20, "releaseMs": 36 },
+          "gain": 0.62
+        }
+      ]
+    }
+  },
+  {
+    "name": "continue-straight",
+    "phrase": "continue straight",
+    "category": "navigation-maps",
+    "concept": "A short, steady, plain tone with no pitch movement for staying on the same road.",
+    "keywords": ["straight", "continue", "ahead", "direction", "steady", "road"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 550 },
+          "envelope": { "attackMs": 15, "decayMs": 35, "sustainLevel": 0.35, "sustainMs": 50, "releaseMs": 40 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "exit-ahead",
+    "phrase": "exit ahead",
+    "category": "navigation-maps",
+    "concept": "A two-tone, gently rising alert that signals an upcoming highway exit.",
+    "keywords": ["exit", "ahead", "highway", "ramp", "upcoming", "alert", "offramp"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 700, "timeMs": 220 } },
+          "envelope": { "attackMs": 25, "decayMs": 50, "sustainLevel": 0.35, "sustainMs": 80, "releaseMs": 65 },
+          "gain": 0.5
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 700, "pitchEnvelope": { "toHz": 900, "timeMs": 220 } },
+          "envelope": { "attackMs": 25, "decayMs": 50, "sustainLevel": 0.25, "sustainMs": 80, "releaseMs": 65 },
+          "filter": { "type": "lowpass", "cutoffHz": 1400 },
+          "gain": 0.3
+        }
+      ]
+    }
+  },
+  {
+    "name": "roundabout",
+    "phrase": "roundabout",
+    "category": "navigation-maps",
+    "concept": "A soft, sustained, circular wobble made from two close detuned tones for a roundabout.",
+    "keywords": ["roundabout", "circle", "loop", "rotate", "junction", "curve"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500 },
+          "envelope": { "attackMs": 100, "decayMs": 150, "sustainLevel": 0.32, "sustainMs": 500, "releaseMs": 150 },
+          "gain": 0.38
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 512 },
+          "envelope": { "attackMs": 100, "decayMs": 150, "sustainLevel": 0.32, "sustainMs": 500, "releaseMs": 150 },
+          "gain": 0.38
+        }
+      ]
+    }
+  },
+  {
+    "name": "u-turn",
+    "phrase": "u turn",
+    "category": "navigation-maps",
+    "concept": "A broad sweeping tone with a wide pitch swing and a soft whoosh for a full reversal.",
+    "keywords": ["u-turn", "reverse", "turnaround", "direction", "maneuver", "backtrack"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 700, "pitchEnvelope": { "toHz": 350, "timeMs": 320 } },
+          "envelope": { "attackMs": 40, "decayMs": 80, "sustainLevel": 0.35, "sustainMs": 100, "releaseMs": 100 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 40, "decayMs": 80, "sustainLevel": 0.3, "sustainMs": 100, "releaseMs": 100 },
+          "filter": { "type": "lowpass", "cutoffHz": 900 },
+          "gain": 0.5
+        }
+      ]
+    }
+  },
+  {
+    "name": "rerouting",
+    "phrase": "rerouting",
+    "category": "navigation-maps",
+    "concept": "A soft, wavering double tone that signals the route is being recalculated.",
+    "keywords": ["reroute", "recalculate", "update", "adjust", "path", "processing"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 480 },
+          "envelope": { "attackMs": 40, "decayMs": 60, "sustainLevel": 0.35, "sustainMs": 150, "releaseMs": 70 },
+          "gain": 0.45
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 497 },
+          "envelope": { "attackMs": 40, "decayMs": 60, "sustainLevel": 0.35, "sustainMs": 150, "releaseMs": 70 },
+          "gain": 0.45
+        }
+      ]
+    }
+  },
+  {
+    "name": "destination-reached",
+    "phrase": "destination reached",
+    "category": "navigation-maps",
+    "concept": "A long, rich, rising two-layer chime that celebrates reaching the destination.",
+    "keywords": ["destination", "arrive", "reached", "complete", "trip", "finish", "journey"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 550, "pitchEnvelope": { "toHz": 800, "timeMs": 850 } },
+          "envelope": { "attackMs": 60, "decayMs": 120, "sustainLevel": 0.4, "sustainMs": 450, "releaseMs": 220 },
+          "gain": 0.45
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 800, "pitchEnvelope": { "toHz": 1000, "timeMs": 850 } },
+          "envelope": { "attackMs": 60, "decayMs": 120, "sustainLevel": 0.25, "sustainMs": 450, "releaseMs": 220 },
+          "filter": { "type": "lowpass", "cutoffHz": 1400 },
+          "gain": 0.3
+        }
+      ]
+    }
+  },
+  {
+    "name": "waypoint-added",
+    "phrase": "waypoint added",
+    "category": "navigation-maps",
+    "concept": "A short, soft, plain confirm tick for adding a new waypoint to the route.",
+    "keywords": ["waypoint", "add", "marker", "stop", "route", "confirm"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 600 },
+          "envelope": { "attackMs": 18, "decayMs": 35, "sustainLevel": 0.3, "sustainMs": 40, "releaseMs": 37 },
+          "gain": 0.62
+        }
+      ]
+    }
+  },
+  {
+    "name": "gps-lock",
+    "phrase": "gps lock",
+    "category": "navigation-maps",
+    "concept": "A short, sharp click that snaps in confidently once gps signal locks.",
+    "keywords": ["gps", "lock", "signal", "satellite", "fix", "acquire"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 750 },
+          "envelope": { "attackMs": 3, "decayMs": 25, "sustainLevel": 0.3, "sustainMs": 15, "releaseMs": 27 },
+          "gain": 0.5
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 2, "decayMs": 15, "sustainLevel": 0.2, "sustainMs": 5, "releaseMs": 15 },
+          "filter": { "type": "highpass", "cutoffHz": 4000 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "gps-lost",
+    "phrase": "gps lost",
+    "category": "navigation-maps",
+    "concept": "A short, soft, falling tone that signals gps signal has been lost.",
+    "keywords": ["gps", "lost", "signal", "satellite", "drop", "disconnect"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 650, "pitchEnvelope": { "toHz": 400, "timeMs": 160 } },
+          "envelope": { "attackMs": 20, "decayMs": 45, "sustainLevel": 0.3, "sustainMs": 50, "releaseMs": 45 },
+          "gain": 0.58
+        }
+      ]
+    }
+  },
+  {
+    "name": "speed-limit",
+    "phrase": "speed limit",
+    "category": "navigation-maps",
+    "concept": "A short, plain, neutral tone that announces a posted speed limit update.",
+    "keywords": ["speed", "limit", "road", "sign", "posted", "update"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 600 },
+          "envelope": { "attackMs": 15, "decayMs": 30, "sustainLevel": 0.3, "sustainMs": 40, "releaseMs": 35 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "speed-warning",
+    "phrase": "speed warning",
+    "category": "navigation-maps",
+    "concept": "A short, sharp, urgent buzz that warns the driver of exceeding the speed limit.",
+    "keywords": ["speed", "warning", "urgent", "alert", "exceed", "buzzer"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 850 },
+          "envelope": { "attackMs": 4, "decayMs": 30, "sustainLevel": 0.45, "sustainMs": 60, "releaseMs": 36 },
+          "gain": 0.42
+        },
+        {
+          "source": { "type": "oscillator", "wave": "square", "freqHz": 850 },
+          "envelope": { "attackMs": 4, "decayMs": 30, "sustainLevel": 0.35, "sustainMs": 60, "releaseMs": 36 },
+          "filter": { "type": "lowpass", "cutoffHz": 2200 },
+          "gain": 0.18
+        }
+      ]
+    }
+  },
+  {
+    "name": "traffic-ahead",
+    "phrase": "traffic ahead",
+    "category": "navigation-maps",
+    "concept": "A medium, soft, low tone with a filtered noise texture that flags traffic ahead.",
+    "keywords": ["traffic", "ahead", "congestion", "alert", "slow", "caution"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 350 },
+          "envelope": { "attackMs": 40, "decayMs": 70, "sustainLevel": 0.35, "sustainMs": 150, "releaseMs": 90 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 40, "decayMs": 70, "sustainLevel": 0.35, "sustainMs": 150, "releaseMs": 90 },
+          "filter": { "type": "lowpass", "cutoffHz": 700 },
+          "gain": 0.85
+        }
+      ]
+    }
+  },
+  {
+    "name": "detour",
+    "phrase": "detour",
+    "category": "navigation-maps",
+    "concept": "A short, quirky, sharp pitch jump that signals an unexpected detour ahead.",
+    "keywords": ["detour", "reroute", "unexpected", "alternate", "divert", "bypass"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 450, "pitchEnvelope": { "toHz": 750, "timeMs": 110 } },
+          "envelope": { "attackMs": 5, "decayMs": 35, "sustainLevel": 0.3, "sustainMs": 30, "releaseMs": 40 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "arrival-soon",
+    "phrase": "arrival soon",
+    "category": "navigation-maps",
+    "concept": "A soft, rising, medium tone that gently signals the destination is coming up soon.",
+    "keywords": ["arrival", "soon", "approaching", "destination", "near", "upcoming"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 680, "timeMs": 380 } },
+          "envelope": { "attackMs": 50, "decayMs": 80, "sustainLevel": 0.35, "sustainMs": 150, "releaseMs": 100 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "geofence-enter",
+    "phrase": "geofence enter",
+    "category": "navigation-maps",
+    "concept": "A short, soft, rising chime that marks entering a defined geofence area.",
+    "keywords": ["geofence", "enter", "zone", "boundary", "area", "trigger"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 550, "pitchEnvelope": { "toHz": 780, "timeMs": 140 } },
+          "envelope": { "attackMs": 18, "decayMs": 35, "sustainLevel": 0.35, "sustainMs": 45, "releaseMs": 42 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "geofence-exit",
+    "phrase": "geofence exit",
+    "category": "navigation-maps",
+    "concept": "A short, soft, falling chime that marks leaving a defined geofence area.",
+    "keywords": ["geofence", "exit", "zone", "boundary", "leave", "trigger"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 780, "pitchEnvelope": { "toHz": 550, "timeMs": 140 } },
+          "envelope": { "attackMs": 18, "decayMs": 35, "sustainLevel": 0.35, "sustainMs": 45, "releaseMs": 42 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "compass-calibrate",
+    "phrase": "compass calibrate",
+    "category": "navigation-maps",
+    "concept": "A long, sustained, sweeping tone that swings widely as the compass calibrates.",
+    "keywords": ["compass", "calibrate", "rotate", "heading", "sensor", "adjust"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 900, "pitchEnvelope": { "toHz": 350, "timeMs": 900 } },
+          "envelope": { "attackMs": 90, "decayMs": 150, "sustainLevel": 0.4, "sustainMs": 480, "releaseMs": 180 },
+          "gain": 0.5
+        }
+      ]
+    }
+  },
+  {
+    "name": "map-zoom",
+    "phrase": "map zoom",
+    "category": "navigation-maps",
+    "concept": "A short, quick, rising sweep for zooming into the map view.",
+    "keywords": ["map", "zoom", "view", "scale", "pinch", "enlarge"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 900, "timeMs": 130 } },
+          "envelope": { "attackMs": 15, "decayMs": 30, "sustainLevel": 0.3, "sustainMs": 40, "releaseMs": 45 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "pin-dropped",
+    "phrase": "pin dropped",
+    "category": "navigation-maps",
+    "concept": "A short, sharp, falling thud with a noise tail for dropping a map pin.",
+    "keywords": ["pin", "drop", "marker", "place", "map", "mark"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 550, "pitchEnvelope": { "toHz": 350, "timeMs": 110 } },
+          "envelope": { "attackMs": 4, "decayMs": 35, "sustainLevel": 0.3, "sustainMs": 25, "releaseMs": 46 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 4, "decayMs": 35, "sustainLevel": 0.15, "sustainMs": 25, "releaseMs": 46 },
+          "filter": { "type": "lowpass", "cutoffHz": 900 },
+          "gain": 0.15
+        }
+      ]
+    }
+  },
+  {
+    "name": "location-shared",
+    "phrase": "location shared",
+    "category": "navigation-maps",
+    "concept": "A short, soft, plain two-layer chime that confirms a location has been shared.",
+    "keywords": ["location", "share", "send", "position", "contact", "confirm"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 600 },
+          "envelope": { "attackMs": 20, "decayMs": 40, "sustainLevel": 0.35, "sustainMs": 50, "releaseMs": 45 },
+          "gain": 0.45
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 900 },
+          "envelope": { "attackMs": 20, "decayMs": 40, "sustainLevel": 0.25, "sustainMs": 50, "releaseMs": 45 },
+          "filter": { "type": "lowpass", "cutoffHz": 1600 },
+          "gain": 0.3
+        }
+      ]
+    }
+  },
+  {
+    "name": "off-route",
+    "phrase": "off route",
+    "category": "navigation-maps",
+    "concept": "A short, sharp, falling error tone with a buzzy edge for straying off the route.",
+    "keywords": ["error", "warning", "stray", "deviate", "wrong", "correction"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 600, "pitchEnvelope": { "toHz": 380, "timeMs": 150 } },
+          "envelope": { "attackMs": 4, "decayMs": 40, "sustainLevel": 0.4, "sustainMs": 60, "releaseMs": 46 },
+          "gain": 0.42
+        },
+        {
+          "source": { "type": "oscillator", "wave": "square", "freqHz": 600, "pitchEnvelope": { "toHz": 380, "timeMs": 150 } },
+          "envelope": { "attackMs": 4, "decayMs": 40, "sustainLevel": 0.3, "sustainMs": 60, "releaseMs": 46 },
+          "filter": { "type": "lowpass", "cutoffHz": 1400 },
+          "gain": 0.18
+        }
+      ]
+    }
+  }
+]

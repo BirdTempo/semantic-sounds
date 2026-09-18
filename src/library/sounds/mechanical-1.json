@@ -1,0 +1,513 @@
+[
+  {
+    "name": "switch-flip",
+    "phrase": "switch flip",
+    "category": "mechanical",
+    "concept": "A very short, sharp switch flip made from a crisp noise click and a quick tone snap.",
+    "keywords": ["switch", "flip", "toggle", "click", "electrical", "power", "control"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 650 },
+          "envelope": { "attackMs": 2, "decayMs": 15, "sustainLevel": 0.2, "sustainMs": 5, "releaseMs": 15 },
+          "gain": 0.5
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 2, "decayMs": 15, "sustainLevel": 0.2, "sustainMs": 5, "releaseMs": 15 },
+          "filter": { "type": "highpass", "cutoffHz": 3500 },
+          "gain": 0.45
+        }
+      ]
+    }
+  },
+  {
+    "name": "toggle-lever",
+    "phrase": "toggle lever",
+    "category": "mechanical",
+    "concept": "A quick, falling toggle lever click that drops in pitch as the lever swings down.",
+    "keywords": ["toggle", "lever", "switch", "flip", "mechanism", "control", "down"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 520, "pitchEnvelope": { "toHz": 300, "timeMs": 70 } },
+          "envelope": { "attackMs": 5, "decayMs": 30, "sustainLevel": 0.3, "sustainMs": 20, "releaseMs": 30 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 2, "decayMs": 15, "sustainLevel": 0.15, "sustainMs": 5, "releaseMs": 15 },
+          "filter": { "type": "highpass", "cutoffHz": 3000 },
+          "gain": 0.35
+        }
+      ]
+    }
+  },
+  {
+    "name": "button-press",
+    "phrase": "button press",
+    "category": "mechanical",
+    "concept": "A soft, quick button press with a gentle attack on a rounded mid tone.",
+    "keywords": ["button", "press", "push", "tap", "click", "control", "input"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 450 },
+          "envelope": { "attackMs": 20, "decayMs": 40, "sustainLevel": 0.32, "sustainMs": 40, "releaseMs": 50 },
+          "gain": 0.54
+        }
+      ]
+    }
+  },
+  {
+    "name": "dial-turn",
+    "phrase": "dial turn",
+    "category": "mechanical",
+    "concept": "A rising dial turn with a smooth pitch sweep over soft rotating friction noise.",
+    "keywords": ["dial", "turn", "rotate", "knob", "adjust", "control", "wheel"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 400, "pitchEnvelope": { "toHz": 520, "timeMs": 250 } },
+          "envelope": { "attackMs": 30, "decayMs": 80, "sustainLevel": 0.35, "sustainMs": 120, "releaseMs": 100 },
+          "gain": 0.5
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 30, "decayMs": 80, "sustainLevel": 0.4, "sustainMs": 120, "releaseMs": 100 },
+          "filter": { "type": "lowpass", "cutoffHz": 800 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "knob-click",
+    "phrase": "knob click",
+    "category": "mechanical",
+    "concept": "A very short, sharp knob click made from one crisp high noise burst.",
+    "keywords": ["knob", "click", "dial", "twist", "detent", "adjust", "stop"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 2, "decayMs": 15, "sustainLevel": 0.2, "sustainMs": 5, "releaseMs": 15 },
+          "filter": { "type": "highpass", "cutoffHz": 4000 },
+          "gain": 0.75
+        }
+      ]
+    }
+  },
+  {
+    "name": "ratchet",
+    "phrase": "ratchet",
+    "category": "mechanical",
+    "concept": "A rising ratchet with a stepping tone sweep and gritty bandpass noise clicks.",
+    "keywords": ["ratchet", "click", "gear", "tool", "wrench", "mechanism", "step"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 350, "pitchEnvelope": { "toHz": 550, "timeMs": 180 } },
+          "envelope": { "attackMs": 10, "decayMs": 60, "sustainLevel": 0.35, "sustainMs": 80, "releaseMs": 80 },
+          "gain": 0.45
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 5, "decayMs": 40, "sustainLevel": 0.3, "sustainMs": 60, "releaseMs": 60 },
+          "filter": { "type": "bandpass", "cutoffHz": 2000 },
+          "gain": 0.15
+        }
+      ]
+    }
+  },
+  {
+    "name": "gear-engage",
+    "phrase": "gear engage",
+    "category": "mechanical",
+    "concept": "A soft, dark gear engage with a low tone thunk and muffled noise underneath.",
+    "keywords": ["gear", "engage", "mesh", "mechanism", "thunk", "lock", "connect"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 220 },
+          "envelope": { "attackMs": 25, "decayMs": 70, "sustainLevel": 0.4, "sustainMs": 70, "releaseMs": 75 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "noise", "color": "pink" },
+          "envelope": { "attackMs": 20, "decayMs": 60, "sustainLevel": 0.3, "sustainMs": 60, "releaseMs": 60 },
+          "filter": { "type": "lowpass", "cutoffHz": 300 },
+          "gain": 0.8
+        }
+      ]
+    }
+  },
+  {
+    "name": "gear-grind",
+    "phrase": "gear grind",
+    "category": "mechanical",
+    "concept": "A long, sustained gear grind with a gritty bandpass noise texture and a low tone rumble.",
+    "keywords": ["gear", "grind", "friction", "mechanism", "metal", "harsh", "rough"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 100, "decayMs": 150, "sustainLevel": 0.6, "sustainMs": 500, "releaseMs": 150 },
+          "filter": { "type": "bandpass", "cutoffHz": 500 },
+          "gain": 0.95
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 180 },
+          "envelope": { "attackMs": 100, "decayMs": 150, "sustainLevel": 0.35, "sustainMs": 500, "releaseMs": 150 },
+          "gain": 0.42
+        }
+      ]
+    }
+  },
+  {
+    "name": "motor-start",
+    "phrase": "motor start",
+    "category": "mechanical",
+    "concept": "A long, sustained, rising motor start where a low tone spins up smoothly to a higher pitch.",
+    "keywords": ["motor", "start", "startup", "spin", "engine", "power", "ignition"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 220, "pitchEnvelope": { "toHz": 480, "timeMs": 700 } },
+          "envelope": { "attackMs": 80, "decayMs": 200, "sustainLevel": 0.4, "sustainMs": 450, "releaseMs": 170 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "motor-stop",
+    "phrase": "motor stop",
+    "category": "mechanical",
+    "concept": "A long, sustained, falling motor stop where a tone winds down smoothly to a low pitch.",
+    "keywords": ["motor", "stop", "shutdown", "engine", "power", "halt", "wind down"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 480, "pitchEnvelope": { "toHz": 200, "timeMs": 700 } },
+          "envelope": { "attackMs": 60, "decayMs": 200, "sustainLevel": 0.4, "sustainMs": 450, "releaseMs": 190 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "engine-idle",
+    "phrase": "engine idle",
+    "category": "mechanical",
+    "concept": "A long, sustained engine idle with a steady low tone and warm rumbling noise texture.",
+    "keywords": ["engine", "idle", "rumble", "running", "motor", "hum", "low"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 150 },
+          "envelope": { "attackMs": 60, "decayMs": 150, "sustainLevel": 0.4, "sustainMs": 480, "releaseMs": 160 },
+          "gain": 0.5
+        },
+        {
+          "source": { "type": "noise", "color": "pink" },
+          "envelope": { "attackMs": 60, "decayMs": 150, "sustainLevel": 0.35, "sustainMs": 480, "releaseMs": 160 },
+          "filter": { "type": "lowpass", "cutoffHz": 250 },
+          "gain": 0.85
+        }
+      ]
+    }
+  },
+  {
+    "name": "hydraulic-hiss",
+    "phrase": "hydraulic hiss",
+    "category": "mechanical",
+    "concept": "A long, sustained hydraulic hiss made from steady airy noise, like escaping pressure.",
+    "keywords": ["hydraulic", "hiss", "pressure", "air", "pneumatic", "release", "steam"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 80, "decayMs": 150, "sustainLevel": 0.32, "sustainMs": 450, "releaseMs": 170 },
+          "filter": { "type": "highpass", "cutoffHz": 3000 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "valve-open",
+    "phrase": "valve open",
+    "category": "mechanical",
+    "concept": "A quick, rising valve open with an ascending tone and a light hiss of noise.",
+    "keywords": ["valve", "open", "release", "hiss", "pressure", "mechanism", "air"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 400, "pitchEnvelope": { "toHz": 650, "timeMs": 100 } },
+          "envelope": { "attackMs": 10, "decayMs": 40, "sustainLevel": 0.3, "sustainMs": 40, "releaseMs": 50 },
+          "gain": 0.6
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 5, "decayMs": 30, "sustainLevel": 0.2, "sustainMs": 20, "releaseMs": 30 },
+          "filter": { "type": "highpass", "cutoffHz": 2000 },
+          "gain": 0.04
+        }
+      ]
+    }
+  },
+  {
+    "name": "valve-close",
+    "phrase": "valve close",
+    "category": "mechanical",
+    "concept": "A quick, falling valve close with a descending tone and a soft thump of noise.",
+    "keywords": ["valve", "close", "shut", "seal", "mechanism", "thump", "air"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 650, "pitchEnvelope": { "toHz": 380, "timeMs": 100 } },
+          "envelope": { "attackMs": 8, "decayMs": 40, "sustainLevel": 0.3, "sustainMs": 40, "releaseMs": 50 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 5, "decayMs": 30, "sustainLevel": 0.2, "sustainMs": 20, "releaseMs": 30 },
+          "filter": { "type": "lowpass", "cutoffHz": 1200 },
+          "gain": 0.4
+        }
+      ]
+    }
+  },
+  {
+    "name": "piston-stroke",
+    "phrase": "piston stroke",
+    "category": "mechanical",
+    "concept": "A soft piston stroke with a rounded triangle tone and a light chuffing noise layer.",
+    "keywords": ["piston", "stroke", "pump", "cylinder", "mechanism", "chuff", "pneumatic"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 300 },
+          "envelope": { "attackMs": 25, "decayMs": 70, "sustainLevel": 0.35, "sustainMs": 100, "releaseMs": 85 },
+          "gain": 0.5
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 20, "decayMs": 60, "sustainLevel": 0.3, "sustainMs": 90, "releaseMs": 80 },
+          "filter": { "type": "lowpass", "cutoffHz": 600 },
+          "gain": 0.5
+        }
+      ]
+    }
+  },
+  {
+    "name": "spring-release",
+    "phrase": "spring release",
+    "category": "mechanical",
+    "concept": "A quick, sharp spring release with a rising pitch snap like stored tension letting go.",
+    "keywords": ["spring", "release", "tension", "snap", "boing", "coil", "mechanism"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 350, "pitchEnvelope": { "toHz": 700, "timeMs": 90 } },
+          "envelope": { "attackMs": 3, "decayMs": 40, "sustainLevel": 0.3, "sustainMs": 40, "releaseMs": 45 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "latch-close",
+    "phrase": "latch close",
+    "category": "mechanical",
+    "concept": "A quick, sharp latch close with a crisp noise click and a short tone thump.",
+    "keywords": ["latch", "close", "catch", "click", "fasten", "secure", "mechanism"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500 },
+          "envelope": { "attackMs": 3, "decayMs": 30, "sustainLevel": 0.3, "sustainMs": 25, "releaseMs": 35 },
+          "gain": 0.5
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 2, "decayMs": 20, "sustainLevel": 0.2, "sustainMs": 8, "releaseMs": 18 },
+          "filter": { "type": "highpass", "cutoffHz": 3500 },
+          "gain": 0.5
+        }
+      ]
+    }
+  },
+  {
+    "name": "latch-open",
+    "phrase": "latch open",
+    "category": "mechanical",
+    "concept": "A very short, sharp latch open made from one bright noise click.",
+    "keywords": ["latch", "open", "unfasten", "click", "release", "mechanism", "catch"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 2, "decayMs": 15, "sustainLevel": 0.2, "sustainMs": 5, "releaseMs": 15 },
+          "filter": { "type": "highpass", "cutoffHz": 4200 },
+          "gain": 0.78
+        }
+      ]
+    }
+  },
+  {
+    "name": "bolt-slide",
+    "phrase": "bolt slide",
+    "category": "mechanical",
+    "concept": "A soft bolt slide with gentle filtered noise friction and a falling tone as it seats.",
+    "keywords": ["bolt", "slide", "door", "lock", "mechanism", "slot", "metal"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 500, "pitchEnvelope": { "toHz": 320, "timeMs": 200 } },
+          "envelope": { "attackMs": 30, "decayMs": 70, "sustainLevel": 0.3, "sustainMs": 100, "releaseMs": 90 },
+          "gain": 0.5
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 30, "decayMs": 70, "sustainLevel": 0.35, "sustainMs": 100, "releaseMs": 90 },
+          "filter": { "type": "bandpass", "cutoffHz": 1200 },
+          "gain": 0.1
+        }
+      ]
+    }
+  },
+  {
+    "name": "lock-engage",
+    "phrase": "lock engage",
+    "category": "mechanical",
+    "concept": "A soft, muffled lock engage with a low tone thunk and a short noise click.",
+    "keywords": ["lock", "engage", "secure", "click", "mechanism", "bolt", "fasten"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 240 },
+          "envelope": { "attackMs": 20, "decayMs": 55, "sustainLevel": 0.35, "sustainMs": 60, "releaseMs": 65 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 3, "decayMs": 20, "sustainLevel": 0.2, "sustainMs": 10, "releaseMs": 20 },
+          "filter": { "type": "lowpass", "cutoffHz": 900 },
+          "gain": 0.4
+        }
+      ]
+    }
+  },
+  {
+    "name": "lock-release",
+    "phrase": "lock release",
+    "category": "mechanical",
+    "concept": "A quick, sharp lock release with a rising pitch click and a light noise snap.",
+    "keywords": ["lock", "release", "unlock", "click", "mechanism", "open", "catch"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 420, "pitchEnvelope": { "toHz": 620, "timeMs": 60 } },
+          "envelope": { "attackMs": 3, "decayMs": 35, "sustainLevel": 0.3, "sustainMs": 20, "releaseMs": 30 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 2, "decayMs": 18, "sustainLevel": 0.2, "sustainMs": 6, "releaseMs": 16 },
+          "filter": { "type": "highpass", "cutoffHz": 4000 },
+          "gain": 0.04
+        }
+      ]
+    }
+  },
+  {
+    "name": "hinge-creak",
+    "phrase": "hinge creak",
+    "category": "mechanical",
+    "concept": "A long, sustained hinge creak with a gritty bandpass noise texture and a low wavering tone.",
+    "keywords": ["hinge", "creak", "door", "squeak", "mechanism", "rusty", "old"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 90, "decayMs": 150, "sustainLevel": 0.65, "sustainMs": 480, "releaseMs": 160 },
+          "filter": { "type": "bandpass", "cutoffHz": 700 },
+          "gain": 1.0
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 260 },
+          "envelope": { "attackMs": 90, "decayMs": 150, "sustainLevel": 0.4, "sustainMs": 480, "releaseMs": 160 },
+          "gain": 0.5
+        }
+      ]
+    }
+  },
+  {
+    "name": "door-slam",
+    "phrase": "door slam",
+    "category": "mechanical",
+    "concept": "A quick, sharp, dark door slam with a low tone thump and a noise impact burst.",
+    "keywords": ["door", "slam", "shut", "impact", "bang", "close", "thud"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 190 },
+          "envelope": { "attackMs": 5, "decayMs": 60, "sustainLevel": 0.3, "sustainMs": 40, "releaseMs": 45 },
+          "gain": 0.5
+        },
+        {
+          "source": { "type": "noise", "color": "pink" },
+          "envelope": { "attackMs": 3, "decayMs": 40, "sustainLevel": 0.2, "sustainMs": 15, "releaseMs": 35 },
+          "filter": { "type": "lowpass", "cutoffHz": 350 },
+          "gain": 0.7
+        }
+      ]
+    }
+  },
+  {
+    "name": "drawer-slide",
+    "phrase": "drawer slide",
+    "category": "mechanical",
+    "concept": "A soft drawer slide with gentle filtered noise friction and a smooth rounded tone.",
+    "keywords": ["drawer", "slide", "open", "close", "furniture", "glide", "runner"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 320 },
+          "envelope": { "attackMs": 40, "decayMs": 90, "sustainLevel": 0.3, "sustainMs": 140, "releaseMs": 110 },
+          "gain": 0.5
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 40, "decayMs": 90, "sustainLevel": 0.35, "sustainMs": 140, "releaseMs": 110 },
+          "filter": { "type": "lowpass", "cutoffHz": 700 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "zipper",
+    "phrase": "zipper",
+    "category": "mechanical",
+    "concept": "A bright, quick zipper texture with crisp highpass noise and a rising tone thread.",
+    "keywords": ["zipper", "zip", "fasten", "fabric", "clothing", "pull", "texture"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 8, "decayMs": 50, "sustainLevel": 0.4, "sustainMs": 60, "releaseMs": 50 },
+          "filter": { "type": "highpass", "cutoffHz": 4000 },
+          "gain": 0.22
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 900, "timeMs": 130 } },
+          "envelope": { "attackMs": 8, "decayMs": 50, "sustainLevel": 0.3, "sustainMs": 60, "releaseMs": 50 },
+          "gain": 0.6
+        }
+      ]
+    }
+  }
+]

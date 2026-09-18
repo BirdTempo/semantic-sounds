@@ -2,8 +2,10 @@ import { describe, it, expect } from 'vitest';
 import { sounds, createSoundIndex, searchIndex, checkLibrary } from './index';
 
 describe('the compiled library', () => {
-  it('has 40 entries and no validation problems', () => {
-    expect(sounds.length).toBe(40);
+  // The set grows. The floor is the promise: at least 1000 sounds, every
+  // one of them inside the contract, with no duplicate name or phrase.
+  it('holds at least 1000 entries and no validation problems', () => {
+    expect(sounds.length).toBeGreaterThanOrEqual(1000);
     expect(checkLibrary(sounds).size).toBe(0);
   });
 

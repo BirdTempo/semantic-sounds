@@ -1,0 +1,514 @@
+[
+  {
+    "name": "notification-stack",
+    "phrase": "notification stack",
+    "category": "messages-notifications",
+    "concept": "A layered chime built from three close tones sounding together, like several notifications piling up at once.",
+    "keywords": ["notification", "stack", "multiple", "cluster", "badge", "group", "pending"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 480 },
+          "envelope": { "attackMs": 8, "decayMs": 30, "sustainLevel": 0.4, "sustainMs": 40, "releaseMs": 72 },
+          "gain": 0.34
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 560 },
+          "envelope": { "attackMs": 8, "decayMs": 30, "sustainLevel": 0.4, "sustainMs": 40, "releaseMs": 72 },
+          "gain": 0.34
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 650 },
+          "envelope": { "attackMs": 8, "decayMs": 30, "sustainLevel": 0.4, "sustainMs": 40, "releaseMs": 72 },
+          "gain": 0.34
+        }
+      ]
+    }
+  },
+  {
+    "name": "urgent-notification",
+    "phrase": "urgent notification",
+    "category": "messages-notifications",
+    "concept": "A short, sharp tone with a crisp noise edge demands immediate attention for an urgent alert.",
+    "keywords": ["urgent", "alert", "notification", "important", "priority", "attention", "warning"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 700 },
+          "envelope": { "attackMs": 4, "decayMs": 26, "sustainLevel": 0.4, "sustainMs": 40, "releaseMs": 70 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 2, "decayMs": 10, "sustainLevel": 0.15, "sustainMs": 8, "releaseMs": 20 },
+          "filter": { "type": "bandpass", "cutoffHz": 2000 },
+          "gain": 0.5
+        }
+      ]
+    }
+  },
+  {
+    "name": "gentle-notification",
+    "phrase": "gentle notification",
+    "category": "messages-notifications",
+    "concept": "A gentle, soft chime with a slow attack and a warm low tone that feels easy on the ear.",
+    "keywords": ["gentle", "soft", "notification", "calm", "quiet", "low-key", "mild"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 450 },
+          "envelope": { "attackMs": 30, "decayMs": 50, "sustainLevel": 0.4, "sustainMs": 60, "releaseMs": 80 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "silent-notification",
+    "phrase": "silent notification",
+    "category": "messages-notifications",
+    "concept": "A heavily muffled, damped thud plays instead of a normal ring when notifications are silenced.",
+    "keywords": ["silent", "mute", "muted", "quiet mode", "hushed", "no sound", "notification"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 260 },
+          "envelope": { "attackMs": 5, "decayMs": 35, "sustainLevel": 0.35, "sustainMs": 30, "releaseMs": 50 },
+          "filter": { "type": "lowpass", "cutoffHz": 450 },
+          "gain": 0.68
+        }
+      ]
+    }
+  },
+  {
+    "name": "do-not-disturb-on",
+    "phrase": "do not disturb on",
+    "category": "messages-notifications",
+    "concept": "A short, falling tone confirms that do not disturb mode has just been turned on.",
+    "keywords": ["do not disturb", "dnd", "mute", "silence", "notifications off", "focus mode", "quiet"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 600, "pitchEnvelope": { "toHz": 400, "timeMs": 100 } },
+          "envelope": { "attackMs": 10, "decayMs": 30, "sustainLevel": 0.4, "sustainMs": 30, "releaseMs": 70 },
+          "filter": { "type": "lowpass", "cutoffHz": 900 },
+          "gain": 0.58
+        }
+      ]
+    }
+  },
+  {
+    "name": "do-not-disturb-off",
+    "phrase": "do not disturb off",
+    "category": "messages-notifications",
+    "concept": "A short, rising tone confirms that do not disturb mode has just been turned off.",
+    "keywords": ["dnd off", "unmute", "notifications on", "focus off", "alerts on", "do not disturb", "resume alerts"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 400, "pitchEnvelope": { "toHz": 600, "timeMs": 110 } },
+          "envelope": { "attackMs": 12, "decayMs": 30, "sustainLevel": 0.4, "sustainMs": 38, "releaseMs": 70 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "incoming-call",
+    "phrase": "incoming call",
+    "category": "messages-notifications",
+    "concept": "A warm, pulsing ring built from two crossing tones that echo a classic telephone call rhythm.",
+    "keywords": ["ring", "phone", "calling", "ringtone", "telephone", "answer call", "call alert"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 480, "pitchEnvelope": { "toHz": 620, "timeMs": 300 } },
+          "envelope": { "attackMs": 20, "decayMs": 60, "sustainLevel": 0.35, "sustainMs": 250, "releaseMs": 120 },
+          "filter": { "type": "lowpass", "cutoffHz": 1000 },
+          "gain": 0.32
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 620, "pitchEnvelope": { "toHz": 480, "timeMs": 300 } },
+          "envelope": { "attackMs": 20, "decayMs": 60, "sustainLevel": 0.35, "sustainMs": 250, "releaseMs": 120 },
+          "filter": { "type": "lowpass", "cutoffHz": 1000 },
+          "gain": 0.32
+        }
+      ]
+    }
+  },
+  {
+    "name": "outgoing-call",
+    "phrase": "outgoing call",
+    "category": "messages-notifications",
+    "concept": "A steady two-tone hum blends two mid tones the way a phone signals an outgoing call in progress.",
+    "keywords": ["dial tone", "calling", "phone", "ring", "dialing", "telephone", "place call"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 350 },
+          "envelope": { "attackMs": 15, "decayMs": 50, "sustainLevel": 0.35, "sustainMs": 250, "releaseMs": 85 },
+          "gain": 0.34
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 440 },
+          "envelope": { "attackMs": 15, "decayMs": 50, "sustainLevel": 0.35, "sustainMs": 250, "releaseMs": 85 },
+          "gain": 0.34
+        }
+      ]
+    }
+  },
+  {
+    "name": "call-connected",
+    "phrase": "call connected",
+    "category": "messages-notifications",
+    "concept": "A quick, rising, sharp chime confirms that your call has just connected.",
+    "keywords": ["call started", "phone", "answered call", "connect", "telephone", "live call", "pick up"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 750, "timeMs": 90 } },
+          "envelope": { "attackMs": 8, "decayMs": 32, "sustainLevel": 0.35, "sustainMs": 30, "releaseMs": 60 },
+          "gain": 0.62
+        }
+      ]
+    }
+  },
+  {
+    "name": "call-ended",
+    "phrase": "call ended",
+    "category": "messages-notifications",
+    "concept": "A soft, falling tone marks the moment a phone call has just ended.",
+    "keywords": ["hang up", "disconnected", "phone", "call over", "telephone", "finished call"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 650, "pitchEnvelope": { "toHz": 420, "timeMs": 120 } },
+          "envelope": { "attackMs": 22, "decayMs": 40, "sustainLevel": 0.4, "sustainMs": 40, "releaseMs": 68 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "call-declined",
+    "phrase": "call declined",
+    "category": "messages-notifications",
+    "concept": "A short, sharp, falling buzz signals that an incoming call has just been declined.",
+    "keywords": ["rejected", "call refused", "phone", "hang up", "missed", "telephone"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 350, "timeMs": 100 } },
+          "envelope": { "attackMs": 4, "decayMs": 30, "sustainLevel": 0.35, "sustainMs": 20, "releaseMs": 76 },
+          "gain": 0.5
+        },
+        {
+          "source": { "type": "oscillator", "wave": "square", "freqHz": 500, "pitchEnvelope": { "toHz": 350, "timeMs": 100 } },
+          "envelope": { "attackMs": 4, "decayMs": 20, "sustainLevel": 0.2, "sustainMs": 26, "releaseMs": 80 },
+          "filter": { "type": "lowpass", "cutoffHz": 700 },
+          "gain": 0.15
+        }
+      ]
+    }
+  },
+  {
+    "name": "call-waiting",
+    "phrase": "call waiting",
+    "category": "messages-notifications",
+    "concept": "A brief, sharp beep on a steady tone interrupts an active call to signal another caller.",
+    "keywords": ["second call", "beep", "interrupt", "phone", "another caller", "notification tone"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 900 },
+          "envelope": { "attackMs": 3, "decayMs": 27, "sustainLevel": 0.35, "sustainMs": 20, "releaseMs": 40 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "voicemail",
+    "phrase": "voicemail",
+    "category": "messages-notifications",
+    "concept": "A warm, gentle tone with a slow attack tells you a new voicemail message is waiting.",
+    "keywords": ["message waiting", "phone", "recording", "missed message", "mailbox", "callback", "voice message"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 380 },
+          "envelope": { "attackMs": 35, "decayMs": 60, "sustainLevel": 0.4, "sustainMs": 75, "releaseMs": 90 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "missed-call",
+    "phrase": "missed call",
+    "category": "messages-notifications",
+    "concept": "A short, sharp, falling tone alerts you that you have a missed call.",
+    "keywords": ["unanswered", "phone", "call alert", "notification", "callback needed", "telephone", "no answer"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 700, "pitchEnvelope": { "toHz": 450, "timeMs": 110 } },
+          "envelope": { "attackMs": 6, "decayMs": 34, "sustainLevel": 0.4, "sustainMs": 40, "releaseMs": 70 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "ringtone-soft",
+    "phrase": "ringtone soft",
+    "category": "messages-notifications",
+    "concept": "A long, sustained, soft ringtone built from two close tones that gently beat against each other.",
+    "keywords": ["soft ring", "phone", "incoming call", "gentle ring", "calling", "sustained tone", "ringer"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 440 },
+          "envelope": { "attackMs": 100, "decayMs": 100, "sustainLevel": 0.4, "sustainMs": 500, "releaseMs": 200 },
+          "gain": 0.32
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 440.3 },
+          "envelope": { "attackMs": 100, "decayMs": 100, "sustainLevel": 0.4, "sustainMs": 500, "releaseMs": 200 },
+          "gain": 0.32
+        }
+      ]
+    }
+  },
+  {
+    "name": "ringtone-bright",
+    "phrase": "ringtone bright",
+    "category": "messages-notifications",
+    "concept": "A long, sustained, bright ringtone rings clearly from two close high tones that shimmer together.",
+    "keywords": ["bright ring", "phone", "incoming call", "high tone", "shimmer", "calling", "ringer"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1600 },
+          "envelope": { "attackMs": 90, "decayMs": 100, "sustainLevel": 0.35, "sustainMs": 460, "releaseMs": 200 },
+          "gain": 0.35
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1606 },
+          "envelope": { "attackMs": 90, "decayMs": 100, "sustainLevel": 0.35, "sustainMs": 460, "releaseMs": 200 },
+          "gain": 0.35
+        }
+      ]
+    }
+  },
+  {
+    "name": "doorbell-notification",
+    "phrase": "doorbell notification",
+    "category": "messages-notifications",
+    "concept": "A classic two-tone chime rings out the way a doorbell announces a visitor at the door.",
+    "keywords": ["doorbell", "visitor", "ring", "chime", "door", "arrival", "bell"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 523 },
+          "envelope": { "attackMs": 8, "decayMs": 60, "sustainLevel": 0.35, "sustainMs": 150, "releaseMs": 132 },
+          "gain": 0.42
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 392 },
+          "envelope": { "attackMs": 8, "decayMs": 60, "sustainLevel": 0.35, "sustainMs": 150, "releaseMs": 132 },
+          "gain": 0.42
+        }
+      ]
+    }
+  },
+  {
+    "name": "delivery-notification",
+    "phrase": "delivery notification",
+    "category": "messages-notifications",
+    "concept": "A short, sharp, rising chime lets you know a delivery notification has just arrived.",
+    "keywords": ["delivery", "package", "shipment", "arrived", "courier", "order", "parcel"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 550, "pitchEnvelope": { "toHz": 800, "timeMs": 110 } },
+          "envelope": { "attackMs": 10, "decayMs": 30, "sustainLevel": 0.35, "sustainMs": 50, "releaseMs": 70 },
+          "gain": 0.58
+        }
+      ]
+    }
+  },
+  {
+    "name": "package-arrived",
+    "phrase": "package arrived",
+    "category": "messages-notifications",
+    "concept": "A warm, soft, rising tone confirms that your package has just arrived at the door.",
+    "keywords": ["delivery complete", "doorstep", "order received", "parcel", "shipment", "notification", "package"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 450, "pitchEnvelope": { "toHz": 650, "timeMs": 150 } },
+          "envelope": { "attackMs": 30, "decayMs": 50, "sustainLevel": 0.4, "sustainMs": 60, "releaseMs": 80 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "subscription-alert",
+    "phrase": "subscription alert",
+    "category": "messages-notifications",
+    "concept": "A short, dual-tone alert notifies you about a subscription renewal or plan change.",
+    "keywords": ["subscription", "renewal", "billing alert", "plan", "account", "membership", "recurring"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 600 },
+          "envelope": { "attackMs": 10, "decayMs": 30, "sustainLevel": 0.4, "sustainMs": 30, "releaseMs": 70 },
+          "gain": 0.36
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 750 },
+          "envelope": { "attackMs": 10, "decayMs": 30, "sustainLevel": 0.4, "sustainMs": 30, "releaseMs": 70 },
+          "gain": 0.36
+        }
+      ]
+    }
+  },
+  {
+    "name": "price-alert",
+    "phrase": "price alert",
+    "category": "messages-notifications",
+    "concept": "A quick, sharp double tone flags a price change you asked to be notified about.",
+    "keywords": ["price drop", "deal", "discount", "watchlist", "notification", "price change", "deal alert"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 700 },
+          "envelope": { "attackMs": 4, "decayMs": 26, "sustainLevel": 0.4, "sustainMs": 30, "releaseMs": 70 },
+          "gain": 0.4
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1050 },
+          "envelope": { "attackMs": 4, "decayMs": 26, "sustainLevel": 0.4, "sustainMs": 30, "releaseMs": 70 },
+          "gain": 0.4
+        }
+      ]
+    }
+  },
+  {
+    "name": "breaking-news",
+    "phrase": "breaking news",
+    "category": "messages-notifications",
+    "concept": "A short, sharp tone paired with a crisp noise edge announces breaking news the moment it happens.",
+    "keywords": ["news alert", "urgent news", "headline", "alert", "notification", "press", "news flash"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 850 },
+          "envelope": { "attackMs": 4, "decayMs": 36, "sustainLevel": 0.35, "sustainMs": 60, "releaseMs": 80 },
+          "gain": 0.5
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 2, "decayMs": 10, "sustainLevel": 0.15, "sustainMs": 6, "releaseMs": 18 },
+          "filter": { "type": "highpass", "cutoffHz": 2500 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "weather-alert",
+    "phrase": "weather alert",
+    "category": "messages-notifications",
+    "concept": "A dark, falling tone pair warns of an incoming weather alert with a heavy, warm tone color.",
+    "keywords": ["storm warning", "forecast", "severe weather", "wind", "alert", "notification", "weather warning"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 700, "pitchEnvelope": { "toHz": 450, "timeMs": 200 } },
+          "envelope": { "attackMs": 40, "decayMs": 60, "sustainLevel": 0.4, "sustainMs": 100, "releaseMs": 100 },
+          "filter": { "type": "lowpass", "cutoffHz": 600 },
+          "gain": 0.42
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 705, "pitchEnvelope": { "toHz": 453, "timeMs": 200 } },
+          "envelope": { "attackMs": 40, "decayMs": 60, "sustainLevel": 0.4, "sustainMs": 100, "releaseMs": 100 },
+          "filter": { "type": "lowpass", "cutoffHz": 600 },
+          "gain": 0.42
+        }
+      ]
+    }
+  },
+  {
+    "name": "security-alert",
+    "phrase": "security alert",
+    "category": "messages-notifications",
+    "concept": "A short, sharp two-tone alert with a filtered edge warns you of a possible security issue.",
+    "keywords": ["breach", "suspicious activity", "account alert", "warning", "protection", "notification", "intrusion"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 600 },
+          "envelope": { "attackMs": 3, "decayMs": 27, "sustainLevel": 0.4, "sustainMs": 40, "releaseMs": 70 },
+          "gain": 0.48
+        },
+        {
+          "source": { "type": "oscillator", "wave": "square", "freqHz": 900 },
+          "envelope": { "attackMs": 3, "decayMs": 20, "sustainLevel": 0.2, "sustainMs": 47, "releaseMs": 70 },
+          "filter": { "type": "lowpass", "cutoffHz": 1200 },
+          "gain": 0.14
+        }
+      ]
+    }
+  },
+  {
+    "name": "login-alert",
+    "phrase": "login alert",
+    "category": "messages-notifications",
+    "concept": "A quick, sharp beep flags a new login attempt on your account.",
+    "keywords": ["sign in", "new device", "account access", "authentication", "alert", "notification", "sign-in attempt"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 750 },
+          "envelope": { "attackMs": 4, "decayMs": 26, "sustainLevel": 0.4, "sustainMs": 30, "releaseMs": 40 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "otp-code",
+    "phrase": "otp code",
+    "category": "messages-notifications",
+    "concept": "A very short, sharp beep signals that a one-time passcode has just arrived by message.",
+    "keywords": ["one-time code", "passcode", "verification code", "security code", "authentication", "sms code", "one time password"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1000 },
+          "envelope": { "attackMs": 3, "decayMs": 20, "sustainLevel": 0.4, "sustainMs": 20, "releaseMs": 37 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "broadcast-start",
+    "phrase": "broadcast start",
+    "category": "messages-notifications",
+    "concept": "A rising sweep tone announces that a live broadcast is about to start.",
+    "keywords": ["live stream", "going live", "on air", "start alert", "notification", "livestream", "broadcast begin"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 400, "pitchEnvelope": { "toHz": 900, "timeMs": 400 } },
+          "envelope": { "attackMs": 60, "decayMs": 100, "sustainLevel": 0.4, "sustainMs": 200, "releaseMs": 140 },
+          "gain": 0.55
+        }
+      ]
+    }
+  }
+]

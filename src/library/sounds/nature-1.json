@@ -1,0 +1,545 @@
+[
+  {
+    "name": "water-drop",
+    "phrase": "water drop",
+    "category": "nature",
+    "concept": "A quick water-drop plink with a sharp attack and a falling pitch that fades quickly.",
+    "keywords": ["water", "drop", "droplet", "plink", "drip", "liquid"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1100, "pitchEnvelope": { "toHz": 650, "timeMs": 70 } },
+          "envelope": { "attackMs": 3, "decayMs": 40, "sustainLevel": 0.25, "sustainMs": 10, "releaseMs": 30 },
+          "gain": 0.54
+        }
+      ]
+    }
+  },
+  {
+    "name": "dripping-tap",
+    "phrase": "dripping tap",
+    "category": "nature",
+    "concept": "A soft, quick tapping drip with a gentle attack and a falling pitch.",
+    "keywords": ["tap", "faucet", "drip", "leak", "water", "plumbing"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 900, "pitchEnvelope": { "toHz": 550, "timeMs": 80 } },
+          "envelope": { "attackMs": 12, "decayMs": 30, "sustainLevel": 0.25, "sustainMs": 20, "releaseMs": 26 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "stream-flow",
+    "phrase": "stream flow",
+    "category": "nature",
+    "concept": "A long, sustained stream of flowing water made from softly filtered pink noise.",
+    "keywords": ["stream", "flow", "creek", "brook", "water", "current", "trickle"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "pink" },
+          "envelope": { "attackMs": 150, "decayMs": 100, "sustainLevel": 0.5, "sustainMs": 600, "releaseMs": 150 },
+          "filter": { "type": "lowpass", "cutoffHz": 500 },
+          "gain": 0.95
+        }
+      ]
+    }
+  },
+  {
+    "name": "river-rush",
+    "phrase": "river rush",
+    "category": "nature",
+    "concept": "A steady, energetic rush of river water built from filtered white noise.",
+    "keywords": ["river", "rush", "rapids", "current", "flow", "water"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 60, "decayMs": 50, "sustainLevel": 0.85, "sustainMs": 350, "releaseMs": 80 },
+          "filter": { "type": "lowpass", "cutoffHz": 900 },
+          "gain": 1.0
+        }
+      ]
+    }
+  },
+  {
+    "name": "waterfall",
+    "phrase": "waterfall",
+    "category": "nature",
+    "concept": "A long, sustained roar of a waterfall built from two layers of filtered noise.",
+    "keywords": ["cascade", "roar", "plunge", "cataract", "water", "rapids"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 200, "decayMs": 100, "sustainLevel": 0.75, "sustainMs": 550, "releaseMs": 150 },
+          "filter": { "type": "lowpass", "cutoffHz": 700 },
+          "gain": 0.7
+        },
+        {
+          "source": { "type": "noise", "color": "pink" },
+          "envelope": { "attackMs": 200, "decayMs": 100, "sustainLevel": 0.7, "sustainMs": 550, "releaseMs": 150 },
+          "filter": { "type": "lowpass", "cutoffHz": 1200 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "ocean-wave",
+    "phrase": "ocean wave",
+    "category": "nature",
+    "concept": "A long, sustained ocean wave that swells and recedes through filtered noise.",
+    "keywords": ["ocean", "wave", "surf", "sea", "swell", "tide"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "pink" },
+          "envelope": { "attackMs": 300, "decayMs": 200, "sustainLevel": 0.4, "sustainMs": 400, "releaseMs": 300 },
+          "filter": { "type": "lowpass", "cutoffHz": 500 },
+          "gain": 0.9
+        }
+      ]
+    }
+  },
+  {
+    "name": "gentle-surf",
+    "phrase": "gentle surf",
+    "category": "nature",
+    "concept": "A gentle surf wash with a soft, slow attack over filtered noise.",
+    "keywords": ["surf", "wash", "shore", "beach", "wave", "foam"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "pink" },
+          "envelope": { "attackMs": 250, "decayMs": 150, "sustainLevel": 0.35, "sustainMs": 300, "releaseMs": 200 },
+          "filter": { "type": "lowpass", "cutoffHz": 450 },
+          "gain": 0.95
+        }
+      ]
+    }
+  },
+  {
+    "name": "tide-pull",
+    "phrase": "tide pull",
+    "category": "nature",
+    "concept": "A slow, falling tide pull blending a low descending tone with a hint of noise texture.",
+    "keywords": ["tide", "pull", "undertow", "current", "ocean", "recede"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 300, "pitchEnvelope": { "toHz": 150, "timeMs": 700 } },
+          "envelope": { "attackMs": 100, "decayMs": 150, "sustainLevel": 0.4, "sustainMs": 400, "releaseMs": 250 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "noise", "color": "pink" },
+          "envelope": { "attackMs": 100, "decayMs": 100, "sustainLevel": 0.15, "sustainMs": 150, "releaseMs": 100 },
+          "filter": { "type": "lowpass", "cutoffHz": 400 },
+          "gain": 0.12
+        }
+      ]
+    }
+  },
+  {
+    "name": "bubbling",
+    "phrase": "bubbling",
+    "category": "nature",
+    "concept": "A quick, rising bubble pop with a sharp attack that pitches upward.",
+    "keywords": ["bubble", "bloop", "fizz", "pop", "water", "carbonation"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 400, "pitchEnvelope": { "toHz": 800, "timeMs": 90 } },
+          "envelope": { "attackMs": 4, "decayMs": 30, "sustainLevel": 0.3, "sustainMs": 20, "releaseMs": 26 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "splash",
+    "phrase": "splash",
+    "category": "nature",
+    "concept": "A sharp, quick splash burst of white noise hitting the water's surface.",
+    "keywords": ["splash", "water", "impact", "burst", "surface", "plunge"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 3, "decayMs": 18, "sustainLevel": 0.5, "sustainMs": 10, "releaseMs": 20 },
+          "filter": { "type": "lowpass", "cutoffHz": 2600 },
+          "gain": 1.0
+        }
+      ]
+    }
+  },
+  {
+    "name": "deep-splash",
+    "phrase": "deep splash",
+    "category": "nature",
+    "concept": "A deep, sharp splash combining a low thud with a burst of filtered noise.",
+    "keywords": ["splash", "deep", "thud", "impact", "water", "plunge"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 220 },
+          "envelope": { "attackMs": 4, "decayMs": 60, "sustainLevel": 0.3, "sustainMs": 60, "releaseMs": 116 },
+          "gain": 0.5
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 3, "decayMs": 20, "sustainLevel": 0.2, "sustainMs": 8, "releaseMs": 30 },
+          "filter": { "type": "lowpass", "cutoffHz": 1200 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "rain-start",
+    "phrase": "rain start",
+    "category": "nature",
+    "concept": "A gentle rain shower beginning gradually with a soft, building patter.",
+    "keywords": ["rain", "shower", "start", "begin", "patter", "drizzle"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 200, "decayMs": 100, "sustainLevel": 0.9, "sustainMs": 450, "releaseMs": 150 },
+          "filter": { "type": "lowpass", "cutoffHz": 800 },
+          "gain": 1.0
+        }
+      ]
+    }
+  },
+  {
+    "name": "light-rain",
+    "phrase": "light rain",
+    "category": "nature",
+    "concept": "A long, sustained patter of light rain through gently filtered noise.",
+    "keywords": ["rain", "light", "drizzle", "patter", "shower", "weather"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 150, "decayMs": 100, "sustainLevel": 0.88, "sustainMs": 550, "releaseMs": 150 },
+          "filter": { "type": "lowpass", "cutoffHz": 1000 },
+          "gain": 1.0
+        }
+      ]
+    }
+  },
+  {
+    "name": "heavy-rain",
+    "phrase": "heavy rain",
+    "category": "nature",
+    "concept": "A long, sustained downpour of heavy rain built from two dense noise layers.",
+    "keywords": ["rain", "heavy", "downpour", "storm", "shower", "deluge"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 100, "decayMs": 100, "sustainLevel": 0.7, "sustainMs": 600, "releaseMs": 150 },
+          "filter": { "type": "lowpass", "cutoffHz": 1200 },
+          "gain": 0.65
+        },
+        {
+          "source": { "type": "noise", "color": "pink" },
+          "envelope": { "attackMs": 100, "decayMs": 100, "sustainLevel": 0.7, "sustainMs": 600, "releaseMs": 150 },
+          "filter": { "type": "lowpass", "cutoffHz": 600 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "rain-on-window",
+    "phrase": "rain on window",
+    "category": "nature",
+    "concept": "A steady rain patter on glass blending filtered noise with light tapping pings.",
+    "keywords": ["rain", "window", "glass", "patter", "tap", "pane"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "pink" },
+          "envelope": { "attackMs": 150, "decayMs": 100, "sustainLevel": 0.55, "sustainMs": 400, "releaseMs": 150 },
+          "filter": { "type": "lowpass", "cutoffHz": 900 },
+          "gain": 0.85
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1400 },
+          "envelope": { "attackMs": 4, "decayMs": 30, "sustainLevel": 0.15, "sustainMs": 10, "releaseMs": 20 },
+          "gain": 0.25
+        }
+      ]
+    }
+  },
+  {
+    "name": "distant-thunder",
+    "phrase": "distant thunder",
+    "category": "nature",
+    "concept": "A long, sustained low rumble of distant thunder with a dark, warm tone.",
+    "keywords": ["thunder", "distant", "rumble", "storm", "low", "boom"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "pink" },
+          "envelope": { "attackMs": 200, "decayMs": 200, "sustainLevel": 0.5, "sustainMs": 500, "releaseMs": 300 },
+          "filter": { "type": "lowpass", "cutoffHz": 250 },
+          "gain": 0.9
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 90 },
+          "envelope": { "attackMs": 200, "decayMs": 200, "sustainLevel": 0.4, "sustainMs": 500, "releaseMs": 300 },
+          "gain": 0.3
+        }
+      ]
+    }
+  },
+  {
+    "name": "close-thunder",
+    "phrase": "close thunder",
+    "category": "nature",
+    "concept": "A sharp, sudden thunderclap with a sharp attack and a long, rumbling tail.",
+    "keywords": ["thunder", "close", "clap", "crack", "storm", "boom"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 3, "decayMs": 40, "sustainLevel": 0.5, "sustainMs": 50, "releaseMs": 120 },
+          "filter": { "type": "lowpass", "cutoffHz": 1500 },
+          "gain": 0.7
+        },
+        {
+          "source": { "type": "noise", "color": "pink" },
+          "envelope": { "attackMs": 10, "decayMs": 150, "sustainLevel": 0.6, "sustainMs": 500, "releaseMs": 340 },
+          "filter": { "type": "lowpass", "cutoffHz": 300 },
+          "gain": 0.9
+        }
+      ]
+    }
+  },
+  {
+    "name": "lightning-crack",
+    "phrase": "lightning crack",
+    "category": "nature",
+    "concept": "A short, sharp, bright lightning crack with a crisp, snapping attack.",
+    "keywords": ["lightning", "crack", "snap", "flash", "electric", "storm"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 1, "decayMs": 6, "sustainLevel": 0.5, "sustainMs": 40, "releaseMs": 85 },
+          "filter": { "type": "highpass", "cutoffHz": 4000 },
+          "gain": 1.0
+        }
+      ]
+    }
+  },
+  {
+    "name": "wind-gust",
+    "phrase": "wind gust",
+    "category": "nature",
+    "concept": "A brief gust of wind that swells through filtered noise and fades.",
+    "keywords": ["wind", "gust", "blow", "air", "swell", "breeze"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "pink" },
+          "envelope": { "attackMs": 80, "decayMs": 100, "sustainLevel": 0.5, "sustainMs": 250, "releaseMs": 120 },
+          "filter": { "type": "lowpass", "cutoffHz": 700 },
+          "gain": 0.85
+        }
+      ]
+    }
+  },
+  {
+    "name": "soft-breeze",
+    "phrase": "soft breeze",
+    "category": "nature",
+    "concept": "A soft, gentle breeze of lightly filtered noise that swells slowly and fades.",
+    "keywords": ["breeze", "wind", "air", "calm", "waft", "meadow"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 100, "decayMs": 100, "sustainLevel": 0.85, "sustainMs": 500, "releaseMs": 200 },
+          "filter": { "type": "lowpass", "cutoffHz": 1000 },
+          "gain": 1.0
+        }
+      ]
+    }
+  },
+  {
+    "name": "howling-wind",
+    "phrase": "howling wind",
+    "category": "nature",
+    "concept": "A long, sustained howling wind built from two wavering tones under filtered noise.",
+    "keywords": ["wind", "howl", "gust", "storm", "eerie", "gale"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 650, "timeMs": 900 } },
+          "envelope": { "attackMs": 200, "decayMs": 150, "sustainLevel": 0.4, "sustainMs": 450, "releaseMs": 200 },
+          "gain": 0.22
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 650, "pitchEnvelope": { "toHz": 500, "timeMs": 900 } },
+          "envelope": { "attackMs": 200, "decayMs": 150, "sustainLevel": 0.4, "sustainMs": 450, "releaseMs": 200 },
+          "gain": 0.22
+        },
+        {
+          "source": { "type": "noise", "color": "pink" },
+          "envelope": { "attackMs": 200, "decayMs": 150, "sustainLevel": 0.35, "sustainMs": 450, "releaseMs": 200 },
+          "filter": { "type": "lowpass", "cutoffHz": 700 },
+          "gain": 0.35
+        }
+      ]
+    }
+  },
+  {
+    "name": "rustling-leaves",
+    "phrase": "rustling leaves",
+    "category": "nature",
+    "concept": "A quick, airy rustle of leaves made from lightly filtered high noise.",
+    "keywords": ["leaf", "rustle", "dry", "crisp", "wind", "brush"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 20, "decayMs": 40, "sustainLevel": 0.3, "sustainMs": 50, "releaseMs": 40 },
+          "filter": { "type": "highpass", "cutoffHz": 2000 },
+          "gain": 0.85
+        }
+      ]
+    }
+  },
+  {
+    "name": "falling-leaf",
+    "phrase": "falling leaf",
+    "category": "nature",
+    "concept": "A soft, falling leaf drifting down with a gentle, descending tone.",
+    "keywords": ["leaf", "fall", "drift", "descend", "autumn", "flutter"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 600, "pitchEnvelope": { "toHz": 350, "timeMs": 500 } },
+          "envelope": { "attackMs": 100, "decayMs": 100, "sustainLevel": 0.35, "sustainMs": 200, "releaseMs": 100 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 20, "decayMs": 30, "sustainLevel": 0.15, "sustainMs": 30, "releaseMs": 20 },
+          "filter": { "type": "highpass", "cutoffHz": 3000 },
+          "gain": 0.12
+        }
+      ]
+    }
+  },
+  {
+    "name": "snapping-twig",
+    "phrase": "snapping twig",
+    "category": "nature",
+    "concept": "A quick, sharp, percussive snap of a twig breaking underfoot.",
+    "keywords": ["twig", "snap", "break", "crack", "branch", "stick"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 1, "decayMs": 6, "sustainLevel": 0.5, "sustainMs": 40, "releaseMs": 85 },
+          "filter": { "type": "highpass", "cutoffHz": 3500 },
+          "gain": 1.0
+        }
+      ]
+    }
+  },
+  {
+    "name": "tree-creak",
+    "phrase": "tree creak",
+    "category": "nature",
+    "concept": "A long, sustained tree creak with a low tone that wavers slowly and groans.",
+    "keywords": ["tree", "creak", "groan", "wood", "branch", "strain"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 220, "pitchEnvelope": { "toHz": 260, "timeMs": 900 } },
+          "envelope": { "attackMs": 250, "decayMs": 150, "sustainLevel": 0.45, "sustainMs": 450, "releaseMs": 200 },
+          "filter": { "type": "lowpass", "cutoffHz": 500 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 300, "decayMs": 200, "sustainLevel": 0.3, "sustainMs": 400, "releaseMs": 150 },
+          "filter": { "type": "lowpass", "cutoffHz": 400 },
+          "gain": 0.2
+        }
+      ]
+    }
+  },
+  {
+    "name": "forest-ambience",
+    "phrase": "forest ambience",
+    "category": "nature",
+    "concept": "A long, sustained forest ambience blending soft airy noise with a low background tone.",
+    "keywords": ["forest", "ambience", "nature", "background", "woods", "calm"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "pink" },
+          "envelope": { "attackMs": 300, "decayMs": 200, "sustainLevel": 0.4, "sustainMs": 400, "releaseMs": 200 },
+          "filter": { "type": "lowpass", "cutoffHz": 500 },
+          "gain": 0.65
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 250 },
+          "envelope": { "attackMs": 300, "decayMs": 200, "sustainLevel": 0.35, "sustainMs": 400, "releaseMs": 200 },
+          "gain": 0.3
+        }
+      ]
+    }
+  },
+  {
+    "name": "crackling-fire",
+    "phrase": "crackling fire",
+    "category": "nature",
+    "concept": "A fire crackle built from an ember bed under a sharp popping burst.",
+    "keywords": ["fire", "crackle", "ember", "pop", "flame", "campfire"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "pink" },
+          "envelope": { "attackMs": 200, "decayMs": 150, "sustainLevel": 0.6, "sustainMs": 400, "releaseMs": 150 },
+          "filter": { "type": "lowpass", "cutoffHz": 400 },
+          "gain": 0.75
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 2, "decayMs": 18, "sustainLevel": 0.25, "sustainMs": 8, "releaseMs": 20 },
+          "filter": { "type": "highpass", "cutoffHz": 2200 },
+          "gain": 0.65
+        }
+      ]
+    }
+  },
+  {
+    "name": "campfire-pop",
+    "phrase": "campfire pop",
+    "category": "nature",
+    "concept": "A quick, sharp, percussive campfire pop bursting from the flames.",
+    "keywords": ["campfire", "pop", "fire", "spark", "burst", "ember"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 3, "decayMs": 18, "sustainLevel": 0.5, "sustainMs": 10, "releaseMs": 20 },
+          "filter": { "type": "lowpass", "cutoffHz": 2500 },
+          "gain": 1.0
+        }
+      ]
+    }
+  }
+]

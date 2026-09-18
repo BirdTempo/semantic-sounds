@@ -1,0 +1,386 @@
+[
+  {
+    "name": "search-start",
+    "phrase": "search start",
+    "category": "ui-feedback",
+    "concept": "A soft, gentle, rising tone marking the start of a search query.",
+    "keywords": ["search", "find", "query", "lookup", "scan", "begin"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 420, "pitchEnvelope": { "toHz": 640, "timeMs": 140 } },
+          "envelope": { "attackMs": 25, "decayMs": 45, "sustainLevel": 0.3, "sustainMs": 40, "releaseMs": 60 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "search-results",
+    "phrase": "search results",
+    "category": "ui-feedback",
+    "concept": "A short pair of tones landing together at once, confirming that results arrived.",
+    "keywords": ["results", "found", "match", "list", "arrive", "confirm"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 600 },
+          "envelope": { "attackMs": 6, "decayMs": 40, "sustainLevel": 0.2, "sustainMs": 20, "releaseMs": 50 },
+          "gain": 0.45
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 900 },
+          "envelope": { "attackMs": 6, "decayMs": 35, "sustainLevel": 0.2, "sustainMs": 15, "releaseMs": 45 },
+          "gain": 0.4
+        }
+      ]
+    }
+  },
+  {
+    "name": "filter-applied",
+    "phrase": "filter applied",
+    "category": "ui-feedback",
+    "concept": "A falling tone settling into place, marking a filter locking into a view.",
+    "keywords": ["filter", "narrow", "apply", "refine", "settle", "lock"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 700, "pitchEnvelope": { "toHz": 450, "timeMs": 110 } },
+          "envelope": { "attackMs": 8, "decayMs": 50, "sustainLevel": 0.2, "sustainMs": 20, "releaseMs": 40 },
+          "gain": 0.6
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 2, "decayMs": 15, "sustainLevel": 0.2, "sustainMs": 5, "releaseMs": 15 },
+          "filter": { "type": "highpass", "cutoffHz": 4000, "q": 0.7 },
+          "gain": 0.2
+        }
+      ]
+    }
+  },
+  {
+    "name": "filter-cleared",
+    "phrase": "filter cleared",
+    "category": "ui-feedback",
+    "concept": "A soft, rising tone opening back up, marking a filter being cleared away.",
+    "keywords": ["filter", "clear", "reset", "remove", "open", "unfilter"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 450, "pitchEnvelope": { "toHz": 700, "timeMs": 120 } },
+          "envelope": { "attackMs": 30, "decayMs": 40, "sustainLevel": 0.25, "sustainMs": 30, "releaseMs": 55 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "sort-ascending",
+    "phrase": "sort ascending",
+    "category": "ui-feedback",
+    "concept": "A quick, rising sweep from low to high, like items climbing into order.",
+    "keywords": ["sort", "ascend", "order", "climb", "arrange", "up"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 350, "pitchEnvelope": { "toHz": 850, "timeMs": 150 } },
+          "envelope": { "attackMs": 10, "decayMs": 60, "sustainLevel": 0.15, "sustainMs": 30, "releaseMs": 50 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "sort-descending",
+    "phrase": "sort descending",
+    "category": "ui-feedback",
+    "concept": "A quick, falling sweep from high to low, like items settling into reverse order.",
+    "keywords": ["sort", "descend", "order", "drop", "arrange", "down"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 850, "pitchEnvelope": { "toHz": 350, "timeMs": 150 } },
+          "envelope": { "attackMs": 10, "decayMs": 60, "sustainLevel": 0.15, "sustainMs": 30, "releaseMs": 50 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "pin-item",
+    "phrase": "pin item",
+    "category": "ui-feedback",
+    "concept": "A short, sharp, percussive tick fixing an item firmly in place.",
+    "keywords": ["pin", "fix", "attach", "stick", "hold", "tack"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 950 },
+          "envelope": { "attackMs": 2, "decayMs": 30, "sustainLevel": 0, "sustainMs": 0, "releaseMs": 20 },
+          "gain": 0.6
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 2, "decayMs": 12, "sustainLevel": 0.2, "sustainMs": 5, "releaseMs": 12 },
+          "filter": { "type": "highpass", "cutoffHz": 4200, "q": 0.7 },
+          "gain": 0.2
+        }
+      ]
+    }
+  },
+  {
+    "name": "unpin-item",
+    "phrase": "unpin item",
+    "category": "ui-feedback",
+    "concept": "A soft, falling tone releasing an item that was held in place.",
+    "keywords": ["unpin", "release", "detach", "loosen", "free", "remove"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 800, "pitchEnvelope": { "toHz": 500, "timeMs": 100 } },
+          "envelope": { "attackMs": 20, "decayMs": 40, "sustainLevel": 0.2, "sustainMs": 20, "releaseMs": 50 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "star-item",
+    "phrase": "star item",
+    "category": "ui-feedback",
+    "concept": "A rising sparkle of two tones marking an item as a favorite.",
+    "keywords": ["star", "favorite", "mark", "highlight", "bookmark", "special"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 950, "timeMs": 100 } },
+          "envelope": { "attackMs": 8, "decayMs": 40, "sustainLevel": 0.2, "sustainMs": 15, "releaseMs": 40 },
+          "gain": 0.45
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 750, "pitchEnvelope": { "toHz": 1000, "timeMs": 100 } },
+          "envelope": { "attackMs": 8, "decayMs": 35, "sustainLevel": 0.15, "sustainMs": 10, "releaseMs": 35 },
+          "gain": 0.35
+        }
+      ]
+    }
+  },
+  {
+    "name": "unstar-item",
+    "phrase": "unstar item",
+    "category": "ui-feedback",
+    "concept": "A soft, falling pair of tones marking an item losing its favorite mark.",
+    "keywords": ["unstar", "unmark", "remove", "favorite", "unbookmark", "dim"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 900, "pitchEnvelope": { "toHz": 500, "timeMs": 110 } },
+          "envelope": { "attackMs": 10, "decayMs": 45, "sustainLevel": 0.2, "sustainMs": 15, "releaseMs": 45 },
+          "gain": 0.45
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 700, "pitchEnvelope": { "toHz": 400, "timeMs": 110 } },
+          "envelope": { "attackMs": 10, "decayMs": 40, "sustainLevel": 0.15, "sustainMs": 10, "releaseMs": 40 },
+          "gain": 0.35
+        }
+      ]
+    }
+  },
+  {
+    "name": "archive",
+    "phrase": "archive",
+    "category": "ui-feedback",
+    "concept": "A long, warm, falling tone with a gentle attack, like an item settling into storage.",
+    "keywords": ["archive", "store", "put away", "box", "shelve", "save"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 500, "pitchEnvelope": { "toHz": 260, "timeMs": 700 } },
+          "envelope": { "attackMs": 120, "decayMs": 200, "sustainLevel": 0.35, "sustainMs": 350, "releaseMs": 250 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "restore",
+    "phrase": "restore",
+    "category": "ui-feedback",
+    "concept": "A long, gentle, rising tone bringing a stored item back into view.",
+    "keywords": ["restore", "recover", "bring back", "unarchive", "return", "revive"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 280, "pitchEnvelope": { "toHz": 550, "timeMs": 700 } },
+          "envelope": { "attackMs": 130, "decayMs": 200, "sustainLevel": 0.35, "sustainMs": 340, "releaseMs": 240 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "duplicate-item",
+    "phrase": "duplicate item",
+    "category": "ui-feedback",
+    "concept": "Two identical short pulses in quick succession, like an item being copied.",
+    "keywords": ["duplicate", "copy", "clone", "repeat", "twin", "again"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 620 },
+          "envelope": { "attackMs": 4, "decayMs": 25, "sustainLevel": 0, "sustainMs": 0, "releaseMs": 15 },
+          "gain": 0.35
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 620 },
+          "envelope": { "attackMs": 60, "decayMs": 25, "sustainLevel": 0, "sustainMs": 0, "releaseMs": 15 },
+          "gain": 0.35
+        }
+      ]
+    }
+  },
+  {
+    "name": "rename",
+    "phrase": "rename",
+    "category": "ui-feedback",
+    "concept": "A short two-tone shift, one pitch replacing another, like a label being swapped.",
+    "keywords": ["rename", "label", "relabel", "change name", "edit", "swap"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 550 },
+          "envelope": { "attackMs": 8, "decayMs": 35, "sustainLevel": 0.15, "sustainMs": 15, "releaseMs": 30 },
+          "gain": 0.45
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 750 },
+          "envelope": { "attackMs": 70, "decayMs": 35, "sustainLevel": 0.15, "sustainMs": 15, "releaseMs": 35 },
+          "gain": 0.45
+        }
+      ]
+    }
+  },
+  {
+    "name": "edit-start",
+    "phrase": "edit start",
+    "category": "ui-feedback",
+    "concept": "A soft, gentle, rising short tone marking the start of an edit.",
+    "keywords": ["edit", "start", "begin", "open", "modify", "compose"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 480, "pitchEnvelope": { "toHz": 650, "timeMs": 90 } },
+          "envelope": { "attackMs": 14, "decayMs": 30, "sustainLevel": 0.25, "sustainMs": 20, "releaseMs": 35 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "edit-end",
+    "phrase": "edit end",
+    "category": "ui-feedback",
+    "concept": "A soft, gentle, falling short tone marking the end of an edit.",
+    "keywords": ["edit", "end", "finish", "close", "done", "save"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 650, "pitchEnvelope": { "toHz": 460, "timeMs": 90 } },
+          "envelope": { "attackMs": 14, "decayMs": 30, "sustainLevel": 0.25, "sustainMs": 20, "releaseMs": 35 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "zoom-in",
+    "phrase": "zoom in",
+    "category": "ui-feedback",
+    "concept": "A quick, short, rising sweep, like the view pulling in closer.",
+    "keywords": ["zoom", "magnify", "enlarge", "closer", "expand", "focus"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 400, "pitchEnvelope": { "toHz": 900, "timeMs": 95 } },
+          "envelope": { "attackMs": 5, "decayMs": 50, "sustainLevel": 0.1, "sustainMs": 20, "releaseMs": 25 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "zoom-out",
+    "phrase": "zoom out",
+    "category": "ui-feedback",
+    "concept": "A quick, short, falling sweep, like the view pulling back further away.",
+    "keywords": ["zoom", "shrink", "reduce", "further", "wide", "pull back"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 900, "pitchEnvelope": { "toHz": 400, "timeMs": 95 } },
+          "envelope": { "attackMs": 5, "decayMs": 50, "sustainLevel": 0.1, "sustainMs": 20, "releaseMs": 25 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "reset-view",
+    "phrase": "reset view",
+    "category": "ui-feedback",
+    "concept": "A short, neutral, gentle tone with no pitch movement, returning the view to its start.",
+    "keywords": ["reset", "view", "default", "center", "return", "restart"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 560 },
+          "envelope": { "attackMs": 18, "decayMs": 50, "sustainLevel": 0.2, "sustainMs": 30, "releaseMs": 50 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "select-all",
+    "phrase": "select all",
+    "category": "ui-feedback",
+    "concept": "A steady pair of tones filling out together, confirming every item is selected.",
+    "keywords": ["select", "all", "everything", "highlight", "choose", "batch"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500 },
+          "envelope": { "attackMs": 20, "decayMs": 60, "sustainLevel": 0.35, "sustainMs": 220, "releaseMs": 120 },
+          "gain": 0.45
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 630 },
+          "envelope": { "attackMs": 20, "decayMs": 60, "sustainLevel": 0.35, "sustainMs": 220, "releaseMs": 120 },
+          "gain": 0.4
+        }
+      ]
+    }
+  },
+  {
+    "name": "clear-all",
+    "phrase": "clear all",
+    "category": "ui-feedback",
+    "concept": "A falling sweep with an airy texture, wiping every selection away at once.",
+    "keywords": ["clear", "all", "wipe", "deselect", "remove", "empty"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 750, "pitchEnvelope": { "toHz": 320, "timeMs": 220 } },
+          "envelope": { "attackMs": 22, "decayMs": 78, "sustainLevel": 0.15, "sustainMs": 50, "releaseMs": 90 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 5, "decayMs": 80, "sustainLevel": 0.1, "sustainMs": 20, "releaseMs": 60 },
+          "filter": { "type": "bandpass", "cutoffHz": 700, "q": 1.1 },
+          "gain": 0.15
+        }
+      ]
+    }
+  }
+]

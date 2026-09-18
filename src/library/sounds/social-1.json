@@ -1,0 +1,349 @@
+[
+  {
+    "name": "like-given",
+    "phrase": "like given",
+    "category": "social",
+    "concept": "A quick, soft, rising blip that plays the instant a like is sent.",
+    "keywords": ["like", "thumbsup", "favorite", "tap", "send", "react", "heart"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 760, "timeMs": 130 } },
+          "envelope": { "attackMs": 12, "decayMs": 28, "sustainLevel": 0.35, "sustainMs": 38, "releaseMs": 52 },
+          "gain": 0.62
+        }
+      ]
+    }
+  },
+  {
+    "name": "like-received",
+    "phrase": "like received",
+    "category": "social",
+    "concept": "A soft, rising chime built from two blended tones that greets a like arriving from someone else.",
+    "keywords": ["like", "thumbsup", "favorite", "notify", "arrive", "react", "alert"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 480, "pitchEnvelope": { "toHz": 700, "timeMs": 180 } },
+          "envelope": { "attackMs": 18, "decayMs": 40, "sustainLevel": 0.35, "sustainMs": 60, "releaseMs": 72 },
+          "gain": 0.44
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 480, "pitchEnvelope": { "toHz": 700, "timeMs": 180 } },
+          "envelope": { "attackMs": 18, "decayMs": 40, "sustainLevel": 0.3, "sustainMs": 60, "releaseMs": 72 },
+          "gain": 0.3
+        }
+      ]
+    }
+  },
+  {
+    "name": "unlike",
+    "phrase": "unlike",
+    "category": "social",
+    "concept": "A short, falling tone that marks a like being withdrawn.",
+    "keywords": ["unlike", "undo", "remove", "withdraw", "cancel", "react", "revert"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 700, "pitchEnvelope": { "toHz": 450, "timeMs": 140 } },
+          "envelope": { "attackMs": 8, "decayMs": 30, "sustainLevel": 0.3, "sustainMs": 40, "releaseMs": 55 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "heart-burst",
+    "phrase": "heart burst",
+    "category": "social",
+    "concept": "A warm, sharp burst of two close tones that pop outward like a heart animation.",
+    "keywords": ["heart", "burst", "pop", "love", "react", "animate", "emote"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 600, "pitchEnvelope": { "toHz": 820, "timeMs": 90 } },
+          "envelope": { "attackMs": 4, "decayMs": 30, "sustainLevel": 0.3, "sustainMs": 30, "releaseMs": 40 },
+          "gain": 0.42
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 300, "pitchEnvelope": { "toHz": 420, "timeMs": 90 } },
+          "envelope": { "attackMs": 4, "decayMs": 30, "sustainLevel": 0.3, "sustainMs": 30, "releaseMs": 40 },
+          "gain": 0.42
+        }
+      ]
+    }
+  },
+  {
+    "name": "applause",
+    "phrase": "applause",
+    "category": "social",
+    "concept": "A long, sustained wash of filtered noise that swells like a crowd clapping.",
+    "keywords": ["applause", "clap", "crowd", "cheer", "audience", "reaction", "approve"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 90, "decayMs": 120, "sustainLevel": 0.75, "sustainMs": 600, "releaseMs": 190 },
+          "filter": { "type": "lowpass", "cutoffHz": 3000 },
+          "gain": 1.0
+        }
+      ]
+    }
+  },
+  {
+    "name": "cheer",
+    "phrase": "cheer",
+    "category": "social",
+    "concept": "A long, swelling blend of tone and noise that grows like a crowd cheering.",
+    "keywords": ["cheer", "crowd", "excite", "celebrate", "hooray", "reaction", "approve"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "saw", "freqHz": 400, "pitchEnvelope": { "toHz": 620, "timeMs": 700 } },
+          "envelope": { "attackMs": 90, "decayMs": 100, "sustainLevel": 0.4, "sustainMs": 500, "releaseMs": 160 },
+          "filter": { "type": "lowpass", "cutoffHz": 900 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "noise", "color": "pink" },
+          "envelope": { "attackMs": 90, "decayMs": 100, "sustainLevel": 0.4, "sustainMs": 500, "releaseMs": 160 },
+          "filter": { "type": "lowpass", "cutoffHz": 2500 },
+          "gain": 0.9
+        }
+      ]
+    }
+  },
+  {
+    "name": "standing-ovation",
+    "phrase": "standing ovation",
+    "category": "social",
+    "concept": "A long, sustained roar of layered filtered noise for a big crowd reaction.",
+    "keywords": ["ovation", "applause", "crowd", "cheer", "celebrate", "audience", "acclaim"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 150, "decayMs": 150, "sustainLevel": 0.55, "sustainMs": 900, "releaseMs": 250 },
+          "filter": { "type": "bandpass", "cutoffHz": 2000 },
+          "gain": 0.9
+        },
+        {
+          "source": { "type": "noise", "color": "pink" },
+          "envelope": { "attackMs": 150, "decayMs": 150, "sustainLevel": 0.45, "sustainMs": 900, "releaseMs": 250 },
+          "filter": { "type": "lowpass", "cutoffHz": 700 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "laugh-track",
+    "phrase": "laugh track",
+    "category": "social",
+    "concept": "A playful, bouncing tone that rises and falls in a burst of laughter.",
+    "keywords": ["laugh", "funny", "humor", "chuckle", "bounce", "playful", "reaction"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 420, "pitchEnvelope": { "toHz": 760, "timeMs": 220 } },
+          "envelope": { "attackMs": 20, "decayMs": 60, "sustainLevel": 0.4, "sustainMs": 90, "releaseMs": 90 },
+          "gain": 0.45
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 760, "pitchEnvelope": { "toHz": 420, "timeMs": 220 } },
+          "envelope": { "attackMs": 20, "decayMs": 60, "sustainLevel": 0.3, "sustainMs": 90, "releaseMs": 90 },
+          "gain": 0.3
+        }
+      ]
+    }
+  },
+  {
+    "name": "boo",
+    "phrase": "boo",
+    "category": "social",
+    "concept": "A long, low, falling tone that reads as a crowd booing in disapproval.",
+    "keywords": ["boo", "disapprove", "reject", "crowd", "negative", "reaction", "jeer"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "saw", "freqHz": 380, "pitchEnvelope": { "toHz": 210, "timeMs": 820 } },
+          "envelope": { "attackMs": 120, "decayMs": 120, "sustainLevel": 0.45, "sustainMs": 550, "releaseMs": 130 },
+          "filter": { "type": "lowpass", "cutoffHz": 500 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "gasp",
+    "phrase": "gasp",
+    "category": "social",
+    "concept": "A short, sharp intake of breath built from a quick burst of high-passed noise.",
+    "keywords": ["gasp", "surprise", "shock", "breath", "reaction", "startle", "inhale"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 2, "decayMs": 15, "sustainLevel": 0.2, "sustainMs": 8, "releaseMs": 25 },
+          "filter": { "type": "highpass", "cutoffHz": 3800 },
+          "gain": 0.78
+        }
+      ]
+    }
+  },
+  {
+    "name": "vote-up",
+    "phrase": "vote up",
+    "category": "social",
+    "concept": "A short, rising chime that confirms a vote going up.",
+    "keywords": ["vote", "upvote", "rank", "boost", "approve", "confirm", "poll"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 520, "pitchEnvelope": { "toHz": 820, "timeMs": 110 } },
+          "envelope": { "attackMs": 9, "decayMs": 25, "sustainLevel": 0.35, "sustainMs": 30, "releaseMs": 46 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "vote-down",
+    "phrase": "vote down",
+    "category": "social",
+    "concept": "A short, falling chime that confirms a vote going down.",
+    "keywords": ["vote", "downvote", "rank", "lower", "reject", "confirm", "poll"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 780, "pitchEnvelope": { "toHz": 480, "timeMs": 110 } },
+          "envelope": { "attackMs": 9, "decayMs": 25, "sustainLevel": 0.35, "sustainMs": 30, "releaseMs": 46 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "poll-closed",
+    "phrase": "poll closed",
+    "category": "social",
+    "concept": "A long, settling tone with a soft attack that marks a poll no longer taking votes.",
+    "keywords": ["poll", "close", "end", "vote", "finish", "lock", "results"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500 },
+          "envelope": { "attackMs": 90, "decayMs": 120, "sustainLevel": 0.4, "sustainMs": 550, "releaseMs": 170 },
+          "gain": 0.4
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 500 },
+          "envelope": { "attackMs": 90, "decayMs": 120, "sustainLevel": 0.3, "sustainMs": 550, "releaseMs": 170 },
+          "gain": 0.3
+        }
+      ]
+    }
+  },
+  {
+    "name": "share-post",
+    "phrase": "share post",
+    "category": "social",
+    "concept": "A quick, rising whoosh built from two blended tones that sends a post forward.",
+    "keywords": ["share", "send", "forward", "repost", "distribute", "post", "outbound"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 450, "pitchEnvelope": { "toHz": 900, "timeMs": 150 } },
+          "envelope": { "attackMs": 10, "decayMs": 35, "sustainLevel": 0.3, "sustainMs": 40, "releaseMs": 55 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 450, "pitchEnvelope": { "toHz": 900, "timeMs": 150 } },
+          "envelope": { "attackMs": 10, "decayMs": 35, "sustainLevel": 0.2, "sustainMs": 40, "releaseMs": 55 },
+          "filter": { "type": "highpass", "cutoffHz": 700 },
+          "gain": 0.3
+        }
+      ]
+    }
+  },
+  {
+    "name": "post-published",
+    "phrase": "post published",
+    "category": "social",
+    "concept": "A soft, rising chime built from two blended tones that confirms a post going live.",
+    "keywords": ["post", "publish", "confirm", "live", "upload", "share", "done"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 750, "timeMs": 170 } },
+          "envelope": { "attackMs": 20, "decayMs": 45, "sustainLevel": 0.35, "sustainMs": 55, "releaseMs": 65 },
+          "gain": 0.44
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 500, "pitchEnvelope": { "toHz": 750, "timeMs": 170 } },
+          "envelope": { "attackMs": 20, "decayMs": 45, "sustainLevel": 0.3, "sustainMs": 55, "releaseMs": 65 },
+          "gain": 0.32
+        }
+      ]
+    }
+  },
+  {
+    "name": "post-deleted",
+    "phrase": "post deleted",
+    "category": "social",
+    "concept": "A short, falling tone paired with a quiet noise texture that marks a post being removed.",
+    "keywords": ["post", "delete", "remove", "erase", "discard", "trash", "clear"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 650, "pitchEnvelope": { "toHz": 320, "timeMs": 150 } },
+          "envelope": { "attackMs": 14, "decayMs": 30, "sustainLevel": 0.3, "sustainMs": 44, "releaseMs": 62 },
+          "gain": 0.5
+        },
+        {
+          "source": { "type": "noise", "color": "pink" },
+          "envelope": { "attackMs": 8, "decayMs": 30, "sustainLevel": 0.12, "sustainMs": 30, "releaseMs": 50 },
+          "filter": { "type": "lowpass", "cutoffHz": 500 },
+          "gain": 0.4
+        }
+      ]
+    }
+  },
+  {
+    "name": "story-viewed",
+    "phrase": "story viewed",
+    "category": "social",
+    "concept": "A short, soft blip that confirms a story has been seen.",
+    "keywords": ["story", "view", "seen", "watch", "confirm", "read", "open"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 620 },
+          "envelope": { "attackMs": 14, "decayMs": 30, "sustainLevel": 0.3, "sustainMs": 40, "releaseMs": 46 },
+          "gain": 0.62
+        }
+      ]
+    }
+  },
+  {
+    "name": "story-posted",
+    "phrase": "story posted",
+    "category": "social",
+    "concept": "A soft, rising swell built from two tones that confirms a story going live.",
+    "keywords": ["story", "post", "publish", "share", "live", "confirm", "upload"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 440, "pitchEnvelope": { "toHz": 660, "timeMs": 260 } },
+          "envelope": { "attackMs": 45, "decayMs": 70, "sustainLevel": 0.35, "sustainMs": 90, "releaseMs": 95 },
+          "gain": 0.42
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 440, "pitchEnvelope": { "toHz": 660, "timeMs": 260 } },
+          "envelope": { "attackMs": 45, "decayMs": 70, "sustainLevel": 0.3, "sustainMs": 90, "releaseMs": 95 },
+          "gain": 0.32
+        }
+      ]
+    }
+  }
+]

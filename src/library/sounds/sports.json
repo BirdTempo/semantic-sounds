@@ -1,0 +1,523 @@
+[
+  {
+    "name": "whistle-start",
+    "phrase": "whistle start",
+    "category": "sports",
+    "concept": "A sharp, bright referee whistle with a fast rising pitch that opens play.",
+    "keywords": ["whistle", "referee", "start", "kickoff", "begin", "match", "signal"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1500, "pitchEnvelope": { "toHz": 2100, "timeMs": 150 } },
+          "envelope": { "attackMs": 3, "decayMs": 20, "sustainLevel": 0.5, "sustainMs": 140, "releaseMs": 50 },
+          "gain": 0.5
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 1500, "pitchEnvelope": { "toHz": 2100, "timeMs": 150 } },
+          "envelope": { "attackMs": 3, "decayMs": 20, "sustainLevel": 0.5, "sustainMs": 140, "releaseMs": 50 },
+          "gain": 0.22
+        }
+      ]
+    }
+  },
+  {
+    "name": "whistle-end",
+    "phrase": "whistle end",
+    "category": "sports",
+    "concept": "A sustained, bright referee whistle that falls in pitch to end the match.",
+    "keywords": ["whistle", "referee", "end", "final", "stop", "match", "signal"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 2000, "pitchEnvelope": { "toHz": 1400, "timeMs": 850 } },
+          "envelope": { "attackMs": 5, "decayMs": 50, "sustainLevel": 0.5, "sustainMs": 700, "releaseMs": 150 },
+          "gain": 0.42
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 2010, "pitchEnvelope": { "toHz": 1410, "timeMs": 850 } },
+          "envelope": { "attackMs": 5, "decayMs": 50, "sustainLevel": 0.5, "sustainMs": 700, "releaseMs": 150 },
+          "gain": 0.2
+        }
+      ]
+    }
+  },
+  {
+    "name": "ball-kick",
+    "phrase": "ball kick",
+    "category": "sports",
+    "concept": "A sharp, percussive falling thud for a foot striking a ball squarely.",
+    "keywords": ["ball", "kick", "foot", "strike", "soccer", "thud", "impact"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 300, "pitchEnvelope": { "toHz": 90, "timeMs": 40 } },
+          "envelope": { "attackMs": 2, "decayMs": 40, "sustainLevel": 0.1, "sustainMs": 10, "releaseMs": 20 },
+          "filter": { "type": "highpass", "cutoffHz": 35 },
+          "gain": 0.62
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 2, "decayMs": 15, "sustainLevel": 0.2, "sustainMs": 5, "releaseMs": 15 },
+          "filter": { "type": "lowpass", "cutoffHz": 900 },
+          "gain": 0.5
+        }
+      ]
+    }
+  },
+  {
+    "name": "ball-bounce",
+    "phrase": "ball bounce",
+    "category": "sports",
+    "concept": "A soft, quick tap with a warm falling pitch for a ball hitting the floor once.",
+    "keywords": ["ball", "bounce", "floor", "tap", "impact", "hit", "court"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 350, "timeMs": 60 } },
+          "envelope": { "attackMs": 8, "decayMs": 30, "sustainLevel": 0.2, "sustainMs": 10, "releaseMs": 20 },
+          "gain": 0.5
+        }
+      ]
+    }
+  },
+  {
+    "name": "ball-catch",
+    "phrase": "ball catch",
+    "category": "sports",
+    "concept": "A soft, short thump for catching a ball in a padded glove.",
+    "keywords": ["ball", "catch", "glove", "mitt", "grab", "thud", "receive"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 260 },
+          "envelope": { "attackMs": 20, "decayMs": 30, "sustainLevel": 0.3, "sustainMs": 20, "releaseMs": 30 },
+          "filter": { "type": "lowpass", "cutoffHz": 450 },
+          "gain": 0.6
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 2, "decayMs": 10, "sustainLevel": 0.15, "sustainMs": 5, "releaseMs": 10 },
+          "filter": { "type": "lowpass", "cutoffHz": 600 },
+          "gain": 0.35
+        }
+      ]
+    }
+  },
+  {
+    "name": "bat-crack",
+    "phrase": "bat crack",
+    "category": "sports",
+    "concept": "A sharp, bright crack with a fast falling pitch for a bat striking a ball.",
+    "keywords": ["bat", "crack", "baseball", "hit", "strike", "wood", "snap"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 900, "pitchEnvelope": { "toHz": 480, "timeMs": 30 } },
+          "envelope": { "attackMs": 3, "decayMs": 25, "sustainLevel": 0.1, "sustainMs": 5, "releaseMs": 15 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 2, "decayMs": 12, "sustainLevel": 0.2, "sustainMs": 5, "releaseMs": 12 },
+          "filter": { "type": "highpass", "cutoffHz": 4000 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "racket-hit",
+    "phrase": "racket hit",
+    "category": "sports",
+    "concept": "A sharp, bright ping with a quick falling pitch for a racket striking a ball.",
+    "keywords": ["racket", "tennis", "badminton", "hit", "ping", "strike", "swing"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1200, "pitchEnvelope": { "toHz": 700, "timeMs": 40 } },
+          "envelope": { "attackMs": 3, "decayMs": 30, "sustainLevel": 0.15, "sustainMs": 10, "releaseMs": 25 },
+          "gain": 0.5
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 1210, "pitchEnvelope": { "toHz": 710, "timeMs": 40 } },
+          "envelope": { "attackMs": 3, "decayMs": 30, "sustainLevel": 0.15, "sustainMs": 10, "releaseMs": 25 },
+          "gain": 0.22
+        }
+      ]
+    }
+  },
+  {
+    "name": "net-swish",
+    "phrase": "net swish",
+    "category": "sports",
+    "concept": "A soft, breathy swish of filtered noise for a ball passing through a net.",
+    "keywords": ["net", "swish", "basketball", "soccer", "goal", "whoosh", "mesh"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 25, "decayMs": 40, "sustainLevel": 0.65, "sustainMs": 90, "releaseMs": 70 },
+          "filter": { "type": "lowpass", "cutoffHz": 2200 },
+          "gain": 1.0
+        }
+      ]
+    }
+  },
+  {
+    "name": "goal-scored",
+    "phrase": "goal scored",
+    "category": "sports",
+    "concept": "A bright, rising two-note chime celebrating a scored goal.",
+    "keywords": ["goal", "score", "celebrate", "win", "cheer", "chime", "point"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1050, "pitchEnvelope": { "toHz": 1575, "timeMs": 150 } },
+          "envelope": { "attackMs": 15, "decayMs": 60, "sustainLevel": 0.4, "sustainMs": 80, "releaseMs": 90 },
+          "gain": 0.45
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1575, "pitchEnvelope": { "toHz": 2360, "timeMs": 150 } },
+          "envelope": { "attackMs": 15, "decayMs": 60, "sustainLevel": 0.4, "sustainMs": 80, "releaseMs": 90 },
+          "gain": 0.3
+        }
+      ]
+    }
+  },
+  {
+    "name": "buzzer-beater",
+    "phrase": "buzzer beater",
+    "category": "sports",
+    "concept": "A sharp, urgent buzzer blast marking a last-second buzzer-beater.",
+    "keywords": ["buzzer", "timer", "alarm", "urgent", "clock", "game", "basketball"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 400 },
+          "envelope": { "attackMs": 3, "decayMs": 20, "sustainLevel": 0.5, "sustainMs": 180, "releaseMs": 40 },
+          "gain": 0.45
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 415 },
+          "envelope": { "attackMs": 3, "decayMs": 20, "sustainLevel": 0.5, "sustainMs": 180, "releaseMs": 40 },
+          "gain": 0.35
+        },
+        {
+          "source": { "type": "oscillator", "wave": "square", "freqHz": 400 },
+          "envelope": { "attackMs": 3, "decayMs": 15, "sustainLevel": 0.2, "sustainMs": 150, "releaseMs": 30 },
+          "filter": { "type": "lowpass", "cutoffHz": 900 },
+          "gain": 0.15
+        }
+      ]
+    }
+  },
+  {
+    "name": "starting-gun",
+    "phrase": "starting gun",
+    "category": "sports",
+    "concept": "A bright crack of noise for a starting gun firing to open a race.",
+    "keywords": ["gun", "start", "race", "signal", "crack", "pistol", "track"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 2, "decayMs": 15, "sustainLevel": 0.2, "sustainMs": 5, "releaseMs": 15 },
+          "filter": { "type": "highpass", "cutoffHz": 4000 },
+          "gain": 0.75
+        }
+      ]
+    }
+  },
+  {
+    "name": "lane-splash",
+    "phrase": "lane splash",
+    "category": "sports",
+    "concept": "A soft, bright splash of filtered noise for a swimmer entering a lane.",
+    "keywords": ["splash", "pool", "swim", "lane", "water", "dive", "swimmer"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 20, "decayMs": 40, "sustainLevel": 0.6, "sustainMs": 70, "releaseMs": 70 },
+          "filter": { "type": "lowpass", "cutoffHz": 2500 },
+          "gain": 1.0
+        }
+      ]
+    }
+  },
+  {
+    "name": "puck-slap",
+    "phrase": "puck slap",
+    "category": "sports",
+    "concept": "A bright, high-pitched crack for a stick slapping a puck.",
+    "keywords": ["puck", "hockey", "stick", "slap", "ice", "hit", "slapshot"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 1400, "pitchEnvelope": { "toHz": 800, "timeMs": 25 } },
+          "envelope": { "attackMs": 2, "decayMs": 20, "sustainLevel": 0.1, "sustainMs": 4, "releaseMs": 20 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 2, "decayMs": 10, "sustainLevel": 0.15, "sustainMs": 4, "releaseMs": 10 },
+          "filter": { "type": "highpass", "cutoffHz": 5000 },
+          "gain": 0.5
+        }
+      ]
+    }
+  },
+  {
+    "name": "hoop-rattle",
+    "phrase": "hoop rattle",
+    "category": "sports",
+    "concept": "A bright, metallic rattle with a pitch wobble for a ball rattling the rim before dropping.",
+    "keywords": ["hoop", "rim", "rattle", "basketball", "metal", "clang", "ring"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 1000, "pitchEnvelope": { "toHz": 1200, "timeMs": 150 } },
+          "envelope": { "attackMs": 5, "decayMs": 60, "sustainLevel": 0.3, "sustainMs": 120, "releaseMs": 90 },
+          "gain": 0.4
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 1000, "pitchEnvelope": { "toHz": 800, "timeMs": 150 } },
+          "envelope": { "attackMs": 5, "decayMs": 60, "sustainLevel": 0.3, "sustainMs": 120, "releaseMs": 90 },
+          "gain": 0.35
+        }
+      ]
+    }
+  },
+  {
+    "name": "tackle",
+    "phrase": "tackle",
+    "category": "sports",
+    "concept": "A heavy, low thud for a football tackle impact.",
+    "keywords": ["tackle", "football", "hit", "impact", "collision", "rugby", "contact"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 260, "pitchEnvelope": { "toHz": 190, "timeMs": 50 } },
+          "envelope": { "attackMs": 3, "decayMs": 40, "sustainLevel": 0.15, "sustainMs": 15, "releaseMs": 30 },
+          "filter": { "type": "highpass", "cutoffHz": 35 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 2, "decayMs": 20, "sustainLevel": 0.2, "sustainMs": 8, "releaseMs": 20 },
+          "filter": { "type": "lowpass", "cutoffHz": 700 },
+          "gain": 0.45
+        }
+      ]
+    }
+  },
+  {
+    "name": "crowd-roar",
+    "phrase": "crowd roar",
+    "category": "sports",
+    "concept": "A rich, sustained swell of filtered noise for a crowd roaring in the stands.",
+    "keywords": ["crowd", "roar", "cheer", "fan", "stadium", "applause", "excitement"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "pink" },
+          "envelope": { "attackMs": 200, "decayMs": 150, "sustainLevel": 0.5, "sustainMs": 500, "releaseMs": 200 },
+          "filter": { "type": "lowpass", "cutoffHz": 500 },
+          "gain": 1.0
+        }
+      ]
+    }
+  },
+  {
+    "name": "referee-call",
+    "phrase": "referee call",
+    "category": "sports",
+    "concept": "A short, firm, steady tone marking a referee's call on the field.",
+    "keywords": ["referee", "call", "decision", "signal", "official", "judge", "ruling"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 700 },
+          "envelope": { "attackMs": 5, "decayMs": 20, "sustainLevel": 0.4, "sustainMs": 60, "releaseMs": 30 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "oscillator", "wave": "square", "freqHz": 700 },
+          "envelope": { "attackMs": 5, "decayMs": 15, "sustainLevel": 0.15, "sustainMs": 40, "releaseMs": 20 },
+          "filter": { "type": "lowpass", "cutoffHz": 1200 },
+          "gain": 0.15
+        }
+      ]
+    }
+  },
+  {
+    "name": "foul",
+    "phrase": "foul",
+    "category": "sports",
+    "concept": "A sharp, dissonant buzz built from two clashing detuned tones for a foul call.",
+    "keywords": ["foul", "violation", "buzz", "error", "infraction", "referee", "warning"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 300 },
+          "envelope": { "attackMs": 3, "decayMs": 30, "sustainLevel": 0.3, "sustainMs": 60, "releaseMs": 40 },
+          "gain": 0.42
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 318 },
+          "envelope": { "attackMs": 3, "decayMs": 30, "sustainLevel": 0.3, "sustainMs": 60, "releaseMs": 40 },
+          "gain": 0.38
+        }
+      ]
+    }
+  },
+  {
+    "name": "penalty",
+    "phrase": "penalty",
+    "category": "sports",
+    "concept": "A sharp, heavy, dark tone for a penalty called against a team.",
+    "keywords": ["penalty", "foul", "call", "sanction", "referee", "violation", "spot-kick"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 220, "pitchEnvelope": { "toHz": 180, "timeMs": 80 } },
+          "envelope": { "attackMs": 4, "decayMs": 40, "sustainLevel": 0.3, "sustainMs": 60, "releaseMs": 50 },
+          "filter": { "type": "lowpass", "cutoffHz": 450 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "timeout",
+    "phrase": "timeout",
+    "category": "sports",
+    "concept": "A soft, gentle, steady mid tone marking a timeout pause in play.",
+    "keywords": ["timeout", "pause", "break", "stop", "clock", "rest", "interval"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500 },
+          "envelope": { "attackMs": 40, "decayMs": 60, "sustainLevel": 0.35, "sustainMs": 100, "releaseMs": 80 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 750 },
+          "envelope": { "attackMs": 40, "decayMs": 60, "sustainLevel": 0.3, "sustainMs": 100, "releaseMs": 80 },
+          "gain": 0.28
+        }
+      ]
+    }
+  },
+  {
+    "name": "substitution",
+    "phrase": "substitution",
+    "category": "sports",
+    "concept": "A soft, rising two-tone chime for a player substitution at the bench.",
+    "keywords": ["substitution", "swap", "change", "player", "bench", "lineup", "roster"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 650, "timeMs": 120 } },
+          "envelope": { "attackMs": 25, "decayMs": 50, "sustainLevel": 0.35, "sustainMs": 70, "releaseMs": 70 },
+          "gain": 0.5
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 650, "pitchEnvelope": { "toHz": 800, "timeMs": 120 } },
+          "envelope": { "attackMs": 25, "decayMs": 50, "sustainLevel": 0.35, "sustainMs": 70, "releaseMs": 70 },
+          "gain": 0.32
+        }
+      ]
+    }
+  },
+  {
+    "name": "scoreboard-update",
+    "phrase": "scoreboard update",
+    "category": "sports",
+    "concept": "A sharp, bright, quick blip for a scoreboard number updating.",
+    "keywords": ["scoreboard", "score", "update", "display", "digital", "blip", "tally"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1600 },
+          "envelope": { "attackMs": 3, "decayMs": 20, "sustainLevel": 0.2, "sustainMs": 15, "releaseMs": 20 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "oscillator", "wave": "square", "freqHz": 1600 },
+          "envelope": { "attackMs": 2, "decayMs": 10, "sustainLevel": 0.1, "sustainMs": 5, "releaseMs": 10 },
+          "filter": { "type": "lowpass", "cutoffHz": 2500 },
+          "gain": 0.15
+        }
+      ]
+    }
+  },
+  {
+    "name": "lap-complete",
+    "phrase": "lap complete",
+    "category": "sports",
+    "concept": "A bright, rising confirmation chime for completing a lap on the track.",
+    "keywords": ["lap", "complete", "finish", "timer", "track", "racing", "confirm"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1050, "pitchEnvelope": { "toHz": 1575, "timeMs": 100 } },
+          "envelope": { "attackMs": 10, "decayMs": 50, "sustainLevel": 0.35, "sustainMs": 70, "releaseMs": 70 },
+          "gain": 0.45
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1575, "pitchEnvelope": { "toHz": 2360, "timeMs": 100 } },
+          "envelope": { "attackMs": 10, "decayMs": 50, "sustainLevel": 0.35, "sustainMs": 70, "releaseMs": 70 },
+          "gain": 0.3
+        }
+      ]
+    }
+  },
+  {
+    "name": "finish-line",
+    "phrase": "finish line",
+    "category": "sports",
+    "concept": "A bright, rising sweep that builds as a racer crosses the finish line.",
+    "keywords": ["finish", "race", "line", "cross", "victory", "sweep", "checkered"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1050, "pitchEnvelope": { "toHz": 1800, "timeMs": 300 } },
+          "envelope": { "attackMs": 30, "decayMs": 100, "sustainLevel": 0.4, "sustainMs": 150, "releaseMs": 150 },
+          "gain": 0.42
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1575, "pitchEnvelope": { "toHz": 2700, "timeMs": 300 } },
+          "envelope": { "attackMs": 30, "decayMs": 100, "sustainLevel": 0.4, "sustainMs": 150, "releaseMs": 150 },
+          "gain": 0.3
+        }
+      ]
+    }
+  },
+  {
+    "name": "medal-ceremony",
+    "phrase": "medal ceremony",
+    "category": "sports",
+    "concept": "A warm, gentle, sustained swell of layered tones for a medal ceremony.",
+    "keywords": ["medal", "ceremony", "award", "podium", "victory", "honor", "celebration"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 400 },
+          "envelope": { "attackMs": 200, "decayMs": 150, "sustainLevel": 0.4, "sustainMs": 400, "releaseMs": 200 },
+          "gain": 0.35
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500 },
+          "envelope": { "attackMs": 200, "decayMs": 150, "sustainLevel": 0.4, "sustainMs": 400, "releaseMs": 200 },
+          "gain": 0.3
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 600 },
+          "envelope": { "attackMs": 200, "decayMs": 150, "sustainLevel": 0.4, "sustainMs": 400, "releaseMs": 200 },
+          "gain": 0.25
+        }
+      ]
+    }
+  }
+]

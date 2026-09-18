@@ -1,0 +1,374 @@
+[
+  {
+    "name": "play",
+    "phrase": "play",
+    "category": "media-controls",
+    "concept": "A short, soft, rising sine tone that signals playback starting smoothly.",
+    "keywords": ["start", "begin", "resume", "continue", "playback", "go"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 440, "pitchEnvelope": { "toHz": 660, "timeMs": 100 } },
+          "envelope": { "attackMs": 16, "decayMs": 44, "sustainLevel": 0.35, "sustainMs": 40, "releaseMs": 60 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "pause",
+    "phrase": "pause",
+    "category": "media-controls",
+    "concept": "A short, soft, two-tone hold with a gentle attack that signals playback pausing.",
+    "keywords": ["hold", "halt", "freeze", "suspend", "playback", "wait"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500 },
+          "envelope": { "attackMs": 20, "decayMs": 40, "sustainLevel": 0.4, "sustainMs": 50, "releaseMs": 50 },
+          "gain": 0.34
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 508 },
+          "envelope": { "attackMs": 20, "decayMs": 40, "sustainLevel": 0.4, "sustainMs": 50, "releaseMs": 50 },
+          "gain": 0.3
+        }
+      ]
+    }
+  },
+  {
+    "name": "stop-playback",
+    "phrase": "stop playback",
+    "category": "media-controls",
+    "concept": "A short, sharp, falling triangle tone that signals playback stopping completely.",
+    "keywords": ["stop", "halt", "end", "playback", "cease", "finish"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 700, "pitchEnvelope": { "toHz": 350, "timeMs": 90 } },
+          "envelope": { "attackMs": 3, "decayMs": 50, "sustainLevel": 0.2, "sustainMs": 30, "releaseMs": 40 },
+          "gain": 0.62
+        }
+      ]
+    }
+  },
+  {
+    "name": "next-track",
+    "phrase": "next track",
+    "category": "media-controls",
+    "concept": "A quick, bright, rising sine blip that skips ahead to the next track.",
+    "keywords": ["next", "track", "skip", "forward", "song", "advance"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1000, "pitchEnvelope": { "toHz": 3200, "timeMs": 40 } },
+          "envelope": { "attackMs": 4, "decayMs": 35, "sustainLevel": 0.25, "sustainMs": 20, "releaseMs": 30 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "previous-track",
+    "phrase": "previous track",
+    "category": "media-controls",
+    "concept": "A quick, bright, falling sine blip that returns to the previous track.",
+    "keywords": ["previous", "track", "back", "song", "return", "last"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 2400, "pitchEnvelope": { "toHz": 900, "timeMs": 70 } },
+          "envelope": { "attackMs": 4, "decayMs": 35, "sustainLevel": 0.25, "sustainMs": 20, "releaseMs": 30 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "fast-forward",
+    "phrase": "fast forward",
+    "category": "media-controls",
+    "concept": "A short, bright, two-layer rising sweep with an energetic upward surge.",
+    "keywords": ["forward", "fast", "seek", "speed", "advance", "skip"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 1400, "timeMs": 110 } },
+          "envelope": { "attackMs": 6, "decayMs": 55, "sustainLevel": 0.3, "sustainMs": 30, "releaseMs": 40 },
+          "gain": 0.42
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 750, "pitchEnvelope": { "toHz": 1900, "timeMs": 90 } },
+          "envelope": { "attackMs": 5, "decayMs": 45, "sustainLevel": 0.25, "sustainMs": 20, "releaseMs": 30 },
+          "gain": 0.42
+        }
+      ]
+    }
+  },
+  {
+    "name": "rewind",
+    "phrase": "rewind",
+    "category": "media-controls",
+    "concept": "A short, bright, two-layer falling sweep with an energetic downward dive.",
+    "keywords": ["back", "reverse", "backtrack", "backward", "undo", "scrub"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1400, "pitchEnvelope": { "toHz": 500, "timeMs": 110 } },
+          "envelope": { "attackMs": 6, "decayMs": 55, "sustainLevel": 0.3, "sustainMs": 30, "releaseMs": 40 },
+          "gain": 0.42
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 1900, "pitchEnvelope": { "toHz": 750, "timeMs": 90 } },
+          "envelope": { "attackMs": 5, "decayMs": 45, "sustainLevel": 0.25, "sustainMs": 20, "releaseMs": 30 },
+          "gain": 0.42
+        }
+      ]
+    }
+  },
+  {
+    "name": "seek",
+    "phrase": "seek",
+    "category": "media-controls",
+    "concept": "A short, soft scrub tone with a gentle rising pitch and a light noise swipe.",
+    "keywords": ["scrub", "swipe", "skip", "position", "timeline", "locate"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 400, "pitchEnvelope": { "toHz": 750, "timeMs": 120 } },
+          "envelope": { "attackMs": 18, "decayMs": 42, "sustainLevel": 0.3, "sustainMs": 30, "releaseMs": 40 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 15, "decayMs": 50, "sustainLevel": 0.15, "sustainMs": 20, "releaseMs": 35 },
+          "filter": { "type": "lowpass", "cutoffHz": 900 },
+          "gain": 0.18
+        }
+      ]
+    }
+  },
+  {
+    "name": "shuffle-on",
+    "phrase": "shuffle on",
+    "category": "media-controls",
+    "concept": "A short, bright, playful two-note ascending flick that turns shuffle on.",
+    "keywords": ["shuffle", "random", "on", "mix", "playlist", "enable"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 600, "pitchEnvelope": { "toHz": 950, "timeMs": 60 } },
+          "envelope": { "attackMs": 4, "decayMs": 30, "sustainLevel": 0.3, "sustainMs": 15, "releaseMs": 25 },
+          "gain": 0.5
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 900, "pitchEnvelope": { "toHz": 1500, "timeMs": 50 } },
+          "envelope": { "attackMs": 4, "decayMs": 25, "sustainLevel": 0.25, "sustainMs": 10, "releaseMs": 20 },
+          "gain": 0.42
+        }
+      ]
+    }
+  },
+  {
+    "name": "shuffle-off",
+    "phrase": "shuffle off",
+    "category": "media-controls",
+    "concept": "A short, muted, descending flick that turns shuffle off.",
+    "keywords": ["shuffle", "random", "off", "disable", "mix", "playlist"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 900, "pitchEnvelope": { "toHz": 550, "timeMs": 60 } },
+          "envelope": { "attackMs": 4, "decayMs": 30, "sustainLevel": 0.25, "sustainMs": 15, "releaseMs": 25 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "repeat-on",
+    "phrase": "repeat on",
+    "category": "media-controls",
+    "concept": "A long, soft, cyclic tone with a gentle attack that signals repeat turning on.",
+    "keywords": ["repeat", "loop", "cycle", "on", "enable", "playlist"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500 },
+          "envelope": { "attackMs": 100, "decayMs": 200, "sustainLevel": 0.4, "sustainMs": 400, "releaseMs": 150 },
+          "gain": 0.45
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 505 },
+          "envelope": { "attackMs": 100, "decayMs": 200, "sustainLevel": 0.4, "sustainMs": 400, "releaseMs": 150 },
+          "gain": 0.4
+        }
+      ]
+    }
+  },
+  {
+    "name": "repeat-off",
+    "phrase": "repeat off",
+    "category": "media-controls",
+    "concept": "A short, soft tone with a gentle attack that signals repeat turning off.",
+    "keywords": ["repeat", "loop", "off", "disable", "cycle", "playlist"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 450 },
+          "envelope": { "attackMs": 15, "decayMs": 35, "sustainLevel": 0.3, "sustainMs": 30, "releaseMs": 40 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "volume-up",
+    "phrase": "volume up",
+    "category": "media-controls",
+    "concept": "A short, bright, rising sine tone that signals volume increasing.",
+    "keywords": ["volume", "up", "increase", "louder", "sound", "raise"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 700, "pitchEnvelope": { "toHz": 2600, "timeMs": 25 } },
+          "envelope": { "attackMs": 10, "decayMs": 50, "sustainLevel": 0.3, "sustainMs": 30, "releaseMs": 40 },
+          "gain": 0.47
+        }
+      ]
+    }
+  },
+  {
+    "name": "volume-down",
+    "phrase": "volume down",
+    "category": "media-controls",
+    "concept": "A short, dark, falling sine tone that signals volume decreasing.",
+    "keywords": ["volume", "down", "decrease", "quieter", "sound", "lower"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 900, "pitchEnvelope": { "toHz": 350, "timeMs": 120 } },
+          "envelope": { "attackMs": 10, "decayMs": 50, "sustainLevel": 0.3, "sustainMs": 30, "releaseMs": 40 },
+          "gain": 0.47
+        }
+      ]
+    }
+  },
+  {
+    "name": "mute-audio",
+    "phrase": "mute audio",
+    "category": "media-controls",
+    "concept": "A short, dark, muffled thud that signals audio muting completely.",
+    "keywords": ["mute", "silence", "audio", "quiet", "off", "sound"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 300 },
+          "envelope": { "attackMs": 5, "decayMs": 40, "sustainLevel": 0.2, "sustainMs": 20, "releaseMs": 35 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "noise", "color": "pink" },
+          "envelope": { "attackMs": 5, "decayMs": 50, "sustainLevel": 0.15, "sustainMs": 10, "releaseMs": 30 },
+          "filter": { "type": "lowpass", "cutoffHz": 200 },
+          "gain": 0.9
+        }
+      ]
+    }
+  },
+  {
+    "name": "unmute-audio",
+    "phrase": "unmute audio",
+    "category": "media-controls",
+    "concept": "A short, bright, rising sine tone that signals audio unmuting and opening up.",
+    "keywords": ["unmute", "audio", "sound", "on", "restore", "volume"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 800, "pitchEnvelope": { "toHz": 2800, "timeMs": 20 } },
+          "envelope": { "attackMs": 8, "decayMs": 45, "sustainLevel": 0.3, "sustainMs": 25, "releaseMs": 35 },
+          "gain": 0.46
+        }
+      ]
+    }
+  },
+  {
+    "name": "record-start",
+    "phrase": "record start",
+    "category": "media-controls",
+    "concept": "A medium, soft, steady tone with a gentle attack that signals recording starting.",
+    "keywords": ["record", "start", "recording", "capture", "begin", "microphone"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 600 },
+          "envelope": { "attackMs": 40, "decayMs": 60, "sustainLevel": 0.45, "sustainMs": 150, "releaseMs": 80 },
+          "gain": 0.37
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 604 },
+          "envelope": { "attackMs": 40, "decayMs": 60, "sustainLevel": 0.45, "sustainMs": 150, "releaseMs": 80 },
+          "gain": 0.22
+        }
+      ]
+    }
+  },
+  {
+    "name": "record-stop",
+    "phrase": "record stop",
+    "category": "media-controls",
+    "concept": "A short, sharp, falling tone that signals recording stopping.",
+    "keywords": ["record", "stop", "recording", "end", "capture", "finish"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 650, "pitchEnvelope": { "toHz": 300, "timeMs": 80 } },
+          "envelope": { "attackMs": 3, "decayMs": 45, "sustainLevel": 0.2, "sustainMs": 25, "releaseMs": 35 },
+          "gain": 0.62
+        }
+      ]
+    }
+  },
+  {
+    "name": "live-start",
+    "phrase": "live start",
+    "category": "media-controls",
+    "concept": "A medium, bright, rising two-layer tone with energetic upward movement that signals going live.",
+    "keywords": ["live", "start", "broadcast", "stream", "begin", "on-air"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 1400, "timeMs": 180 } },
+          "envelope": { "attackMs": 20, "decayMs": 80, "sustainLevel": 0.35, "sustainMs": 100, "releaseMs": 80 },
+          "gain": 0.42
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 750, "pitchEnvelope": { "toHz": 2000, "timeMs": 150 } },
+          "envelope": { "attackMs": 15, "decayMs": 60, "sustainLevel": 0.3, "sustainMs": 60, "releaseMs": 60 },
+          "gain": 0.42
+        }
+      ]
+    }
+  },
+  {
+    "name": "live-end",
+    "phrase": "live end",
+    "category": "media-controls",
+    "concept": "A medium, warm, falling two-layer tone that signals a live broadcast ending.",
+    "keywords": ["live", "end", "broadcast", "stream", "stop", "off-air"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1200, "pitchEnvelope": { "toHz": 450, "timeMs": 180 } },
+          "envelope": { "attackMs": 20, "decayMs": 80, "sustainLevel": 0.3, "sustainMs": 90, "releaseMs": 80 },
+          "gain": 0.4
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 900, "pitchEnvelope": { "toHz": 400, "timeMs": 150 } },
+          "envelope": { "attackMs": 15, "decayMs": 60, "sustainLevel": 0.25, "sustainMs": 50, "releaseMs": 60 },
+          "gain": 0.4
+        }
+      ]
+    }
+  }
+]

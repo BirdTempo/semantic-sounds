@@ -1,0 +1,440 @@
+[
+  {
+    "name": "coin-collect",
+    "phrase": "coin collect",
+    "category": "game",
+    "concept": "A quick, bright, rising twinkle for collecting a coin pickup.",
+    "keywords": ["coin", "pickup", "collect", "currency", "gold", "chime", "reward", "treasure"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 900, "pitchEnvelope": { "toHz": 2400, "timeMs": 70 } },
+          "envelope": { "attackMs": 3, "decayMs": 40, "sustainLevel": 0.4, "sustainMs": 40, "releaseMs": 40 },
+          "gain": 0.46
+        }
+      ]
+    }
+  },
+  {
+    "name": "gem-collect",
+    "phrase": "gem collect",
+    "category": "game",
+    "concept": "A quick, sparkling, rising chime with a shimmering high overtone for a gem.",
+    "keywords": ["gem", "jewel", "collect", "pickup", "sparkle", "shimmer", "treasure", "diamond"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 900, "pitchEnvelope": { "toHz": 2000, "timeMs": 90 } },
+          "envelope": { "attackMs": 3, "decayMs": 45, "sustainLevel": 0.4, "sustainMs": 35, "releaseMs": 40 },
+          "gain": 0.42
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1500 },
+          "envelope": { "attackMs": 3, "decayMs": 30, "sustainLevel": 0.3, "sustainMs": 20, "releaseMs": 40 },
+          "gain": 0.35
+        }
+      ]
+    }
+  },
+  {
+    "name": "key-collect",
+    "phrase": "key collect",
+    "category": "game",
+    "concept": "A quick, bright, steady metallic click for picking up a key.",
+    "keywords": ["key", "unlock", "collect", "pickup", "metal", "click", "access", "door"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 1100 },
+          "envelope": { "attackMs": 3, "decayMs": 25, "sustainLevel": 0.3, "sustainMs": 25, "releaseMs": 35 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "oscillator", "wave": "square", "freqHz": 2600 },
+          "envelope": { "attackMs": 2, "decayMs": 8, "sustainLevel": 0.0, "sustainMs": 0, "releaseMs": 20 },
+          "filter": { "type": "lowpass", "cutoffHz": 3000 },
+          "gain": 0.15
+        }
+      ]
+    }
+  },
+  {
+    "name": "heart-collect",
+    "phrase": "heart collect",
+    "category": "game",
+    "concept": "A short, soft, gently rising warm tone for restoring a heart.",
+    "keywords": ["heart", "health", "life", "restore", "collect", "pickup", "warm", "care"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 640, "timeMs": 130 } },
+          "envelope": { "attackMs": 30, "decayMs": 40, "sustainLevel": 0.5, "sustainMs": 50, "releaseMs": 60 },
+          "gain": 0.42
+        }
+      ]
+    }
+  },
+  {
+    "name": "health-pickup",
+    "phrase": "health pickup",
+    "category": "game",
+    "concept": "A warm, rising two-tone swell for restoring health after a pickup.",
+    "keywords": ["health", "heal", "restore", "pickup", "collect", "recover", "medkit", "life"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 450, "pitchEnvelope": { "toHz": 600, "timeMs": 350 } },
+          "envelope": { "attackMs": 60, "decayMs": 100, "sustainLevel": 0.5, "sustainMs": 150, "releaseMs": 190 },
+          "gain": 0.42
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 675, "pitchEnvelope": { "toHz": 900, "timeMs": 350 } },
+          "envelope": { "attackMs": 60, "decayMs": 100, "sustainLevel": 0.5, "sustainMs": 150, "releaseMs": 190 },
+          "gain": 0.32
+        }
+      ]
+    }
+  },
+  {
+    "name": "ammo-pickup",
+    "phrase": "ammo pickup",
+    "category": "game",
+    "concept": "A quick, sharp double-click for picking up ammo.",
+    "keywords": ["ammo", "ammunition", "reload", "pickup", "collect", "bullet", "gun", "magazine"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 2, "decayMs": 8, "sustainLevel": 0.35, "sustainMs": 10, "releaseMs": 40 },
+          "filter": { "type": "bandpass", "cutoffHz": 2500, "q": 2 },
+          "gain": 1.0
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 800 },
+          "envelope": { "attackMs": 2, "decayMs": 10, "sustainLevel": 0.3, "sustainMs": 8, "releaseMs": 40 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "shield-up",
+    "phrase": "shield up",
+    "category": "game",
+    "concept": "A long, sustained, warm, rising swell as a protective shield activates.",
+    "keywords": ["shield", "protect", "barrier", "activate", "defense", "buff", "guard", "ward"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 350, "pitchEnvelope": { "toHz": 500, "timeMs": 700 } },
+          "envelope": { "attackMs": 150, "decayMs": 200, "sustainLevel": 0.6, "sustainMs": 300, "releaseMs": 250 },
+          "gain": 0.34
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 525, "pitchEnvelope": { "toHz": 750, "timeMs": 700 } },
+          "envelope": { "attackMs": 150, "decayMs": 200, "sustainLevel": 0.6, "sustainMs": 300, "releaseMs": 250 },
+          "gain": 0.24
+        }
+      ]
+    }
+  },
+  {
+    "name": "shield-break",
+    "phrase": "shield break",
+    "category": "game",
+    "concept": "A short, sharp, falling crack as a shield shatters and breaks.",
+    "keywords": ["shield", "break", "shatter", "crack", "destroy", "defense", "damage", "loss"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 700, "pitchEnvelope": { "toHz": 280, "timeMs": 70 } },
+          "envelope": { "attackMs": 2, "decayMs": 20, "sustainLevel": 0.1, "sustainMs": 10, "releaseMs": 50 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 1, "decayMs": 10, "sustainLevel": 0.0, "sustainMs": 0, "releaseMs": 25 },
+          "filter": { "type": "lowpass", "cutoffHz": 1500 },
+          "gain": 0.4
+        }
+      ]
+    }
+  },
+  {
+    "name": "armor-equip",
+    "phrase": "armor equip",
+    "category": "game",
+    "concept": "A sharp, dark, mechanical clunk for equipping armor.",
+    "keywords": ["armor", "equip", "gear", "clunk", "mechanical", "wear", "protect", "suit"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 200 },
+          "envelope": { "attackMs": 3, "decayMs": 35, "sustainLevel": 0.25, "sustainMs": 20, "releaseMs": 400 },
+          "filter": { "type": "highpass", "cutoffHz": 40 },
+          "gain": 0.6
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 130 },
+          "envelope": { "attackMs": 3, "decayMs": 35, "sustainLevel": 0.2, "sustainMs": 20, "releaseMs": 400 },
+          "filter": { "type": "highpass", "cutoffHz": 40 },
+          "gain": 0.4
+        }
+      ]
+    }
+  },
+  {
+    "name": "weapon-swap",
+    "phrase": "weapon swap",
+    "category": "game",
+    "concept": "A quick, sharp double tick for swapping weapons.",
+    "keywords": ["weapon", "swap", "switch", "change", "equip", "inventory", "cycle", "tool"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 750 },
+          "envelope": { "attackMs": 2, "decayMs": 15, "sustainLevel": 0.15, "sustainMs": 8, "releaseMs": 35 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 2, "decayMs": 8, "sustainLevel": 0.15, "sustainMs": 5, "releaseMs": 30 },
+          "filter": { "type": "bandpass", "cutoffHz": 3000, "q": 2.5 },
+          "gain": 0.5
+        }
+      ]
+    }
+  },
+  {
+    "name": "sword-swing",
+    "phrase": "sword swing",
+    "category": "game",
+    "concept": "A quick, bright, airy whoosh with a metallic edge for a sword swing.",
+    "keywords": ["sword", "swing", "weapon", "slash", "attack", "whoosh", "blade", "strike"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 15, "decayMs": 50, "sustainLevel": 0.3, "sustainMs": 30, "releaseMs": 65 },
+          "filter": { "type": "bandpass", "cutoffHz": 2200, "q": 1.2 },
+          "gain": 0.9
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 650 },
+          "envelope": { "attackMs": 15, "decayMs": 50, "sustainLevel": 0.2, "sustainMs": 30, "releaseMs": 65 },
+          "gain": 0.25
+        }
+      ]
+    }
+  },
+  {
+    "name": "punch",
+    "phrase": "punch",
+    "category": "game",
+    "concept": "A very short, sharp, dark thud for a punch impact.",
+    "keywords": ["punch", "hit", "impact", "attack", "combat", "thud", "strike", "fight"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 300 },
+          "envelope": { "attackMs": 2, "decayMs": 35, "sustainLevel": 0.3, "sustainMs": 15, "releaseMs": 128 },
+          "filter": { "type": "highpass", "cutoffHz": 40 },
+          "gain": 0.65
+        }
+      ]
+    }
+  },
+  {
+    "name": "kick",
+    "phrase": "kick",
+    "category": "game",
+    "concept": "A short, sharp, falling low thump for a kick impact.",
+    "keywords": ["kick", "hit", "impact", "attack", "combat", "thump", "strike", "fight"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 260, "pitchEnvelope": { "toHz": 110, "timeMs": 90 } },
+          "envelope": { "attackMs": 2, "decayMs": 35, "sustainLevel": 0.3, "sustainMs": 20, "releaseMs": 90 },
+          "filter": { "type": "highpass", "cutoffHz": 40 },
+          "gain": 0.65
+        }
+      ]
+    }
+  },
+  {
+    "name": "block",
+    "phrase": "block",
+    "category": "game",
+    "concept": "A sharp, dark, solid clunk for blocking an attack.",
+    "keywords": ["block", "defend", "guard", "combat", "stop", "protect", "deflect", "cover"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 300 },
+          "envelope": { "attackMs": 3, "decayMs": 30, "sustainLevel": 0.3, "sustainMs": 15, "releaseMs": 220 },
+          "filter": { "type": "highpass", "cutoffHz": 40 },
+          "gain": 0.68
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 220 },
+          "envelope": { "attackMs": 3, "decayMs": 30, "sustainLevel": 0.25, "sustainMs": 15, "releaseMs": 220 },
+          "filter": { "type": "highpass", "cutoffHz": 40 },
+          "gain": 0.35
+        }
+      ]
+    }
+  },
+  {
+    "name": "parry",
+    "phrase": "parry",
+    "category": "game",
+    "concept": "A quick, sharp, bright rising ping for a well-timed parry.",
+    "keywords": ["parry", "deflect", "reflect", "timing", "combat", "counter", "defend", "ping"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1300, "pitchEnvelope": { "toHz": 2400, "timeMs": 50 } },
+          "envelope": { "attackMs": 2, "decayMs": 20, "sustainLevel": 0.3, "sustainMs": 15, "releaseMs": 45 },
+          "gain": 0.5
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1900 },
+          "envelope": { "attackMs": 2, "decayMs": 15, "sustainLevel": 0.2, "sustainMs": 10, "releaseMs": 40 },
+          "gain": 0.3
+        }
+      ]
+    }
+  },
+  {
+    "name": "dodge",
+    "phrase": "dodge",
+    "category": "game",
+    "concept": "A quick, airy whoosh for dodging out of the way.",
+    "keywords": ["dodge", "evade", "avoid", "whoosh", "sidestep", "move", "escape", "swerve"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 10, "decayMs": 55, "sustainLevel": 0.75, "sustainMs": 30, "releaseMs": 70 },
+          "filter": { "type": "bandpass", "cutoffHz": 1800, "q": 0.7 },
+          "gain": 1.0
+        }
+      ]
+    }
+  },
+  {
+    "name": "dash",
+    "phrase": "dash",
+    "category": "game",
+    "concept": "A quick, bright energetic burst for a fast dash.",
+    "keywords": ["dash", "sprint", "boost", "speed", "quick", "burst", "move", "rush"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 5, "decayMs": 30, "sustainLevel": 0.3, "sustainMs": 15, "releaseMs": 40 },
+          "filter": { "type": "bandpass", "cutoffHz": 2600, "q": 1.2 },
+          "gain": 0.8
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 800 },
+          "envelope": { "attackMs": 5, "decayMs": 25, "sustainLevel": 0.25, "sustainMs": 15, "releaseMs": 40 },
+          "gain": 0.35
+        }
+      ]
+    }
+  },
+  {
+    "name": "double-jump",
+    "phrase": "double jump",
+    "category": "game",
+    "concept": "A quick, bright, rising two-tone lift for a double jump in mid-air.",
+    "keywords": ["jump", "double", "midair", "leap", "lift", "air", "boost", "hop"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1100, "pitchEnvelope": { "toHz": 2100, "timeMs": 110 } },
+          "envelope": { "attackMs": 3, "decayMs": 50, "sustainLevel": 0.35, "sustainMs": 30, "releaseMs": 50 },
+          "gain": 0.42
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1450, "pitchEnvelope": { "toHz": 2700, "timeMs": 110 } },
+          "envelope": { "attackMs": 3, "decayMs": 50, "sustainLevel": 0.3, "sustainMs": 30, "releaseMs": 50 },
+          "gain": 0.3
+        }
+      ]
+    }
+  },
+  {
+    "name": "wall-jump",
+    "phrase": "wall jump",
+    "category": "game",
+    "concept": "A quick, sharp, rising kick-off tone for a wall jump.",
+    "keywords": ["jump", "wall", "kickoff", "bounce", "leap", "rebound", "push", "climb"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 450, "pitchEnvelope": { "toHz": 1100, "timeMs": 70 } },
+          "envelope": { "attackMs": 3, "decayMs": 35, "sustainLevel": 0.3, "sustainMs": 20, "releaseMs": 40 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "land",
+    "phrase": "land",
+    "category": "game",
+    "concept": "A short, soft, falling, dark thud as a character lands on the ground.",
+    "keywords": ["land", "landing", "ground", "fall", "thud", "drop", "touchdown", "floor"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 260, "pitchEnvelope": { "toHz": 140, "timeMs": 90 } },
+          "envelope": { "attackMs": 20, "decayMs": 35, "sustainLevel": 0.3, "sustainMs": 25, "releaseMs": 50 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "footstep",
+    "phrase": "footstep",
+    "category": "game",
+    "concept": "A very short, dark tap sound for a single footstep on the ground.",
+    "keywords": ["footstep", "step", "walk", "foot", "tap", "ground", "movement", "pace"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 169 },
+          "envelope": { "attackMs": 3, "decayMs": 25, "sustainLevel": 0.28, "sustainMs": 10, "releaseMs": 140 },
+          "filter": { "type": "highpass", "cutoffHz": 40 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "slide",
+    "phrase": "slide",
+    "category": "game",
+    "concept": "A long, sustained, dark friction hiss for a character sliding.",
+    "keywords": ["slide", "friction", "skid", "glide", "surface", "drag", "hiss", "scrape"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 170 },
+          "envelope": { "attackMs": 100, "decayMs": 150, "sustainLevel": 0.45, "sustainMs": 500, "releaseMs": 150 },
+          "filter": { "type": "highpass", "cutoffHz": 40 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 100, "decayMs": 150, "sustainLevel": 0.12, "sustainMs": 500, "releaseMs": 150 },
+          "filter": { "type": "lowpass", "cutoffHz": 80 },
+          "gain": 0.15
+        }
+      ]
+    }
+  }
+]

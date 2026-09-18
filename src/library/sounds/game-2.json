@@ -1,0 +1,480 @@
+[
+  {
+    "name": "climb",
+    "phrase": "climb",
+    "category": "game",
+    "concept": "A soft, rising two-note glide like a hand pulling up while climbing.",
+    "keywords": ["ascend", "ladder", "ledge", "scale", "grab", "climbing", "rope"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 380, "pitchEnvelope": { "toHz": 620, "timeMs": 150 } },
+          "envelope": { "attackMs": 20, "decayMs": 40, "sustainLevel": 0.35, "sustainMs": 50, "releaseMs": 55 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 550, "pitchEnvelope": { "toHz": 800, "timeMs": 150 } },
+          "envelope": { "attackMs": 55, "decayMs": 35, "sustainLevel": 0.25, "sustainMs": 40, "releaseMs": 45 },
+          "filter": { "type": "lowpass", "cutoffHz": 3000 },
+          "gain": 0.3
+        }
+      ]
+    }
+  },
+  {
+    "name": "swim",
+    "phrase": "swim",
+    "category": "game",
+    "concept": "A long, sustained tone layered with a soft filtered noise texture like water for swimming.",
+    "keywords": ["water", "stroke", "wade", "float", "pool", "current", "underwater"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 300 },
+          "envelope": { "attackMs": 130, "decayMs": 150, "sustainLevel": 0.4, "sustainMs": 400, "releaseMs": 220 },
+          "gain": 0.5
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 150, "decayMs": 150, "sustainLevel": 0.35, "sustainMs": 350, "releaseMs": 250 },
+          "filter": { "type": "lowpass", "cutoffHz": 700 },
+          "gain": 0.95
+        }
+      ]
+    }
+  },
+  {
+    "name": "teleport",
+    "phrase": "teleport",
+    "category": "game",
+    "concept": "A short, sharp burst with a fast rising pitch warp for teleporting away.",
+    "keywords": ["warp", "zap", "blink", "vanish", "portal", "phase", "beam"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 300, "pitchEnvelope": { "toHz": 1400, "timeMs": 70 } },
+          "envelope": { "attackMs": 4, "decayMs": 30, "sustainLevel": 0.15, "sustainMs": 15, "releaseMs": 25 },
+          "gain": 0.6
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 450, "pitchEnvelope": { "toHz": 2000, "timeMs": 70 } },
+          "envelope": { "attackMs": 4, "decayMs": 20, "sustainLevel": 0.1, "sustainMs": 10, "releaseMs": 20 },
+          "filter": { "type": "lowpass", "cutoffHz": 4000 },
+          "gain": 0.35
+        }
+      ]
+    }
+  },
+  {
+    "name": "respawn",
+    "phrase": "respawn",
+    "category": "game",
+    "concept": "A gentle, rising shimmer of returning light for a character's respawn.",
+    "keywords": ["revive", "return", "reappear", "restart", "resurrect", "back", "regenerate"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 400, "pitchEnvelope": { "toHz": 700, "timeMs": 220 } },
+          "envelope": { "attackMs": 45, "decayMs": 60, "sustainLevel": 0.4, "sustainMs": 100, "releaseMs": 90 },
+          "gain": 0.42
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 600, "pitchEnvelope": { "toHz": 950, "timeMs": 220 } },
+          "envelope": { "attackMs": 70, "decayMs": 55, "sustainLevel": 0.3, "sustainMs": 90, "releaseMs": 80 },
+          "filter": { "type": "lowpass", "cutoffHz": 3500 },
+          "gain": 0.28
+        }
+      ]
+    }
+  },
+  {
+    "name": "checkpoint",
+    "phrase": "checkpoint",
+    "category": "game",
+    "concept": "A quick two-note ascending chime confirming a checkpoint reached.",
+    "keywords": ["progress", "waypoint", "marker", "confirm", "reached", "flag", "milestone"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 700 },
+          "envelope": { "attackMs": 4, "decayMs": 25, "sustainLevel": 0.05, "sustainMs": 0, "releaseMs": 8 },
+          "gain": 0.4
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 950, "pitchEnvelope": { "toHz": 1300, "timeMs": 90 } },
+          "envelope": { "attackMs": 70, "decayMs": 35, "sustainLevel": 0.1, "sustainMs": 20, "releaseMs": 35 },
+          "gain": 0.35
+        }
+      ]
+    }
+  },
+  {
+    "name": "save-point",
+    "phrase": "save point",
+    "category": "game",
+    "concept": "A warm, steady, sustained tone offering a calm confirmation for a save point.",
+    "keywords": ["save", "progress", "backup", "record", "checkpoint file", "store", "confirm"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 260 },
+          "envelope": { "attackMs": 150, "decayMs": 150, "sustainLevel": 0.45, "sustainMs": 380, "releaseMs": 220 },
+          "filter": { "type": "lowpass", "cutoffHz": 1200 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "door-unlock",
+    "phrase": "door unlock",
+    "category": "game",
+    "concept": "A sharp mechanical click that resolves into a short low tone for a door unlocking.",
+    "keywords": ["unlock", "lock", "key", "open", "gate", "click", "access"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 2, "decayMs": 8, "sustainLevel": 0.2, "sustainMs": 6, "releaseMs": 20 },
+          "filter": { "type": "highpass", "cutoffHz": 1800 },
+          "gain": 0.9
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 260 },
+          "envelope": { "attackMs": 15, "decayMs": 30, "sustainLevel": 0.3, "sustainMs": 30, "releaseMs": 40 },
+          "gain": 0.5
+        }
+      ]
+    }
+  },
+  {
+    "name": "chest-open",
+    "phrase": "chest open",
+    "category": "game",
+    "concept": "A creaking noise swell that opens into a soft rising sparkle for a chest opening.",
+    "keywords": ["chest", "loot", "reveal", "creak", "lid", "open", "unbox"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 10, "decayMs": 15, "sustainLevel": 0.1, "sustainMs": 10, "releaseMs": 15 },
+          "filter": { "type": "lowpass", "cutoffHz": 800 },
+          "gain": 0.25
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 1100, "timeMs": 260 } },
+          "envelope": { "attackMs": 70, "decayMs": 60, "sustainLevel": 0.35, "sustainMs": 70, "releaseMs": 90 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "treasure-found",
+    "phrase": "treasure found",
+    "category": "game",
+    "concept": "A cheerful ascending three-note flourish celebrating a treasure found.",
+    "keywords": ["treasure", "loot", "reward", "gold", "found", "prize", "jackpot"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 650 },
+          "envelope": { "attackMs": 4, "decayMs": 25, "sustainLevel": 0.05, "sustainMs": 0, "releaseMs": 8 },
+          "gain": 0.3
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 850 },
+          "envelope": { "attackMs": 60, "decayMs": 30, "sustainLevel": 0.08, "sustainMs": 10, "releaseMs": 20 },
+          "gain": 0.28
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1100 },
+          "envelope": { "attackMs": 140, "decayMs": 45, "sustainLevel": 0.15, "sustainMs": 30, "releaseMs": 40 },
+          "gain": 0.3
+        }
+      ]
+    }
+  },
+  {
+    "name": "secret-found",
+    "phrase": "secret found",
+    "category": "game",
+    "concept": "A soft, quick two-tone twinkle marking a secret found.",
+    "keywords": ["secret", "hidden", "discover", "twinkle", "reveal", "easter egg", "surprise"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 950 },
+          "envelope": { "attackMs": 20, "decayMs": 30, "sustainLevel": 0.3, "sustainMs": 20, "releaseMs": 35 },
+          "gain": 0.4
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 1250 },
+          "envelope": { "attackMs": 35, "decayMs": 25, "sustainLevel": 0.25, "sustainMs": 15, "releaseMs": 30 },
+          "filter": { "type": "lowpass", "cutoffHz": 4000 },
+          "gain": 0.3
+        }
+      ]
+    }
+  },
+  {
+    "name": "puzzle-solved",
+    "phrase": "puzzle solved",
+    "category": "game",
+    "concept": "A gentle two-note resolution settling into place for a solved puzzle.",
+    "keywords": ["puzzle", "solve", "solution", "resolve", "click into place", "figured out", "correct"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 450 },
+          "envelope": { "attackMs": 40, "decayMs": 60, "sustainLevel": 0.4, "sustainMs": 100, "releaseMs": 90 },
+          "gain": 0.45
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 560 },
+          "envelope": { "attackMs": 60, "decayMs": 55, "sustainLevel": 0.35, "sustainMs": 90, "releaseMs": 80 },
+          "gain": 0.3
+        }
+      ]
+    }
+  },
+  {
+    "name": "lever-pull",
+    "phrase": "lever pull",
+    "category": "game",
+    "concept": "A falling, low mechanical thunk with a creak for pulling a lever.",
+    "keywords": ["lever", "pull", "mechanism", "thunk", "creak", "gear", "handle"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 300, "pitchEnvelope": { "toHz": 150, "timeMs": 90 } },
+          "envelope": { "attackMs": 10, "decayMs": 40, "sustainLevel": 0.3, "sustainMs": 30, "releaseMs": 50 },
+          "gain": 0.5
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 5, "decayMs": 20, "sustainLevel": 0.15, "sustainMs": 10, "releaseMs": 25 },
+          "filter": { "type": "lowpass", "cutoffHz": 700 },
+          "gain": 0.7
+        }
+      ]
+    }
+  },
+  {
+    "name": "switch-activate",
+    "phrase": "switch activate",
+    "category": "game",
+    "concept": "A quick, sharp click confirming a switch activation.",
+    "keywords": ["switch", "toggle", "activate", "click", "button", "flip", "trigger"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 700 },
+          "envelope": { "attackMs": 3, "decayMs": 25, "sustainLevel": 0.1, "sustainMs": 10, "releaseMs": 20 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 2, "decayMs": 8, "sustainLevel": 0.2, "sustainMs": 5, "releaseMs": 15 },
+          "filter": { "type": "highpass", "cutoffHz": 2500 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "trap-trigger",
+    "phrase": "trap trigger",
+    "category": "game",
+    "concept": "A sharp, falling alarm blip warning that a trap has triggered.",
+    "keywords": ["trap", "alarm", "warning", "danger", "ambush", "triggered", "alert"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 900, "pitchEnvelope": { "toHz": 400, "timeMs": 70 } },
+          "envelope": { "attackMs": 4, "decayMs": 30, "sustainLevel": 0.2, "sustainMs": 20, "releaseMs": 35 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 1000, "pitchEnvelope": { "toHz": 450, "timeMs": 70 } },
+          "envelope": { "attackMs": 30, "decayMs": 35, "sustainLevel": 0.15, "sustainMs": 15, "releaseMs": 30 },
+          "filter": { "type": "lowpass", "cutoffHz": 3000 },
+          "gain": 0.25
+        }
+      ]
+    }
+  },
+  {
+    "name": "spike-hit",
+    "phrase": "spike hit",
+    "category": "game",
+    "concept": "A sharp, falling noise thud for hitting a spike trap.",
+    "keywords": ["spike", "hit", "impact", "damage", "ouch", "stab", "hazard"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 1, "decayMs": 4, "sustainLevel": 0.12, "sustainMs": 4, "releaseMs": 25 },
+          "filter": { "type": "lowpass", "cutoffHz": 600 },
+          "gain": 0.85
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 250, "timeMs": 60 } },
+          "envelope": { "attackMs": 5, "decayMs": 30, "sustainLevel": 0.2, "sustainMs": 20, "releaseMs": 35 },
+          "gain": 0.45
+        }
+      ]
+    }
+  },
+  {
+    "name": "fall-damage",
+    "phrase": "fall damage",
+    "category": "game",
+    "concept": "A heavier, falling thud with a rumbling noise texture for taking fall damage.",
+    "keywords": ["fall", "damage", "thud", "impact", "hurt", "landing", "hp loss"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 5, "decayMs": 40, "sustainLevel": 0.3, "sustainMs": 30, "releaseMs": 60 },
+          "filter": { "type": "lowpass", "cutoffHz": 400 },
+          "gain": 0.9
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 400, "pitchEnvelope": { "toHz": 180, "timeMs": 120 } },
+          "envelope": { "attackMs": 15, "decayMs": 50, "sustainLevel": 0.3, "sustainMs": 50, "releaseMs": 85 },
+          "gain": 0.5
+        }
+      ]
+    }
+  },
+  {
+    "name": "enemy-spotted",
+    "phrase": "enemy spotted",
+    "category": "game",
+    "concept": "A quick, sharp, rising alert blip for spotting an enemy.",
+    "keywords": ["enemy", "spotted", "alert", "detect", "warning", "notice", "aware"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 900, "timeMs": 80 } },
+          "envelope": { "attackMs": 5, "decayMs": 25, "sustainLevel": 0.25, "sustainMs": 20, "releaseMs": 30 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "enemy-defeated",
+    "phrase": "enemy defeated",
+    "category": "game",
+    "concept": "A falling two-note tone settling after an enemy is defeated.",
+    "keywords": ["enemy", "defeated", "kill", "win", "downed", "victory", "cleared"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 700, "pitchEnvelope": { "toHz": 350, "timeMs": 150 } },
+          "envelope": { "attackMs": 20, "decayMs": 50, "sustainLevel": 0.35, "sustainMs": 60, "releaseMs": 80 },
+          "gain": 0.45
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 850, "pitchEnvelope": { "toHz": 420, "timeMs": 150 } },
+          "envelope": { "attackMs": 40, "decayMs": 45, "sustainLevel": 0.3, "sustainMs": 50, "releaseMs": 70 },
+          "filter": { "type": "lowpass", "cutoffHz": 3500 },
+          "gain": 0.28
+        }
+      ]
+    }
+  },
+  {
+    "name": "boss-appear",
+    "phrase": "boss appear",
+    "category": "game",
+    "concept": "A long, sustained low rumble announcing a boss's appearance.",
+    "keywords": ["boss", "appear", "ominous", "rumble", "entrance", "threat", "loom"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 180 },
+          "envelope": { "attackMs": 200, "decayMs": 150, "sustainLevel": 0.5, "sustainMs": 350, "releaseMs": 200 },
+          "gain": 0.5
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 250, "decayMs": 150, "sustainLevel": 0.4, "sustainMs": 300, "releaseMs": 200 },
+          "filter": { "type": "lowpass", "cutoffHz": 350 },
+          "gain": 0.85
+        }
+      ]
+    }
+  },
+  {
+    "name": "boss-defeated",
+    "phrase": "boss defeated",
+    "category": "game",
+    "concept": "A big, rising fanfare of four ascending notes celebrating a boss's defeat.",
+    "keywords": ["boss", "defeated", "victory", "triumph", "win", "celebrate", "finale"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 450, "pitchEnvelope": { "toHz": 550, "timeMs": 60 } },
+          "envelope": { "attackMs": 15, "decayMs": 45, "sustainLevel": 0.3, "sustainMs": 30, "releaseMs": 50 },
+          "gain": 0.22
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 550, "pitchEnvelope": { "toHz": 700, "timeMs": 70 } },
+          "envelope": { "attackMs": 90, "decayMs": 45, "sustainLevel": 0.3, "sustainMs": 30, "releaseMs": 60 },
+          "gain": 0.22
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 700, "pitchEnvelope": { "toHz": 950, "timeMs": 90 } },
+          "envelope": { "attackMs": 180, "decayMs": 55, "sustainLevel": 0.35, "sustainMs": 40, "releaseMs": 70 },
+          "gain": 0.24
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 950, "pitchEnvelope": { "toHz": 1500, "timeMs": 180 } },
+          "envelope": { "attackMs": 300, "decayMs": 90, "sustainLevel": 0.45, "sustainMs": 100, "releaseMs": 160 },
+          "gain": 0.28
+        }
+      ]
+    }
+  },
+  {
+    "name": "critical-hit",
+    "phrase": "critical hit",
+    "category": "game",
+    "concept": "A sharp, bright, percussive impact flick for landing a critical hit.",
+    "keywords": ["critical", "hit", "crit", "impact", "bonus damage", "strike", "combat"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1300 },
+          "envelope": { "attackMs": 3, "decayMs": 20, "sustainLevel": 0.15, "sustainMs": 10, "releaseMs": 20 },
+          "gain": 0.45
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 1, "decayMs": 3, "sustainLevel": 0.12, "sustainMs": 4, "releaseMs": 20 },
+          "filter": { "type": "highpass", "cutoffHz": 3000 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "miss",
+    "phrase": "miss",
+    "category": "game",
+    "concept": "A soft, falling dud tone for a missed attack.",
+    "keywords": ["miss", "whiff", "fail", "dodge", "no hit", "swing", "missed"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 300, "timeMs": 120 } },
+          "envelope": { "attackMs": 25, "decayMs": 40, "sustainLevel": 0.25, "sustainMs": 30, "releaseMs": 50 },
+          "gain": 0.5
+        }
+      ]
+    }
+  }
+]

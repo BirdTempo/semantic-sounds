@@ -1,0 +1,560 @@
+[
+  {
+    "name": "heartbeat",
+    "phrase": "heartbeat",
+    "category": "health-fitness",
+    "concept": "A soft, warm, low, steady thump, like one pulse of a heartbeat.",
+    "keywords": ["heart", "heartbeat", "pulse", "cardiac", "thump", "beat", "chest"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 130 },
+          "envelope": { "attackMs": 20, "decayMs": 50, "sustainLevel": 0.35, "sustainMs": 50, "releaseMs": 60 },
+          "gain": 0.7
+        }
+      ]
+    }
+  },
+  {
+    "name": "heart-rate-up",
+    "phrase": "heart rate up",
+    "category": "health-fitness",
+    "concept": "A quick, sharp, rising tone that signals the heart rate climbing.",
+    "keywords": ["heart-rate", "pulse", "exertion", "workout", "cardio", "elevate", "spike"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 320, "pitchEnvelope": { "toHz": 560, "timeMs": 90 } },
+          "envelope": { "attackMs": 6, "decayMs": 50, "sustainLevel": 0.3, "sustainMs": 40, "releaseMs": 50 },
+          "gain": 0.62
+        }
+      ]
+    }
+  },
+  {
+    "name": "heart-rate-calm",
+    "phrase": "heart rate calm",
+    "category": "health-fitness",
+    "concept": "A soft, falling tone that eases the heart rate back down to calm.",
+    "keywords": ["heart-rate", "calm", "resting", "relax", "cooldown", "settle", "slow"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 460, "pitchEnvelope": { "toHz": 260, "timeMs": 300 } },
+          "envelope": { "attackMs": 60, "decayMs": 120, "sustainLevel": 0.3, "sustainMs": 150, "releaseMs": 120 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "breath-in",
+    "phrase": "breath in",
+    "category": "health-fitness",
+    "concept": "A long, soft, rising tone with an airy breath texture, breathing in.",
+    "keywords": ["breath", "inhale", "breathe-in", "air", "lungs", "meditation", "calm"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 200, "pitchEnvelope": { "toHz": 540, "timeMs": 500 } },
+          "envelope": { "attackMs": 100, "decayMs": 250, "sustainLevel": 0.35, "sustainMs": 250, "releaseMs": 250 },
+          "gain": 0.37
+        },
+        {
+          "source": { "type": "noise", "color": "pink" },
+          "envelope": { "attackMs": 100, "decayMs": 250, "sustainLevel": 0.3, "sustainMs": 250, "releaseMs": 250 },
+          "filter": { "type": "lowpass", "cutoffHz": 450 },
+          "gain": 0.62
+        }
+      ]
+    }
+  },
+  {
+    "name": "breath-out",
+    "phrase": "breath out",
+    "category": "health-fitness",
+    "concept": "A long, soft, falling tone with an airy release, breathing out.",
+    "keywords": ["breath", "exhale", "breathe-out", "release", "air", "lungs", "calm"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 420, "pitchEnvelope": { "toHz": 240, "timeMs": 500 } },
+          "envelope": { "attackMs": 110, "decayMs": 260, "sustainLevel": 0.3, "sustainMs": 240, "releaseMs": 240 },
+          "gain": 0.6
+        },
+        {
+          "source": { "type": "noise", "color": "pink" },
+          "envelope": { "attackMs": 110, "decayMs": 260, "sustainLevel": 0.3, "sustainMs": 240, "releaseMs": 240 },
+          "filter": { "type": "lowpass", "cutoffHz": 700 },
+          "gain": 0.9
+        }
+      ]
+    }
+  },
+  {
+    "name": "deep-breath-cycle",
+    "phrase": "deep breath cycle",
+    "category": "health-fitness",
+    "concept": "A long, soft, breathy tone that spans one full breath cycle.",
+    "keywords": ["breath", "breathing", "cycle", "deep-breath", "inhale-exhale", "meditation", "relax"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 320 },
+          "envelope": { "attackMs": 120, "decayMs": 300, "sustainLevel": 0.4, "sustainMs": 300, "releaseMs": 300 },
+          "gain": 0.4
+        },
+        {
+          "source": { "type": "noise", "color": "pink" },
+          "envelope": { "attackMs": 120, "decayMs": 300, "sustainLevel": 0.4, "sustainMs": 300, "releaseMs": 300 },
+          "filter": { "type": "lowpass", "cutoffHz": 800 },
+          "gain": 0.65
+        }
+      ]
+    }
+  },
+  {
+    "name": "meditation-bell",
+    "phrase": "meditation bell",
+    "category": "health-fitness",
+    "concept": "A long, soft, warm bell tone with a slow resonant fade, for meditation.",
+    "keywords": ["meditation", "bell", "mindfulness", "calm", "zen", "chime", "relax"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 660 },
+          "envelope": { "attackMs": 80, "decayMs": 150, "sustainLevel": 0.25, "sustainMs": 300, "releaseMs": 350 },
+          "gain": 0.65
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1320 },
+          "envelope": { "attackMs": 80, "decayMs": 150, "sustainLevel": 0.25, "sustainMs": 300, "releaseMs": 350 },
+          "gain": 0.18
+        }
+      ]
+    }
+  },
+  {
+    "name": "mindfulness-chime",
+    "phrase": "mindfulness chime",
+    "category": "health-fitness",
+    "concept": "A short, soft, bright chime with a gentle shimmer, marking mindfulness.",
+    "keywords": ["mindfulness", "chime", "bell", "notification", "calm", "awareness", "gentle"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1100 },
+          "envelope": { "attackMs": 16, "decayMs": 70, "sustainLevel": 0.3, "sustainMs": 50, "releaseMs": 54 },
+          "gain": 0.33
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 2200 },
+          "envelope": { "attackMs": 16, "decayMs": 70, "sustainLevel": 0.3, "sustainMs": 50, "releaseMs": 54 },
+          "gain": 0.25
+        }
+      ]
+    }
+  },
+  {
+    "name": "step-counted",
+    "phrase": "step counted",
+    "category": "health-fitness",
+    "concept": "A very short, sharp tick for a single step counted.",
+    "keywords": ["step", "walk", "pedometer", "tick", "count", "footstep"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 550 },
+          "envelope": { "attackMs": 4, "decayMs": 30, "sustainLevel": 0.2, "sustainMs": 20, "releaseMs": 26 },
+          "gain": 0.62
+        }
+      ]
+    }
+  },
+  {
+    "name": "ten-thousand-steps",
+    "phrase": "ten thousand steps",
+    "category": "health-fitness",
+    "concept": "A bright, two-tone chime that celebrates reaching a big step milestone.",
+    "keywords": ["steps", "milestone", "goal", "achievement", "walk", "celebrate", "pedometer"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 480, "pitchEnvelope": { "toHz": 860, "timeMs": 150 } },
+          "envelope": { "attackMs": 15, "decayMs": 90, "sustainLevel": 0.3, "sustainMs": 110, "releaseMs": 120 },
+          "gain": 0.35
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1900, "pitchEnvelope": { "toHz": 2400, "timeMs": 150 } },
+          "envelope": { "attackMs": 15, "decayMs": 90, "sustainLevel": 0.3, "sustainMs": 110, "releaseMs": 120 },
+          "gain": 0.5
+        }
+      ]
+    }
+  },
+  {
+    "name": "run-start",
+    "phrase": "run start",
+    "category": "health-fitness",
+    "concept": "A quick, sharp, rising tone that signals the start of a run.",
+    "keywords": ["run", "running", "start", "begin", "jog", "workout", "go"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 300, "pitchEnvelope": { "toHz": 600, "timeMs": 110 } },
+          "envelope": { "attackMs": 5, "decayMs": 55, "sustainLevel": 0.3, "sustainMs": 40, "releaseMs": 50 },
+          "gain": 0.44
+        }
+      ]
+    }
+  },
+  {
+    "name": "run-finish",
+    "phrase": "run finish",
+    "category": "health-fitness",
+    "concept": "A soft, falling tone that marks the finish of a run.",
+    "keywords": ["run", "running", "finish", "complete", "done", "jog", "workout"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 550, "pitchEnvelope": { "toHz": 300, "timeMs": 250 } },
+          "envelope": { "attackMs": 45, "decayMs": 150, "sustainLevel": 0.3, "sustainMs": 120, "releaseMs": 135 },
+          "gain": 0.58
+        }
+      ]
+    }
+  },
+  {
+    "name": "sprint-interval",
+    "phrase": "sprint interval",
+    "category": "health-fitness",
+    "concept": "A short, sharp, bright burst that signals a sprint interval start.",
+    "keywords": ["sprint", "interval", "run", "hiit", "burst", "fast", "urgent"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 900 },
+          "envelope": { "attackMs": 4, "decayMs": 42, "sustainLevel": 0.25, "sustainMs": 20, "releaseMs": 21 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 4, "decayMs": 15, "sustainLevel": 0.2, "sustainMs": 5, "releaseMs": 15 },
+          "filter": { "type": "highpass", "cutoffHz": 3000 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "rep-complete",
+    "phrase": "rep complete",
+    "category": "health-fitness",
+    "concept": "A short, sharp chime that confirms one rep complete.",
+    "keywords": ["rep", "repetition", "strength", "workout", "gym", "complete", "lift"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 700 },
+          "envelope": { "attackMs": 5, "decayMs": 35, "sustainLevel": 0.25, "sustainMs": 30, "releaseMs": 30 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "set-complete",
+    "phrase": "set complete",
+    "category": "health-fitness",
+    "concept": "A soft, rounded chime, fuller than a single rep, marking a completed set.",
+    "keywords": ["set", "workout", "strength", "gym", "complete", "training", "exercise"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500 },
+          "envelope": { "attackMs": 25, "decayMs": 90, "sustainLevel": 0.3, "sustainMs": 90, "releaseMs": 95 },
+          "gain": 0.38
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 500 },
+          "envelope": { "attackMs": 25, "decayMs": 90, "sustainLevel": 0.3, "sustainMs": 90, "releaseMs": 95 },
+          "filter": { "type": "lowpass", "cutoffHz": 900 },
+          "gain": 0.15
+        }
+      ]
+    }
+  },
+  {
+    "name": "workout-done",
+    "phrase": "workout done",
+    "category": "health-fitness",
+    "concept": "A long, soft, rising chime that celebrates finishing a workout.",
+    "keywords": ["workout", "done", "finished", "complete", "exercise", "celebrate", "achievement"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 400, "pitchEnvelope": { "toHz": 650, "timeMs": 400 } },
+          "envelope": { "attackMs": 90, "decayMs": 250, "sustainLevel": 0.35, "sustainMs": 260, "releaseMs": 300 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 800, "pitchEnvelope": { "toHz": 1300, "timeMs": 400 } },
+          "envelope": { "attackMs": 90, "decayMs": 250, "sustainLevel": 0.35, "sustainMs": 260, "releaseMs": 300 },
+          "gain": 0.22
+        }
+      ]
+    }
+  },
+  {
+    "name": "cooldown",
+    "phrase": "cooldown",
+    "category": "health-fitness",
+    "concept": "A long, soft, falling, warm tone that eases into a cooldown.",
+    "keywords": ["cooldown", "relax", "slow-down", "recovery", "ease", "calm", "stretch"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 300, "timeMs": 400 } },
+          "envelope": { "attackMs": 90, "decayMs": 260, "sustainLevel": 0.3, "sustainMs": 260, "releaseMs": 300 },
+          "gain": 0.41
+        },
+        {
+          "source": { "type": "noise", "color": "pink" },
+          "envelope": { "attackMs": 90, "decayMs": 260, "sustainLevel": 0.3, "sustainMs": 260, "releaseMs": 300 },
+          "filter": { "type": "lowpass", "cutoffHz": 600 },
+          "gain": 0.51
+        }
+      ]
+    }
+  },
+  {
+    "name": "stretch-hold",
+    "phrase": "stretch hold",
+    "category": "health-fitness",
+    "concept": "A soft, sustained, steady tone that represents a held stretch.",
+    "keywords": ["stretch", "hold", "flexibility", "pose", "sustain", "pause", "yoga"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 450 },
+          "envelope": { "attackMs": 100, "decayMs": 150, "sustainLevel": 0.4, "sustainMs": 450, "releaseMs": 150 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "water-reminder",
+    "phrase": "water reminder",
+    "category": "health-fitness",
+    "concept": "A short, bright, droplet-like plink reminding you to drink water.",
+    "keywords": ["water", "hydrate", "drink", "reminder", "droplet", "refill", "thirst"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1800, "pitchEnvelope": { "toHz": 1200, "timeMs": 60 } },
+          "envelope": { "attackMs": 5, "decayMs": 60, "sustainLevel": 0.15, "sustainMs": 20, "releaseMs": 35 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 2800 },
+          "envelope": { "attackMs": 5, "decayMs": 40, "sustainLevel": 0.01, "sustainMs": 5, "releaseMs": 20 },
+          "gain": 0.28
+        }
+      ]
+    }
+  },
+  {
+    "name": "stand-reminder",
+    "phrase": "stand reminder",
+    "category": "health-fitness",
+    "concept": "A quick, rising blip reminding you to stand up and move.",
+    "keywords": ["stand", "move", "reminder", "sedentary", "activity", "break", "nudge"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 350, "pitchEnvelope": { "toHz": 650, "timeMs": 90 } },
+          "envelope": { "attackMs": 8, "decayMs": 50, "sustainLevel": 0.25, "sustainMs": 30, "releaseMs": 42 },
+          "gain": 0.44
+        }
+      ]
+    }
+  },
+  {
+    "name": "posture-alert",
+    "phrase": "posture alert",
+    "category": "health-fitness",
+    "concept": "A short, sharp alert tone that flags poor posture.",
+    "keywords": ["posture", "alert", "alignment", "slouch", "back", "reminder", "sit-up"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 700 },
+          "envelope": { "attackMs": 4, "decayMs": 45, "sustainLevel": 0.3, "sustainMs": 30, "releaseMs": 41 },
+          "gain": 0.34
+        },
+        {
+          "source": { "type": "oscillator", "wave": "square", "freqHz": 700 },
+          "envelope": { "attackMs": 4, "decayMs": 45, "sustainLevel": 0.3, "sustainMs": 30, "releaseMs": 41 },
+          "filter": { "type": "lowpass", "cutoffHz": 1200 },
+          "gain": 0.1
+        }
+      ]
+    }
+  },
+  {
+    "name": "sleep-start",
+    "phrase": "sleep start",
+    "category": "health-fitness",
+    "concept": "A long, soft, falling, warm tone that eases you toward sleep.",
+    "keywords": ["sleep", "bedtime", "start", "rest", "night", "wind-down", "calm"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 420, "pitchEnvelope": { "toHz": 260, "timeMs": 450 } },
+          "envelope": { "attackMs": 100, "decayMs": 280, "sustainLevel": 0.3, "sustainMs": 280, "releaseMs": 300 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "sleep-deep",
+    "phrase": "sleep deep",
+    "category": "health-fitness",
+    "concept": "A long, soft, dark, steady low tone representing deep sleep.",
+    "keywords": ["sleep", "deep-sleep", "rest", "night", "low", "calm", "dream"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 220 },
+          "envelope": { "attackMs": 110, "decayMs": 300, "sustainLevel": 0.4, "sustainMs": 300, "releaseMs": 300 },
+          "gain": 0.4
+        }
+      ]
+    }
+  },
+  {
+    "name": "sleep-wake",
+    "phrase": "sleep wake",
+    "category": "health-fitness",
+    "concept": "A soft, rising chime that gently wakes you up in the morning.",
+    "keywords": ["wake", "alarm", "morning", "sleep", "rise", "gentle", "sunrise"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 950, "timeMs": 250 } },
+          "envelope": { "attackMs": 45, "decayMs": 150, "sustainLevel": 0.3, "sustainMs": 120, "releaseMs": 135 },
+          "gain": 0.4
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1000, "pitchEnvelope": { "toHz": 1900, "timeMs": 250 } },
+          "envelope": { "attackMs": 45, "decayMs": 150, "sustainLevel": 0.3, "sustainMs": 120, "releaseMs": 135 },
+          "gain": 0.15
+        }
+      ]
+    }
+  },
+  {
+    "name": "nap-end",
+    "phrase": "nap end",
+    "category": "health-fitness",
+    "concept": "A short, soft, rising chime that signals the end of a nap.",
+    "keywords": ["nap", "end", "wake", "rest", "short-sleep", "alarm", "break"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 420, "pitchEnvelope": { "toHz": 700, "timeMs": 130 } },
+          "envelope": { "attackMs": 16, "decayMs": 62, "sustainLevel": 0.3, "sustainMs": 55, "releaseMs": 60 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "calorie-goal",
+    "phrase": "calorie goal",
+    "category": "health-fitness",
+    "concept": "A short, sharp, bright ping celebrating a reached calorie goal.",
+    "keywords": ["calorie", "goal", "nutrition", "diet", "achievement", "tracker", "energy"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1800 },
+          "envelope": { "attackMs": 4, "decayMs": 40, "sustainLevel": 0.25, "sustainMs": 20, "releaseMs": 26 },
+          "gain": 0.42
+        }
+      ]
+    }
+  },
+  {
+    "name": "weight-logged",
+    "phrase": "weight logged",
+    "category": "health-fitness",
+    "concept": "A short, soft, warm tick that confirms a logged weight entry.",
+    "keywords": ["weight", "log", "scale", "tracker", "entry", "confirm", "record"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 380 },
+          "envelope": { "attackMs": 14, "decayMs": 50, "sustainLevel": 0.25, "sustainMs": 30, "releaseMs": 36 },
+          "gain": 0.42
+        }
+      ]
+    }
+  },
+  {
+    "name": "blood-pressure",
+    "phrase": "blood pressure",
+    "category": "health-fitness",
+    "concept": "A soft, steady, warm tone confirming a completed blood pressure reading.",
+    "keywords": ["blood-pressure", "health", "measurement", "vitals", "reading", "monitor", "cuff"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 380 },
+          "envelope": { "attackMs": 40, "decayMs": 120, "sustainLevel": 0.35, "sustainMs": 120, "releaseMs": 120 },
+          "gain": 0.42
+        }
+      ]
+    }
+  },
+  {
+    "name": "glucose-alert",
+    "phrase": "glucose alert",
+    "category": "health-fitness",
+    "concept": "A sharp, bright alert tone that flags a glucose reading needing attention.",
+    "keywords": ["glucose", "blood-sugar", "alert", "diabetes", "monitor", "reading", "warning"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1600 },
+          "envelope": { "attackMs": 4, "decayMs": 50, "sustainLevel": 0.3, "sustainMs": 40, "releaseMs": 46 },
+          "gain": 0.58
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 2, "decayMs": 8, "sustainLevel": 0.2, "sustainMs": 6, "releaseMs": 20 },
+          "filter": { "type": "highpass", "cutoffHz": 3000 },
+          "gain": 0.5
+        }
+      ]
+    }
+  },
+  {
+    "name": "recovery-complete",
+    "phrase": "recovery complete",
+    "category": "health-fitness",
+    "concept": "A soft, warm, rising chime confirming that recovery is complete.",
+    "keywords": ["recovery", "complete", "rest", "restore", "workout", "done", "ready"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 380, "pitchEnvelope": { "toHz": 600, "timeMs": 300 } },
+          "envelope": { "attackMs": 55, "decayMs": 170, "sustainLevel": 0.3, "sustainMs": 170, "releaseMs": 155 },
+          "gain": 0.58
+        }
+      ]
+    }
+  }
+]

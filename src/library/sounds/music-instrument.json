@@ -1,0 +1,601 @@
+[
+  {
+    "name": "piano-note",
+    "phrase": "piano note",
+    "category": "music-instrument",
+    "concept": "A short, percussive piano note with a quick decay and a faint harmonic overtone above the root.",
+    "keywords": ["piano", "note", "key", "keyboard", "tone", "strike", "classical"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 440 },
+          "envelope": { "attackMs": 3, "decayMs": 90, "sustainLevel": 0.15, "sustainMs": 30, "releaseMs": 60 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 880 },
+          "envelope": { "attackMs": 3, "decayMs": 70, "sustainLevel": 0.1, "sustainMs": 20, "releaseMs": 60 },
+          "gain": 0.25
+        }
+      ]
+    }
+  },
+  {
+    "name": "piano-chord",
+    "phrase": "piano chord",
+    "category": "music-instrument",
+    "concept": "A warm three-note piano chord that fades together with a natural decay.",
+    "keywords": ["piano", "chord", "key", "harmony", "keyboard", "tone", "classical"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 262 },
+          "envelope": { "attackMs": 5, "decayMs": 150, "sustainLevel": 0.25, "sustainMs": 100, "releaseMs": 150 },
+          "gain": 0.3
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 330 },
+          "envelope": { "attackMs": 5, "decayMs": 150, "sustainLevel": 0.25, "sustainMs": 100, "releaseMs": 150 },
+          "gain": 0.28
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 392 },
+          "envelope": { "attackMs": 5, "decayMs": 150, "sustainLevel": 0.25, "sustainMs": 100, "releaseMs": 150 },
+          "gain": 0.26
+        }
+      ]
+    }
+  },
+  {
+    "name": "grand-chord",
+    "phrase": "grand chord",
+    "category": "music-instrument",
+    "concept": "A long, sustained grand piano chord built from four low notes that ring out together.",
+    "keywords": ["piano", "grand", "chord", "bass", "key", "resonant", "classical"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 131 },
+          "envelope": { "attackMs": 10, "decayMs": 300, "sustainLevel": 0.3, "sustainMs": 300, "releaseMs": 300 },
+          "gain": 0.22
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 262 },
+          "envelope": { "attackMs": 10, "decayMs": 300, "sustainLevel": 0.3, "sustainMs": 300, "releaseMs": 300 },
+          "gain": 0.2
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 330 },
+          "envelope": { "attackMs": 10, "decayMs": 300, "sustainLevel": 0.3, "sustainMs": 300, "releaseMs": 300 },
+          "gain": 0.18
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 392 },
+          "envelope": { "attackMs": 10, "decayMs": 300, "sustainLevel": 0.3, "sustainMs": 300, "releaseMs": 300 },
+          "gain": 0.16
+        }
+      ]
+    }
+  },
+  {
+    "name": "electric-piano",
+    "phrase": "electric piano",
+    "category": "music-instrument",
+    "concept": "A soft electric piano note built from two slightly detuned sine tones for a gentle chorus effect.",
+    "keywords": ["electric", "piano", "keyboard", "tone", "chorus", "synth", "note"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 350 },
+          "envelope": { "attackMs": 20, "decayMs": 80, "sustainLevel": 0.3, "sustainMs": 60, "releaseMs": 60 },
+          "gain": 0.35
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 354 },
+          "envelope": { "attackMs": 20, "decayMs": 80, "sustainLevel": 0.3, "sustainMs": 60, "releaseMs": 60 },
+          "gain": 0.35
+        }
+      ]
+    }
+  },
+  {
+    "name": "organ-swell",
+    "phrase": "organ swell",
+    "category": "music-instrument",
+    "concept": "A soft, sustained organ swell built from two triangle tones a fifth apart.",
+    "keywords": ["organ", "swell", "pipe", "church", "sustain", "keyboard", "hum"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 220 },
+          "envelope": { "attackMs": 200, "decayMs": 100, "sustainLevel": 0.4, "sustainMs": 400, "releaseMs": 200 },
+          "gain": 0.35
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 330 },
+          "envelope": { "attackMs": 200, "decayMs": 100, "sustainLevel": 0.4, "sustainMs": 400, "releaseMs": 200 },
+          "gain": 0.3
+        }
+      ]
+    }
+  },
+  {
+    "name": "harp-gliss",
+    "phrase": "harp gliss",
+    "category": "music-instrument",
+    "concept": "A quick, rising harp glissando that sweeps upward with a sharp pluck attack.",
+    "keywords": ["harp", "glissando", "sweep", "string", "run", "cascade", "pluck"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 300, "pitchEnvelope": { "toHz": 900, "timeMs": 170 } },
+          "envelope": { "attackMs": 3, "decayMs": 60, "sustainLevel": 0.2, "sustainMs": 40, "releaseMs": 80 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "guitar-pluck",
+    "phrase": "guitar pluck",
+    "category": "music-instrument",
+    "concept": "A short, sharp guitar pluck with a bright noise transient at the attack.",
+    "keywords": ["guitar", "pluck", "string", "note", "acoustic", "pick", "tone"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 220 },
+          "envelope": { "attackMs": 2, "decayMs": 100, "sustainLevel": 0.15, "sustainMs": 30, "releaseMs": 50 },
+          "gain": 0.5
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 2, "decayMs": 15, "sustainLevel": 0.2, "sustainMs": 5, "releaseMs": 15 },
+          "filter": { "type": "highpass", "cutoffHz": 4000 },
+          "gain": 0.35
+        }
+      ]
+    }
+  },
+  {
+    "name": "guitar-strum",
+    "phrase": "guitar strum",
+    "category": "music-instrument",
+    "concept": "A three-note guitar strum chord that rings and decays naturally together.",
+    "keywords": ["guitar", "strum", "chord", "string", "acoustic", "pick", "play"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 196 },
+          "envelope": { "attackMs": 8, "decayMs": 150, "sustainLevel": 0.25, "sustainMs": 150, "releaseMs": 150 },
+          "gain": 0.34
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 247 },
+          "envelope": { "attackMs": 8, "decayMs": 150, "sustainLevel": 0.25, "sustainMs": 150, "releaseMs": 150 },
+          "gain": 0.34
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 294 },
+          "envelope": { "attackMs": 8, "decayMs": 150, "sustainLevel": 0.25, "sustainMs": 150, "releaseMs": 150 },
+          "gain": 0.3
+        }
+      ]
+    }
+  },
+  {
+    "name": "bass-note",
+    "phrase": "bass note",
+    "category": "music-instrument",
+    "concept": "A long, warm bass note that sustains at a low steady pitch before fading.",
+    "keywords": ["bass", "note", "low", "string", "tone", "deep", "guitar"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 90 },
+          "envelope": { "attackMs": 30, "decayMs": 150, "sustainLevel": 0.5, "sustainMs": 400, "releaseMs": 270 },
+          "gain": 0.42
+        }
+      ]
+    }
+  },
+  {
+    "name": "violin-bow",
+    "phrase": "violin bow",
+    "category": "music-instrument",
+    "concept": "A soft, sustained violin bow tone built from two gently detuned strings.",
+    "keywords": ["violin", "bow", "string", "orchestra", "note", "tone", "classical"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 440 },
+          "envelope": { "attackMs": 80, "decayMs": 100, "sustainLevel": 0.5, "sustainMs": 400, "releaseMs": 270 },
+          "gain": 0.32
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 444 },
+          "envelope": { "attackMs": 80, "decayMs": 100, "sustainLevel": 0.5, "sustainMs": 400, "releaseMs": 270 },
+          "gain": 0.32
+        }
+      ]
+    }
+  },
+  {
+    "name": "cello-low",
+    "phrase": "cello low",
+    "category": "music-instrument",
+    "concept": "A long, warm cello tone that sustains low and rich after a slow bow attack.",
+    "keywords": ["cello", "low", "bow", "string", "orchestra", "deep", "resonant"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 165 },
+          "envelope": { "attackMs": 60, "decayMs": 120, "sustainLevel": 0.5, "sustainMs": 400, "releaseMs": 270 },
+          "gain": 0.35
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 166 },
+          "envelope": { "attackMs": 60, "decayMs": 120, "sustainLevel": 0.5, "sustainMs": 400, "releaseMs": 270 },
+          "gain": 0.3
+        }
+      ]
+    }
+  },
+  {
+    "name": "flute-breath",
+    "phrase": "flute breath",
+    "category": "music-instrument",
+    "concept": "A soft flute breath tone with a light airy noise layer beneath the pitch.",
+    "keywords": ["flute", "breath", "air", "woodwind", "wind", "tone", "note"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 900 },
+          "envelope": { "attackMs": 100, "decayMs": 100, "sustainLevel": 0.6, "sustainMs": 200, "releaseMs": 150 },
+          "gain": 0.4
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 50, "decayMs": 100, "sustainLevel": 0.15, "sustainMs": 150, "releaseMs": 150 },
+          "filter": { "type": "bandpass", "cutoffHz": 2000 },
+          "gain": 0.5
+        }
+      ]
+    }
+  },
+  {
+    "name": "clarinet-tone",
+    "phrase": "clarinet tone",
+    "category": "music-instrument",
+    "concept": "A steady clarinet reed tone with a rounded triangle-wave timbre held at one pitch.",
+    "keywords": ["clarinet", "reed", "woodwind", "tone", "note", "wind", "orchestra"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 400 },
+          "envelope": { "attackMs": 15, "decayMs": 80, "sustainLevel": 0.5, "sustainMs": 200, "releaseMs": 100 },
+          "gain": 0.5
+        }
+      ]
+    }
+  },
+  {
+    "name": "trumpet-call",
+    "phrase": "trumpet call",
+    "category": "music-instrument",
+    "concept": "A rising, sharp trumpet call built from a filtered sawtooth brass tone and a matching sine.",
+    "keywords": ["trumpet", "call", "brass", "fanfare", "horn", "note", "blast"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "saw", "freqHz": 500, "pitchEnvelope": { "toHz": 650, "timeMs": 150 } },
+          "envelope": { "attackMs": 5, "decayMs": 60, "sustainLevel": 0.5, "sustainMs": 100, "releaseMs": 80 },
+          "filter": { "type": "lowpass", "cutoffHz": 3000 },
+          "gain": 0.65
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 650, "timeMs": 150 } },
+          "envelope": { "attackMs": 5, "decayMs": 60, "sustainLevel": 0.5, "sustainMs": 100, "releaseMs": 80 },
+          "gain": 0.65
+        }
+      ]
+    }
+  },
+  {
+    "name": "horn-swell",
+    "phrase": "horn swell",
+    "category": "music-instrument",
+    "concept": "A long, soft horn swell that grows in warm volume before slowly fading out.",
+    "keywords": ["horn", "french horn", "swell", "brass", "orchestra", "warm", "note"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 220 },
+          "envelope": { "attackMs": 250, "decayMs": 150, "sustainLevel": 0.5, "sustainMs": 300, "releaseMs": 150 },
+          "gain": 0.4
+        }
+      ]
+    }
+  },
+  {
+    "name": "sax-note",
+    "phrase": "sax note",
+    "category": "music-instrument",
+    "concept": "A sharp sax note with a breathy noise texture beneath a steady reed tone.",
+    "keywords": ["sax", "saxophone", "reed", "note", "woodwind", "breath", "tone"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 350 },
+          "envelope": { "attackMs": 10, "decayMs": 70, "sustainLevel": 0.5, "sustainMs": 150, "releaseMs": 100 },
+          "gain": 0.45
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 10, "decayMs": 50, "sustainLevel": 0.1, "sustainMs": 100, "releaseMs": 80 },
+          "filter": { "type": "bandpass", "cutoffHz": 1500 },
+          "gain": 0.4
+        }
+      ]
+    }
+  },
+  {
+    "name": "marimba-hit",
+    "phrase": "marimba hit",
+    "category": "music-instrument",
+    "concept": "A short, sharp marimba hit with a warm wooden tone that dips slightly in pitch.",
+    "keywords": ["marimba", "mallet", "hit", "wood", "percussion", "note", "strike"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 300, "pitchEnvelope": { "toHz": 280, "timeMs": 80 } },
+          "envelope": { "attackMs": 2, "decayMs": 80, "sustainLevel": 0.15, "sustainMs": 30, "releaseMs": 60 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "xylophone-run",
+    "phrase": "xylophone run",
+    "category": "music-instrument",
+    "concept": "A short, sharp xylophone run that rises quickly across bright mallet tones.",
+    "keywords": ["xylophone", "run", "mallet", "bright", "wood", "note", "percussion"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1500, "pitchEnvelope": { "toHz": 2400, "timeMs": 120 } },
+          "envelope": { "attackMs": 2, "decayMs": 70, "sustainLevel": 0.15, "sustainMs": 20, "releaseMs": 50 },
+          "gain": 0.5
+        }
+      ]
+    }
+  },
+  {
+    "name": "vibraphone",
+    "phrase": "vibraphone",
+    "category": "music-instrument",
+    "concept": "A long, sustained vibraphone tone built from two detuned layers for a shimmering tremolo.",
+    "keywords": ["vibraphone", "vibes", "mallet", "tremolo", "shimmer", "percussion", "bar"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500 },
+          "envelope": { "attackMs": 5, "decayMs": 150, "sustainLevel": 0.3, "sustainMs": 400, "releaseMs": 300 },
+          "gain": 0.3
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 503 },
+          "envelope": { "attackMs": 5, "decayMs": 150, "sustainLevel": 0.3, "sustainMs": 400, "releaseMs": 300 },
+          "gain": 0.3
+        }
+      ]
+    }
+  },
+  {
+    "name": "glockenspiel",
+    "phrase": "glockenspiel",
+    "category": "music-instrument",
+    "concept": "A short, sharp, bright glockenspiel bell tone with a high harmonic overtone above the root.",
+    "keywords": ["glockenspiel", "bell", "chime", "mallet", "bright", "metal", "percussion"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1800 },
+          "envelope": { "attackMs": 2, "decayMs": 60, "sustainLevel": 0.1, "sustainMs": 20, "releaseMs": 50 },
+          "gain": 0.4
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 3600 },
+          "envelope": { "attackMs": 2, "decayMs": 60, "sustainLevel": 0.1, "sustainMs": 20, "releaseMs": 50 },
+          "gain": 0.2
+        }
+      ]
+    }
+  },
+  {
+    "name": "kalimba",
+    "phrase": "kalimba",
+    "category": "music-instrument",
+    "concept": "A short, sharp kalimba pluck that falls in pitch as the metal tine settles down.",
+    "keywords": ["kalimba", "thumb piano", "pluck", "tine", "metal", "note", "african"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 700, "pitchEnvelope": { "toHz": 550, "timeMs": 90 } },
+          "envelope": { "attackMs": 3, "decayMs": 80, "sustainLevel": 0.2, "sustainMs": 30, "releaseMs": 60 },
+          "gain": 0.5
+        }
+      ]
+    }
+  },
+  {
+    "name": "music-box",
+    "phrase": "music box",
+    "category": "music-instrument",
+    "concept": "A delicate, bright music box note that shimmers from two detuned high tones.",
+    "keywords": ["music box", "chime", "delicate", "tinkle", "bell", "shimmer", "toy"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1600 },
+          "envelope": { "attackMs": 5, "decayMs": 200, "sustainLevel": 0.2, "sustainMs": 150, "releaseMs": 200 },
+          "gain": 0.35
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1608 },
+          "envelope": { "attackMs": 5, "decayMs": 200, "sustainLevel": 0.2, "sustainMs": 150, "releaseMs": 200 },
+          "gain": 0.3
+        }
+      ]
+    }
+  },
+  {
+    "name": "celesta",
+    "phrase": "celesta",
+    "category": "music-instrument",
+    "concept": "A long, warm celesta tone tamed by a low-pass filter for a mellow bell sound.",
+    "keywords": ["celesta", "bell", "keyboard", "mellow", "chime", "orchestra", "tone"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1000 },
+          "envelope": { "attackMs": 20, "decayMs": 150, "sustainLevel": 0.3, "sustainMs": 430, "releaseMs": 250 },
+          "filter": { "type": "lowpass", "cutoffHz": 1200 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "hand-drum",
+    "phrase": "hand drum",
+    "category": "music-instrument",
+    "concept": "A short, sharp hand drum thump with a low tone and a muted noise layer beneath it.",
+    "keywords": ["hand drum", "drum", "thump", "percussion", "tribal", "beat", "strike"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 260 },
+          "envelope": { "attackMs": 4, "decayMs": 80, "sustainLevel": 0.2, "sustainMs": 30, "releaseMs": 60 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 2, "decayMs": 40, "sustainLevel": 0.15, "sustainMs": 20, "releaseMs": 40 },
+          "filter": { "type": "bandpass", "cutoffHz": 400 },
+          "gain": 1.0
+        }
+      ]
+    }
+  },
+  {
+    "name": "snare-hit",
+    "phrase": "snare hit",
+    "category": "music-instrument",
+    "concept": "A very short, sharp snare hit built from a filtered noise burst and a low tone.",
+    "keywords": ["snare", "drum", "hit", "percussion", "beat", "crack", "strike"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 2, "decayMs": 20, "sustainLevel": 0.2, "sustainMs": 8, "releaseMs": 20 },
+          "filter": { "type": "highpass", "cutoffHz": 3000 },
+          "gain": 0.75
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 300 },
+          "envelope": { "attackMs": 2, "decayMs": 20, "sustainLevel": 0.15, "sustainMs": 10, "releaseMs": 20 },
+          "gain": 0.35
+        }
+      ]
+    }
+  },
+  {
+    "name": "kick-drum",
+    "phrase": "kick drum",
+    "category": "music-instrument",
+    "concept": "A percussive kick drum thump with a falling pitch from a low sine tone under it.",
+    "keywords": ["kick", "drum", "bass drum", "thump", "beat", "percussion", "low"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 150, "pitchEnvelope": { "toHz": 100, "timeMs": 130 } },
+          "envelope": { "attackMs": 3, "decayMs": 120, "sustainLevel": 0.3, "sustainMs": 30, "releaseMs": 90 },
+          "gain": 0.5
+        }
+      ]
+    }
+  },
+  {
+    "name": "hi-hat",
+    "phrase": "hi hat",
+    "category": "music-instrument",
+    "concept": "A very short, sharp, bright metallic hi-hat tick made from filtered noise.",
+    "keywords": ["hi hat", "hihat", "cymbal", "tick", "percussion", "drum kit", "metallic"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 1, "decayMs": 3, "sustainLevel": 0.4, "sustainMs": 15, "releaseMs": 35 },
+          "filter": { "type": "highpass", "cutoffHz": 6000 },
+          "gain": 1.0
+        }
+      ]
+    }
+  },
+  {
+    "name": "cymbal-swell",
+    "phrase": "cymbal swell",
+    "category": "music-instrument",
+    "concept": "A long, soft cymbal swell that builds slowly from bright filtered noise texture.",
+    "keywords": ["cymbal", "swell", "crash", "shimmer", "percussion", "metallic", "build"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 300, "decayMs": 100, "sustainLevel": 0.4, "sustainMs": 300, "releaseMs": 150 },
+          "filter": { "type": "highpass", "cutoffHz": 5000 },
+          "gain": 0.95
+        }
+      ]
+    }
+  },
+  {
+    "name": "gong",
+    "phrase": "gong",
+    "category": "music-instrument",
+    "concept": "A long, warm gong resonance built from two deep, slightly detuned low tones.",
+    "keywords": ["gong", "resonance", "strike", "metal", "deep", "ring", "ceremonial"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 100 },
+          "envelope": { "attackMs": 50, "decayMs": 300, "sustainLevel": 0.4, "sustainMs": 500, "releaseMs": 350 },
+          "gain": 0.32
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 101 },
+          "envelope": { "attackMs": 50, "decayMs": 300, "sustainLevel": 0.4, "sustainMs": 500, "releaseMs": 350 },
+          "gain": 0.3
+        }
+      ]
+    }
+  },
+  {
+    "name": "triangle-ding",
+    "phrase": "triangle ding",
+    "category": "music-instrument",
+    "concept": "A bright, sharp triangle ding that rings at a high pitch before fading out slowly.",
+    "keywords": ["triangle", "ding", "ring", "percussion", "metal", "bright", "chime"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 3000 },
+          "envelope": { "attackMs": 3, "decayMs": 150, "sustainLevel": 0.15, "sustainMs": 100, "releaseMs": 200 },
+          "gain": 0.45
+        }
+      ]
+    }
+  }
+]

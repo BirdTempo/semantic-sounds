@@ -1,0 +1,361 @@
+[
+  {
+    "name": "meeting-join",
+    "phrase": "meeting join",
+    "category": "office-productivity",
+    "concept": "A soft, gentle, rising two-tone chime that welcomes someone joining a meeting.",
+    "keywords": ["meeting", "join", "call", "conference", "enter", "connect", "video"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 440, "pitchEnvelope": { "toHz": 600, "timeMs": 150 } },
+          "envelope": { "attackMs": 25, "decayMs": 50, "sustainLevel": 0.4, "sustainMs": 40, "releaseMs": 50 },
+          "gain": 0.42
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 600, "pitchEnvelope": { "toHz": 820, "timeMs": 150 } },
+          "envelope": { "attackMs": 25, "decayMs": 50, "sustainLevel": 0.4, "sustainMs": 40, "releaseMs": 50 },
+          "gain": 0.32
+        }
+      ]
+    }
+  },
+  {
+    "name": "meeting-leave",
+    "phrase": "meeting leave",
+    "category": "office-productivity",
+    "concept": "A soft, gentle, falling two-tone tone that plays when someone leaves a meeting.",
+    "keywords": ["meeting", "leave", "exit", "call", "conference", "disconnect", "end"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 600, "pitchEnvelope": { "toHz": 440, "timeMs": 150 } },
+          "envelope": { "attackMs": 25, "decayMs": 50, "sustainLevel": 0.4, "sustainMs": 40, "releaseMs": 50 },
+          "gain": 0.42
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 440, "pitchEnvelope": { "toHz": 320, "timeMs": 150 } },
+          "envelope": { "attackMs": 25, "decayMs": 50, "sustainLevel": 0.4, "sustainMs": 40, "releaseMs": 50 },
+          "gain": 0.32
+        }
+      ]
+    }
+  },
+  {
+    "name": "mic-on",
+    "phrase": "mic on",
+    "category": "office-productivity",
+    "concept": "A quick, sharp, rising blip that confirms the microphone turned on.",
+    "keywords": ["mic", "microphone", "on", "enable", "unmute", "audio"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 520, "pitchEnvelope": { "toHz": 780, "timeMs": 70 } },
+          "envelope": { "attackMs": 3, "decayMs": 30, "sustainLevel": 0.3, "sustainMs": 20, "releaseMs": 25 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "mic-off",
+    "phrase": "mic off",
+    "category": "office-productivity",
+    "concept": "A quick, sharp, falling blip that confirms the microphone turned off.",
+    "keywords": ["mic", "microphone", "off", "disable", "mute", "audio"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 780, "pitchEnvelope": { "toHz": 520, "timeMs": 70 } },
+          "envelope": { "attackMs": 3, "decayMs": 30, "sustainLevel": 0.3, "sustainMs": 20, "releaseMs": 25 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "camera-on",
+    "phrase": "camera on",
+    "category": "office-productivity",
+    "concept": "A quick, sharp, rising two-tone chime that confirms the camera turned on.",
+    "keywords": ["camera", "video", "on", "enable", "webcam", "visible"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 680, "pitchEnvelope": { "toHz": 980, "timeMs": 100 } },
+          "envelope": { "attackMs": 6, "decayMs": 35, "sustainLevel": 0.3, "sustainMs": 25, "releaseMs": 35 },
+          "gain": 0.42
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 980, "pitchEnvelope": { "toHz": 1380, "timeMs": 100 } },
+          "envelope": { "attackMs": 6, "decayMs": 35, "sustainLevel": 0.3, "sustainMs": 25, "releaseMs": 35 },
+          "gain": 0.3
+        }
+      ]
+    }
+  },
+  {
+    "name": "camera-off",
+    "phrase": "camera off",
+    "category": "office-productivity",
+    "concept": "A quick, sharp, falling two-tone chime that confirms the camera turned off.",
+    "keywords": ["camera", "video", "off", "disable", "webcam", "hide"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 980, "pitchEnvelope": { "toHz": 680, "timeMs": 100 } },
+          "envelope": { "attackMs": 6, "decayMs": 35, "sustainLevel": 0.3, "sustainMs": 25, "releaseMs": 35 },
+          "gain": 0.42
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1380, "pitchEnvelope": { "toHz": 980, "timeMs": 100 } },
+          "envelope": { "attackMs": 6, "decayMs": 35, "sustainLevel": 0.3, "sustainMs": 25, "releaseMs": 35 },
+          "gain": 0.3
+        }
+      ]
+    }
+  },
+  {
+    "name": "screen-share-start",
+    "phrase": "screen share start",
+    "category": "office-productivity",
+    "concept": "A soft, rising sweep with a light airy whoosh that opens a shared screen.",
+    "keywords": ["screen", "share", "start", "present", "display", "broadcast", "begin"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 320, "pitchEnvelope": { "toHz": 760, "timeMs": 480 } },
+          "envelope": { "attackMs": 45, "decayMs": 120, "sustainLevel": 0.4, "sustainMs": 180, "releaseMs": 155 },
+          "gain": 0.34
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 480, "pitchEnvelope": { "toHz": 1140, "timeMs": 480 } },
+          "envelope": { "attackMs": 45, "decayMs": 120, "sustainLevel": 0.4, "sustainMs": 180, "releaseMs": 155 },
+          "gain": 0.24
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 45, "decayMs": 100, "sustainLevel": 0.3, "sustainMs": 80, "releaseMs": 90 },
+          "filter": { "type": "lowpass", "cutoffHz": 900 },
+          "gain": 0.15
+        }
+      ]
+    }
+  },
+  {
+    "name": "screen-share-end",
+    "phrase": "screen share end",
+    "category": "office-productivity",
+    "concept": "A soft, falling sweep with a light airy whoosh that closes a shared screen.",
+    "keywords": ["screen", "share", "end", "stop", "close", "present", "finish"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 760, "pitchEnvelope": { "toHz": 320, "timeMs": 480 } },
+          "envelope": { "attackMs": 45, "decayMs": 120, "sustainLevel": 0.4, "sustainMs": 180, "releaseMs": 155 },
+          "gain": 0.34
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1140, "pitchEnvelope": { "toHz": 480, "timeMs": 480 } },
+          "envelope": { "attackMs": 45, "decayMs": 120, "sustainLevel": 0.4, "sustainMs": 180, "releaseMs": 155 },
+          "gain": 0.24
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 45, "decayMs": 100, "sustainLevel": 0.3, "sustainMs": 80, "releaseMs": 90 },
+          "filter": { "type": "lowpass", "cutoffHz": 900 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "hand-raised",
+    "phrase": "hand raised",
+    "category": "office-productivity",
+    "concept": "A quick, sharp, rising ping that signals a hand is raised.",
+    "keywords": ["hand", "raise", "raised", "attention", "signal", "participant"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 750, "pitchEnvelope": { "toHz": 1200, "timeMs": 85 } },
+          "envelope": { "attackMs": 4, "decayMs": 35, "sustainLevel": 0.3, "sustainMs": 20, "releaseMs": 30 },
+          "gain": 0.5
+        }
+      ]
+    }
+  },
+  {
+    "name": "whisper-note",
+    "phrase": "whisper note",
+    "category": "office-productivity",
+    "concept": "A soft, gentle, hushed murmur used for a quiet whisper note.",
+    "keywords": ["whisper", "note", "quiet", "hush", "murmur", "private", "message"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 360 },
+          "envelope": { "attackMs": 60, "decayMs": 120, "sustainLevel": 0.35, "sustainMs": 140, "releaseMs": 140 },
+          "gain": 0.28
+        },
+        {
+          "source": { "type": "noise", "color": "pink" },
+          "envelope": { "attackMs": 60, "decayMs": 120, "sustainLevel": 0.3, "sustainMs": 140, "releaseMs": 140 },
+          "filter": { "type": "lowpass", "cutoffHz": 700 },
+          "gain": 0.9
+        }
+      ]
+    }
+  },
+  {
+    "name": "calendar-block",
+    "phrase": "calendar block",
+    "category": "office-productivity",
+    "concept": "A quick, steady two-tone chord that marks a new block on the calendar.",
+    "keywords": ["calendar", "block", "schedule", "event", "plan", "reserve"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500 },
+          "envelope": { "attackMs": 20, "decayMs": 45, "sustainLevel": 0.4, "sustainMs": 40, "releaseMs": 45 },
+          "gain": 0.4
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 650 },
+          "envelope": { "attackMs": 20, "decayMs": 45, "sustainLevel": 0.4, "sustainMs": 40, "releaseMs": 45 },
+          "gain": 0.3
+        }
+      ]
+    }
+  },
+  {
+    "name": "task-assigned",
+    "phrase": "task assigned",
+    "category": "office-productivity",
+    "concept": "A quick, soft, rising two-tone chime that confirms a task was assigned.",
+    "keywords": ["task", "assign", "assigned", "todo", "project", "owner"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 480, "pitchEnvelope": { "toHz": 640, "timeMs": 130 } },
+          "envelope": { "attackMs": 18, "decayMs": 45, "sustainLevel": 0.4, "sustainMs": 35, "releaseMs": 45 },
+          "gain": 0.42
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 640, "pitchEnvelope": { "toHz": 860, "timeMs": 130 } },
+          "envelope": { "attackMs": 18, "decayMs": 45, "sustainLevel": 0.4, "sustainMs": 35, "releaseMs": 45 },
+          "gain": 0.32
+        }
+      ]
+    }
+  },
+  {
+    "name": "deadline-set",
+    "phrase": "deadline set",
+    "category": "office-productivity",
+    "concept": "A quick, sharp, falling tick paired with a crisp click that marks a deadline being set.",
+    "keywords": ["deadline", "set", "due", "date", "reminder", "urgent", "task"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 620, "pitchEnvelope": { "toHz": 420, "timeMs": 95 } },
+          "envelope": { "attackMs": 4, "decayMs": 35, "sustainLevel": 0.3, "sustainMs": 25, "releaseMs": 30 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 2, "decayMs": 15, "sustainLevel": 0.2, "sustainMs": 5, "releaseMs": 15 },
+          "filter": { "type": "highpass", "cutoffHz": 4000 },
+          "gain": 0.7
+        }
+      ]
+    }
+  },
+  {
+    "name": "document-signed",
+    "phrase": "document signed",
+    "category": "office-productivity",
+    "concept": "A quick scratch and a steady two-tone chord that confirms a document is signed.",
+    "keywords": ["document", "sign", "signed", "contract", "approve", "confirm", "paperwork"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 2, "decayMs": 30, "sustainLevel": 0.2, "sustainMs": 40, "releaseMs": 30 },
+          "filter": { "type": "bandpass", "cutoffHz": 3000, "q": 1.5 },
+          "gain": 0.8
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500 },
+          "envelope": { "attackMs": 15, "decayMs": 50, "sustainLevel": 0.4, "sustainMs": 60, "releaseMs": 60 },
+          "gain": 0.4
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 650 },
+          "envelope": { "attackMs": 15, "decayMs": 50, "sustainLevel": 0.4, "sustainMs": 60, "releaseMs": 60 },
+          "gain": 0.3
+        }
+      ]
+    }
+  },
+  {
+    "name": "contract-sealed",
+    "phrase": "contract sealed",
+    "category": "office-productivity",
+    "concept": "A quick, sharp, falling, low thud that plays when a contract is sealed.",
+    "keywords": ["contract", "seal", "sealed", "sign", "finalize", "agreement", "stamp"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 260, "pitchEnvelope": { "toHz": 200, "timeMs": 120 } },
+          "envelope": { "attackMs": 3, "decayMs": 50, "sustainLevel": 0.3, "sustainMs": 30, "releaseMs": 40 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 2, "decayMs": 25, "sustainLevel": 0.25, "sustainMs": 15, "releaseMs": 20 },
+          "filter": { "type": "lowpass", "cutoffHz": 300 },
+          "gain": 0.9
+        }
+      ]
+    }
+  },
+  {
+    "name": "badge-scan",
+    "phrase": "badge scan",
+    "category": "office-productivity",
+    "concept": "A quick, sharp click paired with a short beep for a badge scan.",
+    "keywords": ["badge", "scan", "access", "id", "entry", "security", "check"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 2, "decayMs": 15, "sustainLevel": 0.2, "sustainMs": 5, "releaseMs": 15 },
+          "filter": { "type": "highpass", "cutoffHz": 4000 },
+          "gain": 0.75
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 900 },
+          "envelope": { "attackMs": 2, "decayMs": 20, "sustainLevel": 0.3, "sustainMs": 15, "releaseMs": 20 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "clock-in",
+    "phrase": "clock in",
+    "category": "office-productivity",
+    "concept": "A soft, quick, rising tone that confirms clocking in for work.",
+    "keywords": ["clock", "in", "work", "shift", "start", "timesheet", "attendance"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 480, "pitchEnvelope": { "toHz": 650, "timeMs": 130 } },
+          "envelope": { "attackMs": 20, "decayMs": 45, "sustainLevel": 0.4, "sustainMs": 35, "releaseMs": 45 },
+          "gain": 0.44
+        }
+      ]
+    }
+  }
+]

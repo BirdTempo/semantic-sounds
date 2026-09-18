@@ -1,0 +1,488 @@
+[
+  {
+    "name": "storage-full",
+    "phrase": "storage full",
+    "category": "system-data",
+    "concept": "A tone that climbs and stops abruptly at a hard ceiling, for storage at its limit.",
+    "keywords": ["storage", "full", "disk", "space", "limit", "capacity", "out-of-space"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 320, "pitchEnvelope": { "toHz": 700, "timeMs": 140 } },
+          "envelope": { "attackMs": 10, "decayMs": 30, "sustainLevel": 0.4, "sustainMs": 30, "releaseMs": 20 },
+          "gain": 0.6
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 2, "decayMs": 10, "sustainLevel": 0.1, "sustainMs": 5, "releaseMs": 10 },
+          "filter": { "type": "lowpass", "cutoffHz": 600 },
+          "gain": 0.3
+        }
+      ]
+    }
+  },
+  {
+    "name": "memory-warning",
+    "phrase": "memory warning",
+    "category": "system-data",
+    "concept": "Two close pulses of a dark, wavering tone that flag memory under pressure.",
+    "keywords": ["memory", "warning", "ram", "pressure", "low-memory", "alert", "caution"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 310 },
+          "envelope": { "attackMs": 10, "decayMs": 60, "sustainLevel": 0.35, "sustainMs": 60, "releaseMs": 70 },
+          "gain": 0.42
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 296 },
+          "envelope": { "attackMs": 10, "decayMs": 60, "sustainLevel": 0.35, "sustainMs": 60, "releaseMs": 70 },
+          "gain": 0.42
+        }
+      ]
+    }
+  },
+  {
+    "name": "cache-cleared",
+    "phrase": "cache cleared",
+    "category": "system-data",
+    "concept": "A quick upward flick that fades to nothing, for a cache emptied of data.",
+    "keywords": ["cache", "clear", "reset", "flush", "wipe", "cleanup", "refresh"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 950, "timeMs": 80 } },
+          "envelope": { "attackMs": 5, "decayMs": 30, "sustainLevel": 0.15, "sustainMs": 15, "releaseMs": 40 },
+          "gain": 0.62
+        }
+      ]
+    }
+  },
+  {
+    "name": "file-saved",
+    "phrase": "file saved",
+    "category": "system-data",
+    "concept": "A soft two-step chime settling upward, confirming a file wrote to disk.",
+    "keywords": ["file", "save", "write", "document", "stored", "confirm", "complete"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 440, "pitchEnvelope": { "toHz": 660, "timeMs": 160 } },
+          "envelope": { "attackMs": 20, "decayMs": 50, "sustainLevel": 0.35, "sustainMs": 50, "releaseMs": 70 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "file-deleted",
+    "phrase": "file deleted",
+    "category": "system-data",
+    "concept": "A falling triangle tone with a muffled thump, marking a file removed for good.",
+    "keywords": ["file", "delete", "remove", "erase", "trash", "discard", "gone"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 600, "pitchEnvelope": { "toHz": 260, "timeMs": 130 } },
+          "envelope": { "attackMs": 8, "decayMs": 50, "sustainLevel": 0.3, "sustainMs": 30, "releaseMs": 50 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 2, "decayMs": 15, "sustainLevel": 0, "sustainMs": 0, "releaseMs": 15 },
+          "filter": { "type": "lowpass", "cutoffHz": 700 },
+          "gain": 0.35
+        }
+      ]
+    }
+  },
+  {
+    "name": "folder-created",
+    "phrase": "folder created",
+    "category": "system-data",
+    "concept": "A quick pair of rising steps stacked together, for a new folder appearing.",
+    "keywords": ["folder", "create", "new", "directory", "add", "make", "organize"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 520, "pitchEnvelope": { "toHz": 780, "timeMs": 60 } },
+          "envelope": { "attackMs": 4, "decayMs": 25, "sustainLevel": 0.2, "sustainMs": 15, "releaseMs": 25 },
+          "gain": 0.5
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 780, "pitchEnvelope": { "toHz": 1020, "timeMs": 60 } },
+          "envelope": { "attackMs": 4, "decayMs": 25, "sustainLevel": 0.15, "sustainMs": 10, "releaseMs": 20 },
+          "gain": 0.28
+        }
+      ]
+    }
+  },
+  {
+    "name": "file-moved",
+    "phrase": "file moved",
+    "category": "system-data",
+    "concept": "A single tone that glides sideways in pitch, for a file relocating to a new place.",
+    "keywords": ["file", "move", "relocate", "transfer", "drag", "reorganize", "shift"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 460, "pitchEnvelope": { "toHz": 560, "timeMs": 220 } },
+          "envelope": { "attackMs": 15, "decayMs": 60, "sustainLevel": 0.3, "sustainMs": 80, "releaseMs": 60 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "file-corrupt",
+    "phrase": "file corrupt",
+    "category": "system-data",
+    "concept": "A wavering, unstable pair of detuned tones with a gritty edge, for damaged data.",
+    "keywords": ["file", "corrupt", "damaged", "broken", "invalid", "error", "bad-data"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "square", "freqHz": 260 },
+          "envelope": { "attackMs": 8, "decayMs": 70, "sustainLevel": 0.3, "sustainMs": 90, "releaseMs": 80 },
+          "filter": { "type": "lowpass", "cutoffHz": 500 },
+          "gain": 0.3
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 275 },
+          "envelope": { "attackMs": 8, "decayMs": 70, "sustainLevel": 0.35, "sustainMs": 90, "releaseMs": 80 },
+          "gain": 0.4
+        }
+      ]
+    }
+  },
+  {
+    "name": "permission-error",
+    "phrase": "permission error",
+    "category": "system-data",
+    "concept": "A short, blunt double buzz in a low register, for a blocked permission request.",
+    "keywords": ["permission", "error", "blocked", "denied", "restricted", "forbidden", "access"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 220 },
+          "envelope": { "attackMs": 5, "decayMs": 35, "sustainLevel": 0.4, "sustainMs": 35, "releaseMs": 45 },
+          "gain": 0.5
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 220 },
+          "envelope": { "attackMs": 5, "decayMs": 35, "sustainLevel": 0.4, "sustainMs": 35, "releaseMs": 45 },
+          "filter": { "type": "lowpass", "cutoffHz": 450 },
+          "gain": 0.2
+        }
+      ]
+    }
+  },
+  {
+    "name": "access-denied",
+    "phrase": "access denied",
+    "category": "system-data",
+    "concept": "A falling tone that drops hard into a low, dark floor, for a shut door.",
+    "keywords": ["access", "denied", "blocked", "locked", "refused", "forbidden", "restricted"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 500, "pitchEnvelope": { "toHz": 200, "timeMs": 150 } },
+          "envelope": { "attackMs": 6, "decayMs": 60, "sustainLevel": 0.3, "sustainMs": 50, "releaseMs": 60 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "firewall-block",
+    "phrase": "firewall block",
+    "category": "system-data",
+    "concept": "A sharp noise click against a steady low tone, for traffic stopped at the gate.",
+    "keywords": ["firewall", "block", "network", "security", "stop", "intercept", "traffic"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 240 },
+          "envelope": { "attackMs": 6, "decayMs": 40, "sustainLevel": 0.35, "sustainMs": 40, "releaseMs": 40 },
+          "gain": 0.45
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 2, "decayMs": 15, "sustainLevel": 0.2, "sustainMs": 5, "releaseMs": 15 },
+          "filter": { "type": "highpass", "cutoffHz": 4000 },
+          "gain": 0.75
+        }
+      ]
+    }
+  },
+  {
+    "name": "virus-found",
+    "phrase": "virus found",
+    "category": "system-data",
+    "concept": "An unsettled pair of close, detuned low tones with a gritty texture, for a threat found.",
+    "keywords": ["virus", "found", "malware", "threat", "infected", "scan", "detect"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 230 },
+          "envelope": { "attackMs": 8, "decayMs": 80, "sustainLevel": 0.35, "sustainMs": 120, "releaseMs": 100 },
+          "gain": 0.4
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 218 },
+          "envelope": { "attackMs": 8, "decayMs": 80, "sustainLevel": 0.35, "sustainMs": 120, "releaseMs": 100 },
+          "gain": 0.4
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 5, "decayMs": 40, "sustainLevel": 0.1, "sustainMs": 40, "releaseMs": 60 },
+          "filter": { "type": "bandpass", "cutoffHz": 900 },
+          "gain": 0.5
+        }
+      ]
+    }
+  },
+  {
+    "name": "quarantine",
+    "phrase": "quarantine",
+    "category": "system-data",
+    "concept": "A tone that drops and locks into a held, muted low note, for an item sealed away.",
+    "keywords": ["quarantine", "isolate", "contain", "sealed", "lockdown", "hold", "security"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 480, "pitchEnvelope": { "toHz": 220, "timeMs": 180 } },
+          "envelope": { "attackMs": 10, "decayMs": 70, "sustainLevel": 0.25, "sustainMs": 260, "releaseMs": 90 },
+          "filter": { "type": "lowpass", "cutoffHz": 500 },
+          "gain": 0.7
+        }
+      ]
+    }
+  },
+  {
+    "name": "encryption-on",
+    "phrase": "encryption on",
+    "category": "system-data",
+    "concept": "A rising pair of layered tones locking together, for protection switching on.",
+    "keywords": ["encryption", "secure", "lock", "protect", "enabled", "cipher", "safe"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 380, "pitchEnvelope": { "toHz": 620, "timeMs": 120 } },
+          "envelope": { "attackMs": 12, "decayMs": 40, "sustainLevel": 0.3, "sustainMs": 40, "releaseMs": 50 },
+          "gain": 0.45
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 570, "pitchEnvelope": { "toHz": 930, "timeMs": 120 } },
+          "envelope": { "attackMs": 12, "decayMs": 40, "sustainLevel": 0.25, "sustainMs": 40, "releaseMs": 50 },
+          "gain": 0.3
+        }
+      ]
+    }
+  },
+  {
+    "name": "decryption-done",
+    "phrase": "decryption done",
+    "category": "system-data",
+    "concept": "A settling downward pair of tones that unwind together, for a cipher opened.",
+    "keywords": ["decryption", "unlock", "decode", "complete", "cipher", "open", "done"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 700, "pitchEnvelope": { "toHz": 440, "timeMs": 160 } },
+          "envelope": { "attackMs": 15, "decayMs": 55, "sustainLevel": 0.3, "sustainMs": 45, "releaseMs": 65 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "key-generated",
+    "phrase": "key generated",
+    "category": "system-data",
+    "concept": "A quick upward flicker across two overlapping tones, for a fresh cryptographic key produced.",
+    "keywords": ["key", "generate", "create", "cryptography", "credential", "token", "new"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 900, "timeMs": 100 } },
+          "envelope": { "attackMs": 3, "decayMs": 30, "sustainLevel": 0.2, "sustainMs": 20, "releaseMs": 30 },
+          "gain": 0.62
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 900, "pitchEnvelope": { "toHz": 1200, "timeMs": 60 } },
+          "envelope": { "attackMs": 3, "decayMs": 20, "sustainLevel": 0.1, "sustainMs": 10, "releaseMs": 20 },
+          "gain": 0.25
+        }
+      ]
+    }
+  },
+  {
+    "name": "certificate-valid",
+    "phrase": "certificate valid",
+    "category": "system-data",
+    "concept": "A calm, steady two-tone chord that settles evenly, for a certificate confirmed valid.",
+    "keywords": ["certificate", "valid", "verified", "trust", "confirm", "authenticate", "secure"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500 },
+          "envelope": { "attackMs": 25, "decayMs": 60, "sustainLevel": 0.35, "sustainMs": 70, "releaseMs": 80 },
+          "gain": 0.42
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 630 },
+          "envelope": { "attackMs": 25, "decayMs": 60, "sustainLevel": 0.35, "sustainMs": 70, "releaseMs": 80 },
+          "gain": 0.32
+        }
+      ]
+    }
+  },
+  {
+    "name": "certificate-expired",
+    "phrase": "certificate expired",
+    "category": "system-data",
+    "concept": "A slow, dragging fall in pitch that trails off weakly, for trust run out.",
+    "keywords": ["certificate", "expired", "invalid", "outdated", "renew", "trust", "lapsed"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 480, "pitchEnvelope": { "toHz": 210, "timeMs": 500 } },
+          "envelope": { "attackMs": 20, "decayMs": 150, "sustainLevel": 0.25, "sustainMs": 350, "releaseMs": 180 },
+          "filter": { "type": "lowpass", "cutoffHz": 550 },
+          "gain": 0.75
+        }
+      ]
+    }
+  },
+  {
+    "name": "database-write",
+    "phrase": "database write",
+    "category": "system-data",
+    "concept": "A brisk, sharp double tick in a mid register, for a record committed to storage.",
+    "keywords": ["database", "write", "record", "commit", "insert", "store", "transaction"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 650 },
+          "envelope": { "attackMs": 3, "decayMs": 20, "sustainLevel": 0.15, "sustainMs": 10, "releaseMs": 20 },
+          "gain": 0.65
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 2, "decayMs": 8, "sustainLevel": 0.15, "sustainMs": 5, "releaseMs": 10 },
+          "filter": { "type": "highpass", "cutoffHz": 3800 },
+          "gain": 0.4
+        }
+      ]
+    }
+  },
+  {
+    "name": "query-complete",
+    "phrase": "query complete",
+    "category": "system-data",
+    "concept": "A short rising interval that lands and holds, for a lookup finishing cleanly.",
+    "keywords": ["query", "complete", "lookup", "search", "finished", "result", "database"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 460, "pitchEnvelope": { "toHz": 700, "timeMs": 90 } },
+          "envelope": { "attackMs": 8, "decayMs": 35, "sustainLevel": 0.3, "sustainMs": 35, "releaseMs": 40 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "index-rebuilt",
+    "phrase": "index rebuilt",
+    "category": "system-data",
+    "concept": "A long, sustained sweep upward that settles into a held tone, for reorganized data.",
+    "keywords": ["index", "rebuild", "reorganize", "optimize", "database", "refresh", "restructure"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 300, "pitchEnvelope": { "toHz": 620, "timeMs": 700 } },
+          "envelope": { "attackMs": 60, "decayMs": 150, "sustainLevel": 0.3, "sustainMs": 400, "releaseMs": 200 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "server-up",
+    "phrase": "server up",
+    "category": "system-data",
+    "concept": "A confident rising pair of tones stacking together, for a service coming online.",
+    "keywords": ["server", "up", "online", "start", "running", "available", "boot"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 400, "pitchEnvelope": { "toHz": 620, "timeMs": 130 } },
+          "envelope": { "attackMs": 12, "decayMs": 45, "sustainLevel": 0.35, "sustainMs": 45, "releaseMs": 55 },
+          "gain": 0.5
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 600, "pitchEnvelope": { "toHz": 930, "timeMs": 130 } },
+          "envelope": { "attackMs": 12, "decayMs": 45, "sustainLevel": 0.25, "sustainMs": 45, "releaseMs": 55 },
+          "gain": 0.3
+        }
+      ]
+    }
+  },
+  {
+    "name": "server-down",
+    "phrase": "server down",
+    "category": "system-data",
+    "concept": "A long, sustained descent into a low, dark hum, for a service going offline.",
+    "keywords": ["server", "down", "offline", "outage", "stopped", "unavailable", "crash"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 500, "pitchEnvelope": { "toHz": 180, "timeMs": 650 } },
+          "envelope": { "attackMs": 20, "decayMs": 180, "sustainLevel": 0.3, "sustainMs": 400, "releaseMs": 200 },
+          "filter": { "type": "lowpass", "cutoffHz": 500 },
+          "gain": 0.75
+        }
+      ]
+    }
+  },
+  {
+    "name": "latency-spike",
+    "phrase": "latency spike",
+    "category": "system-data",
+    "concept": "A sudden sharp jump in pitch that snaps up and cuts off, for a delay spiking.",
+    "keywords": ["latency", "spike", "delay", "lag", "slow", "network", "performance"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 350, "pitchEnvelope": { "toHz": 1100, "timeMs": 55 } },
+          "envelope": { "attackMs": 2, "decayMs": 20, "sustainLevel": 0.15, "sustainMs": 8, "releaseMs": 20 },
+          "gain": 0.65
+        }
+      ]
+    }
+  },
+  {
+    "name": "data-breach",
+    "phrase": "data breach",
+    "category": "system-data",
+    "concept": "A long, sustained, unstable pair of detuned low tones with a gritty edge, for a security failure.",
+    "keywords": ["data", "breach", "security", "leak", "compromised", "hacked", "incident"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "square", "freqHz": 210 },
+          "envelope": { "attackMs": 10, "decayMs": 120, "sustainLevel": 0.3, "sustainMs": 600, "releaseMs": 150 },
+          "filter": { "type": "lowpass", "cutoffHz": 480 },
+          "gain": 0.35
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 224 },
+          "envelope": { "attackMs": 10, "decayMs": 120, "sustainLevel": 0.35, "sustainMs": 600, "releaseMs": 150 },
+          "gain": 0.4
+        }
+      ]
+    }
+  }
+]

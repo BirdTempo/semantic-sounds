@@ -1,0 +1,457 @@
+[
+  {
+    "name": "urgent-alarm",
+    "phrase": "urgent alarm",
+    "category": "timers-alarms",
+    "concept": "A quick, sharp, buzzing alarm tone with an urgent metallic edge and a fast beat.",
+    "keywords": ["alarm", "urgent", "alert", "buzz", "warning", "emergency", "wake", "loud"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 1000 },
+          "envelope": { "attackMs": 3, "decayMs": 30, "sustainLevel": 0.5, "sustainMs": 80, "releaseMs": 57 },
+          "gain": 0.42
+        },
+        {
+          "source": { "type": "oscillator", "wave": "square", "freqHz": 1015 },
+          "envelope": { "attackMs": 3, "decayMs": 30, "sustainLevel": 0.5, "sustainMs": 80, "releaseMs": 57 },
+          "filter": { "type": "lowpass", "cutoffHz": 3000 },
+          "gain": 0.16
+        },
+        {
+          "source": { "type": "oscillator", "wave": "square", "freqHz": 400 },
+          "envelope": { "attackMs": 3, "decayMs": 30, "sustainLevel": 0.45, "sustainMs": 80, "releaseMs": 57 },
+          "filter": { "type": "lowpass", "cutoffHz": 900 },
+          "gain": 0.18
+        }
+      ]
+    }
+  },
+  {
+    "name": "alarm-dismissed",
+    "phrase": "alarm dismissed",
+    "category": "timers-alarms",
+    "concept": "A soft, falling tone that settles quietly as an alarm is dismissed.",
+    "keywords": ["alarm", "dismiss", "cancel", "stop", "silence", "off", "acknowledge", "clear"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 700, "pitchEnvelope": { "toHz": 400, "timeMs": 200 } },
+          "envelope": { "attackMs": 30, "decayMs": 60, "sustainLevel": 0.4, "sustainMs": 80, "releaseMs": 90 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "alarm-snoozed-again",
+    "phrase": "alarm snoozed again",
+    "category": "timers-alarms",
+    "concept": "A soft, falling two-tone dip for snoozing an alarm again, a little wearier each time.",
+    "keywords": ["alarm", "snooze", "repeat", "again", "postpone", "delay", "sleep", "wake"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 600, "pitchEnvelope": { "toHz": 350, "timeMs": 180 } },
+          "envelope": { "attackMs": 28, "decayMs": 55, "sustainLevel": 0.35, "sustainMs": 60, "releaseMs": 87 },
+          "gain": 0.5
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 300, "timeMs": 180 } },
+          "envelope": { "attackMs": 28, "decayMs": 50, "sustainLevel": 0.3, "sustainMs": 50, "releaseMs": 80 },
+          "gain": 0.35
+        }
+      ]
+    }
+  },
+  {
+    "name": "hourly-chime",
+    "phrase": "hourly chime",
+    "category": "timers-alarms",
+    "concept": "A long, sustained, soft bell tone that gently marks the passing hour.",
+    "keywords": ["hour", "chime", "bell", "clock", "hourly", "ring", "time", "ding"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500 },
+          "envelope": { "attackMs": 90, "decayMs": 150, "sustainLevel": 0.3, "sustainMs": 450, "releaseMs": 180 },
+          "gain": 0.5
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1000 },
+          "envelope": { "attackMs": 60, "decayMs": 120, "sustainLevel": 0.2, "sustainMs": 300, "releaseMs": 150 },
+          "gain": 0.25
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 2000 },
+          "envelope": { "attackMs": 40, "decayMs": 80, "sustainLevel": 0.15, "sustainMs": 150, "releaseMs": 100 },
+          "gain": 0.12
+        }
+      ]
+    }
+  },
+  {
+    "name": "quarter-hour",
+    "phrase": "quarter hour",
+    "category": "timers-alarms",
+    "concept": "A short, soft, single bell ping marking the quarter hour.",
+    "keywords": ["quarter", "hour", "chime", "bell", "clock", "time", "ping", "mark"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 900 },
+          "envelope": { "attackMs": 20, "decayMs": 50, "sustainLevel": 0.3, "sustainMs": 40, "releaseMs": 50 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "half-hour",
+    "phrase": "half hour",
+    "category": "timers-alarms",
+    "concept": "A soft two-tone bell chime marking the half hour.",
+    "keywords": ["half", "hour", "chime", "bell", "clock", "time", "ring", "mark"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 750 },
+          "envelope": { "attackMs": 25, "decayMs": 60, "sustainLevel": 0.35, "sustainMs": 80, "releaseMs": 95 },
+          "gain": 0.45
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1125 },
+          "envelope": { "attackMs": 25, "decayMs": 55, "sustainLevel": 0.3, "sustainMs": 70, "releaseMs": 85 },
+          "gain": 0.3
+        }
+      ]
+    }
+  },
+  {
+    "name": "grandfather-clock",
+    "phrase": "grandfather clock",
+    "category": "timers-alarms",
+    "concept": "A long, sustained, deep, warm resonant tone like a grandfather clock's chime, with a low rumbling tone underneath.",
+    "keywords": ["clock", "grandfather", "chime", "deep", "resonant", "tick", "tock", "pendulum"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 220 },
+          "envelope": { "attackMs": 80, "decayMs": 200, "sustainLevel": 0.3, "sustainMs": 420, "releaseMs": 240 },
+          "gain": 0.42
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 225 },
+          "envelope": { "attackMs": 80, "decayMs": 180, "sustainLevel": 0.25, "sustainMs": 350, "releaseMs": 220 },
+          "filter": { "type": "lowpass", "cutoffHz": 800 },
+          "gain": 0.2
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 330 },
+          "envelope": { "attackMs": 80, "decayMs": 150, "sustainLevel": 0.18, "sustainMs": 300, "releaseMs": 200 },
+          "gain": 0.12
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 110 },
+          "envelope": { "attackMs": 100, "decayMs": 200, "sustainLevel": 0.25, "sustainMs": 400, "releaseMs": 200 },
+          "gain": 0.25
+        }
+      ]
+    }
+  },
+  {
+    "name": "cuckoo",
+    "phrase": "cuckoo",
+    "category": "timers-alarms",
+    "concept": "A quick, bright, falling two-note whistle call, like a cuckoo clock's cuckoo.",
+    "keywords": ["cuckoo", "clock", "bird", "call", "whistle", "chime", "hour", "tweet"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1800, "pitchEnvelope": { "toHz": 1350, "timeMs": 90 } },
+          "envelope": { "attackMs": 5, "decayMs": 40, "sustainLevel": 0.3, "sustainMs": 35, "releaseMs": 40 },
+          "gain": 0.5
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 2400, "pitchEnvelope": { "toHz": 1800, "timeMs": 90 } },
+          "envelope": { "attackMs": 5, "decayMs": 35, "sustainLevel": 0.25, "sustainMs": 25, "releaseMs": 35 },
+          "gain": 0.3
+        }
+      ]
+    }
+  },
+  {
+    "name": "egg-timer",
+    "phrase": "egg timer",
+    "category": "timers-alarms",
+    "concept": "A quick, bright, sharp ping announcing that the egg timer has finished.",
+    "keywords": ["egg", "timer", "kitchen", "cook", "done", "ping", "alert", "boil"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1400 },
+          "envelope": { "attackMs": 3, "decayMs": 50, "sustainLevel": 0.25, "sustainMs": 30, "releaseMs": 60 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 2800 },
+          "envelope": { "attackMs": 3, "decayMs": 35, "sustainLevel": 0.2, "sustainMs": 20, "releaseMs": 40 },
+          "gain": 0.35
+        }
+      ]
+    }
+  },
+  {
+    "name": "oven-timer",
+    "phrase": "oven timer",
+    "category": "timers-alarms",
+    "concept": "A steady double-beep tone signaling that the oven timer has finished cooking.",
+    "keywords": ["oven", "timer", "kitchen", "cook", "bake", "done", "beep", "alert"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 450 },
+          "envelope": { "attackMs": 10, "decayMs": 50, "sustainLevel": 0.5, "sustainMs": 150, "releaseMs": 90 },
+          "filter": { "type": "lowpass", "cutoffHz": 900 },
+          "gain": 0.5
+        },
+        {
+          "source": { "type": "oscillator", "wave": "square", "freqHz": 455 },
+          "envelope": { "attackMs": 10, "decayMs": 45, "sustainLevel": 0.45, "sustainMs": 150, "releaseMs": 85 },
+          "filter": { "type": "lowpass", "cutoffHz": 700 },
+          "gain": 0.2
+        }
+      ]
+    }
+  },
+  {
+    "name": "tea-ready",
+    "phrase": "tea ready",
+    "category": "timers-alarms",
+    "concept": "A soft, gentle, rising warm chime announcing that the tea is ready.",
+    "keywords": ["tea", "ready", "kettle", "brew", "chime", "notify", "drink", "steep"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 450, "pitchEnvelope": { "toHz": 650, "timeMs": 200 } },
+          "envelope": { "attackMs": 45, "decayMs": 65, "sustainLevel": 0.4, "sustainMs": 100, "releaseMs": 130 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "laundry-done",
+    "phrase": "laundry done",
+    "category": "timers-alarms",
+    "concept": "A quick, bright, rising two-tone swell announcing that the laundry is done.",
+    "keywords": ["laundry", "done", "wash", "dryer", "finished", "chime", "notify", "clean"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1000, "pitchEnvelope": { "toHz": 2000, "timeMs": 130 } },
+          "envelope": { "attackMs": 10, "decayMs": 40, "sustainLevel": 0.35, "sustainMs": 40, "releaseMs": 50 },
+          "gain": 0.42
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 3000 },
+          "envelope": { "attackMs": 10, "decayMs": 30, "sustainLevel": 0.15, "sustainMs": 20, "releaseMs": 30 },
+          "gain": 0.18
+        }
+      ]
+    }
+  },
+  {
+    "name": "meeting-starting",
+    "phrase": "meeting starting",
+    "category": "timers-alarms",
+    "concept": "A quick, sharp, rising two-tone alert signaling that a meeting is starting.",
+    "keywords": ["meeting", "start", "begin", "calendar", "notify", "alert", "call", "join"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 600, "pitchEnvelope": { "toHz": 1000, "timeMs": 90 } },
+          "envelope": { "attackMs": 3, "decayMs": 35, "sustainLevel": 0.3, "sustainMs": 30, "releaseMs": 40 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1000, "pitchEnvelope": { "toHz": 1667, "timeMs": 90 } },
+          "envelope": { "attackMs": 3, "decayMs": 30, "sustainLevel": 0.25, "sustainMs": 25, "releaseMs": 35 },
+          "gain": 0.3
+        }
+      ]
+    }
+  },
+  {
+    "name": "meeting-ending",
+    "phrase": "meeting ending",
+    "category": "timers-alarms",
+    "concept": "A soft, falling two-tone chime signaling that the meeting is ending.",
+    "keywords": ["meeting", "end", "finish", "wrap", "calendar", "notify", "close", "done"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 900, "pitchEnvelope": { "toHz": 600, "timeMs": 150 } },
+          "envelope": { "attackMs": 35, "decayMs": 60, "sustainLevel": 0.35, "sustainMs": 70, "releaseMs": 100 },
+          "gain": 0.5
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1500, "pitchEnvelope": { "toHz": 1000, "timeMs": 150 } },
+          "envelope": { "attackMs": 35, "decayMs": 55, "sustainLevel": 0.3, "sustainMs": 60, "releaseMs": 90 },
+          "gain": 0.28
+        }
+      ]
+    }
+  },
+  {
+    "name": "deadline-near",
+    "phrase": "deadline near",
+    "category": "timers-alarms",
+    "concept": "A sharp, tense pulsing tone with a fast beating edge, warning that a deadline is near.",
+    "keywords": ["deadline", "near", "warning", "urgent", "pressure", "time", "alert", "countdown"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 700 },
+          "envelope": { "attackMs": 4, "decayMs": 40, "sustainLevel": 0.5, "sustainMs": 150, "releaseMs": 60 },
+          "gain": 0.4
+        },
+        {
+          "source": { "type": "oscillator", "wave": "square", "freqHz": 715 },
+          "envelope": { "attackMs": 4, "decayMs": 38, "sustainLevel": 0.45, "sustainMs": 150, "releaseMs": 58 },
+          "filter": { "type": "lowpass", "cutoffHz": 2500 },
+          "gain": 0.22
+        }
+      ]
+    }
+  },
+  {
+    "name": "time-up",
+    "phrase": "time up",
+    "category": "timers-alarms",
+    "concept": "A short, sharp, falling buzz tone announcing that time is up.",
+    "keywords": ["time", "up", "timeout", "expire", "done", "finished", "buzzer", "end"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "square", "freqHz": 500, "pitchEnvelope": { "toHz": 250, "timeMs": 100 } },
+          "envelope": { "attackMs": 3, "decayMs": 40, "sustainLevel": 0.4, "sustainMs": 50, "releaseMs": 45 },
+          "filter": { "type": "lowpass", "cutoffHz": 2000 },
+          "gain": 0.15
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 250, "timeMs": 100 } },
+          "envelope": { "attackMs": 3, "decayMs": 38, "sustainLevel": 0.35, "sustainMs": 45, "releaseMs": 42 },
+          "gain": 0.32
+        }
+      ]
+    }
+  },
+  {
+    "name": "overtime",
+    "phrase": "overtime",
+    "category": "timers-alarms",
+    "concept": "A long, sustained, dark, soft drone tone signaling that overtime has begun.",
+    "keywords": ["overtime", "work", "extra", "drone", "warning", "late", "shift", "clock"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 220 },
+          "envelope": { "attackMs": 100, "decayMs": 150, "sustainLevel": 0.5, "sustainMs": 500, "releaseMs": 200 },
+          "filter": { "type": "lowpass", "cutoffHz": 600 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "late-warning",
+    "phrase": "late warning",
+    "category": "timers-alarms",
+    "concept": "A quick, sharp, rising two-tone alert warning that you are running late.",
+    "keywords": ["late", "warning", "alert", "running", "tardy", "time", "hurry", "notify"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 800, "pitchEnvelope": { "toHz": 1400, "timeMs": 70 } },
+          "envelope": { "attackMs": 3, "decayMs": 30, "sustainLevel": 0.3, "sustainMs": 25, "releaseMs": 38 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1200, "pitchEnvelope": { "toHz": 2100, "timeMs": 70 } },
+          "envelope": { "attackMs": 3, "decayMs": 25, "sustainLevel": 0.25, "sustainMs": 20, "releaseMs": 32 },
+          "gain": 0.35
+        }
+      ]
+    }
+  },
+  {
+    "name": "schedule-conflict",
+    "phrase": "schedule conflict",
+    "category": "timers-alarms",
+    "concept": "A short, sharp, dissonant two-tone clash signaling a schedule conflict, with a quick metallic tick.",
+    "keywords": ["schedule", "conflict", "calendar", "clash", "overlap", "double", "booking", "event"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 600 },
+          "envelope": { "attackMs": 3, "decayMs": 35, "sustainLevel": 0.35, "sustainMs": 40, "releaseMs": 42 },
+          "gain": 0.42
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 640 },
+          "envelope": { "attackMs": 3, "decayMs": 32, "sustainLevel": 0.3, "sustainMs": 35, "releaseMs": 40 },
+          "gain": 0.35
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 2, "decayMs": 10, "sustainLevel": 0.2, "sustainMs": 6, "releaseMs": 12 },
+          "filter": { "type": "bandpass", "cutoffHz": 2500, "q": 2 },
+          "gain": 0.7
+        }
+      ]
+    }
+  },
+  {
+    "name": "appointment-reminder",
+    "phrase": "appointment reminder",
+    "category": "timers-alarms",
+    "concept": "A soft, gentle, rising chime tone for a polite appointment reminder.",
+    "keywords": ["appointment", "reminder", "calendar", "schedule", "notify", "alert", "meeting", "upcoming"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 600, "pitchEnvelope": { "toHz": 750, "timeMs": 150 } },
+          "envelope": { "attackMs": 35, "decayMs": 55, "sustainLevel": 0.4, "sustainMs": 90, "releaseMs": 100 },
+          "gain": 0.5
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 900, "pitchEnvelope": { "toHz": 1125, "timeMs": 150 } },
+          "envelope": { "attackMs": 35, "decayMs": 50, "sustainLevel": 0.35, "sustainMs": 80, "releaseMs": 90 },
+          "gain": 0.28
+        }
+      ]
+    }
+  },
+  {
+    "name": "medication-reminder",
+    "phrase": "medication reminder",
+    "category": "timers-alarms",
+    "concept": "A soft, gentle, warm two-tone chime for a caring medication reminder.",
+    "keywords": ["medication", "medicine", "pill", "reminder", "dose", "health", "alert", "notify"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500 },
+          "envelope": { "attackMs": 40, "decayMs": 60, "sustainLevel": 0.4, "sustainMs": 120, "releaseMs": 110 },
+          "gain": 0.5
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 625 },
+          "envelope": { "attackMs": 40, "decayMs": 55, "sustainLevel": 0.35, "sustainMs": 100, "releaseMs": 95 },
+          "gain": 0.3
+        }
+      ]
+    }
+  }
+]

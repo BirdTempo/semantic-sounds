@@ -1,0 +1,1284 @@
+[
+  {
+    "name": "dog-bark",
+    "phrase": "dog bark",
+    "category": "animals",
+    "concept": "A sharp, percussive dog bark with a low tone and a burst of noise.",
+    "keywords": [
+      "dog",
+      "bark",
+      "canine",
+      "woof",
+      "alert",
+      "warning",
+      "yelp"
+    ],
+    "patch": {
+      "layers": [
+        {
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 220
+          },
+          "envelope": {
+            "attackMs": 4,
+            "decayMs": 50,
+            "sustainLevel": 0.3,
+            "sustainMs": 40,
+            "releaseMs": 60
+          },
+          "gain": 0.5
+        },
+        {
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "envelope": {
+            "attackMs": 2,
+            "decayMs": 6,
+            "sustainLevel": 0.2,
+            "sustainMs": 5,
+            "releaseMs": 15
+          },
+          "filter": {
+            "type": "bandpass",
+            "cutoffHz": 700
+          },
+          "gain": 0.9
+        }
+      ]
+    }
+  },
+  {
+    "name": "dog-whine",
+    "phrase": "dog whine",
+    "category": "animals",
+    "concept": "A soft, rising dog whine that climbs gently in pitch like a plea.",
+    "keywords": [
+      "dog",
+      "whine",
+      "whimper",
+      "plea",
+      "needy",
+      "canine",
+      "cry"
+    ],
+    "patch": {
+      "layers": [
+        {
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 500,
+            "pitchEnvelope": {
+              "toHz": 750,
+              "timeMs": 400
+            }
+          },
+          "envelope": {
+            "attackMs": 60,
+            "decayMs": 100,
+            "sustainLevel": 0.4,
+            "sustainMs": 200,
+            "releaseMs": 140
+          },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "puppy-yip",
+    "phrase": "puppy yip",
+    "category": "animals",
+    "concept": "A short, sharp, rising yip from an excited puppy.",
+    "keywords": [
+      "puppy",
+      "yip",
+      "yelp",
+      "small",
+      "canine",
+      "excited",
+      "bark"
+    ],
+    "patch": {
+      "layers": [
+        {
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 900,
+            "pitchEnvelope": {
+              "toHz": 1400,
+              "timeMs": 80
+            }
+          },
+          "envelope": {
+            "attackMs": 4,
+            "decayMs": 30,
+            "sustainLevel": 0.3,
+            "sustainMs": 30,
+            "releaseMs": 40
+          },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "cat-meow",
+    "phrase": "cat meow",
+    "category": "animals",
+    "concept": "A soft, rising cat meow that climbs gently through a mid tone.",
+    "keywords": [
+      "cat",
+      "meow",
+      "feline",
+      "call",
+      "vocal",
+      "request"
+    ],
+    "patch": {
+      "layers": [
+        {
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 600,
+            "pitchEnvelope": {
+              "toHz": 900,
+              "timeMs": 300
+            }
+          },
+          "envelope": {
+            "attackMs": 40,
+            "decayMs": 80,
+            "sustainLevel": 0.35,
+            "sustainMs": 150,
+            "releaseMs": 90
+          },
+          "gain": 0.5
+        }
+      ]
+    }
+  },
+  {
+    "name": "cat-purr",
+    "phrase": "cat purr",
+    "category": "animals",
+    "concept": "A long, sustained cat purr with a low rumbling tone and texture.",
+    "keywords": [
+      "cat",
+      "purr",
+      "feline",
+      "rumble",
+      "content",
+      "hum",
+      "comfort"
+    ],
+    "patch": {
+      "layers": [
+        {
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 70
+          },
+          "envelope": {
+            "attackMs": 150,
+            "decayMs": 150,
+            "sustainLevel": 0.5,
+            "sustainMs": 500,
+            "releaseMs": 150
+          },
+          "gain": 0.45
+        },
+        {
+          "source": {
+            "type": "noise",
+            "color": "pink"
+          },
+          "envelope": {
+            "attackMs": 150,
+            "decayMs": 150,
+            "sustainLevel": 0.4,
+            "sustainMs": 500,
+            "releaseMs": 150
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 200
+          },
+          "gain": 0.9
+        }
+      ]
+    }
+  },
+  {
+    "name": "kitten-mew",
+    "phrase": "kitten mew",
+    "category": "animals",
+    "concept": "A short, soft, rising mew from a tiny kitten.",
+    "keywords": [
+      "kitten",
+      "mew",
+      "tiny",
+      "feline",
+      "soft",
+      "cry"
+    ],
+    "patch": {
+      "layers": [
+        {
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 750,
+            "pitchEnvelope": {
+              "toHz": 1000,
+              "timeMs": 90
+            }
+          },
+          "envelope": {
+            "attackMs": 20,
+            "decayMs": 30,
+            "sustainLevel": 0.3,
+            "sustainMs": 30,
+            "releaseMs": 30
+          },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "bird-chirp",
+    "phrase": "bird chirp",
+    "category": "animals",
+    "concept": "A short, sharp, rising bird chirp with one bright high tone.",
+    "keywords": [
+      "bird",
+      "chirp",
+      "tweet",
+      "avian",
+      "peep",
+      "small"
+    ],
+    "patch": {
+      "layers": [
+        {
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 1800,
+            "pitchEnvelope": {
+              "toHz": 2600,
+              "timeMs": 50
+            }
+          },
+          "envelope": {
+            "attackMs": 3,
+            "decayMs": 20,
+            "sustainLevel": 0.3,
+            "sustainMs": 15,
+            "releaseMs": 25
+          },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "bird-song",
+    "phrase": "bird song",
+    "category": "animals",
+    "concept": "A long, sustained, rising bird song that trills upward brightly.",
+    "keywords": [
+      "bird",
+      "song",
+      "melody",
+      "avian",
+      "trill",
+      "warble"
+    ],
+    "patch": {
+      "layers": [
+        {
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 1200,
+            "pitchEnvelope": {
+              "toHz": 1800,
+              "timeMs": 700
+            }
+          },
+          "envelope": {
+            "attackMs": 80,
+            "decayMs": 120,
+            "sustainLevel": 0.4,
+            "sustainMs": 500,
+            "releaseMs": 150
+          },
+          "gain": 0.5
+        },
+        {
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "envelope": {
+            "attackMs": 80,
+            "decayMs": 120,
+            "sustainLevel": 0.2,
+            "sustainMs": 400,
+            "releaseMs": 150
+          },
+          "filter": {
+            "type": "highpass",
+            "cutoffHz": 4000
+          },
+          "gain": 0.1
+        }
+      ]
+    }
+  },
+  {
+    "name": "owl-hoot",
+    "phrase": "owl hoot",
+    "category": "animals",
+    "concept": "A soft, falling owl hoot with a low, gentle tone.",
+    "keywords": [
+      "owl",
+      "hoot",
+      "nocturnal",
+      "night",
+      "call",
+      "forest"
+    ],
+    "patch": {
+      "layers": [
+        {
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 500,
+            "pitchEnvelope": {
+              "toHz": 350,
+              "timeMs": 350
+            }
+          },
+          "envelope": {
+            "attackMs": 60,
+            "decayMs": 100,
+            "sustainLevel": 0.35,
+            "sustainMs": 200,
+            "releaseMs": 120
+          },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "rooster-crow",
+    "phrase": "rooster crow",
+    "category": "animals",
+    "concept": "A long, sustained, rising rooster crow that climbs through the morning.",
+    "keywords": [
+      "rooster",
+      "crow",
+      "cockerel",
+      "morning",
+      "farm",
+      "wake"
+    ],
+    "patch": {
+      "layers": [
+        {
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 700,
+            "pitchEnvelope": {
+              "toHz": 1600,
+              "timeMs": 900
+            }
+          },
+          "envelope": {
+            "attackMs": 100,
+            "decayMs": 150,
+            "sustainLevel": 0.45,
+            "sustainMs": 500,
+            "releaseMs": 150
+          },
+          "gain": 0.45
+        }
+      ]
+    }
+  },
+  {
+    "name": "duck-quack",
+    "phrase": "duck quack",
+    "category": "animals",
+    "concept": "A short, sharp, falling duck quack with a nasal buzzing tone.",
+    "keywords": [
+      "duck",
+      "quack",
+      "waterfowl",
+      "pond",
+      "nasal"
+    ],
+    "patch": {
+      "layers": [
+        {
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 300,
+            "pitchEnvelope": {
+              "toHz": 220,
+              "timeMs": 60
+            }
+          },
+          "envelope": {
+            "attackMs": 3,
+            "decayMs": 25,
+            "sustainLevel": 0.3,
+            "sustainMs": 20,
+            "releaseMs": 30
+          },
+          "gain": 0.5
+        },
+        {
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "envelope": {
+            "attackMs": 2,
+            "decayMs": 6,
+            "sustainLevel": 0.2,
+            "sustainMs": 5,
+            "releaseMs": 15
+          },
+          "filter": {
+            "type": "bandpass",
+            "cutoffHz": 500
+          },
+          "gain": 0.9
+        }
+      ]
+    }
+  },
+  {
+    "name": "goose-honk",
+    "phrase": "goose honk",
+    "category": "animals",
+    "concept": "A short, sharp, percussive goose honk with a low blaring tone.",
+    "keywords": [
+      "goose",
+      "honk",
+      "waterfowl",
+      "farm",
+      "loud"
+    ],
+    "patch": {
+      "layers": [
+        {
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 260
+          },
+          "envelope": {
+            "attackMs": 6,
+            "decayMs": 30,
+            "sustainLevel": 0.3,
+            "sustainMs": 20,
+            "releaseMs": 32
+          },
+          "gain": 0.55
+        },
+        {
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "envelope": {
+            "attackMs": 2,
+            "decayMs": 7,
+            "sustainLevel": 0.2,
+            "sustainMs": 6,
+            "releaseMs": 18
+          },
+          "filter": {
+            "type": "bandpass",
+            "cutoffHz": 420
+          },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "seagull",
+    "phrase": "seagull",
+    "category": "animals",
+    "concept": "A short, sharp, rising, bright seagull squawk over the shore.",
+    "keywords": [
+      "seagull",
+      "gull",
+      "coast",
+      "squawk",
+      "beach",
+      "shore"
+    ],
+    "patch": {
+      "layers": [
+        {
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 1400,
+            "pitchEnvelope": {
+              "toHz": 2200,
+              "timeMs": 70
+            }
+          },
+          "envelope": {
+            "attackMs": 3,
+            "decayMs": 20,
+            "sustainLevel": 0.3,
+            "sustainMs": 20,
+            "releaseMs": 25
+          },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "horse-neigh",
+    "phrase": "horse neigh",
+    "category": "animals",
+    "concept": "A long, sustained, rising horse neigh with a whinnying texture.",
+    "keywords": [
+      "horse",
+      "neigh",
+      "whinny",
+      "equine",
+      "stable"
+    ],
+    "patch": {
+      "layers": [
+        {
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 500,
+            "pitchEnvelope": {
+              "toHz": 1100,
+              "timeMs": 700
+            }
+          },
+          "envelope": {
+            "attackMs": 80,
+            "decayMs": 120,
+            "sustainLevel": 0.4,
+            "sustainMs": 500,
+            "releaseMs": 150
+          },
+          "gain": 0.5
+        },
+        {
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "envelope": {
+            "attackMs": 80,
+            "decayMs": 120,
+            "sustainLevel": 0.25,
+            "sustainMs": 400,
+            "releaseMs": 150
+          },
+          "filter": {
+            "type": "bandpass",
+            "cutoffHz": 1500
+          },
+          "gain": 0.3
+        }
+      ]
+    }
+  },
+  {
+    "name": "horse-gallop",
+    "phrase": "horse gallop",
+    "category": "animals",
+    "concept": "A short, percussive horse gallop thud with a low dry tone.",
+    "keywords": [
+      "horse",
+      "gallop",
+      "hoof",
+      "equine",
+      "run",
+      "canter"
+    ],
+    "patch": {
+      "layers": [
+        {
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 150
+          },
+          "envelope": {
+            "attackMs": 3,
+            "decayMs": 40,
+            "sustainLevel": 0.3,
+            "sustainMs": 20,
+            "releaseMs": 40
+          },
+          "gain": 0.5
+        },
+        {
+          "source": {
+            "type": "noise",
+            "color": "pink"
+          },
+          "envelope": {
+            "attackMs": 3,
+            "decayMs": 30,
+            "sustainLevel": 0.2,
+            "sustainMs": 10,
+            "releaseMs": 30
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 250
+          },
+          "gain": 0.95
+        }
+      ]
+    }
+  },
+  {
+    "name": "cow-moo",
+    "phrase": "cow moo",
+    "category": "animals",
+    "concept": "A long, sustained, falling cow moo with a warm, low tone.",
+    "keywords": [
+      "cow",
+      "moo",
+      "cattle",
+      "farm",
+      "low",
+      "bovine"
+    ],
+    "patch": {
+      "layers": [
+        {
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 300,
+            "pitchEnvelope": {
+              "toHz": 220,
+              "timeMs": 700
+            }
+          },
+          "envelope": {
+            "attackMs": 120,
+            "decayMs": 150,
+            "sustainLevel": 0.45,
+            "sustainMs": 500,
+            "releaseMs": 150
+          },
+          "gain": 0.48
+        }
+      ]
+    }
+  },
+  {
+    "name": "sheep-bleat",
+    "phrase": "sheep bleat",
+    "category": "animals",
+    "concept": "A soft, rising sheep bleat with a short wavering mid tone.",
+    "keywords": [
+      "sheep",
+      "bleat",
+      "wool",
+      "farm",
+      "flock"
+    ],
+    "patch": {
+      "layers": [
+        {
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 450,
+            "pitchEnvelope": {
+              "toHz": 650,
+              "timeMs": 120
+            }
+          },
+          "envelope": {
+            "attackMs": 25,
+            "decayMs": 40,
+            "sustainLevel": 0.35,
+            "sustainMs": 40,
+            "releaseMs": 40
+          },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "pig-oink",
+    "phrase": "pig oink",
+    "category": "animals",
+    "concept": "A short, sharp, falling pig oink with a nasal texture.",
+    "keywords": [
+      "pig",
+      "oink",
+      "swine",
+      "farm",
+      "snort"
+    ],
+    "patch": {
+      "layers": [
+        {
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 350,
+            "pitchEnvelope": {
+              "toHz": 220,
+              "timeMs": 70
+            }
+          },
+          "envelope": {
+            "attackMs": 4,
+            "decayMs": 30,
+            "sustainLevel": 0.3,
+            "sustainMs": 20,
+            "releaseMs": 30
+          },
+          "gain": 0.5
+        },
+        {
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "envelope": {
+            "attackMs": 2,
+            "decayMs": 6,
+            "sustainLevel": 0.2,
+            "sustainMs": 5,
+            "releaseMs": 15
+          },
+          "filter": {
+            "type": "bandpass",
+            "cutoffHz": 500
+          },
+          "gain": 0.85
+        }
+      ]
+    }
+  },
+  {
+    "name": "goat-bleat",
+    "phrase": "goat bleat",
+    "category": "animals",
+    "concept": "A short, sharp, rising goat bleat higher than a sheep.",
+    "keywords": [
+      "goat",
+      "bleat",
+      "farm",
+      "kid",
+      "hoof"
+    ],
+    "patch": {
+      "layers": [
+        {
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 600,
+            "pitchEnvelope": {
+              "toHz": 850,
+              "timeMs": 80
+            }
+          },
+          "envelope": {
+            "attackMs": 5,
+            "decayMs": 30,
+            "sustainLevel": 0.3,
+            "sustainMs": 20,
+            "releaseMs": 30
+          },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "frog-croak",
+    "phrase": "frog croak",
+    "category": "animals",
+    "concept": "A short, percussive, dark frog croak with a low croaky tone.",
+    "keywords": [
+      "frog",
+      "croak",
+      "pond",
+      "amphibian",
+      "ribbit"
+    ],
+    "patch": {
+      "layers": [
+        {
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 180
+          },
+          "envelope": {
+            "attackMs": 4,
+            "decayMs": 35,
+            "sustainLevel": 0.3,
+            "sustainMs": 25,
+            "releaseMs": 35
+          },
+          "gain": 0.65
+        },
+        {
+          "source": {
+            "type": "noise",
+            "color": "pink"
+          },
+          "envelope": {
+            "attackMs": 2,
+            "decayMs": 4,
+            "sustainLevel": 0.15,
+            "sustainMs": 4,
+            "releaseMs": 15
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 300
+          },
+          "gain": 0.3
+        }
+      ]
+    }
+  },
+  {
+    "name": "cricket-chirp",
+    "phrase": "cricket chirp",
+    "category": "animals",
+    "concept": "A short, sharp cricket chirp with one steady high tone.",
+    "keywords": [
+      "cricket",
+      "chirp",
+      "insect",
+      "night",
+      "summer"
+    ],
+    "patch": {
+      "layers": [
+        {
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 3200
+          },
+          "envelope": {
+            "attackMs": 3,
+            "decayMs": 15,
+            "sustainLevel": 0.3,
+            "sustainMs": 10,
+            "releaseMs": 20
+          },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "wolf-howl",
+    "phrase": "wolf howl",
+    "category": "animals",
+    "concept": "A long, sustained, rising wolf howl through the night air.",
+    "keywords": [
+      "wolf",
+      "howl",
+      "pack",
+      "night",
+      "forest",
+      "canine"
+    ],
+    "patch": {
+      "layers": [
+        {
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 350,
+            "pitchEnvelope": {
+              "toHz": 700,
+              "timeMs": 900
+            }
+          },
+          "envelope": {
+            "attackMs": 150,
+            "decayMs": 200,
+            "sustainLevel": 0.4,
+            "sustainMs": 600,
+            "releaseMs": 200
+          },
+          "gain": 0.4
+        }
+      ]
+    }
+  },
+  {
+    "name": "lion-roar",
+    "phrase": "lion roar",
+    "category": "animals",
+    "concept": "A long, sustained, dark lion roar with a low growling tone.",
+    "keywords": [
+      "lion",
+      "roar",
+      "growl",
+      "predator",
+      "jungle",
+      "ferocious"
+    ],
+    "patch": {
+      "layers": [
+        {
+          "source": {
+            "type": "oscillator",
+            "wave": "triangle",
+            "freqHz": 130
+          },
+          "envelope": {
+            "attackMs": 200,
+            "decayMs": 200,
+            "sustainLevel": 0.45,
+            "sustainMs": 600,
+            "releaseMs": 200
+          },
+          "gain": 0.35
+        },
+        {
+          "source": {
+            "type": "noise",
+            "color": "pink"
+          },
+          "envelope": {
+            "attackMs": 200,
+            "decayMs": 200,
+            "sustainLevel": 0.5,
+            "sustainMs": 600,
+            "releaseMs": 200
+          },
+          "filter": {
+            "type": "lowpass",
+            "cutoffHz": 200
+          },
+          "gain": 0.9
+        }
+      ]
+    }
+  },
+  {
+    "name": "elephant-call",
+    "phrase": "elephant call",
+    "category": "animals",
+    "concept": "A long, sustained, rising elephant call like a trumpeting blast.",
+    "keywords": [
+      "elephant",
+      "trumpet",
+      "call",
+      "trunk",
+      "savanna"
+    ],
+    "patch": {
+      "layers": [
+        {
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 200,
+            "pitchEnvelope": {
+              "toHz": 1800,
+              "timeMs": 900
+            }
+          },
+          "envelope": {
+            "attackMs": 100,
+            "decayMs": 150,
+            "sustainLevel": 0.4,
+            "sustainMs": 500,
+            "releaseMs": 150
+          },
+          "gain": 0.45
+        },
+        {
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "envelope": {
+            "attackMs": 100,
+            "decayMs": 150,
+            "sustainLevel": 0.2,
+            "sustainMs": 400,
+            "releaseMs": 150
+          },
+          "filter": {
+            "type": "highpass",
+            "cutoffHz": 2000
+          },
+          "gain": 0.08
+        }
+      ]
+    }
+  },
+  {
+    "name": "monkey-chatter",
+    "phrase": "monkey chatter",
+    "category": "animals",
+    "concept": "A short, sharp, rising, bright monkey chatter call.",
+    "keywords": [
+      "monkey",
+      "chatter",
+      "primate",
+      "jungle",
+      "chirp"
+    ],
+    "patch": {
+      "layers": [
+        {
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 1500,
+            "pitchEnvelope": {
+              "toHz": 1900,
+              "timeMs": 55
+            }
+          },
+          "envelope": {
+            "attackMs": 3,
+            "decayMs": 18,
+            "sustainLevel": 0.3,
+            "sustainMs": 12,
+            "releaseMs": 20
+          },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "whale-song",
+    "phrase": "whale song",
+    "category": "animals",
+    "concept": "A long, sustained, falling whale song with a warm, deep tone.",
+    "keywords": [
+      "whale",
+      "song",
+      "ocean",
+      "deep",
+      "sonar",
+      "marine"
+    ],
+    "patch": {
+      "layers": [
+        {
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 300,
+            "pitchEnvelope": {
+              "toHz": 150,
+              "timeMs": 1200
+            }
+          },
+          "envelope": {
+            "attackMs": 150,
+            "decayMs": 200,
+            "sustainLevel": 0.5,
+            "sustainMs": 900,
+            "releaseMs": 200
+          },
+          "gain": 0.35
+        }
+      ]
+    }
+  },
+  {
+    "name": "dolphin-click",
+    "phrase": "dolphin click",
+    "category": "animals",
+    "concept": "A short, sharp, bright dolphin click made from one crisp burst.",
+    "keywords": [
+      "dolphin",
+      "click",
+      "sonar",
+      "ocean",
+      "marine"
+    ],
+    "patch": {
+      "layers": [
+        {
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "envelope": {
+            "attackMs": 2,
+            "decayMs": 5,
+            "sustainLevel": 0.45,
+            "sustainMs": 20,
+            "releaseMs": 63
+          },
+          "filter": {
+            "type": "highpass",
+            "cutoffHz": 5000
+          },
+          "gain": 1
+        }
+      ]
+    }
+  },
+  {
+    "name": "bat-squeak",
+    "phrase": "bat squeak",
+    "category": "animals",
+    "concept": "A short, sharp, rising bat squeak with a very high tone.",
+    "keywords": [
+      "bat",
+      "squeak",
+      "echolocation",
+      "nocturnal",
+      "cave"
+    ],
+    "patch": {
+      "layers": [
+        {
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 5000,
+            "pitchEnvelope": {
+              "toHz": 7000,
+              "timeMs": 30
+            }
+          },
+          "envelope": {
+            "attackMs": 3,
+            "decayMs": 18,
+            "sustainLevel": 0.3,
+            "sustainMs": 8,
+            "releaseMs": 18
+          },
+          "gain": 0.5
+        }
+      ]
+    }
+  },
+  {
+    "name": "mosquito-whine",
+    "phrase": "mosquito whine",
+    "category": "animals",
+    "concept": "A long, sustained, bright mosquito whine with a thin buzzing tone.",
+    "keywords": [
+      "mosquito",
+      "whine",
+      "buzz",
+      "insect",
+      "bug"
+    ],
+    "patch": {
+      "layers": [
+        {
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 5500
+          },
+          "envelope": {
+            "attackMs": 100,
+            "decayMs": 150,
+            "sustainLevel": 0.5,
+            "sustainMs": 700,
+            "releaseMs": 150
+          },
+          "gain": 0.3
+        }
+      ]
+    }
+  },
+  {
+    "name": "snake-hiss",
+    "phrase": "snake hiss",
+    "category": "animals",
+    "concept": "A steady, airy rush of breath forced through a narrow gap, as a warning.",
+    "keywords": [
+      "snake",
+      "hiss",
+      "serpent",
+      "warning",
+      "breath",
+      "air",
+      "reptile",
+      "sss"
+    ],
+    "patch": {
+      "layers": [
+        {
+          "source": {
+            "type": "oscillator",
+            "wave": "sine",
+            "freqHz": 2600
+          },
+          "envelope": {
+            "attackMs": 80,
+            "decayMs": 100,
+            "sustainLevel": 0.5,
+            "sustainMs": 350,
+            "releaseMs": 150
+          },
+          "gain": 0.04
+        },
+        {
+          "source": {
+            "type": "noise",
+            "color": "white"
+          },
+          "envelope": {
+            "attackMs": 80,
+            "decayMs": 100,
+            "sustainLevel": 0.45,
+            "sustainMs": 350,
+            "releaseMs": 150
+          },
+          "filter": {
+            "type": "highpass",
+            "cutoffHz": 2600
+          },
+          "gain": 0.62
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,542 @@
+[
+  {
+    "name": "footstep-soft",
+    "phrase": "footstep soft",
+    "category": "human-body",
+    "concept": "A soft, short, muffled thud of a bare foot landing gently on a carpeted floor.",
+    "keywords": ["footstep", "footfall", "walk", "step", "thud", "carpet", "muffled"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 20, "decayMs": 70, "sustainLevel": 0.25, "sustainMs": 30, "releaseMs": 50 },
+          "filter": { "type": "lowpass", "cutoffHz": 220 },
+          "gain": 1.0
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 200 },
+          "envelope": { "attackMs": 20, "decayMs": 70, "sustainLevel": 0.25, "sustainMs": 30, "releaseMs": 50 },
+          "gain": 0.35
+        }
+      ]
+    }
+  },
+  {
+    "name": "footstep-hard",
+    "phrase": "footstep hard",
+    "category": "human-body",
+    "concept": "A sharp, short, heavy thud of a boot striking a hard wooden floor.",
+    "keywords": ["footstep", "footfall", "boot", "stomp", "thud", "floor", "heavy"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 5, "decayMs": 55, "sustainLevel": 0.3, "sustainMs": 30, "releaseMs": 50 },
+          "filter": { "type": "lowpass", "cutoffHz": 500 },
+          "gain": 1.0
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 150 },
+          "envelope": { "attackMs": 5, "decayMs": 55, "sustainLevel": 0.3, "sustainMs": 30, "releaseMs": 50 },
+          "gain": 0.5
+        }
+      ]
+    }
+  },
+  {
+    "name": "clap-single",
+    "phrase": "clap single",
+    "category": "human-body",
+    "concept": "A single, sharp, bright clap of two hands meeting once in a quick smack.",
+    "keywords": ["clap", "hands", "applause", "smack", "single", "strike"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 3, "decayMs": 10, "sustainLevel": 0.5, "sustainMs": 30, "releaseMs": 57 },
+          "filter": { "type": "bandpass", "cutoffHz": 2800, "q": 1.2 },
+          "gain": 1.0
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 600 },
+          "envelope": { "attackMs": 3, "decayMs": 15, "sustainLevel": 0.3, "sustainMs": 20, "releaseMs": 62 },
+          "gain": 0.3
+        }
+      ]
+    }
+  },
+  {
+    "name": "clap-double",
+    "phrase": "clap double",
+    "category": "human-body",
+    "concept": "Two sharp, bright claps struck close together, blurring into one thick burst.",
+    "keywords": ["clap", "hands", "applause", "double", "burst", "strike"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 6, "decayMs": 4, "sustainLevel": 0.35, "sustainMs": 10, "releaseMs": 20 },
+          "filter": { "type": "highpass", "cutoffHz": 2800 },
+          "gain": 1.0
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 70, "decayMs": 30, "sustainLevel": 0.25, "sustainMs": 20, "releaseMs": 40 },
+          "filter": { "type": "highpass", "cutoffHz": 2500 },
+          "gain": 0.45
+        }
+      ]
+    }
+  },
+  {
+    "name": "finger-snap",
+    "phrase": "finger snap",
+    "category": "human-body",
+    "concept": "A sharp, short, bright snap made by flicking the thumb against a finger.",
+    "keywords": ["snap", "finger", "click", "flick", "thumb", "quick"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 3, "decayMs": 7, "sustainLevel": 0.4, "sustainMs": 10, "releaseMs": 40 },
+          "filter": { "type": "highpass", "cutoffHz": 4000 },
+          "gain": 1.0
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 900 },
+          "envelope": { "attackMs": 3, "decayMs": 10, "sustainLevel": 0.25, "sustainMs": 10, "releaseMs": 37 },
+          "gain": 0.35
+        }
+      ]
+    }
+  },
+  {
+    "name": "knuckle-crack",
+    "phrase": "knuckle crack",
+    "category": "human-body",
+    "concept": "A sharp, short crack like a knuckle popping under sudden joint pressure.",
+    "keywords": ["knuckle", "crack", "pop", "joint", "bone", "crunch"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 5, "decayMs": 8, "sustainLevel": 0.4, "sustainMs": 10, "releaseMs": 42 },
+          "filter": { "type": "bandpass", "cutoffHz": 1500, "q": 1.0 },
+          "gain": 1.0
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 250 },
+          "envelope": { "attackMs": 5, "decayMs": 15, "sustainLevel": 0.25, "sustainMs": 10, "releaseMs": 35 },
+          "gain": 0.45
+        }
+      ]
+    }
+  },
+  {
+    "name": "cough",
+    "phrase": "cough",
+    "category": "human-body",
+    "concept": "A sharp, falling burst of breath and noise like a single human cough.",
+    "keywords": ["cough", "throat", "breath", "hack", "chest", "ill"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 5, "decayMs": 40, "sustainLevel": 0.2, "sustainMs": 20, "releaseMs": 30 },
+          "filter": { "type": "lowpass", "cutoffHz": 600 },
+          "gain": 1.0
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 350, "pitchEnvelope": { "toHz": 220, "timeMs": 150 } },
+          "envelope": { "attackMs": 5, "decayMs": 60, "sustainLevel": 0.4, "sustainMs": 60, "releaseMs": 105 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "sneeze",
+    "phrase": "sneeze",
+    "category": "human-body",
+    "concept": "A sharp, bright burst of air and noise like a sudden human sneeze.",
+    "keywords": ["sneeze", "achoo", "sniffle", "nose", "burst", "sudden"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 10, "decayMs": 50, "sustainLevel": 0.3, "sustainMs": 60, "releaseMs": 140 },
+          "filter": { "type": "highpass", "cutoffHz": 2500 },
+          "gain": 0.9
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 400, "pitchEnvelope": { "toHz": 700, "timeMs": 80 } },
+          "envelope": { "attackMs": 10, "decayMs": 50, "sustainLevel": 0.25, "sustainMs": 60, "releaseMs": 140 },
+          "gain": 0.45
+        }
+      ]
+    }
+  },
+  {
+    "name": "yawn",
+    "phrase": "yawn",
+    "category": "human-body",
+    "concept": "A soft, long, falling groan of breath like a slow, relaxed human yawn.",
+    "keywords": ["yawn", "tired", "sleepy", "breath", "stretch", "mouth"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 320, "pitchEnvelope": { "toHz": 220, "timeMs": 900 } },
+          "envelope": { "attackMs": 150, "decayMs": 300, "sustainLevel": 0.35, "sustainMs": 400, "releaseMs": 350 },
+          "gain": 0.5
+        },
+        {
+          "source": { "type": "noise", "color": "pink" },
+          "envelope": { "attackMs": 150, "decayMs": 300, "sustainLevel": 0.3, "sustainMs": 400, "releaseMs": 350 },
+          "filter": { "type": "lowpass", "cutoffHz": 500 },
+          "gain": 0.7
+        }
+      ]
+    }
+  },
+  {
+    "name": "sigh",
+    "phrase": "sigh",
+    "category": "human-body",
+    "concept": "A soft, falling, warm exhale of breath like a slow, tired human sigh.",
+    "keywords": ["sigh", "exhale", "breath", "tired", "relief", "resigned"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 300, "pitchEnvelope": { "toHz": 200, "timeMs": 700 } },
+          "envelope": { "attackMs": 100, "decayMs": 250, "sustainLevel": 0.3, "sustainMs": 300, "releaseMs": 250 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "noise", "color": "pink" },
+          "envelope": { "attackMs": 100, "decayMs": 250, "sustainLevel": 0.25, "sustainMs": 300, "releaseMs": 250 },
+          "filter": { "type": "lowpass", "cutoffHz": 400 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "sharp-inhale",
+    "phrase": "sharp inhale",
+    "category": "human-body",
+    "concept": "A sharp, quick, rising hiss of breath like a sudden human inhale.",
+    "keywords": ["inhale", "gasp", "breath", "intake", "sudden", "air"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 5, "decayMs": 40, "sustainLevel": 0.3, "sustainMs": 40, "releaseMs": 65 },
+          "filter": { "type": "highpass", "cutoffHz": 2000 },
+          "gain": 0.5
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 300, "pitchEnvelope": { "toHz": 550, "timeMs": 120 } },
+          "envelope": { "attackMs": 5, "decayMs": 40, "sustainLevel": 0.25, "sustainMs": 40, "releaseMs": 65 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "hum",
+    "phrase": "hum",
+    "category": "human-body",
+    "concept": "A soft, sustained, warm hum of a single steady vocal tone held long.",
+    "keywords": ["hum", "tone", "drone", "voice", "steady", "buzz"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 300 },
+          "envelope": { "attackMs": 100, "decayMs": 150, "sustainLevel": 0.32, "sustainMs": 450, "releaseMs": 150 },
+          "gain": 0.48
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 300 },
+          "envelope": { "attackMs": 100, "decayMs": 150, "sustainLevel": 0.28, "sustainMs": 450, "releaseMs": 150 },
+          "filter": { "type": "lowpass", "cutoffHz": 600 },
+          "gain": 0.12
+        }
+      ]
+    }
+  },
+  {
+    "name": "whistle-short",
+    "phrase": "whistle short",
+    "category": "human-body",
+    "concept": "A short, bright, steady whistle pitch like a single quick human whistle.",
+    "keywords": ["whistle", "note", "pitch", "mouth", "tone", "airy"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1700 },
+          "envelope": { "attackMs": 8, "decayMs": 30, "sustainLevel": 0.35, "sustainMs": 60, "releaseMs": 62 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "whistle-tune",
+    "phrase": "whistle tune",
+    "category": "human-body",
+    "concept": "A soft, rising whistle tune that glides upward through a smooth melodic phrase.",
+    "keywords": ["whistle", "melody", "glide", "mouth", "song", "pitch"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 900, "pitchEnvelope": { "toHz": 1400, "timeMs": 500 } },
+          "envelope": { "attackMs": 60, "decayMs": 150, "sustainLevel": 0.35, "sustainMs": 250, "releaseMs": 190 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "throat-clear",
+    "phrase": "throat clear",
+    "category": "human-body",
+    "concept": "A sharp, short, throaty rasp of a quick human throat clear.",
+    "keywords": ["throat", "clear", "rasp", "ahem", "voice", "gruff"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 5, "decayMs": 15, "sustainLevel": 0.45, "sustainMs": 60, "releaseMs": 105 },
+          "filter": { "type": "bandpass", "cutoffHz": 900, "q": 1.0 },
+          "gain": 1.0
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 250 },
+          "envelope": { "attackMs": 5, "decayMs": 40, "sustainLevel": 0.35, "sustainMs": 40, "releaseMs": 105 },
+          "gain": 0.5
+        }
+      ]
+    }
+  },
+  {
+    "name": "sip",
+    "phrase": "sip",
+    "category": "human-body",
+    "concept": "A soft, short slurp of liquid like a single quick human sip.",
+    "keywords": ["sip", "drink", "slurp", "liquid", "mouth", "taste"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 20, "decayMs": 40, "sustainLevel": 0.25, "sustainMs": 30, "releaseMs": 40 },
+          "filter": { "type": "bandpass", "cutoffHz": 1200, "q": 1.0 },
+          "gain": 0.9
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 350 },
+          "envelope": { "attackMs": 20, "decayMs": 40, "sustainLevel": 0.2, "sustainMs": 30, "releaseMs": 40 },
+          "gain": 0.3
+        }
+      ]
+    }
+  },
+  {
+    "name": "swallow",
+    "phrase": "swallow",
+    "category": "human-body",
+    "concept": "A soft, falling gulp of the throat like a single human swallow.",
+    "keywords": ["swallow", "gulp", "throat", "drink", "mouth", "moment"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 400, "pitchEnvelope": { "toHz": 220, "timeMs": 220 } },
+          "envelope": { "attackMs": 30, "decayMs": 80, "sustainLevel": 0.4, "sustainMs": 90, "releaseMs": 100 },
+          "gain": 0.65
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 10, "decayMs": 30, "sustainLevel": 0.2, "sustainMs": 20, "releaseMs": 30 },
+          "filter": { "type": "lowpass", "cutoffHz": 500 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "chew",
+    "phrase": "chew",
+    "category": "human-body",
+    "concept": "A soft, steady, muffled chew of food moving inside the mouth.",
+    "keywords": ["chew", "bite", "food", "mouth", "munch", "jaw"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 25, "decayMs": 60, "sustainLevel": 0.45, "sustainMs": 60, "releaseMs": 75 },
+          "filter": { "type": "lowpass", "cutoffHz": 700 },
+          "gain": 1.0
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 260 },
+          "envelope": { "attackMs": 25, "decayMs": 60, "sustainLevel": 0.35, "sustainMs": 60, "releaseMs": 75 },
+          "gain": 0.45
+        }
+      ]
+    }
+  },
+  {
+    "name": "belly-laugh",
+    "phrase": "belly laugh",
+    "category": "human-body",
+    "concept": "A soft, long, falling rumble of a deep and hearty belly laugh.",
+    "keywords": ["laugh", "belly", "chuckle", "joy", "hearty", "deep"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 350, "pitchEnvelope": { "toHz": 250, "timeMs": 700 } },
+          "envelope": { "attackMs": 120, "decayMs": 250, "sustainLevel": 0.35, "sustainMs": 280, "releaseMs": 250 },
+          "gain": 0.5
+        },
+        {
+          "source": { "type": "noise", "color": "pink" },
+          "envelope": { "attackMs": 120, "decayMs": 250, "sustainLevel": 0.3, "sustainMs": 280, "releaseMs": 250 },
+          "filter": { "type": "lowpass", "cutoffHz": 500 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "giggle",
+    "phrase": "giggle",
+    "category": "human-body",
+    "concept": "A soft, rising giggle of light, playful laughter with a joyful lift.",
+    "keywords": ["giggle", "laugh", "chuckle", "playful", "light", "amused"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 450, "pitchEnvelope": { "toHz": 650, "timeMs": 280 } },
+          "envelope": { "attackMs": 40, "decayMs": 100, "sustainLevel": 0.4, "sustainMs": 110, "releaseMs": 100 },
+          "gain": 0.65
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 450, "pitchEnvelope": { "toHz": 650, "timeMs": 280 } },
+          "envelope": { "attackMs": 40, "decayMs": 100, "sustainLevel": 0.25, "sustainMs": 110, "releaseMs": 100 },
+          "filter": { "type": "lowpass", "cutoffHz": 1200 },
+          "gain": 0.2
+        }
+      ]
+    }
+  },
+  {
+    "name": "shush",
+    "phrase": "shush",
+    "category": "human-body",
+    "concept": "A soft, bright, steady hiss of air like a hushed human shush.",
+    "keywords": ["shush", "hush", "quiet", "silence", "hiss", "whisper"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 60, "decayMs": 120, "sustainLevel": 0.4, "sustainMs": 180, "releaseMs": 140 },
+          "filter": { "type": "highpass", "cutoffHz": 3000 },
+          "gain": 1.0
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500 },
+          "envelope": { "attackMs": 60, "decayMs": 120, "sustainLevel": 0.2, "sustainMs": 180, "releaseMs": 140 },
+          "gain": 0.15
+        }
+      ]
+    }
+  },
+  {
+    "name": "kiss",
+    "phrase": "kiss",
+    "category": "human-body",
+    "concept": "A sharp, short, falling pop like a quick single human kiss.",
+    "keywords": ["kiss", "smooch", "pop", "lips", "peck", "sound"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 3, "decayMs": 3, "sustainLevel": 0.35, "sustainMs": 6, "releaseMs": 8 },
+          "filter": { "type": "bandpass", "cutoffHz": 1800, "q": 1.0 },
+          "gain": 1.0
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 500, "pitchEnvelope": { "toHz": 300, "timeMs": 70 } },
+          "envelope": { "attackMs": 3, "decayMs": 20, "sustainLevel": 0.35, "sustainMs": 10, "releaseMs": 57 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "heart-thump",
+    "phrase": "heart thump",
+    "category": "human-body",
+    "concept": "A warm, low double thump like two heartbeats pulsing close together.",
+    "keywords": ["heart", "heartbeat", "thump", "pulse", "beat", "chest"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 150 },
+          "envelope": { "attackMs": 15, "decayMs": 40, "sustainLevel": 0.2, "sustainMs": 20, "releaseMs": 35 },
+          "filter": { "type": "lowpass", "cutoffHz": 300 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 130 },
+          "envelope": { "attackMs": 220, "decayMs": 100, "sustainLevel": 0.15, "sustainMs": 80, "releaseMs": 100 },
+          "filter": { "type": "lowpass", "cutoffHz": 280 },
+          "gain": 0.5
+        }
+      ]
+    }
+  },
+  {
+    "name": "stomach-rumble",
+    "phrase": "stomach rumble",
+    "category": "human-body",
+    "concept": "A soft, long, low rumble of noise like a slow, sustained stomach rumble.",
+    "keywords": ["stomach", "rumble", "hungry", "growl", "belly", "gut"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "pink" },
+          "envelope": { "attackMs": 150, "decayMs": 300, "sustainLevel": 0.4, "sustainMs": 400, "releaseMs": 250 },
+          "filter": { "type": "lowpass", "cutoffHz": 250 },
+          "gain": 0.9
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 110 },
+          "envelope": { "attackMs": 150, "decayMs": 300, "sustainLevel": 0.3, "sustainMs": 400, "releaseMs": 250 },
+          "gain": 0.35
+        }
+      ]
+    }
+  },
+  {
+    "name": "teeth-chatter",
+    "phrase": "teeth chatter",
+    "category": "human-body",
+    "concept": "A sharp, bright, chattering rattle like teeth trembling fast from cold.",
+    "keywords": ["teeth", "chatter", "cold", "shiver", "rattle", "tremble"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 5, "decayMs": 20, "sustainLevel": 0.45, "sustainMs": 150, "releaseMs": 275 },
+          "filter": { "type": "bandpass", "cutoffHz": 3500, "q": 1.0 },
+          "gain": 1.0
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 700 },
+          "envelope": { "attackMs": 5, "decayMs": 30, "sustainLevel": 0.35, "sustainMs": 150, "releaseMs": 265 },
+          "gain": 0.35
+        }
+      ]
+    }
+  }
+]

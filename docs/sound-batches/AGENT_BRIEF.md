@@ -60,8 +60,37 @@ These cost the first authors the most time. Read them before you draft.
   needs 5ms for one cycle. In a 40ms sound it completes too few cycles
   to average to zero, and the check fails. Raise the frequency, or make
   the sound longer, or add a highpass filter.
+- **A filtered noise layer is much quieter than it looks.** A lowpass or
+  bandpass takes out most of the energy. A noise texture often needs
+  `gain` and `sustainLevel` near 1.0 to reach the loudness window. One
+  lowpass stage passes more than a bandpass.
+- **A noise transient can measure "soft" with a 2ms attack.** The true
+  peak of a noise burst can land after the attack window. Add a short
+  plateau (`sustainMs` 5-8 at `sustainLevel` about 0.2) to hold the peak
+  inside the first 8% of the sound.
 - **A long tail pulls loudness down.** RMS covers the whole sound. A
   1000ms sound with a quiet tail needs more `gain` than a 100ms one.
+- **Noise hides pitch direction.** The validator reads pitch direction
+  from the zero-crossing rate of the whole mix. Noise crosses zero far
+  more often than a tone, and the count ignores amplitude. Even a quiet
+  noise layer can flip or erase a "rising" or "falling" claim. On any
+  entry with a direction claim, keep the noise layer's `gain` at 0.15 or
+  less, end it before the last third, or use a second oscillator with
+  the same `pitchEnvelope` instead.
+- **"Dark" and "warm" are hard to earn.** The filters are one-pole and
+  roll off only 6 dB per octave, so a lowpass at 400 Hz still leaves
+  energy above the 1500 Hz brightness line. A plain triangle wave also
+  measures about 3x its own frequency. Expect to drop the word rather
+  than to fight the filter.
+- **A highpass, not a bandpass, makes a loud sharp noise click.** A
+  working shape: `attackMs` 2, `decayMs` 15, `sustainLevel` 0.2,
+  `sustainMs` 5, `releaseMs` 15, highpass near 4000 Hz, `gain` 0.75.
+- **The concept check matches inside words.** "quickly" contains
+  "quick", so it triggers the short-duration rule. Read your concept for
+  an accidental match before you change the patch.
+- **The patch model has no repeated modulation.** There is one ADSR and
+  one linear pitch ramp per layer. To make a beat or a wobble, detune
+  two layers a little, or give two layers opposite pitch ramps.
 - **Two sounds can both pass and still be wrong.** Vary the pitch
   movement, attack, layer count and duration across your batch.
 

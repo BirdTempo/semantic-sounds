@@ -1,0 +1,403 @@
+[
+  {
+    "name": "heating-on",
+    "phrase": "heating on",
+    "category": "smart-home",
+    "concept": "A soft, gentle, rising heating-on cue that eases upward from a low, mellow pitch.",
+    "keywords": ["heating", "heat", "warmth", "thermostat", "climate", "on", "temperature"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 320, "pitchEnvelope": { "toHz": 460, "timeMs": 200 } },
+          "envelope": { "attackMs": 45, "decayMs": 60, "sustainLevel": 0.35, "sustainMs": 80, "releaseMs": 85 },
+          "gain": 0.62
+        }
+      ]
+    }
+  },
+  {
+    "name": "cooling-on",
+    "phrase": "cooling on",
+    "category": "smart-home",
+    "concept": "A quick, falling cooling-on tone that drops from a higher pitch to a lower one.",
+    "keywords": ["cooling", "cool", "ac", "air conditioning", "thermostat", "climate", "on"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 720, "pitchEnvelope": { "toHz": 440, "timeMs": 110 } },
+          "envelope": { "attackMs": 8, "decayMs": 45, "sustainLevel": 0.3, "sustainMs": 35, "releaseMs": 40 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "fan-speed",
+    "phrase": "fan speed",
+    "category": "smart-home",
+    "concept": "A rising fan speed cue with a stepping tone sweep over a light airy noise blade texture.",
+    "keywords": ["fan", "speed", "blower", "airflow", "ventilation", "step", "adjust"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 380, "pitchEnvelope": { "toHz": 620, "timeMs": 190 } },
+          "envelope": { "attackMs": 15, "decayMs": 60, "sustainLevel": 0.35, "sustainMs": 90, "releaseMs": 75 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 15, "decayMs": 60, "sustainLevel": 0.9, "sustainMs": 90, "releaseMs": 75 },
+          "filter": { "type": "lowpass", "cutoffHz": 900 },
+          "gain": 0.15
+        }
+      ]
+    }
+  },
+  {
+    "name": "air-purifier",
+    "phrase": "air purifier",
+    "category": "smart-home",
+    "concept": "A long, sustained air purifier hum with steady airy noise over a low, even tone.",
+    "keywords": ["air", "purifier", "filter", "hum", "clean", "ventilation", "steady"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "pink" },
+          "envelope": { "attackMs": 90, "decayMs": 150, "sustainLevel": 0.5, "sustainMs": 500, "releaseMs": 170 },
+          "filter": { "type": "lowpass", "cutoffHz": 1100 },
+          "gain": 0.9
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 260 },
+          "envelope": { "attackMs": 90, "decayMs": 150, "sustainLevel": 0.3, "sustainMs": 500, "releaseMs": 170 },
+          "gain": 0.4
+        }
+      ]
+    }
+  },
+  {
+    "name": "humidifier",
+    "phrase": "humidifier",
+    "category": "smart-home",
+    "concept": "A long, sustained humidifier mist with a soft filtered noise haze and a steady low tone.",
+    "keywords": ["humidifier", "mist", "moisture", "steam", "humidity", "hum", "steady"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 100, "decayMs": 160, "sustainLevel": 0.45, "sustainMs": 480, "releaseMs": 180 },
+          "filter": { "type": "bandpass", "cutoffHz": 1800 },
+          "gain": 0.95
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 300 },
+          "envelope": { "attackMs": 100, "decayMs": 160, "sustainLevel": 0.28, "sustainMs": 480, "releaseMs": 180 },
+          "gain": 0.35
+        }
+      ]
+    }
+  },
+  {
+    "name": "blinds-open",
+    "phrase": "blinds open",
+    "category": "smart-home",
+    "concept": "A quick, rising blinds-open slide with a smooth pitch sweep over soft friction noise.",
+    "keywords": ["blinds", "open", "shades", "curtain", "window", "slide", "raise"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 340, "pitchEnvelope": { "toHz": 500, "timeMs": 150 } },
+          "envelope": { "attackMs": 20, "decayMs": 50, "sustainLevel": 0.3, "sustainMs": 50, "releaseMs": 55 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 20, "decayMs": 50, "sustainLevel": 0.3, "sustainMs": 50, "releaseMs": 55 },
+          "filter": { "type": "bandpass", "cutoffHz": 1400 },
+          "gain": 0.12
+        }
+      ]
+    }
+  },
+  {
+    "name": "blinds-close",
+    "phrase": "blinds close",
+    "category": "smart-home",
+    "concept": "A quick, falling blinds-close slide with a smooth pitch drop over soft friction noise.",
+    "keywords": ["blinds", "close", "shades", "curtain", "window", "slide", "lower"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 500, "pitchEnvelope": { "toHz": 340, "timeMs": 150 } },
+          "envelope": { "attackMs": 20, "decayMs": 50, "sustainLevel": 0.3, "sustainMs": 50, "releaseMs": 55 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 20, "decayMs": 50, "sustainLevel": 0.3, "sustainMs": 50, "releaseMs": 55 },
+          "filter": { "type": "bandpass", "cutoffHz": 1400 },
+          "gain": 0.12
+        }
+      ]
+    }
+  },
+  {
+    "name": "garage-open",
+    "phrase": "garage open",
+    "category": "smart-home",
+    "concept": "A long, sustained, rising garage-open rumble where a low tone spins up under steady noise.",
+    "keywords": ["garage", "open", "door", "motor", "rumble", "rise", "gate"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 200, "pitchEnvelope": { "toHz": 400, "timeMs": 650 } },
+          "envelope": { "attackMs": 80, "decayMs": 180, "sustainLevel": 0.4, "sustainMs": 420, "releaseMs": 170 },
+          "gain": 0.52
+        },
+        {
+          "source": { "type": "noise", "color": "pink" },
+          "envelope": { "attackMs": 80, "decayMs": 180, "sustainLevel": 0.3, "sustainMs": 420, "releaseMs": 170 },
+          "filter": { "type": "lowpass", "cutoffHz": 350 },
+          "gain": 0.7
+        }
+      ]
+    }
+  },
+  {
+    "name": "garage-close",
+    "phrase": "garage close",
+    "category": "smart-home",
+    "concept": "A long, sustained, falling garage-close rumble where a tone winds down under steady noise.",
+    "keywords": ["garage", "close", "door", "motor", "rumble", "descend", "gate"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 400, "pitchEnvelope": { "toHz": 200, "timeMs": 650 } },
+          "envelope": { "attackMs": 80, "decayMs": 180, "sustainLevel": 0.4, "sustainMs": 420, "releaseMs": 170 },
+          "gain": 0.52
+        },
+        {
+          "source": { "type": "noise", "color": "pink" },
+          "envelope": { "attackMs": 80, "decayMs": 180, "sustainLevel": 0.3, "sustainMs": 420, "releaseMs": 170 },
+          "filter": { "type": "lowpass", "cutoffHz": 350 },
+          "gain": 0.7
+        }
+      ]
+    }
+  },
+  {
+    "name": "sprinkler-start",
+    "phrase": "sprinkler start",
+    "category": "smart-home",
+    "concept": "A quick sprinkler-start burst of bright spraying noise with a short rising tone underneath.",
+    "keywords": ["sprinkler", "start", "water", "spray", "irrigation", "garden", "burst"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 10, "decayMs": 55, "sustainLevel": 0.35, "sustainMs": 45, "releaseMs": 50 },
+          "filter": { "type": "highpass", "cutoffHz": 2500 },
+          "gain": 0.3
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 420, "pitchEnvelope": { "toHz": 560, "timeMs": 130 } },
+          "envelope": { "attackMs": 8, "decayMs": 45, "sustainLevel": 0.3, "sustainMs": 40, "releaseMs": 45 },
+          "gain": 0.55
+        }
+      ]
+    }
+  },
+  {
+    "name": "robot-vacuum-start",
+    "phrase": "robot vacuum start",
+    "category": "smart-home",
+    "concept": "A quick, rising robot-vacuum-start whir where a tone spins up over a light motor noise.",
+    "keywords": ["robot", "vacuum", "start", "clean", "motor", "whir", "begin"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 300, "pitchEnvelope": { "toHz": 560, "timeMs": 150 } },
+          "envelope": { "attackMs": 12, "decayMs": 55, "sustainLevel": 0.35, "sustainMs": 60, "releaseMs": 55 },
+          "gain": 0.55
+        },
+        {
+          "source": { "type": "noise", "color": "white" },
+          "envelope": { "attackMs": 12, "decayMs": 55, "sustainLevel": 0.9, "sustainMs": 60, "releaseMs": 55 },
+          "filter": { "type": "lowpass", "cutoffHz": 700 },
+          "gain": 0.15
+        }
+      ]
+    }
+  },
+  {
+    "name": "robot-vacuum-done",
+    "phrase": "robot vacuum done",
+    "category": "smart-home",
+    "concept": "A quick, rising two-tone robot-vacuum-done chime that signals the cleaning run is finished.",
+    "keywords": ["robot", "vacuum", "done", "finished", "clean", "complete", "chime"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 500, "pitchEnvelope": { "toHz": 700, "timeMs": 90 } },
+          "envelope": { "attackMs": 4, "decayMs": 35, "sustainLevel": 0.3, "sustainMs": 30, "releaseMs": 35 },
+          "gain": 0.46
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 650, "pitchEnvelope": { "toHz": 900, "timeMs": 90 } },
+          "envelope": { "attackMs": 4, "decayMs": 35, "sustainLevel": 0.3, "sustainMs": 30, "releaseMs": 35 },
+          "gain": 0.36
+        }
+      ]
+    }
+  },
+  {
+    "name": "washer-done",
+    "phrase": "washer done",
+    "category": "smart-home",
+    "concept": "A soft, rising washer-done chime that eases upward through one full, rounded tone.",
+    "keywords": ["washer", "washing", "done", "finished", "laundry", "complete", "chime"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 420, "pitchEnvelope": { "toHz": 640, "timeMs": 220 } },
+          "envelope": { "attackMs": 35, "decayMs": 70, "sustainLevel": 0.35, "sustainMs": 90, "releaseMs": 90 },
+          "gain": 0.58
+        }
+      ]
+    }
+  },
+  {
+    "name": "dryer-done",
+    "phrase": "dryer done",
+    "category": "smart-home",
+    "concept": "A bright, quick, rising dryer-done chime with one high tone sweeping upward.",
+    "keywords": ["dryer", "done", "finished", "laundry", "complete", "chime", "high"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1500, "pitchEnvelope": { "toHz": 2000, "timeMs": 100 } },
+          "envelope": { "attackMs": 5, "decayMs": 35, "sustainLevel": 0.3, "sustainMs": 30, "releaseMs": 35 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "dishwasher-done",
+    "phrase": "dishwasher done",
+    "category": "smart-home",
+    "concept": "A gentle, rising dishwasher-done chime built from three soft overlapping tones.",
+    "keywords": ["dishwasher", "done", "finished", "dishes", "complete", "clean", "chime"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 380, "pitchEnvelope": { "toHz": 500, "timeMs": 200 } },
+          "envelope": { "attackMs": 30, "decayMs": 60, "sustainLevel": 0.3, "sustainMs": 80, "releaseMs": 80 },
+          "gain": 0.4
+        },
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 480, "pitchEnvelope": { "toHz": 620, "timeMs": 200 } },
+          "envelope": { "attackMs": 30, "decayMs": 60, "sustainLevel": 0.3, "sustainMs": 80, "releaseMs": 80 },
+          "gain": 0.35
+        },
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 580, "pitchEnvelope": { "toHz": 760, "timeMs": 200 } },
+          "envelope": { "attackMs": 30, "decayMs": 60, "sustainLevel": 0.3, "sustainMs": 80, "releaseMs": 80 },
+          "gain": 0.28
+        }
+      ]
+    }
+  },
+  {
+    "name": "fridge-door",
+    "phrase": "fridge door",
+    "category": "smart-home",
+    "concept": "A short, low-pitched fridge-door thud made from a rounded tone and a muffled noise knock.",
+    "keywords": ["fridge", "refrigerator", "door", "thud", "knock", "close", "kitchen"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 210 },
+          "envelope": { "attackMs": 4, "decayMs": 45, "sustainLevel": 0.3, "sustainMs": 30, "releaseMs": 35 },
+          "gain": 0.5
+        },
+        {
+          "source": { "type": "noise", "color": "pink" },
+          "envelope": { "attackMs": 3, "decayMs": 35, "sustainLevel": 0.2, "sustainMs": 12, "releaseMs": 28 },
+          "filter": { "type": "lowpass", "cutoffHz": 320 },
+          "gain": 0.7
+        }
+      ]
+    }
+  },
+  {
+    "name": "kettle-boiled",
+    "phrase": "kettle boiled",
+    "category": "smart-home",
+    "concept": "A bright, quick, rising kettle-boiled whistle that sweeps smoothly up to a high pitch.",
+    "keywords": ["kettle", "boiled", "boil", "whistle", "tea", "water", "chime"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1650, "pitchEnvelope": { "toHz": 2200, "timeMs": 130 } },
+          "envelope": { "attackMs": 8, "decayMs": 45, "sustainLevel": 0.3, "sustainMs": 35, "releaseMs": 40 },
+          "gain": 0.58
+        }
+      ]
+    }
+  },
+  {
+    "name": "coffee-ready",
+    "phrase": "coffee ready",
+    "category": "smart-home",
+    "concept": "A soft, rising coffee-ready chime that eases upward through a rounded mid tone.",
+    "keywords": ["coffee", "ready", "brew", "maker", "chime", "morning", "done"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "triangle", "freqHz": 400, "pitchEnvelope": { "toHz": 560, "timeMs": 210 } },
+          "envelope": { "attackMs": 32, "decayMs": 65, "sustainLevel": 0.32, "sustainMs": 85, "releaseMs": 85 },
+          "gain": 0.6
+        }
+      ]
+    }
+  },
+  {
+    "name": "device-paired",
+    "phrase": "device paired",
+    "category": "smart-home",
+    "concept": "A quick, rising, bright device-paired confirmation with one high tone snapping upward.",
+    "keywords": ["device", "paired", "pairing", "connect", "bluetooth", "link", "confirm"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 1550, "pitchEnvelope": { "toHz": 2100, "timeMs": 90 } },
+          "envelope": { "attackMs": 4, "decayMs": 25, "sustainLevel": 0.3, "sustainMs": 20, "releaseMs": 25 },
+          "gain": 0.62
+        }
+      ]
+    }
+  },
+  {
+    "name": "device-offline",
+    "phrase": "device offline",
+    "category": "smart-home",
+    "concept": "A quick, falling device-offline alert with a dropping tone and a soft muted thud.",
+    "keywords": ["device", "offline", "disconnect", "lost", "connection", "alert", "drop"],
+    "patch": {
+      "layers": [
+        {
+          "source": { "type": "oscillator", "wave": "sine", "freqHz": 550, "pitchEnvelope": { "toHz": 280, "timeMs": 130 } },
+          "envelope": { "attackMs": 16, "decayMs": 45, "sustainLevel": 0.32, "sustainMs": 40, "releaseMs": 45 },
+          "gain": 0.6
+        },
+        {
+          "source": { "type": "noise", "color": "pink" },
+          "envelope": { "attackMs": 16, "decayMs": 40, "sustainLevel": 0.2, "sustainMs": 20, "releaseMs": 35 },
+          "filter": { "type": "lowpass", "cutoffHz": 400 },
+          "gain": 0.15
+        }
+      ]
+    }
+  }
+]
