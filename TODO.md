@@ -6,8 +6,13 @@ letting deferred work rot into an undocumented gap.
 ## Deferred to later sub-projects
 
 - The review tool with play buttons (sub-project 2).
-- The full 300-500 sound set, built by parallel agents from
+- The full sound set, built by parallel agents from
   `docs/sound-batches/AGENT_BRIEF.md` at a larger scale (sub-project 3).
+  Target as of 2026-09-19: **at least 1000 sounds**, raised from the
+  300-500 in the original brief. That size needs a wider taxonomy than
+  the six seed buckets, and it changes two things already recorded here:
+  re-run the retrieval threshold search on the larger corpus, and expect
+  the keyword data, not the scorer, to be what limits recall.
   A "must not regress" band should be added to `scripts/prose-probe.ts`
   once that set ships.
 - The SDK, MCP server, and the `semantic-sounds-mcp` wrapper package
