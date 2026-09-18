@@ -1,2 +1,28 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><title>Semantic Sounds review</title></head><body></body></html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Semantic Sounds review</title>
+    <link rel="stylesheet" href="/review.css" />
+  </head>
+  <body>
+    <header class="top">
+      <h1>Semantic Sounds review</h1>
+      <p id="count"></p>
+      <div class="controls">
+        <label><input id="mute" type="checkbox" /> Mute</label>
+        <label>Volume <input id="volume" type="range" min="0" max="1" step="0.01" value="0.8" /></label>
+      </div>
+      <p class="hint">Play each sound. Leave it on Yes if it works. Mark No to have it written again.</p>
+    </header>
+    <main id="grid" class="grid"></main>
+    <div id="sentinel"></div>
+    <footer class="bar">
+      <span id="summary">0 marked no</span>
+      <a id="open-link" href="/redraw" hidden></a>
+      <span id="message" class="message"></span>
+      <button id="redraw" type="button" disabled>Redraw 0 sounds (0 generations)</button>
+    </footer>
+    <script type="module" src="/library.js"></script>
+  </body>
+</html>

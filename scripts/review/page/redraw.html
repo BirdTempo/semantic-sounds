@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Redraw — Semantic Sounds review</title>
+    <link rel="stylesheet" href="/review.css" />
+  </head>
+  <body>
+    <header class="top">
+      <h1>Redraw</h1>
+      <p><a href="/">Back to the library</a></p>
+      <div class="controls">
+        <label><input id="mute" type="checkbox" /> Mute</label>
+        <label>Volume <input id="volume" type="range" min="0" max="1" step="0.01" value="0.8" /></label>
+      </div>
+    </header>
+    <main id="rows"></main>
+    <pre id="build" class="build" hidden></pre>
+    <footer class="bar">
+      <span id="summary"></span>
+      <span id="message" class="message"></span>
+      <button id="submit" type="button" disabled>Submit</button>
+    </footer>
+    <script type="module" src="/redraw.js"></script>
+  </body>
+</html>
