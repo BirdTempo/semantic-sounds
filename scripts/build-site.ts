@@ -6,7 +6,7 @@
 // engine and the renderer inline, so it makes no request of its own and
 // shows no loading state. Measured: 535 KB raw, 89 KB gzipped.
 import { build } from 'esbuild';
-import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, readdirSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { sounds } from '../src/library/index';
@@ -19,7 +19,7 @@ const siteDir = join(root, 'site');
  * The one line to change to move the site.
  *
  * The canonical link, the Open Graph tags, the sitemap and robots.txt all
- * read it. No domain is registered yet; see TODO.md.
+ * read it. The author owns semantic-sounds.com already.
  */
 export const ORIGIN = 'https://semantic-sounds.com';
 
@@ -234,6 +234,28 @@ const file = sounds.wav(hit);        // a .wav you can save</code></pre>
 `;
 }
 
+/**
+ * Every file the site may publish. The deploy uploads the whole directory,
+ * so anything that lands in it goes public.
+ *
+ * This list exists because a stray directory did go public once: a shell
+ * ran with `site/` as its working directory, local tooling wrote state
+ * into it, and the next deploy uploaded that state. A deploy must carry
+ * what the build made, and nothing else.
+ */
+const ALLOWED = new Set(['index.html', 'sitemap.xml', 'llms.txt', 'robots.txt', '_headers', 'favicon.svg']);
+
+/** Refuse to finish a build that would publish a file nobody chose. */
+function checkNoStrays(): void {
+  const strays = readdirSync(siteDir).filter((name) => !ALLOWED.has(name));
+  if (strays.length > 0) {
+    throw new Error(
+      `site/ holds ${strays.length} file(s) the build did not make: ${strays.join(', ')}. ` +
+        'A deploy uploads the whole directory. Remove them, or add them to ALLOWED in scripts/build-site.ts.'
+    );
+  }
+}
+
 export async function buildSite(): Promise<{ bytes: number }> {
   mkdirSync(siteDir, { recursive: true });
   const app = await bundleApp();
@@ -243,6 +265,8 @@ export async function buildSite(): Promise<{ bytes: number }> {
   writeFileSync(join(siteDir, 'index.html'), html);
   writeFileSync(join(siteDir, 'sitemap.xml'), sitemapXml());
   writeFileSync(join(siteDir, 'llms.txt'), llmsTxt());
+
+  checkNoStrays();
 
   return { bytes: Buffer.byteLength(html) };
 }

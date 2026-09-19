@@ -22,11 +22,47 @@ The domain is `semantic-sounds.com`. The author owns it already.
 the Open Graph tags and `sitemap.xml` all read that one constant.
 `robots.txt` is written by hand, so it holds the origin literally.
 
-One thing still needs the author:
+### Deploy state
 
-- **The first deploy.** `npm run site:deploy` creates the Cloudflare
-  Pages project. After that, point the domain at it once in the
-  dashboard, under Workers & Pages -> semantic-sounds -> Custom domains.
+The site is live on the Worker URL and waits on one step.
+
+| Part | State |
+|---|---|
+| Worker `semantic-sounds` | deployed, serving `site/` |
+| Worker URL | https://semantic-sounds.carmer-andrew.workers.dev |
+| Cloudflare zone | created, **pending** |
+| Custom domains | attached, apex and `www` |
+| Nameservers at name.com | **not changed yet** |
+
+**The one step left.** Point the domain at Cloudflare. At name.com, set
+the nameservers of `semantic-sounds.com` to:
+
+```
+jerry.ns.cloudflare.com
+susan.ns.cloudflare.com
+```
+
+The domain had no DNS records at all, so nothing breaks. The zone goes
+active within a few hours, and the apex and `www` then serve the site.
+
+### It is a Worker, not a Pages project
+
+Cloudflare folded Pages into Workers. wrangler 4 refuses to create a new
+Pages project without `--force` and says to use Workers for anything new.
+So `wrangler.toml` declares `[assets]` and the deploy is `wrangler
+deploy`. Workers assets read `site/_headers` the same way Pages did;
+this was checked against the live site.
+
+### A stray file did go public once
+
+A shell ran with `site/` as its working directory. Local tooling wrote
+state into it, and the next deploy uploaded that state to the public
+site. The files held session state, not secrets, and the next deploy
+removed them.
+
+`checkNoStrays()` in `scripts/build-site.ts` now fails the build on any
+file the build did not make. A deploy uploads the whole directory, so
+the build is the only thing allowed to fill it.
 
 Deliberately left out, and why:
 

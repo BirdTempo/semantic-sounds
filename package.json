@@ -51,7 +51,7 @@
     "review": "tsx scripts/review/main.ts",
     "site:build": "tsx scripts/build-site.ts",
     "site:serve": "npx --yes serve site",
-    "site:deploy": "npx wrangler pages deploy site --project-name semantic-sounds"
+    "site:deploy": "npm run site:build && npx wrangler deploy"
   },
   "devDependencies": {
     "@anthropic-ai/sdk": "^0.125.0",

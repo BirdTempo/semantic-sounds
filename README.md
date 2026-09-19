@@ -94,7 +94,7 @@ file. Nothing plays until a click.
 ```bash
 npm run site:build   # writes site/index.html, sitemap.xml and llms.txt
 npm run site:serve   # look at it locally
-npm run site:deploy  # Cloudflare Pages
+npm run site:deploy  # Cloudflare Worker with static assets
 ```
 
 The page carries the search engine, the renderer and all 1090 patches

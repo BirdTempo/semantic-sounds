@@ -1,14 +1,24 @@
-# Cloudflare Pages project for the Semantic Sounds site.
+# Cloudflare Worker for semantic-sounds.com.
 #
-# The site is one static directory. Build it, then deploy it:
+# The site is one static directory, `site/`. Build it, then deploy it:
 #
 #   npm run site:build
 #   npm run site:deploy
 #
-# The first deploy creates the project. After that, point the domain at it
-# once in the Cloudflare dashboard, under Workers & Pages -> semantic-sounds
-# -> Custom domains. No domain is registered yet; see TODO.md.
+# This is a Worker with static assets, not a Pages project. Cloudflare
+# folded Pages into Workers, and wrangler 4 refuses to create a new Pages
+# project without --force. Workers assets read `site/_headers` the same
+# way Pages did, so nothing about the site changed.
+#
+# The Worker serves assets only. It has no code entry point, so every
+# request is answered from the edge cache with no compute.
 
 name = "semantic-sounds"
-pages_build_output_dir = "site"
 compatibility_date = "2026-09-19"
+
+[assets]
+directory = "./site"
+# The site is one page. Anything else is a real 404, not a route for a
+# client-side router to catch.
+not_found_handling = "none"
+
