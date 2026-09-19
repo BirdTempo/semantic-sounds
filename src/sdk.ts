@@ -13,14 +13,16 @@ import {
   renderPatch,
   patchDurationMs,
   encodeWav,
+  tweak as tweakPatch,
   RENDER_SAMPLE_RATE,
   type SearchOptions,
   type SoundEntry,
   type SoundMatch,
   type Patch,
+  type Tweak,
 } from './library/index';
 
-export type { SoundEntry, SoundMatch, SearchOptions, Patch };
+export type { SoundEntry, SoundMatch, SearchOptions, Patch, Tweak };
 
 /** Where a patch came from. */
 export type SoundOrigin = 'curated' | 'generated';
@@ -73,6 +75,15 @@ export type SemanticSounds = {
   wav(source: SoundEntry | Patch, sampleRate?: number): Uint8Array;
   /** How long an entry or a bare patch plays, in milliseconds. */
   durationMs(source: SoundEntry | Patch): number;
+  /**
+   * A changed copy of a patch: `semitones` up or down, `stretch` longer or
+   * shorter. Pitch and length move on their own, because this writes a new
+   * patch rather than change how one plays.
+   *
+   *   const lower = sounds.tweak(entry, { semitones: -5 });
+   *   sounds.wav(lower);
+   */
+  tweak(source: SoundEntry | Patch, options: Tweak): Patch;
   /**
    * Answer a phrase. The curated set answers first. When nothing scores
    * high enough and a `functionUrl` is set, the service writes a new
@@ -155,6 +166,10 @@ export function createSemanticSounds(options: SemanticSoundsOptions = {}): Seman
 
     durationMs(source) {
       return patchDurationMs(toPatch(source));
+    },
+
+    tweak(source, options) {
+      return tweakPatch(toPatch(source), options);
     },
 
     async resolve(phrase) {

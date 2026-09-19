@@ -102,6 +102,28 @@ describe('createSemanticSounds', () => {
     expect(api.durationMs(BARE_PATCH)).toBe(135);
   });
 
+  it('tweaks an entry or a bare patch, and leaves the original alone', () => {
+    const api = createSemanticSounds();
+    const entry = api.get('upload-complete')!;
+    const before = JSON.stringify(entry.patch);
+
+    const lower = api.tweak(entry, { semitones: -12 });
+    expect(lower).not.toEqual(entry.patch);
+    expect(JSON.stringify(entry.patch)).toBe(before);
+
+    const longer = api.tweak(BARE_PATCH, { stretch: 2 });
+    expect(api.durationMs(longer)).toBeCloseTo(api.durationMs(BARE_PATCH) * 2, 6);
+  });
+
+  it('renders and encodes a tweaked patch, so the file is the changed sound', () => {
+    const api = createSemanticSounds();
+    const entry = api.get('upload-complete')!;
+    const slow = api.tweak(entry, { stretch: 2 });
+    // Twice as long is about twice the samples, and so about twice the file.
+    expect(api.render(slow).length).toBeCloseTo(api.render(entry).length * 2, -1);
+    expect(api.wav(slow).byteLength).toBeGreaterThan(api.wav(entry).byteLength);
+  });
+
   it('resolves an owned phrase from the curated set', async () => {
     const api = createSemanticSounds();
     const result = await api.resolve('the file finished uploading');
