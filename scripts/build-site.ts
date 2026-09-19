@@ -21,7 +21,7 @@ const siteDir = join(root, 'site');
  * The canonical link, the Open Graph tags, the sitemap and robots.txt all
  * read it. No domain is registered yet; see TODO.md.
  */
-export const ORIGIN = 'https://semanticsounds.com';
+export const ORIGIN = 'https://semantic-sounds.com';
 
 export const TITLE = 'Semantic Sounds';
 export const TAGLINE = 'Ask for a sound the way you would say it.';

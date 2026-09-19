@@ -137,14 +137,15 @@ agent that cannot run the MCP server can still read the set.
 
 ## 9. The domain
 
-**Not bought here.** A domain costs money every year and the choice is
-the author's. The build takes one `ORIGIN` constant, and `sitemap.xml`,
-`robots.txt`, the canonical link and the Open Graph tags all read it.
-Changing the domain is one line.
+`semantic-sounds.com`. The author owns it already, so nothing is
+bought here.
 
-The default is `https://semanticsounds.com`, to match
-`semanticicons.com`. Nothing is registered, and the deploy step stays
-manual.
+The build takes one `ORIGIN` constant, and `sitemap.xml`, the canonical
+link and the Open Graph tags all read it. `robots.txt` is written by
+hand and holds the origin literally.
+
+The deploy step stays manual. A deploy is outward-facing, so it needs
+the author's word.
 
 ## 10. Testing strategy
 

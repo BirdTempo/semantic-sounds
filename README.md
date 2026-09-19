@@ -101,8 +101,8 @@ The page carries the search engine, the renderer and all 1090 patches
 inline: 89 KB gzipped. It makes no request of its own, so `_headers`
 sets `connect-src 'none'`.
 
-No domain is registered. `ORIGIN` in `scripts/build-site.ts` is the one
-line to change.
+The site is [semantic-sounds.com](https://semantic-sounds.com).
+`ORIGIN` in `scripts/build-site.ts` is the one line that sets it.
 
 ## Development
 
