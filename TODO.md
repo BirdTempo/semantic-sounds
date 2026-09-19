@@ -36,13 +36,25 @@ The site is live at https://semantic-sounds.com.
 
 The domain held no DNS records before the move, so nothing was lost.
 
-Zone settings, set at deploy time:
+Zone settings:
 
 - `always_use_https: on`
 - `min_tls_version: 1.2`
 - HSTS on, `max-age` one year, **`includeSubdomains` off**. A new
   subdomain must not inherit a rule that a browser caches for a year.
   Turn it on when every subdomain is known to serve HTTPS.
+
+The certificate is a Let's Encrypt universal pack, issued 2026-09-19.
+It took about 40 minutes from zone activation. Two Google "advanced"
+packs stay at `pending_validation`. They are redundant and harmless, so
+they are left alone.
+
+**Order matters: the certificate first, the redirect second.** Always
+Use HTTPS was switched on while the certificate was still issuing. That
+turned a site that worked on HTTP into a site that worked on neither,
+because HTTP then answered 301 to a TLS endpoint that refused the
+handshake. Both settings were switched off until the certificate was
+active, then back on.
 
 To publish a change: `npm run site:deploy`. It builds first, on purpose.
 
