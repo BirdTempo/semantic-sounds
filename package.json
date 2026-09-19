@@ -17,13 +17,30 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
     },
+    "./sdk": {
+      "types": "./dist/sdk.d.ts",
+      "import": "./dist/sdk.js"
+    },
+    "./mcp": {
+      "types": "./dist/mcp/server.d.ts",
+      "import": "./dist/mcp/server.js"
+    },
+    "./mcp/stdio": {
+      "types": "./dist/mcp/stdio.d.ts",
+      "import": "./dist/mcp/stdio.js"
+    },
     "./package.json": "./package.json"
   },
+  "bin": {
+    "semantic-sounds-mcp": "./dist/mcp/stdio.js"
+  },
   "files": [
-    "dist"
+    "dist",
+    "LICENSE",
+    "README.md"
   ],
   "scripts": {
-    "build": "tsup src/library/index.ts --format esm --dts --clean --out-dir dist",
+    "build": "tsup",
     "test": "vitest run",
     "typecheck": "tsc --noEmit",
     "sounds:build": "tsx scripts/build-library.ts",

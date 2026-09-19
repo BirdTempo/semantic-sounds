@@ -1,0 +1,40 @@
+{
+  "name": "semantic-sounds-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for Semantic Sounds. Gives a coding agent five tools so it picks a real sound from a curated set instead of inventing an audio file name.",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "sound",
+    "audio",
+    "synthesis",
+    "semantic-search"
+  ],
+  "license": "MIT",
+  "author": "BirdTempo",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BirdTempo/semantic-sounds.git",
+    "directory": "packages/semantic-sounds-mcp"
+  },
+  "bugs": {
+    "url": "https://github.com/BirdTempo/semantic-sounds/issues"
+  },
+  "type": "module",
+  "bin": {
+    "semantic-sounds-mcp": "./bin.mjs"
+  },
+  "files": [
+    "bin.mjs",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "semantic-sounds": "^0.1.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
