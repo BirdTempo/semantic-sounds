@@ -88,6 +88,37 @@ Deliberately left out, and why:
 - **No generation from the page.** That needs a key in the browser.
   Sub-project 5 puts it behind an endpoint instead.
 
+## React Native
+
+Built. `semantic-sounds/native`, `semantic-sounds/native/react`, and the
+`semantic-sounds-pick` binary.
+
+What was verified, and how:
+
+- The library core runs on **real Hermes** (the React Native engine):
+  1090 sounds, search, render, WAV encode and the transforms. The
+  stemmer calls `String.normalize`, and Hermes decomposes correctly, so
+  accent folding works.
+- The native module runs in a **bare VM** with no `window`, `document`,
+  `AudioContext`, `process`, `Buffer`, `btoa` or `require`.
+- `toBase64` is compared against Node's `Buffer` on every tail length,
+  every single byte value, and a real rendered WAV file.
+
+The standalone `hermes-engine-cli` binaries, at both 0.11 and 0.12, are
+built without async support and reject the module. That is a limit of
+those binaries, not of React Native: Metro's Babel preset transforms
+async for Hermes in every RN package. Do not read a failure from that
+CLI as a fault in this code. The core was tested on it with no async and
+passed.
+
+Not done, and not needed yet:
+
+- No adapter package for a specific audio library. The four functions in
+  `NativeOptions` are the whole surface, and an adapter would be a
+  dependency on somebody's release schedule. Revisit if the same four
+  lines get copied into many apps.
+- No `expo-av` deprecation tracking. The README shows `expo-audio`.
+
 ## Publication
 
 Both names were free on npm on 2026-09-19: `npm view semantic-sounds`

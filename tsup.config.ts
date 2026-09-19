@@ -10,6 +10,9 @@ export default defineConfig({
     sdk: 'src/sdk.ts',
     'mcp/server': 'src/mcp/server.ts',
     'mcp/stdio': 'src/mcp/stdio.ts',
+    native: 'src/native.ts',
+    'native-hook': 'src/native-hook.ts',
+    pick: 'src/pick.ts',
   },
   format: ['esm'],
   dts: true,
@@ -17,4 +20,8 @@ export default defineConfig({
   outDir: 'dist',
   // The stdio entry starts with a shebang, and npm needs the file to run.
   shims: false,
+  // React is a peer dependency and an optional one. It must never be
+  // pulled into the bundle: an app that imports only `semantic-sounds/native`
+  // has no React in its dependency graph through this package.
+  external: ['react'],
 });

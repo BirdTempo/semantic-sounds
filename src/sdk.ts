@@ -54,6 +54,19 @@ export type SemanticSoundsOptions = {
   minScore?: number;
   /** Injected for tests. Defaults to the global `fetch`. */
   fetchImpl?: typeof fetch;
+  /**
+   * The set to search and render. Defaults to all 1090 curated sounds.
+   *
+   * Pass a subset when the whole set is too much to ship, for example in a
+   * mobile app bundle. `semantic-sounds-pick` writes one:
+   *
+   *   npx semantic-sounds-pick upload-complete coin-pickup --out src/sounds.ts
+   *
+   * Importing a subset does not shrink anything on its own. A bundler
+   * cannot drop entries from an array it does not understand, so the file
+   * the generator writes must be the only sound module the app imports.
+   */
+  sounds?: readonly SoundEntry[];
 };
 
 export type SemanticSounds = {
@@ -100,7 +113,7 @@ function toPatch(source: SoundEntry | Patch): Patch {
 
 export function createSemanticSounds(options: SemanticSoundsOptions = {}): SemanticSounds {
   const { functionUrl, apiKey, minScore = LOCAL_MIN_SCORE, fetchImpl } = options;
-  const entries = sounds as SoundEntry[];
+  const entries = (options.sounds ?? sounds) as SoundEntry[];
 
   // The index costs a moment to build over 1090 sounds, so build it once
   // and only when the first search asks for it.

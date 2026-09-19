@@ -29,10 +29,19 @@
       "types": "./dist/mcp/stdio.d.ts",
       "import": "./dist/mcp/stdio.js"
     },
+    "./native": {
+      "types": "./dist/native.d.ts",
+      "import": "./dist/native.js"
+    },
+    "./native/react": {
+      "types": "./dist/native-hook.d.ts",
+      "import": "./dist/native-hook.js"
+    },
     "./package.json": "./package.json"
   },
   "bin": {
-    "semantic-sounds-mcp": "./dist/mcp/stdio.js"
+    "semantic-sounds-mcp": "./dist/mcp/stdio.js",
+    "semantic-sounds-pick": "./dist/pick.js"
   },
   "files": [
     "dist",
@@ -56,8 +65,10 @@
   "devDependencies": {
     "@anthropic-ai/sdk": "^0.125.0",
     "@types/node": "^26.5.1",
+    "@types/react": "^19.3.0",
     "esbuild": "^0.25.12",
     "happy-dom": "^20.14.5",
+    "react": "^19.3.0",
     "tsup": "^8.0.0",
     "tsx": "^4.16.0",
     "typescript": "^5.5.0",
@@ -74,5 +85,13 @@
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.30.0",
     "zod": "^3.25.76"
+  },
+  "peerDependencies": {
+    "react": ">=18"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    }
   }
 }

@@ -137,6 +137,75 @@ of drifting as the tone slides under a fixed cutoff. It leaves a noise
 layer alone, because a hiss has no key. Every function returns a new
 patch and changes nothing.
 
+## React Native
+
+React Native has no Web Audio API, so a patch cannot go straight to the
+speaker. The path is `patch -> render -> wav -> file -> a native player`.
+Everything left of the file is this library and needs no platform API.
+
+`semantic-sounds/native` asks for four functions rather than depend on
+one audio package:
+
+```ts
+import { createNativeSounds } from 'semantic-sounds/native';
+import * as FileSystem from 'expo-file-system';
+import { createAudioPlayer } from 'expo-audio';
+
+const sounds = createNativeSounds({
+  cacheDir: FileSystem.cacheDirectory + 'semantic-sounds/',
+  writeFile: (uri, base64) => FileSystem.writeAsStringAsync(uri, base64, { encoding: 'base64' }),
+  fileExists: async (uri) => (await FileSystem.getInfoAsync(uri)).exists,
+  playFile: async (uri) => { createAudioPlayer({ uri }).play(); },
+});
+
+await sounds.play('upload-complete');
+await sounds.play('coin-pickup', { semitones: -5 });   // its own cached file
+```
+
+`react-native-fs` and `react-native-sound` fit the same four slots.
+
+A sound is rendered once and kept. The second play reads the file that is
+already there, and two plays in the same frame render once.
+
+The React hook is a separate entry point, so an app that plays sounds
+outside a component never loads React through this package:
+
+```tsx
+import { useSound, useSounds } from 'semantic-sounds/native/react';
+
+const ok = useSound(sounds, 'the upload finished');   // cached on mount
+<Pressable onPress={ok.play} />
+```
+
+### Ship only the sounds you use
+
+All 1090 patches are 588 KB of JSON. That is fine for a web page and
+heavy for an app bundle. A runtime filter does not help: a bundler
+cannot drop entries from an array, so the whole set still ships.
+
+`semantic-sounds-pick` writes a smaller module, which is the only thing
+that does help:
+
+```bash
+npx semantic-sounds-pick tap "a dog barking" "my battery is low" --out src/sounds.ts
+```
+
+```ts
+import { sounds } from './sounds';   // 2.8 KB, not 588 KB
+const api = createNativeSounds({ sounds, ...deps });
+```
+
+It takes exact names and plain prose, and it fails rather than drop a
+request it could not match. Import the generated module and not `sounds`
+from this package, or the whole set ships as well.
+
+### Two things to know
+
+- **iOS silent switch.** A native player can ignore it with an audio
+  session category. Web Audio in Safari cannot, so a page is silenced.
+- **Async.** This module uses `async`/`await`. Metro's Babel preset
+  transforms it for Hermes, as it does for every React Native package.
+
 ## Development
 
 ```bash
