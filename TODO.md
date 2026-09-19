@@ -5,13 +5,38 @@ letting deferred work rot into an undocumented gap.
 
 ## Deferred to later sub-projects
 
-- The SDK, MCP server, and the `semantic-sounds-mcp` wrapper package
-  (sub-project 4). `npm view semantic-sounds` and `npm view
-  semantic-sounds-mcp` were both free on 2026-09-15. Publishing target:
-  the BirdTempo GitHub and npm orgs.
 - Generation for a miss, using `claude-opus-5` through structured
-  outputs, checked by `checkEntry` (sub-project 5).
+  outputs, checked by `checkEntry` (sub-project 5). The SDK and the MCP
+  server already call it: set `functionUrl`, or
+  `SEMANTIC_SOUNDS_FUNCTION_URL`. The contract is one POST of
+  `{ phrase }` and one reply of `{ patch }`, or `{ error }` with a
+  non-2xx status. Nothing in sub-project 5 needs to change the client.
 - The public static site (sub-project 6).
+
+## Publication
+
+Both names were free on npm on 2026-09-19: `npm view semantic-sounds`
+and `npm view semantic-sounds-mcp` each gave a 404. The target is the
+BirdTempo GitHub and npm orgs.
+
+`npm publish` is deliberately not run from this repository. A publish
+cannot be withdrawn, so it stays a manual step for the author. Before
+it, in order:
+
+1. `npm run build`, then check that `dist/index.js`, `dist/sdk.js`,
+   `dist/mcp/server.js` and `dist/mcp/stdio.js` all exist. The names in
+   `tsup.config.ts` must keep matching the `exports` map.
+2. `npm publish` from the repository root.
+3. `npm publish` from `packages/semantic-sounds-mcp`. It depends on
+   `semantic-sounds@^0.1.0`, so the root package must go first.
+
+Two tests in `src/mcp/server.test.ts` guard the release, so neither
+step above needs a person to remember it:
+
+- The two `version` fields and `SERVER_VERSION` in `src/mcp/server.ts`
+  must agree, and the wrapper must depend on the root version.
+- Every subpath in the `exports` map must have a matching entry name in
+  `tsup.config.ts`, and the `bin` must point at the stdio entry.
 
 ## Retrieval at 1090 sounds
 

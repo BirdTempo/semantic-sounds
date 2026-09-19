@@ -23,6 +23,68 @@ See `docs/sound-style-guide.md` for the contract every sound follows,
 and `docs/superpowers/specs/2026-09-15-sound-contract-and-renderer-design.md`
 for the full design.
 
+## SDK
+
+`createSemanticSounds` holds the index, the renderer and the WAV encoder
+behind one object, so you assemble nothing.
+
+```ts
+import { createSemanticSounds } from 'semantic-sounds/sdk';
+
+const sounds = createSemanticSounds();
+
+sounds.find('my washing machine finished');   // the washer-done entry
+sounds.search('a dog barking', { limit: 3 }); // ranked matches with scores
+sounds.get('upload-complete');                // one entry by its stable name
+sounds.categories();                          // 26 names, sorted
+
+const entry = sounds.get('upload-complete')!;
+sounds.durationMs(entry);   // 151
+sounds.render(entry);       // Float32Array, mono, 48000 Hz
+sounds.wav(entry);          // Uint8Array, a playable .wav file
+```
+
+`resolve` is the one call to make when you want a sound for an idea and
+do not care where it comes from:
+
+```ts
+const answer = await sounds.resolve('the upload finished');
+answer.origin;   // 'curated'
+answer.patch;    // the patch to keep and render
+```
+
+The curated set answers first. When nothing scores high enough and a
+`functionUrl` is configured, the service writes a new patch and `origin`
+reports `generated`. That endpoint is sub-project 5 and is not built
+yet. Without it, `resolve` throws a message that names the phrase.
+
+The index builds once, and only when the first search asks for it.
+
+## MCP server
+
+```bash
+claude mcp add semantic-sounds -- npx -y semantic-sounds-mcp
+```
+
+Five tools: `search_sounds`, `get_sound`, `list_categories`,
+`list_category` and `resolve_sound`.
+
+Every tool that answers with a sound gives its patch as JSON, with the
+`renderPatch` lines under it. Set `preview: true` on `get_sound` or
+`resolve_sound` to hear it: that adds a WAV audio block, rendered at
+24000 Hz to keep it small. The patch in the same result always describes
+the full 48000 Hz render.
+
+Three environment variables configure generation, and all three are
+optional. Without them the server stays offline and answers from the
+curated set only.
+
+| Variable | Meaning |
+|---|---|
+| `SEMANTIC_SOUNDS_FUNCTION_URL` | The generation endpoint. |
+| `SEMANTIC_SOUNDS_API_KEY` | The bearer token for that endpoint. |
+| `SEMANTIC_SOUNDS_MIN_SCORE` | The curated score needed to skip the model. |
+
 ## Development
 
 ```bash

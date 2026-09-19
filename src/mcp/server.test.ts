@@ -1,10 +1,23 @@
 import { describe, it, expect, beforeAll, afterAll } from 'vitest';
+import { readFileSync } from 'node:fs';
 import { Client } from '@modelcontextprotocol/sdk/client/index.js';
 import { InMemoryTransport } from '@modelcontextprotocol/sdk/inMemory.js';
-import { createServer, fromEnvironment, SERVER_NAME, PREVIEW_SAMPLE_RATE } from './server';
+import { createServer, fromEnvironment, SERVER_NAME, SERVER_VERSION, PREVIEW_SAMPLE_RATE } from './server';
 import { createSemanticSounds, type SemanticSounds } from '../sdk';
 
 type Block = { type: string; text?: string; data?: string; mimeType?: string };
+
+type Manifest = {
+  version: string;
+  exports: Record<string, string | { import: string }>;
+  bin: Record<string, string>;
+  dependencies: Record<string, string>;
+};
+
+/** A package manifest, read at test time so it cannot drift from the code. */
+function readJson(relative: string): Manifest {
+  return JSON.parse(readFileSync(new URL(relative, import.meta.url), 'utf8')) as Manifest;
+}
 
 const api = createSemanticSounds();
 let client: Client;
@@ -171,6 +184,32 @@ describe('the MCP server', () => {
 
   it('names itself', () => {
     expect(SERVER_NAME).toBe('semantic-sounds');
+  });
+
+  it('reports the version the two packages publish', () => {
+    // A client shows this string. If it drifts from the published
+    // version, a bug report names a release that does not hold the code.
+    // The wrapper package must agree too: it depends on this one.
+    const root = readJson('../../package.json');
+    const wrapper = readJson('../../packages/semantic-sounds-mcp/package.json');
+    expect(SERVER_VERSION).toBe(root.version);
+    expect(wrapper.version).toBe(root.version);
+    expect(wrapper.dependencies['semantic-sounds']).toBe(`^${root.version}`);
+  });
+
+  it('publishes every built entry that the exports map names', () => {
+    const root = readJson('../../package.json');
+    const config = readFileSync(new URL('../../tsup.config.ts', import.meta.url), 'utf8');
+    for (const [subpath, target] of Object.entries(root.exports)) {
+      if (typeof target !== 'object' || target === null) continue;
+      // "./dist/mcp/server.js" -> the entry name tsup must produce.
+      const entry = (target as { import: string }).import.replace('./dist/', '').replace('.js', '');
+      // Drop the quotes, so a key written as 'mcp/server' reads the same
+      // as one written as index.
+      const keys = config.replace(/'/g, '');
+      expect(keys, `exports "${subpath}" needs a tsup entry named "${entry}"`).toContain(`${entry}:`);
+    }
+    expect(root.bin['semantic-sounds-mcp']).toBe('./dist/mcp/stdio.js');
   });
 });
 
