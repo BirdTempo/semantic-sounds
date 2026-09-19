@@ -103,21 +103,6 @@ other. Because a patch is data, the page writes a new patch and renders
 it, so pitch and length move on their own -- and the file you download is
 the sound you heard.
 
-## Transforms
-
-The same transforms are in the library, for any caller:
-
-```ts
-import { transpose, stretch, tweak } from 'semantic-sounds';
-
-transpose(patch, 12);            // an octave up, same length
-stretch(patch, 2);               // twice as long, same pitch
-tweak(patch, { semitones: -5, stretch: 0.5 });
-```
-
-`transpose` moves the filter with the tone, so the timbre holds, and
-leaves a noise layer alone, because a hiss has no key.
-
 ```bash
 npm run site:build   # writes site/index.html, sitemap.xml and llms.txt
 npm run site:serve   # look at it locally
@@ -134,6 +119,23 @@ The site runs as a Cloudflare Worker with static assets, at
 
 `site:deploy` builds before it deploys. Deploying a stale page is worse
 than not deploying, because nothing says the page is old.
+
+## Transforms
+
+The same transforms the page uses are in the library, for any caller:
+
+```ts
+import { transpose, stretch, tweak } from 'semantic-sounds';
+
+transpose(patch, 12);      // an octave up, same length
+stretch(patch, 2);         // twice as long, same pitch
+tweak(patch, { semitones: -5, stretch: 0.5 });
+```
+
+`transpose` moves the filter with the tone, so the timbre holds instead
+of drifting as the tone slides under a fixed cutoff. It leaves a noise
+layer alone, because a hiss has no key. Every function returns a new
+patch and changes nothing.
 
 ## Development
 
