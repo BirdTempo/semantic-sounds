@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# The whole set as plain text, for a reader that cannot run the MCP server.
+# https://semanticsounds.com/llms.txt
+
+Sitemap: https://semanticsounds.com/sitemap.xml

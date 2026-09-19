@@ -1,0 +1,14 @@
+# Cloudflare Pages project for the Semantic Sounds site.
+#
+# The site is one static directory. Build it, then deploy it:
+#
+#   npm run site:build
+#   npm run site:deploy
+#
+# The first deploy creates the project. After that, point the domain at it
+# once in the Cloudflare dashboard, under Workers & Pages -> semantic-sounds
+# -> Custom domains. No domain is registered yet; see TODO.md.
+
+name = "semantic-sounds"
+pages_build_output_dir = "site"
+compatibility_date = "2026-09-19"

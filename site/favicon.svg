@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- A decaying transient: what most of this set looks like. -->
+  <rect width="32" height="32" rx="7" fill="#0e1116"/>
+  <g stroke="#7fd1c1" stroke-width="2.4" stroke-linecap="round">
+    <path d="M6 16v0"/>
+    <path d="M10.5 8.5v15"/>
+    <path d="M15 11.5v9"/>
+    <path d="M19.5 13.5v5"/>
+    <path d="M24 15v2"/>
+  </g>
+</svg>

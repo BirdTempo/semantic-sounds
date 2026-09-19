@@ -6,3 +6,8 @@ web/dist/
 .omc/
 scripts/review/page/library-bundle.js
 scripts/review/session.json
+
+# The page is generated. The build script and the static files are committed.
+site/index.html
+site/sitemap.xml
+site/llms.txt

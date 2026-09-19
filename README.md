@@ -85,6 +85,25 @@ curated set only.
 | `SEMANTIC_SOUNDS_API_KEY` | The bearer token for that endpoint. |
 | `SEMANTIC_SOUNDS_MIN_SCORE` | The curated score needed to skip the model. |
 
+## The site
+
+One static page holds the whole set. A person types prose, sees a
+waveform, clicks it, and takes the sound away as a patch or as a WAV
+file. Nothing plays until a click.
+
+```bash
+npm run site:build   # writes site/index.html, sitemap.xml and llms.txt
+npm run site:serve   # look at it locally
+npm run site:deploy  # Cloudflare Pages
+```
+
+The page carries the search engine, the renderer and all 1090 patches
+inline: 89 KB gzipped. It makes no request of its own, so `_headers`
+sets `connect-src 'none'`.
+
+No domain is registered. `ORIGIN` in `scripts/build-site.ts` is the one
+line to change.
+
 ## Development
 
 ```bash

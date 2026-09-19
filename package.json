@@ -48,12 +48,16 @@
     "probe": "tsx scripts/prose-probe.ts",
     "tune": "tsx scripts/tune-thresholds.ts",
     "dev:web": "vite --config web/vite.config.ts",
-    "review": "tsx scripts/review/main.ts"
+    "review": "tsx scripts/review/main.ts",
+    "site:build": "tsx scripts/build-site.ts",
+    "site:serve": "npx --yes serve site",
+    "site:deploy": "npx wrangler pages deploy site --project-name semantic-sounds"
   },
   "devDependencies": {
     "@anthropic-ai/sdk": "^0.125.0",
     "@types/node": "^26.5.1",
     "esbuild": "^0.25.12",
+    "happy-dom": "^20.14.5",
     "tsup": "^8.0.0",
     "tsx": "^4.16.0",
     "typescript": "^5.5.0",

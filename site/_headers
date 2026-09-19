@@ -1,0 +1,21 @@
+# Cloudflare Pages reads this file. One rule set per path pattern.
+
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: SAMEORIGIN
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
+  # The page holds the whole set inline and loads no script from another
+  # host. It also makes no request of its own, so connect-src is none.
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; frame-ancestors 'self'; base-uri 'self'; form-action 'none'
+
+# The page is rebuilt whenever the set changes, so it must not go stale.
+# Cloudflare still serves it from cache and revalidates.
+/
+  Cache-Control: public, max-age=0, must-revalidate
+
+/index.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/favicon.svg
+  Cache-Control: public, max-age=604800
