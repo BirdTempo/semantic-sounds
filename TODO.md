@@ -24,26 +24,27 @@ the Open Graph tags and `sitemap.xml` all read that one constant.
 
 ### Deploy state
 
-The site is live on the Worker URL and waits on one step.
+The site is live at https://semantic-sounds.com.
 
 | Part | State |
 |---|---|
 | Worker `semantic-sounds` | deployed, serving `site/` |
 | Worker URL | https://semantic-sounds.carmer-andrew.workers.dev |
-| Cloudflare zone | created, **pending** |
-| Custom domains | attached, apex and `www` |
-| Nameservers at name.com | **not changed yet** |
+| Cloudflare zone | active since 2026-09-19 |
+| Nameservers | `jerry.ns.cloudflare.com`, `susan.ns.cloudflare.com` |
+| Custom domains | apex and `www`, both proxied |
 
-**The one step left.** Point the domain at Cloudflare. At name.com, set
-the nameservers of `semantic-sounds.com` to:
+The domain held no DNS records before the move, so nothing was lost.
 
-```
-jerry.ns.cloudflare.com
-susan.ns.cloudflare.com
-```
+Zone settings, set at deploy time:
 
-The domain had no DNS records at all, so nothing breaks. The zone goes
-active within a few hours, and the apex and `www` then serve the site.
+- `always_use_https: on`
+- `min_tls_version: 1.2`
+- HSTS on, `max-age` one year, **`includeSubdomains` off**. A new
+  subdomain must not inherit a rule that a browser caches for a year.
+  Turn it on when every subdomain is known to serve HTTPS.
+
+To publish a change: `npm run site:deploy`. It builds first, on purpose.
 
 ### It is a Worker, not a Pages project
 

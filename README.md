@@ -1,5 +1,7 @@
 # Semantic Sounds
 
+**[semantic-sounds.com](https://semantic-sounds.com)**
+
 A curated set of 1090 short sounds, found by plain prose. A sound is
 data, not an audio file: each entry is a small JSON "patch" of
 synthesis settings (oscillators, noise, envelopes, filters, pitch
@@ -101,8 +103,12 @@ The page carries the search engine, the renderer and all 1090 patches
 inline: 89 KB gzipped. It makes no request of its own, so `_headers`
 sets `connect-src 'none'`.
 
-The site is [semantic-sounds.com](https://semantic-sounds.com).
-`ORIGIN` in `scripts/build-site.ts` is the one line that sets it.
+The site runs as a Cloudflare Worker with static assets, at
+[semantic-sounds.com](https://semantic-sounds.com). `ORIGIN` in
+`scripts/build-site.ts` is the one line that sets the domain.
+
+`site:deploy` builds before it deploys. Deploying a stale page is worse
+than not deploying, because nothing says the page is old.
 
 ## Development
 
