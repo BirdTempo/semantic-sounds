@@ -93,6 +93,31 @@ One static page holds the whole set. A person types prose, sees a
 waveform, clicks it, and takes the sound away as a patch or as a WAV
 file. Nothing plays until a click.
 
+The page also lets a person change a sound before they take it: **pitch**
+in semitones, **speed**, and **loop** with a gap, to hear how a sound
+feels when it fires again and again.
+
+These change the patch, not the playback. A player that shifts pitch by
+running a buffer faster moves time with it and cannot do one without the
+other. Because a patch is data, the page writes a new patch and renders
+it, so pitch and length move on their own -- and the file you download is
+the sound you heard.
+
+## Transforms
+
+The same transforms are in the library, for any caller:
+
+```ts
+import { transpose, stretch, tweak } from 'semantic-sounds';
+
+transpose(patch, 12);            // an octave up, same length
+stretch(patch, 2);               // twice as long, same pitch
+tweak(patch, { semitones: -5, stretch: 0.5 });
+```
+
+`transpose` moves the filter with the tone, so the timbre holds, and
+leaves a noise layer alone, because a hiss has no key.
+
 ```bash
 npm run site:build   # writes site/index.html, sitemap.xml and llms.txt
 npm run site:serve   # look at it locally
@@ -100,7 +125,7 @@ npm run site:deploy  # Cloudflare Worker with static assets
 ```
 
 The page carries the search engine, the renderer and all 1090 patches
-inline: 89 KB gzipped. It makes no request of its own, so `_headers`
+inline: 96 KB gzipped. It makes no request of its own, so `_headers`
 sets `connect-src 'none'`.
 
 The site runs as a Cloudflare Worker with static assets, at

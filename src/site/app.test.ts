@@ -5,7 +5,7 @@
 // TypeScript source in its place. So an id the page renames and the script
 // still looks for fails here, which is the bug this pairing is most likely
 // to have.
-import { describe, it, expect, beforeAll, vi } from 'vitest';
+import { describe, it, expect, beforeAll, beforeEach, vi } from 'vitest';
 import { readFileSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -198,5 +198,185 @@ describe('the page script against the real markup', () => {
   it('observes every tile it draws, so none is left blank', () => {
     expect(observed.length).toBeGreaterThanOrEqual(tiles().length);
     observed = [];
+  });
+});
+
+describe('the pitch, speed and loop controls', () => {
+  const setRange = (id: string, value: string): void => {
+    const input = el<HTMLInputElement>(id);
+    input.value = value;
+    input.dispatchEvent(new Event('input'));
+    input.dispatchEvent(new Event('change'));
+  };
+
+  const firstTile = (): HTMLElement => {
+    const box = el<HTMLInputElement>('q');
+    box.value = 'a coin';
+    box.dispatchEvent(new Event('input'));
+    return tiles()[0]!;
+  };
+
+  // Every case starts from the default controls. Without this, one failed
+  // assertion leaves a slider moved and every later case tests the wrong
+  // thing -- which is exactly what happened when these were first written.
+  beforeEach(() => {
+    setRange('pitch', '0');
+    setRange('speed', '1');
+    el<HTMLInputElement>('gap').value = '250';
+    el<HTMLInputElement>('loop').checked = false;
+    el<HTMLInputElement>('loop').dispatchEvent(new Event('change'));
+    copied.length = 0;
+    downloaded.length = 0;
+  });
+
+  it('hides the reset button until something changes', () => {
+    setRange('pitch', '0');
+    expect(el('reset').hidden).toBe(true);
+    setRange('pitch', '5');
+    expect(el('reset').hidden).toBe(false);
+    setRange('pitch', '0');
+    expect(el('reset').hidden).toBe(true);
+  });
+
+  it('labels the pitch with a sign and the speed with a multiplier', () => {
+    setRange('pitch', '7');
+    expect(el('pitch-out').textContent).toBe('+7');
+    setRange('pitch', '-7');
+    expect(el('pitch-out').textContent).toBe('-7');
+    setRange('speed', '2');
+    expect(el('speed-out').textContent).toBe('2×');
+    setRange('pitch', '0');
+    setRange('speed', '1');
+  });
+
+  it('changes the duration a tile reports when the speed changes', () => {
+    const tile = firstTile();
+    const plain = tile.querySelector('.meta')!.textContent!;
+    setRange('speed', '0.5');
+    const slow = tiles()[0]!.querySelector('.meta')!.textContent!;
+    expect(slow).not.toBe(plain);
+    const ms = (text: string): number => Number(/(\d+) ms/.exec(text)![1]);
+    // Half speed is twice the length. One millisecond of rounding is fine.
+    expect(Math.abs(ms(slow) - ms(plain) * 2)).toBeLessThanOrEqual(1);
+    setRange('speed', '1');
+  });
+
+  it('redraws the waveform when the speed changes', () => {
+    const before = firstTile().querySelector('path')!.getAttribute('d');
+    setRange('speed', '0.5');
+    expect(tiles()[0]!.querySelector('path')!.getAttribute('d')).not.toBe(before);
+    setRange('speed', '1');
+    expect(tiles()[0]!.querySelector('path')!.getAttribute('d')).toBe(before);
+  });
+
+  it('copies the tweaked patch, so the JSON is the sound that played', async () => {
+    const tile = firstTile();
+    const original = sounds.find((s) => s.name === tile.dataset.name)!.patch;
+    copied.length = 0;
+    setRange('pitch', '12');
+
+    const copy = Array.from(tiles()[0]!.querySelectorAll<HTMLElement>('.act')).find(
+      (b) => b.textContent === 'copy patch'
+    );
+    copy?.click();
+    await vi.waitFor(() => expect(copied.length).toBe(1));
+
+    const patch = JSON.parse(copied[0]!) as typeof original;
+    expect(patch).not.toEqual(original);
+    const source = patch.layers[0]!.source;
+    const before = original.layers[0]!.source;
+    if (source.type === 'oscillator' && before.type === 'oscillator') {
+      // Twelve semitones double the frequency.
+      expect(source.freqHz).toBeCloseTo(before.freqHz * 2, 4);
+    }
+    setRange('pitch', '0');
+  });
+
+  it('names a tweaked download so two files never collide', () => {
+    const tile = firstTile();
+    const name = tile.dataset.name!;
+    downloaded.length = 0;
+
+    const wav = (): void => {
+      const button = Array.from(tiles()[0]!.querySelectorAll<HTMLElement>('.act')).find((b) => b.textContent === '.wav');
+      button?.click();
+    };
+
+    wav();
+    expect(downloaded).toContain(`${name}.wav`);
+
+    setRange('pitch', '-5');
+    wav();
+    expect(downloaded).toContain(`${name}-down5.wav`);
+
+    setRange('speed', '2');
+    wav();
+    expect(downloaded).toContain(`${name}-down5-2x.wav`);
+
+    setRange('pitch', '0');
+    setRange('speed', '1');
+  });
+
+  it('resets pitch and speed together', () => {
+    setRange('pitch', '9');
+    setRange('speed', '3');
+    el<HTMLButtonElement>('reset').click();
+    expect(el<HTMLInputElement>('pitch').value).toBe('0');
+    expect(el<HTMLInputElement>('speed').value).toBe('1');
+    expect(el('reset').hidden).toBe(true);
+  });
+
+  it('repeats while looping, and stops on a second click', async () => {
+    const tile = firstTile();
+    el<HTMLInputElement>('gap').value = '0';
+    el<HTMLInputElement>('loop').checked = true;
+    el<HTMLInputElement>('loop').dispatchEvent(new Event('change'));
+
+    const before = started.length;
+    tile.querySelector<HTMLElement>('.wave')!.click();
+    expect(started.length).toBe(before + 1);
+    expect(tiles()[0]!.classList.contains('is-looping')).toBe(true);
+    expect(el('live').textContent).toContain('looping');
+
+    // The repeat is on a timer set to the sound's own length.
+    await vi.waitFor(() => expect(started.length).toBeGreaterThan(before + 1), { timeout: 2000 });
+
+    tiles()[0]!.querySelector<HTMLElement>('.wave')!.click();
+    expect(tiles()[0]!.classList.contains('is-looping')).toBe(false);
+    expect(el('live').textContent).toContain('stopped');
+
+    const settled = started.length;
+    await new Promise((r) => setTimeout(r, 400));
+    expect(started.length).toBe(settled);
+  });
+
+  it('stops the loop when the loop switch goes off', async () => {
+    const tile = firstTile();
+    el<HTMLInputElement>('loop').checked = true;
+    el<HTMLInputElement>('loop').dispatchEvent(new Event('change'));
+    tile.querySelector<HTMLElement>('.wave')!.click();
+    expect(tiles()[0]!.classList.contains('is-looping')).toBe(true);
+
+    el<HTMLInputElement>('loop').checked = false;
+    el<HTMLInputElement>('loop').dispatchEvent(new Event('change'));
+    expect(tiles()[0]!.classList.contains('is-looping')).toBe(false);
+
+    const settled = started.length;
+    await new Promise((r) => setTimeout(r, 400));
+    expect(started.length).toBe(settled);
+  });
+
+  it('replays the last sound when Space is pressed', () => {
+    const tile = firstTile();
+    tile.querySelector<HTMLElement>('.wave')!.click();
+    const before = started.length;
+    document.body.dispatchEvent(new KeyboardEvent('keydown', { key: ' ', bubbles: true, cancelable: true }));
+    expect(started.length).toBe(before + 1);
+  });
+
+  it('does not replay when Space is typed into the search box', () => {
+    const before = started.length;
+    el<HTMLInputElement>('q').dispatchEvent(new KeyboardEvent('keydown', { key: ' ', bubbles: true, cancelable: true }));
+    expect(started.length).toBe(before);
   });
 });

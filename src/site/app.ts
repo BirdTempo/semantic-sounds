@@ -4,7 +4,7 @@
 // one file by scripts/build-site.ts. Nothing is fetched, and nothing plays
 // until a person clicks.
 import { createSemanticSounds } from '../sdk';
-import { RENDER_SAMPLE_RATE, type SoundEntry } from '../library/index';
+import { RENDER_SAMPLE_RATE, tweak, isUntweaked, type Patch, type SoundEntry } from '../library/index';
 
 const api = createSemanticSounds();
 
@@ -18,6 +18,15 @@ const volume = el<HTMLInputElement>('volume');
 const mute = el<HTMLInputElement>('mute');
 const live = el<HTMLDivElement>('live');
 
+const pitch = el<HTMLInputElement>('pitch');
+const pitchOut = el<HTMLOutputElement>('pitch-out');
+const speed = el<HTMLInputElement>('speed');
+const speedOut = el<HTMLOutputElement>('speed-out');
+const loop = el<HTMLInputElement>('loop');
+const gap = el<HTMLInputElement>('gap');
+const gapOut = el<HTMLOutputElement>('gap-out');
+const reset = el<HTMLButtonElement>('reset');
+
 const WAVE_POINTS = 200;
 const WAVE_WIDTH = 200;
 const WAVE_HEIGHT = 44;
@@ -27,6 +36,13 @@ let category = '';
 let context: AudioContext | null = null;
 let playing: HTMLElement | null = null;
 
+// The loop runs on a timer, not on the buffer's own `loop` flag. A gap
+// between repeats is the point: an interface sound is judged by how it
+// feels when it fires again, not by how it sounds joined to itself.
+let loopTimer: ReturnType<typeof setTimeout> | null = null;
+let loopName = '';
+let lastPlayed: SoundEntry | null = null;
+
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
 // ---------------------------------------------------------------- settings
@@ -34,6 +50,10 @@ const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 /**
  * The volume and the mute switch persist. A person who lands here with
  * headphones on sets them once, and the page remembers.
+ *
+ * The pitch and speed controls deliberately do not persist. A person who
+ * returns to a page where every sound is a fifth down has no way to guess
+ * why, and would judge the set on a setting they forgot.
  *
  * Every read and write is guarded: a private window can throw on the first
  * touch of localStorage, and the page must still work.
@@ -54,6 +74,36 @@ function remember(key: string, value: string): void {
   }
 }
 
+// ------------------------------------------------------------------ tweaks
+
+/** The current controls, as the library's own transform request. */
+function current(): { semitones: number; stretch: number } {
+  // The slider says speed, because that is the word a person expects.
+  // The library takes a time scale, which is its reciprocal: twice the
+  // speed is half the length.
+  return { semitones: Number(pitch.value), stretch: 1 / Number(speed.value) };
+}
+
+/** The patch as the controls make it. The same patch is heard and saved. */
+function patchFor(entry: SoundEntry): Patch {
+  return tweak(entry.patch, current());
+}
+
+function tweaked(): boolean {
+  return !isUntweaked(current());
+}
+
+function showTweakLabels(): void {
+  const steps = Number(pitch.value);
+  pitchOut.textContent = steps === 0 ? '0' : `${steps > 0 ? '+' : ''}${steps}`;
+  // Round first, then let Number drop the trailing zeros: the step is 0.05,
+  // so a raw slider value can arrive as 1.1500000000000001.
+  speedOut.textContent = `${Math.round(Number(speed.value) * 100) / 100}×`;
+  gapOut.textContent = `${gap.value} ms`;
+  reset.hidden = !tweaked();
+  document.body.classList.toggle('is-tweaked', tweaked());
+}
+
 // ------------------------------------------------------------------- audio
 
 function audioContext(): AudioContext {
@@ -63,13 +113,18 @@ function audioContext(): AudioContext {
   return context;
 }
 
-function play(entry: SoundEntry, tile: HTMLElement): void {
-  if (mute.checked) {
-    say(`${entry.phrase} is muted`);
-    return;
-  }
+function stopLoop(): void {
+  if (loopTimer !== null) clearTimeout(loopTimer);
+  loopTimer = null;
+  loopName = '';
+  for (const tile of Array.from(document.querySelectorAll('.tile'))) tile.classList.remove('is-looping');
+}
+
+/** Render the current patch and play it once. */
+function sound(entry: SoundEntry): number {
   const ctx = audioContext();
-  const samples = api.render(entry);
+  const patch = patchFor(entry);
+  const samples = api.render(patch);
   const buffer = ctx.createBuffer(1, samples.length, RENDER_SAMPLE_RATE);
   // renderPatch always returns a plain ArrayBuffer-backed Float32Array. The
   // DOM lib types copyToChannel against a narrower generic, so this cast
@@ -78,18 +133,53 @@ function play(entry: SoundEntry, tile: HTMLElement): void {
 
   const source = ctx.createBufferSource();
   source.buffer = buffer;
-  const gain = ctx.createGain();
-  gain.gain.value = Number(volume.value);
-  source.connect(gain).connect(ctx.destination);
+  const gainNode = ctx.createGain();
+  gainNode.gain.value = Number(volume.value);
+  source.connect(gainNode).connect(ctx.destination);
   source.start();
+  return api.durationMs(patch);
+}
 
-  showPlayhead(tile, api.durationMs(entry));
-  say(`playing ${entry.phrase}`);
+function play(entry: SoundEntry, tile: HTMLElement): void {
+  if (mute.checked) {
+    say(`${entry.phrase} is muted`);
+    return;
+  }
+
+  // A second click on the sound that is looping stops it. Without that,
+  // the only way to stop is the loop switch, which is far from the tile.
+  if (loopName === entry.name) {
+    stopLoop();
+    say(`stopped ${entry.phrase}`);
+    return;
+  }
+
+  stopLoop();
+  lastPlayed = entry;
+  const durationMs = sound(entry);
+  showPlayhead(tile, durationMs);
+
+  if (loop.checked) {
+    loopName = entry.name;
+    tile.classList.add('is-looping');
+    const again = (): void => {
+      // Read the controls again on every repeat, so a slider moved during
+      // a loop takes effect on the next pass instead of after a restart.
+      if (mute.checked || loopName !== entry.name) return stopLoop();
+      const ms = sound(entry);
+      showPlayhead(tile, ms);
+      loopTimer = setTimeout(again, ms + Number(gap.value));
+    };
+    loopTimer = setTimeout(again, durationMs + Number(gap.value));
+    say(`looping ${entry.phrase}`);
+  } else {
+    say(`playing ${entry.phrase}`);
+  }
 }
 
 /** Move a line across the waveform for exactly as long as the sound lasts. */
 function showPlayhead(tile: HTMLElement, durationMs: number): void {
-  if (playing) playing.classList.remove('is-playing');
+  if (playing && playing !== tile) playing.classList.remove('is-playing');
   tile.classList.add('is-playing');
   playing = tile;
   if (reducedMotion.matches) return;
@@ -137,6 +227,21 @@ function wavePath(samples: Float32Array): string {
   return `M${top.join(' L')} L${bottom.reverse().join(' L')} Z`;
 }
 
+/** Draw one tile: its waveform, and the length the controls give it. */
+function paint(tile: HTMLElement): void {
+  const entry = api.get(tile.dataset.name ?? '');
+  const path = tile.querySelector('path');
+  const meta = tile.querySelector('.meta');
+  if (!entry || !path) return;
+  const patch = patchFor(entry);
+  path.setAttribute('d', wavePath(api.render(patch)));
+  if (meta) {
+    const layers = entry.patch.layers.length;
+    meta.textContent = `${entry.category} · ${Math.round(api.durationMs(patch))} ms · ${layers} layer${layers === 1 ? '' : 's'}`;
+  }
+  tile.dataset.painted = 'yes';
+}
+
 /**
  * Draw one tile's waveform, once, when it scrolls into view.
  *
@@ -147,17 +252,24 @@ const drawer = new IntersectionObserver(
   (records) => {
     for (const record of records) {
       if (!record.isIntersecting) continue;
-      const tile = record.target as HTMLElement;
-      drawer.unobserve(tile);
-      const name = tile.dataset.name ?? '';
-      const entry = api.get(name);
-      const path = tile.querySelector('path');
-      if (!entry || !path) continue;
-      path.setAttribute('d', wavePath(api.render(entry)));
+      paint(record.target as HTMLElement);
     }
   },
   { rootMargin: '200px' }
 );
+
+/**
+ * Redraw the tiles a person can see, after pitch or speed changed.
+ *
+ * This runs on `change`, not on `input`. A range fires `input` for every
+ * pixel of a drag, and each redraw renders every visible patch, so a drag
+ * would stutter. The number beside the slider still updates live.
+ */
+function repaintVisible(): void {
+  for (const tile of Array.from(document.querySelectorAll<HTMLElement>('.tile'))) {
+    if (tile.dataset.painted === 'yes') paint(tile);
+  }
+}
 
 // ------------------------------------------------------------------- tiles
 
@@ -175,33 +287,46 @@ function action(label: string, title: string, run: () => void): HTMLButtonElemen
 }
 
 async function copyPatch(entry: SoundEntry, button: HTMLButtonElement): Promise<void> {
-  const text = JSON.stringify(entry.patch, null, 2);
+  const text = JSON.stringify(patchFor(entry), null, 2);
   try {
     await navigator.clipboard.writeText(text);
-    flash(button, 'copied');
+    flash(button, tweaked() ? 'copied (tweaked)' : 'copied');
   } catch {
     flash(button, 'press ctrl+c');
   }
 }
 
-function downloadWav(entry: SoundEntry): void {
-  const blob = new Blob([api.wav(entry) as BlobPart], { type: 'audio/wav' });
-  const url = URL.createObjectURL(blob);
-  const link = document.createElement('a');
-  link.href = url;
-  link.download = `${entry.name}.wav`;
-  link.click();
-  // Revoke on the next frame: a synchronous revoke can beat the download.
-  setTimeout(() => URL.revokeObjectURL(url), 1000);
-}
-
+/** Say what happened on the button itself, then put the label back. */
 function flash(button: HTMLButtonElement, message: string): void {
-  const original = button.textContent ?? '';
+  const original = button.dataset.label ?? button.textContent ?? '';
+  button.dataset.label = original;
   button.textContent = message;
   say(message);
   setTimeout(() => {
     button.textContent = original;
   }, 1200);
+}
+
+/** The file name says what was changed, so two downloads never collide. */
+function wavName(entry: SoundEntry): string {
+  if (!tweaked()) return `${entry.name}.wav`;
+  const parts = [entry.name];
+  const steps = Number(pitch.value);
+  if (steps !== 0) parts.push(`${steps > 0 ? 'up' : 'down'}${Math.abs(steps)}`);
+  const rate = Number(speed.value);
+  if (rate !== 1) parts.push(`${String(rate).replace('.', 'p')}x`);
+  return `${parts.join('-')}.wav`;
+}
+
+function downloadWav(entry: SoundEntry): void {
+  const blob = new Blob([api.wav(patchFor(entry)) as BlobPart], { type: 'audio/wav' });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = wavName(entry);
+  link.click();
+  // Revoke on the next frame: a synchronous revoke can beat the download.
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
 
 function tile(entry: SoundEntry): HTMLElement {
@@ -224,13 +349,11 @@ function tile(entry: SoundEntry): HTMLElement {
 
   const meta = document.createElement('p');
   meta.className = 'meta';
-  const layers = entry.patch.layers.length;
-  meta.textContent = `${entry.category} · ${Math.round(api.durationMs(entry))} ms · ${layers} layer${layers === 1 ? '' : 's'}`;
 
   const acts = document.createElement('div');
   acts.className = 'acts';
   const copy = action('copy patch', `Copy the JSON patch for ${entry.phrase}`, () => void copyPatch(entry, copy));
-  acts.append(copy, action('.wav', `Download ${entry.name}.wav`, () => downloadWav(entry)));
+  acts.append(copy, action('.wav', `Download ${entry.phrase} as a wav file`, () => downloadWav(entry)));
 
   card.append(player, name, meta, acts);
   drawer.observe(card);
@@ -249,6 +372,7 @@ function draw(): void {
   const found = matching();
   const shown = found.slice(0, GRID_LIMIT);
 
+  stopLoop();
   grid.replaceChildren(...shown.map(tile));
 
   const query = queryBox.value.trim();
@@ -288,8 +412,30 @@ function buildFilters(): void {
 
 volume.value = remembered('volume', '0.8');
 mute.checked = remembered('mute', 'no') === 'yes';
+gap.value = remembered('gap', '250');
 volume.addEventListener('input', () => remember('volume', volume.value));
-mute.addEventListener('change', () => remember('mute', mute.checked ? 'yes' : 'no'));
+mute.addEventListener('change', () => {
+  remember('mute', mute.checked ? 'yes' : 'no');
+  if (mute.checked) stopLoop();
+});
+
+for (const control of [pitch, speed]) {
+  control.addEventListener('input', showTweakLabels);
+  control.addEventListener('change', repaintVisible);
+}
+gap.addEventListener('input', showTweakLabels);
+gap.addEventListener('change', () => remember('gap', gap.value));
+loop.addEventListener('change', () => {
+  if (!loop.checked) stopLoop();
+});
+
+reset.addEventListener('click', () => {
+  pitch.value = '0';
+  speed.value = '1';
+  showTweakLabels();
+  repaintVisible();
+  say('pitch and speed reset');
+});
 
 queryBox.addEventListener('input', draw);
 queryBox.addEventListener('keydown', (event) => {
@@ -300,5 +446,17 @@ queryBox.addEventListener('keydown', (event) => {
   first?.querySelector<HTMLButtonElement>('.wave')?.click();
 });
 
+document.addEventListener('keydown', (event) => {
+  // Space replays the last sound, so a person can change a slider and
+  // hear the difference without moving the mouse back to the tile.
+  const target = event.target as HTMLElement | null;
+  const typing = target?.tagName === 'INPUT' || target?.tagName === 'TEXTAREA';
+  if (event.key !== ' ' || typing || lastPlayed === null) return;
+  event.preventDefault();
+  const tile = grid.querySelector<HTMLElement>(`.tile[data-name="${lastPlayed.name}"]`);
+  if (tile) play(lastPlayed, tile);
+});
+
+showTweakLabels();
 buildFilters();
 draw();

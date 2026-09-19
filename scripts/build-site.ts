@@ -161,6 +161,31 @@ function page(app: string, css: string): string {
         <label><input id="mute" type="checkbox"> mute</label>
       </div>
     </div>
+
+    <div class="row tweaks" role="group" aria-label="Change how the sounds play">
+      <span class="knob">
+        <label for="pitch">pitch</label>
+        <input id="pitch" type="range" min="-12" max="12" step="1" value="0"
+               aria-label="Pitch in semitones" aria-describedby="pitch-out">
+        <output id="pitch-out" for="pitch">0</output><span class="unit">st</span>
+      </span>
+      <span class="knob">
+        <label for="speed">speed</label>
+        <input id="speed" type="range" min="0.25" max="4" step="0.05" value="1"
+               aria-label="Speed" aria-describedby="speed-out">
+        <output id="speed-out" for="speed">1×</output>
+      </span>
+      <span class="knob">
+        <label><input id="loop" type="checkbox"> loop</label>
+        <input id="gap" type="range" min="0" max="2000" step="50" value="250"
+               aria-label="Gap between repeats" aria-describedby="gap-out">
+        <output id="gap-out" for="gap">250 ms</output>
+      </span>
+      <button type="button" id="reset" class="act" hidden>reset</button>
+      <span class="hint">Pitch and speed change the patch, not the playback,
+      so the file you download is the sound you heard.</span>
+    </div>
+
     <div id="filters" role="group" aria-label="Filter by category"></div>
   </div>
 </div>
