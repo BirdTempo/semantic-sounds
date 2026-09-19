@@ -14,15 +14,19 @@ import {
   patchDurationMs,
   encodeWav,
   tweak as tweakPatch,
+  toHaptic,
+  hapticFor,
   RENDER_SAMPLE_RATE,
   type SearchOptions,
   type SoundEntry,
   type SoundMatch,
   type Patch,
   type Tweak,
+  type HapticPattern,
+  type HapticOptions,
 } from './library/index';
 
-export type { SoundEntry, SoundMatch, SearchOptions, Patch, Tweak };
+export type { SoundEntry, SoundMatch, SearchOptions, Patch, Tweak, HapticPattern, HapticOptions };
 
 /** Where a patch came from. */
 export type SoundOrigin = 'curated' | 'generated';
@@ -97,6 +101,14 @@ export type SemanticSounds = {
    *   sounds.wav(lower);
    */
   tweak(source: SoundEntry | Patch, options: Tweak): Patch;
+  /**
+   * The vibration for a sound.
+   *
+   * A sound and a vibration are the same gesture, so this is derived from
+   * the patch, not authored. An entry also gets a notification preset from
+   * its own words; a bare patch stays acoustic.
+   */
+  haptic(source: SoundEntry | Patch, options?: HapticOptions): HapticPattern;
   /**
    * Answer a phrase. The curated set answers first. When nothing scores
    * high enough and a `functionUrl` is set, the service writes a new
@@ -183,6 +195,10 @@ export function createSemanticSounds(options: SemanticSoundsOptions = {}): Seman
 
     tweak(source, options) {
       return tweakPatch(toPatch(source), options);
+    },
+
+    haptic(source, hapticOptions) {
+      return 'patch' in source ? hapticFor(source, hapticOptions) : toHaptic(source, hapticOptions);
     },
 
     async resolve(phrase) {

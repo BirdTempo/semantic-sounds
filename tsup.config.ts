@@ -10,6 +10,7 @@ export default defineConfig({
     sdk: 'src/sdk.ts',
     'mcp/server': 'src/mcp/server.ts',
     'mcp/stdio': 'src/mcp/stdio.ts',
+    haptic: 'src/haptic.ts',
     native: 'src/native.ts',
     'native-hook': 'src/native-hook.ts',
     pick: 'src/pick.ts',

@@ -6,4 +6,5 @@ export * from './render';
 export * from './validate';
 export * from './wav';
 export * from './transform';
+export * from './haptic';
 export { sounds } from './sounds/generated';

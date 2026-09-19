@@ -199,6 +199,60 @@ It takes exact names and plain prose, and it fails rather than drop a
 request it could not match. Import the generated module and not `sounds`
 from this package, or the whole set ships as well.
 
+### Vibration
+
+On a phone set to vibrate, the haptic **is** the notification. A sound and
+a vibration are the same gesture, so haptics are not authored here — they
+are derived from the patch that already exists:
+
+```ts
+import { toHaptic, hapticFor } from 'semantic-sounds/haptic';
+
+hapticFor(entry);
+// { steps: [{durationMs:10,intensity:1}, ...], durationMs: 140,
+//   preset: 'notificationSuccess', pulses: 1, sharpness: 0.16 }
+```
+
+Two levels come out, because the platforms are not equal:
+
+| | For | How |
+|---|---|---|
+| `preset` | `expo-haptics`, which takes presets and nothing else | one of nine standard names |
+| `steps` | a native module that can play an envelope | `toAndroidWaveform`, `toCoreHaptics`, `toWebVibrate` |
+
+`sharpness` comes from the spectral centroid the contract already
+computes: a bright sound is a crisp tap, a dark one a dull thud.
+
+Wire it beside `playFile` and one call does both:
+
+```ts
+const sounds = createNativeSounds({
+  ...deps,
+  vibrate: ({ preset }) => Haptics.impactAsync(PRESET_MAP[preset]),
+});
+
+await sounds.play('upload-complete', { haptic: true });
+await sounds.play('upload-complete', { hapticOnly: true });  // phone on silent
+```
+
+The vibration is fired and not awaited. A haptic that lags its sound even
+a little reads as two events instead of one.
+
+`semantic-sounds/haptic` is a standalone entry point. It holds the
+derivation and the encoders and does not import the sound set, so it is
+**24.6 KB**, not 1.1 MB.
+
+**How the preset is chosen.** The six shape presets come from the audio
+alone: length and whether the attack is sharp. Both were picked because
+they vary across the real set — length runs 70 ms to 860 ms across the
+tenth to ninetieth percentile, and 43% of sounds have a sharp attack. A
+third candidate, the mean envelope level, was measured and dropped: it
+sits between 0.39 and 0.54 for eight sounds in ten.
+
+The three notification presets carry meaning, which audio cannot supply,
+so the entry's own words decide those and `toHaptic` stays acoustic. Set
+`haptic` on an entry to overrule the guess.
+
 ### Two things to know
 
 - **iOS silent switch.** A native player can ignore it with an audio

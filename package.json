@@ -37,6 +37,10 @@
       "types": "./dist/native-hook.d.ts",
       "import": "./dist/native-hook.js"
     },
+    "./haptic": {
+      "types": "./dist/haptic.d.ts",
+      "import": "./dist/haptic.js"
+    },
     "./package.json": "./package.json"
   },
   "bin": {

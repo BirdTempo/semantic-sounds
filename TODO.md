@@ -119,6 +119,52 @@ Not done, and not needed yet:
   lines get copied into many apps.
 - No `expo-av` deprecation tracking. The README shows `expo-audio`.
 
+## Extract the shared engine (spans repos -- needs coordination)
+
+**Not started. Do not start it inside this repo alone.**
+
+Three projects hold the same engine, copied, not shared:
+
+| | `semantic-icons` | `semantic-animations` | `semantic-sounds` |
+|---|---|---|---|
+| Entry shape | name, phrase, category, concept, keywords + payload | same | same |
+| Query engine | copy | copy | copy |
+| Stemmer | copy | copy | copy |
+
+They have drifted. Measured on 2026-09-19 with `diff`:
+
+| File | sounds vs animations | sounds vs icons |
+|---|---|---|
+| `query.ts` | 378 lines differ | 376 |
+| `normalize.ts` | 209 lines differ | 213 |
+| `normalize-phrase.ts` | 6 lines differ | 7 |
+
+**The proof that the copy costs money.** The stemmer fix made here --
+Porter's undoubling and the restore-e step -- exists only here. In icons
+and animations, `purring` still stems to `pur` while `purr` stays
+`purr`, and `sneezed` does not reach `sneeze`.
+
+Accurate on severity: real queries against the icon set mostly still
+answer, because the phrase and contained-match bonuses cover for the weak
+stemmer. Neither package is published to npm yet; both `npm view` calls
+returned 404 on 2026-09-19. So this is a maintenance risk, not a live
+fault. The next fix will also land in one repo out of three.
+
+**What to extract:** the stemmer, the query engine, the shared entry
+type, and the probe harness. One engine, three payloads. Publish as
+`@birdtempo/semantic-core`.
+
+**Why it must not start here.** Extracting it means changing three repos
+at once, and the other two have their own probe baselines. Doing it in
+this repo alone would make a fourth copy, not fewer.
+
+**Do it before the next surface is added, not after.** It gets more
+expensive with every entry and every probe case.
+
+**A haptics note for whoever does it.** `src/library/haptic.ts` derives a
+vibration from a rendered envelope. That is sound-specific and stays
+here. Only the retrieval half moves.
+
 ## Publication
 
 Both names were free on npm on 2026-09-19: `npm view semantic-sounds`

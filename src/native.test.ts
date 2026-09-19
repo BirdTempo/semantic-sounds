@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
-import { createNativeSounds, toBase64, type NativeOptions } from './native';
+import { createNativeSounds, toBase64, type NativeOptions, type HapticPattern } from './native';
 import { sounds } from './library/index';
 import { createSemanticSounds } from './sdk';
 
@@ -38,18 +38,24 @@ function stubs(): NativeOptions & {
   played: string[];
   writeFile: ReturnType<typeof vi.fn>;
   playFile: ReturnType<typeof vi.fn>;
+  vibrate: ReturnType<typeof vi.fn>;
+  buzzed: HapticPattern[];
 } {
   const written = new Map<string, string>();
   const played: string[] = [];
+  const buzzed: HapticPattern[] = [];
   const writeFile = vi.fn(async (uri: string, base64: string) => void written.set(uri, base64));
   const playFile = vi.fn(async (uri: string) => void played.push(uri));
+  const vibrate = vi.fn(async (pattern: HapticPattern) => void buzzed.push(pattern));
   return {
     cacheDir: 'file:///cache/semantic-sounds/',
     writeFile,
     fileExists: async (uri: string) => written.has(uri),
     playFile,
+    vibrate,
     written,
     played,
+    buzzed,
   };
 }
 
@@ -189,5 +195,71 @@ describe('createNativeSounds', () => {
     await api.play('tap');
     expect(deps.writeFile).not.toHaveBeenCalled();
     expect(deps.played.length).toBe(1);
+  });
+});
+
+describe('vibration', () => {
+  let deps: ReturnType<typeof stubs>;
+  beforeEach(() => {
+    deps = stubs();
+  });
+
+  it('does not vibrate unless asked', async () => {
+    const api = createNativeSounds(deps);
+    await api.play('tap');
+    expect(deps.vibrate).not.toHaveBeenCalled();
+  });
+
+  it('vibrates and plays together', async () => {
+    const api = createNativeSounds(deps);
+    await api.play('tap', { haptic: true });
+    await vi.waitFor(() => expect(deps.buzzed.length).toBe(1));
+    expect(deps.played.length).toBe(1);
+    expect(deps.buzzed[0]!.steps.length).toBeGreaterThan(0);
+    expect(deps.buzzed[0]!.preset).toBe('selection');
+  });
+
+  it('vibrates without a sound when asked for that', async () => {
+    const api = createNativeSounds(deps);
+    await api.play('tap', { hapticOnly: true });
+    await vi.waitFor(() => expect(deps.buzzed.length).toBe(1));
+    expect(deps.playFile).not.toHaveBeenCalled();
+    expect(deps.writeFile).not.toHaveBeenCalled();
+  });
+
+  it('raises a notification preset from the entry words', () => {
+    const api = createNativeSounds(deps);
+    expect(api.haptic('upload-complete').preset).toBe('notificationSuccess');
+    expect(api.haptic('payment-declined').preset).toBe('notificationError');
+  });
+
+  it('keeps a bare patch acoustic, because it has no words', () => {
+    const api = createNativeSounds(deps);
+    const entry = api.get('upload-complete')!;
+    expect(api.haptic(entry).preset).toBe('notificationSuccess');
+    expect(api.haptic(entry.patch).preset).not.toContain('notification');
+  });
+
+  it('plays the sound even when the motor throws', async () => {
+    const broken = stubs();
+    broken.vibrate = vi.fn(async () => {
+      throw new Error('no vibrator on this device');
+    });
+    const api = createNativeSounds(broken);
+    await expect(api.play('tap', { haptic: true })).resolves.toContain('tap.wav');
+    expect(broken.played.length).toBe(1);
+  });
+
+  it('does nothing when no vibrate adapter was given', async () => {
+    const { vibrate: _drop, ...noMotor } = stubs();
+    const api = createNativeSounds(noMotor);
+    await expect(api.play('tap', { haptic: true })).resolves.toContain('tap.wav');
+  });
+
+  it('survives a destructured play, which a this-binding would not', async () => {
+    const api = createNativeSounds(deps);
+    const { play } = api;
+    await play('tap', { haptic: true });
+    await vi.waitFor(() => expect(deps.buzzed.length).toBe(1));
   });
 });

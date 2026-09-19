@@ -45,6 +45,21 @@ export type Patch = {
   layers: Layer[];
 };
 
+/**
+ * The nine standard vibration presets, named as `expo-haptics` names them.
+ * Declared here so an entry can name one without a cycle through haptic.ts.
+ */
+export type HapticPreset =
+  | 'selection'
+  | 'impactSoft'
+  | 'impactLight'
+  | 'impactRigid'
+  | 'impactMedium'
+  | 'impactHeavy'
+  | 'notificationSuccess'
+  | 'notificationWarning'
+  | 'notificationError';
+
 export type SoundEntry = {
   name: string;
   phrase: string;
@@ -52,6 +67,14 @@ export type SoundEntry = {
   concept: string;
   keywords: string[];
   patch: Patch;
+  /**
+   * Force the vibration preset, when the derived one is wrong.
+   *
+   * `hapticFor` guesses from the entry's words, and a guess can miss:
+   * "critical hit" is a strong blow in a game, not a warning. Set this to
+   * settle it. Optional, and rare by design.
+   */
+  haptic?: HapticPreset;
 };
 
 export type SoundMatch = {
