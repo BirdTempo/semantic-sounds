@@ -165,8 +165,19 @@ function renderLayer(layer: Layer, sampleCount: number, sampleRate: number, seed
 const FADE_MS = 3;
 const PEAK_CEILING = 0.891; // -1 dBFS
 
+/**
+ * How long a patch plays, in milliseconds: the longest layer envelope.
+ *
+ * Exported because a caller often needs the length without the samples --
+ * to lay out a waveform, to size a buffer, or to print a sound list.
+ * `renderPatch` uses this same function, so the two never disagree.
+ */
+export function patchDurationMs(patch: Patch): number {
+  return Math.max(...patch.layers.map((layer) => envelopeDurationMs(layer.envelope)));
+}
+
 export function renderPatch(patch: Patch, sampleRate: number = RENDER_SAMPLE_RATE): Float32Array {
-  const durationMs = Math.max(...patch.layers.map((layer) => envelopeDurationMs(layer.envelope)));
+  const durationMs = patchDurationMs(patch);
   const sampleCount = Math.max(1, Math.round((durationMs / 1000) * sampleRate));
   const mix = new Float32Array(sampleCount);
 
